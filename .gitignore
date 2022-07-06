@@ -1,0 +1,53 @@
+# Temporary folders #
+#####################
+fsh-generated
+temp
+template
+output
+
+# Ignore large files and frequently changed files in input-cache #
+##################################################################
+input-cache/org.hl7.fhir.publisher.jar
+input-cache/publisher.jar
+input-cache/schemas/
+# input-cache/txcache/
+
+# OS generated files #
+######################
+Thumbs.db
+.DS_Store
+.DS_Store?
+
+# backup files #
+################
+*.bak
+
+# IDE generated files #
+#######################
+.vscode
+.idea
+
+# Microsoft Office temp files #
+###############################
+~$*.xlsx
+input-cache/txcache/all-systems.cache
+input-cache/txcache/http___cancerstaging.org.cache
+input-cache/txcache/http___varnomen.hgvs.org.cache
+input-cache/txcache/http___www.genenames.org.cache
+input-cache/txcache/http___www.ncbi.nlm.nih.gov_clinvar.cache
+input-cache/txcache/http___www.sequenceontology.org_.cache
+input-cache/txcache/icd-10-cm.cache
+input-cache/txcache/iso3166.cache
+input-cache/txcache/lang.cache
+input-cache/txcache/loinc.cache
+input-cache/txcache/rxnorm.cache
+input-cache/txcache/snomed.cache
+input-cache/txcache/ucum.cache
+input-cache/txcache/umls.cache
+
+# Automated testing
+.classpath
+.project
+.settings/*
+target/*
+.mvn/wrapper/maven-wrapper.jar
