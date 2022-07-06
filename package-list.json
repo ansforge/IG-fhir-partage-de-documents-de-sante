@@ -1,0 +1,13 @@
+{
+ "package-id" : "ans.fhir.fr.PDSm",
+ "title" : "Partage de Documents de Santé en mobilité (PDSm)", 
+ "canonical" : "http://esante.gouv.fr/fhir/PDSm", 
+ "introduction" : "Spécifications techniques du volet \"Partage de documents de santé en mobilité\"",
+ "list" : [{
+  "version" : "current",
+  "desc" : "Continuous Integration Build (latest in version control)",
+  "path" : "http://esante.gouv.fr/fhir/PDSm",
+  "status" : "ci-build",
+  "current" : true
+ }]
+}
