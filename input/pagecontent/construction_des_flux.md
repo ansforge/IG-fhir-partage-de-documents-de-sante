@@ -13,19 +13,15 @@ Les flux 01 et 02 correspondent à la transaction IHE "Provide Document Bundle [
 
 ### Mise à jour de fiche document
 
+
+<object data="PDSm_2.svg" type="image/svg+xml"></object>
+<br/>
+
 * Le <a href="flux3.html">flux 03</a> de demande de mise à jour des métadonnées de la fiche sera assuré par l’interaction « patch » de FHIR. Le gestionnaire de partage de documents doit supporter les requêtes HTTP PATCH et le « conditional patch » afin d’effectuer la demande via l’identifiant métier.
 * Le <a href="flux4.html">flux 04</a> résultat de la demande de mise à jour des métadonnées de la fiche.
 
-
-<object data="PDSm_2.svg" type="image/svg+xml"></object>
-<br/>
-
 Les flux 03 et 04 se situent hors du périmètre du profil MHD.
 
-
-
-<object data="PDSm_2.svg" type="image/svg+xml"></object>
-<br/>
 ### Recherche de documents
 
 * Le <a href="flux5.html">flux 05</a> de recherche de documents sera assuré par l’interaction « search » de FHIR. Le gestionnaire de partage de documents doit supporter les requêtes HTTP GET et HTTP POST. On recherche soit un lot de soumission, ressource List, soit une fiche d’un document, ressource DocumentReference.
