@@ -38,9 +38,7 @@
   <li>
     <a href="equivalences.html">Equivalences</a>
   </li>
-  <li>
-    <a href="downloads.html">Téléchargements</a>
-  </li>
+
   <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
@@ -49,6 +47,9 @@
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Téléchargements et usage</a>
+      </li>
       <li>
         <a target="_blank" href="{{site.data.fhir.path}}index.html">FHIR Spec </a>
       </li>
