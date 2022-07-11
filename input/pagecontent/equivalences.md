@@ -38,7 +38,7 @@ Ce tableau reprend les acteurs identifiés dans les SFE-PDS ainsi que les flux q
 | ----- | ----- | ----- |
 | Flux 1 - AjoutLotDocument <br/> Flux 2 - ResultatAjoutLotDocument XDS | Flux 1 : Alimentation d'un document | Certains différences de modélisation font qu'il n'y a pas de compatibilité, par exemple DocumentReference.category ne sont pas liés au  même ValueSet |
 | Flux 3 - MiseAJourMetadonneeFiche <br/> Flux 4 - ResultatMAJMetadonneFiche | ∅ Pas d'équivalence | ∅ Pas d'équivalence |
-| Flux 5 - RechercheDocument  <br/> Flux 6 - ResultatRechercheDocument | Flux 2 : Recherche multicritère des métadonnées d'un ou plusieurs documents | Les critères de recherche sont différent, mise à part period-start (cf tableau ci-dessous) |
+| Flux 5 - RechercheDocument  <br/> Flux 6 - ResultatRechercheDocument | Flux 2 : Recherche multicritère des métadonnées d'un ou plusieurs documents | Les critères de recherche sont différents, mise à part period-start (cf tableau ci-dessous). Ils peuvent cependant devenir compatibles à l'aide du paramètre de recherche _filter permettant d'utiliser l'opérateur booléen "OU" |
 | Flux 7 - DemandeConsultationDocuments  <br/> Flux 8 - ResultatDemandeConsultationDocument | Flux 3 : Récupération d'un document | Similaire : accès à une url via un HTTP Get |
 {: .grid }
 

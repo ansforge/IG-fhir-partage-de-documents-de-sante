@@ -14,6 +14,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
+
 * extension[designationType] ^sliceName = "designationType"
 * extension[designationType].value[x] from $JDV-J03-XdsContentTypeCode-CISIS (preferred)
 * extension[designationType].value[x] ^definition = "Les valeurs possibles doivent provenir d’une des terminologies de référence suivantes :\r\n- TRE_A00-ProducteurDocNonPS, OID : 1.2.250.1.213.1.1.4.6\r\n- TRE_R209-TypeActivite, OID : 1.2.250.1.213.2.2\r\n- TRE_R02-SecteurActivite, OID : 1.2.250.1.71.4.2.4\r\nLes valeurs possibles peuvent être restreintes en fonction du jeu de valeurs correspondant mis à disposition par le projet (exemple : JDV_J59-ContentTypeCode-DMP)\r\nEn l’absence de spécifications complémentaires, le jeu de valeurs JDV_J03-XdsContentTypeCode-CISIS peut être utilisé."
@@ -23,9 +24,6 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 * extension[ihe-sourceId] ^short = "Représente l’identifiant unique global du système émetteur du lot de soumission."
 
 * extension[intendedRecipient] 0..0
-//* extension[intendedRecipient].value[x] only Reference($organization-rass or $practitioner-rass)
-//* extension[intendedRecipient].value[x] ^type.aggregation = #contained
-//* extension[PDSm_intendedRecipient] only PDSm_intendedRecipient
 
 * extension contains
     PDSm_IsArchived named isArchived 0..1 and
