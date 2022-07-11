@@ -1,0 +1,35 @@
+id: ans.fhir.fr.PDSm
+canonical: http://esante.gouv.fr/ci-sis/fhir/PDSm
+name: PDSm
+title: Partage de Documents de Santé en mobilité (PDSm)
+publisher:
+    name: ANS
+    url: https://esante.gouv.fr
+status: draft
+version: 0.1.0
+fhirVersion: 4.0.1
+copyrightYear: 2020+
+releaseLabel: ci-build
+dependencies:
+    ihe.iti.mhd: 4.1.0
+    # FrenchProfiledFHIRAr.072021: 0.1.0
+    ans.annuaire.fhir.r4: 0.2.0
+    # TODO: rajouter fr-core
+
+# menu:
+#     Accueil: index.html
+#     Table des matières: toc.html
+#     Flux:
+#         Flux 01: flux1.html
+#         Flux 02: flux2.html
+#         Flux 03: flux3.html
+#         Flux 04: flux4.html
+#         Flux 05: flux5.html
+#         Flux 06: flux6.html
+#         Flux 07: flux7.html
+#         Flux 08: flux8.html
+#     Téléchargements: downloads.html
+#     Artifacts: artifacts.html
+#     Autres ressources:
+#         "FHIR Spec ": new-tab {{site.data.fhir.path}}index.html
+#         "ANS website ": new-tab https://esante.gouv.fr/
