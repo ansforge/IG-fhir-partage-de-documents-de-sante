@@ -77,6 +77,6 @@ Usage: #example
 * status = #current
 * content.attachment.contentType = #text/plain
 * content.attachment.data = "SGVsbG8gV29ybGQ="
-* subject = Reference(Patient/ex-patient)
-* context.encounter = Reference(ex-encounter)
-* custodian = Reference(ex-organization)
+* subject.display = "Reference(Patient/ex-patient)"
+* context.encounter.display = "Reference(ex-encounter)"
+* custodian.display = "Reference(ex-organization)"
