@@ -3,8 +3,8 @@ Parent: IHE.MHD.Comprehensive.Folder
 Id: PDSmFolderComprehensive
 Title: "PDSm_FolderComprehensive"
 Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehensive Folder  » créé pour le volet ANS \"Partage de documents de santé en mobilité\" ; ce profil concerne le classeur."
-* ^date = "2021-07-30"
-* ^publisher = "ANS"
+// * ^date = "2021-07-30"
+// * ^publisher = "ANS"
 
 * contained 1..
 //* contained only FrPatient

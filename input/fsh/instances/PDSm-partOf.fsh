@@ -1,8 +1,8 @@
 Instance: PDSm-partOf
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_partOf"
-* version = "1.0"
+// * url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_partOf"
+// * version = "1.0"
 * name = "PDSm_partOf"
 * status = #active
 * date = "2021-07-30"

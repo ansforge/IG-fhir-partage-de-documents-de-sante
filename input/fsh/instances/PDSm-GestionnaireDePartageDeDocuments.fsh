@@ -1,8 +1,8 @@
 Instance: PDSm-GestionnaireDePartageDeDocuments
 InstanceOf: CapabilityStatement
 Usage: #definition
-* url = "http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/PDSm.GestionnaireDePartageDeDocuments"
-* version = "1.0"
+// * url = "http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/PDSm.GestionnaireDePartageDeDocuments"
+// * version = "1.0"
 * name = "PDSm_GestionnaireDePartageDeDocuments"
 * title = "CI-SIS Partage-De-Documents-De-Sante - GestionnaireDePartageDeDocuments"
 * status = #active
@@ -14,7 +14,7 @@ Usage: #definition
 * fhirVersion = #4.0.0
 * format[0] = #xml
 * format[+] = #json
-* implementationGuide = "http://esante.gouv.fr/ci-sis/fhir/ImplementationGuides/CI-SIS.PartageDeDocumentsDeSante"
+// * implementationGuide = "http://esante.gouv.fr/ci-sis/fhir/ImplementationGuides/CI-SIS.PartageDeDocumentsDeSante"
 * rest.mode = #server
 * rest.documentation = "Il s’agit d’un système d’information ou d’un composant d'un système d’information qui stocke, classe et archive les documents d’un dossier patient."
 * rest.security.cors = false

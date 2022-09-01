@@ -3,8 +3,8 @@ Parent: IHE.MHD.Comprehensive.DocumentReference
 Id: PDSmComprehensiveDocumentReference
 Title: "PDSm_ComprehensiveDocumentReference"
 Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"ComprehensiveDocumentReference\" créé pour le volet \"Partage de documents de santé en mobilité\"."
-* ^meta.lastUpdated = "2021-10-21T13:35:33.281+00:00"
-* ^date = "2021-07-30"
+// * ^meta.lastUpdated = "2021-10-21T13:35:33.281+00:00"
+// * ^date = "2021-07-30"
 
 * meta.versionId MS
 * meta.versionId ^short = "Numéro de version de la fiche d’un document attribués par le système cible. La valeur de la métadonnée version est égale à 1 pour la première version de la fiche."

@@ -1,9 +1,9 @@
 Instance: PDSm-DocumentReference-period-start
 InstanceOf: SearchParameter
 Usage: #definition
-* meta.lastUpdated = "2021-10-21T14:10:19.925+00:00"
-* url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_DocumentReference_period-start"
-* version = "1.0"
+// * meta.lastUpdated = "2021-10-21T14:10:19.925+00:00"
+// * url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_DocumentReference_period-start"
+// * version = "1.0"
 * name = "PDSm_DocumentReference_period-start"
 * derivedFrom = "http://hl7.org/fhir/SearchParameter/DocumentReference-period"
 * status = #active
