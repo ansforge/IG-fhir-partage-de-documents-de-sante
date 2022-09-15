@@ -1,5 +1,3 @@
-### Sécurité
-
 Les données véhiculées à travers ces flux sont des données à caractère personnel contenant notamment des données médicales sensibles qu'il convient de protéger.
 
 Cette section présente les éventuelles recommandations de sécurité qui s'appliquent au volet Partage de documents de santé en mobilité. Il s'agit d'un sous-ensemble lié à la dimension interopérabilité de dispositions de sécurité plus globales visant à couvrir les exigences de sécurité d'un système cible.

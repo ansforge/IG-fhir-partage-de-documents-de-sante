@@ -1,8 +1,6 @@
-### Liste des équivalences
-
 Ce document indique les équivalences avec d'autres modèles
 
-#### Mise en équivalence SFE-PDS avec le profil MHD
+### Mise en équivalence SFE-PDS avec le profil MHD
 
 Ce tableau reprend les acteurs identifiés dans les SFE-PDS ainsi que les flux qu’ils prennent en charge et les met en équivalence avec le profil MHD. 
 
@@ -22,7 +20,7 @@ Ce tableau reprend les acteurs identifiés dans les SFE-PDS ainsi que les flux q
 | Flux 7 - DemandeConsultationDocuments <br/> Flux 8 - ResultatDemandeConsultationDocument | Retrieve Document [ITI-68] |
 {: .grid }
 
-#### Mise en correspondance des flux avec le volet Partage de documents de santé
+### Mise en correspondance des flux avec le volet Partage de documents de santé
 
 | **Flux partage de documents de santé en mobilité** | **Flux partage de documents de santé** |
 | ----- | ----- |
@@ -32,7 +30,7 @@ Ce tableau reprend les acteurs identifiés dans les SFE-PDS ainsi que les flux q
 | Flux 7 - DemandeConsultationDocuments  <br/> Flux 8 - ResultatDemandeConsultationDocument | XDS Retrieve Document Set ITI-43 |
 {: .grid }
 
-#### Mise en correspondance avec API DOC MES
+### Mise en correspondance avec l'API documents de Mon Espace Santé (MES)
 
 | **Flux partage de documents de santé en mobilité** | **Flux API DOC CNAM** | **Comparaison** |
 | ----- | ----- | ----- |
@@ -42,7 +40,7 @@ Ce tableau reprend les acteurs identifiés dans les SFE-PDS ainsi que les flux q
 | Flux 7 - DemandeConsultationDocuments  <br/> Flux 8 - ResultatDemandeConsultationDocument | Flux 3 : Récupération d'un document | Similaire : accès à une url via un HTTP Get |
 {: .grid }
 
-#### Mise en correspondance des critères de recherche avec API Doc de l'Assurance Maladie
+### Mise en correspondance des critères de recherche avec l'API documents de MES
 
 | **PDSm Flux 05-a** | **API DOC CNAM** | **Remarques** |
 | ----- | ----- | ----- |
@@ -64,9 +62,7 @@ Ce tableau reprend les acteurs identifiés dans les SFE-PDS ainsi que les flux q
 | period |  ∅ Pas d'équivalence | |
 {: .grid }
 
-
-
-##### Search Parameters de la ressource DocumentReference (flux 05-b)
+#### Search Parameters de la ressource DocumentReference (flux 05-b)
 
 | **Nom SearchParam PDSm** | **Commentaire** |
 | ----- | ----- |
@@ -76,8 +72,7 @@ Ce tableau reprend les acteurs identifiés dans les SFE-PDS ainsi que les flux q
 | _count | N'est pas présent dans la documentation de PDSm |
 {: .grid }
 
-
-##### Différences de modélisation de la ressource DocumentReference
+#### Différences de modélisation de la ressource DocumentReference
 
 * DocumentReference.category n'est pas bindé au même ValueSet (table des catégories ENS vs TRE)
 * content.attachment.data (obligatoire pour API DOC MES vs ressource Binary pour PDSm)
