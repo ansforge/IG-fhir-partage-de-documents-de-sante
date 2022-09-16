@@ -1,5 +1,18 @@
 Ce document indique les équivalences avec d'autres modèles
 
+
+
+### Mise en équivalence PDSm avec les concepts métiers
+
+
+| Concept métier | Profil PDSm |
+| ----- | ----- |
+| LotDeSoumission | List SubmissionSetComprehensive |
+| Fiche | DocumentReference ComprehensiveDocumentReference |
+| Classeur | List FolderComprehensive |
+| Document | Binary |
+{: .grid }
+
 ### Mise en équivalence SFE-PDS avec le profil MHD
 
 Ce tableau reprend les acteurs identifiés dans les SFE-PDS ainsi que les flux qu’ils prennent en charge et les met en équivalence avec le profil MHD. 
