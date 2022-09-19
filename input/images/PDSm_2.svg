@@ -23,14 +23,14 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="true"
      inkscape:zoom="0.76393095"
-     inkscape:cx="663.01804"
+     inkscape:cx="657.12745"
      inkscape:cy="339.03588"
      inkscape:window-width="1512"
      inkscape:window-height="866"
      inkscape:window-x="0"
      inkscape:window-y="38"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg211"><inkscape:grid
+     inkscape:current-layer="g209"><inkscape:grid
        type="xygrid"
        id="grid1780"
        originx="0"
@@ -112,7 +112,7 @@
          x="846.83362"
          y="260.18915">Gestionnaire de partage de documents</tspan></text><a
        id="a751-71"
-       xlink:href="flux5.html"
+       xlink:href="st_flux5.html"
        target="_top"
        transform="translate(131.31497,-271.13828)"><text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
@@ -154,7 +154,7 @@
            y="464.16498"
            id="tspan764">- 5.b : Fiche (PDSm_ComprehensiveDocumentReference)</tspan></text></a><a
        id="a751-5"
-       xlink:href="flux6.html"
+       xlink:href="st_flux6.html"
        target="_top"
        transform="translate(195.31497,-161.64082)"><text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
@@ -190,7 +190,7 @@
          y="231.70518"
          id="tspan772">- 6.b : PDSm_FindDocumentReferencesComprehensiveResponse.</tspan></text><a
        id="a751-74"
-       xlink:href="flux7.html"
+       xlink:href="st_flux7.html"
        target="_top"
        transform="translate(131.31497,-80.011759)"><text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
@@ -218,7 +218,7 @@
          x="363.20868"
          y="284.34583">HTTP GET (+ DocumentReference.content.attachment.url)</tspan></text><a
        id="a751-52"
-       xlink:href="flux8.html"
+       xlink:href="st_flux8.html"
        target="_top"
        transform="translate(195.31497,-13.603199)"><text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
