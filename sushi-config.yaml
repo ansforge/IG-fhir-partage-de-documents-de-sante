@@ -1,3 +1,5 @@
+# Documentation à propos de cette page : https://fshschool.org/docs/sushi/configuration/
+
 id: ans.fhir.fr.PDSm
 canonical: http://localhost/PDSm
 name: PDSm
@@ -16,20 +18,68 @@ dependencies:
     # TODO: rajouter fr-core
     # FrenchProfiledFHIRAr.072021: 0.1.0
 
-# menu:
-#     Accueil: index.html
-#     Table des matières: toc.html
-#     Flux:
-#         Flux 01: flux1.html
-#         Flux 02: flux2.html
-#         Flux 03: flux3.html
-#         Flux 04: flux4.html
-#         Flux 05: flux5.html
-#         Flux 06: flux6.html
-#         Flux 07: flux7.html
-#         Flux 08: flux8.html
-#     Téléchargements: downloads.html
-#     Artifacts: artifacts.html
-#     Autres ressources:
-#         "FHIR Spec ": new-tab {{site.data.fhir.path}}index.html
-#         "ANS website ": new-tab https://esante.gouv.fr/
+pages:
+    index.md:
+        title: Accueil
+    specifications_techniques.md:
+        construction_des_flux.md:
+        st_flux1.md:
+            title: Flux 01
+        st_flux2.md:
+            title: Flux 02
+        st_flux3.md:
+            title: Flux 03
+        st_flux4.md:
+            title: Flux 04
+        st_flux5.md:
+            title: Flux 05
+        st_flux6.md:
+            title: Flux 06
+        st_flux7.md:
+            title: Flux 07
+        st_flux8.md:
+            title: Flux 08
+    specifications_fonctionnelles.md:
+        sf_ajout.md:
+            title: Ajout de documents
+        sf_maj.md:
+            title: Mise à jour de documents
+        sf_recherche.md:
+            title: Recherche de documents
+        sf_consultation.md:
+            title: Consultation de documents
+    autres_ressources.md:
+        title: Autres Ressources
+        securite.md:
+            title: Sécurité
+        equivalences.md:
+            title: Equivalences
+        downloads.md:
+            title: Téléchargements et usages
+
+menu:
+    Accueil: index.html
+    Spécifications techniques:
+        Construction des flux: construction_des_flux.html
+        Flux 01: st_flux1.html
+        Flux 02: st_flux2.html
+        Flux 03: st_flux3.html
+        Flux 04: st_flux4.html
+        Flux 05: st_flux5.html
+        Flux 06: st_flux6.html
+        Flux 07: st_flux7.html
+        Flux 08: st_flux8.html
+    Spécifications fonctionnelles:
+        Spécifications fonctionnelles: specifications_fonctionnelles.html
+        Ajout de documents: sf_ajout.html
+        Mise à jour de documents: sf_maj.html
+        Recherche de documents: sf_recherche.html
+        Consultation de documents: sf_consultation.html
+    Autres ressources:
+        Sécurité: securite.html
+        Equivalences: equivalences.html
+        Téléchargements et usage: downloads.html
+        Artifacts: artifacts.html
+    Ressources extérieures:
+        "FHIR Spec ": new-tab {{site.data.fhir.path}}index.html
+        "ANS website ": new-tab https://esante.gouv.fr/
