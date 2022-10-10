@@ -89,12 +89,12 @@ Un flux est un échange entre deux systèmes. Des flux ont été identifiés lor
 
 | | Nom  | Description |
 | ----- | ----- | ----- |
-| <a href="flux1.html">Le flux 01</a> | AjoutLotDocument | Pour la demande d’ajout ou de remplacement d’un document au gestionnaire de partage de documents |
-| <a href="flux2.html">Le flux 02</a> | ResultatAjoutLotDocument | Pour obtenir le résultat de la demande de modification du dossier |
-| <a href="flux3.html">Le flux 03</a> | MiseAJourMetadonneeFiche | Pour la modification de certaines métadonnées du document comme le statut ou le niveau de confidentialité |
-| <a href="flux4.html">Le flux 04</a> | ResultatMAJMetadonneeFiche | Pour obtenir le résultat de la demande de mise à jour des métadonnées de la fiche |
-| <a href="flux5.html">Le flux 05</a> | RechercheDocument | Pour la recherche de documents à l'aide de critères de recherche |
-| <a href="flux6.html">Le flux 06</a> | ResultatRechercheDocument | Pour obtenir le résultat de la recherche de document |
-| <a href="flux7.html">Le flux 07</a> | DemandeConsultationDocument | Pour demander la consultation d'un ou de plusieurs document |
-| <a href="flux8.html">Le flux 08</a> | ResultatDemandeConsultationDocument | Pour obtenir le résultat de la demande de consultation. |
+| <a href="st_flux1.html">Le flux 01</a> | AjoutLotDocument | Pour la demande d’ajout ou de remplacement d’un document au gestionnaire de partage de documents |
+| <a href="st_flux2.html">Le flux 02</a> | ResultatAjoutLotDocument | Pour obtenir le résultat de la demande de modification du dossier |
+| <a href="st_flux3.html">Le flux 03</a> | MiseAJourMetadonneeFiche | Pour la modification de certaines métadonnées du document comme le statut ou le niveau de confidentialité |
+| <a href="st_flux4.html">Le flux 04</a> | ResultatMAJMetadonneeFiche | Pour obtenir le résultat de la demande de mise à jour des métadonnées de la fiche |
+| <a href="st_flux5.html">Le flux 05</a> | RechercheDocument | Pour la recherche de documents à l'aide de critères de recherche |
+| <a href="st_flux6.html">Le flux 06</a> | ResultatRechercheDocument | Pour obtenir le résultat de la recherche de document |
+| <a href="st_flux7.html">Le flux 07</a> | DemandeConsultationDocument | Pour demander la consultation d'un ou de plusieurs document |
+| <a href="st_flux8.html">Le flux 08</a> | ResultatDemandeConsultationDocument | Pour obtenir le résultat de la demande de consultation. |
 

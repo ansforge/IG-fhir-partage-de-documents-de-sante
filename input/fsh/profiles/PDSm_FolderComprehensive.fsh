@@ -51,3 +51,17 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 * entry ^short = "Liste des fiches composant le classeur."
 * entry.item only Reference(PDSm_ComprehensiveDocumentReference)
 * entry.item ^short = "Représente la référence à la fiche d'un document faisant partie du classeur."
+
+
+Mapping:  ConceptMetierToPDSm_FolderComprehensive
+Source:   PDSm_FolderComprehensive
+Id:       specmetier-to-PDSmFolderComprehensive
+Title:    "Spécification métier vers le profil PDSm_FolderComprehensive"
+* -> "Classeur"
+* identifier[uniqueId] -> "idUnique : [0..*] Identifiant"
+* entry.item -> "listeFiches : [0..*] Identifiant"
+* status -> "statut : [1..1] Code"
+* subject -> "idPatient : [0..1] Identifiant"
+* extension[designationType] -> "typeActivite : [0..1] Code"
+* date -> "derniereMiseAJour : [0..1] DateHeure"
+* title -> "titreClasseur : [0..1] Texte"

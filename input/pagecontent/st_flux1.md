@@ -13,7 +13,7 @@ Le flux doit contenir :
 * une ressource de type « List » représentant le lot de soumission (profil [PDSm_SubmissionsSetComprehensive](StructureDefinition-pdsmsubmissionsetcomprehensive.html))
 * une à plusieurs ressources de type « DocumentReference », représentant les fiches de documents (profil [PDSm_ComprehensiveDocumentReference](StructureDefinition-PDSmComprehensiveDocumentReference.html)),
 * zero à plusieurs ressources « Binary » représentant les documents envoyés dans le flux,
-* zero à plusieurs ressources de type « List » représentant les classeurs.
+* zero à plusieurs ressources de type « List » représentant les classeurs (profil [PDSm_FolderComprehensive](StructureDefinition-PDSmFolderComprehensive.html)).
 
 Dans le cas d’un dépôt d’un nouveau document, l’élément DocumentReference.content.attachment.url doit pointer vers une ressource Binary, représentant le document, présente dans le flux.
 
