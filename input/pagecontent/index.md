@@ -1,3 +1,6 @@
+Cet implementation guide est un test destiné à concertation. Pour l'heure, le volet du CI-SIS [PDSm](https://esante.gouv.fr/volet-partage-de-documents-de-sante) reste la source de vérité. Par exemple, la dépendance vers les profils français d'InteropSanté n'est pour l'heure pas mise en place, car l'import du package cause des erreurs en cours d'investigation.
+{:.stu-note}
+
 ### Introduction
 Ce document présente les spécifications techniques du volet "Partage de documents de santé en mobilité". Sa production est basée sur les [Spécifications Fonctionnelles des Echanges du volet Partage de Documents de Santé](https://esante.gouv.fr/volet-partage-de-documents-de-sante) (SFE-PDS) et le profil [MHD](https://profiles.ihe.net/ITI/MHD/index.html) (Mobile access to Health Documents) défini par IHE (Integrating the Healthcare Entreprise).
     
@@ -5,6 +8,10 @@ Il s’agit d’un volet de la couche service spécifiant les modalités de part
 
 A noter que la dénomination du volet « Partage de documents de santé en mobilité » n’est pas restrictive. En effet, les standards sous-jacents aux spécifications techniques, par opposition au volet historique « Partage de documents de santé », permettent le déploiement de cas d'usage en mobilité mais ces spécifications peuvent également être mises en œuvre dans d'autres cas d'usage.
 
+### Informations sur ce mode de publication
+
+Cet Implementation Guide a été généré avec l'outil HL7 publisher développé par HL7. Il permet d'associer une documentation technique et une documentation narrative au sein d'un même site web. Vous trouverez les profils concernés par cette spécification dans l'onglet Autres ressources > [artifacts](artifacts.html).
+L'onglet de [téléchargement](downloads.html) vous permettra de télécharger : 1. le package qui contient toutes les ressources de conformance (StructureDefinition, SearchParameter, ...), 2. L'ensemble de cette documentation pour consultation hors ligne.
 
 ### Lectorat cible 
 
@@ -72,7 +79,7 @@ Au total, les ressources à utiliser dans le cadre de cet Implementation Guide s
 | Patient | [FrPatient](https://simplifier.net/packages/hl7-france-fhir.administrative/10.2021.1/files/424014) | Profil français publié par Interop’Santé, spécifiant les identifiants de patient utilisés en France |
 | Practitioner | [FrPractitioner](https://simplifier.net/packages/hl7-france-fhir.administrative/10.2021.1/files/424009) | Profil français publié par Interop’Santé, représentant un professionnel. Il contraint les types d'identifiants du professionnel en France. |
 | PractitionerRole <br/> PractitionerRole| [PractitionerRoleOrganizationalRoleRASS](https://simplifier.net/packages/ans.annuaire.fhir.r4/0.2.0/files/421732) <br/> [PractitionerRoleProfessionalRoleRASS](https://simplifier.net/packages/ans.annuaire.fhir.r4/0.2.0/files/421688) | Profil de l’annuaire santé représentant la situation d’exercice et l’exercice professionnel |
-| Organization | [FrOrganization](https://simplifier.net/packages/hl7-france-fhir.administrative/10.2021.1/files/424025) | Profil français publié par Interop’Santé représentant une personne morale. Ce profil spécifie les types d'identifiants pour l'organisation en France, et ajoute des extensions françaises.|
+| Organization | [FrOrganization](https://simplifier.net/packages/hl7-france-fhir.administrative/10.2021.1/files/424025) | Profil français publié par Interop’Santé représentant une personne morale. Ce profil spécifie les types d'identifiants pour l'organisation en France, et ajoute des extensions françaises.|
 | Device | - | La ressource du standard est utilisée. Pas de profil spécifique. |
 | Binary | - | La ressource du standard est utilisée. Pas de profil spécifique. |
 {: .grid }
