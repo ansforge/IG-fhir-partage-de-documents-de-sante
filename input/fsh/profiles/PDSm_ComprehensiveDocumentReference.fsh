@@ -126,3 +126,33 @@ Severity:    #error
 Invariant:   constr-cdr-rempl
 Description: "Elément requis lorsque le flux envoyé correspond au remplacement d'un document"
 Severity:    #error
+
+Mapping:  ConceptMetierToPDSm_ComprehensiveDocumentReference
+Source:   PDSm_ComprehensiveDocumentReference
+Id:       specmetier-to-PDSmComprehensiveDocumentReference
+Title:    "Spécification métier vers le profil PDSm_ComprehensiveDocumentReference"
+* -> "Fiche"
+* author -> "auteur : [1..*] Identifiant"
+* status -> "statut : [1..1] Code"
+* extension[isArchived] -> "statut : [1..1] Code"
+* category -> "classeDocument : [0..1] Code"
+* type -> "typeDocument : [0..1] Code"
+* identifier -> "idFiche : [0..*] Identifiant"
+* masterIdentifier -> "idUnique : [0..1] Identifiant"
+* authenticator -> "authentificateur : [1..1] Identifiant"
+* content.attachment.creation -> "dateCreationDocument : [1..1] DateHeure"
+* securityLabel -> "niveauConfidentialite : [0..*] code"
+* context.practiceSetting -> "cadreExercice : [0..1] Code"
+* subject -> "idPatient : [0..1] Identifiant"
+* context.facilityType -> "secteurActivite : [0..1] Code"
+* context.period.start -> "dateDebutActe : [0..1] DateHeure"
+* context.period.end -> "dateFinActe : [0..1] DateHeure"
+* relatesTo.target -> "idFicheAssociation : [0..*] Identifiant"
+* relatesTo.code -> "association : [0..*] Code"
+* description -> "commentaire : [0..1] Texte"
+* content.attachment.title -> "titreDocument : [0..1] Texte"
+* content.attachment.language -> "langueDocument : [1..*] Code"
+* content.format -> "formatDocument : [0..1] Code"
+* context.event -> "actePathologie : [0..1] Code"
+* meta.versionId -> "version : [0..1] Numerique"
+* content.attachment.url -> "Document : [0..1]"

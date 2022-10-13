@@ -19,6 +19,8 @@ Usage: #definition
 * rest.documentation = "Il s’agit d’un système d’information ou d’un composant d'un système d’information qui stocke, classe et archive les documents d’un dossier patient."
 * rest.security.cors = false
 * rest.security.description = "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)"
+
+// List resource
 * rest.resource[0].type = #List
 * rest.resource[=].profile = "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/PDSm_SubmissionSetComprehensive"
 * rest.resource[=].interaction[0].code = #read
@@ -75,6 +77,9 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_List_PractitionerRoleAsSource"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Recherche sur les éléments source:PractitionerRole.practitioner:Practitioner.given et source:PractitionerRole.practitioner:Practitioner.family."
+
+
+// DocumentReference resource 
 * rest.resource[+].type = #DocumentReference
 * rest.resource[=].profile = "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/PDSm_ComprehensiveDocumentReference"
 * rest.resource[=].interaction[0].code = #read
@@ -153,6 +158,8 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_DocumentReference_PractitionerRoleAsAuthor"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Représente l'identifiant, le nom, le prénom du praticien dans sa situation d'exercice qui est l'auteur du document."
+
+// Binary resource 
 * rest.resource[+].type = #Binary
 * rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Binary"
 * rest.resource[=].interaction.code = #read

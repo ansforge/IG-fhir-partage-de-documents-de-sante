@@ -97,3 +97,24 @@ Description: "Représente le destinataire du lot de soumission"
 * . ^short = "Représente le destinataire du lot de soumission"
 * url = "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/PDSm_ihe-intended_recipient" (exactly)
 * value[x] only Reference($practitionerRole-organizationalRole-rass or $organization-rass)
+
+
+
+Mapping:  ConceptMetierToPDSm_SubmissionSetComprehensive
+Source:   PDSm_SubmissionSetComprehensive
+Id:       specmetier-to-PDSmSubmissionSetComprehensive
+Title:    "Spécification métier vers le profil PDSm_SubmissionSetComprehensive"
+* -> "LotDeSoumission"
+* source.extension[ihe-authorOrg] -> "auteur : [1..1] Identifiant"
+* extension[isArchived] -> "statut : [1..1] Code"
+* status -> "statut : [1..1] Code"
+* extension[ihe-designationType] -> "typeActivite : [1..1] Code"
+* identifier[uniqueId] -> "idUnique : [0..1] Identifiant"
+* subject -> "idPatient : [0..1] Identifiant"
+* date -> "dateSoumission : [1..1] DateHeure"
+* note -> "commentaire : [0..1] Texte"
+* identifier[entryUUID] -> "idLotSoumission : [0..*] Identifiant"
+* extension[ihe-sourceId] -> "idSource : [0..1] Identifiant"
+* title -> "titre : [0..1] Texte"
+* entry.item -> "Fiche : [0..*]"
+* entry.item -> "Classeur : [0..*]"
