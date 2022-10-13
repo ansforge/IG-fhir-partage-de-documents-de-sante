@@ -86,3 +86,4 @@ menu:
     Ressources extérieures:
         "FHIR Spec ": new-tab {{site.data.fhir.path}}index.html
         "ANS website ": new-tab https://esante.gouv.fr/
+    A propos: about.html

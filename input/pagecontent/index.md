@@ -1,5 +1,8 @@
-Cet implementation guide est un test destiné à concertation. Pour l'heure, le volet du CI-SIS [PDSm](https://esante.gouv.fr/volet-partage-de-documents-de-sante) reste la source de vérité. Par exemple, la dépendance vers les profils français d'InteropSanté n'est pour l'heure pas mise en place, car l'import du package cause des erreurs en cours d'investigation.
+Cet implementation guide est destiné à la concertation. Pour l'heure, le volet du CI-SIS [PDSm](https://esante.gouv.fr/volet-partage-de-documents-de-sante) reste la source de vérité. Par exemple, la dépendance vers les profils français d'InteropSanté n'est pour l'heure pas mise en place, car l'import du package cause des erreurs en cours d'investigation.
 {:.stu-note}
+<!-- Phrase à aligner avec la concertation : 1. Flux simplifié, 2. Nouveau format -->
+
+1. Rajouter mapping
 
 ### Introduction
 Ce document présente les spécifications techniques du volet "Partage de documents de santé en mobilité". Sa production est basée sur les [Spécifications Fonctionnelles des Echanges du volet Partage de Documents de Santé](https://esante.gouv.fr/volet-partage-de-documents-de-sante) (SFE-PDS) et le profil [MHD](https://profiles.ihe.net/ITI/MHD/index.html) (Mobile access to Health Documents) défini par IHE (Integrating the Healthcare Entreprise).
