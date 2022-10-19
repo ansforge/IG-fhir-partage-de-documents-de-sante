@@ -78,8 +78,8 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 // # CONTENT #
 // ###########
 * content MS
-* content ^short = "cument référencé."
-* content.attachment.language ^short = "Pour tous les documents produits par les systèmes initiateurs français, le codes est \"fr-FR'."
+* content ^short = "Document référencé."
+* content.attachment.language ^short = "Pour tous les documents produits par les systèmes initiateurs français, le code est \"fr-FR'."
 * content.attachment.size 1.. 
 * content.attachment.size ^short = "Représente la taille du document."
 * content.attachment.hash 1..

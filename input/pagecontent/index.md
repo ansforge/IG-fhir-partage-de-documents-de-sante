@@ -2,19 +2,12 @@ Cet implementation guide est destiné à la concertation. Pour l'heure, le volet
 {:.stu-note}
 <!-- Phrase à aligner avec la concertation : 1. Flux simplifié, 2. Nouveau format -->
 
-1. Rajouter mapping
-
 ### Introduction
 Ce document présente les spécifications techniques du volet "Partage de documents de santé en mobilité". Sa production est basée sur les [Spécifications Fonctionnelles des Echanges du volet Partage de Documents de Santé](https://esante.gouv.fr/volet-partage-de-documents-de-sante) (SFE-PDS) et le profil [MHD](https://profiles.ihe.net/ITI/MHD/index.html) (Mobile access to Health Documents) défini par IHE (Integrating the Healthcare Entreprise).
     
 Il s’agit d’un volet de la couche service spécifiant les modalités de partage de documents sans contraindre ces derniers. Les spécifications liées aux documents de santé constituent les volets de la couche métier du CI-SIS.
 
 A noter que la dénomination du volet « Partage de documents de santé en mobilité » n’est pas restrictive. En effet, les standards sous-jacents aux spécifications techniques, par opposition au volet historique « Partage de documents de santé », permettent le déploiement de cas d'usage en mobilité mais ces spécifications peuvent également être mises en œuvre dans d'autres cas d'usage.
-
-### Informations sur ce mode de publication
-
-Cet Implementation Guide a été généré avec l'outil HL7 publisher développé par HL7. Il permet d'associer une documentation technique et une documentation narrative au sein d'un même site web. Vous trouverez les profils concernés par cette spécification dans l'onglet Autres ressources > [artifacts](artifacts.html).
-L'onglet de [téléchargement](downloads.html) vous permettra de télécharger : 1. le package qui contient toutes les ressources de conformance (StructureDefinition, SearchParameter, ...), 2. L'ensemble de cette documentation pour consultation hors ligne.
 
 ### Lectorat cible 
 
