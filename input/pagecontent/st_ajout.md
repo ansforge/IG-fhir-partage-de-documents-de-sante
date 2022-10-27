@@ -1,7 +1,8 @@
 Ce flux permet l’ajout ou le remplacement d’un document au dossier patient. Cette demande de modification est faite par le producteur de documents.
 
-### Flux 1 : Ajout d’un lot de documents
-Ce flux se base sur la requête de la transaction IHE "Provide Document Bundle [ITI-65]" du profil MHD.
+Ces flux se basent sur la requête et la réponse de la transaction IHE "Provide Document Bundle [ITI-65](https://profiles.ihe.net/ITI/MHD/ITI-65.html)" du profil MHD.
+
+### Flux 01 : Ajout d’un lot de documents
 
 La première étape de la construction du flux 01 de la demande de modification du dossier patient consiste à organiser son contenu dans une ressource Bundle. Un profil spécifique dérivé du profil IHE MHD v4.0.1 « ComprehensiveProvideDocumentBundle » est créé pour ce volet et nommé [PDSm_ComprehensiveProvideDocumentBundle](StructureDefinition-PDSmComprehensiveProvideDocumentBundle.html).
 
@@ -17,13 +18,11 @@ Dans le cas d’une demande de mise à jour d’un document par remplacement, l�
 
 Dans le cas d’une mise à jour d’un classeur, comme List.status ou List.entry pour reclasser des documents, une nouvelle version de la ressource List est envoyée.
 
-Le corps du flux 01 est une ressource "Bundle" de type "transaction" encapsulant toutes les ressources listées précédemment. Cet objet de type JSON ou XML sera envoyé dans le contenu de la requête HTTP POST.
+Le corps de la requête est une ressource "Bundle" de type "transaction" encapsulant toutes les ressources listées précédemment. Cet objet de type JSON ou XML sera envoyé dans le contenu de la requête HTTP POST.
 
 A la réception de la demande, le gestionnaire de partage de documents doit valider les ressources et répondre avec un HTTP Code statut
 
 ### Flux 02 : Résultat de l'ajout d'un lot de documents
-
-Ce flux se base sur la réponse de la transaction IHE "Provide Document Bundle [ITI-65](https://profiles.ihe.net/ITI/MHD/ITI-65.html)" du profil MHD.
 
 Ce flux retourne le résultat de demande de modification du dossier. La demande peut être un succès ou un échec.
 
@@ -35,42 +34,8 @@ Il doit être indiqué dans la réponse, le statut (succès ou échec) de chaque
 * [PDSmFolderComprehensive](StructureDefinition-PDSmFolderComprehensive.html) représentant le Classeur -->
 <!-- Utiliser à chaque fois le nom du profil et non le lot de soumission, et rajouter le nom fonctionnel à côté -->
 
-Le gestionnaire de partage de documents de santé retourne un "HTTP Status code" approprié au résultat de la demande comme indiqué dans la spécification du profil MHD. Le corps de la réponse doit être un Bundle de type transaction-response avec un élément [entry](StructureDefinition-PDSmComprehensiveProvideDocumentBundle-definitions.html#Bundle.entry) pour chaque ressource reçue dans le Bundle de la requête, dans le même ordre, avec le résultat du traitement de l'élément. (cf profil Bundle [ProvideDocumentBundleResponse](StructureDefinition-PDSmComprehensiveProvideDocumentBundle.html))
+Le gestionnaire de partage de documents de santé retourne un "HTTP Status code" approprié au résultat de la demande comme indiqué dans la spécification du profil MHD. Le corps de la réponse doit être un Bundle de type transaction-response avec un élément entry pour chaque ressource reçue dans le Bundle de la requête, dans le même ordre, avec le résultat du traitement de l'élément. Le corps de la réponse doit être conforme au profil [ProvideDocumentBundleResponse](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.ProvideDocumentBundleResponse) ([exemple de contenu d'un payload](Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.json.html)).
 
-
-Ci-dessous un exemple de contenu d'un payload :
-
-<!-- Mettre comme exemple du profil quand il correspond à un profil -->
-```json
-{
-    "resourceType":"Bundle","id":"a9c10f8a-882d-4000-a280-7150e0aeb478",
-    "type":"transaction-response",
-    "link":[{"relation":"self","url":"http://exemple.com/fhir"}],
-    "entry":[
-        {
-            "response":{
-                "id":"urn:uuid:a9a16511-43ad-11e8-afb2-4107535a99ef",
-                "status":"201",
-                "location":"List/1"
-            }
-        },
-        {
-            "response":{
-                "id":"urn:uuid:a9a16512-43ad-11e8-afb2-4107535a99ef",
-                "status":"201",
-                "location":"DocumentReference/1"
-            }
-        },
-        {
-            "response":{
-                "id":"urn:uuid:8da1cfcc-05db-4aca-86ad82aa756a64bb",
-                "status":"201",
-                "location":"Binary/1"
-            }
-        }
-    ]
-}
-```
 
 Ce flux sert à communiquer un succès ou un échec. Un succès n'est indiqué que lorsque le ou les documents sont reçus, complètement traités et conservés selon les besoins de la configuration du gestionnaire de partage de documents.
 

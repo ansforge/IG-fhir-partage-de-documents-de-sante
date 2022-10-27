@@ -1,4 +1,4 @@
-Ce flux contient les informations relatives à la modification des métadonnées clés de la [fiche](StructureDefinition-PDSmComprehensiveDocumentReference.html) (statut, niveau de confidentialité et archivage). Cette demande de modification est faite par le producteur de documents. 
+Ce flux contient les informations relatives à la modification des métadonnées clés de la fiche (statut, niveau de confidentialité et archivage). Cette demande de modification est faite par le producteur de documents. 
 
 ### Flux 03 : mise à jour des métadonnées de la fiche
 
@@ -17,7 +17,7 @@ Les corrections à apporter à la ressource peuvent être communiquées de trois
 
 A noter que la méthode JSON patch est mature et plus adaptée à un usage en mobilité.
 
-Lorsque toutes les modifications sont traitées, le serveur traite la [fiche](StructureDefinition-PDSmComprehensiveDocumentReference.html) du document de la même façon qu’au cours d’une opération update créant ainsi une nouvelle version (modification des éléments meta.versionId et meta.lastUpdated). 
+Lorsque toutes les modifications sont traitées, le serveur traite la fiche du document de la même façon qu’au cours d’une opération update créant ainsi une nouvelle version (modification des éléments meta.versionId et meta.lastUpdated). 
 
 Ci-dessous un exemple de requête avec le body en JSON : 
 ```

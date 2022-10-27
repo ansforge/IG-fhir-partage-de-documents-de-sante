@@ -90,3 +90,43 @@ Ce tableau reprend les acteurs identifiés dans les SFE-PDS ainsi que les flux q
 * DocumentReference.category n'est pas bindé au même ValueSet (table des catégories ENS vs TRE)
 * content.attachment.data (obligatoire pour API DOC MES vs ressource Binary pour PDSm)
 
+
+### Mise en équivalence des paramètres de recherche avec les critères de recherche métier
+
+
+#### Recherche de lot de soumission (profil [PDSmSubmissionSetComprehensive](StructureDefinition-PDSmSubmissionSetComprehensive.html))
+
+| Critère de recherche  | Paramètre de recherche |
+| ----- | ----- |
+| dateSoumission : Date | date : date            |
+| typeActivite : Code | designationType : token |
+| idUnique : Identifiant | identifier : token |
+| statut : Code |  status : token <br/> Paramètre de recherche créé pour le volet PDSm : <br/> isArchived : token|
+| idLotSoumission : Identifiant | identifier : token |
+| titre : Texte | title : string |
+| idSource : Identifiant | sourceId : reference |
+| auteur : Identifiant | source : reference <br/> Paramètre de recherche créé pour le volet PDSm <br/> authorOrg : reference |
+| code : code | code : token |
+| idPatient : Identifiant | patient.identifier : token |
+| prenomAuteurPersonnePhysique : Texte | source:Patient.given : string <br/> source:PractitionerRole.partOf.given-ex : string |
+| nomAuteurPersonnePhysique : Texte | source:Patient.family : string  <br/> source:PractitionerRole.partOf.family-ex : string |
+{: .grid }
+
+
+#### Recherche de fiche (profil [PDSmComprehensiveDocumentReference](StructureDefinition-PDSmComprehensiveDocumentReference.html))
+
+| Critère de recherche  | Paramètre de recherche |
+| ----- | ----- |
+| dateSoumission : Date | date : date            |
+| typeActivite : Code | designationType : token |
+| idUnique : Identifiant | identifier : token |
+| statut : Code |  status : token <br/> Paramètre de recherche créé pour le volet PDSm : <br/> isArchived : token|
+| idLotSoumission : Identifiant | identifier : token |
+| titre : Texte | title : string |
+| idSource : Identifiant | sourceId : reference |
+| auteur : Identifiant | source : reference <br/> Paramètre de recherche créé pour le volet PDSm <br/> authorOrg : reference |
+| code : code | code : token |
+| idPatient : Identifiant | patient.identifier : token |
+| prenomAuteurPersonnePhysique : Texte | source:Patient.given : string <br/> source:PractitionerRole.partOf.given-ex : string |
+| nomAuteurPersonnePhysique : Texte | source:Patient.family : string  <br/> source:PractitionerRole.partOf.family-ex : string |
+{: .grid }

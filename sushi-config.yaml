@@ -15,6 +15,7 @@ releaseLabel: ci-build
 dependencies:
     ihe.iti.mhd: 4.1.0
     ans.annuaire.fhir.r4: 0.2.0
+    # hl7.fhir.fr.core: 1.0.0
     # TODO: rajouter fr-core
     # FrenchProfiledFHIRAr.072021: 0.1m.0
 
@@ -37,7 +38,7 @@ pages:
         st_consultation.md:
             title: Consultation de documents
         st_ajout_simplifie.md:
-            title: Ajout simplifié
+            title: Ajout simplifié d'un document
     specifications_fonctionnelles.md:
         sf_ajout.md:
             title: Ajout d'un lot de documents
@@ -56,7 +57,7 @@ pages:
         downloads.md:
             title: Téléchargements et usages
     about.md:
-        title: A propos de ce guide
+        title: A propos des Implementation Guides
 
 menu:
     Accueil: index.html
@@ -67,19 +68,18 @@ menu:
         Recherche de lot de documents: st_recherche_lot.html
         Recherche de fiche: st_recherche_fiche.html
         Consultation de documents: st_consultation.html
-        Ajout simplifié: st_ajout_simplifie.html
-    Spécifications fonctionnelles:
-        Spécifications fonctionnelles: specifications_fonctionnelles.html
-        Ajout d'un lot de documents: sf_ajout.html
-        Mise à jour de documents: sf_maj.html
-        Recherche de documents: sf_recherche.html
-        Consultation de documents: sf_consultation.html
+        Ajout simplifié d'un document: st_ajout_simplifie.html
+    # Spécifications fonctionnelles:
+    #     Spécifications fonctionnelles: specifications_fonctionnelles.html
+    #     Ajout d'un lot de documents: sf_ajout.html
+    #     Mise à jour de documents: sf_maj.html
+    #     Recherche de documents: sf_recherche.html
+    #     Consultation de documents: sf_consultation.html
+    Ressources de conformance: artifacts.html
     Autres ressources:
         Sécurité: securite.html
         Equivalences: equivalences.html
         Téléchargements et usage: downloads.html
-        Artifacts: artifacts.html
-    Ressources extérieures:
-        "FHIR Spec ": new-tab {{site.data.fhir.path}}index.html
-        "ANS website ": new-tab https://esante.gouv.fr/
+        "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
+        "Site de l'ANS ": new-tab https://esante.gouv.fr/
     A propos: about.html
