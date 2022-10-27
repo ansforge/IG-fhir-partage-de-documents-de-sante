@@ -1,8 +1,8 @@
 Instance: PDSm-List-PractitionerRoleAsSource
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_List_PractitionerRoleAsSource"
-* version = "1.0"
+// * url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_List_PractitionerRoleAsSource"
+// * version = "1.0"
 * name = "PDSm_List_PractitionerRoleAsSource"
 * derivedFrom = "http://hl7.org/fhir/SearchParameter/List-source"
 * status = #active

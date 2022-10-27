@@ -1,8 +1,8 @@
 Instance: PDSm-isArchived
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_isArchived"
-* version = "1.0"
+// * url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_isArchived"
+// * version = "1.0"
 * name = "PDSm_isArchived"
 * status = #active
 * date = "2021-07-30"

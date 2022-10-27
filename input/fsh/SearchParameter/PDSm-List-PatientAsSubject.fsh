@@ -1,8 +1,8 @@
 Instance: PDSm-List-PatientAsSubject
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_List_PatientAsSubject"
-* version = "1.0"
+// * url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_List_PatientAsSubject"
+// * version = "1.0"
 * name = "PDSm_List_PatientAsSubject"
 * derivedFrom = "http://hl7.org/fhir/SearchParameter/clinical-patient"
 * status = #active

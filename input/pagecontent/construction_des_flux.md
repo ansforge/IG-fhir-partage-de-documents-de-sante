@@ -1,37 +1,66 @@
-La construction des flux reprend le profil MHD. Cela consiste en la construction des requêtes ou des réponses HTTP de l'API REST de FHIR.
+La construction des flux reprend le profil MHD. Ces flux représentent des interactions avec le gestionaire de documents, dont la construction est détaillée dans des pages dédiées à chaque objectif :
 
-<object data="PDSm_1.svg" type="image/svg+xml"></object>
+### Ajout d'un lot de documents
+
+<object data="PDSm_ajout.svg" type="image/svg+xml"></object>
 <br/>
 
-### Ajout de document•s
-
-* Le <a href="st_flux1.html">flux 01</a> d’ajout d’un lot de documents sera assuré par l’interaction « transaction » de FHIR. Le gestionnaire de partage de documents doit supporter les requêtes HTTP POST.
-* Le <a href="st_flux2.html">flux 02</a> résultat de la demande d’ajout d’un lot de documents sera assuré par la réponse à la requête HTTP POST.
+* Le flux 01 d’ajout d’un lot de documents sera assuré par l’interaction « transaction » de FHIR. Le gestionnaire de partage de documents doit supporter les requêtes HTTP POST.
+* Le flux 02 de résultat de la demande d’ajout d’un lot de documents sera assuré par la réponse à la requête HTTP POST.
 
 Les flux 01 et 02 correspondent à la transaction IHE "Provide Document Bundle [ITI-65]". 
+La documentation complète est accessible <a href="st_ajout.html">ici</a>
 
 
-### Mise à jour de fiche document
+### Mise à jour de documents
 
 
-<object data="PDSm_2.svg" type="image/svg+xml"></object>
+<object data="PDSm_maj.svg" type="image/svg+xml"></object>
 <br/>
 
 * Le <a href="st_flux3.html">flux 03</a> de demande de mise à jour des métadonnées de la fiche sera assuré par l’interaction « patch » de FHIR. Le gestionnaire de partage de documents doit supporter les requêtes HTTP PATCH et le « conditional patch » afin d’effectuer la demande via l’identifiant métier.
 * Le <a href="st_flux4.html">flux 04</a> résultat de la demande de mise à jour des métadonnées de la fiche.
 
 Les flux 03 et 04 se situent hors du périmètre du profil MHD.
+La documentation complète est accessible <a href="st_maj.html">ici</a>
 
-### Recherche de documents
+### Recherche de lot de documents
 
-* Le <a href="st_flux5.html">flux 05</a> de recherche de documents sera assuré par l’interaction « search » de FHIR. Le gestionnaire de partage de documents doit supporter les requêtes HTTP GET et HTTP POST. On recherche soit un lot de soumission, ressource List, soit une fiche d’un document, ressource DocumentReference.
-* Le <a href="st_flux6.html">flux 06</a> résultat de la recherche de documents sera assuré par la réponse à la requête HTTP.
+<object data="PDSm_recherche.svg" type="image/svg+xml"></object>
+<br/>
 
-La recherche de lots de soumission correspond à la transaction IHE "Find Document Lists [ITI-66]". La recherche de fiches correspond à la transaction IHE "Find Document References [ITI-67]".
+* Le flux 05 de recherche de documents sera assuré par l’interaction « search » de FHIR. Le gestionnaire de partage de documents doit supporter les requêtes HTTP GET et HTTP POST. On recherche ici un lot de soumission (ressource List).
+* Le flux 06 résultat de la recherche de documents sera assuré par la réponse à la requête HTTP.
 
-### Accès à un document
+La recherche de lots de soumission correspond à la transaction IHE "Find Document Lists [ITI-66]".
+La documentation complète est accessible <a href="st_recherche_lot.html">ici</a>
 
-* Le <a href="st_flux7.html">flux 07</a> de demande de consultation de documents repose sur l’interaction « read » de FHIR. Le gestionnaire de partage de documents doit supporter les requêtes HTTP GET.
-* Le <a href="st_flux8.html">flux 08</a> résultat de la demande de consultation de documents sera assuré par la réponse à la requête HTTP GET.
+### Recherche de fiche
+
+* Le flux 05 de recherche de documents sera assuré par l’interaction « search » de FHIR. Le gestionnaire de partage de documents doit supporter les requêtes HTTP GET et HTTP POST. On recherche ici une fiche d’un document (ressource DocumentReference).
+* Le flux 06 résultat de la recherche de documents sera assuré par la réponse à la requête HTTP.
+
+La recherche de fiches correspond à la transaction IHE "Find Document References [ITI-67]".
+La documentation complète est accessible <a href="st_recherche_fiche.html">ici</a>
+
+### Consultation de documents
+
+<object data="PDSm_consultation.svg" type="image/svg+xml"></object>
+<br/>
+
+* Le flux 07 de demande de consultation de documents repose sur l’interaction « read » de FHIR. Le gestionnaire de partage de documents doit supporter les requêtes HTTP GET.
+* Le flux 08 résultat de la demande de consultation de documents sera assuré par la réponse à la requête HTTP GET.
             
 Les flux 07 et 08 correspondent aux transactions IHE "Retrieve Document [ITI-68]".
+La documentation complète est accessible <a href="st_consultation.html">ici</a>
+
+
+### Ajout simplifié de document
+
+<object data="PDSm_ajout_simplifie.svg" type="image/svg+xml"></object>
+<br/>
+
+* Le flux 09 d’ajout d’un document de manière simplifiée repose sur l'interaction « create » de FHIR. 
+* Le flux 10 de résultat de la demande d’ajout simplifié d'un document sera assuré par la réponse à la requête HTTP POST.
+
+La documentation complète est accessible <a href="st_ajout_simplifie.html">ici</a>

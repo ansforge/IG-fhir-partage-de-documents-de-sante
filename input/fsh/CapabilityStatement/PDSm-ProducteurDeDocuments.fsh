@@ -1,8 +1,8 @@
 Instance: PDSm-ProducteurDeDocuments
 InstanceOf: CapabilityStatement
 Usage: #definition
-* url = "http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/PDSm.ProducteurDeDocuments"
-* version = "1.0"
+// * url = "http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/PDSm.ProducteurDeDocuments"
+// * version = "1.0"
 * name = "PDSm-ProducteurDeDocuments"
 * title = "CI-SIS Partage-De-Documents-De-Sante - ProducteurDeDocuments"
 * status = #active
@@ -14,7 +14,7 @@ Usage: #definition
 * fhirVersion = #4.0.0
 * format[0] = #xml
 * format[+] = #json
-* implementationGuide = "http://esante.gouv.fr/ci-sis/fhir/ImplementationGuides/CI-SIS.PartageDeDocumentsDeSante"
+// * implementationGuide = "http://esante.gouv.fr/ci-sis/fhir/ImplementationGuides/CI-SIS.PartageDeDocumentsDeSante"
 * rest.mode = #client
 * rest.documentation = "Ajout d’un lot de documents et Demande de mise à jour des métadonnées de la fiche"
 * rest.security.cors = false

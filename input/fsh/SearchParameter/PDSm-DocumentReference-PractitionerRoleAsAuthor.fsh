@@ -1,9 +1,9 @@
 Instance: PDSm-DocumentReference-PractitionerRoleAsAuthor
 InstanceOf: SearchParameter
 Usage: #definition
-* meta.lastUpdated = "2021-10-21T14:14:42.103+00:00"
-* url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_DocumentReference_PractitionerRoleAsAuthor"
-* version = "1.0"
+// * meta.lastUpdated = "2021-10-21T14:14:42.103+00:00"
+// * url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_DocumentReference_PractitionerRoleAsAuthor"
+// * version = "1.0"
 * name = "PDSm_DocumentReference_PractitionerRoleAsAuthor"
 * derivedFrom = "http://hl7.org/fhir/SearchParameter/DocumentReference-author"
 * status = #active
