@@ -11,7 +11,6 @@ Ce profil est utilisé dans le cadre du flux 9. Le flux et le profil sont inspir
 La publication simplifiée est un simple POST d'une ressource DocumentReference conforme à ce profil.
 """
 
-// A vérifier :
 * meta.versionId MS
 * meta.versionId ^short = "Numéro de version de la fiche d’un document attribués par le système cible. La valeur de la métadonnée version est égale à 1 pour la première version de la fiche."
 * meta.versionId obeys constr-cdr-maj
@@ -60,11 +59,6 @@ La publication simplifiée est un simple POST d'une ressource DocumentReference 
 * authenticator ^short = "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents. Si l’auteur est un dispositif, cet attribut doit représenter la personne responsable de l’action effectuée par le dispositif. Pour les documents d’expression personnelle du patient, cet attribut fait référence au patient." // ref patient impossible
 * authenticator only Reference($practitionerRole-organizationalRole-rass or $organization-rass)
 * authenticator obeys constr-bind-authenticator
-
-* relatesTo 0..0
-* relatesTo ^short = "relatesTo is not supported by Simplified Publish"
-
-
 
 * description MS
 * description ^short = "Commentaire associé au document."

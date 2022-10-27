@@ -20,7 +20,6 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 * extension[designationType] obeys constr-bind-designationtype
 
 
-
 * extension[designationType].value[x] ^binding.description = "XDS contentTypeCode CI-SIS"
 * extension[designationType] ^short = "Représente le type d’activité associé à l’événement clinique ayant abouti à la constitution du lot de soumission."
 

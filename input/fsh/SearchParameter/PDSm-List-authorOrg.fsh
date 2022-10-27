@@ -13,3 +13,4 @@ Description: "Paramètre de recherche créé pour le volet PDSm de manière à p
 * base = #List
 * type = #reference
 * expression = "(extension('http://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-authorOrg').value as Reference)"
+
