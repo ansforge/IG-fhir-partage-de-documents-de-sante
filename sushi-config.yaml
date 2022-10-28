@@ -15,9 +15,7 @@ releaseLabel: ci-build
 dependencies:
     ihe.iti.mhd: 4.1.0
     ans.annuaire.fhir.r4: 0.2.0
-    # hl7.fhir.fr.core: 1.0.0
-    # TODO: rajouter fr-core
-    # FrenchProfiledFHIRAr.072021: 0.1m.0
+    # TODO: rajouter fr-core # hl7.fhir.fr.core: 1.0.0
 
 parameters:
     shownav: 'true'
@@ -39,15 +37,15 @@ pages:
             title: Consultation de documents
         st_ajout_simplifie.md:
             title: Ajout simplifié d'un document
-    specifications_fonctionnelles.md:
-        sf_ajout.md:
-            title: Ajout d'un lot de documents
-        sf_maj.md:
-            title: Mise à jour de documents
-        sf_recherche.md:
-            title: Recherche de documents
-        sf_consultation.md:
-            title: Consultation de documents
+    # specifications_fonctionnelles.md:
+    #     sf_ajout.md:
+    #         title: Ajout d'un lot de documents
+    #     sf_maj.md:
+    #         title: Mise à jour de documents
+    #     sf_recherche.md:
+    #         title: Recherche de documents
+    #     sf_consultation.md:
+    #         title: Consultation de documents
     autres_ressources.md:
         title: Autres Ressources
         securite.md:
@@ -57,7 +55,7 @@ pages:
         downloads.md:
             title: Téléchargements et usages
     about.md:
-        title: A propos des Implementation Guides
+        title: A propos de ce guide
 
 menu:
     Accueil: index.html
@@ -82,4 +80,4 @@ menu:
         Téléchargements et usage: downloads.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/
-    A propos: about.html
+    A propos de ce guide: about.html
