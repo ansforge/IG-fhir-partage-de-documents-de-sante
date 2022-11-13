@@ -12,6 +12,7 @@ version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2020+
 releaseLabel: ci-build
+
 dependencies:
     ihe.iti.mhd: 4.1.0
     ans.annuaire.fhir.r4: 0.2.0
