@@ -1,8 +1,9 @@
 La construction des flux reprend le profil MHD. Ces flux représentent des interactions avec le gestionaire de documents, dont la construction est détaillée dans des pages dédiées à chaque objectif :
 
 ### Ajout d'un lot de documents
-
-<object data="PDSm_ajout.svg" type="image/svg+xml"></object>
+<div align="center">
+<object data="PDSm-flux1_2.jpg" type="image/jpg"></object>
+</div>
 <br/>
 
 * Le flux 01 d’ajout d’un lot de documents sera assuré par l’interaction « transaction » de FHIR. Le gestionnaire de partage de documents doit supporter les requêtes HTTP POST.
@@ -14,8 +15,9 @@ La documentation complète est accessible <a href="st_ajout.html">ici</a>
 
 ### Mise à jour de documents
 
-
-<object data="PDSm_maj.svg" type="image/svg+xml"></object>
+<div align="center">
+<object data="PDSm-flux3_4.png" type="image/png"></object>
+</div>
 <br/>
 
 * Le <a href="st_flux3.html">flux 03</a> de demande de mise à jour des métadonnées de la fiche sera assuré par l’interaction « patch » de FHIR. Le gestionnaire de partage de documents doit supporter les requêtes HTTP PATCH et le « conditional patch » afin d’effectuer la demande via l’identifiant métier.
@@ -26,7 +28,9 @@ La documentation complète est accessible <a href="st_maj.html">ici</a>
 
 ### Recherche de lot de documents
 
-<object data="PDSm_recherche.svg" type="image/svg+xml"></object>
+<div align="center">
+<object data="PDSm-flux5_6.png" type="image/png"></object>
+</div>
 <br/>
 
 * Le flux 05 de recherche de documents sera assuré par l’interaction « search » de FHIR. Le gestionnaire de partage de documents doit supporter les requêtes HTTP GET et HTTP POST. On recherche ici un lot de soumission (ressource List).
@@ -44,8 +48,9 @@ La recherche de fiches correspond à la transaction IHE "Find Document Reference
 La documentation complète est accessible <a href="st_recherche_fiche.html">ici</a>
 
 ### Consultation de documents
-
-<object data="PDSm_consultation.svg" type="image/svg+xml"></object>
+<div align="center">
+<object data="PDSm-flux7_8.png" type="image/png"></object>
+</div>
 <br/>
 
 * Le flux 07 de demande de consultation de documents repose sur l’interaction « read » de FHIR. Le gestionnaire de partage de documents doit supporter les requêtes HTTP GET.
@@ -56,8 +61,9 @@ La documentation complète est accessible <a href="st_consultation.html">ici</a>
 
 
 ### Ajout simplifié de document
-
-<object data="PDSm_ajout_simplifie.svg" type="image/svg+xml"></object>
+<div align="center">
+<object data="PDSm-flux9_10.png" type="image/png"></object>
+</div>
 <br/>
 
 * Le flux 09 d’ajout d’un document de manière simplifiée repose sur l'interaction « create » de FHIR. 

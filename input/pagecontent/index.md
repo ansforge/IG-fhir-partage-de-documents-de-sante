@@ -1,7 +1,8 @@
-La manière de publier, gérer la hiérarchie, et valider sa conformance à une spécification est primordial dans l'interopérabilité.  <br/>
-Cette concertation a pour but de proposer une nouvelle manière de publier des spécifications d'interopérabilité grâce à des Implementation Guide et à l'IG Publisher, outil officiel HL7.
-Pour l'heure, le volet du CI-SIS [PDSm](https://esante.gouv.fr/volet-partage-de-documents-de-sante) reste la source de vérité. Par exemple, la dépendance vers les profils français d'InteropSanté n'est pour l'heure pas mise en place, car l'import du package cause des erreurs en cours d'investigation.
-Cette concertation a également pour objectif de proposer un flux d'alimentation simplifié de documents.
+Cette spécification est destinée à concertation avec deux objectifs : <br/>
+1- Proposer une nouvelle manière de publier des spécifications d'interopérabilité grâce à des Implementation Guides construits à partir de l'IG Publisher, outil officiel HL7. <br/>
+2- Proposer un nouveau flux d'alimentation simplifié de documents. <br/>
+Pour l'heure, le volet du CI-SIS [PDSm](https://esante.gouv.fr/volet-partage-de-documents-de-sante) au format pdf reste la source de vérité.  <br/>
+La dépendance vers les profils français d'InteropSanté n'est pas mise en place, car l'import du package cause des erreurs en cours d'investigation.
 {:.stu-note}
 <!-- Phrase à aligner avec la concertation : 1. Flux simplifié, 2. Nouveau format -->
 
@@ -18,7 +19,7 @@ Ce document s'adresse aux développeurs des interfaces interopérables des syst�
 
 ### Standards utilisés
 
-Ces spécifications techniques se basent sur le standard HL7 FHIR Release 4, et plus particulièrement sur les contraintes spécifiées par le profil MHD version 4.0.13. Elles font référence à un certain nombre de ressources du standard ainsi qu'aux spécifications de l'API REST FHIR, basées sur le protocole HTTP. Les syntaxes retenues sont la syntaxe XML et JSON.
+Ces spécifications techniques se basent sur le standard HL7 FHIR Release 4, et plus particulièrement sur les contraintes spécifiées par le profil MHD version 4.0.1. Elles font référence à un certain nombre de ressources du standard ainsi qu'aux spécifications de l'API REST FHIR, basées sur le protocole HTTP. Les syntaxes retenues sont la syntaxe XML et JSON.
 
 Une [mise en équivalence](equivalences.html) entre les acteurs et les flux identifiés dans les SFE-PDS et ceux présentés dans le profil MHD est disponible.
 Ce volet met en place l’option du profil MHD « Comprehensive Metadata » qui permet aux acteurs d’échanger des métadonnées complètes répondant aux exigences définies dans le profil XDS. 
@@ -45,9 +46,9 @@ Des ressources FHIR ont été profilées pour le contexte français et sont util
 Deux sources seront utilisées dans le cadre de ce volet :
 * Les profils FHIR « FrPatient », « FrPractitioner » et « FrOrganization » publiés par HL7 France sont utilisés dans ce volet. Les présentes spécifications se basent sur les profils du package [hl7-france-fhir.administrative11.2021.1](https://registry.fhir.org/package/hl7-france-fhir.administrative%7C11.2021.1).
 
-* Dans le cadre de l’annuaire santé, l’ANS met à disposition un service national de publication des données des professionnels et des structures au format FHIR5; deux profils de l’annuaire santé, à savoir « PractitionerRoleProfessionalRoleRASS », « PractitionerRoleOrganizationalRoleRASS » sont utilisés pour le cas d’usage cahier de liaison. Les présentes spécifications se basent sur les profils du package ANS.annuaire.fhir.r4 0.2.06.
+* Dans le cadre de l’annuaire santé, l’ANS met à disposition un service national de publication des données des professionnels et des structures au format FHIR5; deux profils de l’annuaire santé, à savoir « PractitionerRoleProfessionalRoleRASS », « PractitionerRoleOrganizationalRoleRASS » sont utilisés pour le cas d’usage cahier de liaison. Les présentes spécifications se basent sur les profils du package [ANS.annuaire.fhir.r4 0.2.0](https://simplifier.net/packages/ans.annuaire.fhir.r4/0.2.0).
 
-Ces spécifications s’appuient également sur les profils définis dans le profil IHE MHD v4.0.17 relatifs à l’option « Comprehensive Metadata ».
+Ces spécifications s’appuient également sur les profils définis dans le profil IHE MHD v4.0.1 relatifs à l’option « Comprehensive Metadata ».
 
 Le tableau ci-après spécifie les profils utilisés pour les ressources et types de données mentionnés dans ce document. Les présentes spécifications définissent également des profils propres au présent volet (préfixe PDSm).
 Pour les ressources et types de données non mentionnés dans ce tableau, le profil à utiliser est celui défini par HL7 FHIR.
