@@ -1,7 +1,7 @@
 # Documentation à propos de cette page : https://fshschool.org/docs/sushi/configuration/
 
 id: ans.fhir.fr.PDSm
-canonical: http://esante.gouv.fr/ci-sis/fhir/PDSm
+canonical: http://interop.esante.gouv.fr/ci-sis/fhir/PDSm
 name: PDSm
 title: Partage de Documents de Santé en mobilité (PDSm)
 publisher:
@@ -12,10 +12,12 @@ version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2020+
 releaseLabel: ci-build
+
 dependencies:
     ihe.iti.mhd: 4.1.0
     ans.annuaire.fhir.r4: 0.2.0
-    # TODO: rajouter fr-core # hl7.fhir.fr.core: 1.0.0
+    # TODO: rajouter fr-core # 
+    hl7.fhir.fr.core: 1.1.0
 
 parameters:
     shownav: 'true'

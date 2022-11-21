@@ -56,7 +56,7 @@ La publication simplifiée est un simple POST d'une ressource DocumentReference 
 
 * authenticator MS
 * authenticator 0..1
-* authenticator ^short = "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents. Si l’auteur est un dispositif, cet attribut doit représenter la personne responsable de l’action effectuée par le dispositif. Pour les documents d’expression personnelle du patient, cet attribut fait référence au patient." // ref patient impossible
+* authenticator ^short = "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents. Si l’auteur est un dispositif, cet attribut doit représenter la personne responsable de l’action effectuée par le dispositif."
 * authenticator only Reference($practitionerRole-organizationalRole-rass or $organization-rass)
 * authenticator obeys constr-bind-authenticator
 
