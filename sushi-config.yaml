@@ -1,7 +1,7 @@
 # Documentation à propos de cette page : https://fshschool.org/docs/sushi/configuration/
 
 id: ans.fhir.fr.pdsm
-canonical: https://interop.esante.gouv.fr/ig/fhir/pdsm
+canonical: https//localhost/pdsm
 name: PDSm
 title: Partage de Documents de Santé en mobilité (PDSm)
 publisher:
