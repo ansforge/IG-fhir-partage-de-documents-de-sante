@@ -1,17 +1,17 @@
 # Documentation à propos de cette page : https://fshschool.org/docs/sushi/configuration/
 
 id: ans.fhir.fr.pdsm
-canonical: https//localhost/pdsm
+canonical: http://localhost/pdsm
 name: PDSm
 title: Partage de Documents de Santé en mobilité (PDSm)
 publisher:
     name: ANS
     url: https://esante.gouv.fr
 status: draft
-version: 0.1.0
+version: 0.1.4
 fhirVersion: 4.0.1
 copyrightYear: 2020+
-releaseLabel: ci-build
+releaseLabel: Trial-Implementation
 
 dependencies:
     ihe.iti.mhd: 4.1.0
@@ -21,6 +21,8 @@ dependencies:
 
 parameters:
     shownav: 'true'
+
+
 
 pages:
     index.md:

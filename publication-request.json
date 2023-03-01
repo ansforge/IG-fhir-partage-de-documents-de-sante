@@ -1,0 +1,13 @@
+{
+    "package-id" : "ans.fhir.fr.pdsm",
+    "version" : "0.1.4",
+    "path" : "http://localhost/pdsm/0.1.4",
+    "mode" : "milestone",
+    "status" : "release",
+    "sequence" : "Releases",
+    "title" : "title example",
+    "desc" : "Desc of release",
+    "ci-build" : "http://localhost/pdsm",
+    "category" : "{category} (only for first release)",
+    "introduction" : "{intro} (only for first release)"
+  }
