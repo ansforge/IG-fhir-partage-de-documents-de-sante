@@ -7,7 +7,7 @@
     "sequence" : "Releases",
     "title" : "title example",
     "desc" : "Desc of release",
-    "ci-build" : "http://localhost/pdsm",
-    "category" : "{category} (only for first release)",
+    "ci-build" : "https://interop.esante.gouv.fr/ig/fhir/pdsm",
+    "category" : "Clinical Documents",
     "introduction" : "{intro} (only for first release)"
   }

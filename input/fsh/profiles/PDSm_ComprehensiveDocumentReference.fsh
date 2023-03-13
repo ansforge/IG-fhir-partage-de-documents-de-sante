@@ -13,7 +13,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 
 * contained MS
 * contained 1..
-* contained only Fratient or Device or $practitionerRole-organizationalRole-rass or $organization-rass or $practitionerRole-professionalRole-rass or $practitioner-rass 
+* contained only FrPatient or Device or $practitionerRole-organizationalRole-rass or $organization-rass or $practitionerRole-professionalRole-rass or $practitioner-rass 
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"

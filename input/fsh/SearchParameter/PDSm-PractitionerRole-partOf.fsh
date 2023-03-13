@@ -14,5 +14,5 @@ Usage: #definition
 * expression = "(extension('https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-partOf').value as Reference)"
 
 
-// Note : ce searchparam n'a pas la même forme que les autres searchparams de PDSm sur le package simplifier (n'a pas List dans le nom) mais a été corrigé par Tristan le 09.01
+// Note : ce searchparam n'a pas la même forme que les autres searchparams de PDSm sur le package simplifier (n'a pas List dans le nom) mais a été corrigé par Tristan Rieu le 09.01
 // https://simplifier.net/CI-SIS/PDSmfamilyEx/~json
