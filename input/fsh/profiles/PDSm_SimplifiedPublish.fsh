@@ -1,7 +1,7 @@
 Profile: PDSm_SimplifiedPublish
-Parent: DocumentReference
-Id: PDSm-SimplifiedPublish
-Title: "PDSm_SimplifiedPublish"
+Parent: IHE.MHD.SimplifiedPublish.DocumentReference
+Id: pdsm-simplified-publish
+Title: "PDSm Simplified Publish"
 Description:    """
 Ce profil a été créé en s'inspirant du profil MHD Simplified. 
 Contrairement au profil PDSm_ComprehensiveDocumentReference, le document est directement inclus dans DocumentReference.attachment.data et non dans une ressource « Binary » externe.
@@ -42,7 +42,7 @@ La publication simplifiée est un simple POST d'une ressource DocumentReference 
 
 * subject 1..1
 * subject ^short = "Patient concerné par ce document. La ressource référencée peut être présente sous l’élément DocumentReference.contained ou via le champ identifier."
-* subject only Reference(Patient) //TODO : FrPatient
+* subject only Reference(FrPatient) 
 
 * date MS
 * date ^short = "Représente la date de création de la ressource DocumentReference dans FHIR"
@@ -50,7 +50,7 @@ La publication simplifiée est un simple POST d'une ressource DocumentReference 
 * author MS
 * author ^short = "Personnes physiques ou morales et/ou les dispositifs auteurs d'un document."
 * author 1..
-* author only Reference($practitionerRole-organizationalRole-rass or Practitioner or Organization or Device or Patient or RelatedPerson) //TODO Fr core
+* author only Reference($practitionerRole-organizationalRole-rass or FrPractitioner or FrOrganization or Device or FrPatient or FrRelatedPerson) 
 * author obeys constr-bind-author
 
 
@@ -118,7 +118,7 @@ La publication simplifiée est un simple POST d'une ressource DocumentReference 
 * context.practiceSetting ^short = "Cadre d’exercice de l’acte qui a engendré la création du document."
 * context.practiceSetting ^binding.description = "XDS practiceSettingCode CI-SIS"
 
-* context.sourcePatientInfo only Reference(Patient) //FrPatient
+* context.sourcePatientInfo only Reference(FrPatient)
 * context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier."
 * context.sourcePatientInfo ^type.aggregation = #contained
 

@@ -1,14 +1,12 @@
 Profile: PDSm_SubmissionSetComprehensive
 Parent: IHE.MHD.Comprehensive.SubmissionSet
-Id: PDSmSubmissionSetComprehensive
-Title: "PDSm_SubmissionSetComprehensive"
+Id: pdsm-submissionset-comprehensive
+Title: "PDSm SubmissionSet Comprehensive"
 Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « ComprehensiveSubmissionSet  » créé pour le volet ANS \"Partage de documents de santé en mobilité\" ; ce profil concerne le lot de soumission."
-// * ^date = "2021-07-30"
-// * ^publisher = "ANS"
 
 * contained MS
 * contained 1..
-* contained only $practitioner-rass or $organization-rass or Patient or $practitionerRole-organizationalRole-rass or Device or $practitionerRole-professionalRole-rass //FrPatient
+* contained only $practitioner-rass or $organization-rass or FrPatient or $practitionerRole-organizationalRole-rass or Device or $practitionerRole-professionalRole-rass 
 
 * extension 2..
 * extension ^slicing.discriminator.type = #value
@@ -33,12 +31,11 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 
 
 * extension[PDSm_intendedRecipient] MS
-* extension[PDSm_intendedRecipient] ^sliceName = "PDSm_intendedRecipient"
 * extension[PDSm_intendedRecipient].value[x] only Reference
 * extension[PDSm_intendedRecipient].value[x] ^type.aggregation = #contained
 * extension[PDSm_intendedRecipient] ^short = "Représente le destinataire du lot de soumission"
 * extension[PDSm_intendedRecipient] ^definition = "Les ressources référencées sont : - PractitionerRole : Dans le cas d’un destinaire professionnel, c’est le profil PractitionerRoleOrgani zationalRoleRASS représentant la situation d’exercice qui doit être référencé. Lui-même fera le lien avec le profil PractitionerRoleProfes sionalRoleRASS représentant l’exercice professionnel et avec FrPractitioner. - Organization contrainte au profil FrOrganization"
-//* subject only Reference(FrPatient)
+* subject only Reference(FrPatient)
 
 * extension[isArchived] ^short = "Extension définie par ce volet pour distinguer les lots de soumission archivés des actives. "
 
@@ -67,7 +64,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 * date ^short = "Représente la date et heure de soumission."
 
 * source 1..
-* source only Reference($practitionerRole-organizationalRole-rass or Device or Patient) //FrPatient
+* source only Reference($practitionerRole-organizationalRole-rass or Device or FrPatient) 
 * source obeys constr-bind-source
 
 
@@ -97,14 +94,9 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 Extension: PDSm_intendedRecipient
 Id: PDSmintendedrecipient
 Description: "Représente le destinataire du lot de soumission"
-* ^url = "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/PDSm_ihe-intended_recipient"
-* ^version = "1.0"
-* ^date = "2021-07-30"
-* ^publisher = "ANS"
 * ^context.type = #element
 * ^context.expression = "List"
 * . ^short = "Représente le destinataire du lot de soumission"
-* url = "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/PDSm_ihe-intended_recipient" (exactly)
 * value[x] only Reference($practitionerRole-organizationalRole-rass or $organization-rass)
 
 

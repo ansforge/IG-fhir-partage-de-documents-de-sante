@@ -8,19 +8,19 @@ publisher:
     name: ANS
     url: https://esante.gouv.fr
 status: draft
-version: 0.1.0
+version: 3.0.0
 fhirVersion: 4.0.1
 copyrightYear: 2020+
-releaseLabel: ci-build
+releaseLabel: Trial-Implementation
 
 dependencies:
-    ihe.iti.mhd: 4.1.0
+    ihe.iti.mhd: 4.2.0
     ans.annuaire.fhir.r4: 0.2.0
-    # TODO: rajouter fr-core # 
     hl7.fhir.fr.core: 1.1.0
 
 parameters:
     shownav: 'true'
+
 
 pages:
     index.md:

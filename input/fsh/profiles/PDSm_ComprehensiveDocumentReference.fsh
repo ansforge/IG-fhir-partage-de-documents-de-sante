@@ -1,7 +1,7 @@
 Profile: PDSm_ComprehensiveDocumentReference
 Parent: IHE.MHD.Comprehensive.DocumentReference
-Id: PDSmComprehensiveDocumentReference
-Title: "PDSm_ComprehensiveDocumentReference"
+Id: pdsm-comprehensive-document-reference
+Title: "PDSm Comprehensive DocumentReference"
 Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"ComprehensiveDocumentReference\" créé pour le volet \"Partage de documents de santé en mobilité\"."
 
 * meta.versionId MS
@@ -13,7 +13,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 
 * contained MS
 * contained 1..
-* contained only Patient or Device or $practitionerRole-organizationalRole-rass or $organization-rass or $practitionerRole-professionalRole-rass or $practitioner-rass //FrPatient
+* contained only FrPatient or Device or $practitionerRole-organizationalRole-rass or $organization-rass or $practitionerRole-professionalRole-rass or $practitioner-rass 
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
@@ -39,7 +39,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * category ^binding.description = "XDS classCode CI-SIS"
 * category obeys constr-bind-category
 
-* subject only Reference(Patient) //TODO : FrPatient
+* subject only Reference(FrPatient)
 * subject MS
 * subject ^short = "Représente l'identifiant du patient."
 * subject ^type.aggregation = #contained
@@ -51,13 +51,13 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * author MS
 * author ^short = "Personnes physiques ou morales et/ou les dispositifs auteurs d'un document."
 * author 1..
-* author only Reference($practitionerRole-organizationalRole-rass or Device or Patient) //TODO FrPatient
+* author only Reference($practitionerRole-organizationalRole-rass or Device or FrPatient)
 * author ^type.aggregation = #contained
 * author obeys constr-bind-author
 
 * authenticator MS
 * authenticator 1..
-* authenticator ^short = "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents. Si l’auteur est un dispositif, cet attribut doit représenter la personne responsable de l’action effectuée par le dispositif. Pour les documents d’expression personnelle du patient, cet attribut fait référence au patient." // --> comment peut-il faire référence au patient ? Pas possible selon la doc
+* authenticator ^short = "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents. Si l’auteur est un dispositif, cet attribut doit représenter la personne responsable de l’action effectuée par le dispositif. Pour les documents d’expression personnelle du patient, cet attribut fait référence au patient." 
 * authenticator only Reference($practitionerRole-organizationalRole-rass or $organization-rass)
 * authenticator obeys constr-bind-authenticator
 
@@ -120,7 +120,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * context.practiceSetting ^short = "Cadre d’exercice de l’acte qui a engendré la création du document."
 * context.practiceSetting ^binding.description = "XDS practiceSettingCode CI-SIS"
 
-* context.sourcePatientInfo only Reference(Patient) //FrPatient
+* context.sourcePatientInfo only Reference(FrPatient) 
 * context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier."
 * context.sourcePatientInfo ^type.aggregation = #contained
 
@@ -198,8 +198,6 @@ Description: "Les valeurs possibles pour cet élément doivent provenir d’une 
 Les valeurs possibles peuvent être restreintes en fonction du jeu de valeurs correspondant mis à disposition par le projet (exemple : JDV_J60-FormatCode-DMP).
 En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J10-XdsFormatCode-CISIS peut être utilisé."
 Severity:    #error
-
-// Informations sur les cardinalités retirées
 
 Invariant: constr-bind-context-event
 Description: "Nomenclatures utilisées :
