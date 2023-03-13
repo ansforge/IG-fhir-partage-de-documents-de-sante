@@ -118,7 +118,7 @@ La publication simplifiée est un simple POST d'une ressource DocumentReference 
 * context.practiceSetting ^short = "Cadre d’exercice de l’acte qui a engendré la création du document."
 * context.practiceSetting ^binding.description = "XDS practiceSettingCode CI-SIS"
 
-* context.sourcePatientInfo only Reference(Patient) //FrPatient
+* context.sourcePatientInfo only Reference(FrPatient)
 * context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier."
 * context.sourcePatientInfo ^type.aggregation = #contained
 

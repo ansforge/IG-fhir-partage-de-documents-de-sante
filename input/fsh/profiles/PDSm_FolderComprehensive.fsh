@@ -5,8 +5,7 @@ Title: "PDSm Folder Comprehensive"
 Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehensive Folder  » créé pour le volet ANS \"Partage de documents de santé en mobilité\" ; ce profil concerne le classeur."
 
 * contained 1..
-//* contained only FrPatient
-* contained only Patient
+* contained only FrPatient
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"

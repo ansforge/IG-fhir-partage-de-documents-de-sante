@@ -6,7 +6,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 
 * contained MS
 * contained 1..
-* contained only $practitioner-rass or $organization-rass or Patient or $practitionerRole-organizationalRole-rass or Device or $practitionerRole-professionalRole-rass //FrPatient
+* contained only $practitioner-rass or $organization-rass or FrPatient or $practitionerRole-organizationalRole-rass or Device or $practitionerRole-professionalRole-rass 
 
 * extension 2..
 * extension ^slicing.discriminator.type = #value
@@ -35,7 +35,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 * extension[PDSm_intendedRecipient].value[x] ^type.aggregation = #contained
 * extension[PDSm_intendedRecipient] ^short = "Représente le destinataire du lot de soumission"
 * extension[PDSm_intendedRecipient] ^definition = "Les ressources référencées sont : - PractitionerRole : Dans le cas d’un destinaire professionnel, c’est le profil PractitionerRoleOrgani zationalRoleRASS représentant la situation d’exercice qui doit être référencé. Lui-même fera le lien avec le profil PractitionerRoleProfes sionalRoleRASS représentant l’exercice professionnel et avec FrPractitioner. - Organization contrainte au profil FrOrganization"
-//* subject only Reference(FrPatient)
+* subject only Reference(FrPatient)
 
 * extension[isArchived] ^short = "Extension définie par ce volet pour distinguer les lots de soumission archivés des actives. "
 
@@ -64,7 +64,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 * date ^short = "Représente la date et heure de soumission."
 
 * source 1..
-* source only Reference($practitionerRole-organizationalRole-rass or Device or Patient) //FrPatient
+* source only Reference($practitionerRole-organizationalRole-rass or Device or FrPatient) 
 * source obeys constr-bind-source
 
 
