@@ -1,7 +1,7 @@
 Profile: PDSm_ComprehensiveDocumentReference
 Parent: IHE.MHD.Comprehensive.DocumentReference
-Id: PDSmComprehensiveDocumentReference
-Title: "PDSm_ComprehensiveDocumentReference"
+Id: pdsm-comprehensive-document-reference
+Title: "PDSm Comprehensive DocumentReference"
 Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"ComprehensiveDocumentReference\" créé pour le volet \"Partage de documents de santé en mobilité\"."
 
 * meta.versionId MS
@@ -39,7 +39,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * category ^binding.description = "XDS classCode CI-SIS"
 * category obeys constr-bind-category
 
-* subject only Reference(Patient) //TODO : FrPatient
+* subject only Reference(FrPatient)
 * subject MS
 * subject ^short = "Représente l'identifiant du patient."
 * subject ^type.aggregation = #contained
@@ -51,7 +51,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * author MS
 * author ^short = "Personnes physiques ou morales et/ou les dispositifs auteurs d'un document."
 * author 1..
-* author only Reference($practitionerRole-organizationalRole-rass or Device or Patient) //TODO FrPatient
+* author only Reference($practitionerRole-organizationalRole-rass or Device or FrPatient)
 * author ^type.aggregation = #contained
 * author obeys constr-bind-author
 

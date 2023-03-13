@@ -1,7 +1,7 @@
 Profile: PDSm_FolderComprehensive
 Parent: IHE.MHD.Comprehensive.Folder
-Id: PDSmFolderComprehensive
-Title: "PDSm_FolderComprehensive"
+Id: pdsm-folder-comprehensive
+Title: "PDSm Folder Comprehensive"
 Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehensive Folder  » créé pour le volet ANS \"Partage de documents de santé en mobilité\" ; ce profil concerne le classeur."
 
 * contained 1..
@@ -32,7 +32,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 
 * code ^short = "Désigne le cas d’utilisation de la ressource List. Il s’agit ici du classeur."
 
-//* subject only Reference(FrPatient) TODO
+* subject only Reference(FrPatient)
 * subject MS
 * subject ^type.aggregation = #contained
 

@@ -34,7 +34,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Représente le type d’activité associé à l’événement clinique ayant abouti à la constitution du lot de soumission."
 * rest.resource[=].searchParam[+].name = "identifier"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/List-clinical-identifier"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Représente l'identifiant."
 * rest.resource[=].searchParam[+].name = "status"
@@ -63,7 +63,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].documentation = "Représente l’auteur du lot de soumission, quand l'auteur est de type organization."
 * rest.resource[=].searchParam[+].name = "code"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-code"
-* rest.resource[=].searchParam[=].type = #reference
+* rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Représente le but du lot de soumission."
 * rest.resource[=].searchParam[+].name = "PDSm_List_PatientAsSource"
 * rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_List_PatientAsSource"
@@ -87,7 +87,7 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #patch
 * rest.resource[=].conditionalUpdate = true
 * rest.resource[=].searchParam[0].name = "type"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/DocumentReference-type"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-type"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Représente le type du document."
 * rest.resource[=].searchParam[+].name = "setting"

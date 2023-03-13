@@ -1,10 +1,8 @@
 Profile: PDSm_SubmissionSetComprehensive
 Parent: IHE.MHD.Comprehensive.SubmissionSet
-Id: PDSmSubmissionSetComprehensive
-Title: "PDSm_SubmissionSetComprehensive"
+Id: pdsm-submissionset-comprehensive
+Title: "PDSm SubmissionSet Comprehensive"
 Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « ComprehensiveSubmissionSet  » créé pour le volet ANS \"Partage de documents de santé en mobilité\" ; ce profil concerne le lot de soumission."
-// * ^date = "2021-07-30"
-// * ^publisher = "ANS"
 
 * contained MS
 * contained 1..
@@ -33,7 +31,6 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 
 
 * extension[PDSm_intendedRecipient] MS
-* extension[PDSm_intendedRecipient] ^sliceName = "PDSm_intendedRecipient"
 * extension[PDSm_intendedRecipient].value[x] only Reference
 * extension[PDSm_intendedRecipient].value[x] ^type.aggregation = #contained
 * extension[PDSm_intendedRecipient] ^short = "Représente le destinataire du lot de soumission"
@@ -97,14 +94,9 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 Extension: PDSm_intendedRecipient
 Id: PDSmintendedrecipient
 Description: "Représente le destinataire du lot de soumission"
-* ^url = "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/PDSm_ihe-intended_recipient"
-* ^version = "1.0"
-* ^date = "2021-07-30"
-* ^publisher = "ANS"
 * ^context.type = #element
 * ^context.expression = "List"
 * . ^short = "Représente le destinataire du lot de soumission"
-* url = "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/PDSm_ihe-intended_recipient" (exactly)
 * value[x] only Reference($practitionerRole-organizationalRole-rass or $organization-rass)
 
 

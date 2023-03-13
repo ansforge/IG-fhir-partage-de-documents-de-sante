@@ -1,6 +1,7 @@
 Profile: PDSm_ComprehensiveProvideDocumentBundle
 Parent: IHE.MHD.Comprehensive.ProvideBundle
-Id: PDSmComprehensiveProvideDocumentBundle
+Id: pdsm-comprehensive-provide-document-bundle
+Title: "PDSm Comprehensive Provide Document Bundle"
 Description: """Profil basé sur la transaction IHE "Provide Document Bundle [ITI-65]" du profil MHD ; le bundle est de type transaction et contient : 
 - une ressource de type « List » représentant le lot de soumission,
 - une à plusieurs ressources de type « DocumentReference », représentant les fiches de documents,
