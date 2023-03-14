@@ -6,7 +6,7 @@
     "status" : "release",
     "sequence" : "Releases",
     "title" : "title example",
-    "desc" : "Desc of release",
+    "desc" : "Ajout flux de publication simplifié IHE (usage MES), précisions contenu DocumentReference.content.attachment.url, mise à jour dépendance IHE MHD 4.1.0 --> 4.2.0",
     "ci-build" : "https://interop.esante.gouv.fr/ig/fhir/pdsm",
     "category" : "Clinical Documents",
     "introduction" : "{intro} (only for first release)"
