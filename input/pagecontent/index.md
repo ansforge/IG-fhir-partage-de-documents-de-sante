@@ -36,9 +36,9 @@ Les ressources utilisées et les niveaux de maturité sont les suivants :
 Des ressources FHIR ont été profilées pour le contexte français et sont utilisés dans le cadre des spécifications techniques du volet « Partage de documents de santé en mobilité ».
 
 Deux sources seront utilisées dans le cadre de ce volet :
-* Les profils FHIR « FrPatient », « FrPractitioner » et « FrOrganization » publiés par HL7 France sont utilisés dans ce volet. Les présentes spécifications se basent sur les profils du package [hl7-france-fhir.administrative11.2021.1](https://registry.fhir.org/package/hl7-france-fhir.administrative%7C11.2021.1).
+* Les profils FHIR « FrPatient », « FrPractitioner » et « FrOrganization » publiés par HL7 France sont utilisés dans ce volet. Les présentes spécifications se basent sur les profils du package hl7.fhir.fr.core 1.1.0.
 
-* Dans le cadre de l’annuaire santé, l’ANS met à disposition un service national de publication des données des professionnels et des structures au format FHIR5; deux profils de l’annuaire santé, à savoir « PractitionerRoleProfessionalRoleRASS », « PractitionerRoleOrganizationalRoleRASS » sont utilisés pour le cas d’usage cahier de liaison. Les présentes spécifications se basent sur les profils du package [ANS.annuaire.fhir.r4 0.2.0](https://simplifier.net/packages/ans.annuaire.fhir.r4/0.2.0).
+* Dans le cadre de l’annuaire santé, l’ANS met à disposition un service national de publication des données des professionnels et des structures au format FHIR5; deux profils de l’annuaire santé, à savoir « PractitionerRoleProfessionalRoleRASS », « PractitionerRoleOrganizationalRoleRASS » sont utilisés pour le cas d’usage cahier de liaison. Les présentes spécifications se basent sur les profils du package ANS.annuaire.fhir.r4 0.2.0.
 
 Ces spécifications s’appuient également sur les profils définis dans le profil IHE MHD v4.0.1 relatifs à l’option « Comprehensive Metadata ».
 
