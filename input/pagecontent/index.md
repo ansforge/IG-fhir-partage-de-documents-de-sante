@@ -1,11 +1,3 @@
-Cette spécification est destinée à concertation avec deux objectifs : <br/>
-1- Proposer une nouvelle manière de publier des spécifications d'interopérabilité grâce à des Implementation Guides construits à partir de l'IG Publisher, outil officiel HL7. <br/>
-2- Proposer un nouveau flux d'alimentation simplifié de documents. <br/>
-Pour l'heure, le volet du CI-SIS [PDSm](https://esante.gouv.fr/volet-partage-de-documents-de-sante) au format pdf reste la source de vérité.  <br/>
-La dépendance vers les profils français d'InteropSanté n'est pas mise en place, car l'import du package cause des erreurs en cours d'investigation.
-{:.stu-note}
-<!-- Phrase à aligner avec la concertation : 1. Flux simplifié, 2. Nouveau format -->
-
 ### Introduction
 Ce document présente les spécifications techniques du volet "Partage de documents de santé en mobilité". Sa production est basée sur les [Spécifications Fonctionnelles des Echanges du volet Partage de Documents de Santé](https://esante.gouv.fr/volet-partage-de-documents-de-sante) (SFE-PDS) et le profil [MHD](https://profiles.ihe.net/ITI/MHD/index.html) (Mobile access to Health Documents) défini par IHE (Integrating the Healthcare Entreprise).
     
