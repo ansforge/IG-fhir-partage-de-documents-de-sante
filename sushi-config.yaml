@@ -75,7 +75,7 @@ menu:
     #     Mise à jour de documents: sf_maj.html
     #     Recherche de documents: sf_recherche.html
     #     Consultation de documents: sf_consultation.html
-    Ressources de conformance: artifacts.html
+    Ressources de conformité: artifacts.html
     Autres ressources:
         Sécurité: securite.html
         Equivalences: equivalences.html
