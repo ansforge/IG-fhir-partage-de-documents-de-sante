@@ -47,30 +47,30 @@ Pour les ressources et types de données non mentionnés dans ce tableau, le pro
 
 Cet Implementation Guide contient 7 profils :
 - 3 profils pour le flux d'alimentation :  
-    - 1) la fiche document [PDSm_ComprehensiveDocumentReference](StructureDefinition-PDSmComprehensiveDocumentReference.html), 
-    - 2) le classeur [PDSm_FolderComprehensive](StructureDefinition-PDSmFolderComprehensive.html),
-    - 3) le Lot de soumission [PDSm_SubmissionSetComprehensive](StructureDefinition-PDSmSubmissionSetComprehensive.html)
+    - 1) la fiche document [PDSm_ComprehensiveDocumentReference](StructureDefinition-pdsm-comprehensive-document-reference.html), 
+    - 2) le classeur [PDSm_FolderComprehensive](StructureDefinition-pdsm-folder-comprehensive.html),
+    - 3) le Lot de soumission [PDSm_SubmissionSetComprehensive](StructureDefinition-pdsm-submissionset-comprehensive.html)
 - 1 profil pour le flux d'alimentation simplifié :
-    - 1) la fiche document [PDSm_SimplifiedPublish](StructureDefinition-PDSm-SimplifiedPublish.html), 
+    - 1) la fiche document [PDSm_SimplifiedPublish](StructureDefinition-pdsm-simplified-publish.html), 
 - 1 profil Bundle pour encapsuler l'envoi des documents :
-    - [PDSm_ComprehensiveProvideDocumentBundle](StructureDefinition-PDSmComprehensiveProvideDocumentBundle.html)
+    - [PDSm_ComprehensiveProvideDocumentBundle](StructureDefinition-pdsm-comprehensive-provide-document-bundle.html)
 - 2 profils Bundle pour encapsuler les résultats de recherche :
-    - 1) par fiche [PDSm_FindDocumentReferencesComprehensiveResponse](StructureDefinition-PDSmFindDocumentReferencesComprehensiveResponse.html),
-    - 2) par lot de soumission [PDSm_FindListsResponse](StructureDefinition-PDSmFindListsResponse.html)
+    - 1) par fiche [PDSm_FindDocumentReferencesComprehensiveResponse](StructureDefinition-pdsm-find-documentreferences-comprehensive-response.html),
+    - 2) par lot de soumission [PDSm_FindListsResponse](StructureDefinition-pdsm-find-lists-response.html)
 
 Au total, les ressources à utiliser dans le cadre de cet Implementation Guide sont :
 
 
 | **Ressource** | **Profil** | **Description** |
 | ----- | ----- | ----- |
-| Bundle | [PDSm_ComprehensiveProvideDocumentBundle](StructureDefinition-PDSmComprehensiveProvideDocumentBundle.html) |  Profil défini dans ce volet et héritant de [ComprehensiveProvideDocumentBundle](https://profiles.ihe.net/ITI/MHD/4.0.1/StructureDefinition-IHE.MHD.Comprehensive.ProvideBundle.html) défini dans le profil MHD |
-| Bundle | [PDSm_FindDocumentReferencesComprehensiveResponse](StructureDefinition-PDSmFindDocumentReferencesComprehensiveResponse.html) | Profil défini dans ce volet et héritant de [FindDocumentReferencesComprehensiveResponse](https://profiles.ihe.net/ITI/MHD/4.0.1/StructureDefinition-IHE.MHD.FindDocumentReferencesComprehensiveResponseMessage.html) défini dans le profil MHD |
-| Bundle | [PDSm_FindListsResponse](StructureDefinition-PDSmFindListsResponse.html) | Profil défini dans ce volet et héritant de [FindListsResponse](https://profiles.ihe.net/ITI/MHD/4.0.1/StructureDefinition-IHE.MHD.FindDocumentListsResponseMessage.html) défini dans le profil MHD |
+| Bundle | PDSm_ComprehensiveProvideDocumentBundle |  Profil défini dans ce volet et héritant de [ComprehensiveProvideDocumentBundle](https://profiles.ihe.net/ITI/MHD/4.0.1/StructureDefinition-IHE.MHD.Comprehensive.ProvideBundle.html) défini dans le profil MHD |
+| Bundle | PDSm_FindDocumentReferencesComprehensiveResponse | Profil défini dans ce volet et héritant de [FindDocumentReferencesComprehensiveResponse](https://profiles.ihe.net/ITI/MHD/4.0.1/StructureDefinition-IHE.MHD.FindDocumentReferencesComprehensiveResponseMessage.html) défini dans le profil MHD |
+| Bundle | PDSm_FindListsResponse | Profil défini dans ce volet et héritant de [FindListsResponse](https://profiles.ihe.net/ITI/MHD/4.0.1/StructureDefinition-IHE.MHD.FindDocumentListsResponseMessage.html) défini dans le profil MHD |
 | Bundle | [ProvideDocumentBundleResponse](https://profiles.ihe.net/ITI/MHD/4.0.1/StructureDefinition-IHE.MHD.ProvideDocumentBundleResponse.html) | Profil défini dans le profil MHD Version 4.0.1 |
-| DocumentReference | [PDSm_ComprehensiveDocumentReference](StructureDefinition-PDSmComprehensiveDocumentReference.html) | Profil défini dans ce volet et héritant de [ComprehensiveDocumentReference](https://profiles.ihe.net/ITI/MHD/StructureDefinition-IHE.MHD.Comprehensive.DocumentReference.html) défini dans le profil MHD |
-| DocumentReference | [PDSm_SimplifiedPublish](StructureDefinition-PDSm-SimplifiedPublish.html) | Profil défini dans ce volet en s'inspirant du flux simplifié défini dans le profil MHD |
-| List | [PDSm_SubmissionSetComprehensive ](StructureDefinition-PDSmSubmissionSetComprehensive.html) | Profil défini dans ce volet et héritant de [SubmissionSetComprehensive](https://profiles.ihe.net/ITI/MHD/StructureDefinition-IHE.MHD.Comprehensive.SubmissionSet.html) défini dans le profil MHD |
-| List | [PDSm_FolderComprehensive](StructureDefinition-PDSmFolderComprehensive.html) | Profil défini dans ce volet et héritant de [FolderComprehensive](https://profiles.ihe.net/ITI/MHD/StructureDefinition-IHE.MHD.Comprehensive.Folder.html) défini dans le profil MHD |
+| DocumentReference | PDSm_ComprehensiveDocumentReference | Profil défini dans ce volet et héritant de [ComprehensiveDocumentReference](https://profiles.ihe.net/ITI/MHD/StructureDefinition-IHE.MHD.Comprehensive.DocumentReference.html) défini dans le profil MHD |
+| DocumentReference | PDSm_SimplifiedPublish | Profil défini dans ce volet en s'inspirant du flux simplifié défini dans le profil MHD |
+| List | PDSm_SubmissionSetComprehensive | Profil défini dans ce volet et héritant de [SubmissionSetComprehensive](https://profiles.ihe.net/ITI/MHD/StructureDefinition-IHE.MHD.Comprehensive.SubmissionSet.html) défini dans le profil MHD |
+| List | PDSm_FolderComprehensive | Profil défini dans ce volet et héritant de [FolderComprehensive](https://profiles.ihe.net/ITI/MHD/StructureDefinition-IHE.MHD.Comprehensive.Folder.html) défini dans le profil MHD |
 | Patient | [FrPatient](https://simplifier.net/packages/hl7-france-fhir.administrative/10.2021.1/files/424014) | Profil français publié par Interop’Santé, spécifiant les identifiants de patient utilisés en France |
 | Practitioner | [FrPractitioner](https://simplifier.net/packages/hl7-france-fhir.administrative/10.2021.1/files/424009) | Profil français publié par Interop’Santé, représentant un professionnel. Il contraint les types d'identifiants du professionnel en France. |
 | PractitionerRole <br/> PractitionerRole| [PractitionerRoleOrganizationalRoleRASS](https://simplifier.net/packages/ans.annuaire.fhir.r4/0.2.0/files/421732) <br/> [PractitionerRoleProfessionalRoleRASS](https://simplifier.net/packages/ans.annuaire.fhir.r4/0.2.0/files/421688) | Profil de l’annuaire santé représentant la situation d’exercice et l’exercice professionnel |

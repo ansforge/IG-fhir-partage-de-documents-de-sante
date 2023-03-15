@@ -4,13 +4,13 @@ Ces flux se basent sur la requête et la réponse de la transaction IHE "Provide
 
 ### Flux 01 : Ajout d’un lot de documents
 
-La première étape de la construction du flux 01 de la demande de modification du dossier patient consiste à organiser son contenu dans une ressource Bundle. Un profil spécifique dérivé du profil IHE MHD v4.0.1 « ComprehensiveProvideDocumentBundle » est créé pour ce volet et nommé [PDSm_ComprehensiveProvideDocumentBundle](StructureDefinition-PDSmComprehensiveProvideDocumentBundle.html).
+La première étape de la construction du flux 01 de la demande de modification du dossier patient consiste à organiser son contenu dans une ressource Bundle. Un profil spécifique dérivé du profil IHE MHD v4.0.1 « ComprehensiveProvideDocumentBundle » est créé pour ce volet et nommé PDSm_ComprehensiveProvideDocumentBundle.
 
 Le flux doit contenir :
-* une ressource de type « List » représentant le lot de soumission (profil [PDSm_SubmissionsSetComprehensive](StructureDefinition-pdsmsubmissionsetcomprehensive.html))
-* une à plusieurs ressources de type « DocumentReference », représentant les fiches de documents (profil [PDSm_ComprehensiveDocumentReference](StructureDefinition-PDSmComprehensiveDocumentReference.html)),
+* une ressource de type « List » représentant le lot de soumission (profil PDSm_SubmissionsSetComprehensive)
+* une à plusieurs ressources de type « DocumentReference », représentant les fiches de documents (profil [PDSm_ComprehensiveDocumentReference),
 * zero à plusieurs ressources « Binary » représentant les documents envoyés dans le flux (ressource [Binary](https://www.hl7.org/fhir/binary.html)).,
-* zero à plusieurs ressources de type « List » représentant les classeurs (profil [PDSm_FolderComprehensive](StructureDefinition-PDSmFolderComprehensive.html)).
+* zero à plusieurs ressources de type « List » représentant les classeurs (profil PDSm_FolderComprehensive).
 
 Dans le cas d’un dépôt d’un nouveau document, l’élément DocumentReference.content.attachment.url doit pointer vers une ressource Binary, représentant le document, présente dans le flux.
 
@@ -39,4 +39,4 @@ Le gestionnaire de partage de documents de santé retourne un "HTTP Status code"
 
 Ce flux sert à communiquer un succès ou un échec. Un succès n'est indiqué que lorsque le ou les documents sont reçus, complètement traités et conservés selon les besoins de la configuration du gestionnaire de partage de documents.
 
-Les messages de warning concernant le traitement des associations entre fiches, l’élément [DocumentReference.relatesTo](StructureDefinition-PDSmComprehensiveDocumentReference-definitions.html#DocumentReference.relatesTo), ou le traitement des classeurs sont définis par le profil MHD.
+Les messages de warning concernant le traitement des associations entre fiches, l’élément DocumentReference.relatesTo, ou le traitement des classeurs sont définis par le profil MHD.
