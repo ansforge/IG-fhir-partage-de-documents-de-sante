@@ -13,8 +13,8 @@ Usage: #definition
 * code = #patient
 * base = #DocumentReference
 * type = #reference
-* expression = "DocumentReference.patient"
-* xpath = "f:DocumentReference/f:patient"
+* expression = "DocumentReference.subject.where(resolve() is Patient)"
+* xpath = "f:DocumentReference/f:subject"
 * xpathUsage = #normal
 * multipleOr = true
 * multipleAnd = true
