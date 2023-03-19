@@ -106,16 +106,19 @@ Description: "Les valeurs possibles doivent provenir d’une des terminologies d
 - TRE_R209-TypeActivite, OID : 1.2.250.1.213.2.2 
 - TRE_R02-SecteurActivite, OID : 1.2.250.1.71.4.2.4 Les valeurs possibles peuvent être restreintes en fonction du jeu de valeurs correspondant mis à disposition par le projet (exemple : JDV_J59-ContentTypeCode-DMP). 
 En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J03-XdsContentTypeCode-CISIS peut être utilisé."
+XPath:       "f:extension[designationType]"
 Severity:    #error
 
 Invariant: constr-bind-source
 Description: "Un lot de soumission est obligatoirement associé à un auteur. Si l’attribut \"ihe-authorOrg\" n’est pas renseigné, autrement dit si l’auteur est une personne physique ou un dispositif."
+XPath:       "f:source"
 Severity:    #error
 
 
 Invariant: constr-bind-authororg
 Description: "Un lot de soumission est obligatoirement associé à un auteur. Si l’attribut \"source\" n’est pas renseigné, autrement dit si l’auteur est une personne morale, la cardinalité est contrainte à [1..1].
 La ressource référencée doit être présente sous l’élément List.contained."
+XPath:       "f:source/f:extension[authorOrg]"
 Severity:    #error
 
 
