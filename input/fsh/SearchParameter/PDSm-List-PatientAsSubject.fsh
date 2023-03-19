@@ -3,7 +3,7 @@ InstanceOf: SearchParameter
 Usage: #definition
 // * url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_List_PatientAsSubject"
 // * version = "1.0"
-* name = "PDSm_List_PatientAsSubject"
+* name = "PDSm-List-PatientAsSubject"
 * derivedFrom = "http://hl7.org/fhir/SearchParameter/clinical-patient"
 * status = #active
 * date = "2021-07-30"
