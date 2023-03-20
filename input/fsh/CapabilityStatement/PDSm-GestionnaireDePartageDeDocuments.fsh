@@ -1,9 +1,7 @@
 Instance: PDSm-GestionnaireDePartageDeDocuments
 InstanceOf: CapabilityStatement
 Usage: #definition
-// * url = "http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/PDSm.GestionnaireDePartageDeDocuments"
-// * version = "1.0"
-* name = "PDSm_GestionnaireDePartageDeDocuments"
+* name = "PDSmGestionnaireDePartageDeDocuments"
 * title = "CI-SIS Partage-De-Documents-De-Sante - GestionnaireDePartageDeDocuments"
 * status = #active
 * experimental = false
@@ -14,7 +12,7 @@ Usage: #definition
 * fhirVersion = #4.0.0
 * format[0] = #xml
 * format[+] = #json
-// * implementationGuide = "http://esante.gouv.fr/ci-sis/fhir/ImplementationGuides/CI-SIS.PartageDeDocumentsDeSante"
+* implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm"
 * rest.mode = #server
 * rest.documentation = "Il s’agit d’un système d’information ou d’un composant d'un système d’information qui stocke, classe et archive les documents d’un dossier patient."
 * rest.security.cors = false
@@ -22,7 +20,7 @@ Usage: #definition
 
 // List resource
 * rest.resource[0].type = #List
-* rest.resource[=].profile = "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/PDSm_SubmissionSetComprehensive"
+* rest.resource[=].profile = Canonical(PDSm_SubmissionSetComprehensive)
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].searchParam[0].name = "date"
@@ -30,7 +28,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Représente la date et heure de soumission."
 * rest.resource[=].searchParam[+].name = "DesignationType"
-* rest.resource[=].searchParam[=].definition = "http://profiles.ihe.net/ITI/MHD/SearchParameter/List-DesignationType"
+* rest.resource[=].searchParam[=].definition = "https://profiles.ihe.net/ITI/MHD/SearchParameter/List-DesignationType"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Représente le type d’activité associé à l’événement clinique ayant abouti à la constitution du lot de soumission."
 * rest.resource[=].searchParam[+].name = "identifier"
@@ -42,7 +40,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Représente le statut du lot de soumission."
 * rest.resource[=].searchParam[+].name = "PDSm_isArchived"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_isArchived"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSmIsArchived"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "permet distinguer les lots de soumission et les fiches archivés des actifs."
 * rest.resource[=].searchParam[+].name = "title"
@@ -50,15 +48,15 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Représente le titre du lot de soumission."
 * rest.resource[=].searchParam[+].name = "SourceId"
-* rest.resource[=].searchParam[=].definition = "http://profiles.ihe.net/ITI/MHD/SearchParameter/List-SourceId"
-* rest.resource[=].searchParam[=].type = #reference
+* rest.resource[=].searchParam[=].definition = "https://profiles.ihe.net/ITI/MHD/SearchParameter/List-SourceId"
+* rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Représente l’identifiant unique global du système émetteur du lot de soumission."
 * rest.resource[=].searchParam[+].name = "source"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/List-source"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Représente l’auteur du lot de soumission, quand l'auteur est de type patient, practitionerrole ou device."
 * rest.resource[=].searchParam[+].name = "PDSm_authorOrg"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_authorOrg"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSmAuthorOrg"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Représente l’auteur du lot de soumission, quand l'auteur est de type organization."
 * rest.resource[=].searchParam[+].name = "code"
@@ -66,22 +64,22 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Représente le but du lot de soumission."
 * rest.resource[=].searchParam[+].name = "PDSm_List_PatientAsSource"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_List_PatientAsSource"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSmListPatientAsSource"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Recherche sur les éléments source:Patient.given et source:Patient.family."
 * rest.resource[=].searchParam[+].name = "PDSm_List_PatientAsSubject"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_List_PatientAsSubject"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSmListPatientAsSubject"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Recherche sur l'élément subject:Patient.identifier."
 * rest.resource[=].searchParam[+].name = "PDSm_List_PractitionerRoleAsSource"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_List_PractitionerRoleAsSource"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSmListPractitionerRoleAsSource"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Recherche sur les éléments source:PractitionerRole.practitioner:Practitioner.given et source:PractitionerRole.practitioner:Practitioner.family."
 
 
 // DocumentReference resource 
 * rest.resource[+].type = #DocumentReference
-* rest.resource[=].profile = "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/PDSm_ComprehensiveDocumentReference"
+* rest.resource[=].profile = Canonical(PDSm_ComprehensiveDocumentReference)
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].interaction[+].code = #patch
@@ -99,7 +97,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Représente l'identifiant unique d'une fiche d'un document."
 * rest.resource[=].searchParam[+].name = "creation"
-* rest.resource[=].searchParam[=].definition = "http://profiles.ihe.net/ITI/MHD/SearchParameter/DocumentReference-Creation"
+* rest.resource[=].searchParam[=].definition = "https://profiles.ihe.net/ITI/MHD/SearchParameter/DocumentReference-Creation"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Représente la date et l'heure de la création du document."
 * rest.resource[=].searchParam[+].name = "security-label"
@@ -111,15 +109,15 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Représente le statut de la fiche d'un document."
 * rest.resource[=].searchParam[+].name = "PDSm_isArchived"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_isArchived"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSmIsArchived"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "permet distinguer les lots de soumission et les fiches archivés des actifs."
 * rest.resource[=].searchParam[+].name = "PDSm_DocumentReference_period-start"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_DocumentReference_period-start"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSmDocumentReferencePeriodStart"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Représente la date de début de l’acte de référence."
 * rest.resource[=].searchParam[+].name = "PDSm_DocumentReference_period-end"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_DocumentReference_period-end"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSmDocumentReferencePeriodEnd"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Représente la date de fin de l’acte de référence."
 * rest.resource[=].searchParam[+].name = "format"
@@ -143,19 +141,19 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Représente la période."
 * rest.resource[=].searchParam[+].name = "PDSm_DocumentReference_PatientAsSubject"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_DocumentReference_PatientAsSubject"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSmDocumentReferencePatientAsSubject"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Représente l'identifiant du patient qui est le sujet du document."
 * rest.resource[=].searchParam[+].name = "PDSm_DocumentReference_DeviceAsAuthor"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_DocumentReference_DeviceAsAuthor"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSmDocumentReferenceDeviceAsAuthor"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Représente l'identifiant du dispositif médical qui est l'auteur du document."
 * rest.resource[=].searchParam[+].name = "PDSm_DocumentReference_PatientAsAuthor"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_DocumentReference_PatientAsAuthor"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSmDocumentReferencePatientAsAuthor"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Représente l'identifiant, le nom, le prénom du patient qui est l'auteur du document."
 * rest.resource[=].searchParam[+].name = "PDSm_DocumentReference_PractitionerRoleAsAuthor"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_DocumentReference_PractitionerRoleAsAuthor"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSmDocumentReferencePractitionerRoleAsAuthor"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Représente l'identifiant, le nom, le prénom du praticien dans sa situation d'exercice qui est l'auteur du document."
 
@@ -164,4 +162,4 @@ Usage: #definition
 * rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Binary"
 * rest.resource[=].interaction.code = #read
 * rest.interaction.code = #transaction
-* rest.interaction.documentation = "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/PDSm_ComprehensiveProvideDocumentBundle"
+* rest.interaction.documentation = Canonical(PDSm_ComprehensiveProvideDocumentBundle)

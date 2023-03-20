@@ -1,9 +1,7 @@
 Instance: PDSm-ProducteurDeDocuments
 InstanceOf: CapabilityStatement
 Usage: #definition
-// * url = "http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/PDSm.ProducteurDeDocuments"
-// * version = "1.0"
-* name = "PDSm-ProducteurDeDocuments"
+* name = "PDSmProducteurDeDocuments"
 * title = "CI-SIS Partage-De-Documents-De-Sante - ProducteurDeDocuments"
 * status = #active
 * experimental = false
@@ -14,14 +12,14 @@ Usage: #definition
 * fhirVersion = #4.0.0
 * format[0] = #xml
 * format[+] = #json
-// * implementationGuide = "http://esante.gouv.fr/ci-sis/fhir/ImplementationGuides/CI-SIS.PartageDeDocumentsDeSante"
+* implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm"
 * rest.mode = #client
 * rest.documentation = "Ajout d’un lot de documents et Demande de mise à jour des métadonnées de la fiche"
 * rest.security.cors = false
 * rest.security.description = "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)"
 * rest.resource.type = #DocumentReference
-* rest.resource.profile = "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/PDSm_ComprehensiveDocumentReference"
+* rest.resource.profile = Canonical(PDSm_ComprehensiveDocumentReference)
 * rest.resource.interaction.code = #patch
 * rest.resource.conditionalUpdate = true
 * rest.interaction.code = #transaction
-* rest.interaction.documentation = "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/PDSm_ComprehensiveProvideDocumentBundle"
+* rest.interaction.documentation = Canonical(PDSm_ComprehensiveProvideDocumentBundle)

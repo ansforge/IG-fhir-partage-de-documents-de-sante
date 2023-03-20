@@ -1,9 +1,7 @@
 Instance: PDSm-PractitionerRole-given-ex
 InstanceOf: SearchParameter
 Usage: #definition
-// * url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PractitionerRole_given-ex"
-// * version = "2.0"
-* name = "PractitionerRole_given-ex"
+* name = "PractitionerRoleGivenEx"
 * status = #active
 * date = "2021-12-01"
 * publisher = "ANS"

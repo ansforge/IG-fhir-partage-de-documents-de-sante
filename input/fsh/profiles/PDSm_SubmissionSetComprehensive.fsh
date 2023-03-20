@@ -37,7 +37,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 * extension[PDSm_intendedRecipient] ^definition = "Les ressources référencées sont : - PractitionerRole : Dans le cas d’un destinaire professionnel, c’est le profil PractitionerRoleOrgani zationalRoleRASS représentant la situation d’exercice qui doit être référencé. Lui-même fera le lien avec le profil PractitionerRoleProfes sionalRoleRASS représentant l’exercice professionnel et avec FrPractitioner. - Organization contrainte au profil FrOrganization"
 * subject only Reference(FrPatient)
 
-* extension[isArchived] ^short = "Extension définie par ce volet pour distinguer les lots de soumission archivés des actives. "
+* extension[isArchived] ^short = "Extension définie par ce volet pour distinguer les lots de soumission archivés des actives."
 
 * identifier[uniqueId] MS
 * identifier[uniqueId] ^short = "IdUnique : Identifiant unique global affecté à ce lot de soumission par son créateur. Cet attribut est utilisé à des fins de références externes alors que idLotSoumission est destiné à des fins de gestion interne."
@@ -58,7 +58,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 
 * subject MS
 * subject ^type.aggregation = #contained
-* subject ^short = "Référence vers la ressource Patient contained titulaire du dossier. "
+* subject ^short = "Référence vers la ressource Patient contained titulaire du dossier."
 
 * date MS
 * date ^short = "Représente la date et heure de soumission."
@@ -106,16 +106,19 @@ Description: "Les valeurs possibles doivent provenir d’une des terminologies d
 - TRE_R209-TypeActivite, OID : 1.2.250.1.213.2.2 
 - TRE_R02-SecteurActivite, OID : 1.2.250.1.71.4.2.4 Les valeurs possibles peuvent être restreintes en fonction du jeu de valeurs correspondant mis à disposition par le projet (exemple : JDV_J59-ContentTypeCode-DMP). 
 En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J03-XdsContentTypeCode-CISIS peut être utilisé."
+Expression:       "f:extension[designationType]"
 Severity:    #error
 
 Invariant: constr-bind-source
 Description: "Un lot de soumission est obligatoirement associé à un auteur. Si l’attribut \"ihe-authorOrg\" n’est pas renseigné, autrement dit si l’auteur est une personne physique ou un dispositif."
+Expression:       "f:source"
 Severity:    #error
 
 
 Invariant: constr-bind-authororg
 Description: "Un lot de soumission est obligatoirement associé à un auteur. Si l’attribut \"source\" n’est pas renseigné, autrement dit si l’auteur est une personne morale, la cardinalité est contrainte à [1..1].
 La ressource référencée doit être présente sous l’élément List.contained."
+Expression:       "f:source/f:extension[authorOrg]"
 Severity:    #error
 
 
