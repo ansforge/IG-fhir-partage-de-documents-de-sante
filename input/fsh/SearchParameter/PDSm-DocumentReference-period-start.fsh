@@ -2,7 +2,6 @@ Instance: PDSm-DocumentReference-period-start
 InstanceOf: SearchParameter
 Usage: #definition
 * name = "PDSmDocumentReferencePeriodStart"
-* derivedFrom = "http://hl7.org/fhir/SearchParameter/DocumentReference-period"
 * status = #active
 * date = "2021-10-21T14:10:19.3001986+00:00"
 * publisher = "ANS"

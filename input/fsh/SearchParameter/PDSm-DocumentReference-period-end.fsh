@@ -3,7 +3,6 @@ InstanceOf: SearchParameter
 Usage: #definition
 * version = "1.0"
 * name = "PDSmDocumentReferencePeriodEnd"
-* derivedFrom = "http://hl7.org/fhir/SearchParameter/DocumentReference-period"
 * status = #active
 * date = "2021-10-21T14:09:31.7181197+00:00"
 * publisher = "ANS"
