@@ -1,8 +1,6 @@
 Instance: PDSm-DocumentReference-period-end
 InstanceOf: SearchParameter
 Usage: #definition
-// * meta.lastUpdated = "2021-10-21T14:09:32.446+00:00"
-// * url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_DocumentReference_period-end"
 * version = "1.0"
 * name = "PDSmDocumentReferencePeriodEnd"
 * derivedFrom = "http://hl7.org/fhir/SearchParameter/DocumentReference-period"

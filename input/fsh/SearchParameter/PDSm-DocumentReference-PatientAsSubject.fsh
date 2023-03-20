@@ -1,9 +1,6 @@
 Instance: PDSm-DocumentReference-PatientAsSubject
 InstanceOf: SearchParameter
 Usage: #definition
-// * meta.lastUpdated = "2021-10-21T14:07:56.765+00:00"
-// * url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_DocumentReference_PatientAsSubject"
-// * version = "1.0"
 * name = "PDSmDocumentReferencePatientAsSubject"
 * derivedFrom = "http://hl7.org/fhir/SearchParameter/clinical-patient"
 * status = #active

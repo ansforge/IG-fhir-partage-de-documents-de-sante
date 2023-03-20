@@ -1,9 +1,6 @@
 Instance: PDSm-PractitionerRole-family-ex
 InstanceOf: SearchParameter
 Usage: #definition
-// * meta.lastUpdated = "2021-10-21T14:18:12.922+00:00"
-// * url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PractitionerRole_family-ex"
-// * version = "2.0"
 * name = "PractitionerRoleFamilyEx"
 * status = #active
 * date = "2021-12-01"

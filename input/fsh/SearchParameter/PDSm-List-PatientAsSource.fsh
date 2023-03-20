@@ -1,8 +1,6 @@
 Instance: PDSm-List-PatientAsSource
 InstanceOf: SearchParameter
 Usage: #definition
-// * url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_List_PatientAsSource"
-// * version = "1.0"
 * name = "PDSmListPatientAsSource"
 * derivedFrom = "http://hl7.org/fhir/SearchParameter/List-source"
 * status = #active
