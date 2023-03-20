@@ -3,7 +3,7 @@ InstanceOf: CapabilityStatement
 Usage: #definition
 // * url = "http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/PDSm.ProducteurDeDocuments"
 // * version = "1.0"
-* name = "PDSm-ProducteurDeDocuments"
+* name = "PDSmProducteurDeDocuments"
 * title = "CI-SIS Partage-De-Documents-De-Sante - ProducteurDeDocuments"
 * status = #active
 * experimental = false

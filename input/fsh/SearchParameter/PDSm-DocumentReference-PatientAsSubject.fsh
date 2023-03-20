@@ -4,7 +4,7 @@ Usage: #definition
 // * meta.lastUpdated = "2021-10-21T14:07:56.765+00:00"
 // * url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_DocumentReference_PatientAsSubject"
 // * version = "1.0"
-* name = "PDSm-DocumentReference-PatientAsSubject"
+* name = "PDSmDocumentReferencePatientAsSubject"
 * derivedFrom = "http://hl7.org/fhir/SearchParameter/clinical-patient"
 * status = #active
 // * date = "2021-10-21T14:07:55.2305535+00:00"

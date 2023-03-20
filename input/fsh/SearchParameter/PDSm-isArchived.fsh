@@ -3,7 +3,7 @@ InstanceOf: SearchParameter
 Usage: #definition
 // * url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/PDSm_isArchived"
 // * version = "1.0"
-* name = "PDSm-isArchived"
+* name = "PDSmIsArchived"
 * status = #active
 * date = "2021-07-30"
 * publisher = "ANS"

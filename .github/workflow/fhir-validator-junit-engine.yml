@@ -1,0 +1,68 @@
+name: fhir-validator-junit-engine
+
+on:
+  workflow_call:
+      
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+jobs:
+  Test-Unitaire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # Install .NET runtime
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: '6.x.x'
+      
+      # Install Java runtime (only needed if you want to run the offical HL7 Java validator)
+      - name: Setup Java JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'microsoft'
+          java-version: '17'    
+      - name : firely 
+        run : dotnet tool install --global Firely.Terminal --version 3.0.0
+        
+      - name: Check Firely Terminal Version
+        run: |
+          CHECK_FIRELY_TERMINAL_VERSION=$(fhir -v | tr '\n' ' ') # Print everything in a single line
+          echo "FIRELY_TERMINAL_VERSION: $CHECK_FIRELY_TERMINAL_VERSION"
+        
+      - name: Run bake  ans.annuaire.fhir.r4
+        run: |
+          fhir install ans.annuaire.fhir.r4 0.2.0
+          fhir bake --package ans.annuaire.fhir.r4
+      - name: Run bake hl7.fhir.fr.core
+        run: |
+          fhir install hl7.fhir.fr.core 1.1.0
+          fhir bake --package hl7.fhir.fr.core
+          
+      - name: 🗂️ Cache FHIR Packages
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.fhir/packages
+          key: fhir-packages
+
+      - name: 🍣 Run SUSHI
+        run: |
+          npm install -g fsh-sushi
+          sushi 
+      - name: 📥 Download test tools
+        run: |
+          wget -q https://github.com/navikt/fhir-validator-junit-engine/releases/latest/download/fhir-validator-junit-engine.jar
+          wget -q https://github.com/hapifhir/org.hl7.fhir.core/releases/download/5.6.91/validator_cli.jar
+          wget -q https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.8.1/junit-platform-console-standalone-1.8.1.jar
+          
+      - name: ✔️ Run tests
+        run: java -jar junit-platform-console-standalone-1.8.1.jar -cp fhir-validator-junit-engine.jar:validator_cli.jar -f ./test/*.yaml --reports-dir ./test-results
+        continue-on-error: true
+
+      - name: 📤 Publish test results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        with:
+          commit: ${{ github.event.workflow_run.head_sha }}
+          files: "./test-results/TEST-*.xml"

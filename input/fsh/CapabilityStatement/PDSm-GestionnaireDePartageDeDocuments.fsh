@@ -3,7 +3,7 @@ InstanceOf: CapabilityStatement
 Usage: #definition
 // * url = "http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/PDSm.GestionnaireDePartageDeDocuments"
 // * version = "1.0"
-* name = "PDSm-GestionnaireDePartageDeDocuments"
+* name = "PDSmGestionnaireDePartageDeDocuments"
 * title = "CI-SIS Partage-De-Documents-De-Sante - GestionnaireDePartageDeDocuments"
 * status = #active
 * experimental = false
