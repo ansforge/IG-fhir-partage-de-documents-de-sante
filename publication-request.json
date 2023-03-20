@@ -4,10 +4,6 @@
     "path" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/3.0.1",
     "mode" : "milestone",
     "status" : "release",
-    "sequence" : "Releases",
-    "title" : "Partage de Documents de Santé en mobilité (PDSm)",
-    "desc" : "Correction des erreurs du FHIR validator : ajout SearchParam expression, suppression des espaces début/fin des string, correction des SearchParam.name qui n'avaient pas le bon format, changement des urls et des noms des ressources des CapabilityStatement, correction des url des SearchParam IHE",
-    "ci-build" : "https://build.interop.esante.gouv.fr/ig/fhir/pdsm",
-    "category" : "Clinical Documents",
-    "introduction" : "Il s’agit d’un volet de la couche service spécifiant les modalités de partage de documents sans contraindre ces derniers. Les spécifications liées aux documents de santé constituent les volets de la couche métier du CI-SIS."
+    "sequence" : "STU1",
+    "desc" : "Correction des erreurs du FHIR validator : ajout SearchParam expression, suppression des espaces début/fin des string, correction des SearchParam.name qui n'avaient pas le bon format, changement des urls et des noms des ressources des CapabilityStatement, correction des url des SearchParam IHE"
   }
