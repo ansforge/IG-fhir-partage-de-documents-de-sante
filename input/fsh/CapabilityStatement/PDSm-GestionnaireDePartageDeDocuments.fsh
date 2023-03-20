@@ -28,7 +28,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Représente la date et heure de soumission."
 * rest.resource[=].searchParam[+].name = "DesignationType"
-* rest.resource[=].searchParam[=].definition = "http://profiles.ihe.net/ITI/MHD/SearchParameter/List-DesignationType"
+* rest.resource[=].searchParam[=].definition = "https://profiles.ihe.net/ITI/MHD/SearchParameter/List-DesignationType"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Représente le type d’activité associé à l’événement clinique ayant abouti à la constitution du lot de soumission."
 * rest.resource[=].searchParam[+].name = "identifier"
@@ -48,7 +48,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Représente le titre du lot de soumission."
 * rest.resource[=].searchParam[+].name = "SourceId"
-* rest.resource[=].searchParam[=].definition = "http://profiles.ihe.net/ITI/MHD/SearchParameter/List-SourceId"
+* rest.resource[=].searchParam[=].definition = "https://profiles.ihe.net/ITI/MHD/SearchParameter/List-SourceId"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Représente l’identifiant unique global du système émetteur du lot de soumission."
 * rest.resource[=].searchParam[+].name = "source"
@@ -97,7 +97,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Représente l'identifiant unique d'une fiche d'un document."
 * rest.resource[=].searchParam[+].name = "creation"
-* rest.resource[=].searchParam[=].definition = "http://profiles.ihe.net/ITI/MHD/SearchParameter/DocumentReference-Creation"
+* rest.resource[=].searchParam[=].definition = "https://profiles.ihe.net/ITI/MHD/SearchParameter/DocumentReference-Creation"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Représente la date et l'heure de la création du document."
 * rest.resource[=].searchParam[+].name = "security-label"

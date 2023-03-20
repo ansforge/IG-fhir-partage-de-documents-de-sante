@@ -128,5 +128,5 @@ Description: "L’utilisation de cette nomenclature est recommandée mais non ob
 -	TRE_R02-SecteurActivite, OID : 1.2.250.1.71.4.2.4 (lorsque l’auteur du document est un professionnel ou un équipement sous sa responsabilité)
 Les valeurs possibles peuvent être restreintes en fonction du jeu de valeurs correspondant mis à disposition par le projet (exemple : JDV_J61-HealthcareFacilityTypeCode-DMP).
 En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J02-XdsHealthcareFacilityTypeCode-CISIS peut être utilisé."
-XPath:       "f:context/f:practiceSetting or f:context/f:facilityType"
+Expression:       "f:context/f:practiceSetting or f:context/f:facilityType"
 Severity:    #error
