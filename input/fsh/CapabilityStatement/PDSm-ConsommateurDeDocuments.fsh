@@ -49,7 +49,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].documentation = "Représente le titre du lot de soumission."
 * rest.resource[=].searchParam[+].name = "SourceId"
 * rest.resource[=].searchParam[=].definition = "https://profiles.ihe.net/ITI/MHD/SearchParameter/List-SourceId"
-* rest.resource[=].searchParam[=].type = #reference
+* rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Représente l’identifiant unique global du système émetteur du lot de soumission."
 * rest.resource[=].searchParam[+].name = "source"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/List-source"
