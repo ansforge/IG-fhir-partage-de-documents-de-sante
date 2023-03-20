@@ -3,7 +3,7 @@ InstanceOf: CapabilityStatement
 Usage: #definition
 // * url = "http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/PDSm.ConsommateurDeDocuments"
 // * version = "1.0"
-* name = "PDSm_ConsommateurDeDocuments"
+* name = "PDSm-ConsommateurDeDocuments"
 * title = "CI-SIS Partage-De-Documents-De-Sante - ConsommateurDeDocuments"
 * status = #active
 * experimental = false
