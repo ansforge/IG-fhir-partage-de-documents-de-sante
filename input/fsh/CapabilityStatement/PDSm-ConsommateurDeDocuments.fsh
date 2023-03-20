@@ -1,8 +1,6 @@
 Instance: PDSm-ConsommateurDeDocuments
 InstanceOf: CapabilityStatement
 Usage: #definition
-// * url = "http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/PDSm.ConsommateurDeDocuments"
-// * version = "1.0"
 * name = "PDSmConsommateurDeDocuments"
 * title = "CI-SIS Partage-De-Documents-De-Sante - ConsommateurDeDocuments"
 * status = #active
@@ -14,7 +12,7 @@ Usage: #definition
 * fhirVersion = #4.0.0
 * format[0] = #xml
 * format[+] = #json
-* implementationGuide = "http://esante.gouv.fr/ci-sis/fhir/ImplementationGuides/CI-SIS.PartageDeDocumentsDeSante"
+* implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm"
 * rest.mode = #client
 * rest.documentation = "Recherche de documents de santé et consultation de documents d'intérêt"
 * rest.security.cors = false
@@ -22,7 +20,7 @@ Usage: #definition
 
 // List resource
 * rest.resource[0].type = #List
-* rest.resource[=].profile = "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/PDSm_SubmissionSetComprehensive"
+* rest.resource[=].profile = Canonical(PDSm_SubmissionSetComprehensive)
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].searchParam[0].name = "date"
@@ -81,7 +79,7 @@ Usage: #definition
 
 // DocumentReference resource
 * rest.resource[+].type = #DocumentReference
-* rest.resource[=].profile = "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/PDSm_ComprehensiveDocumentReference"
+* rest.resource[=].profile = Canonical(PDSm_ComprehensiveDocumentReference)
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].searchParam[0].name = "type"
