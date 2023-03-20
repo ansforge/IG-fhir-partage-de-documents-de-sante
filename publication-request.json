@@ -1,7 +1,7 @@
 {
     "package-id" : "ans.fhir.fr.pdsm",
-    "version" : "3.0.0",
-    "path" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/3.0.0",
+    "version" : "3.0.1",
+    "path" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/3.0.1",
     "mode" : "milestone",
     "status" : "release",
     "sequence" : "Releases",
