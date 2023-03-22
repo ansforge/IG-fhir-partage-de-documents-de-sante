@@ -1,6 +1,3 @@
-Adresse de publication : https://interop.esante.gouv.fr/ig/fhir/pdsm/
-
-
 # Contexte
 
 ## Contexte métier du projet
