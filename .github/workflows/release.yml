@@ -1,0 +1,90 @@
+name: Release
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # Persist the FHIR Package Cache between runners.
+      # Doc: https://confluence.hl7.org/display/FHIR/FHIR+Package+Cache
+      - name: 🗂️ Cache FHIR Packages
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.fhir/packages
+          key: fhir-packages
+
+      # Persist the IG Publisher input-cache between runners.
+      - name: 🗂️ Cache IG Publisher input-cache
+        uses: actions/cache@v2   
+
+      # Gets the IG's id and version from the sushi-config.yaml file, this is needed to create the unique package/release name.
+      - name: 🆔 Get Id and Version
+        uses: CumulusDS/get-yaml-paths-action@v0.1.1
+        id: sushi_config
+        with:
+          file: sushi-config.yaml
+          id: id
+          version: version
+          releaseLabel: releaseLabel
+
+      # Creates the tag as a new environmnet variable with the format: {package-id}-{version}
+      - name: 🏷️ Determine Release tag
+        run: echo "TAG=${{ steps.sushi_config.outputs.id }}-${{ steps.sushi_config.outputs.version }}" >> $GITHUB_ENV
+
+      # Checks if the Release already exists, if it does we do not want to overwrite it because a release should be immutable.
+      - name: 🏷️ Check if Release tag already exists
+        uses: mukunku/tag-exists-action@v1.0.0
+        id: check_tag
+        with: 
+          tag: ${{ env.TAG }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Fetches the changelog-entry for the version, this will be used to describe the release.
+      # Will fail the workflow if an entry is missing, this is intentional behavior.
+      - name: 📄 Get Changelog Entry
+        uses: mindsers/changelog-reader-action@v2
+        if: ${{ steps.check_tag.outputs.exists == 'false' && steps.sushi_config.outputs.releaseLabel == 'release' }}
+        id: changelog
+        with:
+          path: input/pagecontent/CHANGELOG.md
+          version: ${{ steps.sushi_config.outputs.version }}
+
+      # Downloads the newest version of the IG Publisher, this could probable be cached.
+      - name: 📥 Download IG Publisher
+        if: ${{ steps.check_tag.outputs.exists == 'false' && steps.sushi_config.outputs.releaseLabel == 'release' }}
+        run: wget -q https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
+
+      # Builds the NPM Package for distribution.
+      - name: 🏃‍♂️ Run IG Publisher
+        if: ${{ steps.check_tag.outputs.exists == 'false' && steps.sushi_config.outputs.releaseLabel == 'release' }}
+        run : java -Xmx8192m -jar publisher.jar publisher -ig .  -publish https://github.io/
+
+      # A commit-tag is needed when creating a release.
+      # This step will push a new tag on the current commit, unless it already exists.
+      - name: 🏷️ Push Release Tag
+        uses: actions-ecosystem/action-push-tag@v1
+        if: ${{ steps.check_tag.outputs.exists == 'false' && steps.sushi_config.outputs.releaseLabel == 'release' }}
+        with:
+          tag: ${{ env.TAG }}
+
+      # Creates a new GitHub Release with a NPM Package containing the FHIR Profiles, unless it already exists.
+      # This package is ready to be published to the FHIR Package Registry.
+      - name: 📦 Create Release
+        uses: softprops/action-gh-release@v1
+        if: ${{ steps.check_tag.outputs.exists == 'false' && steps.sushi_config.outputs.releaseLabel == 'release' }}
+        with:
+          name:  v${{ steps.sushi_config.outputs.version }}
+          tag_name: ${{ env.TAG }}
+          body: ${{ steps.changelog.outputs.changes }}
+          fail_on_unmatched_files: true
+          files: |
+            output/full-ig.zip
+            output/package.tgz
