@@ -9,7 +9,7 @@ Usage: #definition
 * publisher = "ANS"
 * description = "Il s’agit d’un système d’information ou d’un composant d'un système d’information qui stocke, classe et archive les documents d’un dossier patient."
 * kind = #requirements
-* fhirVersion = #4.0.0
+* fhirVersion = #4.0.1
 * format[0] = #xml
 * format[+] = #json
 * implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm"
