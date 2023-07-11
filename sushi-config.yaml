@@ -7,7 +7,7 @@ title: Partage de Documents de Santé en mobilité (PDSm)
 publisher:
     name: ANS
     url: https://esante.gouv.fr
-status: draft
+status: active
 version: 3.0.1
 fhirVersion: 4.0.1
 copyrightYear: 2020+
