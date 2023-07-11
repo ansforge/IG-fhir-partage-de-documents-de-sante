@@ -6,7 +6,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 
 * contained MS
 * contained 1..
-* contained only $practitioner-rass or $organization-rass or FrPatient or $practitionerRole-organizationalRole-rass or Device or $practitionerRole-professionalRole-rass 
+* contained only AsPractitionerProfile or AsOrganizationProfile or FrPatient or AsPractitionerRoleProfile or Device
 
 * extension 2..
 * extension ^slicing.discriminator.type = #value
@@ -64,7 +64,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 * date ^short = "Représente la date et heure de soumission."
 
 * source 1..
-* source only Reference($practitionerRole-organizationalRole-rass or Device or FrPatient) 
+* source only Reference(ASPractitionerRoleProfile or Device or FrPatient) 
 * source obeys constr-bind-source
 
 
@@ -77,7 +77,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 * source.extension[authorOrg] ^sliceName = "authorOrg"
 * source.extension[authorOrg] ^definition = "Un lot de soumission est obligatoirement associé à un auteur. Si l’attribut “source” n’est pas renseigné, autrement dit si l’auteur est une personne morale, la cardinalité est contrainte à [1..1]."
 * source.extension[authorOrg] ^short = "Organisation auteur du document"
-* source.extension[authorOrg].value[x] only Reference($organization-rass)
+* source.extension[authorOrg].value[x] only Reference(AsOrganizationProfile)
 * source.extension[authorOrg].value[x] ^type.aggregation = #contained
 
 * source.extension[authorOrg] obeys constr-bind-authororg
@@ -97,7 +97,7 @@ Description: "Représente le destinataire du lot de soumission"
 * ^context.type = #element
 * ^context.expression = "List"
 * . ^short = "Représente le destinataire du lot de soumission"
-* value[x] only Reference($practitionerRole-organizationalRole-rass or $organization-rass)
+* value[x] only Reference(AsPractitionerRoleProfile or AsOrganizationProfile)
 
 
 Invariant: constr-bind-designationtype

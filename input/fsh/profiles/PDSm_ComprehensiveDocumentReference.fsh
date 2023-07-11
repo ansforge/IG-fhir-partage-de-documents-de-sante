@@ -13,7 +13,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 
 * contained MS
 * contained 1..
-* contained only FrPatient or Device or $practitionerRole-organizationalRole-rass or $organization-rass or $practitionerRole-professionalRole-rass or $practitioner-rass 
+* contained only FrPatient or Device or AsPractitionerRoleProfile or AsOrganizationProfile or ASPractitionerProfile
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
@@ -51,14 +51,14 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * author MS
 * author ^short = "Personnes physiques ou morales et/ou les dispositifs auteurs d'un document."
 * author 1..
-* author only Reference($practitionerRole-organizationalRole-rass or Device or FrPatient)
+* author only Reference(AsPractitionerRoleProfile or Device or FrPatient)
 * author ^type.aggregation = #contained
 * author obeys constr-bind-author
 
 * authenticator MS
 * authenticator 1..
 * authenticator ^short = "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents. Si l’auteur est un dispositif, cet attribut doit représenter la personne responsable de l’action effectuée par le dispositif. Pour les documents d’expression personnelle du patient, cet attribut fait référence au patient." 
-* authenticator only Reference($practitionerRole-organizationalRole-rass or $organization-rass)
+* authenticator only Reference(AsPractitionerRoleProfile or AsOrganizationProfile)
 * authenticator obeys constr-bind-authenticator
 
 * relatesTo MS
