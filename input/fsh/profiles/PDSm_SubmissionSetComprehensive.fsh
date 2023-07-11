@@ -6,7 +6,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 
 * contained MS
 * contained 1..
-* contained only AsPractitionerProfile or AsOrganizationProfile or FrPatient or AsPractitionerRoleProfile or Device
+* contained only ASPractitionerProfile or AsOrganizationProfile or FrPatient or AsPractitionerRoleProfile or Device
 
 * extension 2..
 * extension ^slicing.discriminator.type = #value
@@ -64,7 +64,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 * date ^short = "Représente la date et heure de soumission."
 
 * source 1..
-* source only Reference(ASPractitionerRoleProfile or Device or FrPatient) 
+* source only Reference(AsPractitionerRoleProfile or Device or FrPatient) 
 * source obeys constr-bind-source
 
 
