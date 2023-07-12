@@ -27,7 +27,6 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * type MS
 * type from $JDV-J07-XdsTypeCode-CISIS (preferred)
 * type ^short = "Représente le type du document."
-* type ^binding.description = "XDS typeCode CI-SIS"
 * type obeys constr-bind-type
 
 * category MS
