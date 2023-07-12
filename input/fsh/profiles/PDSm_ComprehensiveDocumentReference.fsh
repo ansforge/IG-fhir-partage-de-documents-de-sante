@@ -11,12 +11,11 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * masterIdentifier ^short = "Représente l’identifiant unique global affecté au document par son créateur. Il est utilisable comme référence externe dans d’autres documents."
 
 * contained MS
-* contained 1.. // author is mendatory
+* contained 1.. // author is mandatory
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension ^min = 0
 * extension contains PDSm_IsArchived named isArchived 0..1
 * extension[isArchived] MS
 * extension[isArchived] ^short = "Extension définie par ce volet pour distinguer les fiches archivées des actives."

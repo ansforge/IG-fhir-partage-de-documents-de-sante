@@ -34,6 +34,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 
 * identifier[uniqueId] MS
 * identifier[uniqueId] ^short = "IdUnique : Identifiant unique global affecté à ce lot de soumission par son créateur. Cet attribut est utilisé à des fins de références externes alors que idLotSoumission est destiné à des fins de gestion interne."
+
 * identifier[entryUUID] MS
 * identifier[entryUUID] ^short = "idLotSoumission : Identifiant unique du lot de soumission. Cet attribut est destiné à des fins de gestion interne alors que idUnique est utilisé à des fins de références externes."
 
@@ -67,9 +68,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 * source.extension ^slicing.discriminator.path = "url"
 * source.extension ^slicing.rules = #open
 
-* source.extension[authorOrg] ^sliceName = "authorOrg"
-* source.extension[authorOrg] ^definition = "Un lot de soumission est obligatoirement associé à un auteur. Si l’attribut “source” n’est pas renseigné, autrement dit si l’auteur est une personne morale, la cardinalité est contrainte à [1..1]."
-* source.extension[authorOrg] ^short = "Organisation auteur du document"
+* source.extension[authorOrg] ^short = "Organisation auteur du document. Un lot de soumission est obligatoirement associé à un auteur. Si l’attribut “source” n’est pas renseigné, autrement dit si l’auteur est une personne morale, la cardinalité est contrainte à [1..1]."
 * source.extension[authorOrg].value[x] only Reference($organization-rass)
 * source.extension[authorOrg].value[x] ^type.aggregation = #contained
 
