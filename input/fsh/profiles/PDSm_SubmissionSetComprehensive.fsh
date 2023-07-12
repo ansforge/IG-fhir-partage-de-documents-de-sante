@@ -6,35 +6,28 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 
 * contained MS
 * contained 1..
-* contained only $practitioner-rass or $organization-rass or FrPatient or $practitionerRole-organizationalRole-rass or Device or $practitionerRole-professionalRole-rass 
 
 * extension 2..
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 
-* extension[designationType] ^sliceName = "designationType"
+// Extension designationType defined in MHD : https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-designationType
 * extension[designationType].value[x] from $JDV-J03-XdsContentTypeCode-CISIS (preferred)
 * extension[designationType] obeys constr-bind-designationtype
-
-
-* extension[designationType].value[x] ^binding.description = "XDS contentTypeCode CI-SIS"
 * extension[designationType] ^short = "Représente le type d’activité associé à l’événement clinique ayant abouti à la constitution du lot de soumission."
 
 * extension[ihe-sourceId] ^short = "Représente l’identifiant unique global du système émetteur du lot de soumission."
 
-* extension[intendedRecipient] 0..0
 
 * extension contains
-    PDSm_IsArchived named isArchived 0..1 and
-    PDSm_intendedRecipient named PDSm_intendedRecipient 0..*
+    PDSm_IsArchived named isArchived 0..1
 
-
-* extension[PDSm_intendedRecipient] MS
-* extension[PDSm_intendedRecipient].value[x] only Reference
-* extension[PDSm_intendedRecipient].value[x] ^type.aggregation = #contained
-* extension[PDSm_intendedRecipient] ^short = "Représente le destinataire du lot de soumission"
-* extension[PDSm_intendedRecipient] ^definition = "Les ressources référencées sont : - PractitionerRole : Dans le cas d’un destinaire professionnel, c’est le profil PractitionerRoleOrgani zationalRoleRASS représentant la situation d’exercice qui doit être référencé. Lui-même fera le lien avec le profil PractitionerRoleProfes sionalRoleRASS représentant l’exercice professionnel et avec FrPractitioner. - Organization contrainte au profil FrOrganization"
+// Extension intendedRecipient defined in MHD : https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-intendedRecipient
+* extension[intendedRecipient] MS
+* extension[intendedRecipient].value[x] ^type.aggregation = #contained
+* extension[intendedRecipient] ^short = "Représente le destinataire du lot de soumission"
+* extension[intendedRecipient] ^definition = "Les ressources référencées sont : 1/ PractitionerRole : Dans le cas d’un destinaire professionnel, c’est le profil AsPractitionerRole représentant la situation d’exercice qui doit être référencé. Lui-même fera le lien avec le profil AsPractitionerRole représentant l’exercice professionnel et avec FrPractitioner. 2/ Organization contrainte au profil FrOrganization"
 * subject only Reference(FrPatient)
 
 * extension[isArchived] ^short = "Extension définie par ce volet pour distinguer les lots de soumission archivés des actives."
@@ -57,8 +50,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 * code ^short = "Désigne le cas d’utilisation de la ressource List. Il s’agit ici du lot de soumission."
 
 * subject MS
-* subject ^type.aggregation = #contained
-* subject ^short = "Référence vers la ressource Patient contained titulaire du dossier."
+* subject ^short = "Référence vers la ressource Patient titulaire du dossier."
 
 * date MS
 * date ^short = "Représente la date et heure de soumission."
@@ -74,6 +66,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 * source.extension ^slicing.discriminator.type = #value
 * source.extension ^slicing.discriminator.path = "url"
 * source.extension ^slicing.rules = #open
+
 * source.extension[authorOrg] ^sliceName = "authorOrg"
 * source.extension[authorOrg] ^definition = "Un lot de soumission est obligatoirement associé à un auteur. Si l’attribut “source” n’est pas renseigné, autrement dit si l’auteur est une personne morale, la cardinalité est contrainte à [1..1]."
 * source.extension[authorOrg] ^short = "Organisation auteur du document"
