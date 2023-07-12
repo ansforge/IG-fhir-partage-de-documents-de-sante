@@ -33,7 +33,6 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 
 * subject only Reference(FrPatient)
 * subject MS
-* subject ^type.aggregation = #contained
 
 * date MS
 * date 1..
