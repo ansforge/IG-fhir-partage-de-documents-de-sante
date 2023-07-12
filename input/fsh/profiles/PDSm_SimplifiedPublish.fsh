@@ -12,9 +12,7 @@ La publication simplifiée est un simple POST d'une ressource DocumentReference 
 """
 
 * meta.versionId MS
-* meta.versionId ^short = "Numéro de version de la fiche d’un document attribués par le système cible. La valeur de la métadonnée version est égale à 1 pour la première version de la fiche. Cet élément est requis lorsque le flux envoyé correspond à une mise à jour des données d’une fiche."
-
-* modifierExtension 0..0
+* meta.versionId ^short = "Numéro de version de la fiche d’un document attribué par le système cible. La valeur de la métadonnée version est égale à 1 pour la première version de la fiche. Cet élément est requis lorsque le flux envoyé correspond à une mise à jour des données d’une fiche."
 
 * masterIdentifier 1..1
 * masterIdentifier MS

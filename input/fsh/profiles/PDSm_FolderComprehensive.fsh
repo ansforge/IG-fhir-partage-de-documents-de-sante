@@ -42,6 +42,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 
 * entry 1..
 * entry ^short = "Liste des fiches composant le classeur."
+
 * entry.item only Reference(PDSm_ComprehensiveDocumentReference)
 * entry.item ^short = "Représente la référence à la fiche d'un document faisant partie du classeur."
 
