@@ -1,7 +1,7 @@
-<div align="center">
-<object data="ci-sis-logo.png" type="image/png"></object>
+
+<div class="figure" style="width:65%;">
+    <img src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS">
 </div>
-<br/>
 
 
 ### Introduction
