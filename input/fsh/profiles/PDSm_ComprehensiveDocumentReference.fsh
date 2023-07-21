@@ -5,20 +5,17 @@ Title: "PDSm Comprehensive DocumentReference"
 Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"ComprehensiveDocumentReference\" créé pour le volet \"Partage de documents de santé en mobilité\"."
 
 * meta.versionId MS
-* meta.versionId ^short = "Numéro de version de la fiche d’un document attribués par le système cible. La valeur de la métadonnée version est égale à 1 pour la première version de la fiche."
-* meta.versionId obeys constr-cdr-maj
+* meta.versionId ^short = "Numéro de version de la fiche d’un document attribué par le système cible. La valeur de la métadonnée version est égale à 1 pour la première version de la fiche. Cet élément est requis lorsque le flux envoyé correspond à une mise à jour des données d’une fiche."
 
 * masterIdentifier MS
 * masterIdentifier ^short = "Représente l’identifiant unique global affecté au document par son créateur. Il est utilisable comme référence externe dans d’autres documents."
 
 * contained MS
-* contained 1..
-* contained only FrPatient or Device or $practitionerRole-organizationalRole-rass or $organization-rass or $practitionerRole-professionalRole-rass or $practitioner-rass 
+* contained 1.. // author is mandatory
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension ^min = 0
 * extension contains PDSm_IsArchived named isArchived 0..1
 * extension[isArchived] MS
 * extension[isArchived] ^short = "Extension définie par ce volet pour distinguer les fiches archivées des actives."
@@ -30,7 +27,6 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * type MS
 * type from $JDV-J07-XdsTypeCode-CISIS (preferred)
 * type ^short = "Représente le type du document."
-* type ^binding.description = "XDS typeCode CI-SIS"
 * type obeys constr-bind-type
 
 * category MS
@@ -41,8 +37,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 
 * subject only Reference(FrPatient)
 * subject MS
-* subject ^short = "Représente l'identifiant du patient."
-* subject ^type.aggregation = #contained
+* subject ^short = "Référence vers le patient concerné par le document."
 * subject obeys constr-subj-ref
 
 * date MS
@@ -124,10 +119,6 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier."
 * context.sourcePatientInfo ^type.aggregation = #contained
 
-Invariant:   constr-cdr-maj
-Description: "Elément requis lorsque le flux envoyé correspond à une mise à jour des données d’une fiche"
-Expression:       "f:meta/f:versionId"
-Severity:    #error
 
 Invariant:   constr-cdr-rempl
 Description: "Elément requis lorsque le flux envoyé correspond au remplacement d'un document"
