@@ -69,12 +69,12 @@ menu:
         Recherche de fiche: st_recherche_fiche.html
         Consultation de documents: st_consultation.html
         Ajout simplifié d'un document: st_ajout_simplifie.html
-    # Spécifications fonctionnelles:
-    #     Spécifications fonctionnelles: specifications_fonctionnelles.html
-    #     Ajout d'un lot de documents: sf_ajout.html
-    #     Mise à jour de documents: sf_maj.html
-    #     Recherche de documents: sf_recherche.html
-    #     Consultation de documents: sf_consultation.html
+    Spécifications fonctionnelles:
+        Spécifications fonctionnelles: specifications_fonctionnelles.html
+        Ajout d'un lot de documents: sf_ajout.html
+        Mise à jour de documents: sf_maj.html
+        Recherche de documents: sf_recherche.html
+        Consultation de documents: sf_consultation.html
     Ressources de conformité: artifacts.html
     Autres ressources:
         Sécurité: securite.html
