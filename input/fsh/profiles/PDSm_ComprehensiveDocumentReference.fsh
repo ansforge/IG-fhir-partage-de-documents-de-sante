@@ -47,14 +47,11 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * author ^short = "Personnes physiques ou morales et/ou les dispositifs auteurs d'un document."
 * author 1..
 * author only Reference(AsPractitionerRoleProfile or Device or FrPatient)
-* author ^type.aggregation = #contained
-* author obeys constr-bind-author
 
 * authenticator MS
 * authenticator 1..
 * authenticator ^short = "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents. Si l’auteur est un dispositif, cet attribut doit représenter la personne responsable de l’action effectuée par le dispositif. Pour les documents d’expression personnelle du patient, cet attribut fait référence au patient." 
 * authenticator only Reference(AsPractitionerRoleProfile or AsOrganizationProfile)
-* authenticator obeys constr-bind-authenticator
 
 * relatesTo MS
 * relatesTo ^definition = "Cardinalité contrainte à [1..1] lorsque le flux envoyé correspond au remplacement d’un document."
@@ -149,24 +146,6 @@ Description: "La ressource référencée doit être présente sous l’élément
 Référence contrainte au profil FrPatient
 Cette même ressource est référencée depuis context.sourcePatientInfo."
 Expression:       "f:subject"
-Severity:    #error
-
-
-Invariant:   constr-bind-author
-Description: "Cardinalité contrainte à [1..*]
-Reference contrainte à :
-- PractitionerRole : Dans le cas d’un auteur professionnel, c’est le profil PractitionerRoleOrganizationalRoleRASSreprésentant la situation d’exercice qui doit être référencé. Lui-même fera le lien avec le profil PractitionerRoleProfessionalRoleRASS représentant l’exercice professionnel et avec FrPractitioner.
-- Device,
-- Patient contrainte au profil FrPatient."
-Expression:       "f:author"
-Severity:    #error
-
-Invariant:   constr-bind-authenticator
-Description: "Cardinalité contrainte à [1..1]
-Référence contrainte au profil 
-- PractitionerRole : Dans le cas d’un authentificateur professionnel, c’est le profil PractitionerRoleOrganizationalRoleRASS représentant la situation d’exercice qui doit être référencé. Lui-même fera le lien avec le profil PractitionerRoleProfessionalRoleRASS représentant l’exercice professionnel et avec FrPractitioner.
--  Organization contrainte au profil FrOrganization."
-Expression:       "f:authenticator"
 Severity:    #error
 
 Invariant:  constr-bind-relatesTo
