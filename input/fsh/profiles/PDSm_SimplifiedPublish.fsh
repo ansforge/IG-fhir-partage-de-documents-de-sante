@@ -48,14 +48,12 @@ La publication simplifiée est un simple POST d'une ressource DocumentReference 
 * author ^short = "Personnes physiques ou morales et/ou les dispositifs auteurs d'un document."
 * author 1..
 * author only Reference(AsPractitionerRoleProfile or AsPractitionerProfile or AsOrganizationProfile or Device or FrPatient or FrRelatedPerson) 
-* author obeys constr-bind-author
 
 
 * authenticator MS
 * authenticator 0..1
 * authenticator ^short = "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents. Si l’auteur est un dispositif, cet attribut doit représenter la personne responsable de l’action effectuée par le dispositif."
 * authenticator only Reference(AsPractitionerRoleProfile or AsOrganizationProfile)
-* authenticator obeys constr-bind-authenticator
 
 * description MS
 * description ^short = "Commentaire associé au document."
