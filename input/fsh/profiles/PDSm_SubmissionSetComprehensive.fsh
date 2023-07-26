@@ -56,9 +56,9 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 * date MS
 * date ^short = "Représente la date et heure de soumission."
 
-* source 1.. // Source est contained dans le profil MHD
-* source only Reference(AsPractitionerRoleProfile or Device or FrPatient) 
-* source ^short = "Représente l'auteur du lot de soumission. Si l'auteur est une organisation, utiliser l'extension authorOrg. Si l’auteur est une personne physique ou un dispositif, utiliser l’attribut source.reference ." 
+* source 1..
+* source only Reference($practitionerRole-organizationalRole-rass or Device or FrPatient) 
+* source obeys constr-bind-source
 
 
 
