@@ -59,7 +59,6 @@ Description: "Profil spécifique dérivé du profil IHE MHD « ComprehensiveSubm
 
 * source 1.. // Source est contained dans le profil MHD
 * source only Reference(AsPractitionerRoleProfile or Device or FrPatient) 
-* source obeys constr-bind-source
 * source ^short = "Représente l'auteur du lot de soumission. Si l'auteur est une organisation, utiliser l'extension authorOrg. Si l’auteur est une personne physique ou un dispositif, utiliser l’attribut source.reference ." 
 
 // Extension from MHD https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-authorOrg
