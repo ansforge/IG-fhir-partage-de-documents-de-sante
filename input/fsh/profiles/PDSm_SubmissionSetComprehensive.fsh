@@ -5,7 +5,8 @@ Title: "PDSm SubmissionSet Comprehensive"
 Description: "Profil spécifique dérivé du profil IHE MHD « ComprehensiveSubmissionSet » créé pour le volet ANS \"Partage de documents de santé en mobilité\" ; ce profil concerne le lot de soumission."
 
 * contained MS
-* contained 1..
+* contained 1.. 
+* contained ^short = "Ressource contenue. Dans le cadre de ce profil, il est obligatoire qu'il y ait au moins une ressource contenue : source ou source.extension[authorOrg]"
 
 * extension 2..
 * extension ^slicing.discriminator.type = #value
@@ -56,21 +57,16 @@ Description: "Profil spécifique dérivé du profil IHE MHD « ComprehensiveSubm
 * date MS
 * date ^short = "Représente la date et heure de soumission."
 
-* source 1..
+* source 1.. // Source est contained dans le profil MHD
 * source only Reference(AsPractitionerRoleProfile or Device or FrPatient) 
 * source obeys constr-bind-source
-* source ^short = "Représente les personnes physiques ou morales et/ou les dispositifs auteurs d’un lot de soumission."
+* source ^short = "Représente l'auteur du lot de soumission. Si l'auteur est une organisation, utiliser l'extension authorOrg. Si l’auteur est une personne physique ou un dispositif, utiliser l’attribut source.reference ." 
 
-* source.extension ^slicing.discriminator.type = #value
-* source.extension ^slicing.discriminator.path = "url"
-* source.extension ^slicing.rules = #open
+// Extension from MHD https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-authorOrg
 
-* source.extension[authorOrg] ^short = "Un lot de soumission est obligatoirement associé à un auteur. Si l’attribut “source” n’est pas renseigné, autrement dit si l’auteur est une personne morale, la cardinalité est contrainte à [1..1]."
+* source.extension[authorOrg] ^short = "Auteur organisationnel du document"
 * source.extension[authorOrg].value[x] only Reference(AsOrganizationProfile)
 * source.extension[authorOrg].value[x] ^type.aggregation = #contained
-* source.extension[authorOrg] obeys constr-bind-authororg
-
-
 
 
 * note ^short = "Représente les commentaires associés au lot de soumission."
@@ -97,17 +93,6 @@ En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J03-Xd
 Expression:       "f:extension[designationType]"
 Severity:    #error
 
-Invariant: constr-bind-source
-Description: "Un lot de soumission est obligatoirement associé à un auteur. Si l’attribut \"ihe-authorOrg\" n’est pas renseigné, autrement dit si l’auteur est une personne physique ou un dispositif."
-Expression:       "f:source"
-Severity:    #error
-
-
-Invariant: constr-bind-authororg
-Description: "Un lot de soumission est obligatoirement associé à un auteur. Si l’attribut \"source\" n’est pas renseigné, autrement dit si l’auteur est une personne morale, la cardinalité est contrainte à [1..1].
-La ressource référencée doit être présente sous l’élément List.contained."
-Expression:       "f:source/f:extension[authorOrg]"
-Severity:    #error
 
 
 Mapping:  ConceptMetierToPDSm_SubmissionSetComprehensive

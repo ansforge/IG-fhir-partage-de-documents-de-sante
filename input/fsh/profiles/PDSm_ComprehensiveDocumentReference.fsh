@@ -12,13 +12,15 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 
 * contained MS
 * contained 1.. // author is mandatory
+* contained ^short = "Ressource contenue. Dans le cadre de ce profil, il est obligatoire qu'il y ait au moins une ressource contenue : la•les ressource•s référencée•s dans les attributs author et authenticator"
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
+
 * extension contains PDSm_IsArchived named isArchived 0..1
 * extension[isArchived] MS
-* extension[isArchived] ^short = "Extension définie par ce volet pour distinguer les fiches archivées des actives."
+* extension[isArchived] ^short = "Extension définie pour distinguer les fiches archivées des actives."
 
 * identifier MS
 
@@ -42,12 +44,12 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * date MS
 * date ^short = "Représente la date de création de la ressource DocumentReference dans FHIR"
 
-* author MS
+* author MS // Author contained dans le profil MHD
 * author ^short = "Personnes physiques ou morales et/ou les dispositifs auteurs d'un document."
 * author 1..
 * author only Reference(AsPractitionerRoleProfile or Device or FrPatient)
 
-* authenticator MS
+* authenticator MS // Authenticator contained dans le profil MHD
 * authenticator 1..
 * authenticator ^short = "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents. Si l’auteur est un dispositif, cet attribut doit représenter la personne responsable de l’action effectuée par le dispositif. Pour les documents d’expression personnelle du patient, cet attribut fait référence au patient." 
 * authenticator only Reference(AsPractitionerRoleProfile or AsOrganizationProfile)
@@ -67,7 +69,6 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 
 * securityLabel obeys constr-bind-securityLabel
 * securityLabel ^short = "Contient les informations définissant le niveau de confidentialité d'un document."
-
 
 // ###########
 // # CONTENT #
