@@ -2,7 +2,7 @@ Profile: PDSm_FolderComprehensive
 Parent: IHE.MHD.Comprehensive.Folder
 Id: pdsm-folder-comprehensive
 Title: "PDSm Folder Comprehensive"
-Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehensive Folder  » créé pour le volet ANS \"Partage de documents de santé en mobilité\" ; ce profil concerne le classeur."
+Description: "Profil spécifique dérivé du profil IHE MHD « Comprehensive Folder » créé pour le volet ANS \"Partage de documents de santé en mobilité\" ; ce profil concerne le classeur."
 
 * contained 1..
 * contained only FrPatient
@@ -12,13 +12,11 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 * extension ^slicing.rules = #open
 
 * extension[designationType] 1..1
-* extension[designationType] ^comment = "Le jeu de valeurs est à définir par le système cible.\r\n\r\nThere can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."
-
-* extension[designationType] ^short = "Représente les codes spécifiant le type d’activité de l’événement clinique ayant abouti au regroupement de la fiche d’un document dans ce classeur."
-
+* extension[designationType] ^short = "Représente les codes spécifiant le type d’activité de l’événement clinique ayant abouti au regroupement de la fiche d’un document dans ce classeur. Le jeu de valeurs est à définir par le système cible."
 
 * identifier[uniqueId] MS
 * identifier[uniqueId] ^short = "Identifiant unique du classeur attribué par le système initiateur."
+
 * identifier[entryUUID] MS
 * identifier[entryUUID] ^short = "Identifiant attribué par le système cible."
 

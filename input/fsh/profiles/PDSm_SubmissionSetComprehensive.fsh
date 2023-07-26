@@ -2,7 +2,7 @@ Profile: PDSm_SubmissionSetComprehensive
 Parent: IHE.MHD.Comprehensive.SubmissionSet
 Id: pdsm-submissionset-comprehensive
 Title: "PDSm SubmissionSet Comprehensive"
-Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « ComprehensiveSubmissionSet  » créé pour le volet ANS \"Partage de documents de santé en mobilité\" ; ce profil concerne le lot de soumission."
+Description: "Profil spécifique dérivé du profil IHE MHD « ComprehensiveSubmissionSet » créé pour le volet ANS \"Partage de documents de santé en mobilité\" ; ce profil concerne le lot de soumission."
 
 * contained MS
 * contained 1..

@@ -37,8 +37,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 
 * subject only Reference(FrPatient)
 * subject MS
-* subject ^short = "Référence vers le patient concerné par le document."
-* subject obeys constr-subj-ref
+* subject ^short = "Référence vers le patient concerné par le document. Cette même ressource est référencée depuis context.sourcePatientInfo."
 
 * date MS
 * date ^short = "Représente la date de création de la ressource DocumentReference dans FHIR"
@@ -114,7 +113,6 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 
 * context.sourcePatientInfo only Reference(FrPatient) 
 * context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier."
-* context.sourcePatientInfo ^type.aggregation = #contained
 
 
 Invariant:   constr-cdr-rempl
@@ -139,13 +137,6 @@ Description: "Les valeurs possibles pour cet élément doivent provenir d’une 
 Les valeurs possibles peuvent être restreintes en fonction du jeu de valeurs correspondant mis à disposition par le projet (exemple : JDV_J57-ClassCode-DMP).
 En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J06-XdsClassCode-CISIS peut être utilisé."
 Expression:       "f:category"
-Severity:    #error
-
-Invariant:   constr-subj-ref
-Description: "La ressource référencée doit être présente sous l’élément DocumentReference.contained.
-Référence contrainte au profil FrPatient
-Cette même ressource est référencée depuis context.sourcePatientInfo."
-Expression:       "f:subject"
 Severity:    #error
 
 Invariant:  constr-bind-relatesTo

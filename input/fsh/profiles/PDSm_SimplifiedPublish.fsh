@@ -115,7 +115,6 @@ La publication simplifiée est un simple POST d'une ressource DocumentReference 
 
 * context.sourcePatientInfo only Reference(FrPatient)
 * context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier."
-* context.sourcePatientInfo ^type.aggregation = #contained
 
 
 Invariant: constr-bind-ProducteurDoc-simplified
