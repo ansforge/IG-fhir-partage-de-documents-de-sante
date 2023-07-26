@@ -68,7 +68,7 @@ Il s'agit du résultat de la recherche de documents retourné par le gestionnair
 
 
 
-Un profil spécifique dérivé du profil IHE MHD v4.0.1 « FindDocumentReferencesComprehensiveResponse » est créé pour ce volet et nommé [PDSm_FindDocumentReferencesComprehensiveResponse](StructureDefinition-pdsmfinddocumentreferencescomprehensiveresponse.html). Il contient zéro ou plusieurs ressources DocumentReference répondants aux critères de la requête.
+Un profil spécifique dérivé du profil IHE MHD v4.0.1 « FindDocumentReferencesComprehensiveResponse » est créé pour ce volet et nommé [PDSm_FindDocumentReferencesComprehensiveResponse](https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-find-documentreferences-comprehensive-response). Il contient zéro ou plusieurs ressources DocumentReference répondants aux critères de la requête.
 
 Ce flux correspond à la réponse à la requête reposant sur l’interaction « search » du flux précédent.
 En cas de succès, le gestionnaire de partage de documents retourne un code `HTTP 200 OK` ainsi qu’un Bundle de type searchset.
