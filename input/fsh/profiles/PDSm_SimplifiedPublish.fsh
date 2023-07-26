@@ -47,7 +47,7 @@ La publication simplifiée est un simple POST d'une ressource DocumentReference 
 * author MS
 * author ^short = "Personnes physiques ou morales et/ou les dispositifs auteurs d'un document."
 * author 1..
-* author only Reference(AsPractitionerRoleProfile or FrPractitioner or FrOrganization or Device or FrPatient or FrRelatedPerson) 
+* author only Reference(AsPractitionerRoleProfile or AsPractitionerProfile or AsOrganizationProfile or Device or FrPatient or FrRelatedPerson) 
 * author obeys constr-bind-author
 
 

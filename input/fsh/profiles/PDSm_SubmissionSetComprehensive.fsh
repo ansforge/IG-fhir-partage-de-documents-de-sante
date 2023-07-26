@@ -26,8 +26,8 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 // Extension intendedRecipient defined in MHD : https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-intendedRecipient
 * extension[intendedRecipient] MS
 * extension[intendedRecipient].value[x] ^type.aggregation = #contained
-* extension[intendedRecipient] ^short = "Représente le destinataire du lot de soumission"
-* extension[intendedRecipient] ^definition = "Les ressources référencées sont : 1/ PractitionerRole : Dans le cas d’un destinaire professionnel, c’est le profil AsPractitionerRole représentant la situation d’exercice qui doit être référencé. Lui-même fera le lien avec le profil AsPractitionerRole représentant l’exercice professionnel et avec FrPractitioner. 2/ Organization contrainte au profil FrOrganization"
+* extension[intendedRecipient] ^short = "Représente le destinataire du lot de soumission. Il peut s'agir d'un AsPractitioner associé à un AsPractitionerRole ou bien d'une AsOrganization."
+
 * subject only Reference(FrPatient)
 
 * extension[isArchived] ^short = "Extension définie par ce volet pour distinguer les lots de soumission archivés des actives."
@@ -59,26 +59,15 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 * source 1..
 * source only Reference(AsPractitionerRoleProfile or Device or FrPatient) 
 * source obeys constr-bind-source
-
-
-
 * source ^short = "Représente les personnes physiques ou morales et/ou les dispositifs auteurs d’un lot de soumission."
 
 * source.extension ^slicing.discriminator.type = #value
 * source.extension ^slicing.discriminator.path = "url"
 * source.extension ^slicing.rules = #open
-<<<<<<< HEAD
-* source.extension[authorOrg] ^sliceName = "authorOrg"
-* source.extension[authorOrg] ^definition = "Un lot de soumission est obligatoirement associé à un auteur. Si l’attribut “source” n’est pas renseigné, autrement dit si l’auteur est une personne morale, la cardinalité est contrainte à [1..1]."
-* source.extension[authorOrg] ^short = "Organisation auteur du document"
+
+* source.extension[authorOrg] ^short = "Un lot de soumission est obligatoirement associé à un auteur. Si l’attribut “source” n’est pas renseigné, autrement dit si l’auteur est une personne morale, la cardinalité est contrainte à [1..1]."
 * source.extension[authorOrg].value[x] only Reference(AsOrganizationProfile)
-=======
-
-* source.extension[authorOrg] ^short = "Organisation auteur du document. Un lot de soumission est obligatoirement associé à un auteur. Si l’attribut “source” n’est pas renseigné, autrement dit si l’auteur est une personne morale, la cardinalité est contrainte à [1..1]."
-* source.extension[authorOrg].value[x] only Reference($organization-rass)
->>>>>>> main
 * source.extension[authorOrg].value[x] ^type.aggregation = #contained
-
 * source.extension[authorOrg] obeys constr-bind-authororg
 
 
