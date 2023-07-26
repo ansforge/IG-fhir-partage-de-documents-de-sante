@@ -9,7 +9,7 @@ Usage: #definition
 * publisher = "ANS"
 * description = "Il s’agit d’un système d’information ou d’un composant de système d’information qui recherche des documents selon certains critères, et qui peut consulter les documents qui l’intéressent."
 * kind = #requirements
-* fhirVersion = #4.0.0
+* fhirVersion = #4.0.1
 * format[0] = #xml
 * format[+] = #json
 * implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm"
