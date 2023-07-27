@@ -64,9 +64,8 @@ GET http://targetsystem.com/API/DocumentReference?patient.identifier=32659 HTTP/
 ```
 
 ### Flux 06b : réponse au flux 05-b
+
 Il s'agit du résultat de la recherche de documents retourné par le gestionnaire de partage de documents. La recherche de fiches retourne les ressources DocumentReference qui correspondent aux critères de recherche fournis par le consommateur de documents. On retrouve les mêmes éléments qui constituent les fiches que lors de la demande d’ajout d’un lot de documents. 
-
-
 
 Un profil spécifique dérivé du profil IHE MHD v4.0.1 « FindDocumentReferencesComprehensiveResponse » est créé pour ce volet et nommé [PDSm_FindDocumentReferencesComprehensiveResponse](StructureDefinition-pdsmfinddocumentreferencescomprehensiveresponse.html). Il contient zéro ou plusieurs ressources DocumentReference répondants aux critères de la requête.
 
