@@ -59,6 +59,7 @@ Le flux 05-b contient les critères suivants :
 Ci-dessous un exemple de requête :
 
 * Rechercher les ressources de type DocumentReference du patient ayant l’identifiant 32659.
+
 ```
 GET http://targetsystem.com/API/DocumentReference?patient.identifier=32659 HTTP/1.1
 ```
@@ -67,11 +68,10 @@ GET http://targetsystem.com/API/DocumentReference?patient.identifier=32659 HTTP/
 
 Il s'agit du résultat de la recherche de documents retourné par le gestionnaire de partage de documents. La recherche de fiches retourne les ressources DocumentReference qui correspondent aux critères de recherche fournis par le consommateur de documents. On retrouve les mêmes éléments qui constituent les fiches que lors de la demande d’ajout d’un lot de documents. 
 
-Un profil spécifique dérivé du profil IHE MHD v4.0.1 « FindDocumentReferencesComprehensiveResponse » est créé pour ce volet et nommé [PDSm_FindDocumentReferencesComprehensiveResponse](StructureDefinition-pdsmfinddocumentreferencescomprehensiveresponse.html). Il contient zéro ou plusieurs ressources DocumentReference répondants aux critères de la requête.
+Un profil spécifique dérivé du profil IHE MHD « FindDocumentReferencesComprehensiveResponse » est créé pour ce volet et nommé [PDSm_FindDocumentReferencesComprehensiveResponse](https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-find-documentreferences-comprehensive-response). Il contient zéro ou plusieurs ressources DocumentReference répondants aux critères de la requête.
 
 Ce flux correspond à la réponse à la requête reposant sur l’interaction « search » du flux précédent.
 En cas de succès, le gestionnaire de partage de documents retourne un code `HTTP 200 OK` ainsi qu’un Bundle de type searchset.
-
 
 Si le gestionnaire de partage de documents envoie des "warnings", la ressource Bundle doit aussi contenir une ressource "OperationOutcome" qui contient ces "warnings".
 Si le gestionnaire de partage de documents doit reporter une erreur, il doit utiliser un "[HTTP error response codes](http://hl7.org/fhir/R4/http.html)" et doit inclure un "[FHIR OperationOutcome](http://hl7.org/fhir/R4/operationoutcome.html)" avec plus de détails sur l'échec.
