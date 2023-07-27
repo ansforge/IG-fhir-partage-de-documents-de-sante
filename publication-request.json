@@ -1,9 +1,10 @@
 {
     "package-id" : "ans.fhir.fr.pdsm",
-    "version" : "3.0.1",
-    "path" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/3.0.1",
-    "mode" : "milestone",
-    "status" : "release",
+    "version" : "3.1.0-ballot",
+    "path" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/3.1.0-ballot",
+    "mode" : "working",
+    "status" : "ballot",
     "sequence" : "STU1",
-    "desc" : "Correction des erreurs du FHIR validator : ajout SearchParam expression, suppression des espaces début/fin des string, correction des SearchParam.name qui n'avaient pas le bon format, changement des urls et des noms des ressources des CapabilityStatement, correction des url des SearchParam IHE"
+    "desc" : "Guide d`Implémentation FHIR de partage de documents de santé en mobilité.",
+    "descmd" : "Ballot de l`Implementation Guide FHIR PDSm 3.1.0\n- Héritage de l'IG annuaire santé\n- Mise à jour du narratif et éclaircissement\n- Page index : ajout des dépendances, du logo ci-sis\n- Passage au status active\n- suppression de la contrainte \"contained\" obligatoire pour les champs subject (pour éviter les doublons) et suppression de l'obligation du type de ressources contained\n- Réparation de liens morts\n- Ajout des spécifications fonctionnelles dans l'IG"
   }
