@@ -3,7 +3,7 @@ Parent: IHE.MHD.SimplifiedPublish.DocumentReference
 Id: pdsm-simplified-publish
 Title: "PDSm Simplified Publish"
 Description:    """
-Ce profil est utilisé dans le cadre du flux 9. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105.
+Ce profil est utilisé dans le cadre du flux 9 d'ajout simplifié de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105.
 
 Contrairement au profil PDSm_ComprehensiveDocumentReference, le document est directement inclus dans DocumentReference.attachment.data et non dans une ressource « Binary » externe.
 
