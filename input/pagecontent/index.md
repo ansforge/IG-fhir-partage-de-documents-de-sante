@@ -1,3 +1,9 @@
+
+<div class="figure" style="width:65%;">
+    <img src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS">
+</div>
+
+
 ### Introduction
 
 Ce document présente les spécifications techniques du volet "Partage de documents de santé en mobilité". Sa production est basée sur les Spécifications Fonctionnelles des Echanges du volet Partage de Documents de Santé et le profil [MHD](https://profiles.ihe.net/ITI/MHD/index.html) (Mobile access to Health Documents) défini par IHE (Integrating the Healthcare Entreprise).
