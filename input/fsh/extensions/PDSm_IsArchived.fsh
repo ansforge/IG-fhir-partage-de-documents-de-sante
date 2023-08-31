@@ -5,7 +5,9 @@ Description: "Extension définie par le volet ANS \"Volet Partage de documents d
 
 * ^context[0].type = #element
 * ^context[=].expression = "DocumentReference"
+
 * ^context[+].type = #element
 * ^context[=].expression = "List"
+
 * value[x] 1..
 * value[x] only boolean

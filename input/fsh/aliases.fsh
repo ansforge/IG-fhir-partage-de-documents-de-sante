@@ -1,9 +1,6 @@
 Alias: $FrPractitioner = http://interopsante.org/fhir/StructureDefinition/FrPractitioner
-Alias: $practitionerRole-professionalRole-rass = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-professionalRole-rass
-Alias: $practitionerRole-organizationalRole-rass = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-organizationalRole-rass
 Alias: $FrOrganization = http://interopsante.org/fhir/StructureDefinition/FrOrganization
 Alias: $CDS_Organization-OrgaInt = http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/CDS_Organization-OrgaInt
-Alias: $mailboxMSS = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/mailboxMSS
 
 Alias: $fr-encounter = http://www.interopsante.org/fhir/structuredefinition/resource/fr-encounter
 Alias: $fr-practitioner = http://interopsante.org/fhir/structuredefinition/resource/fr-practitioner
@@ -17,8 +14,6 @@ Alias: $FrSlot = http://interopsante.org/fhir/StructureDefinition/FrSlot
 Alias: $FrSchedule = http://interopsante.org/fhir/StructureDefinition/FrSchedule
 Alias: $FrHealthcareService = http://interopsante.org/fhir/StructureDefinition/FrHealthcareService
 Alias: $FrAppointment = http://interopsante.org/fhir/StructureDefinition/FrAppointment
-Alias: $organization-rass = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/organization-rass
-Alias: $practitioner-rass = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitioner-rass
 
 Alias: $TRE-R260-HL7RoleClass = https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass
 Alias: $TRE-R216-HL7RoleCode = https://mos.esante.gouv.fr/NOS/TRE_R216-HL7RoleCode/FHIR/TRE-R216-HL7RoleCode

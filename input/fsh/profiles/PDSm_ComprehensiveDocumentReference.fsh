@@ -12,13 +12,15 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 
 * contained MS
 * contained 1.. // author is mandatory
+* contained ^short = "Ressource contenue. Dans le cadre de ce profil, il est obligatoire qu'il y ait au moins une ressource contenue : la•les ressource•s référencée•s dans les attributs author et authenticator"
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
+
 * extension contains PDSm_IsArchived named isArchived 0..1
 * extension[isArchived] MS
-* extension[isArchived] ^short = "Extension définie par ce volet pour distinguer les fiches archivées des actives."
+* extension[isArchived] ^short = "Extension définie pour distinguer les fiches archivées des actives."
 
 * identifier MS
 
@@ -36,24 +38,20 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 
 * subject only Reference(FrPatient)
 * subject MS
-* subject ^short = "Référence vers le patient concerné par le document."
-* subject obeys constr-subj-ref
+* subject ^short = "Référence vers le patient concerné par le document. Cette même ressource est référencée depuis context.sourcePatientInfo."
 
 * date MS
 * date ^short = "Représente la date de création de la ressource DocumentReference dans FHIR"
 
-* author MS
+* author MS // Author contained dans le profil MHD
 * author ^short = "Personnes physiques ou morales et/ou les dispositifs auteurs d'un document."
 * author 1..
-* author only Reference($practitionerRole-organizationalRole-rass or Device or FrPatient)
-* author ^type.aggregation = #contained
-* author obeys constr-bind-author
+* author only Reference(AsPractitionerRoleProfile or Device or FrPatient)
 
-* authenticator MS
+* authenticator MS // Authenticator contained dans le profil MHD
 * authenticator 1..
 * authenticator ^short = "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents. Si l’auteur est un dispositif, cet attribut doit représenter la personne responsable de l’action effectuée par le dispositif. Pour les documents d’expression personnelle du patient, cet attribut fait référence au patient." 
-* authenticator only Reference($practitionerRole-organizationalRole-rass or $organization-rass)
-* authenticator obeys constr-bind-authenticator
+* authenticator only Reference(AsPractitionerRoleProfile or AsOrganizationProfile)
 
 * relatesTo MS
 * relatesTo ^definition = "Cardinalité contrainte à [1..1] lorsque le flux envoyé correspond au remplacement d’un document."
@@ -70,7 +68,6 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 
 * securityLabel obeys constr-bind-securityLabel
 * securityLabel ^short = "Contient les informations définissant le niveau de confidentialité d'un document."
-
 
 // ###########
 // # CONTENT #
@@ -113,7 +110,6 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 
 * context.sourcePatientInfo only Reference(FrPatient) 
 * context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier."
-* context.sourcePatientInfo ^type.aggregation = #contained
 
 
 Invariant:   constr-cdr-rempl
@@ -138,31 +134,6 @@ Description: "Les valeurs possibles pour cet élément doivent provenir d’une 
 Les valeurs possibles peuvent être restreintes en fonction du jeu de valeurs correspondant mis à disposition par le projet (exemple : JDV_J57-ClassCode-DMP).
 En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J06-XdsClassCode-CISIS peut être utilisé."
 Expression:       "f:category"
-Severity:    #error
-
-Invariant:   constr-subj-ref
-Description: "La ressource référencée doit être présente sous l’élément DocumentReference.contained.
-Référence contrainte au profil FrPatient
-Cette même ressource est référencée depuis context.sourcePatientInfo."
-Expression:       "f:subject"
-Severity:    #error
-
-
-Invariant:   constr-bind-author
-Description: "Cardinalité contrainte à [1..*]
-Reference contrainte à :
-- PractitionerRole : Dans le cas d’un auteur professionnel, c’est le profil PractitionerRoleOrganizationalRoleRASSreprésentant la situation d’exercice qui doit être référencé. Lui-même fera le lien avec le profil PractitionerRoleProfessionalRoleRASS représentant l’exercice professionnel et avec FrPractitioner.
-- Device,
-- Patient contrainte au profil FrPatient."
-Expression:       "f:author"
-Severity:    #error
-
-Invariant:   constr-bind-authenticator
-Description: "Cardinalité contrainte à [1..1]
-Référence contrainte au profil 
-- PractitionerRole : Dans le cas d’un authentificateur professionnel, c’est le profil PractitionerRoleOrganizationalRoleRASS représentant la situation d’exercice qui doit être référencé. Lui-même fera le lien avec le profil PractitionerRoleProfessionalRoleRASS représentant l’exercice professionnel et avec FrPractitioner.
--  Organization contrainte au profil FrOrganization."
-Expression:       "f:authenticator"
 Severity:    #error
 
 Invariant:  constr-bind-relatesTo

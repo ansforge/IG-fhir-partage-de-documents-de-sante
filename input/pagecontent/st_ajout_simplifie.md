@@ -1,4 +1,4 @@
-Ce flux permet l'ajout simplifié d'un document en suivant la requête de la transaction IHE "Simplified Publish [ITI-105]" du profil MHD.
+Ce flux permet l'ajout simplifié d'un document en respectant la requête de la transaction IHE "Simplified Publish [ITI-105]" du profil MHD.
 
 ### Flux 09 : ajout simplifié d’un document
 

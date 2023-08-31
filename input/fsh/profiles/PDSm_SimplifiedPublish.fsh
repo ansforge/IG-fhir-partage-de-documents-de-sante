@@ -42,15 +42,13 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 * author MS
 * author ^short = "Personnes physiques ou morales et/ou les dispositifs auteurs d'un document."
 * author 1..
-* author only Reference($practitionerRole-organizationalRole-rass or FrPractitioner or FrOrganization or Device or FrPatient or FrRelatedPerson) 
-* author obeys constr-bind-author
+* author only Reference(AsPractitionerRoleProfile or AsPractitionerProfile or AsOrganizationProfile or Device or FrPatient or FrRelatedPerson) 
 
 
 * authenticator MS
 * authenticator 0..1
 * authenticator ^short = "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents. Si l’auteur est un dispositif, cet attribut doit représenter la personne responsable de l’action effectuée par le dispositif."
-* authenticator only Reference($practitionerRole-organizationalRole-rass or $organization-rass)
-* authenticator obeys constr-bind-authenticator
+* authenticator only Reference(AsPractitionerRoleProfile or AsOrganizationProfile)
 
 * description MS
 * description ^short = "Commentaire associé au document."
@@ -109,7 +107,6 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 
 * context.sourcePatientInfo only Reference(FrPatient)
 * context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier."
-* context.sourcePatientInfo ^type.aggregation = #contained
 
 
 Invariant: constr-bind-ProducteurDoc-simplified
