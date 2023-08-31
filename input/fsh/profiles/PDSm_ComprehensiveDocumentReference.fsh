@@ -34,7 +34,6 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * category MS
 * category from $JDV-J06-XdsClassCode-CISIS (preferred)
 * category ^short = "Représente la classe du document (compte rendu, imagerie médicale, traitement, certificat,...)."
-* category ^binding.description = "XDS classCode CI-SIS"
 * category obeys constr-bind-category
 
 * subject only Reference(FrPatient)
@@ -88,7 +87,6 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 
 * content.format from $JDV-J10-XdsFormatCode-CISIS (preferred)
 * content.format obeys constr-bind-format
-* content.format ^binding.description = "XDS formatCode documents CI-SIS"
 * content.format ^short = "Format technique détaillé du document."
 
 // ###########
@@ -104,13 +102,11 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 
 * context.facilityType from $JDV-J02-XdsHealthcareFacilityTypeCode-CISIS (preferred)
 * context.facilityType obeys constr-bind-ProducteurDoc
-* context.facilityType ^binding.description = "XDS healthcareFacilityTypeCode CI-SIS"
 * context.facilityType ^short = "Secteur d'activité lié à la prise en charge de la personne, en lien avec le document produit."
 
 * context.practiceSetting from $JDV-J04-XdsPracticeSettingCode-CISIS (preferred)
 * context.practiceSetting obeys constr-bind-ProducteurDoc
 * context.practiceSetting ^short = "Cadre d’exercice de l’acte qui a engendré la création du document."
-* context.practiceSetting ^binding.description = "XDS practiceSettingCode CI-SIS"
 
 * context.sourcePatientInfo only Reference(FrPatient) 
 * context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier."
