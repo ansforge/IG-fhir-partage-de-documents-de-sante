@@ -3,21 +3,18 @@ Parent: IHE.MHD.SimplifiedPublish.DocumentReference
 Id: pdsm-simplified-publish
 Title: "PDSm Simplified Publish"
 Description:    """
-Ce profil a été créé en s'inspirant du profil MHD Simplified. 
+Ce profil est utilisé dans le cadre du flux 9 d'ajout simplifié de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105.
+
 Contrairement au profil PDSm_ComprehensiveDocumentReference, le document est directement inclus dans DocumentReference.attachment.data et non dans une ressource « Binary » externe.
 
-Ce profil est utilisé dans le cadre du flux 9. Le flux et le profil sont inspirés d’IHE MHD, version build au 03.10.22  : transaction ITI-105  et du profil SimplifiedPublish.DocumentReference.
-
-La publication simplifiée est un simple POST d'une ressource DocumentReference conforme à ce profil.
+La publication simplifiée est une simple requête HTTP POST d'une ressource DocumentReference conforme à ce profil.
 """
 
 * meta.versionId MS
 * meta.versionId ^short = "Numéro de version de la fiche d’un document attribué par le système cible. La valeur de la métadonnée version est égale à 1 pour la première version de la fiche. Cet élément est requis lorsque le flux envoyé correspond à une mise à jour des données d’une fiche."
 
-* masterIdentifier 1..1
 * masterIdentifier MS
 * masterIdentifier ^short = "Représente l’identifiant unique global affecté au document par son créateur. Il est utilisable comme référence externe dans d’autres documents."
-
 
 * identifier MS
 
@@ -28,13 +25,11 @@ La publication simplifiée est un simple POST d'une ressource DocumentReference 
 * type MS
 * type from $JDV-J07-XdsTypeCode-CISIS (preferred)
 * type ^definition = "Représente le type du document."
-* type ^binding.description = "XDS typeCode CI-SIS"
 * type obeys constr-bind-type
 
 * category MS
 * category from $JDV-J06-XdsClassCode-CISIS (preferred)
 * category ^short = "Représente la classe du document (compte rendu, imagerie médicale, traitement, certificat,...)."
-* category ^binding.description = "XDS classCode CI-SIS"
 * category obeys constr-bind-category
 
 * subject 1..1
@@ -90,7 +85,6 @@ La publication simplifiée est un simple POST d'une ressource DocumentReference 
 * content.format 0..1 MS
 * content.format from $JDV-J10-XdsFormatCode-CISIS (preferred)
 * content.format obeys constr-bind-format
-* content.format ^binding.description = "XDS formatCode documents CI-SIS"
 * content.format ^short = "Format technique détaillé du document."
 
 // ###########
@@ -106,14 +100,12 @@ La publication simplifiée est un simple POST d'une ressource DocumentReference 
 * context.facilityType MS
 * context.facilityType from $JDV-J02-XdsHealthcareFacilityTypeCode-CISIS (preferred)
 * context.facilityType obeys constr-bind-ProducteurDoc-simplified
-* context.facilityType ^binding.description = "XDS healthcareFacilityTypeCode CI-SIS"
 * context.facilityType ^short = "Secteur d'activité lié à la prise en charge de la personne, en lien avec le document produit."
 
 * context.practiceSetting 0..1 MS
 * context.practiceSetting from $JDV-J04-XdsPracticeSettingCode-CISIS (preferred)
 * context.practiceSetting obeys constr-bind-ProducteurDoc-simplified
 * context.practiceSetting ^short = "Cadre d’exercice de l’acte qui a engendré la création du document."
-* context.practiceSetting ^binding.description = "XDS practiceSettingCode CI-SIS"
 
 * context.sourcePatientInfo only Reference(FrPatient)
 * context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier."
