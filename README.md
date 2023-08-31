@@ -15,6 +15,7 @@ Les profils FHIR définis dans ce guide se basent sur les ressources : Bundle, D
 
 # Notes
 Un commentaire ? Une remarque ? Utilisez les GitHub [issues](https://docs.github.com/fr/issues) pour indiquer vos propositions d'amélioration et de correction.
+La version en intégration continue (soumis à des changements) est disponible ici : https://ansforge.github.io/IG-fhir-partage-de-documents-de-sante/ig/main/
 
 ## Acronymes
 
