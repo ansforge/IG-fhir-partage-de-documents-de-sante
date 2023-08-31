@@ -8,7 +8,7 @@ Les ressources référencées à partir de ce profil (ex : Patient, via l’attr
 
 * Logiques, via le champ identifier
 * Littérales,
-  * Avec une URL absolue ou relative si la ressource référencée est déjà existante au niveau du système cible 
+  * Avec une URL absolue ou relative si la ressource référencée est déjà existante au niveau du système cible.
   * Avec une référence vers un fragment interne (via l’attribut contained). L’élément DocumentReference.contained [0..*] peut contenir l’ensemble des ressources référencées.
 
 ### Flux 10 : résultat de l’ajout simplifié d’un document
