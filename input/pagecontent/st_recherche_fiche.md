@@ -50,11 +50,8 @@ Le flux 05-b contient les critères suivants :
 
 | Critère de recherche FHIR | Type | Description |
 | ----- | ----- | ----- |
-| [given-ex](SearchParameter-PDSm-PractitionerRole-given-ex.html)* | token | Recherche sur le prénom de l'auteur |
-| [family-ex](SearchParameter-PDSm-PractitionerRole-family-ex.html)* | token | Recherche sur le nom de l'auteur |
+| name | token | Recherche sur le nom ou le prénom de l'auteur |
 {: .grid }
-
-\* Paramètre de recherche créé pour le volet PDSm
 
 Ci-dessous un exemple de requête :
 
