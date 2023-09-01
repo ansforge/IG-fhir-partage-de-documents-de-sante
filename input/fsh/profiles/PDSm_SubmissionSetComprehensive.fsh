@@ -2,10 +2,11 @@ Profile: PDSm_SubmissionSetComprehensive
 Parent: IHE.MHD.Comprehensive.SubmissionSet
 Id: pdsm-submissionset-comprehensive
 Title: "PDSm SubmissionSet Comprehensive"
-Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « ComprehensiveSubmissionSet  » créé pour le volet ANS \"Partage de documents de santé en mobilité\" ; ce profil concerne le lot de soumission."
+Description: "Profil spécifique dérivé du profil IHE MHD « ComprehensiveSubmissionSet » créé pour le volet ANS \"Partage de documents de santé en mobilité\" ; ce profil concerne le lot de soumission."
 
 * contained MS
-* contained 1..
+* contained 1.. 
+* contained ^short = "Ressource contenue. Dans le cadre de ce profil, il est obligatoire qu'il y ait au moins une ressource contenue : source ou source.extension[authorOrg]"
 
 * extension 2..
 * extension ^slicing.discriminator.type = #value
@@ -26,8 +27,8 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 // Extension intendedRecipient defined in MHD : https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-intendedRecipient
 * extension[intendedRecipient] MS
 * extension[intendedRecipient].value[x] ^type.aggregation = #contained
-* extension[intendedRecipient] ^short = "Représente le destinataire du lot de soumission"
-* extension[intendedRecipient] ^definition = "Les ressources référencées sont : 1/ PractitionerRole : Dans le cas d’un destinaire professionnel, c’est le profil AsPractitionerRole représentant la situation d’exercice qui doit être référencé. Lui-même fera le lien avec le profil AsPractitionerRole représentant l’exercice professionnel et avec FrPractitioner. 2/ Organization contrainte au profil FrOrganization"
+* extension[intendedRecipient] ^short = "Représente le destinataire du lot de soumission. Il peut s'agir d'un AsPractitioner associé à un AsPractitionerRole ou bien d'une AsOrganization."
+
 * subject only Reference(FrPatient)
 
 * extension[isArchived] ^short = "Extension définie par ce volet pour distinguer les lots de soumission archivés des actives."
@@ -56,25 +57,15 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 « Comprehens
 * date MS
 * date ^short = "Représente la date et heure de soumission."
 
-* source 1..
-* source only Reference($practitionerRole-organizationalRole-rass or Device or FrPatient) 
-* source obeys constr-bind-source
+* source 1.. // Source est contained dans le profil MHD
+* source only Reference(AsPractitionerRoleProfile or Device or FrPatient) 
+* source ^short = "Représente l'auteur du lot de soumission. Si l'auteur est une organisation, utiliser l'extension authorOrg. Si l’auteur est une personne physique ou un dispositif, utiliser l’attribut source.reference ." 
 
+// Extension from MHD https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-authorOrg
 
-
-* source ^short = "Représente les personnes physiques ou morales et/ou les dispositifs auteurs d’un lot de soumission."
-
-* source.extension ^slicing.discriminator.type = #value
-* source.extension ^slicing.discriminator.path = "url"
-* source.extension ^slicing.rules = #open
-
-* source.extension[authorOrg] ^short = "Organisation auteur du document. Un lot de soumission est obligatoirement associé à un auteur. Si l’attribut “source” n’est pas renseigné, autrement dit si l’auteur est une personne morale, la cardinalité est contrainte à [1..1]."
-* source.extension[authorOrg].value[x] only Reference($organization-rass)
+* source.extension[authorOrg] ^short = "Auteur organisationnel du document"
+* source.extension[authorOrg].value[x] only Reference(AsOrganizationProfile)
 * source.extension[authorOrg].value[x] ^type.aggregation = #contained
-
-* source.extension[authorOrg] obeys constr-bind-authororg
-
-
 
 
 * note ^short = "Représente les commentaires associés au lot de soumission."
@@ -89,7 +80,7 @@ Description: "Représente le destinataire du lot de soumission"
 * ^context.type = #element
 * ^context.expression = "List"
 * . ^short = "Représente le destinataire du lot de soumission"
-* value[x] only Reference($practitionerRole-organizationalRole-rass or $organization-rass)
+* value[x] only Reference(AsPractitionerRoleProfile or AsOrganizationProfile)
 
 
 Invariant: constr-bind-designationtype
@@ -101,17 +92,6 @@ En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J03-Xd
 Expression:       "f:extension[designationType]"
 Severity:    #error
 
-Invariant: constr-bind-source
-Description: "Un lot de soumission est obligatoirement associé à un auteur. Si l’attribut \"ihe-authorOrg\" n’est pas renseigné, autrement dit si l’auteur est une personne physique ou un dispositif."
-Expression:       "f:source"
-Severity:    #error
-
-
-Invariant: constr-bind-authororg
-Description: "Un lot de soumission est obligatoirement associé à un auteur. Si l’attribut \"source\" n’est pas renseigné, autrement dit si l’auteur est une personne morale, la cardinalité est contrainte à [1..1].
-La ressource référencée doit être présente sous l’élément List.contained."
-Expression:       "f:source/f:extension[authorOrg]"
-Severity:    #error
 
 
 Mapping:  ConceptMetierToPDSm_SubmissionSetComprehensive

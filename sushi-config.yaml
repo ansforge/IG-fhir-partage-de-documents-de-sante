@@ -15,7 +15,7 @@ releaseLabel: Trial-Implementation
 
 dependencies:
     ihe.iti.mhd: 4.2.0
-    ans.annuaire.fhir.r4: 0.2.0
+    ans.fhir.fr.annuaire: 1.0.0-ballot-2
     hl7.fhir.fr.core: 1.1.0
 
 parameters:
@@ -56,8 +56,6 @@ pages:
             title: Equivalences
         downloads.md:
             title: Téléchargements et usages
-    about.md:
-        title: A propos de ce guide
 
 menu:
     Accueil: index.html
@@ -82,4 +80,4 @@ menu:
         Téléchargements et usage: downloads.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/
-    A propos de ce guide: about.html
+    Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/

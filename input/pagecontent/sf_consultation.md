@@ -1,4 +1,3 @@
-
 ### Définition 
 
 <object data="fonctionnel/fig_5.png" type="image/png"></object>
@@ -36,7 +35,6 @@ Table 12 Tableau des actions
 | Flux 7 - DemandeConsultationDocument | Consultation de documents | Consommateur de documents | Gestionnaire de partage de documents | Oui |
 | Flux 8 - ResultatDemandeConsultationDocument | Consultation de documents | Gestionnaire de partage de documents | Consommateur de documents | Oui |
 
-
 ### Flux de recherche : Flux 7 – DemandeConsultationDocument
 La demande de consultation de document se fait via l’envoi de l’identifiant unique du document, récupéré dans le résultat de recherche de documents, à la plateforme de partage de documents de santé
 
@@ -45,9 +43,9 @@ La demande de consultation de document se fait via l’envoi de l’identifiant 
 | Fiche/idUnique | Identifiant unique global affecté au document par son créateur. Il est utilisable comme référence externe dans d’autres documents.|
 
 Table 28 Flux de recherche
- 
+
 ### Flux 8 - ResultatDemandeConsultationDocument
- 
+
 <object data="fonctionnel/fig_15.png" type="image/png"></object>
 <br/>
 Figure 15 Flux 8 - ResultatDemandeConsultationDocument

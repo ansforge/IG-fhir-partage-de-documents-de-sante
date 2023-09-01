@@ -108,8 +108,8 @@ Ce tableau reprend les acteurs identifiés dans les SFE-PDS ainsi que les flux q
 | auteur : Identifiant | source : reference <br/> Paramètre de recherche créé pour le volet PDSm <br/> authorOrg : reference |
 | code : code | code : token |
 | idPatient : Identifiant | patient.identifier : token |
-| prenomAuteurPersonnePhysique : Texte | source:Patient.given : string <br/> source:PractitionerRole.partOf.given-ex : string |
-| nomAuteurPersonnePhysique : Texte | source:Patient.family : string  <br/> source:PractitionerRole.partOf.family-ex : string |
+| prenomAuteurPersonnePhysique : Texte | source:Patient.given : string <br/> source:PractitionerRole.name : string |
+| nomAuteurPersonnePhysique : Texte | source:Patient.family : string  <br/> source:PractitionerRole.name : string |
 {: .grid }
 
 
@@ -127,6 +127,6 @@ Ce tableau reprend les acteurs identifiés dans les SFE-PDS ainsi que les flux q
 | auteur : Identifiant | source : reference <br/> Paramètre de recherche créé pour le volet PDSm <br/> authorOrg : reference |
 | code : code | code : token |
 | idPatient : Identifiant | patient.identifier : token |
-| prenomAuteurPersonnePhysique : Texte | source:Patient.given : string <br/> source:PractitionerRole.partOf.given-ex : string |
-| nomAuteurPersonnePhysique : Texte | source:Patient.family : string  <br/> source:PractitionerRole.partOf.family-ex : string |
+| prenomAuteurPersonnePhysique : Texte | source:Patient.given : string <br/> source:PractitionerRole.name : string |
+| nomAuteurPersonnePhysique : Texte | source:Patient.family : string  <br/> source:PractitionerRole.name : string |
 {: .grid }

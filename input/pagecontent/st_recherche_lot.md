@@ -28,8 +28,8 @@ Le flux 05-a contient les critères suivants :
 | [authorOrg](SearchParameter-PDSm-List-authorOrg.html)* | reference | Référence vers l'auteur source |
 | [patient](SearchParameter-PDSm-List-PatientAsSubject.html)* | reference | Recherche dans subject:Patient.identifier |
 | code | token | Recherche sur le cas d'utilisation de la ressource List |
-| source:Patient.given <br/> source:PractitionerRole.partOf.[given-ex](SearchParameter-PDSm-PractitionerRole-given-ex.html)  | string | Recherche sur le prénom de la personne (praticien ou patient) à l'origine du document |
-| source:Patient.family <br/> source:PractitionerRole.partOf.[family-ex](SearchParameter-PDSm-PractitionerRole-family-ex.html) | string   | Recherche sur le nom de famille de la personne (praticien ou patient) à l'origine du document |
+| source:Patient.given <br/> source:PractitionerRole.name  | string | Recherche sur le prénom de la personne (praticien ou patient) à l'origine du document |
+| source:Patient.family <br/> source:PractitionerRole.name | string   | Recherche sur le nom de famille de la personne (praticien ou patient) à l'origine du document |
 {: .grid }
 
 #### Paramètre de recherche de la ressource Patient
@@ -45,8 +45,7 @@ Le flux 05-a contient les critères suivants :
 
 | Critère de recherche FHIR | Type | Description |
 | ----- | ----- | ----- |
-| [given-ex](SearchParameter-PDSm-PractitionerRole-given-ex.html)* | token | Recherche sur le prénom de l'auteur |
-| [family-ex](SearchParameter-PDSm-PractitionerRole-family-ex.html)* | token | Recherche sur le nom de l'auteur |
+| name | token | Recherche sur le nom ou prénom de l'auteur. SearchParameter défini dans le guide d'implémentation de l'annuaire |
 {: .grid }
 
 \* Paramètre de recherche créé pour le volet PDSm
@@ -55,7 +54,7 @@ Ci-dessous des exemples de requête :
 
 * Rechercher les ressources de type List, correspondant à des lots de soumission, ayant été créées depuis le 01/01/2021 dont l’auteur est une professionnelle ayant pour nom de famille Dupont et prénom Emma. 
 ```
-GET http://targetsystem.com/API/List?code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset&date=ge2021-01-01&source:PractitionerRole.partOf.family-ex =Dupont& source:PractitionerRole.partOf.given-ex =Emma HTTP/1.1
+GET http://targetsystem.com/API/List?code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset&date=ge2021-01-01&source:PractitionerRole.partOf.family-ex =Dupont& source:PractitionerRole.name =Emma HTTP/1.1
 ```
 
 * Rechercher les ressource de type List, correspondant à des lots de soumission dont le patient a l’identifiant 156. 
