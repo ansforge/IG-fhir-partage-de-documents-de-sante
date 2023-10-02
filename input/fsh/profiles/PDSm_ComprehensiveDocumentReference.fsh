@@ -120,6 +120,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 
 * context.related contains xdsdocumententry 0..1
 * context.related[xdsdocumententry] ^short = "Données d’un « identifiant de référence » (referenceIdList)"
+* context.related[xdsdocumententry].identifier MS
 * context.related[xdsdocumententry].identifier.system 1..1
 * context.related[xdsdocumententry].identifier.value 1..1
 * context.related[xdsdocumententry].identifier.type.coding.system = "urn:ietf:rfc:3986"
