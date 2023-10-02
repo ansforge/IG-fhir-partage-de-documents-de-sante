@@ -23,6 +23,14 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * extension[isArchived] ^short = "Extension définie pour distinguer les fiches archivées des actives."
 
 * identifier MS
+* identifier contains xdsdocumententry 0..1
+* identifier[xdsdocumententry] ^short = "Données d’un « identifiant de référence » (referenceIdList)"
+* identifier[xdsdocumententry].system 1..1
+* identifier[xdsdocumententry].value 1..1
+* identifier[xdsdocumententry].type.coding.system = "urn:ietf:rfc:3986"
+
+
+
 
 * status MS
 
@@ -110,6 +118,9 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 
 * context.sourcePatientInfo only Reference(FrPatient) 
 * context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier."
+
+* context.related MS
+* context.related ^short = "Liste des « ReferenceIdList » d’un document."
 
 
 Invariant:   constr-cdr-rempl
