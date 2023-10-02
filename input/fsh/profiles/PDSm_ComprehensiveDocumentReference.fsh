@@ -24,9 +24,6 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 
 * identifier MS
 
-
-
-
 * status MS
 
 * type MS
