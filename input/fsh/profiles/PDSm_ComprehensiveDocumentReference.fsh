@@ -114,7 +114,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * context.related MS
 
 * context.related ^slicing.discriminator.type = #pattern
-* context.related ^slicing.discriminator.path = "type.coding.system"
+* context.related ^slicing.discriminator.path = "type"
 * context.related ^slicing.rules = #open
 * context.related ^slicing.description = "Slice based on the type.coding.system pattern"
 
@@ -126,7 +126,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 
 * context.related[referenceIdList].identifier.system MS
 * context.related[referenceIdList].identifier.system 0..1
-* context.related[referenceIdList].identifier.system ^short = "[CXi.4] Assigning Authority : n'est pas présent dans le cas de studyInstanceUID."
+* context.related[referenceIdList].identifier.system ^short = "[CXi.4.2] Assigning Authority (ce champs n'est pas présent systématiquement, il ne l'est dans le cas de studyInstanceUID notamment)."
 
 * context.related[referenceIdList].identifier.value MS
 * context.related[referenceIdList].identifier.value 1..1
@@ -134,7 +134,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 
 * context.related[referenceIdList].identifier.type.coding.system = "ISO"
 * context.related[referenceIdList].identifier.type.coding.code MS
-* context.related[referenceIdList].identifier.type.coding.code ^short = "[CXi.5] Identifier Type Code"
+* context.related[referenceIdList].identifier.type.coding.code ^short = "[CXi.5] Identifier Type Code : urn:ihe:iti:xds:2016:studyInstanceUID | urn:ihe:iti:xds:2013:order | urn:ihe:iti:xds:2013:accession"
 
 
 Invariant:   constr-cdr-rempl
