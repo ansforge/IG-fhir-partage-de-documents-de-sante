@@ -132,7 +132,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * context.related[referenceIdList].identifier.value 1..1
 * context.related[referenceIdList].identifier.value ^short = "[CXi.1] Accession number"
 
-* context.related[referenceIdList].identifier.type.coding.system = "ISO"
+* context.related[referenceIdList].identifier.type.coding.system = "urn:ietf:rfc:3986"
 * context.related[referenceIdList].identifier.type.coding.code MS
 * context.related[referenceIdList].identifier.type.coding.code ^short = "[CXi.5] Identifier Type Code : urn:ihe:iti:xds:2016:studyInstanceUID | urn:ihe:iti:xds:2013:order | urn:ihe:iti:xds:2013:accession"
 
