@@ -111,6 +111,31 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * context.sourcePatientInfo only Reference(FrPatient) 
 * context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier."
 
+* context.related MS
+
+* context.related ^slicing.discriminator.type = #pattern
+* context.related ^slicing.discriminator.path = "type"
+* context.related ^slicing.rules = #open
+* context.related ^slicing.description = "Slice based on the type.coding.system pattern"
+
+* context.related contains referenceIdList 0..*
+* context.related[referenceIdList] ^short = "Données d’un « identifiant de référence » (referenceIdList)"
+* context.related[referenceIdList].identifier MS
+
+// Le name du slot dans la metadata ne doit pas être indiquée
+
+* context.related[referenceIdList].identifier.system MS
+* context.related[referenceIdList].identifier.system 0..1
+* context.related[referenceIdList].identifier.system ^short = "[CXi.4.2] Assigning Authority (ce champs n'est pas présent systématiquement, il ne l'est dans le cas de studyInstanceUID notamment)."
+
+* context.related[referenceIdList].identifier.value MS
+* context.related[referenceIdList].identifier.value 1..1
+* context.related[referenceIdList].identifier.value ^short = "[CXi.1] Accession number"
+
+* context.related[referenceIdList].identifier.type.coding.system = "urn:ietf:rfc:3986"
+* context.related[referenceIdList].identifier.type.coding.code MS
+* context.related[referenceIdList].identifier.type.coding.code ^short = "[CXi.5] Identifier Type Code : urn:ihe:iti:xds:2016:studyInstanceUID | urn:ihe:iti:xds:2013:order | urn:ihe:iti:xds:2013:accession"
+
 
 Invariant:   constr-cdr-rempl
 Description: "Elément requis lorsque le flux envoyé correspond au remplacement d'un document"
