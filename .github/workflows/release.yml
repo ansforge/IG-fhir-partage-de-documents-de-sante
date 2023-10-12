@@ -74,7 +74,12 @@ jobs:
       - name: 📥 Download IG Publisher
         run: wget -q https://github.com/HL7/fhir-ig-publisher/releases/download/1.3.7/publisher.jar
 
-  
+      - name: Pull submodules
+        run: |
+          cd ./IG-website-release
+          git pull --recurse-submodules
+          cd ..
+
       - name: Build and test with Rake        
         run: |
           sudo apt-get install ruby-full
