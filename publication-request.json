@@ -2,7 +2,7 @@
     "package-id" : "ans.fhir.fr.pdsm",
     "version" : "3.1.0-ballot",
     "path" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/3.1.0-ballot",
-    "mode" : "working",
+    "mode" : "technical-correction",
     "status" : "ballot",
     "sequence" : "STU1",
     "desc" : "Guide d`Implémentation FHIR de partage de documents de santé en mobilité.",
