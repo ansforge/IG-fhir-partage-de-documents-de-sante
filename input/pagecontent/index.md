@@ -4,8 +4,8 @@ This document presents the technical specifications of the “Partage de documen
 This is a part of the service layer specifying the terms of document sharing without constraining them. The specifications related to health documents constitute the components of the business layer of CI-SIS.
 </p>
 
-<div class="figure" style="width:65%;">
-    <img src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS">
+<div class="figure">
+    <img src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS" style="width:100%;">
 </div>
 
 ### Introduction
