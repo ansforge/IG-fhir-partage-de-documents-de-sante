@@ -93,7 +93,6 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 // # CONTEXT #
 // ###########
 * context MS
-* context.event ..1
 * context.event obeys constr-bind-context-event
 * context.event ^short = "Représente les actes et les pathologies en rapport avec le document."
 
@@ -195,10 +194,7 @@ Expression:       "f:content/f:format"
 Severity:    #error
 
 Invariant: constr-bind-context-event
-Description: "Nomenclatures utilisées :
-- CCAM pour les actes médicaux (OID=\"1.2.250.1.213.2.5\");
-- CIM-10 pour les diagnostics de pathologie (OID=\"2.16.840.1.113883.6.3\").
-- TRE_A00-ProducteurDocNonPS pour les documents d'expression personnelle du patient."
+Description: "Nomenclatures utilisées : 1) CCAM pour les actes médicaux (OID=\"1.2.250.1.213.2.5\"); 2) CIM-10 pour les diagnostics de pathologie (OID=\"2.16.840.1.113883.6.3\"), 3) TRE_A00-ProducteurDocNonPS pour les documents d'expression personnelle du patient, 4) autre"
 Expression:       "f:context/f:event"
 Severity:    #error
 
