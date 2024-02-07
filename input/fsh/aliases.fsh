@@ -1,20 +1,3 @@
-Alias: $FrPractitioner = http://interopsante.org/fhir/StructureDefinition/FrPractitioner
-Alias: $FrOrganization = http://interopsante.org/fhir/StructureDefinition/FrOrganization
-Alias: $CDS_Organization-OrgaInt = http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/CDS_Organization-OrgaInt
-
-Alias: $fr-encounter = http://www.interopsante.org/fhir/structuredefinition/resource/fr-encounter
-Alias: $fr-practitioner = http://interopsante.org/fhir/structuredefinition/resource/fr-practitioner
-Alias: $fr-practitioner-role-exercice = http://www.interopsante.org/fhir/structuredefinition/fr-practitioner-role-exercice
-Alias: $fr-organization = http://interopsante.org/fhir/structuredefinition/resource/fr-organization
-Alias: $FrPractitionerRoleExercice = http://interopsante.org/fhir/StructureDefinition/FrPractitionerRoleExercice
-Alias: $FrEncounter = http://interopsante.org/fhir/StructureDefinition/FrEncounter
-Alias: $FrLocation = http://interopsante.org/fhir/StructureDefinition/FrLocation
-Alias: $fr-practitioner-role = http://www.interopsante.org/fhir/structuredefinition/fr-practitioner-role
-Alias: $FrSlot = http://interopsante.org/fhir/StructureDefinition/FrSlot
-Alias: $FrSchedule = http://interopsante.org/fhir/StructureDefinition/FrSchedule
-Alias: $FrHealthcareService = http://interopsante.org/fhir/StructureDefinition/FrHealthcareService
-Alias: $FrAppointment = http://interopsante.org/fhir/StructureDefinition/FrAppointment
-
 Alias: $TRE-R260-HL7RoleClass = https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass
 Alias: $TRE-R216-HL7RoleCode = https://mos.esante.gouv.fr/NOS/TRE_R216-HL7RoleCode/FHIR/TRE-R216-HL7RoleCode
 Alias: $TRE_R234-TypeNote = https://mos.esante.gouv.fr/NOS/TRE_R234-TypeNote
