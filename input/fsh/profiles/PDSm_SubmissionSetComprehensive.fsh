@@ -22,12 +22,13 @@ Description: "Profil spécifique dérivé du profil IHE MHD « ComprehensiveSubm
 
 
 * extension contains
-    PDSm_IsArchived named isArchived 0..1
+    PDSm_IsArchived named isArchived 0..1 and
+    pdsm-ext-intended-recipient named PDSmintendedRecipient 0..*
 
-// Extension intendedRecipient defined in MHD : https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-intendedRecipient
-* extension[intendedRecipient] MS
-* extension[intendedRecipient].value[x] ^type.aggregation = #contained
-* extension[intendedRecipient] ^short = "Représente le destinataire du lot de soumission. Il peut s'agir d'un AsPractitioner associé à un AsPractitionerRole ou bien d'une AsOrganization."
+// Extension intendedRecipient est déjà définie dans MHD : https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-intendedRecipient. Sauf qu'elle ne permet pas de référencer un PractitionerRole.
+* extension[PDSmintendedRecipient] MS
+* extension[PDSmintendedRecipient].value[x] ^type.aggregation = #contained
+* extension[PDSmintendedRecipient] ^short = "Représente le destinataire du lot de soumission. Il peut s'agir d'un AsPractitioner associé à un AsPractitionerRole ou bien d'une AsOrganization."
 
 * subject only Reference(FrPatient)
 
@@ -72,15 +73,6 @@ Description: "Profil spécifique dérivé du profil IHE MHD « ComprehensiveSubm
 
 * entry.item only Reference(PDSm_ComprehensiveDocumentReference or PDSm_FolderComprehensive)
 * entry.item ^short = "Représente la référence à la fiche d’un document faisant partie du classeur."
-
-
-Extension: PDSm_intendedRecipient
-Id: PDSmintendedrecipient
-Description: "Représente le destinataire du lot de soumission"
-* ^context.type = #element
-* ^context.expression = "List"
-* . ^short = "Représente le destinataire du lot de soumission"
-* value[x] only Reference(AsPractitionerRoleProfile or AsOrganizationProfile)
 
 
 Invariant: constr-bind-designationtype
