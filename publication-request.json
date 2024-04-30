@@ -4,7 +4,7 @@
     "path" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/3.1.0-ballot",
     "mode" : "technical-correction",
     "status" : "ballot",
-    "sequence" : "STU1",
+    "sequence" : "trial-use",
     "desc" : "Guide d`Implémentation FHIR de partage de documents de santé en mobilité.",
     "descmd" : "Ballot de l`Implementation Guide FHIR PDSm 3.1.0\n- Héritage de l'IG annuaire santé ([#24](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/issues/24))\n- Mise à jour du narratif et éclaircissement ([#51](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/issues/51), [#50](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/issues/35), [#32](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/issues/32), [#31](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/issues/31))\n- Page index : ajout des dépendances, du logo ci-sis\n- Passage au status active\n- suppression de la contrainte \"contained\" obligatoire pour les champs subject (pour éviter les doublons) et suppression de l'obligation du type de ressources contained ([#28](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/issues/28))\n- Réparation de liens morts\n- Ajout des spécifications fonctionnelles dans l'IG ([#35](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/issues/35))\n- Ajout du mapping du XDS ReferenceIdList ([#55](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/issues/55))"
   }

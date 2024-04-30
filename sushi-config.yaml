@@ -11,7 +11,7 @@ status: active
 version: 3.1.0-ballot
 fhirVersion: 4.0.1
 copyrightYear: 2020+
-releaseLabel: Trial-Implementation
+releaseLabel: trial-use
 
 dependencies:
     ihe.iti.mhd: 4.2.0
