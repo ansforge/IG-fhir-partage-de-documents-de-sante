@@ -15,8 +15,8 @@ releaseLabel: Trial-Implementation
 
 dependencies:
     ihe.iti.mhd: 4.2.0
-    ans.fhir.fr.annuaire: 1.0.0-ballot-3
-    hl7.fhir.fr.core: 1.1.0
+    ans.fhir.fr.annuaire: 1.0.1
+    hl7.fhir.fr.core: 2.0.1
     ans.fr.nos: latest
 
 parameters:
