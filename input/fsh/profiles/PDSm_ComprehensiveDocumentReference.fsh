@@ -36,7 +36,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * category ^short = "Représente la classe du document (compte rendu, imagerie médicale, traitement, certificat,...)."
 * category obeys constr-bind-category
 
-* subject only Reference(FrPatient)
+* subject only Reference(FRCorePatientProfile)
 * subject MS
 * subject ^short = "Référence vers le patient concerné par le document. Cette même ressource est référencée depuis context.sourcePatientInfo."
 
@@ -46,7 +46,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * author MS // Author contained dans le profil MHD
 * author ^short = "Personnes physiques ou morales et/ou les dispositifs auteurs d'un document."
 * author 1..
-* author only Reference(AsPractitionerRoleProfile or Device or FrPatient)
+* author only Reference(AsPractitionerRoleProfile or Device or FRCorePatientProfile)
 
 * authenticator MS // Authenticator contained dans le profil MHD
 * authenticator 1..
@@ -107,7 +107,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * context.practiceSetting obeys constr-bind-ProducteurDoc
 * context.practiceSetting ^short = "Cadre d’exercice de l’acte qui a engendré la création du document."
 
-* context.sourcePatientInfo only Reference(FrPatient) 
+* context.sourcePatientInfo only Reference(FRCorePatientProfile) 
 * context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier."
 
 * context.related MS

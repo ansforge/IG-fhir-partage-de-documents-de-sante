@@ -26,7 +26,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD « Comprehensive Fol
 
 * code ^short = "Désigne le cas d’utilisation de la ressource List. Il s’agit ici du classeur."
 
-* subject only Reference(FrPatient)
+* subject only Reference(FRCorePatientProfile)
 * subject MS
 
 * date MS

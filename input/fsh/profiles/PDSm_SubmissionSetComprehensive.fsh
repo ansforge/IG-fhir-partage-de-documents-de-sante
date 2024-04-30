@@ -30,7 +30,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD « ComprehensiveSubm
 * extension[PDSmintendedRecipient].value[x] ^type.aggregation = #contained
 * extension[PDSmintendedRecipient] ^short = "Représente le destinataire du lot de soumission. Il peut s'agir d'un AsPractitioner associé à un AsPractitionerRole ou bien d'une AsOrganization."
 
-* subject only Reference(FrPatient)
+* subject only Reference(FRCorePatientProfile)
 
 * extension[isArchived] ^short = "Extension définie par ce volet pour distinguer les lots de soumission archivés des actives."
 
@@ -59,7 +59,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD « ComprehensiveSubm
 * date ^short = "Représente la date et heure de soumission."
 
 * source 1.. // Source est contained dans le profil MHD
-* source only Reference(AsPractitionerRoleProfile or Device or FrPatient) 
+* source only Reference(AsPractitionerRoleProfile or Device or FRCorePatientProfile) 
 * source ^short = "Représente l'auteur du lot de soumission. Si l'auteur est une organisation, utiliser l'extension authorOrg. Si l’auteur est une personne physique ou un dispositif, utiliser l’attribut source.reference ." 
 
 // Extension from MHD https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-authorOrg
