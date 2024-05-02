@@ -10,4 +10,4 @@ Usage: #definition
 * base[0] = #DocumentReference
 * base[+] = #List
 * type = #token
-* expression = "(extension('http://esante.gouv.fr/cisis/fhir/StructureDefinition/PDSm_isArchived').value as Boolean)"
+* expression = "(extension('https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-isArchived').value as Boolean)"

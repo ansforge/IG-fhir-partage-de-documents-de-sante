@@ -20,8 +20,8 @@ La documentation complète est accessible <a href="st_ajout.html">ici</a>
 </div>
 <br/>
 
-* Le <a href="st_flux3.html">flux 03</a> de demande de mise à jour des métadonnées de la fiche sera assuré par l’interaction « patch » de FHIR. Le gestionnaire de partage de documents doit supporter les requêtes HTTP PATCH et le « conditional patch » afin d’effectuer la demande via l’identifiant métier.
-* Le <a href="st_flux4.html">flux 04</a> résultat de la demande de mise à jour des métadonnées de la fiche.
+* Le flux 03 de demande de mise à jour des métadonnées de la fiche sera assuré par l’interaction « patch » de FHIR. Le gestionnaire de partage de documents doit supporter les requêtes HTTP PATCH et le « conditional patch » afin d’effectuer la demande via l’identifiant métier.
+* Le flux 04 résultat de la demande de mise à jour des métadonnées de la fiche.
 
 Les flux 03 et 04 se situent hors du périmètre du profil MHD.
 La documentation complète est accessible <a href="st_maj.html">ici</a>
