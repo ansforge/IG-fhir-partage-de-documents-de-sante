@@ -94,7 +94,7 @@ Ce tableau reprend les acteurs identifiés dans les SFE-PDS ainsi que les flux q
 ### Mise en équivalence des paramètres de recherche avec les critères de recherche métier
 
 
-#### Recherche de lot de soumission (profil [PDSmSubmissionSetComprehensive](StructureDefinition-PDSmSubmissionSetComprehensive.html))
+#### Recherche de lot de soumission (profil [PDSmSubmissionSetComprehensive](StructureDefinition-pdsm-submissionset-comprehensive.html))
 
 | Critère de recherche  | Paramètre de recherche |
 | ----- | ----- |
@@ -113,7 +113,7 @@ Ce tableau reprend les acteurs identifiés dans les SFE-PDS ainsi que les flux q
 {: .grid }
 
 
-#### Recherche de fiche (profil [PDSmComprehensiveDocumentReference](StructureDefinition-PDSmComprehensiveDocumentReference.html))
+#### Recherche de fiche (profil [PDSmComprehensiveDocumentReference](StructureDefinition-pdsm-comprehensive-document-reference.html))
 
 | Critère de recherche  | Paramètre de recherche |
 | ----- | ----- |

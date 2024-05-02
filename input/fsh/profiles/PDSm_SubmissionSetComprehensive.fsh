@@ -81,7 +81,7 @@ Description: "Les valeurs possibles doivent provenir d’une des terminologies d
 - TRE_R209-TypeActivite, OID : 1.2.250.1.213.2.2 
 - TRE_R02-SecteurActivite, OID : 1.2.250.1.71.4.2.4 Les valeurs possibles peuvent être restreintes en fonction du jeu de valeurs correspondant mis à disposition par le projet (exemple : JDV_J59-ContentTypeCode-DMP). 
 En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J03-XdsContentTypeCode-CISIS peut être utilisé."
-Expression:       "f:extension[designationType]"
+// Expression:       "f:extension[designationType]"
 Severity:    #error
 
 

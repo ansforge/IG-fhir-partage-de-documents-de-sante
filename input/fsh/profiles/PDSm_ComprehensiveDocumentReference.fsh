@@ -138,48 +138,48 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 
 Invariant:   constr-cdr-rempl
 Description: "Elément requis lorsque le flux envoyé correspond au remplacement d'un document"
-Expression:       "f:relatesTo"
+// Expression: "f:relatesTo"
 Severity:    #error
 
 
 Invariant:   constr-bind-type
-Description: "Les valeurs possibles pour cet élément doivent provenir d’une des terminologies de référence suivantes :
+Description: """Les valeurs possibles pour cet élément doivent provenir d’une des terminologies de référence suivantes :
 \r\n TRE_A05-TypeDocComplementaireCISIS, OID : 1.2.250.1.213.1.1.4.12
 \r\n TRE_A04-TypeDocument-LOINC, OID : 2.16.840.1.113883.6.1
 \r\n TRE_A12-NomenclatureASTM, OID : ASTM
-\r\nLes valeurs possibles peuvent être restreintes en fonction du jeu de valeurs correspondant mis à disposition par le projet (exemple : JDV_J66-TypeCode-DMP).\r\nEn l’absence de spécifications complémentaires, le jeu de valeurs JDV_J07-XdsTypeCode-CISIS peut être utilisé."
-Expression:       "f:type"
+\r\nLes valeurs possibles peuvent être restreintes en fonction du jeu de valeurs correspondant mis à disposition par le projet (exemple : JDV_J66-TypeCode-DMP).\r\nEn l’absence de spécifications complémentaires, le jeu de valeurs JDV_J07-XdsTypeCode-CISIS peut être utilisé."""
+// Expression:       "f:type"
 Severity:    #error
 
 Invariant:   constr-bind-category
-Description: "Les valeurs possibles pour cet élément doivent provenir d’une des terminologies de référence suivantes :
+Description: """Les valeurs possibles pour cet élément doivent provenir d’une des terminologies de référence suivantes :
 -	TRE_A03-ClasseDocument-CISIS, OID : 1.2.250.1.213.1.1.4.1
 -	TRE_A10-NomenclatureURN, OID : URN
 Les valeurs possibles peuvent être restreintes en fonction du jeu de valeurs correspondant mis à disposition par le projet (exemple : JDV_J57-ClassCode-DMP).
-En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J06-XdsClassCode-CISIS peut être utilisé."
-Expression:       "f:category"
+En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J06-XdsClassCode-CISIS peut être utilisé."""
+// Expression:       "f:category"
 Severity:    #error
 
 Invariant:  constr-bind-relatesTo
 Description: "Cardinalité contrainte à [1..1] lorsque le flux envoyé correspond au remplacement d’un document."
-Expression:       "f:relatesTo"
+// Expression:       "f:relatesTo"
 Severity:    #error
 
 Invariant:  constr-bind-relatesToTarget
 Description: "Référence contrainte au profil PDSm_ComprehensiveDocumentReference"
-Expression:       "f:relatesTo/f:target"
+// Expression:       "f:relatesTo/f:target"
 Severity:    #error
 
 
 Invariant: constr-bind-securityLabel
 Description: "Les codes pour cet élément doivent provenir du ValueSet spécifié par le standard. Lorsqu’aucun code ne correspond au concept recherché, un code provenant de la terminologie de référence TRE_A07-StatusVisibiliteDocument, OID : 1.2.250.1.213.1.1.4.13 peut être utilisé."
-Expression:       "f:securityLabel"
+// Expression:       "f:securityLabel"
 Severity:    #error
 
 Invariant: constr-bind-attachmenturl
 Description: "Dans le cas de l’ajout de document, l’url fait référence à la ressource Binary (« Binary/[id] »).
 Dans le cas de la recherche, il s’agit de l’URL permettant d’accéder au document"
-Expression:       "f:content/f:attachment/f:url"
+// Expression:       "f:content/f:attachment/f:url"
 Severity:    #error
 
 Invariant: constr-bind-format
@@ -190,12 +190,12 @@ Description: "Les valeurs possibles pour cet élément doivent provenir d’une 
 - TRE_A10-NomenclatureURN, OID : URN
 Les valeurs possibles peuvent être restreintes en fonction du jeu de valeurs correspondant mis à disposition par le projet (exemple : JDV_J60-FormatCode-DMP).
 En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J10-XdsFormatCode-CISIS peut être utilisé."
-Expression:       "f:content/f:format"
+// Expression:       "f:content/f:format"
 Severity:    #error
 
 Invariant: constr-bind-context-event
 Description: "Nomenclatures utilisées : 1) CCAM pour les actes médicaux (OID=\"1.2.250.1.213.2.5\"); 2) CIM-10 pour les diagnostics de pathologie (OID=\"2.16.840.1.113883.6.3\"), 3) TRE_A00-ProducteurDocNonPS pour les documents d'expression personnelle du patient, 4) autre"
-Expression:       "f:context/f:event"
+// Expression:       "f:context/f:event"
 Severity:    #error
 
 Invariant: constr-bind-ProducteurDoc
@@ -204,7 +204,7 @@ Description: "Les valeurs possibles pour cet élément doivent provenir d’une 
 -	TRE_R02-SecteurActivite, OID : 1.2.250.1.71.4.2.4 (lorsque l’auteur du document est un professionnel ou un équipement sous sa responsabilité)
 Les valeurs possibles peuvent être restreintes en fonction du jeu de valeurs correspondant mis à disposition par le projet (exemple : JDV_J61-HealthcareFacilityTypeCode-DMP).
 En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J02-XdsHealthcareFacilityTypeCode-CISIS peut être utilisé."
-Expression:       "f:context/f:facilityType or f:context/f:practiceSetting"
+// Expression:       "f:context/f:facilityType or f:context/f:practiceSetting"
 Severity:    #error
 
 
