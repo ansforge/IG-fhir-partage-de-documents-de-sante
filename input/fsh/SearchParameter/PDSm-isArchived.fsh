@@ -10,4 +10,4 @@ Usage: #definition
 * base[0] = #DocumentReference
 * base[+] = #List
 * type = #token
-* expression = "(extension('https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-archived').value as Boolean)"
+* expression = "extension.where(url='https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-archived').value"

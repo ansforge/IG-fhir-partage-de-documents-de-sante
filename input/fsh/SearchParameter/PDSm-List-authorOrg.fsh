@@ -9,5 +9,5 @@ Description: "Paramètre de recherche créé pour le volet PDSm de manière à p
 * code = #authorOrg
 * base = #List
 * type = #reference
-* expression = "List.extension.where(url='https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-authorOrg').value)"
+* expression = "List.extension.where(url='https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-authorOrg').value"
 
