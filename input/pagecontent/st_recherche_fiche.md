@@ -27,8 +27,8 @@ Le flux 05-b contient les critères suivants :
 | relatesTo | reference | Recherche de l'identifiant de la fiche associée |
 | event | token | Recherche sur l'acte de la pathologie |
 | period | date | Recherche sur le debut et la fin de l'acte |
-| [patient](SearchParameter-PDSm-DocumentReference-PatientAsSubject.html)* | token | Recherche de l'identifiant du patient |
-| [author](SearchParameter-PDSm-DocumentReference-PractitionerRoleAsAuthor.html)* | token | Recherche du praticien par identifiant, nom ou prénom |
+| patient | token | Recherche de l'identifiant du patient |
+| author | token | Recherche du praticien par identifiant, nom ou prénom |
 {: .grid }
 
 #### Paramètre de recherche sur les ressources Patient / Practitioner / Device
