@@ -27,21 +27,22 @@ Ces spécifications techniques se basent sur le standard HL7 FHIR Release 4, et 
 Une [mise en équivalence](equivalences.html) entre les acteurs et les flux identifiés dans les SFE-PDS et ceux présentés dans le profil MHD est disponible.
 Ce volet met en place l’option du profil MHD « Comprehensive Metadata » qui permet aux acteurs d’échanger des métadonnées complètes répondant aux exigences définies dans le profil XDS.
 
-#### Ressources FHIR utilisées
+#### Ressources FHIR et profils
 
 Les ressources utilisées et les niveaux de maturité sont les suivants : DocumentReference (NM 3), List (NM 1), Patient (NM N), Practitioner (NM 3), PractitionerRole (NM 2), Organization (NM 3), Device (NM 2), Binary (NM N), Bundle (NM N)
 
-#### Profils utilisés
+Certaines ressources FHIR ont été profilées pour le contexte français et sont utilisés dans le cadre des spécifications techniques du volet « Partage de documents de santé en mobilité ».
 
-Des ressources FHIR ont été profilées pour le contexte français et sont utilisés dans le cadre des spécifications techniques du volet « Partage de documents de santé en mobilité ».
+##### Alimentation utilisant Comprehensive Metadata
 
-Deux sources seront utilisées dans le cadre de ce volet :
+<div class="figure" style="width:100%;">
+    <p>{% include document-overview-alimentation.svg %}</p>
+</div>
 
-* Le profil FHIR « FrPatient » publié par HL7 France (Interop'Santé) est utilisé dans ce volet. Les présentes spécifications se basent sur les profils du package hl7.fhir.fr.core.
 
-* Dans le cadre de l’annuaire santé, l’ANS met à disposition un service national de publication des données des professionnels et des structures au format FHIR; les profils de l’annuaire santé, à savoir « AsPractitionerRoleProfile », « AsPractitionerProfile » et « AsOrganizationProfile » sont utilisés.
+#### Alimentation utilisant la publication simplifiée
 
-Ces spécifications s’appuient également sur les profils définis dans le profil IHE MHD relatifs à l’option « Comprehensive Metadata ».
+#### Recherche par lot ou par fiche
 
 Le tableau ci-après spécifie les profils utilisés pour les ressources et types de données mentionnés dans ce document. Les présentes spécifications définissent également des profils propres au présent volet (préfixe PDSm).
 Pour les ressources et types de données non mentionnés dans ce tableau, le profil à utiliser est celui défini par HL7 FHIR.
@@ -49,13 +50,12 @@ Pour les ressources et types de données non mentionnés dans ce tableau, le pro
 Cet Implementation Guide contient 7 profils :
 
 * 3 profils pour le flux d'alimentation :  
-  * 1) la fiche document [PDSm_ComprehensiveDocumentReference](StructureDefinition-pdsm-comprehensive-document-reference.html), 
+  * 1) la fiche document [PDSm_ComprehensiveDocumentReference](StructureDefinition-pdsm-comprehensive-document-reference.html),
   * 2) le classeur [PDSm_FolderComprehensive](StructureDefinition-pdsm-folder-comprehensive.html),
   * 3) le Lot de soumission [PDSm_SubmissionSetComprehensive](StructureDefinition-pdsm-submissionset-comprehensive.html)
+  * Dont un profil Bundle pour encapsuler l'envoi des documents [PDSm_ComprehensiveProvideDocumentBundle](StructureDefinition-pdsm-comprehensive-provide-document-bundle.html)
 * 1 profil pour le flux d'alimentation simplifié :
   * 1) la fiche document [PDSm_SimplifiedPublish](StructureDefinition-pdsm-simplified-publish.html), 
-* 1 profil Bundle pour encapsuler l'envoi des documents :
-  * [PDSm_ComprehensiveProvideDocumentBundle](StructureDefinition-pdsm-comprehensive-provide-document-bundle.html)
 * 2 profils Bundle pour encapsuler les résultats de recherche :
   * 1) par fiche [PDSm_FindDocumentReferencesComprehensiveResponse](StructureDefinition-pdsm-find-documentreferences-comprehensive-response.html),
   * 2) par lot de soumission [PDSm_FindListsResponse](StructureDefinition-pdsm-find-lists-response.html)
@@ -98,5 +98,13 @@ Un flux est un échange entre deux systèmes. Des flux ont été identifiés lor
 | <a href="st_ajout_simplifie.html">Les flux 09 et 10</a> | AjoutSimplifieDocument et ResultatAjoutSimplifieDocument | Pour publier un document de manière simplifiée ainsi que le résultat de la demande |
 
 ### Dépendances
+
+Deux sources seront utilisées dans le cadre de ce volet :
+
+* Le profil FHIR « FrPatient » publié par HL7 France (Interop'Santé) est utilisé dans ce volet. Les présentes spécifications se basent sur les profils du package hl7.fhir.fr.core.
+
+* Dans le cadre de l’annuaire santé, l’ANS met à disposition un service national de publication des données des professionnels et des structures au format FHIR; les profils de l’annuaire santé, à savoir « AsPractitionerRoleProfile », « AsPractitionerProfile » et « AsOrganizationProfile » sont utilisés.
+
+Ces spécifications s’appuient également sur les profils définis dans le profil IHE MHD relatifs à l’option « Comprehensive Metadata ».
 
 {% include dependency-table.xhtml %}
