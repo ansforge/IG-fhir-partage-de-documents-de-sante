@@ -29,15 +29,9 @@ Ce volet met en place l’option du profil MHD « Comprehensive Metadata » qui 
 
 #### Ressources FHIR et profils
 
-Les ressources utilisées et les niveaux de maturité sont les suivants : DocumentReference (NM 3), List (NM 1), Patient (NM N), Practitioner (NM 3), PractitionerRole (NM 2), Organization (NM 3), Device (NM 2), Binary (NM N), Bundle (NM N)
-
-Certaines ressources FHIR ont été profilées pour le contexte français et sont utilisés dans le cadre des spécifications techniques du volet « Partage de documents de santé en mobilité ».
-
-Le tableau ci-après spécifie les profils utilisés pour les ressources et types de données mentionnés dans ce document. Les présentes spécifications définissent également des profils propres au présent volet (préfixe PDSm).
-Pour les ressources et types de données non mentionnés dans ce tableau, le profil à utiliser est celui défini par HL7 FHIR.
+Le tableau ci-après spécifie les profils utilisés pour les ressources et types de données mentionnés dans ce document.
 
 {% sql SELECT '[' || Title ||'](StructureDefinition-' || id || '.html)' as "Titre du profil", Description FROM Resources WHERE Type = 'StructureDefinition' and Description like "Profil%" %}
-
 
 ##### Alimentation utilisant Comprehensive Metadata
 
