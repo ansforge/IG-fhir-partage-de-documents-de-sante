@@ -6,6 +6,6 @@
 
 ## Preview
 
-https://ansforge.github.io/IG-fhir-partage-de-documents-de-sante/ig/[ajouter_nom_de_la_branche] 
+https://ansforge.github.io/IG-fhir-partage-de-documents-de-sante/[ajouter_nom_de_la_branche]/ig
 
 ## Impact API MES
