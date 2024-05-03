@@ -1,14 +1,3 @@
-Alias: $FrPractitioner = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner
-Alias: $FrOrganization = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization
-Alias: $frEncounter = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-encounter
-Alias: $frPractitionerRole = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role
-Alias: $frPractitionerRoleExercice = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role-exercice
-Alias: $FrLocation = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location
-Alias: $FrSlot = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot
-Alias: $FrSchedule = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule
-Alias: $FrHealthcareService = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-healthcare-service
-Alias: $FrAppointment = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment
-
 Alias: $TRE-R260-HL7RoleClass = https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass
 Alias: $TRE-R216-HL7RoleCode = https://mos.esante.gouv.fr/NOS/TRE_R216-HL7RoleCode/FHIR/TRE-R216-HL7RoleCode
 Alias: $TRE_R234-TypeNote = https://mos.esante.gouv.fr/NOS/TRE_R234-TypeNote

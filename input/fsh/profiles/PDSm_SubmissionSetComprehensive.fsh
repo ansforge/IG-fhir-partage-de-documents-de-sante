@@ -22,14 +22,15 @@ Description: "Profil spécifique dérivé du profil IHE MHD « ComprehensiveSubm
 
 
 * extension contains
-    PDSm_IsArchived named isArchived 0..1
+    PDSm_IsArchived named isArchived 0..1 and
+    pdsm-ext-intended-recipient named PDSmintendedRecipient 0..*
 
-// Extension intendedRecipient defined in MHD : https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-intendedRecipient
-* extension[intendedRecipient] MS
-* extension[intendedRecipient].value[x] ^type.aggregation = #contained
-* extension[intendedRecipient] ^short = "Représente le destinataire du lot de soumission. Il peut s'agir d'un AsPractitioner associé à un AsPractitionerRole ou bien d'une AsOrganization."
+// Extension intendedRecipient est déjà définie dans MHD : https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-intendedRecipient. Sauf qu'elle ne permet pas de référencer un PractitionerRole.
+* extension[PDSmintendedRecipient] MS
+* extension[PDSmintendedRecipient].value[x] ^type.aggregation = #contained
+* extension[PDSmintendedRecipient] ^short = "Représente le destinataire du lot de soumission. Il peut s'agir d'un AsPractitioner associé à un AsPractitionerRole ou bien d'une AsOrganization."
 
-* subject only Reference(FrPatient)
+* subject only Reference(FRCorePatientProfile)
 
 * extension[isArchived] ^short = "Extension définie par ce volet pour distinguer les lots de soumission archivés des actives."
 
@@ -58,7 +59,7 @@ Description: "Profil spécifique dérivé du profil IHE MHD « ComprehensiveSubm
 * date ^short = "Représente la date et heure de soumission."
 
 * source 1.. // Source est contained dans le profil MHD
-* source only Reference(AsPractitionerRoleProfile or Device or FrPatient) 
+* source only Reference(AsPractitionerRoleProfile or Device or FRCorePatientProfile) 
 * source ^short = "Représente l'auteur du lot de soumission. Si l'auteur est une organisation, utiliser l'extension authorOrg. Si l’auteur est une personne physique ou un dispositif, utiliser l’attribut source.reference ." 
 
 // Extension from MHD https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-authorOrg
@@ -74,22 +75,13 @@ Description: "Profil spécifique dérivé du profil IHE MHD « ComprehensiveSubm
 * entry.item ^short = "Représente la référence à la fiche d’un document faisant partie du classeur."
 
 
-Extension: PDSm_intendedRecipient
-Id: PDSmintendedrecipient
-Description: "Représente le destinataire du lot de soumission"
-* ^context.type = #element
-* ^context.expression = "List"
-* . ^short = "Représente le destinataire du lot de soumission"
-* value[x] only Reference(AsPractitionerRoleProfile or AsOrganizationProfile)
-
-
 Invariant: constr-bind-designationtype
 Description: "Les valeurs possibles doivent provenir d’une des terminologies de référence suivantes : 
 - TRE_A00-ProducteurDocNonPS, OID : 1.2.250.1.213.1.1.4.6 
 - TRE_R209-TypeActivite, OID : 1.2.250.1.213.2.2 
 - TRE_R02-SecteurActivite, OID : 1.2.250.1.71.4.2.4 Les valeurs possibles peuvent être restreintes en fonction du jeu de valeurs correspondant mis à disposition par le projet (exemple : JDV_J59-ContentTypeCode-DMP). 
 En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J03-XdsContentTypeCode-CISIS peut être utilisé."
-Expression:       "f:extension[designationType]"
+// Expression:       "f:extension[designationType]"
 Severity:    #error
 
 

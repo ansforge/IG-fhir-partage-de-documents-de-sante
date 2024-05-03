@@ -27,8 +27,8 @@ Le flux 05-b contient les critères suivants :
 | relatesTo | reference | Recherche de l'identifiant de la fiche associée |
 | event | token | Recherche sur l'acte de la pathologie |
 | period | date | Recherche sur le debut et la fin de l'acte |
-| [patient](SearchParameter-PDSm-DocumentReference-PatientAsSubject.html)* | token | Recherche de l'identifiant du patient |
-| [author](SearchParameter-PDSm-DocumentReference-PractitionerRoleAsAuthor.html)* | token | Recherche du praticien par identifiant, nom ou prénom |
+| patient | token | Recherche de l'identifiant du patient |
+| author | token | Recherche du praticien par identifiant, nom ou prénom |
 {: .grid }
 
 #### Paramètre de recherche sur les ressources Patient / Practitioner / Device
@@ -65,7 +65,7 @@ GET http://targetsystem.com/API/DocumentReference?patient.identifier=32659 HTTP/
 
 Il s'agit du résultat de la recherche de documents retourné par le gestionnaire de partage de documents. La recherche de fiches retourne les ressources DocumentReference qui correspondent aux critères de recherche fournis par le consommateur de documents. On retrouve les mêmes éléments qui constituent les fiches que lors de la demande d’ajout d’un lot de documents. 
 
-Un profil spécifique dérivé du profil IHE MHD « FindDocumentReferencesComprehensiveResponse » est créé pour ce volet et nommé [PDSm_FindDocumentReferencesComprehensiveResponse](https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-find-documentreferences-comprehensive-response). Il contient zéro ou plusieurs ressources DocumentReference répondants aux critères de la requête.
+Un profil spécifique dérivé du profil IHE MHD « FindDocumentReferencesComprehensiveResponse » est créé pour ce volet et nommé [PDSm_FindDocumentReferencesComprehensiveResponse](StructureDefinition-pdsm-comprehensive-document-reference.html). Il contient zéro ou plusieurs ressources DocumentReference répondants aux critères de la requête.
 
 Ce flux correspond à la réponse à la requête reposant sur l’interaction « search » du flux précédent.
 En cas de succès, le gestionnaire de partage de documents retourne un code `HTTP 200 OK` ainsi qu’un Bundle de type searchset.

@@ -1,5 +1,5 @@
 <p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
-<b>Brief description of this Implementation Guide</b><br>
+<b>PDSm Implementation Guide</b><br>
 This document presents the technical specifications of the “Partage de documents de santé en mobilité” section.
 This is a part of the service layer specifying the terms of document sharing without constraining them. The specifications related to health documents constitute the components of the business layer of CI-SIS.
 </p>

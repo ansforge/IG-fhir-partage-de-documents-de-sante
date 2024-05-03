@@ -11,13 +11,13 @@ status: active
 version: 3.1.0-ballot
 fhirVersion: 4.0.1
 copyrightYear: 2020+
-releaseLabel: Trial-Implementation
+releaseLabel: trial-use
 
 dependencies:
     ihe.iti.mhd: 4.2.0
-    ans.fhir.fr.annuaire: 1.0.0-ballot-2
-    hl7.fhir.fr.core: 1.1.0
-    ans.fr.nos: 1.1.0
+    ans.fhir.fr.annuaire: 1.0.1
+    hl7.fhir.fr.core: 2.0.1
+    ans.fr.nos: latest
 
 parameters:
     shownav: 'true'

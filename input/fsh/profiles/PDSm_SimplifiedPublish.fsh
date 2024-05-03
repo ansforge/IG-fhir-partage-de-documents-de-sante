@@ -34,7 +34,7 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 
 * subject 1..1
 * subject ^short = "Patient concerné par ce document. La ressource référencée peut être présente sous l’élément DocumentReference.contained ou via le champ identifier."
-* subject only Reference(FrPatient) 
+* subject only Reference(FRCorePatientProfile) 
 
 * date MS
 * date ^short = "Représente la date de création de la ressource DocumentReference dans FHIR"
@@ -42,7 +42,7 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 * author MS
 * author ^short = "Personnes physiques ou morales et/ou les dispositifs auteurs d'un document."
 * author 1..
-* author only Reference(AsPractitionerRoleProfile or AsPractitionerProfile or AsOrganizationProfile or Device or FrPatient or FrRelatedPerson) 
+* author only Reference(AsPractitionerRoleProfile or AsPractitionerProfile or AsOrganizationProfile or Device or FRCorePatientProfile or FRCoreRelatedPersonProfile) 
 
 
 * authenticator MS
@@ -105,7 +105,7 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 * context.practiceSetting obeys constr-bind-ProducteurDoc-simplified
 * context.practiceSetting ^short = "Cadre d’exercice de l’acte qui a engendré la création du document."
 
-* context.sourcePatientInfo only Reference(FrPatient)
+* context.sourcePatientInfo only Reference(FRCorePatientProfile)
 * context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier."
 
 
@@ -114,5 +114,5 @@ Description: "L’utilisation de cette nomenclature est recommandée mais non ob
 -	TRE_R02-SecteurActivite, OID : 1.2.250.1.71.4.2.4 (lorsque l’auteur du document est un professionnel ou un équipement sous sa responsabilité)
 Les valeurs possibles peuvent être restreintes en fonction du jeu de valeurs correspondant mis à disposition par le projet (exemple : JDV_J61-HealthcareFacilityTypeCode-DMP).
 En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J02-XdsHealthcareFacilityTypeCode-CISIS peut être utilisé."
-Expression:       "f:context/f:practiceSetting or f:context/f:facilityType"
+// Expression:       "f:context/f:practiceSetting or f:context/f:facilityType"
 Severity:    #error
