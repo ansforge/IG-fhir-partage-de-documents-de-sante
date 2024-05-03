@@ -16,16 +16,7 @@ Il s’agit d’un volet de la couche service spécifiant les modalités de part
 
 A noter que la dénomination du volet « Partage de documents de santé en mobilité » n’est pas restrictive. En effet, les standards sous-jacents aux spécifications techniques, par opposition au volet historique « Partage de documents de santé », permettent le déploiement de cas d'usage en mobilité mais ces spécifications peuvent également être mises en œuvre dans d'autres cas d'usage.
 
-### Lectorat cible
-
 Ce document s'adresse aux développeurs des interfaces interopérables des systèmes implémentant le partage de documents de santé ou à toute autre personne intervenant dans le processus de mise en place de ces interfaces.
-
-### Standards utilisés
-
-Ces spécifications techniques se basent sur le standard HL7 FHIR Release 4, et plus particulièrement sur les contraintes spécifiées par le profil MHD. Elles font référence à un certain nombre de ressources du standard ainsi qu'aux spécifications de l'API REST FHIR, basées sur le protocole HTTP. Les syntaxes retenues sont la syntaxe XML et JSON.
-
-Une [mise en équivalence](equivalences.html) entre les acteurs et les flux identifiés dans les SFE-PDS et ceux présentés dans le profil MHD est disponible.
-Ce volet met en place l’option du profil MHD « Comprehensive Metadata » qui permet aux acteurs d’échanger des métadonnées complètes répondant aux exigences définies dans le profil XDS.
 
 #### Ressources FHIR et profils
 
@@ -79,12 +70,16 @@ Un flux est un échange entre deux systèmes. Des flux ont été identifiés lor
 
 Plusieurs spécifications sont utilisées dans le cadre de ce volet :
 
-* Ces spécifications s’appuient sur les profils définis dans le profil IHE MHD relatifs à l’option « Comprehensive Metadata ».
+* Ce volet met en place l’option du profil MHD « Comprehensive Metadata » qui permet aux acteurs d’échanger des métadonnées complètes répondant aux exigences définies dans le profil XDS.
 
 * Le profil FHIR « FrPatient » publié par HL7 France (Interop'Santé) est utilisé dans ce volet. Les présentes spécifications se basent sur les profils du package hl7.fhir.fr.core.
 
 * Dans le cadre de l’annuaire santé, l’ANS met à disposition un service national de publication des données des professionnels et des structures au format FHIR; les profils de l’annuaire santé, à savoir « AsPractitionerRoleProfile », « AsPractitionerProfile » et « AsOrganizationProfile » sont utilisés.
 
 * Des ressources standards (Device, Binary) pourront également être utilisées pour compléter les profils définis.
+
+
+Une [mise en équivalence](equivalences.html) entre les acteurs et les flux identifiés dans les SFE-PDS et ceux présentés dans le profil MHD est disponible.
+
 
 {% include dependency-table.xhtml %}
