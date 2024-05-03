@@ -33,52 +33,36 @@ Les ressources utilisées et les niveaux de maturité sont les suivants : Docume
 
 Certaines ressources FHIR ont été profilées pour le contexte français et sont utilisés dans le cadre des spécifications techniques du volet « Partage de documents de santé en mobilité ».
 
+Le tableau ci-après spécifie les profils utilisés pour les ressources et types de données mentionnés dans ce document. Les présentes spécifications définissent également des profils propres au présent volet (préfixe PDSm).
+Pour les ressources et types de données non mentionnés dans ce tableau, le profil à utiliser est celui défini par HL7 FHIR.
+
+{% sql SELECT '[' || Title ||'](StructureDefinition-' || id || '.html)' as "Titre du profil", Description FROM Resources WHERE Type = 'StructureDefinition' and Description like "Profil%" %}
+
+
 ##### Alimentation utilisant Comprehensive Metadata
+
+Les trois profils utilisés pour le flux d'alimentation sont :  
+
+* 1) la fiche document [PDSm_ComprehensiveDocumentReference](StructureDefinition-pdsm-comprehensive-document-reference.html),
+* 2) le classeur [PDSm_FolderComprehensive](StructureDefinition-pdsm-folder-comprehensive.html),
+* 3) le Lot de soumission [PDSm_SubmissionSetComprehensive](StructureDefinition-pdsm-submissionset-comprehensive.html)
+
+Ces trois profils doivent être encapsulés dans le [Bundle Comprehensive Provide Document](StructureDefinition-pdsm-comprehensive-provide-document-bundle.html).
 
 <div class="figure" style="width:100%;">
     <p>{% include document-overview-alimentation.svg %}</p>
 </div>
 
-
 #### Alimentation utilisant la publication simplifiée
+
+La publication simplifiée utilise le profil [DocumentReference Simplified Publish](StructureDefinition-pdsm-simplified-publish.html).
 
 #### Recherche par lot ou par fiche
 
-Le tableau ci-après spécifie les profils utilisés pour les ressources et types de données mentionnés dans ce document. Les présentes spécifications définissent également des profils propres au présent volet (préfixe PDSm).
-Pour les ressources et types de données non mentionnés dans ce tableau, le profil à utiliser est celui défini par HL7 FHIR.
+Il existe deux profils Bundle permettent d'encapsuler les résultats de recherche.
 
-Cet Implementation Guide contient 7 profils :
-
-* 3 profils pour le flux d'alimentation :  
-  * 1) la fiche document [PDSm_ComprehensiveDocumentReference](StructureDefinition-pdsm-comprehensive-document-reference.html),
-  * 2) le classeur [PDSm_FolderComprehensive](StructureDefinition-pdsm-folder-comprehensive.html),
-  * 3) le Lot de soumission [PDSm_SubmissionSetComprehensive](StructureDefinition-pdsm-submissionset-comprehensive.html)
-  * Dont un profil Bundle pour encapsuler l'envoi des documents [PDSm_ComprehensiveProvideDocumentBundle](StructureDefinition-pdsm-comprehensive-provide-document-bundle.html)
-* 1 profil pour le flux d'alimentation simplifié :
-  * 1) la fiche document [PDSm_SimplifiedPublish](StructureDefinition-pdsm-simplified-publish.html), 
-* 2 profils Bundle pour encapsuler les résultats de recherche :
-  * 1) par fiche [PDSm_FindDocumentReferencesComprehensiveResponse](StructureDefinition-pdsm-find-documentreferences-comprehensive-response.html),
-  * 2) par lot de soumission [PDSm_FindListsResponse](StructureDefinition-pdsm-find-lists-response.html)
-
-Au total, les ressources à utiliser dans le cadre de cet Implementation Guide sont :
-
-| **Ressource** | **Profil** | **Description** |
-| ----- | ----- | ----- |
-| Bundle | PDSm_ComprehensiveProvideDocumentBundle |  Profil défini dans ce volet et héritant de ComprehensiveProvideDocumentBundle défini dans le profil MHD |
-| Bundle | PDSm_FindDocumentReferencesComprehensiveResponse | Profil défini dans ce volet et héritant de FindDocumentReferencesComprehensiveResponse défini dans le profil MHD |
-| Bundle | PDSm_FindListsResponse | Profil défini dans ce volet et héritant de FindListsResponse défini dans le profil MHD |
-| Bundle | ProvideDocumentBundleResponse | Profil défini dans le profil MHD |
-| DocumentReference | PDSm_ComprehensiveDocumentReference | Profil défini dans ce volet et héritant de ComprehensiveDocumentReference défini dans le profil MHD |
-| DocumentReference | PDSm_SimplifiedPublish | Profil défini dans ce volet en s'inspirant du flux simplifié défini dans le profil MHD |
-| List | PDSm_SubmissionSetComprehensive | Profil défini dans ce volet et héritant de SubmissionSetComprehensive défini dans le profil MHD |
-| List | PDSm_FolderComprehensive | Profil défini dans ce volet et héritant de FolderComprehensive défini dans le profil MHD |
-| Patient | [FrPatient](https://simplifier.net/packages/hl7-france-fhir.administrative/10.2021.1/files/424014) | Profil français publié par Interop’Santé, spécifiant les identifiants de patient utilisés en France |
-| Practitioner | [AsPractitionerProfile](https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitioner) | Profil de l'annuaire représentant un professionnel. Il contraint les types d'identifiants du professionnel en France. |
-| PractitionerRole | [AsPractitionerRoleProfile](https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole) | Profil de l’annuaire santé représentant la situation d’exercice et l’exercice professionnel |
-| Organization | [AsOrganizationProfile](https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-organization) | Profil représentant une personne morale. Ce profil spécifie les types d'identifiants pour l'organisation en France, et ajoute des extensions françaises.|
-| Device | - | La ressource du standard est utilisée. Pas de profil spécifique. |
-| Binary | - | La ressource du standard est utilisée. Pas de profil spécifique. |
-{: .grid }
+* 1) Le bundle permettant de renvoyer les résultats d'une recherche de fiche [PDSm_FindDocumentReferencesComprehensiveResponse](StructureDefinition-pdsm-find-documentreferences-comprehensive-response.html),
+* 2) Le bundle permettant de renvoyer les résultats d'une recherche de lot de soumission [PDSm_FindListsResponse](StructureDefinition-pdsm-find-lists-response.html)
 
 #### Utilisation de l'IG
 
@@ -99,12 +83,14 @@ Un flux est un échange entre deux systèmes. Des flux ont été identifiés lor
 
 ### Dépendances
 
-Deux sources seront utilisées dans le cadre de ce volet :
+Plusieurs spécifications sont utilisées dans le cadre de ce volet :
+
+* Ces spécifications s’appuient sur les profils définis dans le profil IHE MHD relatifs à l’option « Comprehensive Metadata ».
 
 * Le profil FHIR « FrPatient » publié par HL7 France (Interop'Santé) est utilisé dans ce volet. Les présentes spécifications se basent sur les profils du package hl7.fhir.fr.core.
 
 * Dans le cadre de l’annuaire santé, l’ANS met à disposition un service national de publication des données des professionnels et des structures au format FHIR; les profils de l’annuaire santé, à savoir « AsPractitionerRoleProfile », « AsPractitionerProfile » et « AsOrganizationProfile » sont utilisés.
 
-Ces spécifications s’appuient également sur les profils définis dans le profil IHE MHD relatifs à l’option « Comprehensive Metadata ».
+* Des ressources standards (Device, Binary) pourront également être utilisées pour compléter les profils définis.
 
 {% include dependency-table.xhtml %}
