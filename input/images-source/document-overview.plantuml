@@ -1,0 +1,57 @@
+@startuml
+
+artifact "PDSm Comprehensive DocumentReference" as cdr
+artifact "PDSm Comprehensive Provide Document Bundle" as cbu
+artifact "PDSm Find Lists Response" as flr
+artifact "PDSm Folder Comprehensive" as fc
+artifact "PDSm Simplified Publish Document Reference" as sp
+artifact "PDSm SubmissionSet Comprehensive" as ssc
+artifact "PDSm Find DocumentReferences Comprehensive Response" as drcr
+
+url of cdr is  [[StructureDefinition-pdsm-comprehensive-document-reference.html]]
+url of cbu is  [[StructureDefinition-pdsm-comprehensive-provide-document-bundle.html]]
+url of flr is  [[StructureDefinition-pdsm-find-lists-response.html]]
+url of fc [[StructureDefinition-pdsm-folder-comprehensive.html]]
+url of sp [[StructureDefinition-pdsm-simplified-publish.html]]
+url of ssc [[StructureDefinition-pdsm-submissionset-comprehensive.html]]
+url of drcr [[StructureDefinition-pdsm-find-documentreferences-comprehensive-response.html]]
+
+' ###################################
+' # Comprehensive DocumentReference #
+' ###################################
+
+
+' #########################################
+' # Comprehensive Provide Document Bundle #
+' #########################################
+cbu --> ssc : entry 1..1
+cbu --> cdr : entry 0..*
+cbu --> fc : entry 0..*
+
+' #######################
+' # Find Lists Response #
+' #######################
+flr --> ssc : entry 0..*
+flr --> fc : entry 0..*
+
+' ########################
+' # Folder Comprehensive #
+' ########################
+fc --> cdr : entry.item 0..1
+
+
+
+' ###############################
+' # SubmissionSet Comprehensive #
+' ###############################
+ssc --> cdr : entry.item 1..1
+ssc --> fc : entry.item 1..1
+
+
+' ##################################################
+' # Find DocumentReferences Comprehensive Response #
+' ##################################################
+drcr --> cdr : item 1..1
+
+
+@enduml

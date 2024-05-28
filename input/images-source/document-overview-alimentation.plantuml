@@ -1,0 +1,44 @@
+@startuml
+
+
+
+artifact "PDSm Comprehensive Provide Document Bundle" as cbu #99FF99
+artifact "PDSm Comprehensive DocumentReference" as cdr
+artifact "PDSm Folder Comprehensive" as fc
+artifact "PDSm SubmissionSet Comprehensive" as ssc
+
+
+
+url of cdr is  [[StructureDefinition-pdsm-comprehensive-document-reference.html]]
+
+url of fc [[StructureDefinition-pdsm-folder-comprehensive.html]]
+
+url of ssc [[StructureDefinition-pdsm-submissionset-comprehensive.html]]
+
+url of cbu is  [[StructureDefinition-pdsm-comprehensive-provide-document-bundle.html]]
+
+
+' #########################################
+' # Comprehensive Provide Document Bundle #
+' #########################################
+cbu --> ssc : entry 1..1
+cbu --> cdr : entry 0..*
+cbu --> fc : entry 0..*
+
+
+' ########################
+' # Folder Comprehensive #
+' ########################
+fc --> cdr : entry.item 0..1
+
+
+
+' ###############################
+' # SubmissionSet Comprehensive #
+' ###############################
+ssc --> cdr : entry.item 1..1
+ssc --> fc : entry.item 1..1
+
+
+
+@enduml
