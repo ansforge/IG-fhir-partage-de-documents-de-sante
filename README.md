@@ -2,6 +2,9 @@
 
 [![Workflow Init](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/actions/workflows/fhir-workflows.yml/badge.svg)](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/actions/workflows/fhir-workflows.yml)
 
+
+La version en intégration continue (soumis à des changements) est disponible ici : https://ansforge.github.io/IG-fhir-partage-de-documents-de-sante/main/ig
+
 # Contexte
 
 ## Contexte métier du projet
@@ -25,7 +28,6 @@ Les workflows associés à ce repository (.github/workflows) permettent :
 # Notes
 
 Un commentaire ? Une remarque ? Utilisez les GitHub [issues](https://docs.github.com/fr/issues) pour indiquer vos propositions d'amélioration et de correction.
-La version en intégration continue (soumis à des changements) est disponible ici : https://ansforge.github.io/IG-fhir-partage-de-documents-de-sante/ig/main/
 
 ## Acronymes
 
