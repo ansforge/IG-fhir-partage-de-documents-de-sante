@@ -38,7 +38,7 @@ Content-Type: application/json-patch+json
         "value":"restricted"
     },
     {   "op":"replace",
-        "path":"/extension[url:”http://esante.gouv.fr/cisis/fhir/StructureDefinition/PDSm_isArchived”]/valueBoolean", 
+        "path":"/extension[url:”https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-isArchived”]/valueBoolean", 
         "value":"true"
     }
 ]
