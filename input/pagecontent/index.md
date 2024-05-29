@@ -8,6 +8,14 @@ This is a part of the service layer specifying the terms of document sharing wit
     <img src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS" style="width:100%;">
 </div>
 
+<!-- <div style="width: 65%">
+    <blockquote class="stu-note">
+    <p>
+    <b>Attention !</b> Cet Implementation Guide n'est pas la version courante. La version courante est accessible via l'URL canonique (http://interop.esante.gouv.fr/ig/fhir/pdsm).
+    </p>
+    </blockquote>
+</div> -->
+
 ### Introduction
 
 Ce document présente les spécifications techniques du volet "Partage de documents de santé en mobilité". Sa production est basée sur les Spécifications Fonctionnelles des Echanges du volet Partage de Documents de Santé et le profil [MHD](https://profiles.ihe.net/ITI/MHD/index.html) (Mobile access to Health Documents) défini par IHE (Integrating the Healthcare Entreprise).
