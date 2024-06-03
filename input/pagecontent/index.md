@@ -8,13 +8,13 @@ This is a part of the service layer specifying the terms of document sharing wit
     <img src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS" style="width:100%;">
 </div>
 
-<!-- <div style="width: 65%">
+<div style="width: 65%">
     <blockquote class="stu-note">
     <p>
     <b>Attention !</b> Cet Implementation Guide n'est pas la version courante. La version courante est accessible via l'URL canonique (http://interop.esante.gouv.fr/ig/fhir/pdsm).
     </p>
     </blockquote>
-</div> -->
+</div>
 
 ### Introduction
 
