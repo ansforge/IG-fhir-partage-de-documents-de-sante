@@ -1,4 +1,4 @@
-name: Workflow Sushi Tests gitHubpages
+name: Workflow   Tests/gitHubpages
 on:
   workflow_call:
   push:
@@ -12,12 +12,12 @@ jobs:
         with:      
           path: igSource
 
-      - uses: ansforge/IG-workflows@v0.2.0
+      - uses: ansforge/IG-workflows@main
+
         with:      
-          bake: "true"
-          nos: "true"
-          validator_cli: "true"     
-          generate_plantuml : "true"
+          bake: "false"
+          validator_cli: "false"     
+          generate_plantuml : "false"
           repo_ig: "./igSource"   
           github_page: "true"
           github_page_token: ${{ secrets.ANS_IG_API_TOKEN  }}

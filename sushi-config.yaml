@@ -30,17 +30,17 @@ pages:
     specifications_techniques.md:
         construction_des_flux.md:
         st_ajout.md:
-            title: Ajout d'un lot de documents
+            title: Ajout d'un lot de documents (ITI-65)
         st_maj.md:
             title: Mise à jour de documents
         st_recherche_lot.md:
-            title: Recherche de lot de soumission
+            title: Recherche de lot de soumission (ITI-66)
         st_recherche_fiche.md:
-            title: Recherche de fiche
+            title: Recherche de fiche (ITI-67)
         st_consultation.md:
-            title: Consultation de documents
+            title: Consultation de documents (ITI-68)
         st_ajout_simplifie.md:
-            title: Ajout simplifié d'un document
+            title: Ajout simplifié d'un document (ITI-105)
     specifications_fonctionnelles.md:
         sf_ajout.md:
             title: Ajout d'un lot de documents
@@ -61,7 +61,13 @@ pages:
 
 menu:
     Accueil: index.html
-    Description des flux:
+    Volume 1 - Etude fonctionnelle:
+        Spécifications fonctionnelles: specifications_fonctionnelles.html
+        Ajout d'un lot de documents: sf_ajout.html
+        Mise à jour de documents: sf_maj.html
+        Recherche de documents: sf_recherche.html
+        Consultation de documents: sf_consultation.html
+    Volume 2 - Détail des transactions:
         Vue d'ensemble: construction_des_flux.html
         Ajout d'un lot de documents: st_ajout.html 
         Mise à jour de documents: st_maj.html
@@ -69,12 +75,6 @@ menu:
         Recherche de fiche: st_recherche_fiche.html
         Consultation de documents: st_consultation.html
         Ajout simplifié d'un document: st_ajout_simplifie.html
-    Spécifications fonctionnelles:
-        Spécifications fonctionnelles: specifications_fonctionnelles.html
-        Ajout d'un lot de documents: sf_ajout.html
-        Mise à jour de documents: sf_maj.html
-        Recherche de documents: sf_recherche.html
-        Consultation de documents: sf_consultation.html
     Ressources de conformité: artifacts.html
     Autres ressources:
         Sécurité: securite.html
