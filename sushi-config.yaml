@@ -61,13 +61,13 @@ pages:
 
 menu:
     Accueil: index.html
-    Spécifications fonctionnelles:
+    Volume 1 - Etude fonctionnelle:
         Spécifications fonctionnelles: specifications_fonctionnelles.html
         Ajout d'un lot de documents: sf_ajout.html
         Mise à jour de documents: sf_maj.html
         Recherche de documents: sf_recherche.html
         Consultation de documents: sf_consultation.html
-    Spécifications techniques:
+    Volume 2 - Détail des transactions:
         Vue d'ensemble: construction_des_flux.html
         Ajout d'un lot de documents: st_ajout.html 
         Mise à jour de documents: st_maj.html
