@@ -66,12 +66,6 @@
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
       "StructureDefinition.snapshot.element.type"
     ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version": [
-      "StructureDefinition.snapshot.element"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
-      "StructureDefinition.snapshot.element"
-    ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
       "ImplementationGuide.definition"
     ],
@@ -88,6 +82,9 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-intended-recipient": [
       "List"

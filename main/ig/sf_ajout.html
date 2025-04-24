@@ -40,7 +40,8 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"3.1"}
     h3,h4,h5,h6{--heading-prefix:"3.1"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
@@ -51,7 +52,12 @@
   </div>
   <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
     <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
   </div>
+
+  <div id="ig-search">
+ </div>
+
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Partage de Documents de Santé en mobilité (PDSm)</span>
@@ -91,7 +97,29 @@
     <a href="index.html">Accueil</a>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Description des flux
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 1 - Etude fonctionnelle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="specifications_fonctionnelles.html">Spécifications fonctionnelles</a>
+      </li>
+      <li>
+        <a href="sf_ajout.html">Ajout d&apos;un lot de documents</a>
+      </li>
+      <li>
+        <a href="sf_maj.html">Mise à jour de documents</a>
+      </li>
+      <li>
+        <a href="sf_recherche.html">Recherche de documents</a>
+      </li>
+      <li>
+        <a href="sf_consultation.html">Consultation de documents</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2 - Détail des transactions
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -115,28 +143,6 @@
       </li>
       <li>
         <a href="st_ajout_simplifie.html">Ajout simplifié d&apos;un document</a>
-      </li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Spécifications fonctionnelles
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="specifications_fonctionnelles.html">Spécifications fonctionnelles</a>
-      </li>
-      <li>
-        <a href="sf_ajout.html">Ajout d&apos;un lot de documents</a>
-      </li>
-      <li>
-        <a href="sf_maj.html">Mise à jour de documents</a>
-      </li>
-      <li>
-        <a href="sf_recherche.html">Recherche de documents</a>
-      </li>
-      <li>
-        <a href="sf_consultation.html">Consultation de documents</a>
       </li>
     </ul>
   </li>
@@ -230,7 +236,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#définition" id="markdown-toc-définition">Définition</a></li>
   <li><a href="#description-et-identification-des-flux" id="markdown-toc-description-et-identification-des-flux">Description et identification des flux</a></li>
-  <li><a href="#flux-1---ajoutlotdocument-modelisation-des-flux-dinformations" id="markdown-toc-flux-1---ajoutlotdocument-modelisation-des-flux-dinformations">Flux 1 - AjoutLotDocument MODELISATION DES FLUX D’INFORMATIONS</a></li>
+  <li><a href="#flux-1---ajoutlotdocument-modelisation-des-flux-dinformations" id="markdown-toc-flux-1---ajoutlotdocument-modelisation-des-flux-dinformations">Flux 1 - AjoutLotDocument MODELISATION DES FLUX D'INFORMATIONS</a></li>
   <li><a href="#flux-2---resultatajoutlotdocument-modelisation-des-flux-dinformations" id="markdown-toc-flux-2---resultatajoutlotdocument-modelisation-des-flux-dinformations">Flux 2 - ResultatAjoutLotDocument MODELISATION DES FLUX D’INFORMATIONS</a></li>
 </ul>
 
@@ -239,7 +245,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <object data="fonctionnel/fig_2.png" type="image/png"></object>
 <p><br />
-Figure 2 : Processus collaboratif “Ajout d’un lot de documents”</p>
+Figure 2 : Processus collaboratif "Ajout d'un lot de documents"</p>
 
 <table>
   <tbody>
@@ -272,7 +278,7 @@ Figure 2 : Processus collaboratif “Ajout d’un lot de documents”</p>
 
 <object data="fonctionnel/fig_6.png" type="image/png"></object>
 <p><br />
-Figure 6 : Processus collaboratif “Ajout d’un lot de documents”</p>
+Figure 6 : Processus collaboratif "Ajout d'un lot de documents"</p>
 
 <h4 id="description-des-actions">Description des actions</h4>
 
@@ -286,15 +292,15 @@ Figure 6 : Processus collaboratif “Ajout d’un lot de documents”</p>
   <tbody>
     <tr>
       <td>Préparer le ou les documents</td>
-      <td>Le producteur de documents rassemble les documents à ajouter et/ou à mettre à jour dans l’infrastructure de partage de documents.</td>
+      <td>Le producteur de documents rassemble les documents à ajouter et/ou à mettre à jour dans l'infrastructure de partage de documents.</td>
     </tr>
     <tr>
       <td>Traiter la réponse</td>
       <td>Le producteur de documents reçoit et traite le résultat de la demande d’ajout ou de mise à jour de documents. Il peut afficher à l’utilisateur le résultat de la demande.</td>
     </tr>
     <tr>
-      <td>Traiter la demande d’ajout ou de remplacement d’un document</td>
-      <td>L’infrastructure de partage de documents traite la demande d’ajout ou de mise à jour, exécute les actions nécessaires au traitement de ces demandes et retourne le résultat du traitement.</td>
+      <td>Traiter la demande d'ajout ou de remplacement d'un document</td>
+      <td>L'infrastructure de partage de documents traite la demande d’ajout ou de mise à jour, exécute les actions nécessaires au traitement de ces demandes et retourne le résultat du traitement.</td>
     </tr>
   </tbody>
 </table>
@@ -314,14 +320,14 @@ Figure 6 : Processus collaboratif “Ajout d’un lot de documents”</p>
     </tr>
     <tr>
       <td>Flux 1 - AjoutLotDocument</td>
-      <td>Ajout d’un lot de documents</td>
+      <td>Ajout d'un lot de documents</td>
       <td>Producteur de documents</td>
       <td>Gestionnaire de partage de documents</td>
       <td>Oui</td>
     </tr>
     <tr>
       <td>Flux 2 - ResultatAjoutLotDocument</td>
-      <td>Ajout d’un lot de documents</td>
+      <td>Ajout d'un lot de documents</td>
       <td>Gestionnaire de partage de documents</td>
       <td> Producteur de documents</td>
       <td>Oui</td>
@@ -329,16 +335,16 @@ Figure 6 : Processus collaboratif “Ajout d’un lot de documents”</p>
   </tbody>
 </table>
 
-<h3 id="flux-1---ajoutlotdocument-modelisation-des-flux-dinformations">Flux 1 - AjoutLotDocument MODELISATION DES FLUX D’INFORMATIONS</h3>
+<h3 id="flux-1---ajoutlotdocument-modelisation-des-flux-dinformations">Flux 1 - AjoutLotDocument MODELISATION DES FLUX D'INFORMATIONS</h3>
 
 <object data="fonctionnel/fig_10.png" type="image/png"></object>
 <p><br /></p>
 
 <p>Figure 10 Flux 1 - AjoutLotDocument</p>
 
-<h4 id="classe-document">Classe “Document”</h4>
+<h4 id="classe-document">Classe "Document"</h4>
 
-<p>Un document est la plus petite unité d’information déposée dans l’infrastructure de partage de documents. Une fois stocké dans l’infrastructure de partage de documents avec un identifiant unique, le document ne subit plus aucune modification.</p>
+<p>Un document est la plus petite unité d'information déposée dans l’infrastructure de partage de documents. Une fois stocké dans l’infrastructure de partage de documents avec un identifiant unique, le document ne subit plus aucune modification.</p>
 
 <table>
   <thead>
@@ -355,9 +361,9 @@ Figure 6 : Processus collaboratif “Ajout d’un lot de documents”</p>
   </tbody>
 </table>
 
-<p>Table 16 Attributs de la classe “Document”</p>
+<p>Table 16 Attributs de la classe "Document"</p>
 
-<h4 id="classe-fiche">Classe “Fiche”</h4>
+<h4 id="classe-fiche">Classe "Fiche"</h4>
 <p>Une fiche représente le document stocké dans l’infrastructure de partage de documents. Elle contient les informations décrivant les caractéristiques principales d’un document servant au classement et à la recherche des documents.</p>
 
 <table>
@@ -370,7 +376,7 @@ Figure 6 : Processus collaboratif “Ajout d’un lot de documents”</p>
   <tbody>
     <tr>
       <td>idFiche : [0..*] Identifiant</td>
-      <td>Identifiant unique d’une fiche d’un document.</td>
+      <td>Identifiant unique d'une fiche d'un document.</td>
     </tr>
     <tr>
       <td>idUnique : [0..1] Identifiant</td>
@@ -378,11 +384,11 @@ Figure 6 : Processus collaboratif “Ajout d’un lot de documents”</p>
     </tr>
     <tr>
       <td>auteur : [1..*] Identifiant</td>
-      <td>Identifiant de la personne physique et/ou du dispositif auteur d’un document.</td>
+      <td>Identifiant de la personne physique et/ou du dispositif auteur d'un document.</td>
     </tr>
     <tr>
       <td>statut : [1..1] Code</td>
-      <td>Représente le statut de la fiche d’un document.<br />Nomenclature(s) associée(s) :<br />** TRE_R269-AvailabilityStatusProvenanceOasis<br />** TRE_R270-AvailabilityStatus</td>
+      <td>Représente le statut de la fiche d'un document.<br />Nomenclature(s) associée(s) :<br />** TRE_R269-AvailabilityStatusProvenanceOasis<br />** TRE_R270-AvailabilityStatus</td>
     </tr>
     <tr>
       <td>classeDocument : [0..1] Code</td>
@@ -398,11 +404,11 @@ Figure 6 : Processus collaboratif “Ajout d’un lot de documents”</p>
     </tr>
     <tr>
       <td>dateCreationDocument : [1..1] DateHeure</td>
-      <td>Représente la date et l’heure de la création du document.</td>
+      <td>Représente la date et l'heure de la création du document.</td>
     </tr>
     <tr>
       <td>niveauConfidentialite : [0..*] Code</td>
-      <td>Contient les informations définissant le niveau de confidentialité d’un document.<br />Nomenclatures utilisées :<br />** TRE_A08-Confidentiality-HL7<br />** TRE_A07-StatusVisibiliteDocument<br />** JDV_J08-XdsConfidentialityCode-CISIS</td>
+      <td>Contient les informations définissant le niveau de confidentialité d'un document.<br />Nomenclatures utilisées :<br />** TRE_A08-Confidentiality-HL7<br />** TRE_A07-StatusVisibiliteDocument<br />** JDV_J08-XdsConfidentialityCode-CISIS</td>
     </tr>
     <tr>
       <td>cadreExercice : [0..1] Code</td>
@@ -410,11 +416,11 @@ Figure 6 : Processus collaboratif “Ajout d’un lot de documents”</p>
     </tr>
     <tr>
       <td>idPatient : [0..1] Identifiant</td>
-      <td>Représente l’identifiant du patient.</td>
+      <td>Représente l'identifiant du patient.</td>
     </tr>
     <tr>
       <td>secteurActivite : [0..1] Code</td>
-      <td>Secteur d’activité lié à la prise en charge de la personne, en lien avec le document produit.<br />Nomenclature utilisée : TRE_R02-SecteurActivite</td>
+      <td>Secteur d'activité lié à la prise en charge de la personne, en lien avec le document produit.<br />Nomenclature utilisée : TRE_R02-SecteurActivite</td>
     </tr>
     <tr>
       <td>dateDebutActe : [0..1] DateHeure</td>
@@ -426,11 +432,11 @@ Figure 6 : Processus collaboratif “Ajout d’un lot de documents”</p>
     </tr>
     <tr>
       <td>idFicheAssociation : [0..*] Identifiant</td>
-      <td>Représente l’identifiant d’une association entre deux fiches.</td>
+      <td>Représente l'identifiant d'une association entre deux fiches.</td>
     </tr>
     <tr>
       <td>association : [0..*] Code</td>
-      <td>Représente le type d’association entre deux fiches. Se référer aux spécifications techniques pour plus de détails sur la ou les nomenclatures utilisées.</td>
+      <td>Représente le type d'association entre deux fiches. Se référer aux spécifications techniques pour plus de détails sur la ou les nomenclatures utilisées.</td>
     </tr>
     <tr>
       <td>commentaire : [0..1] Texte</td>
@@ -442,7 +448,7 @@ Figure 6 : Processus collaboratif “Ajout d’un lot de documents”</p>
     </tr>
     <tr>
       <td>langueDocument : [1..*] Code</td>
-      <td>Langue dans laquelle le document est rédigé, pour tous les documents produits par les systèmes initiateurs français, le codes est “fr-FR’.</td>
+      <td>Langue dans laquelle le document est rédigé, pour tous les documents produits par les systèmes initiateurs français, le codes est "fr-FR'.</td>
     </tr>
     <tr>
       <td>formatDocument : [0..1] Code</td>
@@ -450,7 +456,7 @@ Figure 6 : Processus collaboratif “Ajout d’un lot de documents”</p>
     </tr>
     <tr>
       <td>actePathologie : [0..1] Code</td>
-      <td>Actes et pathologies en rapport avec le document.<br />Nomenclatures utilisées :<br />** CCAM pour les actes médicaux (OID=”“1.2.250.1.213.2.5””);<br />** CIM-10 pour les diagnostics de pathologie (OID=”“2.16.840.1.113883.6.3””);<br />** TRE_A00-ProducteurDocNonPS pour les documents d’expression personnelle du patient.”</td>
+      <td>Actes et pathologies en rapport avec le document.<br />Nomenclatures utilisées :<br />** CCAM pour les actes médicaux (OID=""1.2.250.1.213.2.5"");<br />** CIM-10 pour les diagnostics de pathologie (OID=""2.16.840.1.113883.6.3"");<br />** TRE_A00-ProducteurDocNonPS pour les documents d'expression personnelle du patient."</td>
     </tr>
     <tr>
       <td>version : [0..1] Numerique</td>
@@ -459,9 +465,9 @@ Figure 6 : Processus collaboratif “Ajout d’un lot de documents”</p>
   </tbody>
 </table>
 
-<p>Table 17 Attributs de la classe “Fiche”</p>
+<p>Table 17 Attributs de la classe "Fiche"</p>
 
-<h4 id="classe-classeur">Classe “Classeur”</h4>
+<h4 id="classe-classeur">Classe "Classeur"</h4>
 
 <p>Un assemblage de fiches regroupées par catégorie.</p>
 
@@ -504,10 +510,10 @@ Figure 6 : Processus collaboratif “Ajout d’un lot de documents”</p>
   </tbody>
 </table>
 
-<p>Table 18 Attributs de la classe “Classeur”</p>
+<p>Table 18 Attributs de la classe "Classeur"</p>
 
-<h4 id="classe-lotsoumission">Classe “LotSoumission”</h4>
-<p>Un lot de soumission regroupe les fiches et les classeurs faisant partie d’une même demande de modification du contenu du dossier. Il atteste l’existence et le statut de la demande et est décrit par un ensemble d’attributs, ses métadonnées. Une fois créé, un lot de soumission est immuable à l’exception de son statut.</p>
+<h4 id="classe-lotsoumission">Classe "LotSoumission"</h4>
+<p>Un lot de soumission regroupe les fiches et les classeurs faisant partie d’une même demande de modification du contenu du dossier. Il atteste l’existence et le statut de la demande et est décrit par un ensemble d’attributs, ses métadonnées. Une fois créé, un lot de soumission est immuable à l'exception de son statut.</p>
 
 <table>
   <thead>
@@ -527,7 +533,7 @@ Figure 6 : Processus collaboratif “Ajout d’un lot de documents”</p>
     </tr>
     <tr>
       <td>idPatient : [0..1] Identifiant</td>
-      <td>Représente l’identifiant du patient.</td>
+      <td>Représente l'identifiant du patient.</td>
     </tr>
     <tr>
       <td>idSource : [0..1] Identifiant</td>
@@ -560,7 +566,7 @@ Figure 6 : Processus collaboratif “Ajout d’un lot de documents”</p>
   </tbody>
 </table>
 
-<p>Table 19 Attributs de la classe “LotSoumission”</p>
+<p>Table 19 Attributs de la classe "LotSoumission"</p>
 
 <h3 id="flux-2---resultatajoutlotdocument-modelisation-des-flux-dinformations">Flux 2 - ResultatAjoutLotDocument MODELISATION DES FLUX D’INFORMATIONS</h3>
 
@@ -568,8 +574,8 @@ Figure 6 : Processus collaboratif “Ajout d’un lot de documents”</p>
 <p><br />
 Figure 11 Flux 2 - ResultatAjoutLotDocument</p>
 
-<h4 id="classe-lotsoumission-1">Classe “LotSoumission”</h4>
-<p>Un lot de soumission regroupe les fiches et les classeurs faisant partie d’une même demande de modification du contenu du dossier. Il atteste l’existence et le statut de la demande et est décrit par un ensemble d’attributs, ses métadonnées. Une fois créé, un lot de soumission est immuable à l’exception de son statut.</p>
+<h4 id="classe-lotsoumission-1">Classe "LotSoumission"</h4>
+<p>Un lot de soumission regroupe les fiches et les classeurs faisant partie d’une même demande de modification du contenu du dossier. Il atteste l’existence et le statut de la demande et est décrit par un ensemble d’attributs, ses métadonnées. Une fois créé, un lot de soumission est immuable à l'exception de son statut.</p>
 
 <table>
   <thead>
@@ -586,9 +592,9 @@ Figure 11 Flux 2 - ResultatAjoutLotDocument</p>
   </tbody>
 </table>
 
-<p>Table 20 Attributs de la classe “LotSoumission”</p>
+<p>Table 20 Attributs de la classe "LotSoumission"</p>
 
-<h4 id="classe-classeur-1">Classe “Classeur”</h4>
+<h4 id="classe-classeur-1">Classe "Classeur"</h4>
 
 <p>Un assemblage de fiches regroupées par catégorie.</p>
 
@@ -607,9 +613,9 @@ Figure 11 Flux 2 - ResultatAjoutLotDocument</p>
   </tbody>
 </table>
 
-<p>Table 21 Attributs de la classe “Classeur”</p>
+<p>Table 21 Attributs de la classe "Classeur"</p>
 
-<h4 id="classe-fiche-1">Classe “Fiche”</h4>
+<h4 id="classe-fiche-1">Classe "Fiche"</h4>
 
 <p>Une fiche représente le document stocké dans l’infrastructure de partage de documents. Elle contient les informations décrivant les caractéristiques principales d’un document servant au classement et à la recherche des documents.</p>
 
@@ -628,7 +634,7 @@ Figure 11 Flux 2 - ResultatAjoutLotDocument</p>
   </tbody>
 </table>
 
-<p>Table 22 Attributs de la classe “Fiche”</p>
+<p>Table 22 Attributs de la classe "Fiche"</p>
 
 
 
@@ -671,7 +677,7 @@ Figure 11 Flux 2 - ResultatAjoutLotDocument</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Oct 31, 2024 16:33+0000">2024-10-31</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 24, 2025 12:57+0000">2025-04-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

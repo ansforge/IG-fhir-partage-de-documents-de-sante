@@ -3,14 +3,14 @@
   "id" : "ans.fhir.fr.pdsm",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide ans.fhir.fr.pdsm</b></p><a name=\"ans.fhir.fr.pdsm\"> </a><a name=\"hcans.fhir.fr.pdsm\"> </a><a name=\"ans.fhir.fr.pdsm-fr-FR\"> </a><h2>PDSm</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm</pre></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide ans.fhir.fr.pdsm</b></p><a name=\"ans.fhir.fr.pdsm\"> </a><a name=\"hcans.fhir.fr.pdsm\"> </a><a name=\"ans.fhir.fr.pdsm-fr-FR\"> </a><h2>PDSm</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm</pre></div>"
   },
   "url" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm",
   "version" : "3.1.0",
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2024-10-31T16:33:35+00:00",
+  "date" : "2025-04-24T12:56:51+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -37,7 +37,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "6.0.2"
+    "version" : "6.2.0"
   },
   {
     "id" : "hl7ext",
@@ -47,7 +47,7 @@
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.1.0"
+    "version" : "5.2.0"
   },
   {
     "id" : "ihe_iti_mhd",
@@ -71,7 +71,7 @@
     "id" : "ans_fr_nos",
     "uri" : "https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos",
     "packageId" : "ans.fr.nos",
-    "version" : "1.3.0"
+    "version" : "1.5.0"
   }],
   "definition" : {
     "extension" : [{
@@ -362,7 +362,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools#0.2.0"
+      "valueCode" : "hl7.fhir.uv.tools.r4#0.5.0"
     },
     {
       "extension" : [{
@@ -929,7 +929,7 @@
             "valueUrl" : "st_ajout.html"
           }],
           "nameUrl" : "st_ajout.html",
-          "title" : "Ajout d'un lot de documents",
+          "title" : "Ajout d'un lot de documents (ITI-65)",
           "generation" : "markdown"
         },
         {
@@ -947,7 +947,7 @@
             "valueUrl" : "st_recherche_lot.html"
           }],
           "nameUrl" : "st_recherche_lot.html",
-          "title" : "Recherche de lot de soumission",
+          "title" : "Recherche de lot de soumission (ITI-66)",
           "generation" : "markdown"
         },
         {
@@ -956,7 +956,7 @@
             "valueUrl" : "st_recherche_fiche.html"
           }],
           "nameUrl" : "st_recherche_fiche.html",
-          "title" : "Recherche de fiche",
+          "title" : "Recherche de fiche (ITI-67)",
           "generation" : "markdown"
         },
         {
@@ -965,7 +965,7 @@
             "valueUrl" : "st_consultation.html"
           }],
           "nameUrl" : "st_consultation.html",
-          "title" : "Consultation de documents",
+          "title" : "Consultation de documents (ITI-68)",
           "generation" : "markdown"
         },
         {
@@ -974,7 +974,7 @@
             "valueUrl" : "st_ajout_simplifie.html"
           }],
           "nameUrl" : "st_ajout_simplifie.html",
-          "title" : "Ajout simplifié d'un document",
+          "title" : "Ajout simplifié d'un document (ITI-105)",
           "generation" : "markdown"
         }]
       },

@@ -40,7 +40,8 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"3.3"}
     h3,h4,h5,h6{--heading-prefix:"3.3"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
@@ -51,7 +52,12 @@
   </div>
   <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
     <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
   </div>
+
+  <div id="ig-search">
+ </div>
+
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Partage de Documents de Santé en mobilité (PDSm)</span>
@@ -91,7 +97,29 @@
     <a href="index.html">Accueil</a>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Description des flux
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 1 - Etude fonctionnelle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="specifications_fonctionnelles.html">Spécifications fonctionnelles</a>
+      </li>
+      <li>
+        <a href="sf_ajout.html">Ajout d&apos;un lot de documents</a>
+      </li>
+      <li>
+        <a href="sf_maj.html">Mise à jour de documents</a>
+      </li>
+      <li>
+        <a href="sf_recherche.html">Recherche de documents</a>
+      </li>
+      <li>
+        <a href="sf_consultation.html">Consultation de documents</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2 - Détail des transactions
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -115,28 +143,6 @@
       </li>
       <li>
         <a href="st_ajout_simplifie.html">Ajout simplifié d&apos;un document</a>
-      </li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Spécifications fonctionnelles
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="specifications_fonctionnelles.html">Spécifications fonctionnelles</a>
-      </li>
-      <li>
-        <a href="sf_ajout.html">Ajout d&apos;un lot de documents</a>
-      </li>
-      <li>
-        <a href="sf_maj.html">Mise à jour de documents</a>
-      </li>
-      <li>
-        <a href="sf_recherche.html">Recherche de documents</a>
-      </li>
-      <li>
-        <a href="sf_consultation.html">Consultation de documents</a>
       </li>
     </ul>
   </li>
@@ -239,7 +245,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <object data="fonctionnel/fig_4.png" type="image/png"></object>
 <p><br />
-Figure 4 : Processus collaboratif “Recherche de documents”</p>
+Figure 4 : Processus collaboratif "Recherche de documents"</p>
 
 <table>
   <tbody>
@@ -273,7 +279,7 @@ Figure 4 : Processus collaboratif “Recherche de documents”</p>
 <object data="fonctionnel/fig_8.png" type="image/png"></object>
 <p><br /></p>
 
-<p>Figure 8 : Processus collaboratif “Recherche de documents”</p>
+<p>Figure 8 : Processus collaboratif "Recherche de documents"</p>
 
 <h4 id="description-des-actions">Description des actions</h4>
 
@@ -287,15 +293,15 @@ Figure 4 : Processus collaboratif “Recherche de documents”</p>
   <tbody>
     <tr>
       <td>Transmettre la recherche de documents</td>
-      <td>Le consommateur de documents transmet à l’infrastructure de partage de documents une liste de critères de recherche, basés sur les informations-clés supportées par l’infrastructure de documents</td>
+      <td>Le consommateur de documents transmet à l'infrastructure de partage de documents une liste de critères de recherche, basés sur les informations-clés supportées par l'infrastructure de documents</td>
     </tr>
     <tr>
       <td>Traiter la réponse</td>
-      <td>Le consommateur de documents reçoit et traite la réponse à la recherche de documents. Le résultat de la recherche est affiché à l’utilisateur.</td>
+      <td>Le consommateur de documents reçoit et traite la réponse à la recherche de documents. Le résultat de la recherche est affiché à l'utilisateur.</td>
     </tr>
     <tr>
       <td>Traiter la recherche de documents</td>
-      <td> L’infrastructure de documents retourne au consommateur de documents la réponse à la recherche de documents.</td>
+      <td> L'infrastructure de documents retourne au consommateur de documents la réponse à la recherche de documents.</td>
     </tr>
   </tbody>
 </table>
@@ -359,7 +365,7 @@ Le document dont les caractéristiques principales correspondent aux critères d
     </tr>
     <tr>
       <td>idPatient</td>
-      <td>Représente l’identifiant du patient.</td>
+      <td>Représente l'identifiant du patient.</td>
     </tr>
     <tr>
       <td>statut</td>
@@ -408,11 +414,11 @@ Le document dont les caractéristiques principales correspondent aux critères d
     </tr>
     <tr>
       <td>idPatient</td>
-      <td>Représente l’identifiant du patient. </td>
+      <td>Représente l'identifiant du patient. </td>
     </tr>
     <tr>
       <td>secteurActivite</td>
-      <td> Secteur d’activité lié à la prise en charge de la personne, en lien avec le document produit.<br /> Nomenclature utilisée : TRE_R02-SecteurActivite</td>
+      <td> Secteur d'activité lié à la prise en charge de la personne, en lien avec le document produit.<br /> Nomenclature utilisée : TRE_R02-SecteurActivite</td>
     </tr>
     <tr>
       <td>dateDebutActe</td>
@@ -424,15 +430,15 @@ Le document dont les caractéristiques principales correspondent aux critères d
     </tr>
     <tr>
       <td>idFiche</td>
-      <td>Identifiant unique d’une fiche d’un document.</td>
+      <td>Identifiant unique d'une fiche d'un document.</td>
     </tr>
     <tr>
       <td>dateCreationDocument</td>
-      <td> Représente la date et l’heure de la création du document.</td>
+      <td> Représente la date et l'heure de la création du document.</td>
     </tr>
     <tr>
       <td>niveauConfidentialite</td>
-      <td>Contient les informations définissant le niveau de confidentialité d’un document.<br />Nomenclatures utilisées :<br />** TRE_A08-Confidentiality-HL7<br />** TRE_A07-StatusVisibiliteDocument<br />** JDV_J08-XdsConfidentialityCode-CISIS</td>
+      <td>Contient les informations définissant le niveau de confidentialité d'un document.<br />Nomenclatures utilisées :<br />** TRE_A08-Confidentiality-HL7<br />** TRE_A07-StatusVisibiliteDocument<br />** JDV_J08-XdsConfidentialityCode-CISIS</td>
     </tr>
     <tr>
       <td>idUnique</td>
@@ -440,7 +446,7 @@ Le document dont les caractéristiques principales correspondent aux critères d
     </tr>
     <tr>
       <td>statut</td>
-      <td> Représente le statut de la fiche d’un document.<br />Nomenclature(s) associée(s) :<br />** TRE_R269-AvailabilityStatusProvenanceOasis<br />** TRE_R270-AvailabilityStatus</td>
+      <td> Représente le statut de la fiche d'un document.<br />Nomenclature(s) associée(s) :<br />** TRE_R269-AvailabilityStatusProvenanceOasis<br />** TRE_R270-AvailabilityStatus</td>
     </tr>
     <tr>
       <td>dateFinActe</td>
@@ -456,7 +462,7 @@ Le document dont les caractéristiques principales correspondent aux critères d
     </tr>
     <tr>
       <td>auteur</td>
-      <td>Identifiant de la personne physique et/ou du dispositif auteur d’un document.</td>
+      <td>Identifiant de la personne physique et/ou du dispositif auteur d'un document.</td>
     </tr>
     <tr>
       <td>nomAuteurPersonnePhysique</td>
@@ -468,11 +474,11 @@ Le document dont les caractéristiques principales correspondent aux critères d
     </tr>
     <tr>
       <td>idFicheAssociation</td>
-      <td>Représente l’identifiant d’une association entre deux fiches.</td>
+      <td>Représente l'identifiant d'une association entre deux fiches.</td>
     </tr>
     <tr>
       <td>actePathologie</td>
-      <td> Actes et pathologies en rapport avec le document.<br />Nomenclatures utilisées :<br />** CCAM pour les actes médicaux (OID=”“1.2.250.1.213.2.5””);<br />** CIM-10 pour les diagnostics de pathologie (OID=”“2.16.840.1.113883.6.3””);<br />** TRE_A00-ProducteurDocNonPS pour les documents d’expression personnelle du patient.”</td>
+      <td> Actes et pathologies en rapport avec le document.<br />Nomenclatures utilisées :<br />** CCAM pour les actes médicaux (OID=""1.2.250.1.213.2.5"");<br />** CIM-10 pour les diagnostics de pathologie (OID=""2.16.840.1.113883.6.3"");<br />** TRE_A00-ProducteurDocNonPS pour les documents d'expression personnelle du patient."</td>
     </tr>
   </tbody>
 </table>
@@ -488,8 +494,8 @@ Le document dont les caractéristiques principales correspondent aux critères d
 
 <p>Figure 14 Flux 6 - ResultatRechercheDocument</p>
 
-<h4 id="classe-lotsoumission">Classe “LotSoumission”</h4>
-<p>Un lot de soumission regroupe les fiches et les classeurs faisant partie d’une même demande de modification du contenu du dossier. Il atteste l’existence et le statut de la demande et est décrit par un ensemble d’attributs, ses métadonnées. Une fois créé, un lot de soumission est immuable à l’exception de son statut.</p>
+<h4 id="classe-lotsoumission">Classe "LotSoumission"</h4>
+<p>Un lot de soumission regroupe les fiches et les classeurs faisant partie d’une même demande de modification du contenu du dossier. Il atteste l’existence et le statut de la demande et est décrit par un ensemble d’attributs, ses métadonnées. Une fois créé, un lot de soumission est immuable à l'exception de son statut.</p>
 
 <table>
   <thead>
@@ -509,7 +515,7 @@ Le document dont les caractéristiques principales correspondent aux critères d
     </tr>
     <tr>
       <td>idPatient : [0..1] Identifiant</td>
-      <td>Représente l’identifiant du patient.</td>
+      <td>Représente l'identifiant du patient.</td>
     </tr>
     <tr>
       <td>idSource : [0..1] Identifiant</td>
@@ -546,9 +552,9 @@ Le document dont les caractéristiques principales correspondent aux critères d
   </tbody>
 </table>
 
-<p>Table 26 Attributs de la classe “LotSoumission”</p>
+<p>Table 26 Attributs de la classe "LotSoumission"</p>
 
-<h4 id="classe-fiche">Classe “Fiche”</h4>
+<h4 id="classe-fiche">Classe "Fiche"</h4>
 <p>Une fiche représente le document stocké dans l’infrastructure de partage de documents. Elle contient les informations décrivant les caractéristiques principales d’un document servant au classement et à la recherche des documents.</p>
 
 <table>
@@ -561,7 +567,7 @@ Le document dont les caractéristiques principales correspondent aux critères d
   <tbody>
     <tr>
       <td>idFiche : [0..*] Identifiant</td>
-      <td>Identifiant unique d’une fiche d’un document.</td>
+      <td>Identifiant unique d'une fiche d'un document.</td>
     </tr>
     <tr>
       <td>idUnique : [0..1] Identifiant</td>
@@ -569,11 +575,11 @@ Le document dont les caractéristiques principales correspondent aux critères d
     </tr>
     <tr>
       <td>auteur : [1..*] Identifiant</td>
-      <td>Identifiant de la personne physique et/ou du dispositif auteur d’un document.</td>
+      <td>Identifiant de la personne physique et/ou du dispositif auteur d'un document.</td>
     </tr>
     <tr>
       <td>statut : [1..1] Code</td>
-      <td>Représente le statut de la fiche d’un document.<br /> Nomenclature(s) associée(s) :<br />** TRE_R269-AvailabilityStatusProvenanceOasis<br />** TRE_R270-AvailabilityStatus</td>
+      <td>Représente le statut de la fiche d'un document.<br /> Nomenclature(s) associée(s) :<br />** TRE_R269-AvailabilityStatusProvenanceOasis<br />** TRE_R270-AvailabilityStatus</td>
     </tr>
     <tr>
       <td>classeDocument : [0..1] Code</td>
@@ -589,11 +595,11 @@ Le document dont les caractéristiques principales correspondent aux critères d
     </tr>
     <tr>
       <td>dateCreationDocument : [1..1] DateHeure</td>
-      <td>Représente la date et l’heure de la création du document.</td>
+      <td>Représente la date et l'heure de la création du document.</td>
     </tr>
     <tr>
       <td>niveauConfidentialite : [0..*] Code</td>
-      <td>Contient les informations définissant le niveau de confidentialité d’un document.<br />Nomenclatures utilisées :<br />** TRE_A08-Confidentiality-HL7<br />** TRE_A07-StatusVisibiliteDocument<br />** JDV_J08-XdsConfidentialityCode-CISIS</td>
+      <td>Contient les informations définissant le niveau de confidentialité d'un document.<br />Nomenclatures utilisées :<br />** TRE_A08-Confidentiality-HL7<br />** TRE_A07-StatusVisibiliteDocument<br />** JDV_J08-XdsConfidentialityCode-CISIS</td>
     </tr>
     <tr>
       <td>cadreExercice : [0..1] Code</td>
@@ -601,11 +607,11 @@ Le document dont les caractéristiques principales correspondent aux critères d
     </tr>
     <tr>
       <td>idPatient : [0..1] Identifiant</td>
-      <td>Représente l’identifiant du patient.</td>
+      <td>Représente l'identifiant du patient.</td>
     </tr>
     <tr>
       <td>secteurActivite : [0..1] Code</td>
-      <td>Secteur d’activité lié à la prise en charge de la personne, en lien avec le document produit.<br />Nomenclature utilisée : TRE_R02-SecteurActivite</td>
+      <td>Secteur d'activité lié à la prise en charge de la personne, en lien avec le document produit.<br />Nomenclature utilisée : TRE_R02-SecteurActivite</td>
     </tr>
     <tr>
       <td>dateDebutActe : [0..1] DateHeure</td>
@@ -617,11 +623,11 @@ Le document dont les caractéristiques principales correspondent aux critères d
     </tr>
     <tr>
       <td>idFicheAssociation : [0..*] Identifiant</td>
-      <td>Représente l’identifiant d’une association entre deux fiches.</td>
+      <td>Représente l'identifiant d'une association entre deux fiches.</td>
     </tr>
     <tr>
       <td>association : [0..*] Code</td>
-      <td> Représente le type d’association entre deux fiches. <br /> Se référer aux spécifications techniques pour plus de détails sur la ou les nomenclatures utilisées.</td>
+      <td> Représente le type d'association entre deux fiches. <br /> Se référer aux spécifications techniques pour plus de détails sur la ou les nomenclatures utilisées.</td>
     </tr>
     <tr>
       <td>commentaire : [0..1] Texte</td>
@@ -633,7 +639,7 @@ Le document dont les caractéristiques principales correspondent aux critères d
     </tr>
     <tr>
       <td>langueDocument : [1..*] Code</td>
-      <td>Langue dans laquelle le document est rédigé, pour tous les documents produits par les systèmes initiateurs français, le codes est “fr-FR’.</td>
+      <td>Langue dans laquelle le document est rédigé, pour tous les documents produits par les systèmes initiateurs français, le codes est "fr-FR'.</td>
     </tr>
     <tr>
       <td>formatDocument : [0..1] Code</td>
@@ -641,7 +647,7 @@ Le document dont les caractéristiques principales correspondent aux critères d
     </tr>
     <tr>
       <td>actePathologie : [0..1] Code</td>
-      <td>Actes et pathologies en rapport avec le document.<br />Nomenclatures utilisées :<br />** CCAM pour les actes médicaux (OID=”“1.2.250.1.213.2.5””);<br />** CIM-10 pour les diagnostics de pathologie (OID=”“2.16.840.1.113883.6.3””);<br />** TRE_A00-ProducteurDocNonPS pour les documents d’expression personnelle du patient.”</td>
+      <td>Actes et pathologies en rapport avec le document.<br />Nomenclatures utilisées :<br />** CCAM pour les actes médicaux (OID=""1.2.250.1.213.2.5"");<br />** CIM-10 pour les diagnostics de pathologie (OID=""2.16.840.1.113883.6.3"");<br />** TRE_A00-ProducteurDocNonPS pour les documents d'expression personnelle du patient."</td>
     </tr>
     <tr>
       <td>version : [0..1] Numerique</td>
@@ -654,7 +660,7 @@ Le document dont les caractéristiques principales correspondent aux critères d
   </tbody>
 </table>
 
-<p>Table 27 Attributs de la classe “Fiche”</p>
+<p>Table 27 Attributs de la classe "Fiche"</p>
 
 
 
@@ -696,7 +702,7 @@ Le document dont les caractéristiques principales correspondent aux critères d
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Oct 31, 2024 16:33+0000">2024-10-31</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 24, 2025 12:57+0000">2025-04-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

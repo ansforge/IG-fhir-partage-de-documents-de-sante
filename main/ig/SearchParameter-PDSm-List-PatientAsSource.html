@@ -40,7 +40,8 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"5.8"}
     h3,h4,h5,h6{--heading-prefix:"5.8"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
@@ -51,7 +52,12 @@
   </div>
   <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
     <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
   </div>
+
+  <div id="ig-search">
+ </div>
+
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Partage de Documents de Santé en mobilité (PDSm)</span>
@@ -91,7 +97,29 @@
     <a href="index.html">Accueil</a>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Description des flux
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 1 - Etude fonctionnelle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="specifications_fonctionnelles.html">Spécifications fonctionnelles</a>
+      </li>
+      <li>
+        <a href="sf_ajout.html">Ajout d&apos;un lot de documents</a>
+      </li>
+      <li>
+        <a href="sf_maj.html">Mise à jour de documents</a>
+      </li>
+      <li>
+        <a href="sf_recherche.html">Recherche de documents</a>
+      </li>
+      <li>
+        <a href="sf_consultation.html">Consultation de documents</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2 - Détail des transactions
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -115,28 +143,6 @@
       </li>
       <li>
         <a href="st_ajout_simplifie.html">Ajout simplifié d&apos;un document</a>
-      </li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Spécifications fonctionnelles
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="specifications_fonctionnelles.html">Spécifications fonctionnelles</a>
-      </li>
-      <li>
-        <a href="sf_ajout.html">Ajout d&apos;un lot de documents</a>
-      </li>
-      <li>
-        <a href="sf_maj.html">Mise à jour de documents</a>
-      </li>
-      <li>
-        <a href="sf_recherche.html">Recherche de documents</a>
-      </li>
-      <li>
-        <a href="sf_consultation.html">Consultation de documents</a>
       </li>
     </ul>
   </li>
@@ -290,7 +296,7 @@
 
 
 <p>
-<p>Paramètre de recherche chaîné créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l’élément source:Patient.given et source:Patient.family</p>
+<p>Paramètre de recherche chaîné créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément source:Patient.given et source:Patient.family</p>
 
 </p>
 
@@ -307,8 +313,8 @@
   
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: SearchParameter PDSm-List-PatientAsSource</b></p><a name="PDSm-List-PatientAsSource"> </a><a name="hcPDSm-List-PatientAsSource"> </a><a name="PDSm-List-PatientAsSource-fr-FR"> </a><h2>PDSmListPatientAsSource</h2><p>Parameter <code>source</code>:<code>reference</code></p><div><p>Paramètre de recherche chaîné créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément source:Patient.given et source:Patient.family</p>
-</div><table class="grid"><tr><td>Resource</td><td><a href="http://hl7.org/fhir/R4/list.html">List</a></td></tr><tr><td>Expression</td><td><code>List.source</code></td></tr><tr><td>Processing Mode</td><td>Normal</td></tr><tr><td>Target Resources</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: The parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: The parameter may have multiple values (separated by comma) where at least one must be true</li></ul></td></tr><tr><td>Modifiers</td><td>Allowed: exact, contains</td></tr><tr><td>Chains</td><td>Allowed: given, family</td></tr></table></div>
+  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: SearchParameter PDSm-List-PatientAsSource</b></p><a name="PDSm-List-PatientAsSource"> </a><a name="hcPDSm-List-PatientAsSource"> </a><a name="PDSm-List-PatientAsSource-fr-FR"> </a><h2>PDSmListPatientAsSource</h2><p>Paramètre <code>source</code>:<code>reference</code></p><div><p>Paramètre de recherche chaîné créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément source:Patient.given et source:Patient.family</p>
+</div><table class="grid"><tr><td>Ressource</td><td><a href="http://hl7.org/fhir/R4/list.html">List</a></td></tr><tr><td>Expression</td><td><code>List.source</code></td></tr><tr><td>Processing Mode</td><td>Normal</td></tr><tr><td>Target Resources</td><td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: The parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: The parameter may have multiple values (separated by comma) where at least one must be true</li></ul></td></tr><tr><td>Modifiers</td><td>Allowed: exact, contains</td></tr><tr><td>Chains</td><td>Allowed: given, family</td></tr></table></div>
 
   <!-- insert notes if present -->
   
@@ -355,7 +361,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Oct 31, 2024 16:33+0000">2024-10-31</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 24, 2025 12:57+0000">2025-04-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

@@ -40,7 +40,8 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"5"}
     h3,h4,h5,h6{--heading-prefix:"5.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
@@ -51,7 +52,12 @@
   </div>
   <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
     <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
   </div>
+
+  <div id="ig-search">
+ </div>
+
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Partage de Documents de Santé en mobilité (PDSm)</span>
@@ -91,7 +97,29 @@
     <a href="index.html">Accueil</a>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Description des flux
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 1 - Etude fonctionnelle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="specifications_fonctionnelles.html">Spécifications fonctionnelles</a>
+      </li>
+      <li>
+        <a href="sf_ajout.html">Ajout d&apos;un lot de documents</a>
+      </li>
+      <li>
+        <a href="sf_maj.html">Mise à jour de documents</a>
+      </li>
+      <li>
+        <a href="sf_recherche.html">Recherche de documents</a>
+      </li>
+      <li>
+        <a href="sf_consultation.html">Consultation de documents</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2 - Détail des transactions
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -115,28 +143,6 @@
       </li>
       <li>
         <a href="st_ajout_simplifie.html">Ajout simplifié d&apos;un document</a>
-      </li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Spécifications fonctionnelles
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="specifications_fonctionnelles.html">Spécifications fonctionnelles</a>
-      </li>
-      <li>
-        <a href="sf_ajout.html">Ajout d&apos;un lot de documents</a>
-      </li>
-      <li>
-        <a href="sf_maj.html">Mise à jour de documents</a>
-      </li>
-      <li>
-        <a href="sf_recherche.html">Recherche de documents</a>
-      </li>
-      <li>
-        <a href="sf_consultation.html">Consultation de documents</a>
       </li>
     </ul>
   </li>
@@ -263,7 +269,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="CapabilityStatement/PDSm-GestionnaireDePartageDeDocuments">CI-SIS Partage-De-Documents-De-Sante - GestionnaireDePartageDeDocuments</a>
             </td>
             <td>
-<p>Il s’agit d’un système d’information ou d’un composant d’un système d’information qui stocke, classe et archive les documents d’un dossier patient.</p>
+<p>Il s’agit d’un système d’information ou d’un composant d'un système d’information qui stocke, classe et archive les documents d’un dossier patient.</p>
 </td>
          </tr>
          <tr>
@@ -289,7 +295,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/PDSm-DocumentReference-period-end">PDSm-DocumentReference-period-end</a>
             </td>
             <td>
-<p>Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l’élément context.period.end correspondant à lobjet dateFinActe</p>
+<p>Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément context.period.end correspondant à lobjet dateFinActe</p>
 </td>
          </tr>
          <tr>
@@ -298,7 +304,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/PDSm-DocumentReference-period-start">PDSm-DocumentReference-period-start</a>
             </td>
             <td>
-<p>Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l’élément context.period.start correspondant à lobjet dateDebutActe</p>
+<p>Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément context.period.start correspondant à lobjet dateDebutActe</p>
 </td>
          </tr>
          <tr>
@@ -307,7 +313,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/PDSm-List-PatientAsSource">PDSm-List-PatientAsSource</a>
             </td>
             <td>
-<p>Paramètre de recherche chaîné créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l’élément source:Patient.given et source:Patient.family</p>
+<p>Paramètre de recherche chaîné créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément source:Patient.given et source:Patient.family</p>
 </td>
          </tr>
          <tr>
@@ -316,7 +322,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/PDSm-List-PatientAsSubject">PDSm-List-PatientAsSubject</a>
             </td>
             <td>
-<p>Paramètre de recherche chaîné créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l’élément subject:Patient.identifier</p>
+<p>Paramètre de recherche chaîné créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément subject:Patient.identifier</p>
 </td>
          </tr>
          <tr>
@@ -325,7 +331,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/PDSm-List-PractitionerRoleAsSource">PDSm-List-PractitionerRoleAsSource</a>
             </td>
             <td>
-<p>Paramètre de recherche chaîné créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l’élément source:PractitionerRole.practitioner:Practitioner.given et source:PractitionerRole.practitioner:Practitioner.family</p>
+<p>Paramètre de recherche chaîné créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément source:PractitionerRole.practitioner:Practitioner.given et source:PractitionerRole.practitioner:Practitioner.family</p>
 </td>
          </tr>
          <tr>
@@ -334,7 +340,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/PDSm-List-authorOrg">PDSm-List-authorOrg</a>
             </td>
             <td>
-<p>Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l’élément sourceId</p>
+<p>Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément sourceId</p>
 </td>
          </tr>
          <tr>
@@ -343,7 +349,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/PDSm-isArchived">PDSm-isArchived</a>
             </td>
             <td>
-<p>Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère derecherche l’élément isArchived qui permet distinguer les lots de soumission et les fiches archivés des actives.</p>
+<p>Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère derecherche l'élément isArchived qui permet distinguer les lots de soumission et les fiches archivés des actives.</p>
 </td>
          </tr>
       </tbody>
@@ -360,7 +366,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/pdsm-comprehensive-document-reference">PDSm Comprehensive DocumentReference</a>
             </td>
             <td>
-<p>Profil spécifique dérivé du profil IHE MHD v4.0.1 “ComprehensiveDocumentReference” créé pour le volet “Partage de documents de santé en mobilité”.</p>
+<p>Profil spécifique dérivé du profil IHE MHD v4.0.1 "ComprehensiveDocumentReference" créé pour le volet "Partage de documents de santé en mobilité".</p>
 </td>
          </tr>
          <tr>
@@ -369,7 +375,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/pdsm-comprehensive-provide-document-bundle">PDSm Comprehensive Provide Document Bundle</a>
             </td>
             <td>
-<p>Profil basé sur la transaction IHE “Provide Document Bundle [ITI-65]” du profil MHD ; le bundle est de type transaction et contient :</p>
+<p>Profil basé sur la transaction IHE "Provide Document Bundle [ITI-65]" du profil MHD ; le bundle est de type transaction et contient :</p>
 <ul>
   <li>une ressource de type « List » représentant le lot de soumission,</li>
   <li>une à plusieurs ressources de type « DocumentReference », représentant les fiches de documents,</li>
@@ -387,7 +393,7 @@ Dans le cas d’une mise à jour d’un classeur, comme List.status ou List.entr
                   title="StructureDefinition/pdsm-find-documentreferences-comprehensive-response">PDSm Find DocumentReferences Comprehensive Response</a>
             </td>
             <td>
-<p>Profil de réponse de la transaction IHE “Find Document References [ITI-67]” basée sur le bundle MHD FindDocumentReferencesComprehensiveResponseMessage et profilé pour le volet PDSm</p>
+<p>Profil de réponse de la transaction IHE "Find Document References [ITI-67]" basée sur le bundle MHD FindDocumentReferencesComprehensiveResponseMessage et profilé pour le volet PDSm</p>
 </td>
          </tr>
          <tr>
@@ -396,7 +402,7 @@ Dans le cas d’une mise à jour d’un classeur, comme List.status ou List.entr
                   title="StructureDefinition/pdsm-find-lists-response">PDSm Find Lists Response</a>
             </td>
             <td>
-<p>Profil de réponse de la transaction IHE “Find Document Lists [ITI-66]” basée sur le bundle MHD FindDocumentListsResponseMessage et profilé pour le volet PDSm</p>
+<p>Profil de réponse de la transaction IHE "Find Document Lists [ITI-66]" basée sur le bundle MHD FindDocumentListsResponseMessage et profilé pour le volet PDSm</p>
 </td>
          </tr>
          <tr>
@@ -405,7 +411,7 @@ Dans le cas d’une mise à jour d’un classeur, comme List.status ou List.entr
                   title="StructureDefinition/pdsm-folder-comprehensive">PDSm Folder Comprehensive</a>
             </td>
             <td>
-<p>Profil spécifique dérivé du profil IHE MHD « Comprehensive Folder » créé pour le volet ANS “Partage de documents de santé en mobilité” ; ce profil concerne le classeur.</p>
+<p>Profil spécifique dérivé du profil IHE MHD « Comprehensive Folder » créé pour le volet ANS "Partage de documents de santé en mobilité" ; ce profil concerne le classeur.</p>
 </td>
          </tr>
          <tr>
@@ -414,11 +420,11 @@ Dans le cas d’une mise à jour d’un classeur, comme List.status ou List.entr
                   title="StructureDefinition/pdsm-simplified-publish">PDSm Simplified Publish Document Reference</a>
             </td>
             <td>
-<p>Profil utilisé dans le cadre du flux 9 d’ajout simplifié de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105.</p>
+<p>Profil utilisé dans le cadre du flux 9 d'ajout simplifié de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105.</p>
 
 <p>Contrairement au profil PDSm_ComprehensiveDocumentReference, le document est directement inclus dans DocumentReference.attachment.data et non dans une ressource « Binary » externe.</p>
 
-<p>La publication simplifiée est une simple requête HTTP POST d’une ressource DocumentReference conforme à ce profil.</p>
+<p>La publication simplifiée est une simple requête HTTP POST d'une ressource DocumentReference conforme à ce profil.</p>
 </td>
          </tr>
          <tr>
@@ -427,7 +433,7 @@ Dans le cas d’une mise à jour d’un classeur, comme List.status ou List.entr
                   title="StructureDefinition/pdsm-submissionset-comprehensive">PDSm SubmissionSet Comprehensive</a>
             </td>
             <td>
-<p>Profil spécifique dérivé du profil IHE MHD « ComprehensiveSubmissionSet » créé pour le volet ANS “Partage de documents de santé en mobilité” ; ce profil concerne le lot de soumission.</p>
+<p>Profil spécifique dérivé du profil IHE MHD « ComprehensiveSubmissionSet » créé pour le volet ANS "Partage de documents de santé en mobilité" ; ce profil concerne le lot de soumission.</p>
 </td>
          </tr>
       </tbody>
@@ -453,7 +459,7 @@ Dans le cas d’une mise à jour d’un classeur, comme List.status ou List.entr
                   title="StructureDefinition/pdsm-ext-is-archived">PDSm_isArchived</a>
             </td>
             <td>
-<p>Extension définie par le volet ANS “Volet Partage de documents de santé en mobilité” sur les ressources List et DocumentReference pour distinguer les lots de soumission et les fiches archivés des actives.</p>
+<p>Extension définie par le volet ANS "Volet Partage de documents de santé en mobilité" sur les ressources List et DocumentReference pour distinguer les lots de soumission et les fiches archivés des actives.</p>
 </td>
          </tr>
       </tbody>
@@ -512,7 +518,7 @@ Dans le cas d’une mise à jour d’un classeur, comme List.status ou List.entr
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Oct 31, 2024 16:33+0000">2024-10-31</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 24, 2025 12:57+0000">2025-04-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
