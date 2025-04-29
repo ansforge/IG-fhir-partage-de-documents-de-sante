@@ -139,4 +139,4 @@ Generic: line 0, col 0, Warning - The HTML fragment 'globals-table.xhtml' is not
 /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-submissionset-comprehensive.json: line 0, col 0, Warning - The Implementation Guide contains no examples for this profile (BUSINESSRULE)
 
 err = 1, warn = 93, info = 41
-IG Publisher Version: 1.8.24
+IG Publisher Version: 1.8.25
