@@ -67,6 +67,8 @@ Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"Comprehensi
 * description ^short = "Commentaire associé au document."
 
 * securityLabel obeys constr-bind-securityLabel
+//* securityLabel from https://mos.esante.gouv.fr/NOS/JDV_J08-XdsConfidentialityCode-CISIS/FHIR/JDV-J08-XdsConfidentialityCode-CISIS (required)
+// Pb : JDV de base par FHIR extensible
 * securityLabel ^short = "Contient les informations définissant le niveau de confidentialité d'un document."
 
 // ###########
