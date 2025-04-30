@@ -10,7 +10,7 @@
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2025-04-29T16:00:10+00:00",
+  "date" : "2025-04-30T07:38:18+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -712,6 +712,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "List"
+      }],
+      "reference" : {
+        "reference" : "List/ExampleSubmissionSet"
+      },
+      "name" : "Exemple de lot de soumission PDSm",
+      "description" : "Exemple conforme au profil PDSm_SubmissionSetComprehensive.",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-submissionset-comprehensive"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
       }],
       "reference" : {
@@ -812,7 +824,7 @@
         "reference" : "StructureDefinition/pdsm-submissionset-comprehensive"
       },
       "name" : "PDSm SubmissionSet Comprehensive",
-      "description" : "Profil spécifique dérivé du profil IHE MHD « ComprehensiveSubmissionSet » créé pour le volet ANS \"Partage de documents de santé en mobilité\" ; ce profil concerne le lot de soumission.",
+      "description" : "Profil du lot de soumission dérivé de la ressource List et du profil IHE MHD « ComprehensiveSubmissionSet ».",
       "exampleBoolean" : false
     },
     {

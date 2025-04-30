@@ -39,7 +39,7 @@ En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J03-Xd
   <name value="PDSm_SubmissionSetComprehensive"/>
   <title value="PDSm SubmissionSet Comprehensive"/>
   <status value="active"/>
-  <date value="2025-04-29T16:00:10+00:00"/>
+  <date value="2025-04-30T07:38:18+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -48,7 +48,7 @@ En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J03-Xd
       <value value="https://esante.gouv.fr"/>
     </telecom>
   </contact>
-  <description value="Profil spécifique dérivé du profil IHE MHD « ComprehensiveSubmissionSet » créé pour le volet ANS &quot;Partage de documents de santé en mobilité&quot; ; ce profil concerne le lot de soumission."/>
+  <description value="Profil du lot de soumission dérivé de la ressource List et du profil IHE MHD « ComprehensiveSubmissionSet »."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

@@ -90,12 +90,14 @@
       "DocumentReference.contained.telecom"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-data-trace": [
+      "List.contained.meta",
       "Organization.meta"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-mailbox-mss-metadata": [
       "DocumentReference.contained.telecom"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types": [
+      "List.contained.type",
       "Organization.type"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-smartcard": [

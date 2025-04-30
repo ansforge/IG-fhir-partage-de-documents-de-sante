@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "PDSm"] ; # 
   fhir:title [ fhir:v "Partage de Documents de Santé en mobilité (PDSm)"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-04-29T16:00:10+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-04-30T07:38:18+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -983,6 +983,25 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "List"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/pdsm/List/ExampleSubmissionSet> ;
+         fhir:reference [ fhir:v "List/ExampleSubmissionSet" ]
+       ] ;
+       fhir:name [ fhir:v "Exemple de lot de soumission PDSm" ] ;
+       fhir:description [ fhir:v "Exemple conforme au profil PDSm_SubmissionSetComprehensive." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-submissionset-comprehensive"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-submissionset-comprehensive>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "Patient"
          ]
        ] ) ;
@@ -1133,7 +1152,7 @@
          fhir:reference [ fhir:v "StructureDefinition/pdsm-submissionset-comprehensive" ]
        ] ;
        fhir:name [ fhir:v "PDSm SubmissionSet Comprehensive" ] ;
-       fhir:description [ fhir:v "Profil spécifique dérivé du profil IHE MHD « ComprehensiveSubmissionSet » créé pour le volet ANS \"Partage de documents de santé en mobilité\" ; ce profil concerne le lot de soumission." ] ;
+       fhir:description [ fhir:v "Profil du lot de soumission dérivé de la ressource List et du profil IHE MHD « ComprehensiveSubmissionSet »." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
