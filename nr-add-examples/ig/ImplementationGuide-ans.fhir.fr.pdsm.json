@@ -10,7 +10,7 @@
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2025-04-30T07:55:10+00:00",
+  "date" : "2025-04-30T08:28:31+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -59,19 +59,19 @@
     "id" : "ans_fhir_fr_annuaire",
     "uri" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/ImplementationGuide/ans.fhir.fr.annuaire",
     "packageId" : "ans.fhir.fr.annuaire",
-    "version" : "1.0.1"
+    "version" : "1.1.0"
   },
   {
     "id" : "hl7_fhir_fr_core",
     "uri" : "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core",
     "packageId" : "hl7.fhir.fr.core",
-    "version" : "2.0.1"
+    "version" : "2.1.0"
   },
   {
-    "id" : "ans_fr_nos",
-    "uri" : "https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos",
-    "packageId" : "ans.fr.nos",
-    "version" : "1.5.0"
+    "id" : "ans_fr_terminologies",
+    "uri" : "https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies",
+    "packageId" : "ans.fr.terminologies",
+    "version" : "0.1.0-ballot"
   }],
   "definition" : {
     "extension" : [{
@@ -736,6 +736,29 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DocumentReference"
+      }],
+      "reference" : {
+        "reference" : "DocumentReference/PDSmSimplifiedExample"
+      },
+      "name" : "Exemple de publication simplifiée PDSm",
+      "description" : "Note d'évolution suite à une consultation de suivi.",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/6789"
+      },
+      "name" : "Exemple de ressource Binary - Fichier PDF",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
       }],
       "reference" : {
@@ -764,7 +787,7 @@
         "reference" : "StructureDefinition/pdsm-comprehensive-document-reference"
       },
       "name" : "PDSm Comprehensive DocumentReference",
-      "description" : "Profil contenant les métadonnées du document ainsi que le lien vers le document dérivé de la ressource DocumentReference et du profil IHE MHD v4.0.1 \"ComprehensiveDocumentReference\"",
+      "description" : "Profil contenant les métadonnées du document ainsi que le lien vers la ressource Binary contenant le document dérivé de la ressource DocumentReference et du profil IHE MHD v4.0.1 \"ComprehensiveDocumentReference\"",
       "exampleBoolean" : false
     },
     {

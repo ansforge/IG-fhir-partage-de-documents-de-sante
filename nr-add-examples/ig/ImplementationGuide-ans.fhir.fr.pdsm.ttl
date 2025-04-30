@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "PDSm"] ; # 
   fhir:title [ fhir:v "Partage de Documents de Santé en mobilité (PDSm)"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-04-30T07:55:10+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-04-30T08:28:31+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -82,7 +82,7 @@
        fhir:link <https://interop.esante.gouv.fr/ig/fhir/annuaire/ImplementationGuide/ans.fhir.fr.annuaire>
      ] ;
      fhir:packageId [ fhir:v "ans.fhir.fr.annuaire" ] ;
-     fhir:version [ fhir:v "1.0.1" ]
+     fhir:version [ fhir:v "1.1.0" ]
   ] [
      fhir:id [ fhir:v "hl7_fhir_fr_core" ] ;
      fhir:uri [
@@ -90,15 +90,15 @@
        fhir:link <https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core>
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.fr.core" ] ;
-     fhir:version [ fhir:v "2.0.1" ]
+     fhir:version [ fhir:v "2.1.0" ]
   ] [
-     fhir:id [ fhir:v "ans_fr_nos" ] ;
+     fhir:id [ fhir:v "ans_fr_terminologies" ] ;
      fhir:uri [
-       fhir:v "https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos"^^xsd:anyURI ;
-       fhir:link <https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos>
+       fhir:v "https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies>
      ] ;
-     fhir:packageId [ fhir:v "ans.fr.nos" ] ;
-     fhir:version [ fhir:v "1.5.0" ]
+     fhir:packageId [ fhir:v "ans.fr.terminologies" ] ;
+     fhir:version [ fhir:v "0.1.0-ballot" ]
   ] ) ; # 
   fhir:definition [
      fhir:extension ( [
@@ -1021,6 +1021,42 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "DocumentReference"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/pdsm/DocumentReference/PDSmSimplifiedExample> ;
+         fhir:reference [ fhir:v "DocumentReference/PDSmSimplifiedExample" ]
+       ] ;
+       fhir:name [ fhir:v "Exemple de publication simplifiée PDSm" ] ;
+       fhir:description [ fhir:v "Note d'évolution suite à une consultation de suivi." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Binary"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/pdsm/Binary/6789> ;
+         fhir:reference [ fhir:v "Binary/6789" ]
+       ] ;
+       fhir:name [ fhir:v "Exemple de ressource Binary - Fichier PDF" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "Patient"
          ]
        ] ) ;
@@ -1063,7 +1099,7 @@
          fhir:reference [ fhir:v "StructureDefinition/pdsm-comprehensive-document-reference" ]
        ] ;
        fhir:name [ fhir:v "PDSm Comprehensive DocumentReference" ] ;
-       fhir:description [ fhir:v "Profil contenant les métadonnées du document ainsi que le lien vers le document dérivé de la ressource DocumentReference et du profil IHE MHD v4.0.1 \"ComprehensiveDocumentReference\"" ] ;
+       fhir:description [ fhir:v "Profil contenant les métadonnées du document ainsi que le lien vers la ressource Binary contenant le document dérivé de la ressource DocumentReference et du profil IHE MHD v4.0.1 \"ComprehensiveDocumentReference\"" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false

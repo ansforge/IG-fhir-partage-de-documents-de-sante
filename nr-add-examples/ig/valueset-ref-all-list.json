@@ -12,9 +12,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.620"],
       "uses" : {
       },
+      "StructureDefinition-pdsm-find-documentreferences-comprehensive-response.html" : "PDSm Find DocumentReferences Comprehensive Response",
       "StructureDefinition-pdsm-comprehensive-provide-document-bundle.html" : "PDSm Comprehensive Provide Document Bundle",
-      "StructureDefinition-pdsm-find-lists-response.html" : "PDSm Find Lists Response",
-      "StructureDefinition-pdsm-find-documentreferences-comprehensive-response.html" : "PDSm Find DocumentReferences Comprehensive Response"
+      "StructureDefinition-pdsm-find-lists-response.html" : "PDSm Find Lists Response"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/common-tags",
@@ -28,11 +28,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.79"],
       "uses" : {
       },
-      "StructureDefinition-pdsm-comprehensive-provide-document-bundle.html" : "PDSm Comprehensive Provide Document Bundle",
       "StructureDefinition-pdsm-folder-comprehensive.html" : "PDSm Folder Comprehensive",
       "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference",
-      "StructureDefinition-pdsm-submissionset-comprehensive.html" : "PDSm SubmissionSet Comprehensive",
-      "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
+      "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference",
+      "StructureDefinition-pdsm-comprehensive-provide-document-bundle.html" : "PDSm Comprehensive Provide Document Bundle",
+      "StructureDefinition-pdsm-submissionset-comprehensive.html" : "PDSm SubmissionSet Comprehensive"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/composition-status",
@@ -90,9 +90,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.624"],
       "uses" : {
       },
+      "StructureDefinition-pdsm-find-documentreferences-comprehensive-response.html" : "PDSm Find DocumentReferences Comprehensive Response",
       "StructureDefinition-pdsm-comprehensive-provide-document-bundle.html" : "PDSm Comprehensive Provide Document Bundle",
-      "StructureDefinition-pdsm-find-lists-response.html" : "PDSm Find Lists Response",
-      "StructureDefinition-pdsm-find-documentreferences-comprehensive-response.html" : "PDSm Find DocumentReferences Comprehensive Response"
+      "StructureDefinition-pdsm-find-lists-response.html" : "PDSm Find Lists Response"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/identifier-type",
@@ -134,13 +134,13 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-pdsm-comprehensive-provide-document-bundle.html" : "PDSm Comprehensive Provide Document Bundle",
       "StructureDefinition-pdsm-folder-comprehensive.html" : "PDSm Folder Comprehensive",
       "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference",
-      "StructureDefinition-pdsm-find-lists-response.html" : "PDSm Find Lists Response",
+      "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference",
       "StructureDefinition-pdsm-find-documentreferences-comprehensive-response.html" : "PDSm Find DocumentReferences Comprehensive Response",
-      "StructureDefinition-pdsm-submissionset-comprehensive.html" : "PDSm SubmissionSet Comprehensive",
-      "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
+      "StructureDefinition-pdsm-comprehensive-provide-document-bundle.html" : "PDSm Comprehensive Provide Document Bundle",
+      "StructureDefinition-pdsm-find-lists-response.html" : "PDSm Find Lists Response",
+      "StructureDefinition-pdsm-submissionset-comprehensive.html" : "PDSm SubmissionSet Comprehensive"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/list-empty-reason",
@@ -244,8 +244,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.27"],
       "uses" : {
       },
-      "StructureDefinition-pdsm-submissionset-comprehensive.html" : "PDSm SubmissionSet Comprehensive",
-      "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
+      "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference",
+      "StructureDefinition-pdsm-submissionset-comprehensive.html" : "PDSm SubmissionSet Comprehensive"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/search-entry-mode",
@@ -259,9 +259,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.622"],
       "uses" : {
       },
+      "StructureDefinition-pdsm-find-documentreferences-comprehensive-response.html" : "PDSm Find DocumentReferences Comprehensive Response",
       "StructureDefinition-pdsm-comprehensive-provide-document-bundle.html" : "PDSm Comprehensive Provide Document Bundle",
-      "StructureDefinition-pdsm-find-lists-response.html" : "PDSm Find Lists Response",
-      "StructureDefinition-pdsm-find-documentreferences-comprehensive-response.html" : "PDSm Find DocumentReferences Comprehensive Response"
+      "StructureDefinition-pdsm-find-lists-response.html" : "PDSm Find Lists Response"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/security-labels",
@@ -281,11 +281,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.47"],
       "uses" : {
       },
-      "StructureDefinition-pdsm-comprehensive-provide-document-bundle.html" : "PDSm Comprehensive Provide Document Bundle",
       "StructureDefinition-pdsm-folder-comprehensive.html" : "PDSm Folder Comprehensive",
       "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference",
-      "StructureDefinition-pdsm-submissionset-comprehensive.html" : "PDSm SubmissionSet Comprehensive",
-      "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
+      "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference",
+      "StructureDefinition-pdsm-comprehensive-provide-document-bundle.html" : "PDSm Comprehensive Provide Document Bundle",
+      "StructureDefinition-pdsm-submissionset-comprehensive.html" : "PDSm SubmissionSet Comprehensive"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v3-ActCode",
@@ -302,9 +302,9 @@
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS/FHIR/JDV-J02-XdsHealthcareFacilityTypeCode-CISIS",
-      "version" : "1.5.0",
+      "version" : "20241213120000",
       "status" : "active",
-      "name" : "JDV_J02-XdsHealthcareFacilityTypeCode-CISIS",
+      "name" : "JDV_J02_XdsHealthcareFacilityTypeCode_CISIS",
       "title" : null,
       "description" : "XDS healthcareFacilityTypeCode CI-SIS",
       "systems" : [
@@ -320,9 +320,9 @@
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J03-XdsContentTypeCode-CISIS/FHIR/JDV-J03-XdsContentTypeCode-CISIS",
-      "version" : "1.5.0",
+      "version" : "20241213120000",
       "status" : "active",
-      "name" : "JDV_J03-XdsContentTypeCode-CISIS",
+      "name" : "JDV_J03_XdsContentTypeCode_CISIS",
       "title" : null,
       "description" : "XDS contentTypeCode CI-SIS",
       "systems" : [
@@ -339,9 +339,9 @@
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J04-XdsPracticeSettingCode-CISIS/FHIR/JDV-J04-XdsPracticeSettingCode-CISIS",
-      "version" : "1.5.0",
+      "version" : "20240927120000",
       "status" : "active",
-      "name" : "JDV_J04-XdsPracticeSettingCode-CISIS",
+      "name" : "JDV_J04_XdsPracticeSettingCode_CISIS",
       "title" : null,
       "description" : "XDS practiceSettingCode CI-SIS",
       "systems" : [
@@ -357,9 +357,9 @@
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J06-XdsClassCode-CISIS/FHIR/JDV-J06-XdsClassCode-CISIS",
-      "version" : "1.5.0",
+      "version" : "20230922120000",
       "status" : "active",
-      "name" : "JDV_J06-XdsClassCode-CISIS",
+      "name" : "JDV_J06_XdsClassCode_CISIS",
       "title" : null,
       "description" : "XDS classCode CI-SIS",
       "systems" : [
@@ -375,9 +375,9 @@
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/FHIR/JDV-J07-XdsTypeCode-CISIS",
-      "version" : "1.5.0",
+      "version" : "20240927120000",
       "status" : "active",
-      "name" : "JDV_J07-XdsTypeCode-CISIS",
+      "name" : "JDV_J07_XdsTypeCode_CISIS",
       "title" : null,
       "description" : "XDS typeCode CI-SIS",
       "systems" : [
@@ -394,9 +394,9 @@
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J10-XdsFormatCode-CISIS/FHIR/JDV-J10-XdsFormatCode-CISIS",
-      "version" : "1.5.0",
+      "version" : "20240726120000",
       "status" : "active",
-      "name" : "JDV_J10-XdsFormatCode-CISIS",
+      "name" : "JDV_J10_XdsFormatCode_CISIS",
       "title" : null,
       "description" : "XDS formatCode documents CI-SIS",
       "systems" : [

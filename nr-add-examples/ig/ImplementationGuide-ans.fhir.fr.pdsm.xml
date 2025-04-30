@@ -10,7 +10,7 @@
   <name value="PDSm"/>
   <title value="Partage de Documents de Santé en mobilité (PDSm)"/>
   <status value="active"/>
-  <date value="2025-04-30T07:55:10+00:00"/>
+  <date value="2025-04-30T08:28:31+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -53,17 +53,17 @@
   <dependsOn id="ans_fhir_fr_annuaire">
     <uri value="https://interop.esante.gouv.fr/ig/fhir/annuaire/ImplementationGuide/ans.fhir.fr.annuaire"/>
     <packageId value="ans.fhir.fr.annuaire"/>
-    <version value="1.0.1"/>
+    <version value="1.1.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_fr_core">
     <uri value="https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core"/>
     <packageId value="hl7.fhir.fr.core"/>
-    <version value="2.0.1"/>
+    <version value="2.1.0"/>
   </dependsOn>
-  <dependsOn id="ans_fr_nos">
-    <uri value="https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos"/>
-    <packageId value="ans.fr.nos"/>
-    <version value="1.5.0"/>
+  <dependsOn id="ans_fr_terminologies">
+    <uri value="https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies"/>
+    <packageId value="ans.fr.terminologies"/>
+    <version value="0.1.0-ballot"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -563,6 +563,27 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/PDSmSimplifiedExample"/>
+      </reference>
+      <name value="Exemple de publication simplifiée PDSm"/>
+      <description value="Note d'évolution suite à une consultation de suivi."/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/6789"/>
+      </reference>
+      <name value="Exemple de ressource Binary - Fichier PDF"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Patient"/>
       </extension>
       <reference>
@@ -589,7 +610,7 @@
         <reference value="StructureDefinition/pdsm-comprehensive-document-reference"/>
       </reference>
       <name value="PDSm Comprehensive DocumentReference"/>
-      <description value="Profil contenant les métadonnées du document ainsi que le lien vers le document dérivé de la ressource DocumentReference et du profil IHE MHD v4.0.1 &quot;ComprehensiveDocumentReference&quot;"/>
+      <description value="Profil contenant les métadonnées du document ainsi que le lien vers la ressource Binary contenant le document dérivé de la ressource DocumentReference et du profil IHE MHD v4.0.1 &quot;ComprehensiveDocumentReference&quot;"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
