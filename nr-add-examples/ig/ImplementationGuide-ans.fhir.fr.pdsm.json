@@ -10,7 +10,7 @@
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2025-04-30T08:28:31+00:00",
+  "date" : "2025-04-30T11:32:46+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -811,7 +811,7 @@
         "reference" : "StructureDefinition/pdsm-find-documentreferences-comprehensive-response"
       },
       "name" : "PDSm Find DocumentReferences Comprehensive Response",
-      "description" : "Profil de réponse de la transaction IHE \"Find Document References [ITI-67]\" basée sur le bundle MHD FindDocumentReferencesComprehensiveResponseMessage et profilé pour le volet PDSm",
+      "description" : "Profil de réponse de la transaction IHE \"Find Document References [ITI-67]\" basée sur le bundle MHD FindDocumentReferencesComprehensiveResponseMessage",
       "exampleBoolean" : false
     },
     {
@@ -823,7 +823,7 @@
         "reference" : "StructureDefinition/pdsm-find-lists-response"
       },
       "name" : "PDSm Find Lists Response",
-      "description" : "Profil de réponse de la transaction IHE \"Find Document Lists [ITI-66]\" basée sur le bundle MHD FindDocumentListsResponseMessage et profilé pour le volet PDSm",
+      "description" : "Profil de réponse de la transaction IHE \"Find Document Lists [ITI-66]\" basée sur le bundle MHD FindDocumentListsResponseMessage",
       "exampleBoolean" : false
     },
     {

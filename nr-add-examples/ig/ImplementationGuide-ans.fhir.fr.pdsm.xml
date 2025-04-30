@@ -10,7 +10,7 @@
   <name value="PDSm"/>
   <title value="Partage de Documents de Santé en mobilité (PDSm)"/>
   <status value="active"/>
-  <date value="2025-04-30T08:28:31+00:00"/>
+  <date value="2025-04-30T11:32:46+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -632,7 +632,7 @@
         <reference value="StructureDefinition/pdsm-find-documentreferences-comprehensive-response"/>
       </reference>
       <name value="PDSm Find DocumentReferences Comprehensive Response"/>
-      <description value="Profil de réponse de la transaction IHE &quot;Find Document References [ITI-67]&quot; basée sur le bundle MHD FindDocumentReferencesComprehensiveResponseMessage et profilé pour le volet PDSm"/>
+      <description value="Profil de réponse de la transaction IHE &quot;Find Document References [ITI-67]&quot; basée sur le bundle MHD FindDocumentReferencesComprehensiveResponseMessage"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -643,7 +643,7 @@
         <reference value="StructureDefinition/pdsm-find-lists-response"/>
       </reference>
       <name value="PDSm Find Lists Response"/>
-      <description value="Profil de réponse de la transaction IHE &quot;Find Document Lists [ITI-66]&quot; basée sur le bundle MHD FindDocumentListsResponseMessage et profilé pour le volet PDSm"/>
+      <description value="Profil de réponse de la transaction IHE &quot;Find Document Lists [ITI-66]&quot; basée sur le bundle MHD FindDocumentListsResponseMessage"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "PDSm"] ; # 
   fhir:title [ fhir:v "Partage de Documents de Santé en mobilité (PDSm)"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-04-30T08:28:31+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-04-30T11:32:46+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -1135,7 +1135,7 @@
          fhir:reference [ fhir:v "StructureDefinition/pdsm-find-documentreferences-comprehensive-response" ]
        ] ;
        fhir:name [ fhir:v "PDSm Find DocumentReferences Comprehensive Response" ] ;
-       fhir:description [ fhir:v "Profil de réponse de la transaction IHE \"Find Document References [ITI-67]\" basée sur le bundle MHD FindDocumentReferencesComprehensiveResponseMessage et profilé pour le volet PDSm" ] ;
+       fhir:description [ fhir:v "Profil de réponse de la transaction IHE \"Find Document References [ITI-67]\" basée sur le bundle MHD FindDocumentReferencesComprehensiveResponseMessage" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -1153,7 +1153,7 @@
          fhir:reference [ fhir:v "StructureDefinition/pdsm-find-lists-response" ]
        ] ;
        fhir:name [ fhir:v "PDSm Find Lists Response" ] ;
-       fhir:description [ fhir:v "Profil de réponse de la transaction IHE \"Find Document Lists [ITI-66]\" basée sur le bundle MHD FindDocumentListsResponseMessage et profilé pour le volet PDSm" ] ;
+       fhir:description [ fhir:v "Profil de réponse de la transaction IHE \"Find Document Lists [ITI-66]\" basée sur le bundle MHD FindDocumentListsResponseMessage" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
