@@ -121,3 +121,11 @@ Usage:  #example
 * gender = #male
 * birthDate = "1980-01-15"
 
+
+
+Instance: 6789
+InstanceOf: Binary
+Title: "Exemple de ressource Binary - Fichier PDF"
+Usage: #example
+* contentType = #application/pdf
+* data = "SGVsbG8gV29ybGQ="
