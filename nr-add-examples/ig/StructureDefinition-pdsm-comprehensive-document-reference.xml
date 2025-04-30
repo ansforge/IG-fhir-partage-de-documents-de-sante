@@ -84,7 +84,7 @@ En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J02-Xd
   <name value="PDSm_ComprehensiveDocumentReference"/>
   <title value="PDSm Comprehensive DocumentReference"/>
   <status value="active"/>
-  <date value="2025-04-30T07:38:18+00:00"/>
+  <date value="2025-04-30T07:39:59+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -93,7 +93,7 @@ En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J02-Xd
       <value value="https://esante.gouv.fr"/>
     </telecom>
   </contact>
-  <description value="Profil spécifique dérivé du profil IHE MHD v4.0.1 &quot;ComprehensiveDocumentReference&quot; créé pour le volet &quot;Partage de documents de santé en mobilité&quot;."/>
+  <description value="Profil contenant les métadonnées du document ainsi que le lien vers le document dérivé de la ressource DocumentReference et du profil IHE MHD v4.0.1 &quot;ComprehensiveDocumentReference&quot;"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

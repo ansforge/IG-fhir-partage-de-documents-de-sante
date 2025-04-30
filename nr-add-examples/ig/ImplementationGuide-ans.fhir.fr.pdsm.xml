@@ -10,7 +10,7 @@
   <name value="PDSm"/>
   <title value="Partage de Documents de Santé en mobilité (PDSm)"/>
   <status value="active"/>
-  <date value="2025-04-30T07:38:18+00:00"/>
+  <date value="2025-04-30T07:39:59+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -578,7 +578,7 @@
         <reference value="StructureDefinition/pdsm-comprehensive-document-reference"/>
       </reference>
       <name value="PDSm Comprehensive DocumentReference"/>
-      <description value="Profil spécifique dérivé du profil IHE MHD v4.0.1 &quot;ComprehensiveDocumentReference&quot; créé pour le volet &quot;Partage de documents de santé en mobilité&quot;."/>
+      <description value="Profil contenant les métadonnées du document ainsi que le lien vers le document dérivé de la ressource DocumentReference et du profil IHE MHD v4.0.1 &quot;ComprehensiveDocumentReference&quot;"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
