@@ -10,7 +10,7 @@
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2025-04-30T07:39:59+00:00",
+  "date" : "2025-04-30T07:55:10+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -700,6 +700,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "List"
+      }],
+      "reference" : {
+        "reference" : "List/ExampleFolder"
+      },
+      "name" : "Exemple de Classeur PDSm",
+      "description" : "Exemple d’une instance conforme au profil PDSm_FolderComprehensive regroupant des fiches de documents.",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-folder-comprehensive"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
       }],
       "reference" : {
@@ -800,7 +812,7 @@
         "reference" : "StructureDefinition/pdsm-folder-comprehensive"
       },
       "name" : "PDSm Folder Comprehensive",
-      "description" : "Profil spécifique dérivé du profil IHE MHD « Comprehensive Folder » créé pour le volet ANS \"Partage de documents de santé en mobilité\" ; ce profil concerne le classeur.",
+      "description" : "Profil du Classeur dérivé de la ressource List et du profil IHE MHD « Comprehensive Folder ».",
       "exampleBoolean" : false
     },
     {

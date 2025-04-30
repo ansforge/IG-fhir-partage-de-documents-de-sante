@@ -1,16 +1,17 @@
 PDSm : Validation Results
 =========================================
 
-err = 91, warn = 108, info = 70
+err = 94, warn = 108, info = 72
 IG Publisher Version: 1.8.25
-Generated Wed Apr 30 07:43:36 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.pdsm#3.1.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/pdsm)
- Build Errors : 4 / 6 / 0
+Generated Wed Apr 30 07:58:35 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.pdsm#3.1.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/pdsm)
+ Build Errors : 4 / 7 / 0
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478 : 0 / 4 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-ConsommateurDeDocuments : 0 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-GestionnaireDePartageDeDocuments : 0 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-ProducteurDeDocuments : 0 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/DocumentReference-exemple-pdsm-documentreference : 16 / 6 / 12
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.pdsm : 0 / 2 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/List-ExampleFolder : 3 / 0 / 3
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/List-ExampleSubmissionSet : 52 / 8 / 21
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Organization-org-example : 22 / 3 / 9
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Patient-fr-patient-123 : 0 / 0 / 2
@@ -27,7 +28,7 @@ Generated Wed Apr 30 07:43:36 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.pdsm#
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-ext-is-archived : 0 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-find-documentreferences-comprehensive-response : 0 / 1 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-find-lists-response : 0 / 1 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-folder-comprehensive : 0 / 2 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-folder-comprehensive : 0 / 1 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-simplified-publish : 0 / 26 / 15
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-submissionset-comprehensive : 0 / 5 / 3
 </table>
@@ -42,6 +43,7 @@ ERROR: /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-d
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+WARNING: IG: The IG is not for the international realm, and it uses SNOMED CT, so it should fix the SCT edition in the expansion parameters
 == fsh-generated/resources/Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.json ==
 WARNING: Bundle/a9c10f8a-882d-4000-a280-7150e0aeb478: Bundle.link[0].url: URL value 'http://exemple.com/fhir' does not resolve
 WARNING: Bundle/a9c10f8a-882d-4000-a280-7150e0aeb478: Bundle.entry[0].response.location: URL value 'List/1' does not resolve
@@ -84,6 +86,12 @@ ERROR: DocumentReference.text.div: Hyperlink 'PractitionerRole/practitionerrole-
 == fsh-generated/resources/ImplementationGuide-ans.fhir.fr.pdsm.json ==
 WARNING: ImplementationGuide/ans.fhir.fr.pdsm: ImplementationGuide.dependsOn[3]: The ImplementationGuide uses package ans.fhir.fr.annuaire#1.0.1 released on 2024-04-25, but the most recent appropriate version is 1.1.0. This reference is getting old and the more recent version should be considered
 WARNING: ImplementationGuide/ans.fhir.fr.pdsm: ImplementationGuide.dependsOn[4]: The ImplementationGuide uses package hl7.fhir.fr.core#2.0.1 released on 2024-04-16, but the most recent appropriate version is 2.1.0. This reference is getting old and the more recent version should be considered
+== fsh-generated/resources/List-ExampleFolder.json ==
+INFORMATION: List/ExampleFolder: List.identifier[0]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-folder-comprehensive|3.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: List/ExampleFolder: List.identifier[1]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-folder-comprehensive|3.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+ERROR: List/ExampleFolder: List.extension[0].value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'Appendectomy (procedure)' for http://snomed.info/sct#80146002. There are no valid display names found for language(s) 'fr-FR'. Default display is 'Appendectomy'
+ERROR: List/ExampleFolder: List.code.coding[0].display: Wrong Display Name 'Folder' for https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes#folder. Valid display is 'Folder as a FHIR List' (for the language(s) 'fr-FR')
+ERROR: List/ExampleFolder: List.code: None of the codings provided are in the value set 'MHD List Types ValueSet' (https://profiles.ihe.net/ITI/MHD/ValueSet/MHDlistTypesVS|4.2.0), and a coding from this value set is required) (codes = https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes#folder)
 == fsh-generated/resources/List-ExampleSubmissionSet.json ==
 INFORMATION: List/ExampleSubmissionSet: List.identifier[0]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-submissionset-comprehensive|3.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: List/ExampleSubmissionSet: List.identifier[1]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-submissionset-comprehensive|3.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
@@ -279,7 +287,6 @@ WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir
 WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-find-lists-response'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-pdsm-folder-comprehensive.json ==
 WARNING: StructureDefinition/pdsm-folder-comprehensive: StructureDefinition.mapping[3].uri: URL value 'XDS' does not resolve
-WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-folder-comprehensive'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-pdsm-simplified-publish.json ==
 WARNING: StructureDefinition/pdsm-simplified-publish: StructureDefinition.snapshot.element[21].constraint[1]: Constraint failed: eld-21: 'Constraints should have an expression or else validators will not be able to enforce them'
 WARNING: StructureDefinition/pdsm-simplified-publish: StructureDefinition.snapshot.element[21].binding.valueSet: There are multiple different potential matches for the url 'https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/FHIR/JDV-J07-XdsTypeCode-CISIS'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '1.5.0', found versions: 1.2.0, 1.5.0. Suggested fix: change the canonical reference from 'https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/FHIR/JDV-J07-XdsTypeCode-CISIS' to 'https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/FHIR/JDV-J07-XdsTypeCode-CISIS|1.5.0'
