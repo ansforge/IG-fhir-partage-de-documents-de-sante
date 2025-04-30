@@ -2,7 +2,7 @@ Profile: PDSm_SubmissionSetComprehensive
 Parent: IHE.MHD.Comprehensive.SubmissionSet
 Id: pdsm-submissionset-comprehensive
 Title: "PDSm SubmissionSet Comprehensive"
-Description: "Profil spécifique dérivé du profil IHE MHD « ComprehensiveSubmissionSet » créé pour le volet ANS \"Partage de documents de santé en mobilité\" ; ce profil concerne le lot de soumission."
+Description: "Profil du lot de soumission dérivé de la ressource List et du profil IHE MHD « ComprehensiveSubmissionSet »."
 
 * contained MS
 * contained 1.. 
@@ -25,14 +25,15 @@ Description: "Profil spécifique dérivé du profil IHE MHD « ComprehensiveSubm
     PDSm_IsArchived named isArchived 0..1 and
     pdsm-ext-intended-recipient named PDSmintendedRecipient 0..*
 
+
+* extension[isArchived] ^short = "Extension définie par ce volet pour distinguer les lots de soumission archivés des actives."
+
 // Extension intendedRecipient est déjà définie dans MHD : https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-intendedRecipient. Sauf qu'elle ne permet pas de référencer un PractitionerRole.
 * extension[PDSmintendedRecipient] MS
 * extension[PDSmintendedRecipient].value[x] ^type.aggregation = #contained
 * extension[PDSmintendedRecipient] ^short = "Représente le destinataire du lot de soumission. Il peut s'agir d'un AsPractitioner associé à un AsPractitionerRole ou bien d'une AsOrganization."
 
 * subject only Reference(FRCorePatientProfile)
-
-* extension[isArchived] ^short = "Extension définie par ce volet pour distinguer les lots de soumission archivés des actives."
 
 * identifier[uniqueId] MS
 * identifier[uniqueId] ^short = "IdUnique : Identifiant unique global affecté à ce lot de soumission par son créateur. Cet attribut est utilisé à des fins de références externes alors que idLotSoumission est destiné à des fins de gestion interne."

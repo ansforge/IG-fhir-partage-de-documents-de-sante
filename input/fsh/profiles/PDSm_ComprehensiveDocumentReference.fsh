@@ -2,7 +2,7 @@ Profile: PDSm_ComprehensiveDocumentReference
 Parent: IHE.MHD.Comprehensive.DocumentReference
 Id: pdsm-comprehensive-document-reference
 Title: "PDSm Comprehensive DocumentReference"
-Description: "Profil spécifique dérivé du profil IHE MHD v4.0.1 \"ComprehensiveDocumentReference\" créé pour le volet \"Partage de documents de santé en mobilité\"."
+Description: "Profil contenant les métadonnées du document ainsi que le lien vers la ressource Binary contenant le document dérivé de la ressource DocumentReference et du profil IHE MHD v4.0.1 \"ComprehensiveDocumentReference\""
 
 * meta.versionId MS
 * meta.versionId ^short = "Numéro de version de la fiche d’un document attribué par le système cible. La valeur de la métadonnée version est égale à 1 pour la première version de la fiche. Cet élément est requis lorsque le flux envoyé correspond à une mise à jour des données d’une fiche."
