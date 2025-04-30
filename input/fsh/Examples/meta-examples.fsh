@@ -111,3 +111,13 @@ Usage: #example
 * type[=].extension.valueCode = #secteurActiviteRASS
 * type[=] = $TRE-R02-SecteurActivite#SA43
 * name = "HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G"
+
+
+Instance: fr-patient-123
+InstanceOf: FRCorePatientProfile
+Usage:  #example
+* name[0].family = "Claire"
+* name[0].given = "Martin"
+* gender = #male
+* birthDate = "1980-01-15"
+

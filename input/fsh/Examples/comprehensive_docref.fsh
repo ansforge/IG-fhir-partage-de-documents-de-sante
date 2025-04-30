@@ -1,13 +1,3 @@
-Instance: fr-patient-123
-InstanceOf: FRCorePatientProfile
-Usage:  #example
-* name[0].family = "Claire"
-* name[0].given = "Martin"
-* gender = #male
-* birthDate = "1980-01-15"
-
-
-
 Instance: exemple-pdsm-documentreference
 InstanceOf: PDSm_ComprehensiveDocumentReference
 Title: "Exemple de DocumentReference pour PDSm"
