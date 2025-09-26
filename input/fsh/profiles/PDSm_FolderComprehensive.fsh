@@ -2,7 +2,7 @@ Profile: PDSm_FolderComprehensive
 Parent: IHE.MHD.Comprehensive.Folder
 Id: pdsm-folder-comprehensive
 Title: "PDSm Folder Comprehensive"
-Description: "Profil spécifique dérivé du profil IHE MHD « Comprehensive Folder » créé pour le volet ANS \"Partage de documents de santé en mobilité\" ; ce profil concerne le classeur."
+Description: "Profil du Classeur dérivé de la ressource List et du profil IHE MHD « Comprehensive Folder »."
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
