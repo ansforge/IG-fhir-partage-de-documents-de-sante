@@ -69,7 +69,7 @@ menu:
         Consultation de documents: sf_consultation.html
     Volume 2 - Détail des transactions:
         Vue d'ensemble: construction_des_flux.html
-        Ajout d'un lot de documents (ITI-65): st_ajout.html 
+        Ajout d'un lot de soumission (ITI-65): st_ajout.html 
         Mise à jour de documents: st_maj.html
         Recherche de lot de soumission (ITI-66): st_recherche_lot.html
         Recherche de fiche (ITI-67): st_recherche_fiche.html
