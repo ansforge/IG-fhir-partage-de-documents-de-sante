@@ -71,7 +71,7 @@ menu:
         Vue d'ensemble: construction_des_flux.html
         Ajout d'un lot de documents (ITI-65): st_ajout.html 
         Mise à jour de documents: st_maj.html
-        Recherche de lot de documents (ITI-66): st_recherche_lot.html
+        Recherche de lot de soumission (ITI-66): st_recherche_lot.html
         Recherche de fiche (ITI-67): st_recherche_fiche.html
         Consultation de documents (ITI-68): st_consultation.html
         Ajout simplifié d'un document (ITI-105): st_ajout_simplifie.html
