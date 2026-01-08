@@ -17,8 +17,14 @@ Le patient retourne voir son médecin traitant. Le médecin recherche le compte 
 ### ORGANISATION DU CONTEXTE METIER
 
 <object data="fonctionnel/fig_1.png" type="image/png"></object>
+
 <br/>
-Figure 1 Organisation du contexte métier de l'étude "Dossier Patient"
+
+<div class="figure" style='text-align: center;'>
+    <img src="fonctionnel/fig_1.png" alt="Figure 1" title="Figure 1 Organisation du contexte métier de l'étude Dossier Patient" style="width:80%;">
+    <figcaption><b>Figure 1 Organisation du contexte métier de l'étude "Dossier Patient"</b></figcaption>
+</div>
+<br>
 
 Le périmètre de l'étude englobe les processus en couleur sur le diagramme de paquetage.
 
