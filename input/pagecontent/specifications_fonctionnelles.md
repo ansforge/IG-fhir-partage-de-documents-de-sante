@@ -46,7 +46,7 @@ Table 5 Table des acteurs
 | Flux 1 - AjoutLotDocument | Ajout d'un lot de documents | Producteur de documents | Gestionnaire de partage de documents | Oui |
 | Flux 2 - ResultatAjoutLotDocument | Ajout d'un lot de documents | Gestionnaire de partage de documents | Producteur de documents | Oui | 
 | Flux 3 - Mise AJourMetadonneeFiche | Mise à jour des métadonnées d'une fiche | Producteur de documents | Gestionnaire de partage de documents | Oui |
-| Flux 4 – ResultatMAJMetadonneeFiche	Mise à jour des métadonnées d'une fiche | Gestionnaire de partage de documents | Producteur de documents | Oui |
+| Flux 4 – ResultatMAJMetadonneeFiche |	Mise à jour des métadonnées d'une fiche | Gestionnaire de partage de documents | Producteur de documents | Oui |
 | Flux 5 - RechercheDocument | Recherche de documents | Consommateur de documents | Gestionnaire de partage de documents | Oui |
 | Flux 6 - ResultatRechercheDocument | Recherche de documents | Gestionnaire de partage de documents | Consommateur de documents | Oui | 
 | Flux 7 - DemandeConsultationDocument | Consultation de documents | Consommateur de documents | Gestionnaire de partage de documents | Oui |
