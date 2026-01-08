@@ -27,6 +27,15 @@ parameters:
 pages:
     index.md:
         title: Accueil
+    specifications_fonctionnelles.md:
+        sf_ajout.md:
+            title: Ajout d'un lot de documents
+        sf_maj.md:
+            title: Mise à jour de documents
+        sf_recherche.md:
+            title: Recherche de documents
+        sf_consultation.md:
+            title: Consultation de documents
     specifications_techniques.md:
         construction_des_flux.md:
         st_ajout.md:
@@ -40,16 +49,7 @@ pages:
         st_consultation.md:
             title: Consultation de documents (ITI-68)
         st_ajout_simplifie.md:
-            title: Ajout simplifié d'un document (ITI-105)
-    specifications_fonctionnelles.md:
-        sf_ajout.md:
-            title: Ajout d'un lot de documents
-        sf_maj.md:
-            title: Mise à jour de documents
-        sf_recherche.md:
-            title: Recherche de documents
-        sf_consultation.md:
-            title: Consultation de documents
+            title: Ajout simplifié d'un document (ITI-105)            
     autres_ressources.md:
         title: Autres Ressources
         securite.md:
