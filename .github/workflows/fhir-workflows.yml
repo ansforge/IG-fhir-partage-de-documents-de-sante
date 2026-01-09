@@ -1,23 +1,23 @@
-name: Workflow   Tests/gitHubpages
+name: Workflow Sushi Tests gitHubpages
 on:
   workflow_call:
   push:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 jobs:
-  run-gitHubPages:
+  run-sushi-tests_gitHubPages:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
         with:      
           path: igSource
-
+          
       - uses: ansforge/IG-workflows@main
-
         with:      
-          bake: "false"
-          validator_cli: "false"     
-          generate_plantuml : "false"
           repo_ig: "./igSource"   
           github_page: "true"
-          github_page_token: ${{ secrets.ANS_IG_API_TOKEN  }}
+          github_page_token: ${{ secrets.GITHUB_TOKEN }}
+          bake: "false"
+          validator_cli: "false"
+          generate_testscript: "false"
+          generate_plantuml : "false"
