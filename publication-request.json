@@ -1,11 +1,13 @@
 {
     "package-id" : "ans.fhir.fr.pdsm",
-    "version" : "3.1.0",
-    "path" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/3.1.0",
+    "version" : "3.1.1",
+    "path" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/3.1.1",
     "mode" : "milestone",
     "status" : "release",
     "sequence" : "trial-use",
     "desc" : "Guide d`Implémentation FHIR de partage de documents de santé en mobilité.",
-    "descmd": "@release-notes.md"
+    "descmd": "@release-notes.md",
+    "changes": "changes.html",
+    "ci-build" : "https://ansforge.github.io/IG-fhir-partage-de-documents-de-sante/main/ig/"
   }
 
