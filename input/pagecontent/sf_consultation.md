@@ -7,7 +7,7 @@
 <br>
 
 | **Service attendu** | Le consommateur de documents consulte des documents stockés dans l’infrastructure de partage de documents à partir des références qu’il a obtenues. |
-| **Pré-conditions** | Le consommateur de documents doit : 1. avoir au préalable récupéré les références du ou des document(s) qu’il souhaite consulter 2. être habilité |
+| **Pré-conditions** | Le consommateur de documents doit : <br> 1. avoir au préalable récupéré les références du ou des document(s) qu’il souhaite consulter <br> 2. être habilité |
 | **Post-conditions** | N/A |
 | **Contraintes fonctionnelles** | N/A |
 | **Scénario nominal** | N/A |
@@ -52,7 +52,7 @@ La demande de consultation de document se fait via l’envoi de l’identifiant 
 
 <div class="figure" style='text-align: center;'>
     <img src="fonctionnel/fig_15.png" alt="Figure 15" title="Figure 15 Flux 8 - ResultatDemandeConsultationDocument" style="width:60%;">
-    <figcaption><b>Figure 15 Flux 8 - ResultatDemandeConsultationDocument</b></figcaption>
+    <figcaption><b>Figure 15 : Flux 8 - ResultatDemandeConsultationDocument</b></figcaption>
 </div>
 
 #### Classe "Document"
