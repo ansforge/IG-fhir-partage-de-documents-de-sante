@@ -48,7 +48,7 @@
 ### Flux 3 - MiseAJourMetadonneeFiche MODELISATION DES FLUX D'INFORMATIONS
 
 <div class="figure" style='text-align: center;'>
-    <img src="fonctionnel/fig_12.png" alt="Figure 12" title="Figure 12 Flux 3 - MiseAJourMetadonneeFiche" style="width:80%;">
+    <img src="fonctionnel/fig_12.png" alt="Figure 12" title="Figure 12 Flux 3 - MiseAJourMetadonneeFiche" style="width:60%;">
     <figcaption><b>Figure 12 : Flux 3 - MiseAJourMetadonneeFiche</b></figcaption>
 </div>
 <br>
@@ -67,7 +67,7 @@ Une fiche représente le document stocké dans l’infrastructure de partage de 
 ### Flux 4 - ResultatMAJMetadonneeFiche MODELISATION DES FLUX D'INFORMATIONS
 
 <div class="figure" style='text-align: center;'>
-    <img src="fonctionnel/fig_13.png" alt="Figure 13" title="Figure 13 Flux 4 - ResultatMAJMetadonneeFiche" style="width:80%;">
+    <img src="fonctionnel/fig_13.png" alt="Figure 13" title="Figure 13 Flux 4 - ResultatMAJMetadonneeFiche" style="width:60%;">
     <figcaption><b>Figure 13 : Flux 4 - ResultatMAJMetadonneeFiche</b></figcaption>
 </div>
 <br>
