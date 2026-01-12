@@ -17,8 +17,8 @@
 ### Description et identification des flux
 
 <div class="figure" style='text-align: center;'>
-    <img src="fonctionnel/fig_9.png" alt="Figure 9" title="Figure 9 : Processus collaboratif Mise à jour du cercle de soins" style="width:60%;">
-    <figcaption><b>Figure 9 : Processus collaboratif "Mise à jour du cercle de soins"</b></figcaption>
+    <img src="fonctionnel/fig_9.png" alt="Figure 9" title="Figure 9 : Processus collaboratif Consultation de documents" style="width:60%;">
+    <figcaption><b>Figure 9 : Processus collaboratif "Consultation de documents"</b></figcaption>
 </div>
 
 #### Description des actions
