@@ -58,7 +58,7 @@ Une fiche représente le document stocké dans l’infrastructure de partage de 
 
 | **Nom** | **Description** |
 | ----- | ----- |
-| idUnique : [0..1] Identifiant	Identifiant unique global affecté au document par son créateur. Il est utilisable comme référence externe dans d’autres documents.|
+| idUnique : [0..1] Identifiant	| Identifiant unique global affecté au document par son créateur. Il est utilisable comme référence externe dans d’autres documents.|
 | statut : [1..1] Code | Représente le statut de la fiche d'un document.<br/>Nomenclature(s) associée(s) :<br/>** TRE_R269-AvailabilityStatusProvenanceOasis<br/>** TRE_R270-AvailabilityStatus |
 | niveauConfidentialite : [0..*] Code | Contient les informations définissant le niveau de confidentialité d'un document.<br/>Nomenclatures utilisées :<br/>** TRE_A08-Confidentiality-HL7<br/>** TRE_A07-StatusVisibiliteDocument<br/>** JDV_J08-XdsConfidentialityCode-CISIS|
 
