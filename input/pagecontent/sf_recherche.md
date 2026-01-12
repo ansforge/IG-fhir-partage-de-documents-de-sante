@@ -94,7 +94,7 @@ Le document dont les caractéristiques principales correspondent aux critères d
 La recherche retourne soit un ensemble de lots de soumission soit un ensemble de fiches répondant aux critères envoyés par le consommateur de documents de santé.
 
 <div class="figure" style='text-align: center;'>
-    <img src="fonctionnel/fig_6.png" alt="Figure 6" title="Figure 14 Flux 6 - ResultatRechercheDocument" style="width:80%;">
+    <img src="fonctionnel/fig_6.png" alt="Figure 6" title="Figure 14 Flux 6 - ResultatRechercheDocument" style="width:60%;">
     <figcaption><b>Figure 8 : Processus collaboratif "Recherche de documents"</b></figcaption>
 </div>
 <br>

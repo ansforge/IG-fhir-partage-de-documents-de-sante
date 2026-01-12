@@ -4,6 +4,7 @@
 <br/>
 Figure 5 : Processus collaboratif "Consultation de documents"
 
+
 | Service attendu | Le consommateur de documents consulte des documents stockés dans l’infrastructure de partage de documents à partir des références qu’il a obtenues. |
 | Pré-conditions | Le consommateur de documents doit : 1. avoir au préalable récupéré les références du ou des document(s) qu’il souhaite consulter 2. être habilité |
 | Post-conditions | N/A |
