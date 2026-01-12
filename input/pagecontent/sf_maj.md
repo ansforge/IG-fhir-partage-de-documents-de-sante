@@ -32,7 +32,7 @@
 | ------ | ------ |
 | Mise à jour des métadonnées de la fiche | Le producteur de document soumet les métadonnées à mettre à jour au gestionnaire. |
 | Consulter la réponse | Le producteur de documents prend connaissance de la réponse du gestionnaire suite à la demande de mise à jour. |
-| Réceptionner la demande | Le gestionnaire reçoit la demande de mise à jour des métadonnées. <br/>Exécuter la demande si possible	Le gestionnaire met à jour, si possible, la ou les métadonnées de la fiche avec les éléments envoyés par le producteur. |
+| Réceptionner la demande | Le gestionnaire reçoit la demande de mise à jour des métadonnées. <br> Exécuter la demande si possible	<br> Le gestionnaire met à jour, si possible, la ou les métadonnées de la fiche avec les éléments envoyés par le producteur. |
 
 **Table 8 Tableau des actions**
 
@@ -66,9 +66,6 @@ Une fiche représente le document stocké dans l’infrastructure de partage de 
 
 ### Flux 4 - ResultatMAJMetadonneeFiche MODELISATION DES FLUX D'INFORMATIONS
 
-<object data="fonctionnel/fig_13.png" type="image/png"></object>
-<br/>
-
 <div class="figure" style='text-align: center;'>
     <img src="fonctionnel/fig_13.png" alt="Figure 13" title="Figure 13 Flux 4 - ResultatMAJMetadonneeFiche" style="width:80%;">
     <figcaption><b>Figure 13 : Flux 4 - ResultatMAJMetadonneeFiche</b></figcaption>
@@ -83,4 +80,3 @@ Une fiche représente le document stocké dans l’infrastructure de partage de 
 | statutAttributFiche : [0..*] Texte | La réponse de la demande de modification du dossier patient peut contenir une fiche qui contient le statut (réussite ou échec) de chaque attribut renseigné lors de la demande de modification du dossier patient.
 
 **Table 24 Attributs de la classe "Fiche"**
-
