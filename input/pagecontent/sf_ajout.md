@@ -8,9 +8,7 @@
 <br>
 
 | **Service attendu** | Le producteur de documents envoie au gestionnaire de partage de documents une demande d’ajout d’un lot de documents. Ces documents peuvent être de nouveaux documents et/ou des nouvelles versions de documents. |
-| **Pré- conditions** | Le producteur de documents doit au préalable :
-1. être en possession des documents à modifier (dans le cas de l'ajout d'une nouvelle version d'un document),
-2. être habilité |
+| **Pré- conditions** | Le producteur de documents doit au préalable :<br>1. être en possession des documents à modifier (dans le cas de l'ajout d'une nouvelle version d'un document),<br>2.être habilité |
 | **Post-conditions** | N/A |
 | **Contraintes fonctionnelles** | N/A |
 | **Scénario nominal** | N/A |
@@ -21,7 +19,7 @@
 ### Description et identification des flux
 
 <div class="figure" style='text-align: center;'>
-    <img src="fonctionnel/fig_6.png" alt="Figure 6" title="Figure 6 : Processus collaboratif Ajout d'un lot de documents" style="width:80%;">
+    <img src="fonctionnel/fig_6.png" alt="Figure 6" title="Figure 6 : Processus collaboratif Ajout d'un lot de documents" style="width:60%;">
     <figcaption><b>Figure 6 : Processus collaboratif "Ajout d'un lot de documents"</b></figcaption>
 </div>
 <br>
