@@ -18,12 +18,8 @@
 ### Description et identification des flux
 
 
-<object data="fonctionnel/fig_7.png" type="image/png"></object>
-<br/>
-
-
 <div class="figure" style='text-align: center;'>
-    <img src="fonctionnel/fig_7.png" alt="Figure 7" title="Figure 7 : Processus collaboratif Mise à jour des métadonnées d'une fiche" style="width:80%;">
+    <img src="fonctionnel/fig_7.png" alt="Figure 7" title="Figure 7 : Processus collaboratif Mise à jour des métadonnées d'une fiche" style="width:60%;">
     <figcaption><b>Figure 7 : Processus collaboratif "Mise à jour des métadonnées d'une fiche"</b></figcaption>
 </div>
 <br>
