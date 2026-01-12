@@ -2,7 +2,7 @@
 
 
 <div class="figure" style='text-align: center;'>
-    <img src="fonctionnel/fig_2.png" alt="Figure 2" title="Figure 2 : Processus collaboratif Ajout d'un lot de documents" style="width:80%;">
+    <img src="fonctionnel/fig_2.png" alt="Figure 2" title="Figure 2 : Processus collaboratif Ajout d'un lot de documents" style="width:60%;">
     <figcaption><b>Figure 2 : Processus collaboratif "Ajout d'un lot de documents"</b></figcaption>
 </div>
 <br>
