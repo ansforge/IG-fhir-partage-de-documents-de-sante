@@ -1,24 +1,27 @@
 ### Définition 
 
-<object data="fonctionnel/fig_4.png" type="image/png"></object>
-<br/>
-Figure 4 : Processus collaboratif "Recherche de documents"
+<div class="figure" style='text-align: center;'>
+    <img src="fonctionnel/fig_4.png" alt="Figure 4" title="Figure 4 : Processus collaboratif Recherche de documents" style="width:60%;">
+    <figcaption><b>Figure 4 : Processus collaboratif "Recherche de documents"</b></figcaption>
+</div>
+<br>
 
-| Service attendu | Le consommateur de documents transmet une recherche de documents à l’aide de critères de recherches, notamment les caractéristiques principales du document (données qui permettent de classer les documents). L’infrastructure de partage de documents retourne les références des documents répondant aux critères. |
-| Pré-conditions | Le consommateur de documents doit : 1. être en possession des paramètres de recherche de documents, 2. être habilité |
-| Post-conditions | N/A |
-| Contraintes fonctionnelles | N/A |
-| Scénario nominal | N/A |
+| **Service attendu** | Le consommateur de documents transmet une recherche de documents à l’aide de critères de recherches, notamment les caractéristiques principales du document (données qui permettent de classer les documents). L’infrastructure de partage de documents retourne les références des documents répondant aux critères. |
+| **Pré-conditions** | Le consommateur de documents doit : <br> 1. être en possession des paramètres de recherche de documents, <br> 2. être habilité |
+| **Post-conditions** | N/A |
+| **Contraintes fonctionnelles** | N/A |
+| **Scénario nominal** | N/A |
 
-Table 3 Caractéristiques du processus collaboratif
+**Table 3 Caractéristiques du processus collaboratif**
 
 
 ### Description et identification des flux
 
-<object data="fonctionnel/fig_8.png" type="image/png"></object>
-<br/>
-
-Figure 8 : Processus collaboratif "Recherche de documents"
+<div class="figure" style='text-align: center;'>
+    <img src="fonctionnel/fig_8.png" alt="Figure 8" title="Figure 8 : Processus collaboratif Recherche de documents" style="width:60%;">
+    <figcaption><b>Figure 8 : Processus collaboratif "Recherche de documents"</b></figcaption>
+</div>
+<br>
 
 #### Description des actions
 
@@ -28,21 +31,21 @@ Figure 8 : Processus collaboratif "Recherche de documents"
 | Traiter la réponse | Le consommateur de documents reçoit et traite la réponse à la recherche de documents. Le résultat de la recherche est affiché à l'utilisateur. |
 | Traiter la recherche de documents | L'infrastructure de documents retourne au consommateur de documents la réponse à la recherche de documents. |
 
-Table 10 Tableau des actions
+**Table 10 Tableau des actions**
 
 #### Identification des flux
 
 
 | **Flux** | **Processus** | **Emetteur** | **Récepteur** | **Périmètre** |
+| ------ | ------ | ------ | ------ | ------ |
 | Flux 5 - RechercheDocument | Recherche de documents | Consommateur de documents | Gestionnaire de partage de documents | Oui |
 | Flux 6 - ResultatRechercheDocument | Recherche de documents | Gestionnaire de partage de documents | Consommateur de documents | Oui
 
 
-
 ### Flux de recherche : Flux 5 – RechercheDocument
 
-Les caractéristiques principales des documents renseignées dans les lots de soumission ou dans les fiches servent à la recherche de documents. Celle-ci se fait donc de deux manières : via la recherche de fiches ou via la recherche de lots de soumission. 
-Le document dont les caractéristiques principales correspondent aux critères de recherche peut être consulté dans un second temps en utilisant le flux 05 de demande de consultation de document. 
+Les caractéristiques principales des documents renseignées dans les lots de soumission ou dans les fiches servent à la recherche de documents. Celle-ci se fait donc de deux manières : via la recherche de fiches ou via la recherche de lots de soumission.
+Le document dont les caractéristiques principales correspondent aux critères de recherche peut être consulté dans un second temps en utilisant le flux 05 de demande de consultation de document.
 
 #### Recherche de lots de soumission
 
@@ -83,21 +86,18 @@ Le document dont les caractéristiques principales correspondent aux critères d
 | idFicheAssociation | Représente l'identifiant d'une association entre deux fiches.|
 | actePathologie | Actes et pathologies en rapport avec le document.<br/>Nomenclatures utilisées :<br/>** CCAM pour les actes médicaux (OID=""1.2.250.1.213.2.5"");<br/>** CIM-10 pour les diagnostics de pathologie (OID=""2.16.840.1.113883.6.3"");<br/>** TRE_A00-ProducteurDocNonPS pour les documents d'expression personnelle du patient."|
 
-Table 25 Flux de recherche
+**Table 25 Flux de recherche**
 
 
 ### Flux 6 – ResultatRechercheDocument
 
 La recherche retourne soit un ensemble de lots de soumission soit un ensemble de fiches répondant aux critères envoyés par le consommateur de documents de santé.
 
-<object data="fonctionnel/fig_14.png" type="image/png"></object>
-<br/>
-
-Figure 14 Flux 6 - ResultatRechercheDocument
-
-
-
-
+<div class="figure" style='text-align: center;'>
+    <img src="fonctionnel/fig_6.png" alt="Figure 6" title="Figure 14 Flux 6 - ResultatRechercheDocument" style="width:80%;">
+    <figcaption><b>Figure 8 : Processus collaboratif "Recherche de documents"</b></figcaption>
+</div>
+<br>
 
 #### Classe "LotSoumission"
 Un lot de soumission regroupe les fiches et les classeurs faisant partie d’une même demande de modification du contenu du dossier. Il atteste l’existence et le statut de la demande et est décrit par un ensemble d’attributs, ses métadonnées. Une fois créé, un lot de soumission est immuable à l'exception de son statut.
@@ -116,10 +116,10 @@ Un lot de soumission regroupe les fiches et les classeurs faisant partie d’une
 | statutAttributLotSoumission : [0..*] Texte | La réponse de la demande de modification du dossier patient peut contenir un lot de soumission qui contient le statut (réussite ou échec) de chaque attribut renseigné lors de la demande de modification du dossier patient. |
 | titre : [0..1] Texte | Titre du lot de soumission |
 
-Table 26 Attributs de la classe "LotSoumission"
+**Table 26 Attributs de la classe "LotSoumission"**
 
 #### Classe "Fiche"
-Une fiche représente le document stocké dans l’infrastructure de partage de documents. Elle contient les informations décrivant les caractéristiques principales d’un document servant au classement et à la recherche des documents. 
+Une fiche représente le document stocké dans l’infrastructure de partage de documents. Elle contient les informations décrivant les caractéristiques principales d’un document servant au classement et à la recherche des documents.
 
 | **Nom** | **Description** |
 | ----- | ----- |
@@ -147,4 +147,4 @@ Une fiche représente le document stocké dans l’infrastructure de partage de 
 | version : [0..1] Numerique | Numéro de version de la fiche d’un document. La valeur de la métadonnée version est égale à 1 pour la première version de la fiche.|
 | statutAttributFiche : [0..*] Texte | La réponse de la demande de modification du dossier patient peut contenir une fiche qui contient le statut (réussite ou échec) de chaque attribut renseigné lors de la demande de modification du dossier patient.|
 
-Table 27 Attributs de la classe "Fiche"
+**Table 27 Attributs de la classe "Fiche"**
