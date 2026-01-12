@@ -2,13 +2,15 @@
 
 
 <div class="figure" style='text-align: center;'>
-    <img src="fonctionnel/fig_2.png" alt="Figure 2" title="Figure 2 : Processus collaboratif Ajout d'un lot de documents" style="width:50%;">
+    <img src="fonctionnel/fig_2.png" alt="Figure 2" title="Figure 2 : Processus collaboratif Ajout d'un lot de documents" style="width:80%;">
     <figcaption><b>Figure 2 : Processus collaboratif "Ajout d'un lot de documents"</b></figcaption>
 </div>
 <br>
 
 | **Service attendu** | Le producteur de documents envoie au gestionnaire de partage de documents une demande d’ajout d’un lot de documents. Ces documents peuvent être de nouveaux documents et/ou des nouvelles versions de documents. |
-| **Pré- conditions** | Le producteur de documents doit au préalable : 1. être en possession des documents à modifier, 2. être habilité |
+| **Pré- conditions** | Le producteur de documents doit au préalable :
+1. être en possession des documents à modifier (dans le cas de l'ajout d'une nouvelle version d'un document),
+2. être habilité |
 | **Post-conditions** | N/A |
 | **Contraintes fonctionnelles** | N/A |
 | **Scénario nominal** | N/A |
@@ -19,7 +21,7 @@
 ### Description et identification des flux
 
 <div class="figure" style='text-align: center;'>
-    <img src="fonctionnel/fig_6.png" alt="Figure 6" title="Figure 6 : Processus collaboratif Ajout d'un lot de documents" style="width:50%;">
+    <img src="fonctionnel/fig_6.png" alt="Figure 6" title="Figure 6 : Processus collaboratif Ajout d'un lot de documents" style="width:80%;">
     <figcaption><b>Figure 6 : Processus collaboratif "Ajout d'un lot de documents"</b></figcaption>
 </div>
 <br>
@@ -40,7 +42,7 @@
 
 
 | **Flux** | **Processus** | **Emetteur** | **Récepteur** | **Périmètre** |
-| ------ | ------ || ------ | ------ | ------ |
+| ------ | ------ | ------ | ------ | ------ |
 | Flux 1 - AjoutLotDocument | Ajout d'un lot de documents | Producteur de documents |Gestionnaire de partage de documents | Oui |
 | Flux 2 - ResultatAjoutLotDocument | Ajout d'un lot de documents | Gestionnaire de partage de documents | Producteur de documents | Oui |
 
@@ -48,7 +50,7 @@
 ### Flux 1 - AjoutLotDocument MODELISATION DES FLUX D'INFORMATIONS
 
 <div class="figure" style='text-align: center;'>
-    <img src="fonctionnel/fig_10.png" alt="Figure 10" title="Figure 10 Flux 1 - AjoutLotDocument" style="width:50%;">
+    <img src="fonctionnel/fig_10.png" alt="Figure 10" title="Figure 10 Flux 1 - AjoutLotDocument" style="width:80%;">
     <figcaption><b>Figure 10 : Flux 1 - AjoutLotDocument</b></figcaption>
 </div>
 <br>
@@ -131,7 +133,7 @@ Un lot de soumission regroupe les fiches et les classeurs faisant partie d’une
 ### Flux 2 - ResultatAjoutLotDocument MODELISATION DES FLUX D’INFORMATIONS
 
 <div class="figure" style='text-align: center;'>
-    <img src="fonctionnel/fig_11.png" alt="Figure 11" title="Figure 11 Flux 2 - ResultatAjoutLotDocument" style="width:50%;">
+    <img src="fonctionnel/fig_11.png" alt="Figure 11" title="Figure 11 Flux 2 - ResultatAjoutLotDocument" style="width:80%;">
     <figcaption><b>Figure 11 : Flux 2 - ResultatAjoutLotDocument</b></figcaption>
 </div>
 <br>
