@@ -62,13 +62,13 @@ pages:
 menu:
     Accueil: index.html
     Volume 1 - Etude fonctionnelle:
-        Spécifications fonctionnelles: specifications_fonctionnelles.html
+        Volume 1 - Etude fonctionnelle: specifications_fonctionnelles.html
         Ajout d'un lot de documents: sf_ajout.html
         Mise à jour de documents: sf_maj.html
         Recherche de documents: sf_recherche.html
         Consultation de documents: sf_consultation.html
     Volume 2 - Détail des transactions:
-        Vue d'ensemble: construction_des_flux.html
+        Volume 2 - Détail des transactions: construction_des_flux.html
         Ajout d'un lot de soumission (ITI-65): st_ajout.html 
         Mise à jour de documents: st_maj.html
         Recherche de lot de soumission (ITI-66): st_recherche_lot.html
