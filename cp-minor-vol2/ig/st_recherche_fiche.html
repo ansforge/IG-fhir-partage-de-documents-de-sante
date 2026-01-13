@@ -426,11 +426,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Un profil spécifique dérivé du profil IHE MHD « FindDocumentReferencesComprehensiveResponse » est créé pour ce volet et nommé <a href="StructureDefinition-pdsm-comprehensive-document-reference.html">PDSm_FindDocumentReferencesComprehensiveResponse</a>. Il contient zéro ou plusieurs ressources DocumentReference répondants aux critères de la requête.</p>
 
-<p>Ce flux correspond à la réponse à la requête reposant sur l’interaction « search » du flux précédent.
-En cas de succès, le gestionnaire de partage de documents retourne un code <code class="language-plaintext highlighter-rouge">HTTP 200 OK</code> ainsi qu’un Bundle de type searchset.</p>
+<p>Ce flux correspond à la réponse à la requête reposant sur l’interaction « search » du flux précédent.</p>
 
-<p>Si le gestionnaire de partage de documents envoie des "warnings", la ressource Bundle doit aussi contenir une ressource "OperationOutcome" qui contient ces "warnings".
-Si le gestionnaire de partage de documents doit reporter une erreur, il doit utiliser un "<a href="http://hl7.org/fhir/R4/http.html">HTTP error response codes</a>" et doit inclure un "<a href="http://hl7.org/fhir/R4/operationoutcome.html">FHIR OperationOutcome</a>" avec plus de détails sur l'échec.</p>
+<p>En cas de succès, le gestionnaire de partage de documents retourne un code <code class="language-plaintext highlighter-rouge">HTTP 200 OK</code> ainsi qu’un Bundle de type searchset.</p>
+
+<p>Si le gestionnaire de partage de documents envoie des "warnings", la ressource Bundle doit aussi contenir une ressource "OperationOutcome" qui contient ces "warnings".</p>
+
+<p>Si le gestionnaire de partage de documents doit reporter une erreur, il doit utiliser un "<a href="http://hl7.org/fhir/R4/http.html">HTTP error response codes</a>" et doit inclure un "<a href="http://hl7.org/fhir/R4/operationoutcome.html">FHIR OperationOutcome</a>" avec plus de détails sur l'échec.</p>
 
 
 
@@ -473,7 +475,7 @@ Si le gestionnaire de partage de documents doit reporter une erreur, il doit uti
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 13, 2026 15:47+0000">2026-01-13</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 13, 2026 16:04+0000">2026-01-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

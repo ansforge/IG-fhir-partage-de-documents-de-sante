@@ -337,6 +337,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
+<blockquote>
+  <p>* Paramètre de recherche créé pour le volet PDSm</p>
+</blockquote>
+
 <h4 id="paramètre-de-recherche-de-la-ressource-patient">Paramètre de recherche de la ressource Patient</h4>
 
 <table class="grid">
@@ -385,21 +389,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>* Paramètre de recherche créé pour le volet PDSm</p>
-
 <p>Ci-dessous des exemples de requête :</p>
 
 <ul>
   <li>Rechercher les ressources de type List, correspondant à des lots de soumission, ayant été créées depuis le 01/01/2021 dont l’auteur est une professionnelle ayant pour nom de famille Dupont et prénom Emma.</li>
 </ul>
 
-<p><code class="language-plaintext highlighter-rouge">GET http://targetsystem.com/API/List?code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset&amp;date=ge2021-01-01&amp;source:PractitionerRole.partOf.family-ex =Dupont&amp; source:PractitionerRole.name =Emma HTTP/1.1</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://targetsystem.com/API/List?code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset&amp;date=ge2021-01-01&amp;source:PractitionerRole.partOf.family-ex =Dupont&amp; source:PractitionerRole.name =Emma HTTP/1.1
+
+</code></pre></div></div>
 
 <ul>
   <li>Rechercher les ressource de type List, correspondant à des lots de soumission dont le patient a l’identifiant 156.</li>
 </ul>
 
-<p><code class="language-plaintext highlighter-rouge">POST http://targetsystem.com/API/List/_search?patient.identifier=156&amp;code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST http://targetsystem.com/API/List/_search?patient.identifier=156&amp;code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset
+
+</code></pre></div></div>
 
 <h3 id="flux-06-a--réponse-au-flux-05-a">Flux 06-a : réponse au flux 05-a</h3>
 <p>Il s'agit du résultat de la recherche de documents retourné par le gestionnaire de partage de documents. La recherche de Lots de Soumission retourne les ressources List qui correspondent aux critères de recherche fournis par le consommateur de documents. On retrouve les mêmes éléments qui constituent les lots de soumission que lors de la demande d’ajout d’un lot de documents.</p>
@@ -452,7 +458,7 @@ Si le gestionnaire de partage de documents doit reporter une erreur, il doit uti
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 13, 2026 15:47+0000">2026-01-13</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 13, 2026 16:04+0000">2026-01-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
