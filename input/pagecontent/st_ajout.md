@@ -4,7 +4,7 @@ Ces flux se basent sur la requête et la réponse de la transaction IHE "Provide
 
 ### Flux 01 : Ajout d’un lot de documents
 
-La première étape de la construction du flux 01 de la demande de modification du dossier patient consiste à organiser son contenu dans une ressource Bundle. Un profil spécifique dérivé du profil IHE MHD v4.0.1 « ComprehensiveProvideDocumentBundle » est créé pour ce volet et nommé PDSm_ComprehensiveProvideDocumentBundle.
+La première étape de la construction du flux 01 de la demande de modification du dossier patient consiste à organiser son contenu dans une ressource Bundle. Un profil spécifique dérivé du profil IHE MHD v4.0.1 « ComprehensiveProvideDocumentBundle » est créé pour ce volet et nommé [PDSm Comprehensive Provide Document Bundle].
 
 Le flux doit contenir :
 * une ressource de type « List » représentant le lot de soumission (profil PDSm_SubmissionsSetComprehensive)
