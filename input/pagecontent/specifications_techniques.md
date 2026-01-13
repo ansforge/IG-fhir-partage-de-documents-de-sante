@@ -1,1 +1,0 @@
-<!-- Page vite pour l'onglet dépliant -->

@@ -36,8 +36,7 @@ pages:
             title: Recherche de documents
         sf_consultation.md:
             title: Consultation de documents
-    specifications_techniques.md:
-        construction_des_flux.md:
+    construction_des_flux.md:
         st_ajout.md:
             title: Ajout d'un lot de documents (ITI-65)
         st_maj.md:
