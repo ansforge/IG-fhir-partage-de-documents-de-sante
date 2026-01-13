@@ -76,11 +76,7 @@ Il n'y pas de concepts équivalent dans le MOS au moment de l'étude.
 ### MODELISATION DES FLUX D'INFORMATIONS
 Les types de données complexes sont décrits dans les classes communes du MOS de l'ANS
 
----
-
 ### Navigation vers les spécifications fonctionnelles détaillées
-
-<div style="background-color: #fff9e6; border-left: 4px solid #ff9800; padding: 15px; margin: 20px 0;">
 
 Pour consulter les spécifications fonctionnelles détaillées de chaque processus :
 
@@ -88,12 +84,3 @@ Pour consulter les spécifications fonctionnelles détaillées de chaque process
 * [Mise à jour de documents](sf_maj.html)
 * [Recherche de documents](sf_recherche.html)
 * [Consultation de documents](sf_consultation.html)
-
-</div>
-
-
-
- 
-
-
-
