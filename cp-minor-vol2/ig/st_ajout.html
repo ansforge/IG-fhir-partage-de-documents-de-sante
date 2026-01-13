@@ -246,12 +246,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="flux-01--ajout-dun-lot-de-documents">Flux 01 : Ajout d’un lot de documents</h3>
 
-<p>La première étape de la construction du flux 01 de la demande de modification du dossier patient consiste à organiser son contenu dans une ressource Bundle. Un profil spécifique dérivé du profil IHE MHD v4.0.1 « ComprehensiveProvideDocumentBundle » est créé pour ce volet et nommé [PDSm Comprehensive Provide Document Bundle].</p>
+<p>La première étape de la construction du flux 01 de la demande de modification du dossier patient consiste à organiser son contenu dans une ressource Bundle. Un profil spécifique dérivé du profil IHE MHD v4.0.1 « ComprehensiveProvideDocumentBundle » est créé pour ce volet et nommé <a href="StructureDefinition-pdsm-comprehensive-provide-document-bundle.html">PDSm Comprehensive Provide Document Bundle</a>.</p>
 
 <p>Le flux doit contenir :</p>
 <ul>
-  <li>une ressource de type « List » représentant le lot de soumission (profil [PDSm_SubmissionsSetComprehensive])</li>
-  <li>une à plusieurs ressources de type « DocumentReference », représentant les fiches de documents (profil [PDSm_ComprehensiveDocumentReference]),</li>
+  <li>une ressource de type « List » représentant le lot de soumission (profil <a href="StructureDefinition-pdsm-submissionset-comprehensive.html">PDSm_SubmissionsSetComprehensive</a>)</li>
+  <li>une à plusieurs ressources de type « DocumentReference », représentant les fiches de documents (profil <a href="StructureDefinition-pdsm-comprehensive-document-reference.html">PDSm_ComprehensiveDocumentReference</a>),</li>
   <li>zero à plusieurs ressources « Binary » représentant les documents envoyés dans le flux (ressource <a href="https://www.hl7.org/fhir/binary.html">Binary</a>).,</li>
   <li>zero à plusieurs ressources de type « List » représentant les classeurs (profil PDSm_FolderComprehensive).</li>
 </ul>
@@ -325,7 +325,7 @@ Un succès n'est indiqué que lorsque le ou les documents sont reçus, complète
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 13, 2026 17:16+0000">2026-01-13</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 13, 2026 18:00+0000">2026-01-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
