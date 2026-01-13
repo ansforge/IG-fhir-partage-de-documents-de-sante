@@ -71,10 +71,25 @@ Le périmètre de l'étude englobe les processus en couleur sur le diagramme de 
 | LotSoumission | Un lot de soumission regroupe les fiches et les classeurs faisant partie d’une même demande de modification du contenu du dossier. Il atteste l’existence et le statut de la demande et est décrit par un ensemble d’attributs, ses métadonnées. Une fois créé, un lot de soumission est immuable à l'exception de son statut. | Flux 1 - AjoutLotDocument <br /> Flux 2 - ResultatAjoutLotDocument <br /> Flux 5 - ResultatRechercheDocument |
 
 #### Mise en équivalence MOS
-Il n’y pas de concepts équivalent dans le MOS au moment de l’étude.
+Il n'y pas de concepts équivalent dans le MOS au moment de l'étude.
 
 ### MODELISATION DES FLUX D'INFORMATIONS
 Les types de données complexes sont décrits dans les classes communes du MOS de l'ANS
+
+---
+
+### Navigation vers les spécifications fonctionnelles détaillées
+
+<div style="background-color: #fff9e6; border-left: 4px solid #ff9800; padding: 15px; margin: 20px 0;">
+
+Pour consulter les spécifications fonctionnelles détaillées de chaque processus :
+
+* [Ajout d'un lot de documents](sf_ajout.html)
+* [Mise à jour de documents](sf_maj.html)
+* [Recherche de documents](sf_recherche.html)
+* [Consultation de documents](sf_consultation.html)
+
+</div>
 
 
 
