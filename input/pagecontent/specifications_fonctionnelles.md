@@ -30,8 +30,6 @@ Le patient retourne voir son médecin traitant. Le médecin recherche le compte 
 
 Le périmètre de l'étude englobe les processus en couleur sur le diagramme de paquetage.
 
-
-
 #### Liste des acteurs pour l'ensemble des processus
 
 | **Acteur** | **Description** |
