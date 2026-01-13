@@ -1,6 +1,11 @@
-### CADRE JURIDIQUE ET ORIENTATIONS ORGANISATIONNELLES
+Ces spécifications fonctionnelles présentent une étude métier pour la mise en œuvre du volet « Partage de documents de santé ». Les processus décrits dans ce volet permettent de regrouper l’ensemble des documents de santé d’un patient disposant d’un dossier partagé, d’en permettre la modification, la dépublication, la recherche et la consultation.
 
-Ce document présente une étude métier pour la mise en œuvre du volet « Partage de documents de santé ». Les processus décrits dans ce volet permettent de regrouper l'ensemble des documents de santé d'un patient disposant d’un dossier partagé, d'en permettre la modification, la dépublication, la recherche et la consultation.
+Ces spécifications fonctionnelles sont dérivées en deux spécifications techniques :
+
+* Les spécifications techniques se basant sur le standard FHIR et IHE MHD (dans ce guide)
+* Les spécifications techniques se basant sur IHE XDS accessible dans la page CI-SIS https://esante.gouv.fr/volet-partage-de-documents-de-sante
+
+### CADRE JURIDIQUE ET ORIENTATIONS ORGANISATIONNELLES
 
 L’étude menée concerne la modélisation des flux qui existent entre les composants d’un système d’information ou entre des systèmes d’informations qui participent à la mise en œuvre du partage de documents de santé. Elle englobe les actions de modification du contenu du dossier patient, ainsi que de recherche et de consultation des documents selon divers critères de recherche qui sont présentés dans ce document.
 
