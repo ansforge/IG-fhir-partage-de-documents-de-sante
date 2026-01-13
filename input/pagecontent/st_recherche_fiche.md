@@ -31,6 +31,8 @@ Le flux 05-b contient les critères suivants :
 | author | token | Recherche du praticien par identifiant, nom ou prénom |
 {: .grid }
 
+> \* Paramètre de recherche créé pour le volet PDSm
+
 #### Paramètre de recherche sur les ressources Patient / Practitioner / Device
 
 | Critère de recherche FHIR | Type | Description |
