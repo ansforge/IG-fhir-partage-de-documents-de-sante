@@ -21,7 +21,7 @@ Lorsque toutes les modifications sont traitées, le serveur traite la fiche du d
 
 Ci-dessous un exemple de requête avec le body en JSON :
 
-```json
+```
 PATCH [base]/DocumentReference?identifier=http://my-lab-system|123 HTTP/1.1
 Content-Type: application/json-patch+json
 ```
@@ -64,7 +64,7 @@ Le corps de la réponse doit contenir une ressource DocumentReference constitué
 
 Ci-dessous un exemple de réponse suite au succès de la mise à jour du statut à « current » de la ressource DocumentReference d’identifiant 35 (cf annexe VI).
 
-```json
+```
 HTTP/1.1 200 Ok
 Content-Type : application/fhir+JSON
 Last-Modified : 2021-06-07
