@@ -1,23 +1,28 @@
 ### Définition 
 
-<object data="fonctionnel/fig_2.png" type="image/png"></object>
-<br/>
-Figure 2 : Processus collaboratif "Ajout d'un lot de documents"
 
-| Service attendu | Le producteur de documents envoie au gestionnaire de partage de documents une demande d’ajout d’un lot de documents. Ces documents peuvent être de nouveaux documents et/ou des nouvelles versions de documents. |
-| Pré- conditions | Le producteur de documents doit au préalable : 1. être en possession des documents à modifier, 2. être habilité |
-| Post-conditions | N/A |
-| Contraintes fonctionnelles | N/A |
-| Scénario nominal | N/A |
+<div class="figure" style='text-align: center;'>
+    <img src="fonctionnel/fig_2.png" alt="Figure 2" title="Figure 2 : Processus collaboratif Ajout d'un lot de documents" style="width:60%;">
+    <figcaption><b>Figure 2 : Processus collaboratif "Ajout d'un lot de documents"</b></figcaption>
+</div>
+<br>
 
-Table 1 Caractéristiques du processus collaboratif
+| **Service attendu** | Le producteur de documents envoie au gestionnaire de partage de documents une demande d’ajout d’un lot de documents. Ces documents peuvent être de nouveaux documents et/ou des nouvelles versions de documents. |
+| **Pré- conditions** | Le producteur de documents doit au préalable :<br>1. être en possession des documents à modifier (dans le cas de l'ajout d'une nouvelle version d'un document),<br>2.être habilité |
+| **Post-conditions** | N/A |
+| **Contraintes fonctionnelles** | N/A |
+| **Scénario nominal** | N/A |
+
+**Table 1 Caractéristiques du processus collaboratif**
 
 
 ### Description et identification des flux
 
-<object data="fonctionnel/fig_6.png" type="image/png"></object>
-<br/>
-Figure 6 : Processus collaboratif "Ajout d'un lot de documents"
+<div class="figure" style='text-align: center;'>
+    <img src="fonctionnel/fig_6.png" alt="Figure 6" title="Figure 6 : Processus collaboratif Ajout d'un lot de documents" style="width:60%;">
+    <figcaption><b>Figure 6 : Processus collaboratif "Ajout d'un lot de documents"</b></figcaption>
+</div>
+<br>
 
 #### Description des actions
 
@@ -28,23 +33,25 @@ Figure 6 : Processus collaboratif "Ajout d'un lot de documents"
 | Traiter la réponse | Le producteur de documents reçoit et traite le résultat de la demande d’ajout ou de mise à jour de documents. Il peut afficher à l’utilisateur le résultat de la demande. |
 | Traiter la demande d'ajout ou de remplacement d'un document | L'infrastructure de partage de documents traite la demande d’ajout ou de mise à jour, exécute les actions nécessaires au traitement de ces demandes et retourne le résultat du traitement. |
 
-Table 6 Tableau des actions
+**Table 6 Tableau des actions**
 
 
 #### Identification des flux
 
 
 | **Flux** | **Processus** | **Emetteur** | **Récepteur** | **Périmètre** |
+| ------ | ------ | ------ | ------ | ------ |
 | Flux 1 - AjoutLotDocument | Ajout d'un lot de documents | Producteur de documents |Gestionnaire de partage de documents | Oui |
 | Flux 2 - ResultatAjoutLotDocument | Ajout d'un lot de documents | Gestionnaire de partage de documents | Producteur de documents | Oui |
 
 
 ### Flux 1 - AjoutLotDocument MODELISATION DES FLUX D'INFORMATIONS
 
-<object data="fonctionnel/fig_10.png" type="image/png"></object>
-<br/>
-
-Figure 10 Flux 1 - AjoutLotDocument
+<div class="figure" style='text-align: center;'>
+    <img src="fonctionnel/fig_10.png" alt="Figure 10" title="Figure 10 Flux 1 - AjoutLotDocument" style="width:80%;">
+    <figcaption><b>Figure 10 : Flux 1 - AjoutLotDocument</b></figcaption>
+</div>
+<br>
 
 #### Classe "Document"
 
@@ -54,7 +61,7 @@ Un document est la plus petite unité d'information déposée dans l’infrastru
 | ----- | ----- |
 | contenuDocument : [1..1] ObjetBinaire | Contient le document au format binaire |
 
-Table 16 Attributs de la classe "Document"
+**Table 16 Attributs de la classe "Document"**
 
 #### Classe "Fiche"
 Une fiche représente le document stocké dans l’infrastructure de partage de documents. Elle contient les informations décrivant les caractéristiques principales d’un document servant au classement et à la recherche des documents. 
@@ -84,7 +91,7 @@ Une fiche représente le document stocké dans l’infrastructure de partage de 
 | actePathologie : [0..1] Code | Actes et pathologies en rapport avec le document.<br/>Nomenclatures utilisées :<br/>** CCAM pour les actes médicaux (OID=""1.2.250.1.213.2.5"");<br/>** CIM-10 pour les diagnostics de pathologie (OID=""2.16.840.1.113883.6.3"");<br/>** TRE_A00-ProducteurDocNonPS pour les documents d'expression personnelle du patient."|
 | version : [0..1] Numerique | Numéro de version de la fiche d’un document. La valeur de la métadonnée version est égale à 1 pour la première version de la fiche.|
 
-Table 17 Attributs de la classe "Fiche"
+**Table 17 Attributs de la classe "Fiche"**
 
 #### Classe "Classeur"
 
@@ -100,7 +107,7 @@ Un assemblage de fiches regroupées par catégorie.
 | derniereMiseAJour : [0..1] DateHeure | Correspond à la date et l’heure de la dernière mise à jour du classeur. |
 | titreClasseur : [1..1] Texte | Titre du classeur.|
 
-Table 18 Attributs de la classe "Classeur"
+**Table 18 Attributs de la classe "Classeur"**
 
 #### Classe "LotSoumission"
 Un lot de soumission regroupe les fiches et les classeurs faisant partie d’une même demande de modification du contenu du dossier. Il atteste l’existence et le statut de la demande et est décrit par un ensemble d’attributs, ses métadonnées. Une fois créé, un lot de soumission est immuable à l'exception de son statut.
@@ -118,14 +125,16 @@ Un lot de soumission regroupe les fiches et les classeurs faisant partie d’une
 | commentaire : [0..1] Texte | Contient le commentaire associé au lot de soumission.|
 | titre : [0..1] Texte | Titre du lot de soumission|
 
-Table 19 Attributs de la classe "LotSoumission"
+**Table 19 Attributs de la classe "LotSoumission"**
 
 
 ### Flux 2 - ResultatAjoutLotDocument MODELISATION DES FLUX D’INFORMATIONS
 
-<object data="fonctionnel/fig_11.png" type="image/png"></object>
-<br/>
-Figure 11 Flux 2 - ResultatAjoutLotDocument
+<div class="figure" style='text-align: center;'>
+    <img src="fonctionnel/fig_11.png" alt="Figure 11" title="Figure 11 Flux 2 - ResultatAjoutLotDocument" style="width:80%;">
+    <figcaption><b>Figure 11 : Flux 2 - ResultatAjoutLotDocument</b></figcaption>
+</div>
+<br>
 
 #### Classe "LotSoumission"
 Un lot de soumission regroupe les fiches et les classeurs faisant partie d’une même demande de modification du contenu du dossier. Il atteste l’existence et le statut de la demande et est décrit par un ensemble d’attributs, ses métadonnées. Une fois créé, un lot de soumission est immuable à l'exception de son statut.
@@ -134,7 +143,7 @@ Un lot de soumission regroupe les fiches et les classeurs faisant partie d’une
 | ----- | ----- |
 | statutAttributLotSoumission : [0..*] Texte | La réponse de la demande de modification du dossier patient peut contenir un lot de soumission qui contient le statut (réussite ou échec) de chaque attribut renseigné lors de la demande de modification du dossier patient. |
 
-Table 20 Attributs de la classe "LotSoumission"
+**Table 20 Attributs de la classe "LotSoumission"**
 
 #### Classe "Classeur"
 
@@ -144,15 +153,14 @@ Un assemblage de fiches regroupées par catégorie.
 | ----- | ----- |
 | statutAttributClasseur : [0..*] Texte | La réponse de la demande de modification du dossier patient peut contenir un lot de soumission qui contient le statut (réussite ou échec) de chaque attribut renseigné lors de la demande de modification du dossier patient. |
 
-Table 21 Attributs de la classe "Classeur"
+**Table 21 Attributs de la classe "Classeur"**
 
 #### Classe "Fiche"
 
-Une fiche représente le document stocké dans l’infrastructure de partage de documents. Elle contient les informations décrivant les caractéristiques principales d’un document servant au classement et à la recherche des documents. 
+Une fiche représente le document stocké dans l’infrastructure de partage de documents. Elle contient les informations décrivant les caractéristiques principales d’un document servant au classement et à la recherche des documents.
 
 | **Nom** | **Description** |
 | ----- | ----- |
 | statutAttributFiche : [0..*] Texte | La réponse de la demande de modification du dossier patient peut contenir une fiche qui contient le statut (réussite ou échec) de chaque attribut renseigné lors de la demande de modification du dossier patient. |
 
-Table 22 Attributs de la classe "Fiche"
-
+**Table 22 Attributs de la classe "Fiche"**
