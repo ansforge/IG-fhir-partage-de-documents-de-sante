@@ -16,16 +16,16 @@ La première étape de la construction du flux 01 de la demande de modification 
 
 Le flux doit contenir :
 
-* une ressource de type « List » représentant le lot de soumission (profil PDSm_SubmissionsSetComprehensive)
-* une à plusieurs ressources de type « DocumentReference », représentant les fiches de documents (profil [PDSm_ComprehensiveDocumentReference],
+* une ressource de type « List » représentant le lot de soumission (profil [PDSm_SubmissionsSetComprehensive])
+* une à plusieurs ressources de type « DocumentReference », représentant les fiches de documents (profil [PDSm_ComprehensiveDocumentReference]),
 * zero à plusieurs ressources « Binary » représentant les documents envoyés dans le flux (ressource [Binary](https://www.hl7.org/fhir/binary.html)).,
 * zero à plusieurs ressources de type « List » représentant les classeurs (profil PDSm_FolderComprehensive).
 
-Dans le cas d’un dépôt d’un nouveau document, l’élément DocumentReference.content.attachment.url doit pointer vers une ressource Binary, représentant le document, présente dans le flux.
+Dans le cas d’un dépôt d’un nouveau document, l’élément `DocumentReference.content.attachment.url` doit pointer vers une ressource Binary, représentant le document, présente dans le flux.
 
-Dans le cas d’une demande de mise à jour d’un document par remplacement, l’élément DocumentReference.relatesTo doit être renseigné afin d’indiquer le lien avec un DocumentReference existant et de préciser la nature de la mise à jour. L’élément DocumentReference.content.attachment.url doit pointer vers une ressource Binary, représentant le document qui remplace l’ancien, présente dans le flux.
+Dans le cas d’une demande de mise à jour d’un document par remplacement, l’élément DocumentReference.relatesTo doit être renseigné afin d’indiquer le lien avec un DocumentReference existant et de préciser la nature de la mise à jour. L’élément `DocumentReference.content.attachment.url` doit pointer vers une ressource Binary, représentant le document qui remplace l’ancien, présente dans le flux.
 
-Dans le cas d’une mise à jour d’un classeur, comme List.status ou List.entry pour reclasser des documents, une nouvelle version de la ressource List est envoyée.
+Dans le cas d’une mise à jour d’un classeur, comme `List.status` ou `List.entry` pour reclasser des documents, une nouvelle version de la ressource List est envoyée.
 
 Le corps de la requête est une ressource "Bundle" de type "transaction" encapsulant toutes les ressources listées précédemment. Cet objet de type JSON ou XML sera envoyé dans le contenu de la requête HTTP POST.
 

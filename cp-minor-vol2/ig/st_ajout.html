@@ -250,17 +250,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Le flux doit contenir :</p>
 <ul>
-  <li>une ressource de type « List » représentant le lot de soumission (profil PDSm_SubmissionsSetComprehensive)</li>
-  <li>une à plusieurs ressources de type « DocumentReference », représentant les fiches de documents (profil [PDSm_ComprehensiveDocumentReference],</li>
+  <li>une ressource de type « List » représentant le lot de soumission (profil [PDSm_SubmissionsSetComprehensive])</li>
+  <li>une à plusieurs ressources de type « DocumentReference », représentant les fiches de documents (profil [PDSm_ComprehensiveDocumentReference]),</li>
   <li>zero à plusieurs ressources « Binary » représentant les documents envoyés dans le flux (ressource <a href="https://www.hl7.org/fhir/binary.html">Binary</a>).,</li>
   <li>zero à plusieurs ressources de type « List » représentant les classeurs (profil PDSm_FolderComprehensive).</li>
 </ul>
 
-<p>Dans le cas d’un dépôt d’un nouveau document, l’élément DocumentReference.content.attachment.url doit pointer vers une ressource Binary, représentant le document, présente dans le flux.</p>
+<p>Dans le cas d’un dépôt d’un nouveau document, l’élément <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code> doit pointer vers une ressource Binary, représentant le document, présente dans le flux.</p>
 
-<p>Dans le cas d’une demande de mise à jour d’un document par remplacement, l’élément DocumentReference.relatesTo doit être renseigné afin d’indiquer le lien avec un DocumentReference existant et de préciser la nature de la mise à jour. L’élément DocumentReference.content.attachment.url doit pointer vers une ressource Binary, représentant le document qui remplace l’ancien, présente dans le flux.</p>
+<p>Dans le cas d’une demande de mise à jour d’un document par remplacement, l’élément DocumentReference.relatesTo doit être renseigné afin d’indiquer le lien avec un DocumentReference existant et de préciser la nature de la mise à jour. L’élément <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code> doit pointer vers une ressource Binary, représentant le document qui remplace l’ancien, présente dans le flux.</p>
 
-<p>Dans le cas d’une mise à jour d’un classeur, comme List.status ou List.entry pour reclasser des documents, une nouvelle version de la ressource List est envoyée.</p>
+<p>Dans le cas d’une mise à jour d’un classeur, comme <code class="language-plaintext highlighter-rouge">List.status</code> ou <code class="language-plaintext highlighter-rouge">List.entry</code> pour reclasser des documents, une nouvelle version de la ressource List est envoyée.</p>
 
 <p>Le corps de la requête est une ressource "Bundle" de type "transaction" encapsulant toutes les ressources listées précédemment. Cet objet de type JSON ou XML sera envoyé dans le contenu de la requête HTTP POST.</p>
 
@@ -277,9 +277,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 * [PDSmFolderComprehensive](StructureDefinition-PDSmFolderComprehensive.html) représentant le Classeur -->
 <!-- Utiliser à chaque fois le nom du profil et non le lot de soumission, et rajouter le nom fonctionnel à côté -->
 
-<p>Le gestionnaire de partage de documents de santé retourne un "HTTP Status code" approprié au résultat de la demande comme indiqué dans la spécification du profil MHD. Le corps de la réponse doit être un Bundle de type transaction-response avec un élément entry pour chaque ressource reçue dans le Bundle de la requête, dans le même ordre, avec le résultat du traitement de l'élément. Le corps de la réponse doit être conforme au profil <a href="https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.ProvideDocumentBundleResponse">ProvideDocumentBundleResponse</a> (<a href="Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.json.html">exemple de contenu d'un payload</a>).</p>
+<p>Le gestionnaire de partage de documents de santé retourne un "HTTP Status code" approprié au résultat de la demande comme indiqué dans la spécification du profil MHD. Le corps de la réponse doit être un Bundle de type transaction-response avec un élément entry pour chaque ressource reçue dans le Bundle de la requête, dans le même ordre, avec le résultat du traitement de l'élément.
+Le corps de la réponse doit être conforme au profil <a href="https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.ProvideDocumentBundleResponse">ProvideDocumentBundleResponse</a> (<a href="Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.json.html">exemple de contenu d'un payload</a>).</p>
 
-<p>Ce flux sert à communiquer un succès ou un échec. Un succès n'est indiqué que lorsque le ou les documents sont reçus, complètement traités et conservés selon les besoins de la configuration du gestionnaire de partage de documents.</p>
+<p>Ce flux sert à communiquer un succès ou un échec.
+Un succès n'est indiqué que lorsque le ou les documents sont reçus, complètement traités et conservés selon les besoins de la configuration du gestionnaire de partage de documents.</p>
 
 <p>Les messages de warning concernant le traitement des associations entre fiches, l’élément DocumentReference.relatesTo, ou le traitement des classeurs sont définis par le profil MHD.</p>
 
@@ -323,7 +325,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 13, 2026 14:11+0000">2026-01-13</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 13, 2026 15:10+0000">2026-01-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
