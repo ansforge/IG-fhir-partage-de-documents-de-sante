@@ -1,0 +1,164 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://loinc.org",
+      "version" : "3.1.0",
+      "status" : "active",
+      "name" : "LOINC",
+      "title" : "Logical Observation Identifiers, Names and Codes (LOINC)",
+      "description" : "LOINC provides a set of universal names and ID codes for identifying laboratory and clinical test results.1,2 LOINC facilitates the exchange and pooling of results, such as blood hemoglobin, serum potassium, or vital signs, for clinical care, outcomes management, and research. LOINC's universal identifiers (names and codes) can be used in the context of order and observation exchanges between information systems that use syntax standards such as HL73, CEN TC251, ISO TC215, ASTM4, and DICOM. Specifically, the identifier can be used as the coded value for an observation in any other standard that uses the observation/observation value paradigm, whether messages, documents, application programming interface (API), etc. For example, LOINC codes are used widely in the OBX segment Observation Identifier field (OBX-3) of an ORU HL7 (HL7 version 2.x or ASTM 1238-9410) message that may be sent between a Clinical Laboratory Information Management Systems (LIMS) and Electronic Health Record Systems (EHR).5, 6 In this way, LOINC codes provide universal identifiers that allow the exchange of clinical data between heterogeneous computing environments.",
+      "oids" : ["2.16.840.1.113883.6.1"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J07-XdsTypeCode-CISIS.html" : "JDV_J07_XdsTypeCode_CISIS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/FHIR/TRE-A00-ProducteurDocNonPS",
+      "version" : "20240329120000",
+      "status" : "active",
+      "name" : "TRE_A00_ProducteurDocNonPS",
+      "title" : null,
+      "description" : "Producteur de document non PS",
+      "oids" : ["1.2.250.1.213.1.1.4.6"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J02-XdsHealthcareFacilityTypeCode-CISIS.html" : "JDV_J02_XdsHealthcareFacilityTypeCode_CISIS",
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J03-XdsContentTypeCode-CISIS.html" : "JDV_J03_XdsContentTypeCode_CISIS",
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J04-XdsPracticeSettingCode-CISIS.html" : "JDV_J04_XdsPracticeSettingCode_CISIS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/FHIR/TRE-A01-CadreExercice",
+      "version" : "20240927120000",
+      "status" : "active",
+      "name" : "TRE_A01_CadreExercice",
+      "title" : null,
+      "description" : "Cadre d'exercice",
+      "oids" : ["1.2.250.1.213.1.1.4.9"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J04-XdsPracticeSettingCode-CISIS.html" : "JDV_J04_XdsPracticeSettingCode_CISIS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_A03-ClasseDocument/FHIR/TRE-A03-ClasseDocument",
+      "version" : "20231215120000",
+      "status" : "active",
+      "name" : "TRE_A03_ClasseDocument",
+      "title" : null,
+      "description" : "Classe de document",
+      "oids" : ["1.2.250.1.213.1.1.4.1"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J06-XdsClassCode-CISIS.html" : "JDV_J06_XdsClassCode_CISIS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+      "version" : "20240329120000",
+      "status" : "active",
+      "name" : "TRE_A05_TypeDocComplementaire",
+      "title" : null,
+      "description" : "Type de document en complément des nomenclatures internationales",
+      "oids" : ["1.2.250.1.213.1.1.4.12"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J07-XdsTypeCode-CISIS.html" : "JDV_J07_XdsTypeCode_CISIS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_A06-FormatCodeComplementaire/FHIR/TRE-A06-FormatCodeComplementaire",
+      "version" : "20251029120000",
+      "status" : "active",
+      "name" : "TRE_A06_FormatCodeComplementaire",
+      "title" : null,
+      "description" : "formatCode en complément des nomenclatures internationales",
+      "oids" : ["1.2.250.1.213.1.1.4.2.282"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J10-XdsFormatCode-CISIS.html" : "JDV_J10_XdsFormatCode_CISIS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_A09-DICOMuidRegistry/FHIR/TRE-A09-DICOMuidRegistry",
+      "version" : "20231215120000",
+      "status" : "active",
+      "name" : "TRE_A09_DICOMuidRegistry",
+      "title" : null,
+      "description" : "DICOM UID Registry",
+      "oids" : ["1.2.840.10008.2.6.1"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J10-XdsFormatCode-CISIS.html" : "JDV_J10_XdsFormatCode_CISIS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_A10-NomenclatureURN/FHIR/TRE-A10-NomenclatureURN",
+      "version" : "20231215120000",
+      "status" : "active",
+      "name" : "TRE_A10_NomenclatureURN",
+      "title" : null,
+      "description" : "Nomenclature identifiée par URN",
+      "oids" : ["URN"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J06-XdsClassCode-CISIS.html" : "JDV_J06_XdsClassCode_CISIS",
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J10-XdsFormatCode-CISIS.html" : "JDV_J10_XdsFormatCode_CISIS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_A11-IheFormatCode/FHIR/TRE-A11-IheFormatCode",
+      "version" : "20240426120000",
+      "status" : "active",
+      "name" : "TRE_A11_IheFormatCode",
+      "title" : null,
+      "description" : "IHE formatCode",
+      "oids" : ["1.3.6.1.4.1.19376.1.2.3"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J10-XdsFormatCode-CISIS.html" : "JDV_J10_XdsFormatCode_CISIS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_A12-NomenclatureASTM/FHIR/TRE-A12-NomenclatureASTM",
+      "version" : "20231215120000",
+      "status" : "active",
+      "name" : "TRE_A12_NomenclatureASTM",
+      "title" : null,
+      "description" : "Nomenclature identifiée par ASTM",
+      "oids" : ["ASTM"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J07-XdsTypeCode-CISIS.html" : "JDV_J07_XdsTypeCode_CISIS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite",
+      "version" : "20250523120000",
+      "status" : "active",
+      "name" : "TRE_R02_SecteurActivite",
+      "title" : null,
+      "description" : "Le secteur d'activité de santé est une donnée RPPS et correspond au type de service fourni par une structure. Il sert principalement à déterminer les propriétés de facturation des professionnels de ces structures vis-à-vis de l'assurance maladie",
+      "oids" : ["1.2.250.1.71.4.2.4"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J02-XdsHealthcareFacilityTypeCode-CISIS.html" : "JDV_J02_XdsHealthcareFacilityTypeCode_CISIS",
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J03-XdsContentTypeCode-CISIS.html" : "JDV_J03_XdsContentTypeCode_CISIS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R209-TypeActivite/FHIR/TRE-R209-TypeActivite",
+      "version" : "20240223120000",
+      "status" : "active",
+      "name" : "TRE_R209_TypeActivite",
+      "title" : null,
+      "description" : "Type d'activité",
+      "oids" : ["1.2.250.1.213.2.2"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J03-XdsContentTypeCode-CISIS.html" : "JDV_J03_XdsContentTypeCode_CISIS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R276-FormeActivite/FHIR/TRE-R276-FormeActivite",
+      "version" : "20240329120000",
+      "status" : "active",
+      "name" : "TRE_R276_FormeActivite",
+      "title" : null,
+      "description" : "Type d'organisation de prise en charge",
+      "oids" : ["1.2.250.1.213.1.6.1.128"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J03-XdsContentTypeCode-CISIS.html" : "JDV_J03_XdsContentTypeCode_CISIS"
+    }
+  ]
+}
