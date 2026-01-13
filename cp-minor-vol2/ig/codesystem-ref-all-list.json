@@ -59,8 +59,8 @@
       "oids" : ["2.16.840.1.113883.4.642.4.625"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-http-verb.html" : "HTTPVerb",
       "https://profiles.ihe.net/ITI/MHD/4.2.0/ValueSet-MHDprovidePatientActions.html" : "MHD Patient Types ValueSet",
+      "http://hl7.org/fhir/R4/valueset-http-verb.html" : "HTTPVerb",
       "https://profiles.ihe.net/ITI/MHD/4.2.0/ValueSet-MHDprovideFolderActions.html" : "MHD Folder List Types ValueSet"
     },
     {
@@ -278,8 +278,8 @@
       "oids" : ["URN"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J06-XdsClassCode-CISIS.html" : "JDV_J06_XdsClassCode_CISIS",
-      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J10-XdsFormatCode-CISIS.html" : "JDV_J10_XdsFormatCode_CISIS"
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J10-XdsFormatCode-CISIS.html" : "JDV_J10_XdsFormatCode_CISIS",
+      "https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J06-XdsClassCode-CISIS.html" : "JDV_J06_XdsClassCode_CISIS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_A11-IheFormatCode/FHIR/TRE-A11-IheFormatCode",
