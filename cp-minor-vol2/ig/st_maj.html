@@ -246,7 +246,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Le flux de mise à jour des métadonnées de la fiche est basé sur l’interaction « <a href="https://www.hl7.org/fhir/R4/http.html#patch">patch</a> » de l’API REST FHIR qui est assurée par une requête HTTP PATCH. Elle permet la mise à jour partielle d’une ressource DocumentReference.</p>
 
-<p>Au niveau applicatif, les mises à jour sont restreintes aux éléments <code class="language-plaintext highlighter-rouge">DocumentReference.status</code>, <code class="language-plaintext highlighter-rouge">DocumentReference.securityLabel</code> et l’extension [PDSm_IsArchived].</p>
+<p>Au niveau applicatif, les mises à jour sont restreintes aux éléments <code class="language-plaintext highlighter-rouge">DocumentReference.status</code>, <code class="language-plaintext highlighter-rouge">DocumentReference.securityLabel</code> et l’extension <a href="StructureDefinition-pdsm-ext-is-archived.html">PDSm_IsArchived</a>.</p>
 
 <p>La requête Patch contient l’identifiant métier de la ressource à modifier ainsi que la liste des mises à jour à effectuer.</p>
 
@@ -362,7 +362,7 @@ ETag : W/"2"
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 13, 2026 18:46+0000">2026-01-13</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 13, 2026 18:51+0000">2026-01-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

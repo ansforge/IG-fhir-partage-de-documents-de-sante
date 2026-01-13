@@ -12,7 +12,7 @@ Ce flux contient les informations relatives à la modification des métadonnées
 
 Le flux de mise à jour des métadonnées de la fiche est basé sur l’interaction « [patch](https://www.hl7.org/fhir/R4/http.html#patch) » de l’API REST FHIR qui est assurée par une requête HTTP PATCH. Elle permet la mise à jour partielle d’une ressource DocumentReference.
 
-Au niveau applicatif, les mises à jour sont restreintes aux éléments `DocumentReference.status`, `DocumentReference.securityLabel` et l’extension [PDSm_IsArchived].
+Au niveau applicatif, les mises à jour sont restreintes aux éléments `DocumentReference.status`, `DocumentReference.securityLabel` et l’extension [PDSm_IsArchived](StructureDefinition-pdsm-ext-is-archived.md).
 
 La requête Patch contient l’identifiant métier de la ressource à modifier ainsi que la liste des mises à jour à effectuer.
 
