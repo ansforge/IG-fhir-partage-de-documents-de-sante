@@ -3,7 +3,7 @@ La construction des flux reprend le profil MHD. Ces flux représentent des inter
 ### Ajout d'un lot de documents
 
 <div class="figure" style='text-align: center;'>
-    <img src="PDSm-flux1_2.jpg" alt="Flux 01 02" title="Flux 01 et 02" style="width:60%;">
+    <img src="PDSm-flux1_2.png" alt="Flux 01 02" title="Flux 01 et 02" style="width:60%;">
     <figcaption><b>Ajout d'un lot de documents : Flux 01 et 02"</b></figcaption>
 </div>
 <br>
@@ -18,7 +18,7 @@ La documentation complète est accessible <a href="st_ajout.html">ici</a>
 ### Mise à jour de documents
 
 <div class="figure" style='text-align: center;'>
-    <img src="PDSm-flux3_4.jpg" alt="Flux 03 04" title="Flux 03 et 04" style="width:60%;">
+    <img src="PDSm-flux3_4.png" alt="Flux 03 04" title="Flux 03 et 04" style="width:60%;">
     <figcaption><b>Mise à jour de documents: Flux 03 et 04"</b></figcaption>
 </div>
 <br>
@@ -33,7 +33,7 @@ La documentation complète est accessible <a href="st_maj.html">ici</a>
 ### Recherche de lot de documents
 
 <div class="figure" style='text-align: center;'>
-    <img src="PDSm-flux5_6.jpg" alt="Flux 05 06" title="Flux 05 et 06" style="width:60%;">
+    <img src="PDSm-flux5_6.png" alt="Flux 05 06" title="Flux 05 et 06" style="width:60%;">
     <figcaption><b>Recherche de lot de documents et recherche de fiche : Flux 05 et 06"</b></figcaption>
 </div>
 <br>
@@ -56,7 +56,7 @@ La documentation complète est accessible <a href="st_recherche_fiche.html">ici<
 ### Consultation de documents
 
 <div class="figure" style='text-align: center;'>
-    <img src="PDSm-flux7_8.jpg" alt="Flux 07 08" title="Flux 07 et 08" style="width:60%;">
+    <img src="PDSm-flux7_8.png" alt="Flux 07 08" title="Flux 07 et 08" style="width:60%;">
     <figcaption><b>Consultation de documents : Flux 07 et 08"</b></figcaption>
 </div>
 <br>
@@ -71,7 +71,7 @@ La documentation complète est accessible <a href="st_consultation.html">ici</a>
 ### Ajout simplifié de document
 
 <div class="figure" style='text-align: center;'>
-    <img src="PDSm-flux9_10.jpg" alt="Flux 09 10" title="Flux 09 et 10" style="width:60%;">
+    <img src="PDSm-flux9_10.png" alt="Flux 09 10" title="Flux 09 et 10" style="width:60%;">
     <figcaption><b>Ajout simplifié de document : Flux 09 et 10"</b></figcaption>
 </div>
 <br>
