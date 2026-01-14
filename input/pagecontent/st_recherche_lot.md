@@ -32,6 +32,8 @@ Le flux 05-a contient les critères suivants :
 | source:Patient.family <br/> source:PractitionerRole.name | string   | Recherche sur le nom de famille de la personne (praticien ou patient) à l'origine du document |
 {: .grid }
 
+> \* Paramètre de recherche créé pour le volet PDSm
+
 #### Paramètre de recherche de la ressource Patient
 
 | Critère de recherche FHIR | Type | Description |
@@ -48,22 +50,25 @@ Le flux 05-a contient les critères suivants :
 | name | token | Recherche sur le nom ou prénom de l'auteur. SearchParameter défini dans le guide d'implémentation de l'annuaire |
 {: .grid }
 
-\* Paramètre de recherche créé pour le volet PDSm
 
 Ci-dessous des exemples de requête :
 
-* Rechercher les ressources de type List, correspondant à des lots de soumission, ayant été créées depuis le 01/01/2021 dont l’auteur est une professionnelle ayant pour nom de famille Dupont et prénom Emma. 
+* Rechercher les ressources de type List, correspondant à des lots de soumission, ayant été créées depuis le 01/01/2021 dont l’auteur est une professionnelle ayant pour nom de famille Dupont et prénom Emma.
+
 ```
 GET http://targetsystem.com/API/List?code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset&date=ge2021-01-01&source:PractitionerRole.partOf.family-ex =Dupont& source:PractitionerRole.name =Emma HTTP/1.1
+
 ```
 
-* Rechercher les ressource de type List, correspondant à des lots de soumission dont le patient a l’identifiant 156. 
+* Rechercher les ressource de type List, correspondant à des lots de soumission dont le patient a l’identifiant 156.
+
 ```
 POST http://targetsystem.com/API/List/_search?patient.identifier=156&code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset
+
 ```
 
 ### Flux 06-a : réponse au flux 05-a
-Il s'agit du résultat de la recherche de documents retourné par le gestionnaire de partage de documents. La recherche de Lots de Soumission retourne les ressources List qui correspondent aux critères de recherche fournis par le consommateur de documents. On retrouve les mêmes éléments qui constituent les lots de soumission que lors de la demande d’ajout d’un lot de documents. 
+Il s'agit du résultat de la recherche de documents retourné par le gestionnaire de partage de documents. La recherche de Lots de Soumission retourne les ressources List qui correspondent aux critères de recherche fournis par le consommateur de documents. On retrouve les mêmes éléments qui constituent les lots de soumission que lors de la demande d’ajout d’un lot de documents.
 
 Un profil spécifique dérivé du profil IHE MHD v4.0.1 « FindListsResponse » est créé pour ce volet et nommé [PDSm_FindListsResponse](StructureDefinition-pdsm-find-lists-response.html). Il contient zéro ou plusieurs ressources DocumentReference répondants aux critères de la requête.
 

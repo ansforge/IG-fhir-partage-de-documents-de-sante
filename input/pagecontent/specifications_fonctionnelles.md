@@ -16,9 +16,12 @@ Le patient retourne voir son médecin traitant. Le médecin recherche le compte 
 
 ### ORGANISATION DU CONTEXTE METIER
 
-<object data="fonctionnel/fig_1.png" type="image/png"></object>
-<br/>
-Figure 1 Organisation du contexte métier de l'étude "Dossier Patient"
+
+<div class="figure" style='text-align: center;'>
+    <img src="fonctionnel/fig_1.png" alt="Figure 1" title="Figure 1 Organisation du contexte métier de l'étude Dossier Patient" style="width:50%;">
+    <figcaption><b>Figure 1 Organisation du contexte métier de l'étude "Dossier Patient"</b></figcaption>
+</div>
+<br>
 
 Le périmètre de l'étude englobe les processus en couleur sur le diagramme de paquetage.
 
@@ -32,8 +35,7 @@ Le périmètre de l'étude englobe les processus en couleur sur le diagramme de 
 | Gestionnaire de partage de documents | Il s’agit d’un système d’information ou d’un composant d'un système d’information qui stocke, classe et archive les documents d’un dossier patient.<br /> Exemple de système : <br /> -Infrastructure du DMP |
 | Producteur de documents | Il s’agit d’un système d’information ou d’un composant de système d’information qui envoie au gestionnaire de partage de documents une demande d’ajout de nouveaux documents et/ou des nouvelles versions de documents. Ce système fournit également les modifications des métadonnées du document. <br /> Exemples de systèmes :<br /> - Logiciel de Professionnel de Santé (LPS)<br /> - Logiciel Patient (LPA) |
 
-
-Table 5 Table des acteurs
+**Table 5 : Table des acteurs**
 
 ### DESCRIPTION DES PROCESSUS COLLABORATIFS ET IDENTIFICATION DES FLUX
 
@@ -43,10 +45,11 @@ Table 5 Table des acteurs
 
 
 | **Flux** | **Processus** | **Emetteur** | **Récepteur** | **Périmètre** |
+| ------ | ------ | ------ | ------ | ------ |
 | Flux 1 - AjoutLotDocument | Ajout d'un lot de documents | Producteur de documents | Gestionnaire de partage de documents | Oui |
 | Flux 2 - ResultatAjoutLotDocument | Ajout d'un lot de documents | Gestionnaire de partage de documents | Producteur de documents | Oui | 
 | Flux 3 - Mise AJourMetadonneeFiche | Mise à jour des métadonnées d'une fiche | Producteur de documents | Gestionnaire de partage de documents | Oui |
-| Flux 4 – ResultatMAJMetadonneeFiche	Mise à jour des métadonnées d'une fiche | Gestionnaire de partage de documents | Producteur de documents | Oui |
+| Flux 4 – ResultatMAJMetadonneeFiche | Mise à jour des métadonnées d'une fiche | Gestionnaire de partage de documents | Producteur de documents | Oui |
 | Flux 5 - RechercheDocument | Recherche de documents | Consommateur de documents | Gestionnaire de partage de documents | Oui |
 | Flux 6 - ResultatRechercheDocument | Recherche de documents | Gestionnaire de partage de documents | Consommateur de documents | Oui | 
 | Flux 7 - DemandeConsultationDocument | Consultation de documents | Consommateur de documents | Gestionnaire de partage de documents | Oui |
@@ -58,6 +61,7 @@ Table 5 Table des acteurs
 #### Concepts métier - Factorisation par concept
 
 | **Nom** | **Description** | **Flux** |
+| ------ | ------ | ------ |
 | Document | Un document est la plus petite unité d'information déposée dans l’infrastructure de partage de documents. Une fois stocké dans l’infrastructure de partage de documents avec un identifiant unique, le document ne subit plus aucune modification. | Flux 1 - AjoutLotDocument <br />Flux 7 - ResultatDemandeConsultationDocument | 
 | Fiche | Une fiche représente le document stocké dans l’infrastructure de partage de documents. Elle contient les informations décrivant les caractéristiques principales d’un document servant au classement et à la recherche des documents. | Flux 1 - AjoutLotDocument <br /> Flux 3 - MiseAJourMetadoneeFiche <br /> Flux 2 - ResultatAjoutLotDocument <br /> Flux 5 - ResultatRechercheDocument | 
 | Classeur | Un assemblage de fiches regroupées par catégorie. | Flux 1 - AjoutLotDocument <br /> Flux 2 - ResultatAjoutLotDocument | 
