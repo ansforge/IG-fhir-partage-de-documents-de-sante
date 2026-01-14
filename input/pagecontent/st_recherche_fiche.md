@@ -55,7 +55,7 @@ Le flux 05-b contient les critères suivants :
 | name | token | Recherche sur le nom ou le prénom de l'auteur |
 {: .grid }
 
-Ci-dessous un exemple de requête :
+### Exemples de requêtes
 
 * Rechercher les ressources de type DocumentReference du patient ayant l’identifiant 32659.
 
