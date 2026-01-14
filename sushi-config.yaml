@@ -59,8 +59,6 @@ pages:
             title: Equivalences
         downloads.md:
             title: Téléchargements et usages
-    changes.md:
-        title: Historique des changementss
 
 menu:
     Accueil: index.html
@@ -86,4 +84,3 @@ menu:
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/
     Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/
-    Historique: changes.html
