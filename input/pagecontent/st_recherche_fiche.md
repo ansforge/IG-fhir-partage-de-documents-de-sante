@@ -36,7 +36,7 @@ Le flux 05-b contient les critères suivants :
 <div style="width: 65%">
 <blockquote class="note note">
 <p>
-  Conformément au profil MHD, la recherche de fiche DOIT à minima inclure les paramètres patient ou patient.identifier et status.
+  Conformément au profil MHD <a href="https://profiles.ihe.net/ITI/MHD/ITI-67.html">[ITI-67]</a>, la recherche de fiche DOIT à minima inclure les paramètres patient ou patient.identifier et status.
 </p>
 </blockquote>
 </div>
