@@ -1,6 +1,11 @@
-### CADRE JURIDIQUE ET ORIENTATIONS ORGANISATIONNELLES
+Ces spécifications fonctionnelles présentent une étude métier pour la mise en œuvre du volet « Partage de documents de santé ». Les processus décrits dans ce volet permettent de regrouper l’ensemble des documents de santé d’un patient disposant d’un dossier partagé, d’en permettre la modification, la dépublication, la recherche et la consultation.
 
-Ce document présente une étude métier pour la mise en œuvre du volet « Partage de documents de santé ». Les processus décrits dans ce volet permettent de regrouper l'ensemble des documents de santé d'un patient disposant d’un dossier partagé, d'en permettre la modification, la dépublication, la recherche et la consultation.
+Ces spécifications fonctionnelles sont dérivées en deux spécifications techniques :
+
+* Les spécifications techniques se basant sur le standard FHIR et IHE MHD (dans ce guide)
+* Les spécifications techniques se basant sur IHE XDS accessible dans la page CI-SIS https://esante.gouv.fr/volet-partage-de-documents-de-sante
+
+### CADRE JURIDIQUE ET ORIENTATIONS ORGANISATIONNELLES
 
 L’étude menée concerne la modélisation des flux qui existent entre les composants d’un système d’information ou entre des systèmes d’informations qui participent à la mise en œuvre du partage de documents de santé. Elle englobe les actions de modification du contenu du dossier patient, ainsi que de recherche et de consultation des documents selon divers critères de recherche qui sont présentés dans ce document.
 
@@ -24,8 +29,6 @@ Le patient retourne voir son médecin traitant. Le médecin recherche le compte 
 <br>
 
 Le périmètre de l'étude englobe les processus en couleur sur le diagramme de paquetage.
-
-
 
 #### Liste des acteurs pour l'ensemble des processus
 
@@ -68,14 +71,16 @@ Le périmètre de l'étude englobe les processus en couleur sur le diagramme de 
 | LotSoumission | Un lot de soumission regroupe les fiches et les classeurs faisant partie d’une même demande de modification du contenu du dossier. Il atteste l’existence et le statut de la demande et est décrit par un ensemble d’attributs, ses métadonnées. Une fois créé, un lot de soumission est immuable à l'exception de son statut. | Flux 1 - AjoutLotDocument <br /> Flux 2 - ResultatAjoutLotDocument <br /> Flux 5 - ResultatRechercheDocument |
 
 #### Mise en équivalence MOS
-Il n’y pas de concepts équivalent dans le MOS au moment de l’étude.
+Il n'y pas de concepts équivalent dans le MOS au moment de l'étude.
 
 ### MODELISATION DES FLUX D'INFORMATIONS
 Les types de données complexes sont décrits dans les classes communes du MOS de l'ANS
 
+### Navigation vers les spécifications fonctionnelles détaillées
 
+Pour consulter les spécifications fonctionnelles détaillées de chaque processus :
 
- 
-
-
-
+* [Ajout d'un lot de documents](sf_ajout.html)
+* [Mise à jour de documents](sf_maj.html)
+* [Recherche de documents](sf_recherche.html)
+* [Consultation de documents](sf_consultation.html)

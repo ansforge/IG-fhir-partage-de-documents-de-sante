@@ -28,6 +28,7 @@ pages:
     index.md:
         title: Accueil
     specifications_fonctionnelles.md:
+        title: Spécifications fonctionnelles - vue d'ensemble
         sf_ajout.md:
             title: Ajout d'un lot de documents
         sf_maj.md:
@@ -36,8 +37,8 @@ pages:
             title: Recherche de documents
         sf_consultation.md:
             title: Consultation de documents
-    specifications_techniques.md:
-        construction_des_flux.md:
+    construction_des_flux.md:
+        title: Spécifications techniques - vue d'ensemble
         st_ajout.md:
             title: Ajout d'un lot de documents (ITI-65)
         st_maj.md:
@@ -62,7 +63,7 @@ pages:
 menu:
     Accueil: index.html
     Volume 1 - Etude fonctionnelle:
-        Spécifications fonctionnelles: specifications_fonctionnelles.html
+        Vue d'ensemble: specifications_fonctionnelles.html
         Ajout d'un lot de documents: sf_ajout.html
         Mise à jour de documents: sf_maj.html
         Recherche de documents: sf_recherche.html
