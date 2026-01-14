@@ -10,9 +10,9 @@ Ce flux contient les informations relatives à la modification des métadonnées
 
 ### Flux 03 : mise à jour des métadonnées de la fiche
 
-Le flux de mise à jour des métadonnées de la fiche est basé sur l’interaction « [patch](https://www.hl7.org/fhir/http.html#patch) » de l’API REST FHIR qui est assurée par une requête HTTP PATCH. Elle permet la mise à jour partielle d’une ressource DocumentReference.
+Le flux de mise à jour des métadonnées de la fiche est basé sur l’interaction « [patch](https://www.hl7.org/fhir/R4/http.html#patch) » de l’API REST FHIR qui est assurée par une requête HTTP PATCH. Elle permet la mise à jour partielle d’une ressource DocumentReference.
 
-Au niveau applicatif, les mises à jour sont restreintes aux éléments DocumentReference.status, DocumentReference.securityLabel et l’extension PDSm_isArchived.
+Au niveau applicatif, les mises à jour sont restreintes aux éléments `DocumentReference.status`, `DocumentReference.securityLabel` et l’extension [PDSm_IsArchived](StructureDefinition-pdsm-ext-is-archived.md).
 
 La requête Patch contient l’identifiant métier de la ressource à modifier ainsi que la liste des mises à jour à effectuer.
 
@@ -22,11 +22,11 @@ Les corrections à apporter à la ressource peuvent être communiquées de trois
 
 * [JSON patch](https://datatracker.ietf.org/doc/html/rfc6902) (status : Proposed standard),
 * [XML patch](https://datatracker.ietf.org/doc/html/rfc5261) (status : Proposed standard),
-* [FHIRPath Patch utilisant la ressource Parameters](https://www.hl7.org/fhir/fhirpatch.html) (niveau de maturité : 2).
+* [FHIRPath Patch utilisant la ressource Parameters](https://www.hl7.org/fhir/R4/fhirpatch.html) (niveau de maturité : 2).
 
 A noter que la méthode JSON patch est mature et plus adaptée à un usage en mobilité.
 
-Lorsque toutes les modifications sont traitées, le serveur traite la fiche du document de la même façon qu’au cours d’une opération update créant ainsi une nouvelle version (modification des éléments meta.versionId et meta.lastUpdated).
+Lorsque toutes les modifications sont traitées, le serveur traite la fiche du document de la même façon qu’au cours d’une opération update créant ainsi une nouvelle version (modification des éléments `meta.versionId` et `meta.lastUpdated`).
 
 Ci-dessous un exemple de requête avec le body en JSON :
 
@@ -69,7 +69,7 @@ Le gestionnaire de partage de documents de santé retourne un "HTTP Status code"
 * Si la mise à jour de la ressource DocumentReference est correctement effectuée, un code HTTP 200 « OK » doit être retourné.
 * Si la mise à jour de la ressource DocumentReference porte sur des éléments autres que status, securityLabel et PDSm_isArchived, une erreur 405 « Method Not Allowed » doit être retournée.
 
-Pour des informations sur les autres codes HTTP retournés en cas d’échec, consultez la documentation relative à [l’interaction « patch »](https://www.hl7.org/fhir/http.html#summary) de l’API REST FHIR.
+Pour des informations sur les autres codes HTTP retournés en cas d’échec, consultez la documentation relative à [l’interaction « patch »](https://www.hl7.org/fhir/R4/http.html#summary) de l’API REST FHIR.
 
 Le corps de la réponse doit contenir une ressource DocumentReference constituée des éléments modifiés.
 

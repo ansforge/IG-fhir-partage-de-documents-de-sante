@@ -38,6 +38,8 @@ Le flux 05-b contient les critères suivants :
 | patient | token | Recherche de l'identifiant du patient |
 | author | token | Recherche du praticien par identifiant, nom ou prénom |
 
+> * Paramètre de recherche créé pour le volet PDSm
+
 #### Paramètre de recherche sur les ressources Patient / Practitioner / Device
 
 | | | |
@@ -72,7 +74,11 @@ Il s'agit du résultat de la recherche de documents retourné par le gestionnair
 
 Un profil spécifique dérivé du profil IHE MHD « FindDocumentReferencesComprehensiveResponse » est créé pour ce volet et nommé [PDSm_FindDocumentReferencesComprehensiveResponse](StructureDefinition-pdsm-comprehensive-document-reference.md). Il contient zéro ou plusieurs ressources DocumentReference répondants aux critères de la requête.
 
-Ce flux correspond à la réponse à la requête reposant sur l’interaction « search » du flux précédent. En cas de succès, le gestionnaire de partage de documents retourne un code `HTTP 200 OK` ainsi qu’un Bundle de type searchset.
+Ce flux correspond à la réponse à la requête reposant sur l’interaction « search » du flux précédent.
 
-Si le gestionnaire de partage de documents envoie des "warnings", la ressource Bundle doit aussi contenir une ressource "OperationOutcome" qui contient ces "warnings". Si le gestionnaire de partage de documents doit reporter une erreur, il doit utiliser un "[HTTP error response codes](http://hl7.org/fhir/R4/http.html)" et doit inclure un "[FHIR OperationOutcome](http://hl7.org/fhir/R4/operationoutcome.html)" avec plus de détails sur l'échec.
+En cas de succès, le gestionnaire de partage de documents retourne un code `HTTP 200 OK` ainsi qu’un Bundle de type searchset.
+
+Si le gestionnaire de partage de documents envoie des "warnings", la ressource Bundle doit aussi contenir une ressource "OperationOutcome" qui contient ces "warnings".
+
+Si le gestionnaire de partage de documents doit reporter une erreur, il doit utiliser un "[HTTP error response codes](http://hl7.org/fhir/R4/http.html)" et doit inclure un "[FHIR OperationOutcome](http://hl7.org/fhir/R4/operationoutcome.html)" avec plus de détails sur l'échec.
 

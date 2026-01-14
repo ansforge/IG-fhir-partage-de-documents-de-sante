@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-intended-recipient | *Version*:3.1.0 |
-| Active as of 2026-01-13 | *Computable Name*:PDSm_intendedRecipient |
+| Active as of 2026-01-14 | *Computable Name*:PDSm_intendedRecipient |
 
 Représente le destinataire du lot de soumission
 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-ext-intended-re
   "version" : "3.1.0",
   "name" : "PDSm_intendedRecipient",
   "status" : "active",
-  "date" : "2026-01-13T14:53:18+00:00",
+  "date" : "2026-01-14T08:49:21+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
