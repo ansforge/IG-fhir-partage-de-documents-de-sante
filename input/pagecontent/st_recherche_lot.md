@@ -35,7 +35,7 @@ Le flux 05-a contient les critères suivants :
 
 
 <div style="width: 65%">
-<blockquote class="stu-note">
+<blockquote class="note note">
 <p>
   Conformément au profil MHD, la recherche de fiche DOIT à minima inclure les paramètres patient ou patient.identifier, code et status.
 </p>

@@ -34,7 +34,7 @@ Le flux 05-b contient les critères suivants :
 > \* Paramètre de recherche créé pour le volet PDSm
 
 <div style="width: 65%">
-<blockquote class="stu-note">
+<blockquote class="note note">
 <p>
   Conformément au profil MHD, la recherche de fiche DOIT à minima inclure les paramètres patient ou patient.identifier et status.
 </p>
