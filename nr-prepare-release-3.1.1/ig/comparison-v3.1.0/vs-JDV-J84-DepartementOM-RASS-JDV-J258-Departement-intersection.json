@@ -1,0 +1,449 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "680d4e75-792e-4422-8627-eb953bd11103-39",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/680d4e75-792e-4422-8627-eb953bd11103-39",
+  "name" : "IntersectionJDV_J84-DepartementOM-RASSAndJDV_J258-Departement",
+  "title" : "Intersection of null And null",
+  "status" : "retired",
+  "date" : "2026-01-14T09:00:59+00:00",
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "01",
+        "display" : "Ain (01)"
+      },
+      {
+        "code" : "02",
+        "display" : "Aisne (02)"
+      },
+      {
+        "code" : "03",
+        "display" : "Allier (03)"
+      },
+      {
+        "code" : "04",
+        "display" : "Alpes-de-Haute-Provence (04)"
+      },
+      {
+        "code" : "05",
+        "display" : "Hautes-Alpes (05)"
+      },
+      {
+        "code" : "06",
+        "display" : "Alpes-Maritimes (06)"
+      },
+      {
+        "code" : "07",
+        "display" : "Ardèche (07)"
+      },
+      {
+        "code" : "08",
+        "display" : "Ardennes (08)"
+      },
+      {
+        "code" : "09",
+        "display" : "Ariège (09)"
+      },
+      {
+        "code" : "10",
+        "display" : "Aube (10)"
+      },
+      {
+        "code" : "11",
+        "display" : "Aude (11)"
+      },
+      {
+        "code" : "12",
+        "display" : "Aveyron (12)"
+      },
+      {
+        "code" : "13",
+        "display" : "Bouches-du-Rhône (13)"
+      },
+      {
+        "code" : "14",
+        "display" : "Calvados (14)"
+      },
+      {
+        "code" : "15",
+        "display" : "Cantal (15)"
+      },
+      {
+        "code" : "16",
+        "display" : "Charente (16)"
+      },
+      {
+        "code" : "17",
+        "display" : "Charente-Maritime (17)"
+      },
+      {
+        "code" : "18",
+        "display" : "Cher (18)"
+      },
+      {
+        "code" : "19",
+        "display" : "Corrèze (19)"
+      },
+      {
+        "code" : "2A",
+        "display" : "Corse-du-Sud (2A)"
+      },
+      {
+        "code" : "2B",
+        "display" : "Haute-Corse (2B)"
+      },
+      {
+        "code" : "21",
+        "display" : "Côte-d'Or (21)"
+      },
+      {
+        "code" : "22",
+        "display" : "Côtes-d'Armor (22)"
+      },
+      {
+        "code" : "23",
+        "display" : "Creuse (23)"
+      },
+      {
+        "code" : "24",
+        "display" : "Dordogne (24)"
+      },
+      {
+        "code" : "25",
+        "display" : "Doubs (25)"
+      },
+      {
+        "code" : "26",
+        "display" : "Drôme (26)"
+      },
+      {
+        "code" : "27",
+        "display" : "Eure (27)"
+      },
+      {
+        "code" : "28",
+        "display" : "Eure-et-Loir (28)"
+      },
+      {
+        "code" : "29",
+        "display" : "Finistère (29)"
+      },
+      {
+        "code" : "30",
+        "display" : "Gard (30)"
+      },
+      {
+        "code" : "31",
+        "display" : "Haute-Garonne (31)"
+      },
+      {
+        "code" : "32",
+        "display" : "Gers (32)"
+      },
+      {
+        "code" : "33",
+        "display" : "Gironde (33)"
+      },
+      {
+        "code" : "34",
+        "display" : "Hérault (34)"
+      },
+      {
+        "code" : "35",
+        "display" : "Ille-et-Vilaine (35)"
+      },
+      {
+        "code" : "36",
+        "display" : "Indre (36)"
+      },
+      {
+        "code" : "37",
+        "display" : "Indre-et-Loire (37)"
+      },
+      {
+        "code" : "38",
+        "display" : "Isère (38)"
+      },
+      {
+        "code" : "39",
+        "display" : "Jura (39)"
+      },
+      {
+        "code" : "40",
+        "display" : "Landes (40)"
+      },
+      {
+        "code" : "41",
+        "display" : "Loir-et-Cher (41)"
+      },
+      {
+        "code" : "42",
+        "display" : "Loire (42)"
+      },
+      {
+        "code" : "43",
+        "display" : "Haute-Loire (43)"
+      },
+      {
+        "code" : "44",
+        "display" : "Loire-Atlantique (44)"
+      },
+      {
+        "code" : "45",
+        "display" : "Loiret (45)"
+      },
+      {
+        "code" : "46",
+        "display" : "Lot (46)"
+      },
+      {
+        "code" : "47",
+        "display" : "Lot-et-Garonne (47)"
+      },
+      {
+        "code" : "48",
+        "display" : "Lozère (48)"
+      },
+      {
+        "code" : "49",
+        "display" : "Maine-et-Loire (49)"
+      },
+      {
+        "code" : "50",
+        "display" : "Manche (50)"
+      },
+      {
+        "code" : "51",
+        "display" : "Marne (51)"
+      },
+      {
+        "code" : "52",
+        "display" : "Haute-Marne (52)"
+      },
+      {
+        "code" : "53",
+        "display" : "Mayenne (53)"
+      },
+      {
+        "code" : "54",
+        "display" : "Meurthe-et-Moselle (54)"
+      },
+      {
+        "code" : "55",
+        "display" : "Meuse (55)"
+      },
+      {
+        "code" : "56",
+        "display" : "Morbihan (56)"
+      },
+      {
+        "code" : "57",
+        "display" : "Moselle (57)"
+      },
+      {
+        "code" : "58",
+        "display" : "Nièvre (58)"
+      },
+      {
+        "code" : "59",
+        "display" : "Nord (59)"
+      },
+      {
+        "code" : "60",
+        "display" : "Oise (60)"
+      },
+      {
+        "code" : "61",
+        "display" : "Orne (61)"
+      },
+      {
+        "code" : "62",
+        "display" : "Pas-de-Calais (62)"
+      },
+      {
+        "code" : "63",
+        "display" : "Puy-de-Dôme (63)"
+      },
+      {
+        "code" : "64",
+        "display" : "Pyrénées-Atlantiques (64)"
+      },
+      {
+        "code" : "65",
+        "display" : "Hautes-Pyrénées (65)"
+      },
+      {
+        "code" : "66",
+        "display" : "Pyrénées-Orientales (66)"
+      },
+      {
+        "code" : "67",
+        "display" : "Bas-Rhin (67)"
+      },
+      {
+        "code" : "68",
+        "display" : "Haut-Rhin (68)"
+      },
+      {
+        "code" : "69",
+        "display" : "Rhône (69)"
+      },
+      {
+        "code" : "70",
+        "display" : "Haute-Saône (70)"
+      },
+      {
+        "code" : "71",
+        "display" : "Saône-et-Loire (71)"
+      },
+      {
+        "code" : "72",
+        "display" : "Sarthe (72)"
+      },
+      {
+        "code" : "73",
+        "display" : "Savoie (73)"
+      },
+      {
+        "code" : "74",
+        "display" : "Haute-Savoie (74)"
+      },
+      {
+        "code" : "75",
+        "display" : "Paris (75)"
+      },
+      {
+        "code" : "76",
+        "display" : "Seine-Maritime (76)"
+      },
+      {
+        "code" : "77",
+        "display" : "Seine-et-Marne (77)"
+      },
+      {
+        "code" : "78",
+        "display" : "Yvelines (78)"
+      },
+      {
+        "code" : "79",
+        "display" : "Deux-Sèvres (79)"
+      },
+      {
+        "code" : "80",
+        "display" : "Somme (80)"
+      },
+      {
+        "code" : "81",
+        "display" : "Tarn (81)"
+      },
+      {
+        "code" : "82",
+        "display" : "Tarn-et-Garonne (82)"
+      },
+      {
+        "code" : "83",
+        "display" : "Var (83)"
+      },
+      {
+        "code" : "84",
+        "display" : "Vaucluse (84)"
+      },
+      {
+        "code" : "85",
+        "display" : "Vendée (85)"
+      },
+      {
+        "code" : "86",
+        "display" : "Vienne (86)"
+      },
+      {
+        "code" : "87",
+        "display" : "Haute-Vienne (87)"
+      },
+      {
+        "code" : "88",
+        "display" : "Vosges (88)"
+      },
+      {
+        "code" : "89",
+        "display" : "Yonne (89)"
+      },
+      {
+        "code" : "90",
+        "display" : "Territoire de Belfort (90)"
+      },
+      {
+        "code" : "91",
+        "display" : "Essonne (91)"
+      },
+      {
+        "code" : "92",
+        "display" : "Hauts-de-Seine (92)"
+      },
+      {
+        "code" : "93",
+        "display" : "Seine-Saint-Denis (93)"
+      },
+      {
+        "code" : "94",
+        "display" : "Val-de-Marne (94)"
+      },
+      {
+        "code" : "95",
+        "display" : "Val-d'Oise (95)"
+      },
+      {
+        "code" : "971",
+        "display" : "Guadeloupe (971)"
+      },
+      {
+        "code" : "972",
+        "display" : "Martinique (972)"
+      },
+      {
+        "code" : "973",
+        "display" : "Guyane (973)"
+      },
+      {
+        "code" : "974",
+        "display" : "La Réunion (974)"
+      },
+      {
+        "code" : "976",
+        "display" : "Mayotte (976)"
+      },
+      {
+        "code" : "977",
+        "display" : "Saint-Barthélemy (977)"
+      },
+      {
+        "code" : "978",
+        "display" : "Saint-Martin (978)"
+      },
+      {
+        "code" : "99138",
+        "display" : "Monaco (99138)"
+      },
+      {
+        "code" : "984",
+        "display" : "Terres australes et antarctiques françaises (984)"
+      },
+      {
+        "code" : "986",
+        "display" : "Wallis-et-Futuna (986)"
+      },
+      {
+        "code" : "987",
+        "display" : "Polynésie française (987)"
+      },
+      {
+        "code" : "988",
+        "display" : "Nouvelle-Calédonie (988)"
+      },
+      {
+        "code" : "989",
+        "display" : "La Passion-Clipperton (989)"
+      }]
+    }]
+  }
+}
