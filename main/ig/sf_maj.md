@@ -1,7 +1,7 @@
 # Mise à jour de documents - Partage de Documents de Santé en mobilité (PDSm) v3.1.0
 
 * [**Table of Contents**](toc.md)
-* [**Specifications Fonctionnelles**](specifications_fonctionnelles.md)
+* [**Spécifications fonctionnelles - vue d'ensemble**](specifications_fonctionnelles.md)
 * **Mise à jour de documents**
 
 ## Mise à jour de documents

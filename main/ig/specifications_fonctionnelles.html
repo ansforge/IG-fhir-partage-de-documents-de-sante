@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Specifications Fonctionnelles - Partage de Documents de Santé en mobilité (PDSm) v3.1.0</title>
+    <title>Spécifications fonctionnelles - vue d&#39;ensemble - Partage de Documents de Santé en mobilité (PDSm) v3.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -104,7 +104,7 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="specifications_fonctionnelles.html">Spécifications fonctionnelles</a>
+        <a href="specifications_fonctionnelles.html">Vue d&apos;ensemble</a>
       </li>
       <li>
         <a href="sf_ajout.html">Ajout d&apos;un lot de documents</a>
@@ -188,7 +188,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Specifications Fonctionnelles</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Spécifications fonctionnelles - vue d'ensemble</b></li>
 
           <span style="float:right;">
 
@@ -218,7 +218,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Partage de Documents de Santé en mobilité (PDSm) - version de développement local (v3.1.0) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://interop.esante.gouv.fr/ig/fhir/pdsm/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
-  <h2>Specifications Fonctionnelles</h2>
+  <h2>Spécifications fonctionnelles - vue d&#39;ensemble</h2>
   
 
 
@@ -240,12 +240,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#description-des-processus-collaboratifs-et-identification-des-flux" id="markdown-toc-description-des-processus-collaboratifs-et-identification-des-flux">DESCRIPTION DES PROCESSUS COLLABORATIFS ET IDENTIFICATION DES FLUX</a></li>
   <li><a href="#identification-des-concepts-vehicules-dans-les-flux-dinformations-et-correspondance-avec-les-classes-et-attributs-du-mos" id="markdown-toc-identification-des-concepts-vehicules-dans-les-flux-dinformations-et-correspondance-avec-les-classes-et-attributs-du-mos">IDENTIFICATION DES CONCEPTS VEHICULES DANS LES FLUX D’INFORMATIONS ET CORRESPONDANCE AVEC LES CLASSES ET ATTRIBUTS DU MOS</a></li>
   <li><a href="#modelisation-des-flux-dinformations" id="markdown-toc-modelisation-des-flux-dinformations">MODELISATION DES FLUX D'INFORMATIONS</a></li>
+  <li><a href="#navigation-vers-les-spécifications-fonctionnelles-détaillées" id="markdown-toc-navigation-vers-les-spécifications-fonctionnelles-détaillées">Navigation vers les spécifications fonctionnelles détaillées</a></li>
 </ul>
 
 </div>
-<h3 id="cadre-juridique-et-orientations-organisationnelles">CADRE JURIDIQUE ET ORIENTATIONS ORGANISATIONNELLES</h3>
+<p>Ces spécifications fonctionnelles présentent une étude métier pour la mise en œuvre du volet « Partage de documents de santé ». Les processus décrits dans ce volet permettent de regrouper l’ensemble des documents de santé d’un patient disposant d’un dossier partagé, d’en permettre la modification, la dépublication, la recherche et la consultation.</p>
 
-<p>Ce document présente une étude métier pour la mise en œuvre du volet « Partage de documents de santé ». Les processus décrits dans ce volet permettent de regrouper l'ensemble des documents de santé d'un patient disposant d’un dossier partagé, d'en permettre la modification, la dépublication, la recherche et la consultation.</p>
+<p>Ces spécifications fonctionnelles sont dérivées en deux spécifications techniques :</p>
+
+<ul>
+  <li>Les spécifications techniques se basant sur le standard FHIR et IHE MHD (dans ce guide)</li>
+  <li>Les spécifications techniques se basant sur IHE XDS accessible dans la page CI-SIS https://esante.gouv.fr/volet-partage-de-documents-de-sante</li>
+</ul>
+
+<h3 id="cadre-juridique-et-orientations-organisationnelles">CADRE JURIDIQUE ET ORIENTATIONS ORGANISATIONNELLES</h3>
 
 <p>L’étude menée concerne la modélisation des flux qui existent entre les composants d’un système d’information ou entre des systèmes d’informations qui participent à la mise en œuvre du partage de documents de santé. Elle englobe les actions de modification du contenu du dossier patient, ainsi que de recherche et de consultation des documents selon divers critères de recherche qui sont présentés dans ce document.</p>
 
@@ -407,12 +415,21 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </table>
 
 <h4 id="mise-en-équivalence-mos">Mise en équivalence MOS</h4>
-<p>Il n’y pas de concepts équivalent dans le MOS au moment de l’étude.</p>
+<p>Il n'y pas de concepts équivalent dans le MOS au moment de l'étude.</p>
 
 <h3 id="modelisation-des-flux-dinformations">MODELISATION DES FLUX D'INFORMATIONS</h3>
 <p>Les types de données complexes sont décrits dans les classes communes du MOS de l'ANS</p>
 
-<p> </p>
+<h3 id="navigation-vers-les-spécifications-fonctionnelles-détaillées">Navigation vers les spécifications fonctionnelles détaillées</h3>
+
+<p>Pour consulter les spécifications fonctionnelles détaillées de chaque processus :</p>
+
+<ul>
+  <li><a href="sf_ajout.html">Ajout d'un lot de documents</a></li>
+  <li><a href="sf_maj.html">Mise à jour de documents</a></li>
+  <li><a href="sf_recherche.html">Recherche de documents</a></li>
+  <li><a href="sf_consultation.html">Consultation de documents</a></li>
+</ul>
 
 
 
@@ -455,7 +472,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 14, 2026 08:49+0000">2026-01-14</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 14, 2026 08:59+0000">2026-01-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

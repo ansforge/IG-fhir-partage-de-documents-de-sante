@@ -114,7 +114,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-01-14T08:49:21+00:00",
+  "date" : "2026-01-14T08:59:11+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
@@ -1280,7 +1280,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
             }
           ],
           "nameUrl" : "specifications_fonctionnelles.html",
-          "title" : "Specifications Fonctionnelles",
+          "title" : "Spécifications fonctionnelles - vue d'ensemble",
           "generation" : "markdown",
           "page" : [
             {
@@ -1333,24 +1333,13 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
           "extension" : [
             {
               "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "valueUrl" : "specifications_techniques.html"
+              "valueUrl" : "construction_des_flux.html"
             }
           ],
-          "nameUrl" : "specifications_techniques.html",
-          "title" : "Specifications Techniques",
+          "nameUrl" : "construction_des_flux.html",
+          "title" : "Spécifications techniques - vue d'ensemble",
           "generation" : "markdown",
           "page" : [
-            {
-              "extension" : [
-                {
-                  "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "construction_des_flux.html"
-                }
-              ],
-              "nameUrl" : "construction_des_flux.html",
-              "title" : "Construction Des Flux",
-              "generation" : "markdown"
-            },
             {
               "extension" : [
                 {

@@ -1,13 +1,18 @@
-# Specifications Fonctionnelles - Partage de Documents de Santé en mobilité (PDSm) v3.1.0
+# Spécifications fonctionnelles - vue d'ensemble - Partage de Documents de Santé en mobilité (PDSm) v3.1.0
 
 * [**Table of Contents**](toc.md)
-* **Specifications Fonctionnelles**
+* **Spécifications fonctionnelles - vue d'ensemble**
 
-## Specifications Fonctionnelles
+## Spécifications fonctionnelles - vue d'ensemble
+
+Ces spécifications fonctionnelles présentent une étude métier pour la mise en œuvre du volet « Partage de documents de santé ». Les processus décrits dans ce volet permettent de regrouper l’ensemble des documents de santé d’un patient disposant d’un dossier partagé, d’en permettre la modification, la dépublication, la recherche et la consultation.
+
+Ces spécifications fonctionnelles sont dérivées en deux spécifications techniques :
+
+* Les spécifications techniques se basant sur le standard FHIR et IHE MHD (dans ce guide)
+* Les spécifications techniques se basant sur IHE XDS accessible dans la page CI-SIS https://esante.gouv.fr/volet-partage-de-documents-de-sante
 
 ### CADRE JURIDIQUE ET ORIENTATIONS ORGANISATIONNELLES
-
-Ce document présente une étude métier pour la mise en œuvre du volet « Partage de documents de santé ». Les processus décrits dans ce volet permettent de regrouper l'ensemble des documents de santé d'un patient disposant d’un dossier partagé, d'en permettre la modification, la dépublication, la recherche et la consultation.
 
 L’étude menée concerne la modélisation des flux qui existent entre les composants d’un système d’information ou entre des systèmes d’informations qui participent à la mise en œuvre du partage de documents de santé. Elle englobe les actions de modification du contenu du dossier patient, ainsi que de recherche et de consultation des documents selon divers critères de recherche qui sont présentés dans ce document.
 
@@ -65,11 +70,18 @@ Le périmètre de l'étude englobe les processus en couleur sur le diagramme de 
 
 #### Mise en équivalence MOS
 
-Il n’y pas de concepts équivalent dans le MOS au moment de l’étude.
+Il n'y pas de concepts équivalent dans le MOS au moment de l'étude.
 
 ### MODELISATION DES FLUX D'INFORMATIONS
 
 Les types de données complexes sont décrits dans les classes communes du MOS de l'ANS
 
- 
+### Navigation vers les spécifications fonctionnelles détaillées
+
+Pour consulter les spécifications fonctionnelles détaillées de chaque processus :
+
+* [Ajout d'un lot de documents](sf_ajout.md)
+* [Mise à jour de documents](sf_maj.md)
+* [Recherche de documents](sf_recherche.md)
+* [Consultation de documents](sf_consultation.md)
 

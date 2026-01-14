@@ -1,7 +1,7 @@
 # Ajout d'un lot de documents (ITI-65) - Partage de Documents de Santé en mobilité (PDSm) v3.1.0
 
 * [**Table of Contents**](toc.md)
-* [**Specifications Techniques**](specifications_techniques.md)
+* [**Spécifications techniques - vue d'ensemble**](construction_des_flux.md)
 * **Ajout d'un lot de documents (ITI-65)**
 
 ## Ajout d'un lot de documents (ITI-65)

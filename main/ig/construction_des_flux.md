@@ -1,10 +1,9 @@
-# Construction Des Flux - Partage de Documents de Santé en mobilité (PDSm) v3.1.0
+# Spécifications techniques - vue d'ensemble - Partage de Documents de Santé en mobilité (PDSm) v3.1.0
 
 * [**Table of Contents**](toc.md)
-* [**Specifications Techniques**](specifications_techniques.md)
-* **Construction Des Flux**
+* **Spécifications techniques - vue d'ensemble**
 
-## Construction Des Flux
+## Spécifications techniques - vue d'ensemble
 
 La construction des flux reprend le profil MHD. Ces flux représentent des interactions avec le gestionaire de documents, dont la construction est détaillée dans des pages dédiées à chaque objectif :
 

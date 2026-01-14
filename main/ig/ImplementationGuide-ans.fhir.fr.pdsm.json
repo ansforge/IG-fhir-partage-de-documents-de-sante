@@ -10,7 +10,7 @@
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-01-14T08:49:21+00:00",
+  "date" : "2026-01-14T08:59:11+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -993,7 +993,7 @@
           "valueUrl" : "specifications_fonctionnelles.html"
         }],
         "nameUrl" : "specifications_fonctionnelles.html",
-        "title" : "Specifications Fonctionnelles",
+        "title" : "Spécifications fonctionnelles - vue d'ensemble",
         "generation" : "markdown",
         "page" : [{
           "extension" : [{
@@ -1035,21 +1035,12 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques.html"
+          "valueUrl" : "construction_des_flux.html"
         }],
-        "nameUrl" : "specifications_techniques.html",
-        "title" : "Specifications Techniques",
+        "nameUrl" : "construction_des_flux.html",
+        "title" : "Spécifications techniques - vue d'ensemble",
         "generation" : "markdown",
         "page" : [{
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "construction_des_flux.html"
-          }],
-          "nameUrl" : "construction_des_flux.html",
-          "title" : "Construction Des Flux",
-          "generation" : "markdown"
-        },
-        {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
             "valueUrl" : "st_ajout.html"

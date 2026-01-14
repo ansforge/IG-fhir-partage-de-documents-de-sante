@@ -1,7 +1,7 @@
 # Ajout simplifié d'un document (ITI-105) - Partage de Documents de Santé en mobilité (PDSm) v3.1.0
 
 * [**Table of Contents**](toc.md)
-* [**Specifications Techniques**](specifications_techniques.md)
+* [**Spécifications techniques - vue d'ensemble**](construction_des_flux.md)
 * **Ajout simplifié d'un document (ITI-105)**
 
 ## Ajout simplifié d'un document (ITI-105)

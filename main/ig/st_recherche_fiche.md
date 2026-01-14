@@ -1,7 +1,7 @@
 # Recherche de fiche (ITI-67) - Partage de Documents de Santé en mobilité (PDSm) v3.1.0
 
 * [**Table of Contents**](toc.md)
-* [**Specifications Techniques**](specifications_techniques.md)
+* [**Spécifications techniques - vue d'ensemble**](construction_des_flux.md)
 * **Recherche de fiche (ITI-67)**
 
 ## Recherche de fiche (ITI-67)

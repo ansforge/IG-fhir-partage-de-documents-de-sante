@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-ext-is-archived
   "name" : "PDSm_IsArchived",
   "title" : "PDSm_isArchived",
   "status" : "active",
-  "date" : "2026-01-14T08:49:21+00:00",
+  "date" : "2026-01-14T08:59:11+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

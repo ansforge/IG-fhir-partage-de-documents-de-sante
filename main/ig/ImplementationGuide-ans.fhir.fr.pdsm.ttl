@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "PDSm"] ; # 
   fhir:title [ fhir:v "Partage de Documents de Santé en mobilité (PDSm)"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-01-14T08:49:21+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-01-14T08:59:11+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -1994,7 +1994,7 @@
            fhir:v "specifications_fonctionnelles.html"^^xsd:anyURI ;
            fhir:l fhir:specifications_fonctionnelles.html
          ] ;
-         fhir:title [ fhir:v "Specifications Fonctionnelles" ] ;
+         fhir:title [ fhir:v "Spécifications fonctionnelles - vue d'ensemble" ] ;
          fhir:generation [ fhir:v "markdown" ] ;
          fhir:page ( [
            fhir:extension ( [
@@ -2081,37 +2081,18 @@
            ] ;
            fhir:value [
              a fhir:Url ;
-             fhir:v "specifications_techniques.html"^^xsd:anyURI ;
-             fhir:l fhir:specifications_techniques.html
+             fhir:v "construction_des_flux.html"^^xsd:anyURI ;
+             fhir:l fhir:construction_des_flux.html
            ]
          ] ) ;
          fhir:name [
            a fhir:Url ;
-           fhir:v "specifications_techniques.html"^^xsd:anyURI ;
-           fhir:l fhir:specifications_techniques.html
+           fhir:v "construction_des_flux.html"^^xsd:anyURI ;
+           fhir:l fhir:construction_des_flux.html
          ] ;
-         fhir:title [ fhir:v "Specifications Techniques" ] ;
+         fhir:title [ fhir:v "Spécifications techniques - vue d'ensemble" ] ;
          fhir:generation [ fhir:v "markdown" ] ;
          fhir:page ( [
-           fhir:extension ( [
-             fhir:url [
-               fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
-               fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
-             ] ;
-             fhir:value [
-               a fhir:Url ;
-               fhir:v "construction_des_flux.html"^^xsd:anyURI ;
-               fhir:l fhir:construction_des_flux.html
-             ]
-           ] ) ;
-           fhir:name [
-             a fhir:Url ;
-             fhir:v "construction_des_flux.html"^^xsd:anyURI ;
-             fhir:l fhir:construction_des_flux.html
-           ] ;
-           fhir:title [ fhir:v "Construction Des Flux" ] ;
-           fhir:generation [ fhir:v "markdown" ]
-         ] [
            fhir:extension ( [
              fhir:url [
                fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
