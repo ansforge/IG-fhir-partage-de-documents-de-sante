@@ -7,6 +7,7 @@ Modifications apportées dans la release [1.1.1](https://github.com/ansforge/IG-
 * (3.1.1) Mise à jour du narratif, mise à jour des héritages (FRCore et Annuaire), ajout d'exemples [#75](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/pull/75)
 * (3.1.1) Styling (tableaux, figures, liens, typos, menu, ...) [#77](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/pull/77) [#78](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/pull/78) [#82](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/pull/82)
 * (3.1.1) Mise à jour introduction des spécifications fonctionnelles [#81](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/pull/81)
+* (3.1.1) Mise en conformité des flux de recherche avec MHD [#84](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/pull/84)
 
 ### Release 3.1.0 de l'Implementation Guide Partage de Documents de Santé pour usage de MES et DMP notamment
 
