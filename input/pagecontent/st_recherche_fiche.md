@@ -18,7 +18,7 @@ Le flux 05-b contient les critères suivants :
 | identifier | token | Recherche dans l'identifiant de la fiche (idUnique ou idFiche) |
 | creation | date | Recherche sur la date de création du document |
 | security-label | token | Recherche sur le niveau de confidentialité du document |
-| status | token | Description | 
+| status | token | Recherche sur le statut de la fiche |
 | [isArchived](SearchParameter-PDSm-isArchived.html)* | token | Recherche les documents archivés ou non |
 | [period-start](SearchParameter-PDSm-DocumentReference-period-start.html)* | date | Contraindre la recherche sur la date de début de l'acte |
 | [period-end](SearchParameter-PDSm-DocumentReference-period-end.html)* | date | Contraindre la recherche sur la date de fin de l'acte |

@@ -11,7 +11,6 @@ Le flux 05-a contient les critères suivants :
 <!-- Rajouter les liens vers les searchparam custom -->
 <!-- Mettre une colonne critère de recherche FHIR avec la description à côté, enlever le mapping fonctionnel -->
 
-
 #### Paramètre de recherche de la ressource List
 
 | Critère de recherche FHIR | Type | Description |
@@ -50,21 +49,18 @@ Le flux 05-a contient les critères suivants :
 | name | token | Recherche sur le nom ou prénom de l'auteur. SearchParameter défini dans le guide d'implémentation de l'annuaire |
 {: .grid }
 
-
-Ci-dessous des exemples de requête :
+### Exemples de requêtes
 
 * Rechercher les ressources de type List, correspondant à des lots de soumission, ayant été créées depuis le 01/01/2021 dont l’auteur est une professionnelle ayant pour nom de famille Dupont et prénom Emma.
 
 ```
 GET http://targetsystem.com/API/List?code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset&date=ge2021-01-01&source:PractitionerRole.partOf.family-ex =Dupont& source:PractitionerRole.name =Emma HTTP/1.1
-
 ```
 
 * Rechercher les ressource de type List, correspondant à des lots de soumission dont le patient a l’identifiant 156.
 
 ```
 POST http://targetsystem.com/API/List/_search?patient.identifier=156&code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset
-
 ```
 
 ### Flux 06-a : réponse au flux 05-a
