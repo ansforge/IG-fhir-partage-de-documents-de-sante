@@ -8,7 +8,7 @@ publisher:
     name: ANS
     url: https://esante.gouv.fr
 status: active
-version: 3.1.0
+version: 3.1.1
 fhirVersion: 4.0.1
 copyrightYear: 2020+
 releaseLabel: trial-use
@@ -22,7 +22,6 @@ dependencies:
 
 parameters:
     shownav: 'true'
-
 
 pages:
     index.md:
@@ -59,6 +58,8 @@ pages:
             title: Equivalences
         downloads.md:
             title: Téléchargements et usages
+    changes.md:
+        title: Historique des changements
 
 menu:
     Accueil: index.html
@@ -84,3 +85,4 @@ menu:
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/
     Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/
+    Historique: changes.html
