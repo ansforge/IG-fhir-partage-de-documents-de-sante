@@ -33,6 +33,14 @@ Le flux 05-b contient les critères suivants :
 
 > \* Paramètre de recherche créé pour le volet PDSm
 
+<div style="width: 65%">
+<blockquote class="stu-note">
+<p>
+  Conformément au profil MHD, la recherche de fiche DOIT à minima inclure les paramètres patient ou patient.identifier et status.
+</p>
+</blockquote>
+</div>
+
 #### Paramètre de recherche sur les ressources Patient / Practitioner / Device
 
 | Critère de recherche FHIR | Type | Description |
@@ -57,10 +65,10 @@ Le flux 05-b contient les critères suivants :
 
 ### Exemples de requêtes
 
-* Rechercher les ressources de type DocumentReference du patient ayant l’identifiant 32659.
+* Rechercher les ressources de type DocumentReference du patient ayant l’identifiant 32659 et au statut courant.
 
 ```
-GET http://targetsystem.com/API/DocumentReference?patient.identifier=32659 HTTP/1.1
+GET http://targetsystem.com/API/DocumentReference?patient.identifier=32659&status=current HTTP/1.1
 ```
 
 ### Flux 06b : réponse au flux 05-b

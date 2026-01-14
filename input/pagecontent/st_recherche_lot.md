@@ -33,6 +33,16 @@ Le flux 05-a contient les critères suivants :
 
 > \* Paramètre de recherche créé pour le volet PDSm
 
+
+<div style="width: 65%">
+<blockquote class="stu-note">
+<p>
+  Conformément au profil MHD, la recherche de fiche DOIT à minima inclure les paramètres patient ou patient.identifier, code et status.
+</p>
+</blockquote>
+</div>
+
+
 #### Paramètre de recherche de la ressource Patient
 
 | Critère de recherche FHIR | Type | Description |
@@ -51,16 +61,16 @@ Le flux 05-a contient les critères suivants :
 
 ### Exemples de requêtes
 
-* Rechercher les ressources de type List, correspondant à des lots de soumission, ayant été créées depuis le 01/01/2021 dont l’auteur est une professionnelle ayant pour nom de famille Dupont et prénom Emma.
+* Rechercher les ressource de type List, correspondant à des lots de soumission dont le patient a l’identifiant 156 et dont le statut est courant.
 
 ```
-GET http://targetsystem.com/API/List?code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset&date=ge2021-01-01&source:PractitionerRole.partOf.family-ex =Dupont& source:PractitionerRole.name =Emma HTTP/1.1
+POST http://targetsystem.com/API/List?code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset&patient.identifier=156&code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset&status=current
 ```
 
-* Rechercher les ressource de type List, correspondant à des lots de soumission dont le patient a l’identifiant 156.
+* Rechercher les ressources de type List, correspondant à des lots de soumission dont le patient à l'identifiant 156, dont le statut est courant, ayant été créées depuis le 01/01/2021, et dont l’auteur est une professionnelle ayant pour nom de famille Dupont et prénom Emma.
 
 ```
-POST http://targetsystem.com/API/List/_search?patient.identifier=156&code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset
+GET http://targetsystem.com/API/List?code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset&patient.identifier=156&date=ge2021-01-01&source:PractitionerRole.partOf.family-ex =Dupont&source:PractitionerRole.name=Emma&status=current HTTP/1.1
 ```
 
 ### Flux 06-a : réponse au flux 05-a
