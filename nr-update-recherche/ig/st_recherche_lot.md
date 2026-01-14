@@ -37,7 +37,7 @@ Le flux 05-a contient les critères suivants :
 
 > * Paramètre de recherche créé pour le volet PDSm
 
-> Conformément au profil MHD, la recherche de fiche DOIT à minima inclure les paramètres patient ou patient.identifier, code et status.
+> Conformément au profil MHD[[ITI-66]](https://profiles.ihe.net/ITI/MHD/4.2.0/ITI-66.html), la recherche de fiche DOIT à minima inclure les paramètres patient ou patient.identifier, code et status.
 
 #### Paramètre de recherche de la ressource Patient
 
