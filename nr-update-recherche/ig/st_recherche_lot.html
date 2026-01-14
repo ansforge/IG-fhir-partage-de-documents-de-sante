@@ -342,6 +342,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <p>* Paramètre de recherche créé pour le volet PDSm</p>
 </blockquote>
 
+<div style="width: 65%">
+<blockquote class="stu-note">
+<p>
+  Conformément au profil MHD, la recherche de fiche DOIT à minima inclure les paramètres patient ou patient.identifier, code et status.
+</p>
+</blockquote>
+</div>
+
 <h4 id="paramètre-de-recherche-de-la-ressource-patient">Paramètre de recherche de la ressource Patient</h4>
 
 <table class="grid">
@@ -393,17 +401,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="exemples-de-requêtes">Exemples de requêtes</h3>
 
 <ul>
-  <li>Rechercher les ressources de type List, correspondant à des lots de soumission, ayant été créées depuis le 01/01/2021 dont l’auteur est une professionnelle ayant pour nom de famille Dupont et prénom Emma.</li>
+  <li>Rechercher les ressource de type List, correspondant à des lots de soumission dont le patient a l’identifiant 156 et dont le statut est courant.</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://targetsystem.com/API/List?code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset&amp;date=ge2021-01-01&amp;source:PractitionerRole.partOf.family-ex =Dupont&amp; source:PractitionerRole.name =Emma HTTP/1.1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST http://targetsystem.com/API/List?code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset&amp;patient.identifier=156&amp;code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset&amp;status=current
 </code></pre></div></div>
 
 <ul>
-  <li>Rechercher les ressource de type List, correspondant à des lots de soumission dont le patient a l’identifiant 156.</li>
+  <li>Rechercher les ressources de type List, correspondant à des lots de soumission dont le patient à l'identifiant 156, dont le statut est courant, ayant été créées depuis le 01/01/2021, et dont l’auteur est une professionnelle ayant pour nom de famille Dupont et prénom Emma.</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST http://targetsystem.com/API/List/_search?patient.identifier=156&amp;code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://targetsystem.com/API/List?code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset&amp;patient.identifier=156&amp;date=ge2021-01-01&amp;source:PractitionerRole.partOf.family-ex =Dupont&amp;source:PractitionerRole.name=Emma&amp;status=current HTTP/1.1
 </code></pre></div></div>
 
 <h3 id="flux-06-a--réponse-au-flux-05-a">Flux 06-a : réponse au flux 05-a</h3>
@@ -457,7 +465,7 @@ Si le gestionnaire de partage de documents doit reporter une erreur, il doit uti
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 14, 2026 13:26+0000">2026-01-14</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 14, 2026 13:35+0000">2026-01-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

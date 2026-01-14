@@ -354,6 +354,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <p>* Paramètre de recherche créé pour le volet PDSm</p>
 </blockquote>
 
+<div style="width: 65%">
+<blockquote class="stu-note">
+<p>
+  Conformément au profil MHD, la recherche de fiche DOIT à minima inclure les paramètres patient ou patient.identifier et status.
+</p>
+</blockquote>
+</div>
+
 <h4 id="paramètre-de-recherche-sur-les-ressources-patient--practitioner--device">Paramètre de recherche sur les ressources Patient / Practitioner / Device</h4>
 
 <table class="grid">
@@ -419,10 +427,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="exemples-de-requêtes">Exemples de requêtes</h3>
 
 <ul>
-  <li>Rechercher les ressources de type DocumentReference du patient ayant l’identifiant 32659.</li>
+  <li>Rechercher les ressources de type DocumentReference du patient ayant l’identifiant 32659 et au statut courant.</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://targetsystem.com/API/DocumentReference?patient.identifier=32659 HTTP/1.1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://targetsystem.com/API/DocumentReference?patient.identifier=32659&amp;status=current HTTP/1.1
 </code></pre></div></div>
 
 <h3 id="flux-06b--réponse-au-flux-05-b">Flux 06b : réponse au flux 05-b</h3>
@@ -480,7 +488,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 14, 2026 13:26+0000">2026-01-14</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 14, 2026 13:35+0000">2026-01-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
