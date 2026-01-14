@@ -11,6 +11,7 @@ Generic: line 0, col 0, Error - The link 'PractitionerRole/practitionerrole-exam
 Generic: line 0, col 0, Error - The link 'PractitionerRole/practitionerrole-example' for "PractitionerRole/practitionerrole-example" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The link 'PractitionerRole/practitionerrole-example' for "PractitionerRole/practitionerrole-example" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The link 'Practitioner/practitioner-example' for "Practitioner/practitioner-example" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '/IHE.MHD.ProvideDocumentBundleResponse' for "ProvideDocumentBundleResponse" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Warning - The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide (NOTFOUND)
 Generic: line 0, col 0, Warning - An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide (NOTFOUND)
 Generic: line 0, col 0, Warning - The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide (NOTFOUND)

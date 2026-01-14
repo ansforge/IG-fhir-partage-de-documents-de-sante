@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm | *Version*:3.1.0 |
-| Active as of 2026-01-13 | *Computable Name*:PDSm |
+| Active as of 2026-01-14 | *Computable Name*:PDSm |
 
  **PDSm Implementation Guide**
  This document presents the technical specifications of the “Partage de documents de santé en mobilité” section. This is a part of the service layer specifying the terms of document sharing without constraining them. The specifications related to health documents constitute the components of the business layer of CI-SIS. 
@@ -114,7 +114,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-01-13T19:50:00+00:00",
+  "date" : "2026-01-14T08:40:09+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

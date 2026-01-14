@@ -3,8 +3,8 @@ PDSm : Validation Results
 
 err = 26, warn = 100, info = 63
 IG Publisher Version: 2.0.29
-Generated Tue Jan 13 19:55:05 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.pdsm#3.1.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/pdsm)
- Build Errors : 6 / 7 / 0
+Generated Wed Jan 14 08:43:09 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.pdsm#3.1.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/pdsm)
+ Build Errors : 7 / 7 / 0
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Binary-6789 : 0 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478 : 0 / 4 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-ConsommateurDeDocuments : 0 / 0 / 1
@@ -45,6 +45,7 @@ ERROR: DocumentReference-PDSmSimplifiedExample.html#/html/body/div/div/div/div/d
 ERROR: DocumentReference-PDSmSimplifiedExample.html#/html/body/div/div/div/div/div/div/p/a at Line 276, column 692: The link 'PractitionerRole/practitionerrole-example' for "PractitionerRole/practitionerrole-example" cannot be resolved
 ERROR: DocumentReference-exemple-pdsm-documentreference.html#/html/body/div/div/div/div/div/div/p/a at Line 276, column 601: The link 'PractitionerRole/practitionerrole-example' for "PractitionerRole/practitionerrole-example" cannot be resolved
 ERROR: List-ExampleSubmissionSet.html#/html/body/div/div/div/div/div/div/p/a at Line 271, column 1531: The link 'Practitioner/practitioner-example' for "Practitioner/practitioner-example" cannot be resolved
+ERROR: st_ajout.html#/html/body/div/div/div/div/div/p/a at Line 281, column 54: The link '/IHE.MHD.ProvideDocumentBundleResponse' for "ProvideDocumentBundleResponse" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
