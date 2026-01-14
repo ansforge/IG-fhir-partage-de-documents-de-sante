@@ -29,4 +29,4 @@ Modifications apportées dans la release [1.1.1](https://github.com/ansforge/IG-
 * (3.1.0-ballot) suppression de la contrainte \"contained\" obligatoire pour les champs subject (pour éviter les doublons) et suppression de l'obligation du type de ressources contained ([#28](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/issues/28))
 * (3.1.0-ballot) Réparation de liens morts
 * (3.1.0-ballot) Ajout des spécifications fonctionnelles dans l'IG ([#35](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/issues/35))
-* (3.1.0-ballot) Ajout du mapping du XDS ReferenceIdList ([#55](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/issues/55))"
+* (3.1.0-ballot) Ajout du mapping du XDS ReferenceIdList ([#55](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/issues/55))
