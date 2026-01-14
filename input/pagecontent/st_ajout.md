@@ -35,7 +35,7 @@ Il doit être indiqué dans la réponse, le statut (succès ou échec) de chaque
 <!-- Utiliser à chaque fois le nom du profil et non le lot de soumission, et rajouter le nom fonctionnel à côté -->
 
 Le gestionnaire de partage de documents de santé retourne un "HTTP Status code" approprié au résultat de la demande comme indiqué dans la spécification du profil MHD. Le corps de la réponse doit être un Bundle de type transaction-response avec un élément entry pour chaque ressource reçue dans le Bundle de la requête, dans le même ordre, avec le résultat du traitement de l'élément.
-Le corps de la réponse doit être conforme au profil [ProvideDocumentBundleResponse](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.ProvideDocumentBundleResponse) ([exemple de contenu d'un payload](Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.json.html)).
+Le corps de la réponse doit être conforme au profil [ProvideDocumentBundleResponse]({{site.data.fhir.ver.iheitimhd}}/IHE.MHD.ProvideDocumentBundleResponse) ([exemple de contenu d'un payload](Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.json.html)).
 
 Ce flux sert à communiquer un succès ou un échec.
 Un succès n'est indiqué que lorsque le ou les documents sont reçus, complètement traités et conservés selon les besoins de la configuration du gestionnaire de partage de documents.
