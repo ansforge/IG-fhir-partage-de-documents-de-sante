@@ -1,4 +1,4 @@
-# ans.fhir.fr.pdsm#3.1.0: Partage de Documents de Santé en mobilité (PDSm)
+# ans.fhir.fr.pdsm#3.1.1: Partage de Documents de Santé en mobilité (PDSm)
 
 ## Pages
 
@@ -12,6 +12,7 @@
 * [Artifacts Summary](artifacts.md)
 * [Mise à jour de documents](st_maj.md)
 * [Sécurité](securite.md)
+* [Historique des changements](changes.md)
 * [Consultation de documents (ITI-68)](st_consultation.md)
 * [Autres Ressources](autres_ressources.md)
 * [Ajout simplifié d'un document (ITI-105)](st_ajout_simplifie.md)

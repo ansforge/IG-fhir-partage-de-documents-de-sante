@@ -1,4 +1,4 @@
-# PDSm-List-authorOrg - Partage de Documents de Santé en mobilité (PDSm) v3.1.0
+# PDSm-List-authorOrg - Partage de Documents de Santé en mobilité (PDSm) v3.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-authorOrg | *Version*:3.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-authorOrg | *Version*:3.1.1 |
 | Active as of 2026-01-14 | *Computable Name*:PDSmAuthorOrg |
 
  
@@ -26,10 +26,10 @@ Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utilise
   "resourceType" : "SearchParameter",
   "id" : "PDSm-List-authorOrg",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-authorOrg",
-  "version" : "3.1.0",
+  "version" : "3.1.1",
   "name" : "PDSmAuthorOrg",
   "status" : "active",
-  "date" : "2026-01-14T15:43:32+00:00",
+  "date" : "2026-01-14T15:54:50+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

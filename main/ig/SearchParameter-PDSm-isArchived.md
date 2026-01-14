@@ -1,4 +1,4 @@
-# PDSm-isArchived - Partage de Documents de Santé en mobilité (PDSm) v3.1.0
+# PDSm-isArchived - Partage de Documents de Santé en mobilité (PDSm) v3.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-isArchived | *Version*:3.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-isArchived | *Version*:3.1.1 |
 | Active as of 2021-07-30 | *Computable Name*:PDSmIsArchived |
 
  
@@ -23,7 +23,7 @@ Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utilise
   "resourceType" : "SearchParameter",
   "id" : "PDSm-isArchived",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-isArchived",
-  "version" : "3.1.0",
+  "version" : "3.1.1",
   "name" : "PDSmIsArchived",
   "status" : "active",
   "date" : "2021-07-30",

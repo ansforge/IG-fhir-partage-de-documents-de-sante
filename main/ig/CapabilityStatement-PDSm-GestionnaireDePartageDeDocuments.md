@@ -1,4 +1,4 @@
-# CI-SIS Partage-De-Documents-De-Sante - GestionnaireDePartageDeDocuments - Partage de Documents de Santé en mobilité (PDSm) v3.1.0
+# CI-SIS Partage-De-Documents-De-Sante - GestionnaireDePartageDeDocuments - Partage de Documents de Santé en mobilité (PDSm) v3.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/CapabilityStatement/PDSm-GestionnaireDePartageDeDocuments | *Version*:3.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/CapabilityStatement/PDSm-GestionnaireDePartageDeDocuments | *Version*:3.1.1 |
 | Active as of 2021-07-30 | *Computable Name*:PDSmGestionnaireDePartageDeDocuments |
 
  
@@ -25,7 +25,7 @@ Il s’agit d’un système d’information ou d’un composant d'un système d�
   "resourceType" : "CapabilityStatement",
   "id" : "PDSm-GestionnaireDePartageDeDocuments",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/CapabilityStatement/PDSm-GestionnaireDePartageDeDocuments",
-  "version" : "3.1.0",
+  "version" : "3.1.1",
   "name" : "PDSmGestionnaireDePartageDeDocuments",
   "title" : "CI-SIS Partage-De-Documents-De-Sante - GestionnaireDePartageDeDocuments",
   "status" : "active",

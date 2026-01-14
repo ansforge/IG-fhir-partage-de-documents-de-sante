@@ -1,4 +1,4 @@
-# PDSm Find DocumentReferences Comprehensive Response - Partage de Documents de Santé en mobilité (PDSm) v3.1.0
+# PDSm Find DocumentReferences Comprehensive Response - Partage de Documents de Santé en mobilité (PDSm) v3.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-find-documentreferences-comprehensive-response | *Version*:3.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-find-documentreferences-comprehensive-response | *Version*:3.1.1 |
 | Active as of 2026-01-14 | *Computable Name*:PDSm_FindDocumentReferencesComprehensiveResponse |
 
  
@@ -37,11 +37,11 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-find-documentre
   "resourceType" : "StructureDefinition",
   "id" : "pdsm-find-documentreferences-comprehensive-response",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-find-documentreferences-comprehensive-response",
-  "version" : "3.1.0",
+  "version" : "3.1.1",
   "name" : "PDSm_FindDocumentReferencesComprehensiveResponse",
   "title" : "PDSm Find DocumentReferences Comprehensive Response",
   "status" : "active",
-  "date" : "2026-01-14T15:43:32+00:00",
+  "date" : "2026-01-14T15:54:50+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

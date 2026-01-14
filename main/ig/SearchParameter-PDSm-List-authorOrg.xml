@@ -7,10 +7,10 @@
 </div><table class="grid"><tr><td>Ressource</td><td><a href="http://hl7.org/fhir/R4/list.html">List</a></td></tr><tr><td>Expression</td><td><code>List.extension.where(url='https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-authorOrg').value</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : Cest au serveur de décider si le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : Cest au serveur de décider si le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr></table></div>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-authorOrg"/>
-  <version value="3.1.0"/>
+  <version value="3.1.1"/>
   <name value="PDSmAuthorOrg"/>
   <status value="active"/>
-  <date value="2026-01-14T15:43:32+00:00"/>
+  <date value="2026-01-14T15:54:50+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>

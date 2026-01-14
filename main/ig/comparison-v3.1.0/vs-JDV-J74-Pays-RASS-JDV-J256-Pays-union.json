@@ -1,0 +1,914 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "12486186-691f-4dc9-8b9b-6fc82833f857-41",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/12486186-691f-4dc9-8b9b-6fc82833f857-41",
+  "name" : "UnionJDV_J74-Pays-RASSAndJDV_J256-Pays",
+  "title" : "Union of null And null",
+  "status" : "retired",
+  "date" : "2026-01-14T15:57:26+00:00",
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "99100",
+        "display" : "France"
+      },
+      {
+        "code" : "99101",
+        "display" : "Danemark"
+      },
+      {
+        "code" : "99102",
+        "display" : "Islande"
+      },
+      {
+        "code" : "99103",
+        "display" : "Norvège"
+      },
+      {
+        "code" : "99104",
+        "display" : "Suède"
+      },
+      {
+        "code" : "99105",
+        "display" : "Finlande"
+      },
+      {
+        "code" : "99106",
+        "display" : "Estonie"
+      },
+      {
+        "code" : "99107",
+        "display" : "Lettonie"
+      },
+      {
+        "code" : "99108",
+        "display" : "Lituanie"
+      },
+      {
+        "code" : "99109",
+        "display" : "Allemagne"
+      },
+      {
+        "code" : "99110",
+        "display" : "Autriche"
+      },
+      {
+        "code" : "99111",
+        "display" : "Bulgarie"
+      },
+      {
+        "code" : "99112",
+        "display" : "Hongrie"
+      },
+      {
+        "code" : "99113",
+        "display" : "Liechtenstein"
+      },
+      {
+        "code" : "99114",
+        "display" : "Roumanie"
+      },
+      {
+        "code" : "99116",
+        "display" : "Tchéquie"
+      },
+      {
+        "code" : "99117",
+        "display" : "Slovaquie"
+      },
+      {
+        "code" : "99118",
+        "display" : "Bosnie-Herzégovine"
+      },
+      {
+        "code" : "99119",
+        "display" : "Croatie"
+      },
+      {
+        "code" : "99120",
+        "display" : "Monténégro"
+      },
+      {
+        "code" : "99121",
+        "display" : "Serbie"
+      },
+      {
+        "code" : "99122",
+        "display" : "Pologne"
+      },
+      {
+        "code" : "99123",
+        "display" : "Russie"
+      },
+      {
+        "code" : "99125",
+        "display" : "Albanie"
+      },
+      {
+        "code" : "99126",
+        "display" : "Grèce"
+      },
+      {
+        "code" : "99127",
+        "display" : "Italie"
+      },
+      {
+        "code" : "99128",
+        "display" : "Saint-Marin"
+      },
+      {
+        "code" : "99129",
+        "display" : "Vatican"
+      },
+      {
+        "code" : "99130",
+        "display" : "Andorre"
+      },
+      {
+        "code" : "99131",
+        "display" : "Belgique"
+      },
+      {
+        "code" : "99132",
+        "display" : "Royaume-Uni"
+      },
+      {
+        "code" : "99133",
+        "display" : "Territoires britanniques en Méditerranée"
+      },
+      {
+        "code" : "99134",
+        "display" : "Espagne"
+      },
+      {
+        "code" : "99135",
+        "display" : "Pays-Bas"
+      },
+      {
+        "code" : "99136",
+        "display" : "Irlande"
+      },
+      {
+        "code" : "99137",
+        "display" : "Luxembourg"
+      },
+      {
+        "code" : "99138",
+        "display" : "Monaco"
+      },
+      {
+        "code" : "99139",
+        "display" : "Portugal"
+      },
+      {
+        "code" : "99140",
+        "display" : "Suisse"
+      },
+      {
+        "code" : "99144",
+        "display" : "Malte"
+      },
+      {
+        "code" : "99145",
+        "display" : "Slovénie"
+      },
+      {
+        "code" : "99148",
+        "display" : "Biélorussie"
+      },
+      {
+        "code" : "99151",
+        "display" : "Moldavie"
+      },
+      {
+        "code" : "99155",
+        "display" : "Ukraine"
+      },
+      {
+        "code" : "99156",
+        "display" : "Macédoine du Nord"
+      },
+      {
+        "code" : "99157",
+        "display" : "Kosovo"
+      },
+      {
+        "code" : "99201",
+        "display" : "Arabie saoudite"
+      },
+      {
+        "code" : "99203",
+        "display" : "Irak"
+      },
+      {
+        "code" : "99204",
+        "display" : "Iran"
+      },
+      {
+        "code" : "99205",
+        "display" : "Liban"
+      },
+      {
+        "code" : "99206",
+        "display" : "Syrie"
+      },
+      {
+        "code" : "99207",
+        "display" : "Israël"
+      },
+      {
+        "code" : "99208",
+        "display" : "Turquie"
+      },
+      {
+        "code" : "99212",
+        "display" : "Afghanistan"
+      },
+      {
+        "code" : "99213",
+        "display" : "Pakistan"
+      },
+      {
+        "code" : "99214",
+        "display" : "Bhoutan"
+      },
+      {
+        "code" : "99215",
+        "display" : "Népal"
+      },
+      {
+        "code" : "99216",
+        "display" : "Chine"
+      },
+      {
+        "code" : "99217",
+        "display" : "Japon"
+      },
+      {
+        "code" : "99219",
+        "display" : "Thaïlande"
+      },
+      {
+        "code" : "99220",
+        "display" : "Philippines"
+      },
+      {
+        "code" : "99222",
+        "display" : "Jordanie"
+      },
+      {
+        "code" : "99223",
+        "display" : "Inde"
+      },
+      {
+        "code" : "99224",
+        "display" : "Birmanie"
+      },
+      {
+        "code" : "99225",
+        "display" : "Brunei"
+      },
+      {
+        "code" : "99226",
+        "display" : "Singapour"
+      },
+      {
+        "code" : "99227",
+        "display" : "Malaisie"
+      },
+      {
+        "code" : "99229",
+        "display" : "Maldives"
+      },
+      {
+        "code" : "99231",
+        "display" : "Indonésie"
+      },
+      {
+        "code" : "99234",
+        "display" : "Cambodge"
+      },
+      {
+        "code" : "99235",
+        "display" : "Sri Lanka"
+      },
+      {
+        "code" : "99236",
+        "display" : "Taïwan"
+      },
+      {
+        "code" : "99238",
+        "display" : "Corée du Nord"
+      },
+      {
+        "code" : "99239",
+        "display" : "Corée du Sud"
+      },
+      {
+        "code" : "99240",
+        "display" : "Koweït"
+      },
+      {
+        "code" : "99241",
+        "display" : "Laos"
+      },
+      {
+        "code" : "99242",
+        "display" : "Mongolie"
+      },
+      {
+        "code" : "99243",
+        "display" : "Vietnam"
+      },
+      {
+        "code" : "99246",
+        "display" : "Bangladesh"
+      },
+      {
+        "code" : "99247",
+        "display" : "Émirats arabes unis"
+      },
+      {
+        "code" : "99248",
+        "display" : "Qatar"
+      },
+      {
+        "code" : "99249",
+        "display" : "Bahreïn"
+      },
+      {
+        "code" : "99250",
+        "display" : "Oman"
+      },
+      {
+        "code" : "99251",
+        "display" : "Yémen"
+      },
+      {
+        "code" : "99252",
+        "display" : "Arménie"
+      },
+      {
+        "code" : "99253",
+        "display" : "Azerbaïdjan"
+      },
+      {
+        "code" : "99254",
+        "display" : "Chypre"
+      },
+      {
+        "code" : "99255",
+        "display" : "Géorgie"
+      },
+      {
+        "code" : "99256",
+        "display" : "Kazakhstan"
+      },
+      {
+        "code" : "99257",
+        "display" : "Kirghizstan"
+      },
+      {
+        "code" : "99258",
+        "display" : "Ouzbékistan"
+      },
+      {
+        "code" : "99259",
+        "display" : "Tadjikistan"
+      },
+      {
+        "code" : "99260",
+        "display" : "Turkménistan"
+      },
+      {
+        "code" : "99261",
+        "display" : "Palestine"
+      },
+      {
+        "code" : "99262",
+        "display" : "Timor oriental"
+      },
+      {
+        "code" : "99301",
+        "display" : "Égypte"
+      },
+      {
+        "code" : "99302",
+        "display" : "Libéria"
+      },
+      {
+        "code" : "99303",
+        "display" : "Afrique du Sud"
+      },
+      {
+        "code" : "99304",
+        "display" : "Gambie"
+      },
+      {
+        "code" : "99306",
+        "display" : "Territoires britanniques de l'océan Atlantique"
+      },
+      {
+        "code" : "99308",
+        "display" : "Chagos"
+      },
+      {
+        "code" : "99309",
+        "display" : "Tanzanie"
+      },
+      {
+        "code" : "99310",
+        "display" : "Zimbabwe"
+      },
+      {
+        "code" : "99311",
+        "display" : "Namibie"
+      },
+      {
+        "code" : "99312",
+        "display" : "République démocratique du Congo"
+      },
+      {
+        "code" : "99313",
+        "display" : "Territoires espagnols en Afrique du Nord"
+      },
+      {
+        "code" : "99314",
+        "display" : "Guinée équatoriale"
+      },
+      {
+        "code" : "99315",
+        "display" : "Éthiopie"
+      },
+      {
+        "code" : "99316",
+        "display" : "Libye"
+      },
+      {
+        "code" : "99317",
+        "display" : "Érythrée"
+      },
+      {
+        "code" : "99318",
+        "display" : "Somalie"
+      },
+      {
+        "code" : "99319",
+        "display" : "Territoires portugais de l'océan Atlantique"
+      },
+      {
+        "code" : "99321",
+        "display" : "Burundi"
+      },
+      {
+        "code" : "99322",
+        "display" : "Cameroun"
+      },
+      {
+        "code" : "99323",
+        "display" : "Centrafrique"
+      },
+      {
+        "code" : "99324",
+        "display" : "Congo"
+      },
+      {
+        "code" : "99326",
+        "display" : "Côte d'Ivoire"
+      },
+      {
+        "code" : "99327",
+        "display" : "Bénin"
+      },
+      {
+        "code" : "99328",
+        "display" : "Gabon"
+      },
+      {
+        "code" : "99329",
+        "display" : "Ghana"
+      },
+      {
+        "code" : "99330",
+        "display" : "Guinée"
+      },
+      {
+        "code" : "99331",
+        "display" : "Burkina"
+      },
+      {
+        "code" : "99332",
+        "display" : "Kenya"
+      },
+      {
+        "code" : "99333",
+        "display" : "Madagascar"
+      },
+      {
+        "code" : "99334",
+        "display" : "Malawi"
+      },
+      {
+        "code" : "99335",
+        "display" : "Mali"
+      },
+      {
+        "code" : "99336",
+        "display" : "Mauritanie"
+      },
+      {
+        "code" : "99337",
+        "display" : "Niger"
+      },
+      {
+        "code" : "99338",
+        "display" : "Nigéria"
+      },
+      {
+        "code" : "99339",
+        "display" : "Ouganda"
+      },
+      {
+        "code" : "99340",
+        "display" : "Rwanda"
+      },
+      {
+        "code" : "99341",
+        "display" : "Sénégal"
+      },
+      {
+        "code" : "99342",
+        "display" : "Sierra Leone"
+      },
+      {
+        "code" : "99343",
+        "display" : "Soudan"
+      },
+      {
+        "code" : "99344",
+        "display" : "Tchad"
+      },
+      {
+        "code" : "99345",
+        "display" : "Togo"
+      },
+      {
+        "code" : "99346",
+        "display" : "Zambie"
+      },
+      {
+        "code" : "99347",
+        "display" : "Botswana"
+      },
+      {
+        "code" : "99348",
+        "display" : "Lesotho"
+      },
+      {
+        "code" : "99349",
+        "display" : "Soudan du Sud"
+      },
+      {
+        "code" : "99350",
+        "display" : "Maroc"
+      },
+      {
+        "code" : "99351",
+        "display" : "Tunisie"
+      },
+      {
+        "code" : "99352",
+        "display" : "Algérie"
+      },
+      {
+        "code" : "99389",
+        "display" : "Sahara occidental"
+      },
+      {
+        "code" : "99390",
+        "display" : "Maurice"
+      },
+      {
+        "code" : "99391",
+        "display" : "Swaziland"
+      },
+      {
+        "code" : "99392",
+        "display" : "Guinée-Bissao"
+      },
+      {
+        "code" : "99393",
+        "display" : "Mozambique"
+      },
+      {
+        "code" : "99394",
+        "display" : "Sao Tomé-et-Principe"
+      },
+      {
+        "code" : "99395",
+        "display" : "Angola"
+      },
+      {
+        "code" : "99396",
+        "display" : "Cap-Vert"
+      },
+      {
+        "code" : "99397",
+        "display" : "Comores"
+      },
+      {
+        "code" : "99398",
+        "display" : "Seychelles"
+      },
+      {
+        "code" : "99399",
+        "display" : "Djibouti"
+      },
+      {
+        "code" : "99401",
+        "display" : "Canada"
+      },
+      {
+        "code" : "99404",
+        "display" : "États-Unis"
+      },
+      {
+        "code" : "99405",
+        "display" : "Mexique"
+      },
+      {
+        "code" : "99406",
+        "display" : "Costa Rica"
+      },
+      {
+        "code" : "99407",
+        "display" : "Cuba"
+      },
+      {
+        "code" : "99408",
+        "display" : "République dominicaine"
+      },
+      {
+        "code" : "99409",
+        "display" : "Guatemala"
+      },
+      {
+        "code" : "99410",
+        "display" : "Haïti"
+      },
+      {
+        "code" : "99411",
+        "display" : "Honduras"
+      },
+      {
+        "code" : "99412",
+        "display" : "Nicaragua"
+      },
+      {
+        "code" : "99413",
+        "display" : "Panama"
+      },
+      {
+        "code" : "99414",
+        "display" : "Salvador"
+      },
+      {
+        "code" : "99415",
+        "display" : "Argentine"
+      },
+      {
+        "code" : "99416",
+        "display" : "Brésil"
+      },
+      {
+        "code" : "99417",
+        "display" : "Chili"
+      },
+      {
+        "code" : "99418",
+        "display" : "Bolivie"
+      },
+      {
+        "code" : "99419",
+        "display" : "Colombie"
+      },
+      {
+        "code" : "99420",
+        "display" : "Équateur"
+      },
+      {
+        "code" : "99421",
+        "display" : "Paraguay"
+      },
+      {
+        "code" : "99422",
+        "display" : "Pérou"
+      },
+      {
+        "code" : "99423",
+        "display" : "Uruguay"
+      },
+      {
+        "code" : "99424",
+        "display" : "Vénézuéla"
+      },
+      {
+        "code" : "99425",
+        "display" : "Territoires britanniques dans les Antilles et Bermudes"
+      },
+      {
+        "code" : "99426",
+        "display" : "Jamaïque"
+      },
+      {
+        "code" : "99427",
+        "display" : "Territoires britanniques dans l'océan Atlantique Sud"
+      },
+      {
+        "code" : "99428",
+        "display" : "Guyana"
+      },
+      {
+        "code" : "99429",
+        "display" : "Bélize"
+      },
+      {
+        "code" : "99430",
+        "display" : "Groenland"
+      },
+      {
+        "code" : "99432",
+        "display" : "Territoires des États-Unis en Amérique"
+      },
+      {
+        "code" : "99433",
+        "display" : "Trinité-et-Tobago"
+      },
+      {
+        "code" : "99434",
+        "display" : "Barbade"
+      },
+      {
+        "code" : "99435",
+        "display" : "Grenade"
+      },
+      {
+        "code" : "99436",
+        "display" : "Bahamas"
+      },
+      {
+        "code" : "99437",
+        "display" : "Suriname"
+      },
+      {
+        "code" : "99438",
+        "display" : "Dominique"
+      },
+      {
+        "code" : "99439",
+        "display" : "Sainte-Lucie"
+      },
+      {
+        "code" : "99440",
+        "display" : "Saint-Vincent-et-les-Grenadines"
+      },
+      {
+        "code" : "99441",
+        "display" : "Antigua-et-Barbuda"
+      },
+      {
+        "code" : "99442",
+        "display" : "Saint-Christophe-et-Niévès"
+      },
+      {
+        "code" : "99443",
+        "display" : "Bonaire, Saint-Eustache, Saba"
+      },
+      {
+        "code" : "99444",
+        "display" : "Curaçao"
+      },
+      {
+        "code" : "99445",
+        "display" : "Saint-Martin (partie néerlandaise)"
+      },
+      {
+        "code" : "99501",
+        "display" : "Australie"
+      },
+      {
+        "code" : "99502",
+        "display" : "Nouvelle-Zélande"
+      },
+      {
+        "code" : "99503",
+        "display" : "Pitcairn"
+      },
+      {
+        "code" : "99505",
+        "display" : "Territoires des États-Unis en Océanie"
+      },
+      {
+        "code" : "99506",
+        "display" : "Samoa"
+      },
+      {
+        "code" : "99507",
+        "display" : "Nauru"
+      },
+      {
+        "code" : "99508",
+        "display" : "Fidji"
+      },
+      {
+        "code" : "99509",
+        "display" : "Tonga"
+      },
+      {
+        "code" : "99510",
+        "display" : "Papouasie-Nouvelle-Guinée"
+      },
+      {
+        "code" : "99511",
+        "display" : "Tuvalu"
+      },
+      {
+        "code" : "99512",
+        "display" : "Salomon"
+      },
+      {
+        "code" : "99513",
+        "display" : "Kiribati"
+      },
+      {
+        "code" : "99514",
+        "display" : "Vanuatu"
+      },
+      {
+        "code" : "99515",
+        "display" : "Marshall"
+      },
+      {
+        "code" : "99516",
+        "display" : "Micronésie"
+      },
+      {
+        "code" : "99517",
+        "display" : "Palaos"
+      },
+      {
+        "code" : "99230",
+        "display" : "Hong Kong",
+        "designation" : [{
+          "use" : {
+            "code" : "OID"
+          },
+          "value" : "urn:oid:1.2.250.1.213.2.24"
+        }]
+      },
+      {
+        "code" : "99232",
+        "display" : "Macao",
+        "designation" : [{
+          "use" : {
+            "code" : "OID"
+          },
+          "value" : "urn:oid:1.2.250.1.213.2.24"
+        }]
+      },
+      {
+        "code" : "99431",
+        "display" : "Aruba",
+        "designation" : [{
+          "use" : {
+            "code" : "OID"
+          },
+          "value" : "urn:oid:1.2.250.1.213.2.24"
+        }]
+      },
+      {
+        "code" : "99699",
+        "display" : "Antarctique",
+        "designation" : [{
+          "use" : {
+            "code" : "OID"
+          },
+          "value" : "urn:oid:1.2.250.1.213.2.24"
+        }]
+      }]
+    },
+    {
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R302-ContexteCodeComplementaire/FHIR/TRE-R302-ContexteCodeComplementaire",
+      "concept" : [{
+        "code" : "01",
+        "display" : "Non renseigné",
+        "designation" : [{
+          "use" : {
+            "code" : "OID"
+          },
+          "value" : "urn:oid:1.2.250.1.213.3.3.70"
+        }]
+      }]
+    }]
+  }
+}

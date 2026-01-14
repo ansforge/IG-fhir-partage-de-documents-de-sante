@@ -1,4 +1,4 @@
-# Exemple de ressource Binary - Fichier PDF - Partage de Documents de Santé en mobilité (PDSm) v3.1.0
+# Exemple de ressource Binary - Fichier PDF - Partage de Documents de Santé en mobilité (PDSm) v3.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

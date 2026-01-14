@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>Exemple de lot de soumission PDSm - Partage de Documents de Santé en mobilité (PDSm) v3.1.0</title>
+    <title>Exemple de lot de soumission PDSm - Partage de Documents de Santé en mobilité (PDSm) v3.1.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script src="assets/js/mermaid.js" type="text/javascript"></script>
     <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
-    <style type="text/css">h2{--heading-prefix:"5.23"}
-    h3,h4,h5,h6{--heading-prefix:"5.23"}</style>
+    <style type="text/css">h2{--heading-prefix:"6.23"}
+    h3,h4,h5,h6{--heading-prefix:"6.23"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
 
@@ -64,7 +64,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Partage de Documents de Santé en mobilité (PDSm)</span>
             <br/>
-            <span style="display:inline-block;">3.1.0 - trial-use
+            <span style="display:inline-block;">3.1.1 - trial-use
 
 
 
@@ -176,6 +176,9 @@
   <li>
     <a href="https://interop.esante.gouv.fr/ig/documentation/" target="_blank">Documentation</a>
   </li>
+  <li>
+    <a href="changes.html">Historique</a>
+  </li>
 </ul>
             </div>    <!-- /.nav-collapse -->
           </div>    <!-- /.container -->
@@ -210,7 +213,7 @@
         <div class="row">
           <div class="inner-wrapper">
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">Partage de Documents de Santé en mobilité (PDSm) - version de développement local (v3.1.0) construite par les outils de publication FHIR (HL7&reg; FHIR&reg; Standard). Voir le <a href="https://interop.esante.gouv.fr/ig/fhir/pdsm/history.html">répertoire des versions publiées</a></p>  <!-- EndReleaseHeader -->
+    <!-- ReleaseHeader --><p id="publish-box">Partage de Documents de Santé en mobilité (PDSm) - version de développement local (v3.1.1) construite par les outils de publication FHIR (HL7&reg; FHIR&reg; Standard). Voir le <a href="https://interop.esante.gouv.fr/ig/fhir/pdsm/history.html">répertoire des versions publiées</a></p>  <!-- EndReleaseHeader -->
 
   
 
@@ -268,7 +271,7 @@
 
 
   <div><a name="ExampleSubmissionSet"> </a><a name="hcExampleSubmissionSet"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"></p><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-pdsm-submissionset-comprehensive.html">PDSm SubmissionSet Comprehensive</a></p></div><h2>Dossier de suivi post-opératoire</h2><table class="clstu"><tr><td>Date : 2025-04-30 14:00:00+0100 </td><td>Mode : Working List </td><td>Statut : Current </td><td>Code : Submission Set </td></tr><tr><td>Sujet : <a href="Patient-fr-patient-123.html">Martin Claire  Male, Date de Naissance :1980-01-15</a>Source </td></tr></table><p>note</p><blockquote><div><p>Suivi post-chirurgical – documents cliniques regroupés.</p>
-</div></blockquote><table class="grid"><tr style="backgound-color: #eeeeee"><td><b>Éléments</b></td></tr><tr><td><a href="DocumentReference-exemple-pdsm-documentreference.html">DocumentReference : masterIdentifier = UUID:12345678-abcd-1234-abcd-1234567890ab; status = current; type = Résumé de sortie d’hospitalisation; category = Compte-rendu; date = 2025-04-29 12:00:00+0100; description = Compte rendu d’hospitalisation suite à une chirurgie.; securityLabel = Normal</a></td></tr></table><hr/><p><b>Ressources contenues</b></p><hr/><a name="ExampleSubmissionSet/practitionerrole-example"> </a><a name="hcExampleSubmissionSet/practitionerrole-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version : 1; Dernière mise à jour : 2025-04-28 18:19:34+0200; Langue : fr; </p><p style="margin-bottom: 0px">Information Source: <a href="https://annuaire.sante.fr">https://annuaire.sante.fr</a></p><p style="margin-bottom: 0px">Profils: <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner-role.html">FR Core Practitioner Role</a>, <a href="https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-dp-practitionerrole.html">AS Donnée Publique PractitionerRole Profile</a></p></div><p><b>identifier</b>: <code>https://rpps.esante.gouv.fr</code>/1011848351&nbsp;(utilisation :&nbsp;official,&nbsp;)</p><p><b>active</b>: true</p><p><a name="l514">​</a><b>practitioner</b>: <a href="Practitioner/practitioner-example">Practitioner/practitioner-example</a></p><p><b>organization</b>: <a href="#hcExampleSubmissionSet/org-example">Organization HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G</a></p><p><b>code</b>: <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_R22-GenreActivite/FHIR/TRE-R22-GenreActivite GENR01}">Soignant</span>, <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExercice/FHIR/TRE-R23-ModeExercice L}">Libéral,indép,artisan,commerç</span>, <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_R21-Fonction/FHIR/TRE-R21-Fonction FON-05}">Adjoint</span></p><hr/><a name="ExampleSubmissionSet/org-example"> </a><a name="hcExampleSubmissionSet/org-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version : 1; Dernière mise à jour : 2025-04-28 19:35:45+0200; Langue : fr; </p><p style="margin-bottom: 0px">Information Source: <a href="https://annuaire.sante.fr">https://annuaire.sante.fr</a></p><p style="margin-bottom: 0px">Profils: <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-organization.html">FR Core Organization Profile</a>, <a href="https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-dp-organization.html">AS Donnée Publique Organization Profile</a></p></div><p><b>identifier</b>: Identification nationale de structure définie par l’ANS dans le CI_SIS/2264403106&nbsp;(utilisation :&nbsp;official,&nbsp;), Identification de l'organisation au SIREN/264403106&nbsp;(utilisation :&nbsp;official,&nbsp;)</p><p><b>active</b>: true</p><p><b>type</b>: <span title="Codes :{https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-3307 LEGAL-ENTITY}">Entité légale</span>, <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite SA43}">Secteur non défini</span></p><p><b>name</b>: HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G</p></div>
+</div></blockquote><table class="grid"><tr style="backgound-color: #eeeeee"><td><b>Éléments</b></td></tr><tr><td><a href="DocumentReference-exemple-pdsm-documentreference.html">DocumentReference : masterIdentifier = UUID:12345678-abcd-1234-abcd-1234567890ab; status = current; type = Résumé de sortie d’hospitalisation; category = Compte-rendu; date = 2025-04-29 12:00:00+0100; description = Compte rendu d’hospitalisation suite à une chirurgie.; securityLabel = Normal</a></td></tr></table><hr/><p><b>Ressources contenues</b></p><hr/><a name="ExampleSubmissionSet/practitionerrole-example"> </a><a name="hcExampleSubmissionSet/practitionerrole-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version : 1; Dernière mise à jour : 2025-04-28 18:19:34+0200; Langue : fr; </p><p style="margin-bottom: 0px">Information Source: <a href="https://annuaire.sante.fr">https://annuaire.sante.fr</a></p><p style="margin-bottom: 0px">Profils: <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner-role.html">FR Core Practitioner Role</a>, <a href="https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-dp-practitionerrole.html">AS Donnée Publique PractitionerRole Profile</a></p></div><p><b>identifier</b>: <code>https://rpps.esante.gouv.fr</code>/1011848351&nbsp;(utilisation :&nbsp;official,&nbsp;)</p><p><b>active</b>: true</p><p><a name="l520">​</a><b>practitioner</b>: <a href="Practitioner/practitioner-example">Practitioner/practitioner-example</a></p><p><b>organization</b>: <a href="#hcExampleSubmissionSet/org-example">Organization HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G</a></p><p><b>code</b>: <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_R22-GenreActivite/FHIR/TRE-R22-GenreActivite GENR01}">Soignant</span>, <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExercice/FHIR/TRE-R23-ModeExercice L}">Libéral,indép,artisan,commerç</span>, <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_R21-Fonction/FHIR/TRE-R21-Fonction FON-05}">Adjoint</span></p><hr/><a name="ExampleSubmissionSet/org-example"> </a><a name="hcExampleSubmissionSet/org-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">version : 1; Dernière mise à jour : 2025-04-28 19:35:45+0200; Langue : fr; </p><p style="margin-bottom: 0px">Information Source: <a href="https://annuaire.sante.fr">https://annuaire.sante.fr</a></p><p style="margin-bottom: 0px">Profils: <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-organization.html">FR Core Organization Profile</a>, <a href="https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-dp-organization.html">AS Donnée Publique Organization Profile</a></p></div><p><b>identifier</b>: Identification nationale de structure définie par l’ANS dans le CI_SIS/2264403106&nbsp;(utilisation :&nbsp;official,&nbsp;), Identification de l'organisation au SIREN/264403106&nbsp;(utilisation :&nbsp;official,&nbsp;)</p><p><b>active</b>: true</p><p><b>type</b>: <span title="Codes :{https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-3307 LEGAL-ENTITY}">Entité légale</span>, <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite SA43}">Secteur non défini</span></p><p><b>name</b>: HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G</p></div>
 
   
 
@@ -315,7 +318,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 14, 2026 15:43+0000">2026-01-14</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 14, 2026 15:54+0000">2026-01-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

@@ -17,7 +17,7 @@
      fhir:v "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-PractitionerRoleAsSource"^^xsd:anyURI ;
      fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-PractitionerRoleAsSource>
   ] ; # 
-  fhir:version [ fhir:v "3.1.0"] ; # 
+  fhir:version [ fhir:v "3.1.1"] ; # 
   fhir:name [ fhir:v "PDSmListPractitionerRoleAsSource"] ; # 
   fhir:derivedFrom [
      fhir:v "http://hl7.org/fhir/SearchParameter/List-source"^^xsd:anyURI ;

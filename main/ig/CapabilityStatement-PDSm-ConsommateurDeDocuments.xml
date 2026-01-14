@@ -37,7 +37,7 @@
 </div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Binary1-3" class="panel-title"><span style="float: right;">Conformité de la ressource : supported </span>Binary</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Profil système de base</span><br/><a href="http://hl7.org/fhir/R4/binary.html">Binary</a></div><div class="col-lg-3"><span class="lead">Conformité au Profil</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Politique de référence</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Résumé des interactions</span><br/><ul><li>Supporte <code>read</code>.</li></ul></div></div><p/></div></div></div></div>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/fhir/pdsm/CapabilityStatement/PDSm-ConsommateurDeDocuments"/>
-  <version value="3.1.0"/>
+  <version value="3.1.1"/>
   <name value="PDSmConsommateurDeDocuments"/>
   <title value="CI-SIS Partage-De-Documents-De-Sante - ConsommateurDeDocuments"/>
   <status value="active"/>

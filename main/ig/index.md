@@ -1,4 +1,4 @@
-# Accueil - Partage de Documents de Santé en mobilité (PDSm) v3.1.0
+# Accueil - Partage de Documents de Santé en mobilité (PDSm) v3.1.1
 
 * [**Table of Contents**](toc.md)
 * **Accueil**
@@ -7,7 +7,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm | *Version*:3.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm | *Version*:3.1.1 |
 | Active as of 2026-01-14 | *Computable Name*:PDSm |
 
  **PDSm Implementation Guide**
@@ -110,11 +110,11 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
   "resourceType" : "ImplementationGuide",
   "id" : "ans.fhir.fr.pdsm",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm",
-  "version" : "3.1.0",
+  "version" : "3.1.1",
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-01-14T15:43:32+00:00",
+  "date" : "2026-01-14T15:54:50+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
@@ -1453,6 +1453,17 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
               "generation" : "markdown"
             }
           ]
+        },
+        {
+          "extension" : [
+            {
+              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl" : "changes.html"
+            }
+          ],
+          "nameUrl" : "changes.html",
+          "title" : "Historique des changements",
+          "generation" : "markdown"
         }
       ]
     },

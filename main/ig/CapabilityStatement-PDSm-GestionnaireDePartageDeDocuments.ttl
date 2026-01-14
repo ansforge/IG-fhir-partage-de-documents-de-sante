@@ -17,7 +17,7 @@
      fhir:v "https://interop.esante.gouv.fr/ig/fhir/pdsm/CapabilityStatement/PDSm-GestionnaireDePartageDeDocuments"^^xsd:anyURI ;
      fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/CapabilityStatement/PDSm-GestionnaireDePartageDeDocuments>
   ] ; # 
-  fhir:version [ fhir:v "3.1.0"] ; # 
+  fhir:version [ fhir:v "3.1.1"] ; # 
   fhir:name [ fhir:v "PDSmGestionnaireDePartageDeDocuments"] ; # 
   fhir:title [ fhir:v "CI-SIS Partage-De-Documents-De-Sante - GestionnaireDePartageDeDocuments"] ; # 
   fhir:status [ fhir:v "active"] ; # 

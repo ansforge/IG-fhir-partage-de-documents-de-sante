@@ -1,4 +1,4 @@
-# PDSm Simplified Publish Document Reference - Partage de Documents de Santé en mobilité (PDSm) v3.1.0
+# PDSm Simplified Publish Document Reference - Partage de Documents de Santé en mobilité (PDSm) v3.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish | *Version*:3.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish | *Version*:3.1.1 |
 | Active as of 2026-01-14 | *Computable Name*:PDSm_SimplifiedPublish |
 
  
@@ -39,11 +39,11 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-simplified-publ
   "resourceType" : "StructureDefinition",
   "id" : "pdsm-simplified-publish",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish",
-  "version" : "3.1.0",
+  "version" : "3.1.1",
   "name" : "PDSm_SimplifiedPublish",
   "title" : "PDSm Simplified Publish Document Reference",
   "status" : "active",
-  "date" : "2026-01-14T15:43:32+00:00",
+  "date" : "2026-01-14T15:54:50+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

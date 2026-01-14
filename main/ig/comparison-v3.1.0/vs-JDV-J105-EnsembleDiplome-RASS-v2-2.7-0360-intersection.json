@@ -1,0 +1,9 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "12486186-691f-4dc9-8b9b-6fc82833f857-24",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/12486186-691f-4dc9-8b9b-6fc82833f857-24",
+  "name" : "IntersectionJDV_J105-EnsembleDiplome-RASSAndv2.0360.2.7",
+  "title" : "Intersection of null And v2 table 0360, Version 2.7",
+  "status" : "active",
+  "date" : "2026-01-14T15:57:25+00:00"
+}
