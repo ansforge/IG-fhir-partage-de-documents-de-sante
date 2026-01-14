@@ -8,13 +8,15 @@ This is a part of the service layer specifying the terms of document sharing wit
     <img src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS" style="width:100%;">
 </div>
 
+{% if site.data.info.releaselabel == 'ci-build' %}
 <div style="width: 65%">
-    <blockquote class="stu-note">
-    <p>
-    <b>Attention !</b> Cet Implementation Guide n'est pas la version courante. La version courante est accessible via l'URL canonique (http://interop.esante.gouv.fr/ig/fhir/pdsm).
-    </p>
-    </blockquote>
+<blockquote class="stu-note">
+<p>
+  <b>Attention !</b> Cette version du guide d'implémentation est en intégration continue (version de travail) et est soumise à des changements réguliers. La version officielle est accessible à l'adresse <a href="https://interop.esante.gouv.fr/ig/fhir/pdsm">https://interop.esante.gouv.fr/ig/fhir/pdsm</a></b>
+</p>
+</blockquote>
 </div>
+{% endif %}
 
 ### Introduction
 
