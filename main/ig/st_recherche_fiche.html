@@ -132,7 +132,7 @@
         <a href="st_ajout.html">Ajout d&apos;un lot de soumission (ITI-65)</a>
       </li>
       <li>
-        <a href="st_maj.html">Mise à jour de documents</a>
+        <a href="st_maj.html">Mise à jour des métadonnées d&apos;un document</a>
       </li>
       <li>
         <a href="st_recherche_lot.html">Recherche de lot de soumission (ITI-66)</a>
@@ -239,6 +239,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#flux-05-b-de-recherche-de-fiches" id="markdown-toc-flux-05-b-de-recherche-de-fiches">Flux 05-b de recherche de fiches</a></li>
+  <li><a href="#exemples-de-requêtes" id="markdown-toc-exemples-de-requêtes">Exemples de requêtes</a></li>
   <li><a href="#flux-06b--réponse-au-flux-05-b" id="markdown-toc-flux-06b--réponse-au-flux-05-b">Flux 06b : réponse au flux 05-b</a></li>
 </ul>
 
@@ -297,7 +298,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>status</td>
       <td>token</td>
-      <td>Description</td>
+      <td>Recherche sur le statut de la fiche</td>
     </tr>
     <tr>
       <td><a href="SearchParameter-PDSm-isArchived.html">isArchived</a>*</td>
@@ -355,6 +356,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <blockquote>
   <p>* Paramètre de recherche créé pour le volet PDSm</p>
 </blockquote>
+
+<div style="width: 65%">
+<blockquote class="note note">
+<p>
+  Conformément au profil MHD <a href="https://profiles.ihe.net/ITI/MHD/ITI-67.html">[ITI-67]</a>, la recherche de fiche DOIT à minima inclure les paramètres patient ou patient.identifier et status.
+</p>
+</blockquote>
+</div>
 
 <h4 id="paramètre-de-recherche-sur-les-ressources-patient--practitioner--device">Paramètre de recherche sur les ressources Patient / Practitioner / Device</h4>
 
@@ -418,13 +427,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>Ci-dessous un exemple de requête :</p>
+<h3 id="exemples-de-requêtes">Exemples de requêtes</h3>
 
 <ul>
-  <li>Rechercher les ressources de type DocumentReference du patient ayant l’identifiant 32659.</li>
+  <li>Rechercher les ressources de type DocumentReference du patient ayant l’identifiant 32659 et au statut courant.</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://targetsystem.com/API/DocumentReference?patient.identifier=32659 HTTP/1.1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://targetsystem.com/API/DocumentReference?patient.identifier=32659&amp;status=current HTTP/1.1
 </code></pre></div></div>
 
 <h3 id="flux-06b--réponse-au-flux-05-b">Flux 06b : réponse au flux 05-b</h3>
@@ -482,7 +491,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 14, 2026 15:54+0000">2026-01-14</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 14, 2026 17:08+0000">2026-01-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

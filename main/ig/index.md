@@ -13,8 +13,6 @@
  **PDSm Implementation Guide**
  This document presents the technical specifications of the “Partage de documents de santé en mobilité” section. This is a part of the service layer specifying the terms of document sharing without constraining them. The specifications related to health documents constitute the components of the business layer of CI-SIS. 
 
-> **Attention !**Cet Implementation Guide n'est pas la version courante. La version courante est accessible via l'URL canonique (http://interop.esante.gouv.fr/ig/fhir/pdsm).
-
 ### Introduction
 
 Ce document présente les spécifications techniques du volet "Partage de documents de santé en mobilité". Sa production est basée sur les Spécifications Fonctionnelles des Echanges du volet Partage de Documents de Santé et le profil [MHD](https://profiles.ihe.net/ITI/MHD/index.html) (Mobile access to Health Documents) défini par IHE (Integrating the Healthcare Entreprise).
@@ -114,7 +112,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-01-14T15:54:50+00:00",
+  "date" : "2026-01-14T17:08:34+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

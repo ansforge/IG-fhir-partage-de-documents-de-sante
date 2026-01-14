@@ -1,11 +1,11 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "12486186-691f-4dc9-8b9b-6fc82833f857-23",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/12486186-691f-4dc9-8b9b-6fc82833f857-23",
+  "id" : "bb35c49c-6404-473e-901e-5ec177127c07-23",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/bb35c49c-6404-473e-901e-5ec177127c07-23",
   "name" : "UnionJDV_J105-EnsembleDiplome-RASSAndv2.0360.2.7",
   "title" : "Union of null And v2 table 0360, Version 2.7",
   "status" : "active",
-  "date" : "2026-01-14T15:57:25+00:00",
+  "date" : "2026-01-14T17:11:23+00:00",
   "compose" : {
     "include" : [{
       "system" : "https://mos.esante.gouv.fr/NOS/TRE_R54-DiplomeUniversiteInterUniversitaire/FHIR/TRE-R54-DiplomeUniversiteInterUniversitaire",

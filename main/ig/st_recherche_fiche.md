@@ -26,7 +26,7 @@ Le flux 05-b contient les critères suivants :
 | identifier | token | Recherche dans l'identifiant de la fiche (idUnique ou idFiche) |
 | creation | date | Recherche sur la date de création du document |
 | security-label | token | Recherche sur le niveau de confidentialité du document |
-| status | token | Description |
+| status | token | Recherche sur le statut de la fiche |
 | [isArchived](SearchParameter-PDSm-isArchived.md)* | token | Recherche les documents archivés ou non |
 | [period-start](SearchParameter-PDSm-DocumentReference-period-start.md)* | date | Contraindre la recherche sur la date de début de l'acte |
 | [period-end](SearchParameter-PDSm-DocumentReference-period-end.md)* | date | Contraindre la recherche sur la date de fin de l'acte |
@@ -39,6 +39,8 @@ Le flux 05-b contient les critères suivants :
 | author | token | Recherche du praticien par identifiant, nom ou prénom |
 
 > * Paramètre de recherche créé pour le volet PDSm
+
+> Conformément au profil MHD[[ITI-67]](https://profiles.ihe.net/ITI/MHD/ITI-67.html), la recherche de fiche DOIT à minima inclure les paramètres patient ou patient.identifier et status.
 
 #### Paramètre de recherche sur les ressources Patient / Practitioner / Device
 
@@ -59,12 +61,12 @@ Le flux 05-b contient les critères suivants :
 | :--- | :--- | :--- |
 | name | token | Recherche sur le nom ou le prénom de l'auteur |
 
-Ci-dessous un exemple de requête :
+### Exemples de requêtes
 
-* Rechercher les ressources de type DocumentReference du patient ayant l’identifiant 32659.
+* Rechercher les ressources de type DocumentReference du patient ayant l’identifiant 32659 et au statut courant.
 
 ```
-GET http://targetsystem.com/API/DocumentReference?patient.identifier=32659 HTTP/1.1
+GET http://targetsystem.com/API/DocumentReference?patient.identifier=32659&status=current HTTP/1.1
 
 ```
 
