@@ -1,12 +1,13 @@
-### Release 3.1.1 de l'Implementation Guide Partage de Documents de Santé pour usage de MES et DMP notamment.
+### Release 3.1.1 de l'Implementation Guide Partage de Documents de Santé pour usage de MES et DMP notamment
 
 Modifications apportées dans la release [1.1.1](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/milestone/4?closed=1) :
 
 * (3.1.1) Mise à jour du narratif [#74](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/pull/74), [#78](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/pull/78)
 * (3.1.1) Suppression d'une terminologie NOS obsolète (TRE A04 remplacée par LOINC) [#72](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/pull/72)
 * (3.1.1) Mise à jour du narratif, mise à jour des héritages (FRCore et Annuaire), ajout d'exemples [#75](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/pull/75)
+* (3.1.1) Styling (tableaux, figures, liens, typos, menu, ...) [#77](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/pull/77) [#78](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/pull/78) [#82](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/pull/82)
 
-### Release 3.1.0 de l'Implementation Guide Partage de Documents de Santé pour usage de MES et DMP notamment.
+### Release 3.1.0 de l'Implementation Guide Partage de Documents de Santé pour usage de MES et DMP notamment
 
 [Modifications apportées dans cette release](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/milestone/3?closed=1) :
 
