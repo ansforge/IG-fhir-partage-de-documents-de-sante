@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish | *Version*:3.1.1 |
-| Active as of 2026-01-14 | *Computable Name*:PDSm_SimplifiedPublish |
+| Active as of 2026-01-15 | *Computable Name*:PDSm_SimplifiedPublish |
 
  
 Profil utilisé dans le cadre du flux 9 d'ajout simplifié de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105. 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-simplified-publ
   "name" : "PDSm_SimplifiedPublish",
   "title" : "PDSm Simplified Publish Document Reference",
   "status" : "active",
-  "date" : "2026-01-14T17:08:34+00:00",
+  "date" : "2026-01-15T07:29:36+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

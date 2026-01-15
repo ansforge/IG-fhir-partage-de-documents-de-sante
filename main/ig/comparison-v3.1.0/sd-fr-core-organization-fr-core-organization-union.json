@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "bb35c49c-6404-473e-901e-5ec177127c07-26",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/bb35c49c-6404-473e-901e-5ec177127c07-26",
+  "id" : "1453a614-d17f-465b-a20d-c3b2e9e832e7-26",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/1453a614-d17f-465b-a20d-c3b2e9e832e7-26",
   "name" : "UnionFRCoreOrganizationProfileAndFRCoreOrganizationProfile",
   "title" : "Union of FR Core Organization Profile And FR Core Organization Profile",
   "status" : "active",
-  "date" : "2026-01-14T17:11:23+00:00",
+  "date" : "2026-01-15T07:33:50+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-submissionset-comprehensive | *Version*:3.1.1 |
-| Active as of 2026-01-14 | *Computable Name*:PDSm_SubmissionSetComprehensive |
+| Active as of 2026-01-15 | *Computable Name*:PDSm_SubmissionSetComprehensive |
 
  
 Profil du lot de soumission dérivé de la ressource List et du profil IHE MHD « ComprehensiveSubmissionSet ». 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-submissionset-c
   "name" : "PDSm_SubmissionSetComprehensive",
   "title" : "PDSm SubmissionSet Comprehensive",
   "status" : "active",
-  "date" : "2026-01-14T17:08:34+00:00",
+  "date" : "2026-01-15T07:29:36+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
