@@ -6,7 +6,5 @@
     "status" : "release",
     "sequence" : "trial-use",
     "desc" : "Guide d`Implémentation FHIR de partage de documents de santé en mobilité.",
-    "changes": "changes.html",
-    "ci-build" : "https://ansforge.github.io/IG-fhir-partage-de-documents-de-sante/main/ig/"
+    "changes": "changes.html"
   }
-
