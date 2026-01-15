@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "0b032366-e050-4740-a128-11f0709e4e6c-74",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/0b032366-e050-4740-a128-11f0709e4e6c-74",
+  "id" : "5c318abd-c960-4715-b591-9d5c35fed132-74",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/5c318abd-c960-4715-b591-9d5c35fed132-74",
   "name" : "UnionPDSm_SimplifiedPublishAndPDSm_SimplifiedPublish",
   "title" : "Union of PDSm Simplified Publish Document Reference And PDSm Simplified Publish Document Reference",
   "status" : "active",
-  "date" : "2026-01-15T12:59:36+00:00",
+  "date" : "2026-01-15T13:17:54+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -408,7 +408,7 @@
       "binding" : {
         "strength" : "example",
         "description" : "Codes that represent various types of tags, commonly workflow-related; e.g. \"Needs review by Dr. Jones\".",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/0b032366-e050-4740-a128-11f0709e4e6c-77"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/5c318abd-c960-4715-b591-9d5c35fed132-77"
       },
       "mapping" : [{
         "identity" : "rim",

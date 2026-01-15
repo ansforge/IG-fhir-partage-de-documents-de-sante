@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "0b032366-e050-4740-a128-11f0709e4e6c-30",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/0b032366-e050-4740-a128-11f0709e4e6c-30",
+  "id" : "5c318abd-c960-4715-b591-9d5c35fed132-30",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/5c318abd-c960-4715-b591-9d5c35fed132-30",
   "name" : "IntersectionAsPractitionerRoleProfileAndAsPractitionerRoleProfile",
   "title" : "Intersection of AS PractitionerRole Profile And AS PractitionerRole Profile",
   "status" : "active",
-  "date" : "2026-01-15T12:59:36+00:00",
+  "date" : "2026-01-15T13:17:54+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
