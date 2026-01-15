@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "29a0a16a-462b-4ef0-8982-baf218f5dd30-36",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/29a0a16a-462b-4ef0-8982-baf218f5dd30-36",
+  "id" : "0b032366-e050-4740-a128-11f0709e4e6c-36",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/0b032366-e050-4740-a128-11f0709e4e6c-36",
   "name" : "IntersectionAsAddressExtendedProfileAndAsAddressExtendedProfile",
   "title" : "Intersection of AS Address Extended Datatype Profile And AS Address Extended Datatype Profile",
   "status" : "active",
-  "date" : "2026-01-15T08:16:11+00:00",
+  "date" : "2026-01-15T12:59:36+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -470,7 +470,7 @@
       "isSummary" : true,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/29a0a16a-462b-4ef0-8982-baf218f5dd30-39"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/0b032366-e050-4740-a128-11f0709e4e6c-39"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -598,7 +598,7 @@
       "isSummary" : true,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/29a0a16a-462b-4ef0-8982-baf218f5dd30-42"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/0b032366-e050-4740-a128-11f0709e4e6c-42"
       },
       "mapping" : [{
         "identity" : "v2",

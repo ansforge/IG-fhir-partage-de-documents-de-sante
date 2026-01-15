@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "29a0a16a-462b-4ef0-8982-baf218f5dd30-75",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/29a0a16a-462b-4ef0-8982-baf218f5dd30-75",
+  "id" : "0b032366-e050-4740-a128-11f0709e4e6c-75",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/0b032366-e050-4740-a128-11f0709e4e6c-75",
   "name" : "IntersectionPDSm_SimplifiedPublishAndPDSm_SimplifiedPublish",
   "title" : "Intersection of PDSm Simplified Publish Document Reference And PDSm Simplified Publish Document Reference",
   "status" : "active",
-  "date" : "2026-01-15T08:16:11+00:00",
+  "date" : "2026-01-15T12:59:36+00:00",
   "snapshot" : {
     "element" : [{
       "path" : "DocumentReference",
