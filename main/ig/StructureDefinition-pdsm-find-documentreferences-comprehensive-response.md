@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-find-documentre
   "name" : "PDSm_FindDocumentReferencesComprehensiveResponse",
   "title" : "PDSm Find DocumentReferences Comprehensive Response",
   "status" : "active",
-  "date" : "2026-01-15T07:29:36+00:00",
+  "date" : "2026-01-15T07:36:28+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

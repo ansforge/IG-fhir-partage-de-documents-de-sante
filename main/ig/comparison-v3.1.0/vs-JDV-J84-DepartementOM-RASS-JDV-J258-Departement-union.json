@@ -1,11 +1,11 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "1453a614-d17f-465b-a20d-c3b2e9e832e7-38",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/1453a614-d17f-465b-a20d-c3b2e9e832e7-38",
+  "id" : "5f5703d3-6c73-4291-b088-4e5bbfdc91d2-38",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/5f5703d3-6c73-4291-b088-4e5bbfdc91d2-38",
   "name" : "UnionJDV_J84-DepartementOM-RASSAndJDV_J258-Departement",
   "title" : "Union of null And null",
   "status" : "retired",
-  "date" : "2026-01-15T07:33:50+00:00",
+  "date" : "2026-01-15T07:40:09+00:00",
   "compose" : {
     "include" : [{
       "concept" : [{
