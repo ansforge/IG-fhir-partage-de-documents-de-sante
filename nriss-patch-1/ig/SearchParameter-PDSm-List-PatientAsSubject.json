@@ -1,0 +1,40 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "PDSm-List-PatientAsSubject",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ParamètreRecherche PDSm-List-PatientAsSubject</b></p><a name=\"PDSm-List-PatientAsSubject\"> </a><a name=\"hcPDSm-List-PatientAsSubject\"> </a><h2>PDSmListPatientAsSubject</h2><p>Paramètre <code>patient</code>:<code>reference</code></p><div><p>Paramètre de recherche chaîné créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément subject:Patient.identifier</p>\n</div><table class=\"grid\"><tr><td>Ressource</td><td><a href=\"http://hl7.org/fhir/R4/list.html\">List</a></td></tr><tr><td>Expression</td><td><code>List.subject.where(resolve() is Patient)</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : Le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : Le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr><tr><td>Modificateurs</td><td>Autorisé : missing, type, identifier</td></tr><tr><td>Chaînes</td><td>Autorisé : identifier</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-PatientAsSubject",
+  "version" : "3.1.1",
+  "name" : "PDSmListPatientAsSubject",
+  "derivedFrom" : "http://hl7.org/fhir/SearchParameter/clinical-patient",
+  "status" : "active",
+  "date" : "2021-07-30",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Paramètre de recherche chaîné créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément subject:Patient.identifier",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "code" : "patient",
+  "base" : ["List"],
+  "type" : "reference",
+  "expression" : "List.subject.where(resolve() is Patient)",
+  "multipleOr" : true,
+  "multipleAnd" : true,
+  "modifier" : ["missing",
+  "type",
+  "identifier"],
+  "chain" : ["identifier"]
+}

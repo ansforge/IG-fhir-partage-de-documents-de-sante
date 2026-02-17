@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="PDSm-List-authorOrg"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : ParamètreRecherche PDSm-List-authorOrg</b></p><a name="PDSm-List-authorOrg"> </a><a name="hcPDSm-List-authorOrg"> </a><h2>PDSmAuthorOrg</h2><p>Paramètre <code>authorOrg</code>:<code>reference</code></p><div><p>Recherche sur l'auteur d'une organisation</p>
+</div><table class="grid"><tr><td>Ressource</td><td><a href="http://hl7.org/fhir/R4/list.html">List</a></td></tr><tr><td>Expression</td><td><code>List.extension.where(url='https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-authorOrg').value</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : C'est au serveur de décider si le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : C'est au serveur de décider si le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-authorOrg"/>
+  <version value="3.1.1"/>
+  <name value="PDSmAuthorOrg"/>
+  <status value="active"/>
+  <date value="2026-02-17T14:25:51+00:00"/>
+  <publisher value="ANS"/>
+  <contact>
+    <name value="ANS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Recherche sur l'auteur d'une organisation"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'auteur quand celui-ci correspond à une organisation"/>
+  <code value="authorOrg"/>
+  <base value="List"/>
+  <type value="reference"/>
+  <expression value="List.extension.where(url='https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-authorOrg').value"/>
+</SearchParameter>
