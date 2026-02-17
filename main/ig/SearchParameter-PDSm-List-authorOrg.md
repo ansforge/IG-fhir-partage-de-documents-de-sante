@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-authorOrg | *Version*:3.1.1 |
-| Active as of 2026-01-15 | *Computable Name*:PDSmAuthorOrg |
+| Active as of 2026-02-17 | *Computable Name*:PDSmAuthorOrg |
 
  
 Recherche sur l'auteur d'une organisation 
@@ -29,7 +29,7 @@ Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utilise
   "version" : "3.1.1",
   "name" : "PDSmAuthorOrg",
   "status" : "active",
-  "date" : "2026-01-15T13:14:51+00:00",
+  "date" : "2026-02-17T14:28:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

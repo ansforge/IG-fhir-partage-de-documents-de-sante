@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle | *Version*:3.1.1 |
-| Active as of 2026-01-15 | *Computable Name*:PDSm_ComprehensiveProvideDocumentBundle |
+| Active as of 2026-02-17 | *Computable Name*:PDSm_ComprehensiveProvideDocumentBundle |
 
  
 Profil basé sur la transaction IHE "Provide Document Bundle [ITI-65]" du profil MHD ; le bundle est de type transaction et contient : 
@@ -21,9 +21,9 @@ Profil basé sur la transaction IHE "Provide Document Bundle [ITI-65]" du profil
 
 **Utilisations:**
 
-* Ce Profil nest utilisé par aucun profil dans ce guide dimplémentation
+* Ce Profil n'est utilisé par aucun autre profil dans ce guide d'implémentation
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.pdsm|current/StructureDefinition/pdsm-comprehensive-provide-document-bundle)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.pdsm|current/StructureDefinition/pdsm-comprehensive-provide-document-bundle)
 
 ### Formal Views of Profile Content
 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-comprehensive-p
   "name" : "PDSm_ComprehensiveProvideDocumentBundle",
   "title" : "PDSm Comprehensive Provide Document Bundle",
   "status" : "active",
-  "date" : "2026-01-15T13:14:51+00:00",
+  "date" : "2026-02-17T14:28:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

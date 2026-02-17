@@ -9,19 +9,19 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-document-reference | *Version*:3.1.1 |
-| Active as of 2026-01-15 | *Computable Name*:PDSm_ComprehensiveDocumentReference |
+| Active as of 2026-02-17 | *Computable Name*:PDSm_ComprehensiveDocumentReference |
 
  
 Profil contenant les métadonnées du document ainsi que le lien vers la ressource Binary contenant le document dérivé de la ressource DocumentReference et du profil IHE MHD v4.0.1 "ComprehensiveDocumentReference" 
 
 **Utilisations:**
 
-* Utiliser ce Profil: [PDSm Comprehensive Provide Document Bundle](StructureDefinition-pdsm-comprehensive-provide-document-bundle.md) and [PDSm Find DocumentReferences Comprehensive Response](StructureDefinition-pdsm-find-documentreferences-comprehensive-response.md)
-* Référer à ce Profil: [PDSm Folder Comprehensive](StructureDefinition-pdsm-folder-comprehensive.md) and [PDSm SubmissionSet Comprehensive](StructureDefinition-pdsm-submissionset-comprehensive.md)
-* Exemples pour ce Profil: [DocumentReference/exemple-pdsm-documentreference](DocumentReference-exemple-pdsm-documentreference.md)
+* Utilise ce/t/te Profil: [PDSm Comprehensive Provide Document Bundle](StructureDefinition-pdsm-comprehensive-provide-document-bundle.md) and [PDSm Find DocumentReferences Comprehensive Response](StructureDefinition-pdsm-find-documentreferences-comprehensive-response.md)
+* Référence ce Profil: [PDSm Folder Comprehensive](StructureDefinition-pdsm-folder-comprehensive.md) and [PDSm SubmissionSet Comprehensive](StructureDefinition-pdsm-submissionset-comprehensive.md)
+* Exemples pour ce/t/te Profil: [DocumentReference/exemple-pdsm-documentreference](DocumentReference-exemple-pdsm-documentreference.md)
 * CapabilityStatements utilisant ce Profil: [CI-SIS Partage-De-Documents-De-Sante - ConsommateurDeDocuments](CapabilityStatement-PDSm-ConsommateurDeDocuments.md), [CI-SIS Partage-De-Documents-De-Sante - GestionnaireDePartageDeDocuments](CapabilityStatement-PDSm-GestionnaireDePartageDeDocuments.md) and [CI-SIS Partage-De-Documents-De-Sante - ProducteurDeDocuments](CapabilityStatement-PDSm-ProducteurDeDocuments.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.pdsm|current/StructureDefinition/pdsm-comprehensive-document-reference)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.pdsm|current/StructureDefinition/pdsm-comprehensive-document-reference)
 
 ### Formal Views of Profile Content
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-comprehensive-d
   "name" : "PDSm_ComprehensiveDocumentReference",
   "title" : "PDSm Comprehensive DocumentReference",
   "status" : "active",
-  "date" : "2026-01-15T13:14:51+00:00",
+  "date" : "2026-02-17T14:28:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

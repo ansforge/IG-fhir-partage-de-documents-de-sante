@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "ans.fhir.fr.pdsm"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide ans.fhir.fr.pdsm</b></p><a name=\"ans.fhir.fr.pdsm\"> </a><a name=\"hcans.fhir.fr.pdsm\"> </a><h2>PDSm</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm</pre></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide ans.fhir.fr.pdsm</b></p><a name=\"ans.fhir.fr.pdsm\"> </a><a name=\"hcans.fhir.fr.pdsm\"> </a><h2>PDSm</h2><p>L'URL officielle pour ce guide d'implémentation est : </p><pre>https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm</pre></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
      fhir:v "https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm"^^xsd:anyURI ;
@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "PDSm"] ; # 
   fhir:title [ fhir:v "Partage de Documents de Santé en mobilité (PDSm)"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-01-15T13:14:51+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-17T14:28:01+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;

@@ -9,18 +9,18 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-submissionset-comprehensive | *Version*:3.1.1 |
-| Active as of 2026-01-15 | *Computable Name*:PDSm_SubmissionSetComprehensive |
+| Active as of 2026-02-17 | *Computable Name*:PDSm_SubmissionSetComprehensive |
 
  
 Profil du lot de soumission dérivé de la ressource List et du profil IHE MHD « ComprehensiveSubmissionSet ». 
 
 **Utilisations:**
 
-* Utiliser ce Profil: [PDSm Comprehensive Provide Document Bundle](StructureDefinition-pdsm-comprehensive-provide-document-bundle.md) and [PDSm Find Lists Response](StructureDefinition-pdsm-find-lists-response.md)
-* Exemples pour ce Profil: [List/ExampleSubmissionSet](List-ExampleSubmissionSet.md)
+* Utilise ce/t/te Profil: [PDSm Comprehensive Provide Document Bundle](StructureDefinition-pdsm-comprehensive-provide-document-bundle.md) and [PDSm Find Lists Response](StructureDefinition-pdsm-find-lists-response.md)
+* Exemples pour ce/t/te Profil: [List/ExampleSubmissionSet](List-ExampleSubmissionSet.md)
 * CapabilityStatements utilisant ce Profil: [CI-SIS Partage-De-Documents-De-Sante - ConsommateurDeDocuments](CapabilityStatement-PDSm-ConsommateurDeDocuments.md) and [CI-SIS Partage-De-Documents-De-Sante - GestionnaireDePartageDeDocuments](CapabilityStatement-PDSm-GestionnaireDePartageDeDocuments.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.pdsm|current/StructureDefinition/pdsm-submissionset-comprehensive)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.pdsm|current/StructureDefinition/pdsm-submissionset-comprehensive)
 
 ### Formal Views of Profile Content
 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-submissionset-c
   "name" : "PDSm_SubmissionSetComprehensive",
   "title" : "PDSm SubmissionSet Comprehensive",
   "status" : "active",
-  "date" : "2026-01-15T13:14:51+00:00",
+  "date" : "2026-02-17T14:28:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

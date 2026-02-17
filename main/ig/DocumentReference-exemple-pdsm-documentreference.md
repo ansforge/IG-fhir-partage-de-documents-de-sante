@@ -39,7 +39,7 @@ Profil: [PDSm Comprehensive DocumentReference](StructureDefinition-pdsm-comprehe
 | - | **ContentType** | **Language** | **Url** | **Size** | **Hash** | **Title** | **Creation** |
 | * | application/pdf | French (Region=France) | [Binary: application/pdf (16 bytes base64)](Binary-6789.md) | 345678 | `2jmj7l5rSw0yVb/vlWAYkK/YBwk=` | CR Hospitalisation | 2025-04-25 09:30:00+0100 |
 
-**format**:[TRE_A11_IheFormatCode: urn:ihe:lab:xd-lab:2008](https://interop.esante.gouv.fr/terminologies/1.4.0/CodeSystem-TRE-A11-IheFormatCode.html#TRE-A11-IheFormatCode-urn.58ihe.58lab.58xd-lab.582008)(Compte rendu structuré d'examens de biologie médicale)
+**format**: [TRE_A11_IheFormatCode: urn:ihe:lab:xd-lab:2008](https://interop.esante.gouv.fr/terminologies/1.4.0/CodeSystem-TRE-A11-IheFormatCode.html#TRE-A11-IheFormatCode-urn.58ihe.58lab.58xd-lab.582008) (Compte rendu structuré d'examens de biologie médicale)
 
 ### Contexts
 
@@ -50,7 +50,7 @@ Profil: [PDSm Comprehensive DocumentReference](StructureDefinition-pdsm-comprehe
 
 -------
 
-> **Narratif généré : Praticien #practitioner-example**
+> **Narratif généré : Praticien #practitioner-example**  
 
 Dernière mise à jour : 2025-04-28 18:19:26+0200; Langue : fr; 
 
@@ -63,10 +63,10 @@ Profils: [FR Core Practitioner Profile](https://hl7.fr/ig/fhir/core/2.1.0/Struct
 * number: 3100345668
 * period: 2024-02-21 --> 2027-02-21
 
-**identifier**: Identifiant National de Professionnel de Santé/810101201234 (utilisation : official, ), N° RPPS/10101201234 (utilisation : official, )**active**: true**name**: Leclerc Sophie**telecom**:[sophie.leclerc@mssante.fr](mailto:sophie.leclerc@mssante.fr)
-> **qualification****code**:Diplôme Etat français
+**identifier**: Identifiant National de Professionnel de Santé/810101201234 (utilisation : official, ), N° RPPS/10101201234 (utilisation : official, )**active**: true**name**: Leclerc Sophie**telecom**: [sophie.leclerc@mssante.fr](mailto:sophie.leclerc@mssante.fr)
+> **qualification****code**: Diplôme Etat français
 
-> **qualification****code**:Civil
+> **qualification****code**: Civil
 
 
 

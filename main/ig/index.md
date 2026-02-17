@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm | *Version*:3.1.1 |
-| Active as of 2026-01-15 | *Computable Name*:PDSm |
+| Active as of 2026-02-17 | *Computable Name*:PDSm |
 
  **PDSm Implementation Guide**
  This document presents the technical specifications of the “Partage de documents de santé en mobilité” section. This is a part of the service layer specifying the terms of document sharing without constraining them. The specifications related to health documents constitute the components of the business layer of CI-SIS. 
@@ -48,7 +48,7 @@ Un flux est un échange entre deux systèmes. Des flux ont été identifiés lor
 
 | | | |
 | :--- | :--- | :--- |
-| [Les flux 01 et 02](st_ajout.md) | AjoutLotDocument et ResultatAjoutLotDocument | Pour la demande d’ajout ou de remplacement d’un document au gestionnaire de partage de documents ainsi que le résultat de la demande |
+| [Les flux 01 et 02 ](st_ajout.md) | AjoutLotDocument et ResultatAjoutLotDocument | Pour la demande d’ajout ou de remplacement d’un document au gestionnaire de partage de documents ainsi que le résultat de la demande |
 | [Les flux 03 et 04](st_maj.md) | MiseAJourMetadonneeFiche et ResultatMAJMetadonneeFiche | Pour la modification de certaines métadonnées du document comme le statut ou le niveau de confidentialité ainsi que le résultat de la demande |
 | [Les flux 05a et 06a](st_recherche_lot.md) | RechercheDocument et ResultatRechercheDocument | Pour la recherche de lot de documents à l'aide de critères de recherche ainsi que le résultat de la demande |
 | [Les flux 05b et 06b](st_recherche_fiche.md) | RechercheDocument et ResultatRechercheDocument | Pour la recherche de fiches à l'aide de critères de recherche ainsi que le résultat de la demande |
@@ -112,7 +112,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-01-15T13:14:51+00:00",
+  "date" : "2026-02-17T14:28:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

@@ -220,7 +220,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Partage de Documents de Santé en mobilité (PDSm) - version de développement local (v3.1.1) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://interop.esante.gouv.fr/ig/fhir/pdsm/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Partage de Documents de Santé en mobilité (PDSm) - version de développement local (intégration continue v3.1.1) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://interop.esante.gouv.fr/ig/fhir/pdsm/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
   <h2>Recherche de lot de soumission (ITI-66)</h2>
   
 
@@ -420,13 +420,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="flux-06-a--réponse-au-flux-05-a">Flux 06-a : réponse au flux 05-a</h3>
 <p>Il s'agit du résultat de la recherche de documents retourné par le gestionnaire de partage de documents. La recherche de Lots de Soumission retourne les ressources List qui correspondent aux critères de recherche fournis par le consommateur de documents. On retrouve les mêmes éléments qui constituent les lots de soumission que lors de la demande d’ajout d’un lot de documents.</p>
 
-<p>Un profil spécifique dérivé du profil IHE MHD v4.0.1 « FindListsResponse » est créé pour ce volet et nommé <a href="StructureDefinition-pdsm-find-lists-response.html">PDSm_FindListsResponse</a>. Il contient zéro ou plusieurs ressources DocumentReference répondants aux critères de la requête.</p>
+<p>Un profil spécifique dérivé du profil IHE MHD v4.0.1 « FindListsResponse » est créé pour ce volet et nommé <a href="StructureDefinition-pdsm-find-lists-response.html">PDSm_FindListsResponse</a>. Il contient zéro ou plusieurs ressources List répondants aux critères de la requête.</p>
 
 <p>Ce flux correspond à la réponse à la requête reposant sur l’interaction « search » du flux précédent.
 En cas de succès, le gestionnaire de partage de documents retourne un code <code class="language-plaintext highlighter-rouge">HTTP 200 OK</code> ainsi qu’un Bundle de type searchset.</p>
 
 <p>Si le gestionnaire de partage de documents envoie des "warnings", la ressource Bundle doit aussi contenir une ressource "OperationOutcome" qui contient ces "warnings".
 Si le gestionnaire de partage de documents doit reporter une erreur, il doit utiliser un "<a href="http://hl7.org/fhir/R4/http.html">HTTP error response codes</a>" et doit inclure un "<a href="http://hl7.org/fhir/R4/operationoutcome.html">FHIR OperationOutcome</a>" avec plus de détails sur l'échec.</p>
+
 
 
 
@@ -468,7 +469,7 @@ Si le gestionnaire de partage de documents doit reporter une erreur, il doit uti
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 15, 2026 13:14+0000">2026-01-15</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 17, 2026 14:28+0000">2026-02-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

@@ -9,16 +9,16 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-find-lists-response | *Version*:3.1.1 |
-| Active as of 2026-01-15 | *Computable Name*:PDSm_FindListsResponse |
+| Active as of 2026-02-17 | *Computable Name*:PDSm_FindListsResponse |
 
  
 Profil de réponse de la transaction IHE "Find Document Lists [ITI-66]" basée sur le bundle MHD FindDocumentListsResponseMessage 
 
 **Utilisations:**
 
-* Ce Profil nest utilisé par aucun profil dans ce guide dimplémentation
+* Ce Profil n'est utilisé par aucun autre profil dans ce guide d'implémentation
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.pdsm|current/StructureDefinition/pdsm-find-lists-response)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.pdsm|current/StructureDefinition/pdsm-find-lists-response)
 
 ### Formal Views of Profile Content
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-find-lists-resp
   "name" : "PDSm_FindListsResponse",
   "title" : "PDSm Find Lists Response",
   "status" : "active",
-  "date" : "2026-01-15T13:14:51+00:00",
+  "date" : "2026-02-17T14:28:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

@@ -9,18 +9,18 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-folder-comprehensive | *Version*:3.1.1 |
-| Active as of 2026-01-15 | *Computable Name*:PDSm_FolderComprehensive |
+| Active as of 2026-02-17 | *Computable Name*:PDSm_FolderComprehensive |
 
  
 Profil du Classeur dérivé de la ressource List et du profil IHE MHD « Comprehensive Folder ». 
 
 **Utilisations:**
 
-* Utiliser ce Profil: [PDSm Comprehensive Provide Document Bundle](StructureDefinition-pdsm-comprehensive-provide-document-bundle.md) and [PDSm Find Lists Response](StructureDefinition-pdsm-find-lists-response.md)
-* Référer à ce Profil: [PDSm SubmissionSet Comprehensive](StructureDefinition-pdsm-submissionset-comprehensive.md)
-* Exemples pour ce Profil: [List/ExampleFolder](List-ExampleFolder.md)
+* Utilise ce/t/te Profil: [PDSm Comprehensive Provide Document Bundle](StructureDefinition-pdsm-comprehensive-provide-document-bundle.md) and [PDSm Find Lists Response](StructureDefinition-pdsm-find-lists-response.md)
+* Référence ce Profil: [PDSm SubmissionSet Comprehensive](StructureDefinition-pdsm-submissionset-comprehensive.md)
+* Exemples pour ce/t/te Profil: [List/ExampleFolder](List-ExampleFolder.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.pdsm|current/StructureDefinition/pdsm-folder-comprehensive)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.pdsm|current/StructureDefinition/pdsm-folder-comprehensive)
 
 ### Formal Views of Profile Content
 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-folder-comprehe
   "name" : "PDSm_FolderComprehensive",
   "title" : "PDSm Folder Comprehensive",
   "status" : "active",
-  "date" : "2026-01-15T13:14:51+00:00",
+  "date" : "2026-02-17T14:28:01+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

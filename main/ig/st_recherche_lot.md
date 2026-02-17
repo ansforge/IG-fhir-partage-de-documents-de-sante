@@ -37,7 +37,7 @@ Le flux 05-a contient les critères suivants :
 
 > * Paramètre de recherche créé pour le volet PDSm
 
-> Conformément au profil MHD[[ITI-66]](https://profiles.ihe.net/ITI/MHD/4.2.0/ITI-66.html), la recherche de fiche DOIT à minima inclure les paramètres patient ou patient.identifier, code et status.
+>  Conformément au profil MHD [[ITI-66]](https://profiles.ihe.net/ITI/MHD/4.2.0/ITI-66.html), la recherche de fiche DOIT à minima inclure les paramètres patient ou patient.identifier, code et status. 
 
 #### Paramètre de recherche de la ressource Patient
 
@@ -73,7 +73,7 @@ GET http://targetsystem.com/API/List?code=http://profiles.ihe.net/ITI/MHD/CodeSy
 
 Il s'agit du résultat de la recherche de documents retourné par le gestionnaire de partage de documents. La recherche de Lots de Soumission retourne les ressources List qui correspondent aux critères de recherche fournis par le consommateur de documents. On retrouve les mêmes éléments qui constituent les lots de soumission que lors de la demande d’ajout d’un lot de documents.
 
-Un profil spécifique dérivé du profil IHE MHD v4.0.1 « FindListsResponse » est créé pour ce volet et nommé [PDSm_FindListsResponse](StructureDefinition-pdsm-find-lists-response.md). Il contient zéro ou plusieurs ressources DocumentReference répondants aux critères de la requête.
+Un profil spécifique dérivé du profil IHE MHD v4.0.1 « FindListsResponse » est créé pour ce volet et nommé [PDSm_FindListsResponse](StructureDefinition-pdsm-find-lists-response.md). Il contient zéro ou plusieurs ressources List répondants aux critères de la requête.
 
 Ce flux correspond à la réponse à la requête reposant sur l’interaction « search » du flux précédent. En cas de succès, le gestionnaire de partage de documents retourne un code `HTTP 200 OK` ainsi qu’un Bundle de type searchset.
 

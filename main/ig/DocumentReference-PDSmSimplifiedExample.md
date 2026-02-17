@@ -37,7 +37,7 @@ Profil: [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-si
 | - | **ContentType** | **Language** | **Data** | **Size** | **Hash** | **Title** | **Creation** |
 | * | application/pdf | French (Region=France) | `SGVsbG8gV29ybGQ=` | 250000 | `2jmj7l5rSw0yVb/vlWAYkK/YBwk=` | Note de suivi du 30 avril 2025 | 2025-04-29 17:00:00+0100 |
 
-**format**:[TRE_A11_IheFormatCode: urn:ihe:iti:xds-sd:pdf:2008](https://interop.esante.gouv.fr/terminologies/1.4.0/CodeSystem-TRE-A11-IheFormatCode.html#TRE-A11-IheFormatCode-urn.58ihe.58iti.58xds-sd.58pdf.582008)(Document à corps non structuré en Pdf/A-1)
+**format**: [TRE_A11_IheFormatCode: urn:ihe:iti:xds-sd:pdf:2008](https://interop.esante.gouv.fr/terminologies/1.4.0/CodeSystem-TRE-A11-IheFormatCode.html#TRE-A11-IheFormatCode-urn.58ihe.58iti.58xds-sd.58pdf.582008) (Document à corps non structuré en Pdf/A-1)
 
 ### Contexts
 
