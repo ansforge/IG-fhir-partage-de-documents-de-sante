@@ -76,7 +76,7 @@ GET http://targetsystem.com/API/List?code=http://profiles.ihe.net/ITI/MHD/CodeSy
 ### Flux 06-a : réponse au flux 05-a
 Il s'agit du résultat de la recherche de documents retourné par le gestionnaire de partage de documents. La recherche de Lots de Soumission retourne les ressources List qui correspondent aux critères de recherche fournis par le consommateur de documents. On retrouve les mêmes éléments qui constituent les lots de soumission que lors de la demande d’ajout d’un lot de documents.
 
-Un profil spécifique dérivé du profil IHE MHD v4.0.1 « FindListsResponse » est créé pour ce volet et nommé [PDSm_FindListsResponse](StructureDefinition-pdsm-find-lists-response.html). Il contient zéro ou plusieurs ressources DocumentReference répondants aux critères de la requête.
+Un profil spécifique dérivé du profil IHE MHD v4.0.1 « FindListsResponse » est créé pour ce volet et nommé [PDSm_FindListsResponse](StructureDefinition-pdsm-find-lists-response.html). Il contient zéro ou plusieurs ressources List répondants aux critères de la requête.
 
 Ce flux correspond à la réponse à la requête reposant sur l’interaction « search » du flux précédent.
 En cas de succès, le gestionnaire de partage de documents retourne un code `HTTP 200 OK` ainsi qu’un Bundle de type searchset.
