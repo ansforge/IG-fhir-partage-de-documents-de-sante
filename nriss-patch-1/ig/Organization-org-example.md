@@ -29,85 +29,63 @@ Profils: [FR Core Organization Profile](https://hl7.fr/ig/fhir/core/2.1.0/Struct
   "resourceType" : "Organization",
   "id" : "org-example",
   "meta" : {
-    "extension" : [
-      {
-        "extension" : [
-          {
-            "url" : "systeme-information",
-            "valueCode" : "CG"
-          }
-        ],
-        "url" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-data-trace"
-      }
-    ],
+    "extension" : [{
+      "extension" : [{
+        "url" : "systeme-information",
+        "valueCode" : "CG"
+      }],
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-data-trace"
+    }],
     "versionId" : "1",
     "lastUpdated" : "2025-04-28T19:35:45.507+02:00",
     "source" : "https://annuaire.sante.fr",
-    "profile" : [
-      "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization",
-      "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-organization"
-    ]
+    "profile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization",
+    "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-organization"]
   },
   "language" : "fr",
-  "identifier" : [
-    {
-      "use" : "official",
-      "type" : {
-        "coding" : [
-          {
-            "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
-            "code" : "IDNST"
-          }
-        ]
-      },
-      "system" : "urn:oid:1.2.250.1.71.4.2.2",
-      "value" : "2264403106"
+  "identifier" : [{
+    "use" : "official",
+    "type" : {
+      "coding" : [{
+        "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
+        "code" : "IDNST"
+      }]
     },
-    {
-      "use" : "official",
-      "type" : {
-        "coding" : [
-          {
-            "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
-            "code" : "SIREN"
-          }
-        ]
-      },
-      "system" : "https://sirene.fr",
-      "value" : "264403106"
-    }
-  ],
+    "system" : "urn:oid:1.2.250.1.71.4.2.2",
+    "value" : "2264403106"
+  },
+  {
+    "use" : "official",
+    "type" : {
+      "coding" : [{
+        "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
+        "code" : "SIREN"
+      }]
+    },
+    "system" : "https://sirene.fr",
+    "value" : "264403106"
+  }],
   "active" : true,
-  "type" : [
-    {
-      "extension" : [
-        {
-          "url" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types",
-          "valueCode" : "organizationType"
-        }
-      ],
-      "coding" : [
-        {
-          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-3307",
-          "code" : "LEGAL-ENTITY"
-        }
-      ]
-    },
-    {
-      "extension" : [
-        {
-          "url" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types",
-          "valueCode" : "secteurActiviteRASS"
-        }
-      ],
-      "coding" : [
-        {
-          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite",
-          "code" : "SA43"
-        }
-      ]
-    }
-  ],
+  "type" : [{
+    "extension" : [{
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types",
+      "valueCode" : "organizationType"
+    }],
+    "coding" : [{
+      "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-3307",
+      "code" : "LEGAL-ENTITY"
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types",
+      "valueCode" : "secteurActiviteRASS"
+    }],
+    "coding" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite",
+      "code" : "SA43"
+    }]
+  }],
   "name" : "HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G"
 }
 

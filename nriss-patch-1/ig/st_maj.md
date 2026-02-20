@@ -45,7 +45,7 @@ Content-Type: application/json-patch+json
     },
     {
         "op":"replace" , 
-        "path":"/securtityLabel" , 
+        "path":"/securityLabel" , 
         "value":"restricted"
     },
     {   "op":"replace",

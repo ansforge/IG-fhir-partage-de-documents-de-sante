@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-authorOrg | *Version*:3.1.1 |
-| Active as of 2026-02-17 | *Computable Name*:PDSmAuthorOrg |
+| Active as of 2026-02-20 | *Computable Name*:PDSmAuthorOrg |
 
  
 Recherche sur l'auteur d'une organisation 
@@ -29,31 +29,23 @@ Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utilise
   "version" : "3.1.1",
   "name" : "PDSmAuthorOrg",
   "status" : "active",
-  "date" : "2026-02-17T14:25:51+00:00",
+  "date" : "2026-02-20T13:59:27+00:00",
   "publisher" : "ANS",
-  "contact" : [
-    {
-      "name" : "ANS",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://esante.gouv.fr"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
   "description" : "Recherche sur l'auteur d'une organisation",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "purpose" : "Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'auteur quand celui-ci correspond à une organisation",
   "code" : "authorOrg",
   "base" : ["List"],

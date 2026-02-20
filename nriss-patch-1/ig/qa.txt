@@ -1,38 +1,38 @@
 PDSm : Validation Results
 =========================================
 
-err = 26, warn = 100, info = 63
-IG Publisher Version: 2.1.0
-Generated Tue Feb 17 14:29:30 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.pdsm#3.1.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/pdsm)
+err = 47, warn = 100, info = 62
+IG Publisher Version: 2.1.1
+Generated Fri Feb 20 14:03:22 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.pdsm#3.1.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/pdsm)
  Build Errors : 7 / 7 / 0
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Binary-6789 : 0 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478 : 0 / 4 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-ConsommateurDeDocuments : 0 / 0 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-GestionnaireDePartageDeDocuments : 0 / 0 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-ProducteurDeDocuments : 0 / 0 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-ConsommateurDeDocuments : 1 / 0 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-GestionnaireDePartageDeDocuments : 1 / 0 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-ProducteurDeDocuments : 1 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/DocumentReference-PDSmSimplifiedExample : 7 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/DocumentReference-exemple-pdsm-documentreference : 9 / 5 / 10
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.pdsm : 0 / 1 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/List-ExampleFolder : 2 / 0 / 4
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.pdsm : 1 / 1 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/List-ExampleFolder : 3 / 0 / 3
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/List-ExampleSubmissionSet : 7 / 4 / 16
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Organization-org-example : 0 / 2 / 7
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Patient-fr-patient-123 : 0 / 0 / 2
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-DocumentReference-period-end : 0 / 0 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-DocumentReference-period-start : 0 / 0 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-List-PatientAsSource : 0 / 0 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-List-PatientAsSubject : 0 / 0 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-List-PractitionerRoleAsSource : 0 / 0 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-List-authorOrg : 0 / 0 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-isArchived : 0 / 0 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-comprehensive-document-reference : 0 / 36 / 26
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-comprehensive-provide-document-bundle : 0 / 8 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-ext-intended-recipient : 0 / 0 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-ext-is-archived : 0 / 0 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-find-documentreferences-comprehensive-response : 0 / 1 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-find-lists-response : 0 / 1 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-folder-comprehensive : 0 / 1 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-simplified-publish : 0 / 25 / 15
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-submissionset-comprehensive : 0 / 5 / 3
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-DocumentReference-period-end : 1 / 0 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-DocumentReference-period-start : 1 / 0 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-List-PatientAsSource : 1 / 0 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-List-PatientAsSubject : 1 / 0 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-List-PractitionerRoleAsSource : 1 / 0 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-List-authorOrg : 1 / 0 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-isArchived : 1 / 0 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-comprehensive-document-reference : 1 / 36 / 26
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-comprehensive-provide-document-bundle : 1 / 8 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-ext-intended-recipient : 1 / 0 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-ext-is-archived : 1 / 0 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-find-documentreferences-comprehensive-response : 1 / 1 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-find-lists-response : 1 / 1 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-folder-comprehensive : 1 / 1 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-simplified-publish : 1 / 25 / 15
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-submissionset-comprehensive : 1 / 5 / 3
 </table>
 == n/a ==
 ERROR: ImplementationGuide.definition.parameter[24].value: Supressed messages file not found
@@ -56,8 +56,11 @@ WARNING: Bundle/a9c10f8a-882d-4000-a280-7150e0aeb478: Bundle.entry[0].response.l
 WARNING: Bundle/a9c10f8a-882d-4000-a280-7150e0aeb478: Bundle.entry[1].response.location: No definition could be found for URL value 'DocumentReference/1'
 WARNING: Bundle/a9c10f8a-882d-4000-a280-7150e0aeb478: Bundle.entry[2].response.location: No definition could be found for URL value 'Binary/1'
 == fsh-generated/resources/CapabilityStatement-PDSm-ConsommateurDeDocuments.json ==
+ERROR: CapabilityStatement/PDSm-ConsommateurDeDocuments: CapabilityStatement.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr-FR'. Default display is 'France'
 == fsh-generated/resources/CapabilityStatement-PDSm-GestionnaireDePartageDeDocuments.json ==
+ERROR: CapabilityStatement/PDSm-GestionnaireDePartageDeDocuments: CapabilityStatement.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr-FR'. Default display is 'France'
 == fsh-generated/resources/CapabilityStatement-PDSm-ProducteurDeDocuments.json ==
+ERROR: CapabilityStatement/PDSm-ProducteurDeDocuments: CapabilityStatement.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr-FR'. Default display is 'France'
 == fsh-generated/resources/DocumentReference-PDSmSimplifiedExample.json ==
 ERROR: DocumentReference/PDSmSimplifiedExample: DocumentReference.type.coding[0].display: Wrong Display Name 'Note d’évolution' for http://loinc.org#15507-7. Valid display is 'CR de passage aux urgences' (for the language(s) 'fr-FR')
 ERROR: DocumentReference/PDSmSimplifiedExample: DocumentReference.author[0]: Unable to resolve resource with reference 'PractitionerRole/practitionerrole-example'
@@ -88,11 +91,12 @@ ERROR: DocumentReference/exemple-pdsm-documentreference: DocumentReference: Cons
 ERROR: DocumentReference/exemple-pdsm-documentreference: DocumentReference.contained[0]: The contained resource 'practitioner-example' is not referenced to from elsewhere in the containing resource nor does it refer to the containing resource (dom-3)
 ERROR: DocumentReference.text.div: Hyperlink 'PractitionerRole/practitionerrole-example' at 'div/p/a' for 'PractitionerRole/practitionerrole-example' does not resolve
 == fsh-generated/resources/ImplementationGuide-ans.fhir.fr.pdsm.json ==
+ERROR: ImplementationGuide/ans.fhir.fr.pdsm: ImplementationGuide.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr-FR'. Default display is 'France'
 WARNING: ImplementationGuide/ans.fhir.fr.pdsm: ImplementationGuide.dependsOn[2]: The ImplementationGuide uses package ihe.iti.mhd#4.2.0 released on 2022-12-07, but the most recent appropriate version is 5.0.0. This reference is getting old and the more recent version should be considered
 == fsh-generated/resources/List-ExampleFolder.json ==
 INFORMATION: List/ExampleFolder: List.identifier[0]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-folder-comprehensive|3.1.1 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: List/ExampleFolder: List.identifier[1]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-folder-comprehensive|3.1.1 (this may not be a problem, but you should check that it's not intended to match a slice)
-INFORMATION: List/ExampleFolder: List.extension[0].value.ofType(CodeableConcept).coding[0].display: 'Appendectomy (procedure)' is the default display; the code system http://snomed.info/sct has no Display Names for the language fr-FR
+ERROR: List/ExampleFolder: List.extension[0].value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'Appendectomy (procedure)' for http://snomed.info/sct#80146002. There are no valid display names found for language(s) 'fr-FR'. Default display is 'Appendectomy'
 ERROR: List/ExampleFolder: List.code.coding[0].display: Wrong Display Name 'Folder' for https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes#folder. Valid display is 'Folder as a FHIR List' (for the language(s) 'fr-FR')
 ERROR: List/ExampleFolder: List.code: None of the codings provided are in the value set 'MHD List Types ValueSet' (https://profiles.ihe.net/ITI/MHD/ValueSet/MHDlistTypesVS|4.2.0), and a coding from this value set is required) (codes = https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes#folder)
 == fsh-generated/resources/List-ExampleSubmissionSet.json ==
@@ -125,13 +129,21 @@ INFORMATION: Organization/org-example: Organization.type[0]: Reference to draft 
 == fsh-generated/resources/Patient-fr-patient-123.json ==
 INFORMATION: Patient/fr-patient-123: Patient.name[0]: This element does not match any known slice defined in the profile https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient|2.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 == fsh-generated/resources/SearchParameter-PDSm-DocumentReference-period-end.json ==
+ERROR: SearchParameter/PDSm-DocumentReference-period-end: SearchParameter.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr-FR'. Default display is 'France'
 == fsh-generated/resources/SearchParameter-PDSm-DocumentReference-period-start.json ==
+ERROR: SearchParameter/PDSm-DocumentReference-period-start: SearchParameter.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr-FR'. Default display is 'France'
 == fsh-generated/resources/SearchParameter-PDSm-List-PatientAsSource.json ==
+ERROR: SearchParameter/PDSm-List-PatientAsSource: SearchParameter.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr-FR'. Default display is 'France'
 == fsh-generated/resources/SearchParameter-PDSm-List-PatientAsSubject.json ==
+ERROR: SearchParameter/PDSm-List-PatientAsSubject: SearchParameter.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr-FR'. Default display is 'France'
 == fsh-generated/resources/SearchParameter-PDSm-List-PractitionerRoleAsSource.json ==
+ERROR: SearchParameter/PDSm-List-PractitionerRoleAsSource: SearchParameter.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr-FR'. Default display is 'France'
 == fsh-generated/resources/SearchParameter-PDSm-List-authorOrg.json ==
+ERROR: SearchParameter/PDSm-List-authorOrg: SearchParameter.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr-FR'. Default display is 'France'
 == fsh-generated/resources/SearchParameter-PDSm-isArchived.json ==
+ERROR: SearchParameter/PDSm-isArchived: SearchParameter.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr-FR'. Default display is 'France'
 == fsh-generated/resources/StructureDefinition-pdsm-comprehensive-document-reference.json ==
+ERROR: StructureDefinition/pdsm-comprehensive-document-reference: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr-FR'. Default display is 'France'
 WARNING: StructureDefinition/pdsm-comprehensive-document-reference: StructureDefinition.mapping[8].uri: No definition could be found for URL value 'XDS'
 INFORMATION: StructureDefinition/pdsm-comprehensive-document-reference: StructureDefinition.snapshot.element[12].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 WARNING: StructureDefinition/pdsm-comprehensive-document-reference: StructureDefinition.snapshot.element[23].constraint[1]: Constraint failed: eld-21: 'Constraints should have an expression or else validators will not be able to enforce them (expression.exists())'
@@ -194,6 +206,7 @@ INFORMATION: StructureDefinition/pdsm-comprehensive-document-reference: Structur
 WARNING: StructureDefinition/pdsm-comprehensive-document-reference: StructureDefinition.snapshot: The slice 'entryUUID' on path 'DocumentReference.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 WARNING: StructureDefinition/pdsm-comprehensive-document-reference: StructureDefinition.snapshot: The slice 'referenceIdList' on path 'DocumentReference.context.related' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 == fsh-generated/resources/StructureDefinition-pdsm-comprehensive-provide-document-bundle.json ==
+ERROR: StructureDefinition/pdsm-comprehensive-provide-document-bundle: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr-FR'. Default display is 'France'
 WARNING: StructureDefinition/pdsm-comprehensive-provide-document-bundle: StructureDefinition.snapshot: The slice 'SubmissionSet' on path 'Bundle.entry' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 WARNING: StructureDefinition/pdsm-comprehensive-provide-document-bundle: StructureDefinition.snapshot: The slice 'DocumentRefs' on path 'Bundle.entry' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 WARNING: StructureDefinition/pdsm-comprehensive-provide-document-bundle: StructureDefinition.snapshot: The slice 'UpdateDocumentRefs' on path 'Bundle.entry' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
@@ -203,14 +216,20 @@ WARNING: StructureDefinition/pdsm-comprehensive-provide-document-bundle: Structu
 WARNING: StructureDefinition/pdsm-comprehensive-provide-document-bundle: StructureDefinition.snapshot: The slice 'Patient' on path 'Bundle.entry' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-pdsm-ext-intended-recipient.json ==
+ERROR: StructureDefinition/pdsm-ext-intended-recipient: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr-FR'. Default display is 'France'
 == fsh-generated/resources/StructureDefinition-pdsm-ext-is-archived.json ==
+ERROR: StructureDefinition/pdsm-ext-is-archived: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr-FR'. Default display is 'France'
 == fsh-generated/resources/StructureDefinition-pdsm-find-documentreferences-comprehensive-response.json ==
+ERROR: StructureDefinition/pdsm-find-documentreferences-comprehensive-response: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr-FR'. Default display is 'France'
 WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-find-documentreferences-comprehensive-response'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-pdsm-find-lists-response.json ==
+ERROR: StructureDefinition/pdsm-find-lists-response: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr-FR'. Default display is 'France'
 WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-find-lists-response'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-pdsm-folder-comprehensive.json ==
+ERROR: StructureDefinition/pdsm-folder-comprehensive: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr-FR'. Default display is 'France'
 WARNING: StructureDefinition/pdsm-folder-comprehensive: StructureDefinition.mapping[3].uri: No definition could be found for URL value 'XDS'
 == fsh-generated/resources/StructureDefinition-pdsm-simplified-publish.json ==
+ERROR: StructureDefinition/pdsm-simplified-publish: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr-FR'. Default display is 'France'
 WARNING: StructureDefinition/pdsm-simplified-publish: StructureDefinition.snapshot.element[21].constraint[1]: Constraint failed: eld-21: 'Constraints should have an expression or else validators will not be able to enforce them (expression.exists())'
 WARNING: StructureDefinition/pdsm-simplified-publish: StructureDefinition.snapshot.element[21].binding.valueSet: There are multiple different potential matches for the url 'https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/FHIR/JDV-J07-XdsTypeCode-CISIS'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '20251029120000', found versions: 1.3.0 (from ans.fr.nos#1.3.0), 1.5.0 (from ans.fr.nos#1.5.0), 20251029120000 (from ans.fr.terminologies#1.4.0). Suggested fix: change the canonical reference from 'https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/FHIR/JDV-J07-XdsTypeCode-CISIS' to 'https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/FHIR/JDV-J07-XdsTypeCode-CISIS|20251029120000'
 WARNING: StructureDefinition/pdsm-simplified-publish: StructureDefinition.snapshot.element[22].constraint[1]: Constraint failed: eld-21: 'Constraints should have an expression or else validators will not be able to enforce them (expression.exists())'
@@ -251,6 +270,7 @@ INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.sn
 INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.snapshot.element[59].constraint[1]: The constraint 'constr-bind-ProducteurDoc-simplified' has no computable expression, so validators will not be able to check it
 INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.snapshot.element[60].constraint[1]: The constraint 'constr-bind-ProducteurDoc-simplified' has no computable expression, so validators will not be able to check it
 == fsh-generated/resources/StructureDefinition-pdsm-submissionset-comprehensive.json ==
+ERROR: StructureDefinition/pdsm-submissionset-comprehensive: StructureDefinition.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. There are no valid display names found for language(s) 'fr-FR'. Default display is 'France'
 WARNING: StructureDefinition/pdsm-submissionset-comprehensive: StructureDefinition.mapping[3].uri: No definition could be found for URL value 'XDS'
 WARNING: StructureDefinition/pdsm-submissionset-comprehensive: StructureDefinition.snapshot.element[16].constraint[2]: Constraint failed: eld-21: 'Constraints should have an expression or else validators will not be able to enforce them (expression.exists())'
 WARNING: StructureDefinition/pdsm-submissionset-comprehensive: StructureDefinition.snapshot.element[20].binding.valueSet: There are multiple different potential matches for the url 'https://mos.esante.gouv.fr/NOS/JDV_J03-XdsContentTypeCode-CISIS/FHIR/JDV-J03-XdsContentTypeCode-CISIS'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '20250523120000', found versions: 1.3.0 (from ans.fr.nos#1.3.0), 1.5.0 (from ans.fr.nos#1.5.0), 20250523120000 (from ans.fr.terminologies#1.4.0). Suggested fix: change the canonical reference from 'https://mos.esante.gouv.fr/NOS/JDV_J03-XdsContentTypeCode-CISIS/FHIR/JDV-J03-XdsContentTypeCode-CISIS' to 'https://mos.esante.gouv.fr/NOS/JDV_J03-XdsContentTypeCode-CISIS/FHIR/JDV-J03-XdsContentTypeCode-CISIS|20250523120000'
