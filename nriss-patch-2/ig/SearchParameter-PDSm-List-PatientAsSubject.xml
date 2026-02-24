@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="PDSm-List-PatientAsSubject"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : ParamètreRecherche PDSm-List-PatientAsSubject</b></p><a name="PDSm-List-PatientAsSubject"> </a><a name="hcPDSm-List-PatientAsSubject"> </a><h2>PDSmListPatientAsSubject</h2><p>Paramètre <code>patient</code>:<code>reference</code></p><div><p>Paramètre de recherche chaîné créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément subject:Patient.identifier</p>
+</div><table class="grid"><tr><td>Ressource</td><td><a href="http://hl7.org/fhir/R4/list.html">List</a></td></tr><tr><td>Expression</td><td><code>List.subject.where(resolve() is Patient)</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : Le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : Le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr><tr><td>Modificateurs</td><td>Autorisé : missing, type, identifier</td></tr><tr><td>Chaînes</td><td>Autorisé : identifier</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-PatientAsSubject"/>
+  <version value="3.1.1"/>
+  <name value="PDSmListPatientAsSubject"/>
+  <derivedFrom value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
+  <status value="active"/>
+  <date value="2021-07-30"/>
+  <publisher value="ANS"/>
+  <contact>
+    <name value="ANS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Paramètre de recherche chaîné créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément subject:Patient.identifier"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
+  <code value="patient"/>
+  <base value="List"/>
+  <type value="reference"/>
+  <expression value="List.subject.where(resolve() is Patient)"/>
+  <multipleOr value="true"/>
+  <multipleAnd value="true"/>
+  <modifier value="missing"/>
+  <modifier value="type"/>
+  <modifier value="identifier"/>
+  <chain value="identifier"/>
+</SearchParameter>

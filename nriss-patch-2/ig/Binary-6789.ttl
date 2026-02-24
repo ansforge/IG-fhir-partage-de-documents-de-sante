@@ -1,0 +1,16 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/pdsm/Binary/6789> a fhir:Binary ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "6789"] ; # 
+  fhir:contentType [ fhir:v "application/pdf"] ; # 
+  fhir:data [ fhir:v "SGVsbG8gV29ybGQ="^^xsd:base64Binary] . # 
+
+# -------------------------------------------------------------------------------------
+
