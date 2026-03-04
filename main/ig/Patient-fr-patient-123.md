@@ -21,16 +21,12 @@ Martin Claire Male, Date de Naissance :1980-01-15
   "resourceType" : "Patient",
   "id" : "fr-patient-123",
   "meta" : {
-    "profile" : [
-      "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"
-    ]
+    "profile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"]
   },
-  "name" : [
-    {
-      "family" : "Claire",
-      "given" : ["Martin"]
-    }
-  ],
+  "name" : [{
+    "family" : "Claire",
+    "given" : ["Martin"]
+  }],
   "gender" : "male",
   "birthDate" : "1980-01-15"
 }

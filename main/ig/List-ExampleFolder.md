@@ -33,62 +33,48 @@ Classeur regroupant les documents liés à l’intervention chirurgicale d’app
   "resourceType" : "List",
   "id" : "ExampleFolder",
   "meta" : {
-    "profile" : [
-      "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-folder-comprehensive"
-    ]
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-folder-comprehensive"]
   },
-  "extension" : [
-    {
-      "url" : "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-designationType",
-      "valueCodeableConcept" : {
-        "coding" : [
-          {
-            "system" : "http://snomed.info/sct",
-            "code" : "80146002",
-            "display" : "Appendectomy (procedure)"
-          }
-        ]
-      }
+  "extension" : [{
+    "url" : "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-designationType",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "80146002",
+        "display" : "Appendectomy (procedure)"
+      }]
     }
-  ],
-  "identifier" : [
-    {
-      "system" : "urn:ietf:rfc:3986",
-      "value" : "urn:uuid:77777777-dddd-eeee-ffff-888888888888"
-    },
-    {
-      "system" : "urn:ietf:rfc:3986",
-      "value" : "urn:uuid:55555555-aaaa-bbbb-cccc-666666666666"
-    }
-  ],
+  }],
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:uuid:77777777-dddd-eeee-ffff-888888888888"
+  },
+  {
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:uuid:55555555-aaaa-bbbb-cccc-666666666666"
+  }],
   "status" : "current",
   "mode" : "working",
   "title" : "Classeur de suivi diabète",
   "code" : {
-    "coding" : [
-      {
-        "system" : "https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes",
-        "code" : "folder",
-        "display" : "Folder"
-      }
-    ]
+    "coding" : [{
+      "system" : "https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes",
+      "code" : "folder",
+      "display" : "Folder"
+    }]
   },
   "subject" : {
     "reference" : "Patient/fr-patient-123"
   },
   "date" : "2025-04-28T10:30:00+01:00",
-  "note" : [
-    {
-      "text" : "Classeur regroupant les documents liés à l’intervention chirurgicale d’appendicectomie et au suivi post-opératoire du patient."
+  "note" : [{
+    "text" : "Classeur regroupant les documents liés à l’intervention chirurgicale d’appendicectomie et au suivi post-opératoire du patient."
+  }],
+  "entry" : [{
+    "item" : {
+      "reference" : "DocumentReference/exemple-pdsm-documentreference"
     }
-  ],
-  "entry" : [
-    {
-      "item" : {
-        "reference" : "DocumentReference/exemple-pdsm-documentreference"
-      }
-    }
-  ]
+  }]
 }
 
 ```

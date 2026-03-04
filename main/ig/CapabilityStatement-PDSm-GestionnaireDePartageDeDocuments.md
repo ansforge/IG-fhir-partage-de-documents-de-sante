@@ -32,268 +32,242 @@ Il s’agit d’un système d’information ou d’un composant d'un système d�
   "experimental" : false,
   "date" : "2021-07-30T14:32:30+02:00",
   "publisher" : "ANS",
-  "contact" : [
-    {
-      "name" : "ANS",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://esante.gouv.fr"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
   "description" : "Il s’agit d’un système d’information ou d’un composant d'un système d’information qui stocke, classe et archive les documents d’un dossier patient.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "kind" : "requirements",
   "fhirVersion" : "4.0.1",
   "format" : ["xml", "json"],
-  "implementationGuide" : [
-    "https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm"
-  ],
-  "rest" : [
-    {
-      "mode" : "server",
-      "documentation" : "Il s’agit d’un système d’information ou d’un composant d'un système d’information qui stocke, classe et archive les documents d’un dossier patient.",
-      "security" : {
-        "cors" : false,
-        "description" : "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)"
+  "implementationGuide" : ["https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm"],
+  "rest" : [{
+    "mode" : "server",
+    "documentation" : "Il s’agit d’un système d’information ou d’un composant d'un système d’information qui stocke, classe et archive les documents d’un dossier patient.",
+    "security" : {
+      "cors" : false,
+      "description" : "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)"
+    },
+    "resource" : [{
+      "type" : "List",
+      "profile" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-submissionset-comprehensive",
+      "interaction" : [{
+        "code" : "read"
       },
-      "resource" : [
-        {
-          "type" : "List",
-          "profile" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-submissionset-comprehensive",
-          "interaction" : [
-            {
-              "code" : "read"
-            },
-            {
-              "code" : "search-type"
-            }
-          ],
-          "searchParam" : [
-            {
-              "name" : "date",
-              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
-              "type" : "date",
-              "documentation" : "Représente la date et heure de soumission."
-            },
-            {
-              "name" : "DesignationType",
-              "definition" : "https://profiles.ihe.net/ITI/MHD/SearchParameter/List-DesignationType",
-              "type" : "token",
-              "documentation" : "Représente le type d’activité associé à l’événement clinique ayant abouti à la constitution du lot de soumission."
-            },
-            {
-              "name" : "identifier",
-              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-identifier",
-              "type" : "token",
-              "documentation" : "Représente l'identifiant."
-            },
-            {
-              "name" : "status",
-              "definition" : "http://hl7.org/fhir/SearchParameter/List-status",
-              "type" : "token",
-              "documentation" : "Représente le statut du lot de soumission."
-            },
-            {
-              "name" : "PDSm_isArchived",
-              "definition" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-isArchived",
-              "type" : "token",
-              "documentation" : "permet distinguer les lots de soumission et les fiches archivés des actifs."
-            },
-            {
-              "name" : "title",
-              "definition" : "http://hl7.org/fhir/SearchParameter/List-title",
-              "type" : "string",
-              "documentation" : "Représente le titre du lot de soumission."
-            },
-            {
-              "name" : "SourceId",
-              "definition" : "https://profiles.ihe.net/ITI/MHD/SearchParameter/List-SourceId",
-              "type" : "token",
-              "documentation" : "Représente l’identifiant unique global du système émetteur du lot de soumission."
-            },
-            {
-              "name" : "source",
-              "definition" : "http://hl7.org/fhir/SearchParameter/List-source",
-              "type" : "reference",
-              "documentation" : "Représente l’auteur du lot de soumission, quand l'auteur est de type patient, practitionerrole ou device."
-            },
-            {
-              "name" : "PDSm_authorOrg",
-              "definition" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-authorOrg",
-              "type" : "reference",
-              "documentation" : "Représente l’auteur du lot de soumission, quand l'auteur est de type organization."
-            },
-            {
-              "name" : "code",
-              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-code",
-              "type" : "token",
-              "documentation" : "Représente le but du lot de soumission."
-            },
-            {
-              "name" : "PDSm_List_PatientAsSource",
-              "definition" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-PatientAsSource",
-              "type" : "reference",
-              "documentation" : "Recherche sur les éléments source:Patient.given et source:Patient.family."
-            },
-            {
-              "name" : "PDSm_List_PatientAsSubject",
-              "definition" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-PatientAsSubject",
-              "type" : "reference",
-              "documentation" : "Recherche sur l'élément subject:Patient.identifier."
-            },
-            {
-              "name" : "PDSm_List_PractitionerRoleAsSource",
-              "definition" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-PractitionerRoleAsSource",
-              "type" : "reference",
-              "documentation" : "Recherche sur les éléments source:PractitionerRole.practitioner:Practitioner.given et source:PractitionerRole.practitioner:Practitioner.family."
-            }
-          ]
-        },
-        {
-          "type" : "DocumentReference",
-          "profile" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-document-reference",
-          "interaction" : [
-            {
-              "code" : "read"
-            },
-            {
-              "code" : "search-type"
-            },
-            {
-              "code" : "patch"
-            }
-          ],
-          "conditionalUpdate" : true,
-          "searchParam" : [
-            {
-              "name" : "type",
-              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-type",
-              "type" : "token",
-              "documentation" : "Représente le type du document."
-            },
-            {
-              "name" : "setting",
-              "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-setting",
-              "type" : "token",
-              "documentation" : "Représente le cadre d’exercice de l’acte qui a engendré la création du document"
-            },
-            {
-              "name" : "identifier",
-              "definition" : "http://hl7.org/fhir/SearchParameter/clinical-identifier",
-              "type" : "token",
-              "documentation" : "Représente l'identifiant unique d'une fiche d'un document."
-            },
-            {
-              "name" : "creation",
-              "definition" : "https://profiles.ihe.net/ITI/MHD/SearchParameter/DocumentReference-Creation",
-              "type" : "date",
-              "documentation" : "Représente la date et l'heure de la création du document."
-            },
-            {
-              "name" : "security-label",
-              "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-security-label",
-              "type" : "token",
-              "documentation" : "Contient les informations définissant le niveau de confidentialité d'un document."
-            },
-            {
-              "name" : "status",
-              "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-status",
-              "type" : "token",
-              "documentation" : "Représente le statut de la fiche d'un document."
-            },
-            {
-              "name" : "PDSm_isArchived",
-              "definition" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-isArchived",
-              "type" : "token",
-              "documentation" : "permet distinguer les lots de soumission et les fiches archivés des actifs."
-            },
-            {
-              "name" : "PDSm_DocumentReference_period-start",
-              "definition" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-DocumentReference-period-start",
-              "type" : "date",
-              "documentation" : "Représente la date de début de l’acte de référence."
-            },
-            {
-              "name" : "PDSm_DocumentReference_period-end",
-              "definition" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-DocumentReference-period-end",
-              "type" : "date",
-              "documentation" : "Représente la date de fin de l’acte de référence."
-            },
-            {
-              "name" : "format",
-              "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-format",
-              "type" : "token",
-              "documentation" : "Format technique détaillé du document."
-            },
-            {
-              "name" : "category",
-              "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-category",
-              "type" : "token",
-              "documentation" : "Représente la classe du document (compte rendu, imagerie médicale, traitement, certificat, ....)."
-            },
-            {
-              "name" : "relatesto",
-              "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-relatesto",
-              "type" : "reference",
-              "documentation" : "Représente l'identifiant d'une association entre deux fiches."
-            },
-            {
-              "name" : "event",
-              "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-event",
-              "type" : "token",
-              "documentation" : "Actes et pathologies en rapport avec le document."
-            },
-            {
-              "name" : "period",
-              "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-period",
-              "type" : "date",
-              "documentation" : "Représente la période."
-            },
-            {
-              "name" : "DocumentReference Patient",
-              "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-subject",
-              "type" : "reference",
-              "documentation" : "Représente l'identifiant du patient qui est le sujet du document."
-            },
-            {
-              "name" : "DocumentRefence Author",
-              "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-author",
-              "type" : "reference",
-              "documentation" : "Représente l'identifiant de l'auteur qui est l'auteur du document."
-            }
-          ]
-        },
-        {
-          "type" : "Binary",
-          "profile" : "http://hl7.org/fhir/StructureDefinition/Binary",
-          "interaction" : [
-            {
-              "code" : "read"
-            }
-          ]
-        }
-      ],
-      "interaction" : [
-        {
-          "code" : "transaction",
-          "documentation" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"
-        }
-      ]
-    }
-  ]
+      {
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "name" : "date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+        "type" : "date",
+        "documentation" : "Représente la date et heure de soumission."
+      },
+      {
+        "name" : "DesignationType",
+        "definition" : "https://profiles.ihe.net/ITI/MHD/SearchParameter/List-DesignationType",
+        "type" : "token",
+        "documentation" : "Représente le type d’activité associé à l’événement clinique ayant abouti à la constitution du lot de soumission."
+      },
+      {
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-identifier",
+        "type" : "token",
+        "documentation" : "Représente l'identifiant."
+      },
+      {
+        "name" : "status",
+        "definition" : "http://hl7.org/fhir/SearchParameter/List-status",
+        "type" : "token",
+        "documentation" : "Représente le statut du lot de soumission."
+      },
+      {
+        "name" : "PDSm_isArchived",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-isArchived",
+        "type" : "token",
+        "documentation" : "permet distinguer les lots de soumission et les fiches archivés des actifs."
+      },
+      {
+        "name" : "title",
+        "definition" : "http://hl7.org/fhir/SearchParameter/List-title",
+        "type" : "string",
+        "documentation" : "Représente le titre du lot de soumission."
+      },
+      {
+        "name" : "SourceId",
+        "definition" : "https://profiles.ihe.net/ITI/MHD/SearchParameter/List-SourceId",
+        "type" : "token",
+        "documentation" : "Représente l’identifiant unique global du système émetteur du lot de soumission."
+      },
+      {
+        "name" : "source",
+        "definition" : "http://hl7.org/fhir/SearchParameter/List-source",
+        "type" : "reference",
+        "documentation" : "Représente l’auteur du lot de soumission, quand l'auteur est de type patient, practitionerrole ou device."
+      },
+      {
+        "name" : "PDSm_authorOrg",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-authorOrg",
+        "type" : "reference",
+        "documentation" : "Représente l’auteur du lot de soumission, quand l'auteur est de type organization."
+      },
+      {
+        "name" : "code",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-code",
+        "type" : "token",
+        "documentation" : "Représente le but du lot de soumission."
+      },
+      {
+        "name" : "PDSm_List_PatientAsSource",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-PatientAsSource",
+        "type" : "reference",
+        "documentation" : "Recherche sur les éléments source:Patient.given et source:Patient.family."
+      },
+      {
+        "name" : "PDSm_List_PatientAsSubject",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-PatientAsSubject",
+        "type" : "reference",
+        "documentation" : "Recherche sur l'élément subject:Patient.identifier."
+      },
+      {
+        "name" : "PDSm_List_PractitionerRoleAsSource",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-PractitionerRoleAsSource",
+        "type" : "reference",
+        "documentation" : "Recherche sur les éléments source:PractitionerRole.practitioner:Practitioner.given et source:PractitionerRole.practitioner:Practitioner.family."
+      }]
+    },
+    {
+      "type" : "DocumentReference",
+      "profile" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-document-reference",
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      },
+      {
+        "code" : "patch"
+      }],
+      "conditionalUpdate" : true,
+      "searchParam" : [{
+        "name" : "type",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-type",
+        "type" : "token",
+        "documentation" : "Représente le type du document."
+      },
+      {
+        "name" : "setting",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-setting",
+        "type" : "token",
+        "documentation" : "Représente le cadre d’exercice de l’acte qui a engendré la création du document"
+      },
+      {
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-identifier",
+        "type" : "token",
+        "documentation" : "Représente l'identifiant unique d'une fiche d'un document."
+      },
+      {
+        "name" : "creation",
+        "definition" : "https://profiles.ihe.net/ITI/MHD/SearchParameter/DocumentReference-Creation",
+        "type" : "date",
+        "documentation" : "Représente la date et l'heure de la création du document."
+      },
+      {
+        "name" : "security-label",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-security-label",
+        "type" : "token",
+        "documentation" : "Contient les informations définissant le niveau de confidentialité d'un document."
+      },
+      {
+        "name" : "status",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-status",
+        "type" : "token",
+        "documentation" : "Représente le statut de la fiche d'un document."
+      },
+      {
+        "name" : "PDSm_isArchived",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-isArchived",
+        "type" : "token",
+        "documentation" : "permet distinguer les lots de soumission et les fiches archivés des actifs."
+      },
+      {
+        "name" : "PDSm_DocumentReference_period-start",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-DocumentReference-period-start",
+        "type" : "date",
+        "documentation" : "Représente la date de début de l’acte de référence."
+      },
+      {
+        "name" : "PDSm_DocumentReference_period-end",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-DocumentReference-period-end",
+        "type" : "date",
+        "documentation" : "Représente la date de fin de l’acte de référence."
+      },
+      {
+        "name" : "format",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-format",
+        "type" : "token",
+        "documentation" : "Format technique détaillé du document."
+      },
+      {
+        "name" : "category",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-category",
+        "type" : "token",
+        "documentation" : "Représente la classe du document (compte rendu, imagerie médicale, traitement, certificat, ....)."
+      },
+      {
+        "name" : "relatesto",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-relatesto",
+        "type" : "reference",
+        "documentation" : "Représente l'identifiant d'une association entre deux fiches."
+      },
+      {
+        "name" : "event",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-event",
+        "type" : "token",
+        "documentation" : "Actes et pathologies en rapport avec le document."
+      },
+      {
+        "name" : "period",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-period",
+        "type" : "date",
+        "documentation" : "Représente la période."
+      },
+      {
+        "name" : "DocumentReference Patient",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-subject",
+        "type" : "reference",
+        "documentation" : "Représente l'identifiant du patient qui est le sujet du document."
+      },
+      {
+        "name" : "DocumentRefence Author",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DocumentReference-author",
+        "type" : "reference",
+        "documentation" : "Représente l'identifiant de l'auteur qui est l'auteur du document."
+      }]
+    },
+    {
+      "type" : "Binary",
+      "profile" : "http://hl7.org/fhir/StructureDefinition/Binary",
+      "interaction" : [{
+        "code" : "read"
+      }]
+    }],
+    "interaction" : [{
+      "code" : "transaction",
+      "documentation" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"
+    }]
+  }]
 }
 
 ```
