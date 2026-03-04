@@ -29,7 +29,7 @@ Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utilise
   "version" : "3.1.1",
   "name" : "PDSmAuthorOrg",
   "status" : "active",
-  "date" : "2026-03-04T13:00:53+00:00",
+  "date" : "2026-03-04T13:07:18+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

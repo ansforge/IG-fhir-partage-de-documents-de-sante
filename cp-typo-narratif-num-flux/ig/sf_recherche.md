@@ -43,7 +43,7 @@
 
 ### Flux de recherche : Flux 5 – RechercheDocument
 
-Les caractéristiques principales des documents renseignées dans les lots de soumission ou dans les fiches servent à la recherche de documents. Celle-ci se fait donc de deux manières : via la recherche de fiches ou via la recherche de lots de soumission. Le document dont les caractéristiques principales correspondent aux critères de recherche peut être consulté dans un second temps en utilisant le flux 05 de demande de consultation de document.
+Les caractéristiques principales des documents renseignées dans les lots de soumission ou dans les fiches servent à la recherche de documents. Celle-ci se fait donc de deux manières : via la recherche de fiches ou via la recherche de lots de soumission. Le document dont les caractéristiques principales correspondent aux critères de recherche peut être consulté dans un second temps en utilisant le flux 07 de demande de consultation de document.
 
 #### Recherche de lots de soumission
 
