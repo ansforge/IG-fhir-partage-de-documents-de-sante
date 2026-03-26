@@ -101,6 +101,12 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
 
 
 
+
+
+
+
+
+
 ## Resource Content
 
 ```json
@@ -112,7 +118,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-03-26T14:45:53+00:00",
+  "date" : "2026-03-26T15:43:38+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -156,6 +162,12 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
     "uri" : "https://profiles.ihe.net/ITI/MHD/ImplementationGuide/ihe.iti.mhd",
     "packageId" : "ihe.iti.mhd",
     "version" : "4.2.0"
+  },
+  {
+    "id" : "hl7_fhir_eu_health_data_api",
+    "uri" : "http://hl7.eu/fhir/health-data-api/ImplementationGuide/hl7.fhir.eu.health-data-api",
+    "packageId" : "hl7.fhir.eu.health-data-api",
+    "version" : "1.0.0-ballot"
   },
   {
     "id" : "ans_fhir_fr_annuaire",

@@ -1,9 +1,9 @@
 PDSm : Validation Results
 =========================================
 
-err = 47, warn = 100, info = 62
+err = 47, warn = 100, info = 63
 IG Publisher Version: 2.2.3
-Generated Thu Mar 26 14:48:28 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.pdsm#3.1.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/pdsm)
+Generated Thu Mar 26 15:47:24 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.pdsm#3.1.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/pdsm)
  Build Errors : 7 / 7 / 0
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Binary-6789 : 0 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478 : 0 / 4 / 1
@@ -11,7 +11,7 @@ Generated Thu Mar 26 14:48:28 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.pdsm#
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-GestionnaireDePartageDeDocuments : 1 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-ProducteurDeDocuments : 1 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/DocumentReference-PDSmSimplifiedExample : 7 / 0 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/DocumentReference-exemple-pdsm-documentreference : 9 / 5 / 10
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/DocumentReference-exemple-pdsm-documentreference : 9 / 5 / 11
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.pdsm : 1 / 1 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/List-ExampleFolder : 3 / 0 / 3
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/List-ExampleSubmissionSet : 7 / 4 / 16
@@ -76,6 +76,7 @@ WARNING: DocumentReference/exemple-pdsm-documentreference: DocumentReference.con
 INFORMATION: DocumentReference/exemple-pdsm-documentreference: DocumentReference.contained[0]/*Practitioner/practitioner-example*/.extension[0]: This element does not match any known slice defined in the profile https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner|2.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: DocumentReference/exemple-pdsm-documentreference: DocumentReference.contained[0]/*Practitioner/practitioner-example*/.meta.profile[1]: This element does not match any known slice defined in the profile https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner|2.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: DocumentReference/exemple-pdsm-documentreference: DocumentReference.contained[0]/*Practitioner/practitioner-example*/.telecom[0].extension[1]: This element does not match any known slice defined in the profile https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-contact-point|2.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: DocumentReference/exemple-pdsm-documentreference: DocumentReference.status: Reference to draft CodeSystem http://hl7.org/fhir/document-reference-status|5.0.0
 INFORMATION: DocumentReference/exemple-pdsm-documentreference: DocumentReference.status: Reference to draft CodeSystem http://hl7.org/fhir/document-reference-status|4.0.1
 ERROR: DocumentReference/exemple-pdsm-documentreference: DocumentReference.type.coding[0].display: Wrong Display Name 'Résumé de sortie d’hospitalisation' for http://loinc.org#34133-9. Valid display is 'Synthèse d'épisode de soins' (for the language(s) 'fr-FR')
 ERROR: DocumentReference/exemple-pdsm-documentreference: DocumentReference.category[0].coding[0].display: Wrong Display Name 'Compte-rendu' for https://mos.esante.gouv.fr/NOS/TRE_A03-ClasseDocument/FHIR/TRE-A03-ClasseDocument#10. Valid display is 'Compte rendu' (for the language(s) 'fr-FR')

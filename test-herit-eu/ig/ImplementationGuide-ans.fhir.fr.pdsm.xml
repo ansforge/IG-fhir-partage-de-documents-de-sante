@@ -10,7 +10,7 @@
   <name value="PDSm"/>
   <title value="Partage de Documents de Santé en mobilité (PDSm)"/>
   <status value="active"/>
-  <date value="2026-03-26T14:45:53+00:00"/>
+  <date value="2026-03-26T15:43:38+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -49,6 +49,11 @@
     <uri value="https://profiles.ihe.net/ITI/MHD/ImplementationGuide/ihe.iti.mhd"/>
     <packageId value="ihe.iti.mhd"/>
     <version value="4.2.0"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_eu_health_data_api">
+    <uri value="http://hl7.eu/fhir/health-data-api/ImplementationGuide/hl7.fhir.eu.health-data-api"/>
+    <packageId value="hl7.fhir.eu.health-data-api"/>
+    <version value="1.0.0-ballot"/>
   </dependsOn>
   <dependsOn id="ans_fhir_fr_annuaire">
     <uri value="https://interop.esante.gouv.fr/ig/fhir/annuaire/ImplementationGuide/ans.fhir.fr.annuaire"/>
