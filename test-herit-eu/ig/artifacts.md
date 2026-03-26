@@ -58,6 +58,14 @@ These define constraints on FHIR data types for systems conforming to this imple
 | [PDSm_intendedRecipient](StructureDefinition-pdsm-ext-intended-recipient.md) | Représente le destinataire du lot de soumission |
 | [PDSm_isArchived](StructureDefinition-pdsm-ext-is-archived.md) | Extension définie par le volet ANS "Volet Partage de documents de santé en mobilité" sur les ressources List et DocumentReference pour distinguer les lots de soumission et les fiches archivés des actives. |
 
+### Terminology: Structure Maps 
+
+These define transformations to convert between data structures used by systems conforming to this implementation guide.
+
+| | |
+| :--- | :--- |
+| [EUtoPDSmDocumentReferenceMap](StructureMap-EUtoPDSmDocumentReferenceMap.md) | Mapping EU EehrxfMhdDocumentReference vers PDSm DocumentReference |
+
 ### Example: Example Instances 
 
 These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.

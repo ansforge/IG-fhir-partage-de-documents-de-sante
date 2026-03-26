@@ -1,7 +1,7 @@
 PDSm : Validation Results
 =========================================
 
-err = 47, warn = 100, info = 63
+err = 50, warn = 100, info = 65
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.pdsm#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/pdsm)
  Build Errors : 7 / 7 / 0
@@ -33,6 +33,7 @@ Generated $--. FHIR version $-- for ans.fhir.fr.pdsm#$-- (canonical = https://in
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-folder-comprehensive : 1 / 1 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-simplified-publish : 1 / 25 / 15
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-submissionset-comprehensive : 1 / 5 / 3
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureMap-EUtoPDSmDocumentReferenceMap : 3 / 0 / 3
 </table>
 == n/a ==
 ERROR: ImplementationGuide.definition.parameter[24].value: Supressed messages file not found
@@ -279,3 +280,9 @@ WARNING: StructureDefinition/pdsm-submissionset-comprehensive: StructureDefiniti
 WARNING: StructureDefinition/pdsm-submissionset-comprehensive: StructureDefinition.differential.element[3].binding.valueSet: There are multiple different potential matches for the url 'https://mos.esante.gouv.fr/NOS/JDV_J03-XdsContentTypeCode-CISIS/FHIR/JDV-J03-XdsContentTypeCode-CISIS'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '20260223120000', found versions: 1.3.0 (from ans.fr.nos#1.3.0), 1.5.0 (from ans.fr.nos#1.5.0), 20260223120000 (from ans.fr.terminologies#1.7.0). Suggested fix: change the canonical reference from 'https://mos.esante.gouv.fr/NOS/JDV_J03-XdsContentTypeCode-CISIS/FHIR/JDV-J03-XdsContentTypeCode-CISIS' to 'https://mos.esante.gouv.fr/NOS/JDV_J03-XdsContentTypeCode-CISIS/FHIR/JDV-J03-XdsContentTypeCode-CISIS|20260223120000'
 INFORMATION: StructureDefinition/pdsm-submissionset-comprehensive: StructureDefinition.differential.element[2].constraint[0]: The constraint 'constr-bind-designationtype' has no computable expression, so validators will not be able to check it
 INFORMATION: StructureDefinition/pdsm-submissionset-comprehensive: StructureDefinition.snapshot.element[16].constraint[2]: The constraint 'constr-bind-designationtype' has no computable expression, so validators will not be able to check it
+== fsh-generated/resources/StructureMap-EUtoPDSmDocumentReferenceMap.json ==
+ERROR: StructureMap.where(url = 'http://example.org/fhir/StructureMap/EUtoPDSmDocumentReference'): Conformance resource /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureMap-EUtoPDSmDocumentReferenceMap.json - the canonical URL (https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureMap/EUtoPDSmDocumentReferenceMap) does not match the URL (http://example.org/fhir/StructureMap/EUtoPDSmDocumentReference). Use the special-url parameter if you really mean for it not to match
+ERROR: StructureMap/EUtoPDSmDocumentReferenceMap: StructureMap.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. Valid display is 'France (la)' (fr) (for the language(s) 'fr-FR')
+INFORMATION: StructureMap/EUtoPDSmDocumentReferenceMap: StructureMap.group[0].rule[0].source[0]: The source statement doesn't assign a variable to the source - check that this is what is intended
+INFORMATION: StructureMap/EUtoPDSmDocumentReferenceMap: StructureMap.group[0].rule[1].source[0]: The source statement doesn't assign a variable to the source - check that this is what is intended
+ERROR: /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureMap-EUtoPDSmDocumentReferenceMap: URL Mismatch https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureMap/EUtoPDSmDocumentReferenceMap vs http://example.org/fhir/StructureMap/EUtoPDSmDocumentReference

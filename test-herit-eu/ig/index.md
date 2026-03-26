@@ -118,7 +118,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-03-26T15:43:38+00:00",
+  "date" : "2026-03-26T16:51:56+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -798,6 +798,18 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
       },
       "name" : "CI-SIS Partage-De-Documents-De-Sante - ProducteurDeDocuments",
       "description" : "Il s’agit d’un système d’information ou d’un composant de système d’information qui envoie au gestionnaire de partage de documents une  demande d’ajout de nouveaux documents et/ou des nouvelles versions de documents. Ce système fournit également les modifications des  métadonnées du document.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureMap"
+      }],
+      "reference" : {
+        "reference" : "StructureMap/EUtoPDSmDocumentReferenceMap"
+      },
+      "name" : "EUtoPDSmDocumentReferenceMap",
+      "description" : "Mapping EU EehrxfMhdDocumentReference vers PDSm DocumentReference",
       "exampleBoolean" : false
     },
     {

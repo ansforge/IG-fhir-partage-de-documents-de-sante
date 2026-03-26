@@ -1,4 +1,11 @@
 [{
+  "id" : "EUtoPDSmDocumentReferenceMap",
+  "type" : "StructureMap",
+  "url" : "http://example.org/fhir/StructureMap/EUtoPDSmDocumentReference",
+  "version" : "3.1.1",
+  "name" : "EUtoPDSmDocumentReference"
+},
+{
   "id" : "PDSm-ConsommateurDeDocuments",
   "type" : "CapabilityStatement",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/CapabilityStatement/PDSm-ConsommateurDeDocuments",

@@ -59,6 +59,10 @@
 * [PDSmAuthorOrg](SearchParameter-PDSm-List-authorOrg.md)
 * [PDSmIsArchived](SearchParameter-PDSm-isArchived.md)
 
+### StructureMaps
+
+* [EUtoPDSmDocumentReference](StructureMap-EUtoPDSmDocumentReferenceMap.md)
+
 ### Examples
 
 * [6789 (Binary)](Binary-6789.md)
