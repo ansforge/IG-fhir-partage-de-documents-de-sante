@@ -16,6 +16,7 @@ jurisdiction: urn:iso:std:iso:3166#FR "FRANCE"
 
 dependencies:
     ihe.iti.mhd: 4.2.0
+    hl7.fhir.eu.health-data-api: 1.0.0-ballot
     ans.fhir.fr.annuaire: 1.1.0
     hl7.fhir.fr.core: 2.1.0
     ans.fr.terminologies: latest
