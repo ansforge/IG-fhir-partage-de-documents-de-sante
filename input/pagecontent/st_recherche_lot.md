@@ -64,7 +64,7 @@ Le flux 05-a contient les critères suivants :
 * Rechercher les ressource de type List, correspondant à des lots de soumission dont le patient a l’identifiant 156 et dont le statut est courant.
 
 ```
-POST http://targetsystem.com/API/List?code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset&patient.identifier=156&code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset&status=current
+POST http://targetsystem.com/API/List?patient.identifier=156&code=http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes|submissionset&status=current
 ```
 
 * Rechercher les ressources de type List, correspondant à des lots de soumission dont le patient à l'identifiant 156, dont le statut est courant, ayant été créées depuis le 01/01/2021, et dont l’auteur est une professionnelle ayant pour nom de famille Dupont et prénom Emma.
