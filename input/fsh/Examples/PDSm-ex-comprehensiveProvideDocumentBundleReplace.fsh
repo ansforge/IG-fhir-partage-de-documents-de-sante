@@ -1,135 +1,141 @@
-//====================================================================
-// Bundle PDSm IT-65 : Remplacement CR bio corrigé
-//====================================================================
+// ==========================================================
+// BUNDLE PDSm IT-65 - CR BIO CORRIGÉ (JDV ANS)
+// ==========================================================
 
-Instance: PDSm-ex-comprehensiveProvideDocumentBundleReplace
+Instance: Bundle-CRBio-Replace-ANS
 InstanceOf: Bundle
 Usage: #example
-Title: "Bundle Remplacement CR bio conforme PDSm IT-65"
-Description: "Exemple complet PDSm IT-65 avec JDV ANS, remplacement d'un document CR bio"
-* meta.profile[0] = "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"
+
+* meta.profile = "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"
 * type = #transaction
-* timestamp = "2026-03-27T12:00:00+01:00"
 
-//====================================================================
-// Patient
-//====================================================================
-Instance: Patient-patient1
-InstanceOf: Patient
-Usage: #example
-* id = "patient-1"
-* identifier[0].system = "http://#example.org/patients"
-* identifier[0].value = "mrn-1234"
-* name[0].family = "Schmidt"
-* name[0].given[0] = "Dee"
-* birthDate = "1923-07-25"
-* gender = #other
+// ==========================================================
+// PATIENT (INS-NIR simulé)
+// ==========================================================
 
-//====================================================================
-// Practitioner
-//====================================================================
-Instance: Practitioner-pract1
-InstanceOf: Practitioner
-Usage: #example
-* id = "practitioner-1"
-* identifier[0].system = "http://#example.org/practitioners"
-* identifier[0].value = "prac-001"
-* name[0].family = "Dupont"
-* name[0].given[0] = "Alice"
+* entry[+].fullUrl = "urn:uuid:11111111-1111-4111-8111-111111111111"
+* entry[=].resource.resourceType = "Patient"
+* entry[=].resource.id = "patient-1"
 
-//====================================================================
-// Organization
-//====================================================================
-Instance: Organization-org1
-InstanceOf: Organization
-Usage: #example
-* id = "organization-1"
-* identifier[0].system = "http://#example.org/organizations"
-* identifier[0].value = "org-001"
-* name = "Laboratoire Central"
+* entry[=].resource.identifier.system = "urn:oid:1.2.250.1.213.1.4.8"
+* entry[=].resource.identifier.value = "189079912345678"
 
-//====================================================================
-// SubmissionSet PDSm
-//====================================================================
-Instance: List-submissionset1
-InstanceOf: List
-Usage: #example
-* id = "submissionset-1"
-* meta.profile[0] = "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-submissionset"
-* status = #current
-* mode = #working
-* code.coding[0].system = "https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes"
-* code.coding[0].code = #submissionset
-* subject.reference = "Patient/patient-1"
-* entry[0].item.reference = "DocumentReference/doc1"
+* entry[=].resource.name.family = "DUPONT"
+* entry[=].resource.name.given[0] = "JEAN"
 
-//====================================================================
-// Binary (PDF du document CR bio corrigé)
-//====================================================================
-Instance: Binary-binary1
-InstanceOf: Binary
-Usage: #example
-* id = "binary-cr-bio"
-* contentType = #application/pdf
-* data = "SGVsbG8gV29ybGQ=" // base64 PDF
+* entry[=].resource.gender = #male
+* entry[=].resource.birthDate = "1989-07-09"
 
-//====================================================================
-// DocumentReference CR bio corrigé
-//====================================================================
-Instance: DocumentReference-doc1
-InstanceOf: DocumentReference
-Usage: #example
-* id = "docref-cr-bio"
-* meta.profile[0] = "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference"
-* masterIdentifier.use = #usual
-* masterIdentifier.system = "urn:ietf:rfc:3986"
-* masterIdentifier.value = "urn:oid:1.2.250.1.213.1.1.11502"
-* status = #current
-* type.coding[0].code = #11502-CR-BIO
-* category[0].coding[0].code = #CR
-* content[0].attachment.url = "urn:uuid:binary-cr-bio"
-* content[0].attachment.contentType = #application/pdf
-* content[0].attachment.size = 12345
-* content[0].format.code = #application/pdf
-* context.practiceSetting.coding[0].code = #01
-* context.facilityType.coding[0].code = #LABO
-* context.sourcePatientInfo.reference = "Patient/patient-1"
-
-//====================================================================
-// Parameters pour le remplacement (replace)
-//====================================================================
-Instance: Parameters-replace-doc1
-InstanceOf: Parameters
-Usage: #example
-* id = "parameters-replace-cr-bio"
-* parameter[0].name = "operation"
-* parameter[0].part[0].name = "path"
-* parameter[0].part[0].valueString = "DocumentReference.status"
-* parameter[0].part[1].name = "type"
-* parameter[0].part[1].valueCode = #replace
-* parameter[0].part[2].name = "value"
-* parameter[0].part[2].valueCode = #superseded
-
-//====================================================================
-// Bundle entries
-//====================================================================
-
-* entry[+].fullUrl = "urn:uuid:submissionset-1"
-* entry[=].resource = List-submissionset1
 * entry[=].request.method = #POST
-* entry[=].request.url = "List"
+* entry[=].request.url = "Patient"
 
-* entry[+].fullUrl = "urn:uuid:binary-cr-bio"
-* entry[=].resource = Binary-binary1
+// ==========================================================
+// BINARY OLD
+// ==========================================================
+
+* entry[+].fullUrl = "urn:uuid:22222222-2222-4222-8222-222222222222"
+* entry[=].resource.resourceType = "Binary"
+* entry[=].resource.contentType = #application/pdf
+* entry[=].resource.data = "SGVsbG8="
 * entry[=].request.method = #POST
 * entry[=].request.url = "Binary"
 
-* entry[+].fullUrl = "urn:uuid:docref-cr-bio"
-* entry[=].resource = DocumentReference-doc1
+// ==========================================================
+// BINARY NEW
+// ==========================================================
+
+* entry[+].fullUrl = "urn:uuid:33333333-3333-4333-8333-333333333333"
+* entry[=].resource.resourceType = "Binary"
+* entry[=].resource.contentType = #application/pdf
+* entry[=].resource.data = "SGVsbG8="
+* entry[=].request.method = #POST
+* entry[=].request.url = "Binary"
+
+// ==========================================================
+// DOCUMENT OLD
+// ==========================================================
+
+* entry[+].fullUrl = "urn:uuid:44444444-4444-4444-8444-444444444444"
+* entry[=].resource.resourceType = "DocumentReference"
+* entry[=].resource.id = "doc-old"
+
+* entry[=].resource.meta.profile = "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference"
+
+* entry[=].resource.status = #current
+
+// 📌 JDV ANS - type document (TRE_A04)
+* entry[=].resource.type.coding.system = "https://mos.esante.gouv.fr/NOS/TRE_A04-TypeDocument"
+* entry[=].resource.type.coding.code = #11502
+
+// 📌 JDV ANS - catégorie (TRE_A05)
+* entry[=].resource.category[0].coding.system = "https://mos.esante.gouv.fr/NOS/TRE_A05-CategorieDocument"
+* entry[=].resource.category[0].coding.code = #CR
+
+// 📌 Format IHE
+* entry[=].resource.content[0].format.system = "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode"
+* entry[=].resource.content[0].format.code = #urn:ihe:iti:xds-sd:pdf:2008
+
+* entry[=].resource.content[0].attachment.contentType = #application/pdf
+* entry[=].resource.content[0].attachment.url = "urn:uuid:22222222-2222-4222-8222-222222222222"
+
+* entry[=].resource.subject.reference = "urn:uuid:11111111-1111-4111-8111-111111111111"
+
 * entry[=].request.method = #POST
 * entry[=].request.url = "DocumentReference"
 
-* entry[+].fullUrl = "urn:uuid:parameters-replace-doc"
-* entry[=].resource = Parameters-replace-doc1
-* entry[=].request.method = #PATCH
-* entry[=].request.url = "DocumentReference/docref-cr-bio"
+// ==========================================================
+// DOCUMENT NEW (REMPLACEMENT)
+// ==========================================================
+
+* entry[+].fullUrl = "urn:uuid:55555555-5555-4555-8555-555555555555"
+* entry[=].resource.resourceType = "DocumentReference"
+* entry[=].resource.id = "doc-new"
+
+* entry[=].resource.meta.profile = "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference"
+
+* entry[=].resource.status = #current
+
+// 📌 JDV ANS identiques
+* entry[=].resource.type.coding.system = "https://mos.esante.gouv.fr/NOS/TRE_A04-TypeDocument"
+* entry[=].resource.type.coding.code = #11502
+
+* entry[=].resource.category[0].coding.system = "https://mos.esante.gouv.fr/NOS/TRE_A05-CategorieDocument"
+* entry[=].resource.category[0].coding.code = #CR
+
+* entry[=].resource.content[0].format.system = "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode"
+* entry[=].resource.content[0].format.code = #urn:ihe:iti:xds-sd:pdf:2008
+
+* entry[=].resource.content[0].attachment.contentType = #application/pdf
+* entry[=].resource.content[0].attachment.url = "urn:uuid:33333333-3333-4333-8333-333333333333"
+
+* entry[=].resource.subject.reference = "urn:uuid:11111111-1111-4111-8111-111111111111"
+
+// 🔥 mécanisme PDSm officiel
+* entry[=].resource.relatesTo[0].code = #replaces
+* entry[=].resource.relatesTo[0].target.reference = "urn:uuid:44444444-4444-4444-8444-444444444444"
+
+* entry[=].request.method = #POST
+* entry[=].request.url = "DocumentReference"
+
+// ==========================================================
+// SUBMISSIONSET
+// ==========================================================
+
+* entry[+].fullUrl = "urn:uuid:66666666-6666-4666-8666-666666666666"
+* entry[=].resource.resourceType = "List"
+
+* entry[=].resource.meta.profile = "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-submissionset"
+
+* entry[=].resource.status = #current
+* entry[=].resource.mode = #working
+
+* entry[=].resource.code.coding.system = "http://ihe.net/fhir/CodeSystem/MHDlistTypes"
+* entry[=].resource.code.coding.code = #submissionset
+
+* entry[=].resource.subject.reference = "urn:uuid:11111111-1111-4111-8111-111111111111"
+
+// 📌 uniquement le nouveau doc
+* entry[=].resource.entry[0].item.reference = "urn:uuid:55555555-5555-4555-8555-555555555555"
+
+* entry[=].request.method = #POST
+* entry[=].request.url = "List"
