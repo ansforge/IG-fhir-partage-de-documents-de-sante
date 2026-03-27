@@ -63,15 +63,12 @@ Usage: #example
 
 * entry[=].resource.status = #current
 
-// 📌 JDV ANS - type document (TRE_A04)
 * entry[=].resource.type.coding.system = "https://mos.esante.gouv.fr/NOS/TRE_A04-TypeDocument"
 * entry[=].resource.type.coding.code = #11502
 
-// 📌 JDV ANS - catégorie (TRE_A05)
 * entry[=].resource.category[0].coding.system = "https://mos.esante.gouv.fr/NOS/TRE_A05-CategorieDocument"
 * entry[=].resource.category[0].coding.code = #CR
 
-// 📌 Format IHE
 * entry[=].resource.content[0].format.system = "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode"
 * entry[=].resource.content[0].format.code = #urn:ihe:iti:xds-sd:pdf:2008
 
@@ -94,8 +91,6 @@ Usage: #example
 * entry[=].resource.meta.profile = "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference"
 
 * entry[=].resource.status = #current
-
-// 📌 JDV ANS identiques
 * entry[=].resource.type.coding.system = "https://mos.esante.gouv.fr/NOS/TRE_A04-TypeDocument"
 * entry[=].resource.type.coding.code = #11502
 
@@ -110,7 +105,7 @@ Usage: #example
 
 * entry[=].resource.subject.reference = "urn:uuid:11111111-1111-4111-8111-111111111111"
 
-// 🔥 mécanisme PDSm officiel
+//  mécanisme PDSm officiel
 * entry[=].resource.relatesTo[0].code = #replaces
 * entry[=].resource.relatesTo[0].target.reference = "urn:uuid:44444444-4444-4444-8444-444444444444"
 
@@ -134,7 +129,7 @@ Usage: #example
 
 * entry[=].resource.subject.reference = "urn:uuid:11111111-1111-4111-8111-111111111111"
 
-// 📌 uniquement le nouveau doc
+//  uniquement le nouveau doc
 * entry[=].resource.entry[0].item.reference = "urn:uuid:55555555-5555-4555-8555-555555555555"
 
 * entry[=].request.method = #POST
