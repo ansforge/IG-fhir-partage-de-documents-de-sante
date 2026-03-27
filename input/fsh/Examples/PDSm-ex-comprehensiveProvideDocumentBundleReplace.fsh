@@ -109,3 +109,27 @@ Usage: #example
 * parameter[0].part[1].valueCode = #replace
 * parameter[0].part[2].name = "value"
 * parameter[0].part[2].valueCode = #superseded
+
+//====================================================================
+// Bundle entries
+//====================================================================
+
+* entry[+].fullUrl = "urn:uuid:submissionset-1"
+* entry[=].resource = List-submissionset1
+* entry[=].request.method = #POST
+* entry[=].request.url = "List"
+
+* entry[+].fullUrl = "urn:uuid:binary-cr-bio"
+* entry[=].resource = Binary-binary1
+* entry[=].request.method = #POST
+* entry[=].request.url = "Binary"
+
+* entry[+].fullUrl = "urn:uuid:docref-cr-bio"
+* entry[=].resource = DocumentReference-doc1
+* entry[=].request.method = #POST
+* entry[=].request.url = "DocumentReference"
+
+* entry[+].fullUrl = "urn:uuid:parameters-replace-doc"
+* entry[=].resource = Parameters-replace-doc1
+* entry[=].request.method = #PATCH
+* entry[=].request.url = "DocumentReference/docref-cr-bio"
