@@ -70,6 +70,7 @@ These are example instances that show what data produced and consumed by systems
 | [Exemple de lot de soumission PDSm](List-ExampleSubmissionSet.md) | Exemple conforme au profil PDSm_SubmissionSetComprehensive. |
 | [Exemple de publication simplifiée PDSm](DocumentReference-PDSmSimplifiedExample.md) | Note d'évolution suite à une consultation de suivi. |
 | [Exemple de ressource Binary - Fichier PDF](Binary-6789.md) |  |
+| [PDSm-example-comprehensiveProvideDocumentBundleReplace](Bundle-PDSm-example-comprehensiveProvideDocumentBundleReplace.md) |  |
 | [fr-patient-123](Patient-fr-patient-123.md) |  |
 | [org-example](Organization-org-example.md) |  |
 

@@ -21,7 +21,7 @@ Profil basé sur la transaction IHE "Provide Document Bundle [ITI-65]" du profil
 
 **Utilisations:**
 
-* Ce Profil n'est utilisé par aucun autre profil dans ce guide d'implémentation
+* Exemples pour ce/t/te Profil: [Bundle/PDSm-example-comprehensiveProvideDocumentBundleReplace](Bundle-PDSm-example-comprehensiveProvideDocumentBundleReplace.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.pdsm|current/StructureDefinition/pdsm-comprehensive-provide-document-bundle)
 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-comprehensive-p
   "name" : "PDSm_ComprehensiveProvideDocumentBundle",
   "title" : "PDSm Comprehensive Provide Document Bundle",
   "status" : "active",
-  "date" : "2026-03-27T10:52:18+00:00",
+  "date" : "2026-03-27T11:27:16+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

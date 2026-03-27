@@ -1,0 +1,323 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/pdsm/Bundle/PDSm-example-comprehensiveProvideDocumentBundleReplace> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "PDSm-example-comprehensiveProvideDocumentBundleReplace"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "transaction"] ; # 
+  fhir:timestamp [ fhir:v "2026-03-19T10:00:00+01:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [
+       fhir:v "urn:uuid:patient-1"^^xsd:anyURI ;
+       fhir:l <urn:uuid:patient-1>
+     ] ;
+     fhir:resource ( <urn:uuid:patient-1> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Patient"^^xsd:anyURI ;
+         fhir:l fhir:Patient
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "urn:uuid:practitioner-1"^^xsd:anyURI ;
+       fhir:l <urn:uuid:practitioner-1>
+     ] ;
+     fhir:resource ( <urn:uuid:practitioner-1> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Practitioner"^^xsd:anyURI ;
+         fhir:l fhir:Practitioner
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "urn:uuid:organization-1"^^xsd:anyURI ;
+       fhir:l <urn:uuid:organization-1>
+     ] ;
+     fhir:resource ( <urn:uuid:organization-1> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Organization"^^xsd:anyURI ;
+         fhir:l fhir:Organization
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "urn:uuid:binary-1"^^xsd:anyURI ;
+       fhir:l <urn:uuid:binary-1>
+     ] ;
+     fhir:resource ( <urn:uuid:binary-1> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Binary"^^xsd:anyURI ;
+         fhir:l fhir:Binary
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "urn:uuid:docref-1"^^xsd:anyURI ;
+       fhir:l <urn:uuid:docref-1>
+     ] ;
+     fhir:resource ( <urn:uuid:docref-1> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "DocumentReference"^^xsd:anyURI ;
+         fhir:l fhir:DocumentReference
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "urn:uuid:submission-1"^^xsd:anyURI ;
+       fhir:l <urn:uuid:submission-1>
+     ] ;
+     fhir:resource ( <urn:uuid:submission-1> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "List"^^xsd:anyURI ;
+         fhir:l fhir:List
+       ]
+     ]
+  ] ) . # 
+
+<urn:uuid:patient-1> a fhir:Patient ;
+  fhir:id [ fhir:v "patient-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/StructureDefinition/fr-core-patient"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/StructureDefinition/fr-core-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_patient-1\"> </a><p class=\"res-header-id\"><b>Narratif généré : Patient patient-1</b></p><a name=\"patient-1\"> </a><a name=\"hcpatient-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <code>https://interop.esante.gouv.fr/StructureDefinition/fr-core-patient</code></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">JEAN DUPONT (official) Male, Date de Naissance :1989-07-09 ( urn:oid:1.2.250.1.213.1.4.8#189079912345678)</p><hr/></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "urn:oid:1.2.250.1.213.1.4.8"^^xsd:anyURI ;
+       fhir:l <urn:oid:1.2.250.1.213.1.4.8>
+     ] ;
+     fhir:value [ fhir:v "189079912345678" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "DUPONT" ] ;
+     fhir:given ( [ fhir:v "JEAN" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1989-07-09"^^xsd:date] . # 
+
+<urn:uuid:practitioner-1> a fhir:Practitioner ;
+  fhir:id [ fhir:v "practitioner-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/StructureDefinition/fr-core-practitioner"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/StructureDefinition/fr-core-practitioner>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_practitioner-1\"> </a><p class=\"res-header-id\"><b>Narratif généré : Praticien practitioner-1</b></p><a name=\"practitioner-1\"> </a><a name=\"hcpractitioner-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <code>https://interop.esante.gouv.fr/StructureDefinition/fr-core-practitioner</code></p></div><p><b>identifier</b>: <code>urn:oid:1.2.250.1.71.4.2.1</code>/10000000001</p><p><b>name</b>: ALICE MARTIN </p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "urn:oid:1.2.250.1.71.4.2.1"^^xsd:anyURI ;
+       fhir:l <urn:oid:1.2.250.1.71.4.2.1>
+     ] ;
+     fhir:value [ fhir:v "10000000001" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "MARTIN" ] ;
+     fhir:given ( [ fhir:v "ALICE" ] )
+  ] ) . # 
+
+<urn:uuid:organization-1> a fhir:Organization ;
+  fhir:id [ fhir:v "organization-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/StructureDefinition/fr-core-organization"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/StructureDefinition/fr-core-organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_organization-1\"> </a><p class=\"res-header-id\"><b>Narratif généré : Organisation organization-1</b></p><a name=\"organization-1\"> </a><a name=\"hcorganization-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <code>https://interop.esante.gouv.fr/StructureDefinition/fr-core-organization</code></p></div><p><b>identifier</b>: <code>urn:oid:1.2.250.1.71.4.2.2</code>/750100015</p><p><b>name</b>: CENTRE HOSPITALIER DEMO</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ;
+       fhir:l <urn:oid:1.2.250.1.71.4.2.2>
+     ] ;
+     fhir:value [ fhir:v "750100015" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "CENTRE HOSPITALIER DEMO"] . # 
+
+<urn:uuid:binary-1> a fhir:Binary ;
+  fhir:id [ fhir:v "binary-1"] ; # 
+  fhir:contentType [ fhir:v "application/pdf"] ; # 
+  fhir:data [ fhir:v "SGVsbG8gV29ybGQ="^^xsd:base64Binary] . # 
+
+<urn:uuid:docref-1> a fhir:DocumentReference ;
+  fhir:id [ fhir:v "docref-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/StructureDefinition/PDSm-DocumentReference"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/StructureDefinition/PDSm-DocumentReference>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DocumentReference_docref-1\"> </a><p class=\"res-header-id\"><b>Narratif généré : RéférenceDocument docref-1</b></p><a name=\"docref-1\"> </a><a name=\"hcdocref-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <code>https://interop.esante.gouv.fr/StructureDefinition/PDSm-DocumentReference</code></p></div><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/6.0.2/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt #xD;#xA;#xD;#xA;This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: #xD;#xA;#xD;#xA;Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.#xD;#xA;#xD;#xA;This OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:docref-1</p><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes :{urn:oid:1.2.250.1.213.1.1.4.12 11502-CR-BIO}\">Compte rendu de biologie</span></p><p><b>category</b>: <span title=\"Codes :{urn:oid:1.2.250.1.213.1.1.4.12 CR}\">CR</span></p><p><b>subject</b>: <a href=\"Bundle-PDSm-example-comprehensiveProvideDocumentBundleReplace.html#urn-uuid-patient-1\">JEAN DUPONT (official) Male, Date de Naissance :1989-07-09 ( urn:oid:1.2.250.1.213.1.4.8#189079912345678)</a></p><p><b>date</b>: 2026-03-19 10:00:00+0100</p><p><b>author</b>: <a href=\"Bundle-PDSm-example-comprehensiveProvideDocumentBundleReplace.html#urn-uuid-practitioner-1\">Practitioner ALICE MARTIN </a></p><p><b>custodian</b>: <a href=\"Bundle-PDSm-example-comprehensiveProvideDocumentBundleReplace.html#urn-uuid-organization-1\">Organization CENTRE HOSPITALIER DEMO</a></p><p><b>securityLabel</b>: <span title=\"Codes :{http://terminology.hl7.org/CodeSystem/v3-Confidentiality N}\">normal</span></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Language</b></td><td><b>Url</b></td><td><b>Title</b></td><td><b>Creation</b></td></tr><tr><td style=\"display: none\">*</td><td>application/pdf</td><td>Français (France)</td><td><a href=\"Bundle-PDSm-example-comprehensiveProvideDocumentBundleReplace.html#urn-uuid-binary-1\">Binary: application/pdf (16 bytes base64)</a></td><td>Compte rendu biologique</td><td>2026-03-19 09:45:00+0100</td></tr></table><p><b>format</b>: inconnu: application/pdf (application/pdf)</p></blockquote><h3>Contexts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>FacilityType</b></td><td><b>PracticeSetting</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes :{urn:oid:1.2.250.1.213.1.1.4.14 LABO}\">Laboratoire</span></td><td><span title=\"Codes :{urn:oid:1.2.250.1.213.1.1.4.13 01}\">Biologie médicale</span></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+       fhir:l <urn:ietf:rfc:3986>
+     ] ;
+     fhir:value [ fhir:v "urn:uuid:docref-1" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:oid:1.2.250.1.213.1.1.4.12"^^xsd:anyURI ;
+         fhir:l <urn:oid:1.2.250.1.213.1.1.4.12>
+       ] ;
+       fhir:code [ fhir:v "11502-CR-BIO" ] ;
+       fhir:display [ fhir:v "Compte rendu de biologie" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:oid:1.2.250.1.213.1.1.4.12"^^xsd:anyURI ;
+         fhir:l <urn:oid:1.2.250.1.213.1.1.4.12>
+       ] ;
+       fhir:code [ fhir:v "CR" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:l <urn:uuid:patient-1> ;
+     fhir:reference [ fhir:v "urn:uuid:patient-1" ]
+  ] ; # 
+  fhir:date [ fhir:v "2026-03-19T10:00:00+01:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:l <urn:uuid:practitioner-1> ;
+     fhir:reference [ fhir:v "urn:uuid:practitioner-1" ]
+  ] ) ; # 
+  fhir:custodian [
+     fhir:l <urn:uuid:organization-1> ;
+     fhir:reference [ fhir:v "urn:uuid:organization-1" ]
+  ] ; # 
+  fhir:securityLabel ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-Confidentiality>
+       ] ;
+       fhir:code [ fhir:v "N" ]
+     ] )
+  ] ) ; # 
+  fhir:content ( [
+     fhir:attachment [
+       fhir:contentType [ fhir:v "application/pdf" ] ;
+       fhir:language [ fhir:v "fr-FR" ] ;
+       fhir:url [
+         fhir:v "urn:uuid:binary-1"^^xsd:anyURI ;
+         fhir:l <urn:uuid:binary-1>
+       ] ;
+       fhir:title [ fhir:v "Compte rendu biologique" ] ;
+       fhir:creation [ fhir:v "2026-03-19T09:45:00+01:00"^^xsd:dateTime ]
+     ] ;
+     fhir:format [
+       fhir:system [
+         fhir:v "urn:ietf:rfc:6838"^^xsd:anyURI ;
+         fhir:l <urn:ietf:rfc:6838>
+       ] ;
+       fhir:code [ fhir:v "application/pdf" ]
+     ]
+  ] ) ; # 
+  fhir:context [
+     fhir:facilityType [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "urn:oid:1.2.250.1.213.1.1.4.14"^^xsd:anyURI ;
+           fhir:l <urn:oid:1.2.250.1.213.1.1.4.14>
+         ] ;
+         fhir:code [ fhir:v "LABO" ] ;
+         fhir:display [ fhir:v "Laboratoire" ]
+       ] )
+     ] ;
+     fhir:practiceSetting [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "urn:oid:1.2.250.1.213.1.1.4.13"^^xsd:anyURI ;
+           fhir:l <urn:oid:1.2.250.1.213.1.1.4.13>
+         ] ;
+         fhir:code [ fhir:v "01" ] ;
+         fhir:display [ fhir:v "Biologie médicale" ]
+       ] )
+     ]
+  ] . # 
+
+<urn:uuid:submission-1> a fhir:List ;
+  fhir:id [ fhir:v "submission-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/StructureDefinition/PDSm-SubmissionSet"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/StructureDefinition/PDSm-SubmissionSet>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"List_submission-1\"> </a><p class=\"res-header-id\"><b>Narratif généré : Liste submission-1</b></p><a name=\"submission-1\"> </a><a name=\"hcsubmission-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <code>https://interop.esante.gouv.fr/StructureDefinition/PDSm-SubmissionSet</code></p></div><table class=\"clstu\"><tr><td>Date : 2026-03-19 10:00:00+0100 </td><td>Mode : Working List </td><td>Statut : Current </td><td>Code : submissionset </td></tr><tr><td>Sujet : <a href=\"Bundle-PDSm-example-comprehensiveProvideDocumentBundleReplace.html#urn-uuid-patient-1\">JEAN DUPONT (official) Male, Date de Naissance :1989-07-09 ( urn:oid:1.2.250.1.213.1.4.8#189079912345678)</a></td></tr></table><table class=\"grid\"><tr style=\"backgound-color: #eeeeee\"><td><b>Éléments</b></td></tr><tr><td><a href=\"Bundle-PDSm-example-comprehensiveProvideDocumentBundleReplace.html#urn-uuid-docref-1\">DocumentReference : identifier = UUID:docref-1; status = current; type = Compte rendu de biologie; category = CR; date = 2026-03-19 10:00:00+0100; securityLabel = normal</a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+       fhir:l <urn:ietf:rfc:3986>
+     ] ;
+     fhir:value [ fhir:v "urn:uuid:submission-1" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:mode [ fhir:v "working"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://ihe.net/fhir/CodeSystem/MHDlistTypes"^^xsd:anyURI ;
+         fhir:l <http://ihe.net/fhir/CodeSystem/MHDlistTypes>
+       ] ;
+       fhir:code [ fhir:v "submissionset" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <urn:uuid:patient-1> ;
+     fhir:reference [ fhir:v "urn:uuid:patient-1" ]
+  ] ; # 
+  fhir:date [ fhir:v "2026-03-19T10:00:00+01:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:item [
+       fhir:l <urn:uuid:docref-1> ;
+       fhir:reference [ fhir:v "urn:uuid:docref-1" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

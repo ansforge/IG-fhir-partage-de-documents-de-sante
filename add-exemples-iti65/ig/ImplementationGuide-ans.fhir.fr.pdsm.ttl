@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "PDSm"] ; # 
   fhir:title [ fhir:v "Partage de Documents de Santé en mobilité (PDSm)"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-03-27T10:52:18+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-03-27T11:27:16+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -1790,6 +1790,27 @@
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/Bundle/PDSm-example-comprehensiveProvideDocumentBundleReplace> ;
+         fhir:reference [ fhir:v "Bundle/PDSm-example-comprehensiveProvideDocumentBundleReplace" ]
+       ] ;
+       fhir:name [ fhir:v "PDSm-example-comprehensiveProvideDocumentBundleReplace" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle>
        ]
      ] [
        fhir:extension ( [

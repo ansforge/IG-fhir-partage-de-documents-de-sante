@@ -10,7 +10,7 @@
   <name value="PDSm"/>
   <title value="Partage de Documents de Santé en mobilité (PDSm)"/>
   <status value="active"/>
-  <date value="2026-03-27T10:52:18+00:00"/>
+  <date value="2026-03-27T11:27:16+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -700,6 +700,16 @@
       <name value="PDSm-DocumentReference-period-start"/>
       <description value="Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément context.period.start correspondant à lobjet dateDebutActe"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/PDSm-example-comprehensiveProvideDocumentBundleReplace"/>
+      </reference>
+      <name value="PDSm-example-comprehensiveProvideDocumentBundleReplace"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

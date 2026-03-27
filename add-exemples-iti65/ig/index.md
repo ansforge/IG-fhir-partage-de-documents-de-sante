@@ -112,7 +112,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-03-27T10:52:18+00:00",
+  "date" : "2026-03-27T11:27:16+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -987,6 +987,17 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
       "name" : "PDSm-DocumentReference-period-start",
       "description" : "Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément context.period.start correspondant à lobjet dateDebutActe",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/PDSm-example-comprehensiveProvideDocumentBundleReplace"
+      },
+      "name" : "PDSm-example-comprehensiveProvideDocumentBundleReplace",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"
     },
     {
       "extension" : [{
