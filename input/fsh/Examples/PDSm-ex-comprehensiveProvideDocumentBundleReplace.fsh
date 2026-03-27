@@ -70,7 +70,7 @@ Instance: Binary-binary1
 InstanceOf: Binary
 Usage: #example
 * id = "binary-cr-bio"
-* contentType = "application/pdf"
+* contentType = #application/pdf
 * data = "SGVsbG8gV29ybGQ=" // base64 PDF
 
 //====================================================================
