@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="practitioner-1"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : Praticien practitioner-1</b></p><a name="practitioner-1"> </a><a name="hcpractitioner-1"> </a><p><b>identifier</b>: <code>http://#example.org/practitioners</code>/prac-001</p><p><b>name</b>: Alice Dupont </p></div>
+  </text>
+  <identifier>
+    <system value="http://#example.org/practitioners"/>
+    <value value="prac-001"/>
+  </identifier>
+  <name>
+    <family value="Dupont"/>
+    <given value="Alice"/>
+  </name>
+</Practitioner>

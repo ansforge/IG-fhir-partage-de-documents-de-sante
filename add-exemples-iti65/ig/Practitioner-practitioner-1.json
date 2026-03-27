@@ -1,0 +1,16 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "practitioner-1",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Praticien practitioner-1</b></p><a name=\"practitioner-1\"> </a><a name=\"hcpractitioner-1\"> </a><p><b>identifier</b>: <code>http://#example.org/practitioners</code>/prac-001</p><p><b>name</b>: Alice Dupont </p></div>"
+  },
+  "identifier" : [{
+    "system" : "http://#example.org/practitioners",
+    "value" : "prac-001"
+  }],
+  "name" : [{
+    "family" : "Dupont",
+    "given" : ["Alice"]
+  }]
+}

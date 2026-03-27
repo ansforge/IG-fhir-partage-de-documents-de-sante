@@ -112,7 +112,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-03-27T11:27:16+00:00",
+  "date" : "2026-03-27T16:10:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -755,6 +755,29 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/binary-cr-bio"
+      },
+      "name" : "Binary-binary1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/PDSm-ex-comprehensiveProvideDocumentBundleReplace"
+      },
+      "name" : "Bundle Remplacement CR bio conforme PDSm IT-65",
+      "description" : "Exemple complet PDSm IT-65 avec JDV ANS, remplacement d'un document CR bio",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
       }],
       "reference" : {
@@ -787,6 +810,17 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
       "name" : "CI-SIS Partage-De-Documents-De-Sante - ProducteurDeDocuments",
       "description" : "Il s’agit d’un système d’information ou d’un composant de système d’information qui envoie au gestionnaire de partage de documents une  demande d’ajout de nouveaux documents et/ou des nouvelles versions de documents. Ce système fournit également les modifications des  métadonnées du document.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DocumentReference"
+      }],
+      "reference" : {
+        "reference" : "DocumentReference/docref-cr-bio"
+      },
+      "name" : "DocumentReference-doc1",
+      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -872,12 +906,56 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "List"
+      }],
+      "reference" : {
+        "reference" : "List/submissionset-1"
+      },
+      "name" : "List-submissionset1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Organization"
       }],
       "reference" : {
         "reference" : "Organization/org-example"
       },
       "name" : "org-example",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/organization-1"
+      },
+      "name" : "Organization-org1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Parameters"
+      }],
+      "reference" : {
+        "reference" : "Parameters/parameters-replace-cr-bio"
+      },
+      "name" : "Parameters-replace-doc1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/patient-1"
+      },
+      "name" : "Patient-patient1",
       "exampleBoolean" : true
     },
     {
@@ -991,17 +1069,6 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/PDSm-example-comprehensiveProvideDocumentBundleReplace"
-      },
-      "name" : "PDSm-example-comprehensiveProvideDocumentBundleReplace",
-      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
       }],
       "reference" : {
@@ -1082,6 +1149,17 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
       "name" : "PDSm_isArchived",
       "description" : "Extension définie par le volet ANS \"Volet Partage de documents de santé en mobilité\" sur les ressources List et DocumentReference pour distinguer les lots de soumission et les fiches archivés des actives.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/practitioner-1"
+      },
+      "name" : "Practitioner-pract1",
+      "exampleBoolean" : true
     }],
     "page" : {
       "extension" : [{

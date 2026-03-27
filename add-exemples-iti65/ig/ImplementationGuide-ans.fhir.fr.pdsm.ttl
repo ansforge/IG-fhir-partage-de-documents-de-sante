@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "PDSm"] ; # 
   fhir:title [ fhir:v "Partage de Documents de Santé en mobilité (PDSm)"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-03-27T11:27:16+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-03-27T16:10:13+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -1379,6 +1379,48 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "Binary"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/Binary/binary-cr-bio> ;
+         fhir:reference [ fhir:v "Binary/binary-cr-bio" ]
+       ] ;
+       fhir:name [ fhir:v "Binary-binary1" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/Bundle/PDSm-ex-comprehensiveProvideDocumentBundleReplace> ;
+         fhir:reference [ fhir:v "Bundle/PDSm-ex-comprehensiveProvideDocumentBundleReplace" ]
+       ] ;
+       fhir:name [ fhir:v "Bundle Remplacement CR bio conforme PDSm IT-65" ] ;
+       fhir:description [ fhir:v "Exemple complet PDSm IT-65 avec JDV ANS, remplacement d'un document CR bio" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "CapabilityStatement"
          ]
        ] ) ;
@@ -1433,6 +1475,26 @@
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "DocumentReference"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/DocumentReference/docref-cr-bio> ;
+         fhir:reference [ fhir:v "DocumentReference/docref-cr-bio" ]
+       ] ;
+       fhir:name [ fhir:v "DocumentReference-doc1" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
        ]
      ] [
        fhir:extension ( [
@@ -1590,6 +1652,26 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "List"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/List/submissionset-1> ;
+         fhir:reference [ fhir:v "List/submissionset-1" ]
+       ] ;
+       fhir:name [ fhir:v "List-submissionset1" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "Organization"
          ]
        ] ) ;
@@ -1598,6 +1680,66 @@
          fhir:reference [ fhir:v "Organization/org-example" ]
        ] ;
        fhir:name [ fhir:v "org-example" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/Organization/organization-1> ;
+         fhir:reference [ fhir:v "Organization/organization-1" ]
+       ] ;
+       fhir:name [ fhir:v "Organization-org1" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Parameters"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/Parameters/parameters-replace-cr-bio> ;
+         fhir:reference [ fhir:v "Parameters/parameters-replace-cr-bio" ]
+       ] ;
+       fhir:name [ fhir:v "Parameters-replace-doc1" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Patient"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/Patient/patient-1> ;
+         fhir:reference [ fhir:v "Patient/patient-1" ]
+       ] ;
+       fhir:name [ fhir:v "Patient-patient1" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -1799,27 +1941,6 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "Bundle"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/Bundle/PDSm-example-comprehensiveProvideDocumentBundleReplace> ;
-         fhir:reference [ fhir:v "Bundle/PDSm-example-comprehensiveProvideDocumentBundleReplace" ]
-       ] ;
-       fhir:name [ fhir:v "PDSm-example-comprehensiveProvideDocumentBundleReplace" ] ;
-       fhir:example [
-         a fhir:Canonical ;
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"^^xsd:anyURI ;
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
            fhir:v "SearchParameter"
          ]
        ] ) ;
@@ -1958,6 +2079,26 @@
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/Practitioner/practitioner-1> ;
+         fhir:reference [ fhir:v "Practitioner/practitioner-1" ]
+       ] ;
+       fhir:name [ fhir:v "Practitioner-pract1" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
        ]
      ] ) ;
      fhir:page [

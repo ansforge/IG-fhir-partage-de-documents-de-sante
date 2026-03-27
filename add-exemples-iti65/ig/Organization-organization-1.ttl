@@ -1,0 +1,26 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/pdsm/Organization/organization-1> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "organization-1"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Organisation organization-1</b></p><a name=\"organization-1\"> </a><a name=\"hcorganization-1\"> </a><p><b>identifier</b>: <code>http://#example.org/organizations</code>/org-001</p><p><b>name</b>: Laboratoire Central</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://#example.org/organizations"^^xsd:anyURI ;
+       fhir:l <http://#example.org/organizations>
+     ] ;
+     fhir:value [ fhir:v "org-001" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Laboratoire Central"] . # 
+
+# -------------------------------------------------------------------------------------
+

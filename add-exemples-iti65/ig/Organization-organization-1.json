@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Organization",
+  "id" : "organization-1",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Organisation organization-1</b></p><a name=\"organization-1\"> </a><a name=\"hcorganization-1\"> </a><p><b>identifier</b>: <code>http://#example.org/organizations</code>/org-001</p><p><b>name</b>: Laboratoire Central</p></div>"
+  },
+  "identifier" : [{
+    "system" : "http://#example.org/organizations",
+    "value" : "org-001"
+  }],
+  "name" : "Laboratoire Central"
+}

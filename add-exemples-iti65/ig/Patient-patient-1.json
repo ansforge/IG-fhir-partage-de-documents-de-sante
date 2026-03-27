@@ -1,0 +1,18 @@
+{
+  "resourceType" : "Patient",
+  "id" : "patient-1",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Patient patient-1</b></p><a name=\"patient-1\"> </a><a name=\"hcpatient-1\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Dee Schmidt  Other, Date de Naissance :1923-07-25 ( http://#example.org/patients#mrn-1234)</p><hr/></div>"
+  },
+  "identifier" : [{
+    "system" : "http://#example.org/patients",
+    "value" : "mrn-1234"
+  }],
+  "name" : [{
+    "family" : "Schmidt",
+    "given" : ["Dee"]
+  }],
+  "gender" : "other",
+  "birthDate" : "1923-07-25"
+}

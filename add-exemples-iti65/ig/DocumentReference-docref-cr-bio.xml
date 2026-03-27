@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DocumentReference xmlns="http://hl7.org/fhir">
+  <id value="docref-cr-bio"/>
+  <meta>
+    <profile value="https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : RéférenceDocument docref-cr-bio</b></p><a name="docref-cr-bio"> </a><a name="hcdocref-cr-bio"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <code>https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference</code></p></div><p><b>masterIdentifier</b>: <a href="http://terminology.hl7.org/6.0.2/NamingSystem-uri.html" title="As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt 
+
+This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: 
+
+Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.
+
+This OID may also be used in CD.codeSystem.">Uniform Resource Identifier (URI)</a>/urn:oid:1.2.250.1.213.1.1.11502 (utilisation : usual, )</p><p><b>status</b>: Current</p><p><b>type</b>: <span title="Codes :">11502-CR-BIO</span></p><p><b>category</b>: <span title="Codes :">CR</span></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ContentType</b></td><td><b>Url</b></td><td><b>Size</b></td></tr><tr><td style="display: none">*</td><td>application/pdf</td><td>urn:uuid:binary-cr-bio</td><td>12345</td></tr></table><p><b>format</b>: [non précisé]: application/pdf (application/pdf)</p></blockquote><h3>Contexts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>FacilityType</b></td><td><b>PracticeSetting</b></td><td><b>SourcePatientInfo</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes :">LABO</span></td><td><span title="Codes :">01</span></td><td><a href="Patient-patient-1.html">Dee Schmidt  Other, Date de Naissance :1923-07-25 ( http://#example.org/patients#mrn-1234)</a></td></tr></table></div>
+  </text>
+  <masterIdentifier>
+    <use value="usual"/>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:1.2.250.1.213.1.1.11502"/>
+  </masterIdentifier>
+  <status value="current"/>
+  <type>
+    <coding>
+      <code value="11502-CR-BIO"/>
+    </coding>
+  </type>
+  <category>
+    <coding>
+      <code value="CR"/>
+    </coding>
+  </category>
+  <content>
+    <attachment>
+      <contentType value="application/pdf"/>
+      <url value="urn:uuid:binary-cr-bio"/>
+      <size value="12345"/>
+    </attachment>
+    <format>
+      <code value="application/pdf"/>
+    </format>
+  </content>
+  <context>
+    <facilityType>
+      <coding>
+        <code value="LABO"/>
+      </coding>
+    </facilityType>
+    <practiceSetting>
+      <coding>
+        <code value="01"/>
+      </coding>
+    </practiceSetting>
+    <sourcePatientInfo>
+      <reference value="Patient/patient-1"/>
+    </sourcePatientInfo>
+  </context>
+</DocumentReference>

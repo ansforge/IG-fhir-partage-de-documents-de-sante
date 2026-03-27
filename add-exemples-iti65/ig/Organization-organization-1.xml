@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="organization-1"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : Organisation organization-1</b></p><a name="organization-1"> </a><a name="hcorganization-1"> </a><p><b>identifier</b>: <code>http://#example.org/organizations</code>/org-001</p><p><b>name</b>: Laboratoire Central</p></div>
+  </text>
+  <identifier>
+    <system value="http://#example.org/organizations"/>
+    <value value="org-001"/>
+  </identifier>
+  <name value="Laboratoire Central"/>
+</Organization>

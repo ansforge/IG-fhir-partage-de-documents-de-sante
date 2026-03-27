@@ -10,7 +10,7 @@
   <name value="PDSm"/>
   <title value="Partage de Documents de Santé en mobilité (PDSm)"/>
   <status value="active"/>
-  <date value="2026-03-27T11:27:16+00:00"/>
+  <date value="2026-03-27T16:10:13+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -487,6 +487,27 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/binary-cr-bio"/>
+      </reference>
+      <name value="Binary-binary1"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/PDSm-ex-comprehensiveProvideDocumentBundleReplace"/>
+      </reference>
+      <name value="Bundle Remplacement CR bio conforme PDSm IT-65"/>
+      <description value="Exemple complet PDSm IT-65 avec JDV ANS, remplacement d'un document CR bio"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CapabilityStatement"/>
       </extension>
       <reference>
@@ -517,6 +538,16 @@
       <name value="CI-SIS Partage-De-Documents-De-Sante - ProducteurDeDocuments"/>
       <description value="Il s’agit d’un système d’information ou d’un composant de système d’information qui envoie au gestionnaire de partage de documents une  demande d’ajout de nouveaux documents et/ou des nouvelles versions de documents. Ce système fournit également les modifications des  métadonnées du document."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/docref-cr-bio"/>
+      </reference>
+      <name value="DocumentReference-doc1"/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -594,12 +625,52 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="List"/>
+      </extension>
+      <reference>
+        <reference value="List/submissionset-1"/>
+      </reference>
+      <name value="List-submissionset1"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Organization"/>
       </extension>
       <reference>
         <reference value="Organization/org-example"/>
       </reference>
       <name value="org-example"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/organization-1"/>
+      </reference>
+      <name value="Organization-org1"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/parameters-replace-cr-bio"/>
+      </reference>
+      <name value="Parameters-replace-doc1"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/patient-1"/>
+      </reference>
+      <name value="Patient-patient1"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -703,16 +774,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/PDSm-example-comprehensiveProvideDocumentBundleReplace"/>
-      </reference>
-      <name value="PDSm-example-comprehensiveProvideDocumentBundleReplace"/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="SearchParameter"/>
       </extension>
       <reference>
@@ -787,6 +848,16 @@
       <name value="PDSm_isArchived"/>
       <description value="Extension définie par le volet ANS &quot;Volet Partage de documents de santé en mobilité&quot; sur les ressources List et DocumentReference pour distinguer les lots de soumission et les fiches archivés des actives."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/practitioner-1"/>
+      </reference>
+      <name value="Practitioner-pract1"/>
+      <exampleBoolean value="true"/>
     </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">

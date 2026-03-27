@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Parameters",
+  "id" : "parameters-replace-cr-bio",
+  "parameter" : [{
+    "name" : "operation",
+    "part" : [{
+      "name" : "path",
+      "valueString" : "DocumentReference.status"
+    },
+    {
+      "name" : "type",
+      "valueCode" : "replace"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "superseded"
+    }]
+  }]
+}

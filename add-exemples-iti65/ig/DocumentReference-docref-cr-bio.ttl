@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/pdsm/DocumentReference/docref-cr-bio> a fhir:DocumentReference ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "docref-cr-bio"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : RéférenceDocument docref-cr-bio</b></p><a name=\"docref-cr-bio\"> </a><a name=\"hcdocref-cr-bio\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <code>https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference</code></p></div><p><b>masterIdentifier</b>: <a href=\"http://terminology.hl7.org/6.0.2/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt #xD;#xA;#xD;#xA;This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: #xD;#xA;#xD;#xA;Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.#xD;#xA;#xD;#xA;This OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:oid:1.2.250.1.213.1.1.11502 (utilisation : usual, )</p><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes :\">11502-CR-BIO</span></p><p><b>category</b>: <span title=\"Codes :\">CR</span></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Url</b></td><td><b>Size</b></td></tr><tr><td style=\"display: none\">*</td><td>application/pdf</td><td>urn:uuid:binary-cr-bio</td><td>12345</td></tr></table><p><b>format</b>: [non précisé]: application/pdf (application/pdf)</p></blockquote><h3>Contexts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>FacilityType</b></td><td><b>PracticeSetting</b></td><td><b>SourcePatientInfo</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes :\">LABO</span></td><td><span title=\"Codes :\">01</span></td><td><a href=\"Patient-patient-1.html\">Dee Schmidt  Other, Date de Naissance :1923-07-25 ( http://#example.org/patients#mrn-1234)</a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:masterIdentifier [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:system [
+       fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+       fhir:l <urn:ietf:rfc:3986>
+     ] ;
+     fhir:value [ fhir:v "urn:oid:1.2.250.1.213.1.1.11502" ]
+  ] ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:code [ fhir:v "11502-CR-BIO" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:code [ fhir:v "CR" ]
+     ] )
+  ] ) ; # 
+  fhir:content ( [
+     fhir:attachment [
+       fhir:contentType [ fhir:v "application/pdf" ] ;
+       fhir:url [
+         fhir:v "urn:uuid:binary-cr-bio"^^xsd:anyURI ;
+         fhir:l <urn:uuid:binary-cr-bio>
+       ] ;
+       fhir:size [ fhir:v "12345"^^xsd:nonNegativeInteger ]
+     ] ;
+     fhir:format [
+       fhir:code [ fhir:v "application/pdf" ]
+     ]
+  ] ) ; # 
+  fhir:context [
+     fhir:facilityType [
+       fhir:coding ( [
+         fhir:code [ fhir:v "LABO" ]
+       ] )
+     ] ;
+     fhir:practiceSetting [
+       fhir:coding ( [
+         fhir:code [ fhir:v "01" ]
+       ] )
+     ] ;
+     fhir:sourcePatientInfo [
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/Patient/patient-1> ;
+       fhir:reference [ fhir:v "Patient/patient-1" ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
