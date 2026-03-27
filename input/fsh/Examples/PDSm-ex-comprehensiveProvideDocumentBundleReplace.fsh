@@ -71,7 +71,7 @@ InstanceOf: Binary
 Usage: #example
 * id = "binary-cr-bio"
 * contentType = "application/pdf"
-* data = "JVBERi0xLjQKJ..." // base64 PDF
+* data = "SGVsbG8gV29ybGQ=" // base64 PDF
 
 //====================================================================
 // DocumentReference CR bio corrigé
