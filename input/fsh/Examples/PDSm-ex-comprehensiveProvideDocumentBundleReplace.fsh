@@ -65,7 +65,7 @@ Instance: binary-1
 InstanceOf: Binary
 Usage: #inline
 * contentType = #application/pdf
-* data = "JVBERi0xLjQKJ..."
+* data = "SGVsbG8gV29ybGQ="
 
 Instance: docref-1
 InstanceOf: DocumentReference
