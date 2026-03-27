@@ -4,7 +4,7 @@
 
 Instance: PDSm-ex-comprehensiveProvideDocumentBundleReplace
 InstanceOf: Bundle
-Usage: Example
+Usage: #example
 Title: "Bundle Remplacement CR bio conforme PDSm IT-65"
 Description: "Exemple complet PDSm IT-65 avec JDV ANS, remplacement d'un document CR bio"
 * meta.profile[0] = "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"
@@ -16,9 +16,9 @@ Description: "Exemple complet PDSm IT-65 avec JDV ANS, remplacement d'un documen
 //====================================================================
 Instance: Patient-patient1
 InstanceOf: Patient
-Usage: Example
+Usage: #example
 * id = "patient-1"
-* identifier[0].system = "http://example.org/patients"
+* identifier[0].system = "http://#example.org/patients"
 * identifier[0].value = "mrn-1234"
 * name[0].family = "Schmidt"
 * name[0].given[0] = "Dee"
@@ -30,9 +30,9 @@ Usage: Example
 //====================================================================
 Instance: Practitioner-pract1
 InstanceOf: Practitioner
-Usage: Example
+Usage: #example
 * id = "practitioner-1"
-* identifier[0].system = "http://example.org/practitioners"
+* identifier[0].system = "http://#example.org/practitioners"
 * identifier[0].value = "prac-001"
 * name[0].family = "Dupont"
 * name[0].given[0] = "Alice"
@@ -42,9 +42,9 @@ Usage: Example
 //====================================================================
 Instance: Organization-org1
 InstanceOf: Organization
-Usage: Example
+Usage: #example
 * id = "organization-1"
-* identifier[0].system = "http://example.org/organizations"
+* identifier[0].system = "http://#example.org/organizations"
 * identifier[0].value = "org-001"
 * name = "Laboratoire Central"
 
@@ -53,7 +53,7 @@ Usage: Example
 //====================================================================
 Instance: List-submissionset1
 InstanceOf: List
-Usage: Example
+Usage: #example
 * id = "submissionset-1"
 * meta.profile[0] = "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-submissionset"
 * status = #current
@@ -68,7 +68,7 @@ Usage: Example
 //====================================================================
 Instance: Binary-binary1
 InstanceOf: Binary
-Usage: Example
+Usage: #example
 * id = "binary-cr-bio"
 * contentType = "application/pdf"
 * data = "JVBERi0xLjQKJ..." // base64 PDF
@@ -78,7 +78,7 @@ Usage: Example
 //====================================================================
 Instance: DocumentReference-doc1
 InstanceOf: DocumentReference
-Usage: Example
+Usage: #example
 * id = "docref-cr-bio"
 * meta.profile[0] = "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference"
 * masterIdentifier.use = #usual
@@ -100,7 +100,7 @@ Usage: Example
 //====================================================================
 Instance: Parameters-replace-doc1
 InstanceOf: Parameters
-Usage: Example
+Usage: #example
 * id = "parameters-replace-cr-bio"
 * parameter[0].name = "operation"
 * parameter[0].part[0].name = "path"
