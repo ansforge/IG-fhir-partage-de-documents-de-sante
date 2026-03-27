@@ -1,9 +1,0 @@
-{
-  "resourceType" : "Bundle",
-  "id" : "PDSm-ex-comprehensiveProvideDocumentBundleReplace",
-  "meta" : {
-    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"]
-  },
-  "type" : "transaction",
-  "timestamp" : "2026-03-27T12:00:00+01:00"
-}

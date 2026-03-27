@@ -1,0 +1,199 @@
+# Bundle-CRBio-Replace-ANS - Partage de Documents de Santé en mobilité (PDSm) v3.1.1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Bundle-CRBio-Replace-ANS**
+
+## Example Bundle: Bundle-CRBio-Replace-ANS
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Bundle",
+  "id" : "Bundle-CRBio-Replace-ANS",
+  "meta" : {
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"]
+  },
+  "type" : "transaction",
+  "entry" : [{
+    "fullUrl" : "urn:uuid:11111111-1111-4111-8111-111111111111",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "patient-1",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_patient-1\"> </a><p class=\"res-header-id\"><b>Narratif généré : Patient patient-1</b></p><a name=\"patient-1\"> </a><a name=\"hcpatient-1\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">JEAN DUPONT  Male, Date de Naissance :1989-07-09 ( urn:oid:1.2.250.1.213.1.4.8#189079912345678)</p><hr/></div>"
+      },
+      "identifier" : [{
+        "system" : "urn:oid:1.2.250.1.213.1.4.8",
+        "value" : "189079912345678"
+      }],
+      "name" : [{
+        "family" : "DUPONT",
+        "given" : ["JEAN"]
+      }],
+      "gender" : "male",
+      "birthDate" : "1989-07-09"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Patient"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:22222222-2222-4222-8222-222222222222",
+    "resource" : {
+      "resourceType" : "Binary",
+      "contentType" : "application/pdf",
+      "data" : "SGVsbG8="
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Binary"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:33333333-3333-4333-8333-333333333333",
+    "resource" : {
+      "resourceType" : "Binary",
+      "contentType" : "application/pdf",
+      "data" : "SGVsbG8="
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Binary"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:44444444-4444-4444-8444-444444444444",
+    "resource" : {
+      "resourceType" : "DocumentReference",
+      "id" : "doc-old",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DocumentReference_doc-old\"> </a><p class=\"res-header-id\"><b>Narratif généré : RéférenceDocument doc-old</b></p><a name=\"doc-old\"> </a><a name=\"hcdoc-old\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <code>https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference</code></p></div><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_A04-TypeDocument 11502}\">11502</span></p><p><b>category</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_A05-CategorieDocument CR}\">CR</span></p><p><b>subject</b>: <a href=\"Bundle-Bundle-CRBio-Replace-ANS.html#urn-uuid-11111111-1111-4111-8111-111111111111\">JEAN DUPONT  Male, Date de Naissance :1989-07-09 ( urn:oid:1.2.250.1.213.1.4.8#189079912345678)</a></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Url</b></td></tr><tr><td style=\"display: none\">*</td><td>application/pdf</td><td><a href=\"Bundle-Bundle-CRBio-Replace-ANS.html#urn-uuid-22222222-2222-4222-8222-222222222222\">Binary: application/pdf (8 bytes base64)</a></td></tr></table><p><b>format</b>: <a href=\"https://profiles.ihe.net/fhir/ihe.formatcode.fhir/1.1.0/CodeSystem-formatcode.html#formatcode-urn.58ihe.58iti.58xds-sd.58pdf.582008\">IHE Format Code set for use with Document Sharing: urn:ihe:iti:xds-sd:pdf:2008</a> (ITI XDS-SD PDF)</p></blockquote></div>"
+      },
+      "status" : "current",
+      "type" : {
+        "coding" : [{
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A04-TypeDocument",
+          "code" : "11502"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-CategorieDocument",
+          "code" : "CR"
+        }]
+      }],
+      "subject" : {
+        "reference" : "urn:uuid:11111111-1111-4111-8111-111111111111"
+      },
+      "content" : [{
+        "attachment" : {
+          "contentType" : "application/pdf",
+          "url" : "urn:uuid:22222222-2222-4222-8222-222222222222"
+        },
+        "format" : {
+          "system" : "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+          "code" : "urn:ihe:iti:xds-sd:pdf:2008"
+        }
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "DocumentReference"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:55555555-5555-4555-8555-555555555555",
+    "resource" : {
+      "resourceType" : "DocumentReference",
+      "id" : "doc-new",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DocumentReference_doc-new\"> </a><p class=\"res-header-id\"><b>Narratif généré : RéférenceDocument doc-new</b></p><a name=\"doc-new\"> </a><a name=\"hcdoc-new\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <code>https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference</code></p></div><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_A04-TypeDocument 11502}\">11502</span></p><p><b>category</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_A05-CategorieDocument CR}\">CR</span></p><p><b>subject</b>: <a href=\"Bundle-Bundle-CRBio-Replace-ANS.html#urn-uuid-11111111-1111-4111-8111-111111111111\">JEAN DUPONT  Male, Date de Naissance :1989-07-09 ( urn:oid:1.2.250.1.213.1.4.8#189079912345678)</a></p><h3>RelatesTos</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Target</b></td></tr><tr><td style=\"display: none\">*</td><td>Replaces</td><td><a href=\"Bundle-Bundle-CRBio-Replace-ANS.html#urn-uuid-44444444-4444-4444-8444-444444444444\">DocumentReference : status = current; type = 11502; category = CR</a></td></tr></table><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Url</b></td></tr><tr><td style=\"display: none\">*</td><td>application/pdf</td><td><a href=\"Bundle-Bundle-CRBio-Replace-ANS.html#urn-uuid-33333333-3333-4333-8333-333333333333\">Binary: application/pdf (8 bytes base64)</a></td></tr></table><p><b>format</b>: <a href=\"https://profiles.ihe.net/fhir/ihe.formatcode.fhir/1.1.0/CodeSystem-formatcode.html#formatcode-urn.58ihe.58iti.58xds-sd.58pdf.582008\">IHE Format Code set for use with Document Sharing: urn:ihe:iti:xds-sd:pdf:2008</a> (ITI XDS-SD PDF)</p></blockquote></div>"
+      },
+      "status" : "current",
+      "type" : {
+        "coding" : [{
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A04-TypeDocument",
+          "code" : "11502"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-CategorieDocument",
+          "code" : "CR"
+        }]
+      }],
+      "subject" : {
+        "reference" : "urn:uuid:11111111-1111-4111-8111-111111111111"
+      },
+      "relatesTo" : [{
+        "code" : "replaces",
+        "target" : {
+          "reference" : "urn:uuid:44444444-4444-4444-8444-444444444444"
+        }
+      }],
+      "content" : [{
+        "attachment" : {
+          "contentType" : "application/pdf",
+          "url" : "urn:uuid:33333333-3333-4333-8333-333333333333"
+        },
+        "format" : {
+          "system" : "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+          "code" : "urn:ihe:iti:xds-sd:pdf:2008"
+        }
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "DocumentReference"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:66666666-6666-4666-8666-666666666666",
+    "resource" : {
+      "resourceType" : "List",
+      "meta" : {
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-submissionset"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"List_null\"> </a><p class=\"res-header-id\"><b>Narratif généré : Liste </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <code>https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-submissionset</code></p></div><table class=\"clstu\"><tr><td>Mode : Working List </td><td>Statut : Current </td><td>Code : submissionset </td></tr><tr><td>Sujet : <a href=\"Bundle-Bundle-CRBio-Replace-ANS.html#urn-uuid-11111111-1111-4111-8111-111111111111\">JEAN DUPONT  Male, Date de Naissance :1989-07-09 ( urn:oid:1.2.250.1.213.1.4.8#189079912345678)</a></td></tr></table><table class=\"grid\"><tr style=\"backgound-color: #eeeeee\"><td><b>Éléments</b></td></tr><tr><td><a href=\"Bundle-Bundle-CRBio-Replace-ANS.html#urn-uuid-55555555-5555-4555-8555-555555555555\">DocumentReference : status = current; type = 11502; category = CR</a></td></tr></table></div>"
+      },
+      "status" : "current",
+      "mode" : "working",
+      "code" : {
+        "coding" : [{
+          "system" : "http://ihe.net/fhir/CodeSystem/MHDlistTypes",
+          "code" : "submissionset"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:11111111-1111-4111-8111-111111111111"
+      },
+      "entry" : [{
+        "item" : {
+          "reference" : "urn:uuid:55555555-5555-4555-8555-555555555555"
+        }
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "List"
+    }
+  }]
+}
+
+```

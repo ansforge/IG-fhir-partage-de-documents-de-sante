@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-ext-intended-re
   "version" : "3.1.1",
   "name" : "PDSm_intendedRecipient",
   "status" : "active",
-  "date" : "2026-03-27T16:10:13+00:00",
+  "date" : "2026-03-27T16:30:06+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

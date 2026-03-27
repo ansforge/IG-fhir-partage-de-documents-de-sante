@@ -64,20 +64,13 @@ These are example instances that show what data produced and consumed by systems
 
 | | |
 | :--- | :--- |
-| [Binary-binary1](Binary-binary-cr-bio.md) |  |
-| [Bundle Remplacement CR bio conforme PDSm IT-65](Bundle-PDSm-ex-comprehensiveProvideDocumentBundleReplace.md) | Exemple complet PDSm IT-65 avec JDV ANS, remplacement d'un document CR bio |
-| [DocumentReference-doc1](DocumentReference-docref-cr-bio.md) |  |
+| [Bundle-CRBio-Replace-ANS](Bundle-Bundle-CRBio-Replace-ANS.md) |  |
 | [Exemple de Classeur PDSm](List-ExampleFolder.md) | Exemple d’une instance conforme au profil PDSm_FolderComprehensive regroupant des fiches de documents. |
 | [Exemple de DocumentReference pour PDSm](DocumentReference-exemple-pdsm-documentreference.md) | Exemple illustratif d’un DocumentReference conforme au profil PDSm_ComprehensiveDocumentReference. |
 | [Exemple de bundle de type transaction-response du flux 2](Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.md) |  |
 | [Exemple de lot de soumission PDSm](List-ExampleSubmissionSet.md) | Exemple conforme au profil PDSm_SubmissionSetComprehensive. |
 | [Exemple de publication simplifiée PDSm](DocumentReference-PDSmSimplifiedExample.md) | Note d'évolution suite à une consultation de suivi. |
 | [Exemple de ressource Binary - Fichier PDF](Binary-6789.md) |  |
-| [List-submissionset1](List-submissionset-1.md) |  |
-| [Organization-org1](Organization-organization-1.md) |  |
-| [Parameters-replace-doc1](Parameters-parameters-replace-cr-bio.md) |  |
-| [Patient-patient1](Patient-patient-1.md) |  |
-| [Practitioner-pract1](Practitioner-practitioner-1.md) |  |
 | [fr-patient-123](Patient-fr-patient-123.md) |  |
 | [org-example](Organization-org-example.md) |  |
 

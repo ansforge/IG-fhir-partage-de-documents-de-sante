@@ -1,0 +1,272 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/pdsm/Bundle/Bundle-CRBio-Replace-ANS> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Bundle-CRBio-Replace-ANS"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "transaction"] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [
+       fhir:v "urn:uuid:11111111-1111-4111-8111-111111111111"^^xsd:anyURI ;
+       fhir:l <urn:uuid:11111111-1111-4111-8111-111111111111>
+     ] ;
+     fhir:resource ( <urn:uuid:11111111-1111-4111-8111-111111111111> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Patient"^^xsd:anyURI ;
+         fhir:l fhir:Patient
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "urn:uuid:22222222-2222-4222-8222-222222222222"^^xsd:anyURI ;
+       fhir:l <urn:uuid:22222222-2222-4222-8222-222222222222>
+     ] ;
+     fhir:resource ( <urn:uuid:22222222-2222-4222-8222-222222222222> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Binary"^^xsd:anyURI ;
+         fhir:l fhir:Binary
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "urn:uuid:33333333-3333-4333-8333-333333333333"^^xsd:anyURI ;
+       fhir:l <urn:uuid:33333333-3333-4333-8333-333333333333>
+     ] ;
+     fhir:resource ( <urn:uuid:33333333-3333-4333-8333-333333333333> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Binary"^^xsd:anyURI ;
+         fhir:l fhir:Binary
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "urn:uuid:44444444-4444-4444-8444-444444444444"^^xsd:anyURI ;
+       fhir:l <urn:uuid:44444444-4444-4444-8444-444444444444>
+     ] ;
+     fhir:resource ( <urn:uuid:44444444-4444-4444-8444-444444444444> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "DocumentReference"^^xsd:anyURI ;
+         fhir:l fhir:DocumentReference
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "urn:uuid:55555555-5555-4555-8555-555555555555"^^xsd:anyURI ;
+       fhir:l <urn:uuid:55555555-5555-4555-8555-555555555555>
+     ] ;
+     fhir:resource ( <urn:uuid:55555555-5555-4555-8555-555555555555> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "DocumentReference"^^xsd:anyURI ;
+         fhir:l fhir:DocumentReference
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "urn:uuid:66666666-6666-4666-8666-666666666666"^^xsd:anyURI ;
+       fhir:l <urn:uuid:66666666-6666-4666-8666-666666666666>
+     ] ;
+     fhir:resource ( <urn:uuid:66666666-6666-4666-8666-666666666666> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "List"^^xsd:anyURI ;
+         fhir:l fhir:List
+       ]
+     ]
+  ] ) . # 
+
+<urn:uuid:11111111-1111-4111-8111-111111111111> a fhir:Patient ;
+  fhir:id [ fhir:v "patient-1"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_patient-1\"> </a><p class=\"res-header-id\"><b>Narratif généré : Patient patient-1</b></p><a name=\"patient-1\"> </a><a name=\"hcpatient-1\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">JEAN DUPONT  Male, Date de Naissance :1989-07-09 ( urn:oid:1.2.250.1.213.1.4.8#189079912345678)</p><hr/></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "urn:oid:1.2.250.1.213.1.4.8"^^xsd:anyURI ;
+       fhir:l <urn:oid:1.2.250.1.213.1.4.8>
+     ] ;
+     fhir:value [ fhir:v "189079912345678" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "DUPONT" ] ;
+     fhir:given ( [ fhir:v "JEAN" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1989-07-09"^^xsd:date] . # 
+
+<urn:uuid:22222222-2222-4222-8222-222222222222> a fhir:Binary ;
+  fhir:contentType [ fhir:v "application/pdf"] ; # 
+  fhir:data [ fhir:v "SGVsbG8="^^xsd:base64Binary] . # 
+
+<urn:uuid:33333333-3333-4333-8333-333333333333> a fhir:Binary ;
+  fhir:contentType [ fhir:v "application/pdf"] ; # 
+  fhir:data [ fhir:v "SGVsbG8="^^xsd:base64Binary] . # 
+
+<urn:uuid:44444444-4444-4444-8444-444444444444> a fhir:DocumentReference ;
+  fhir:id [ fhir:v "doc-old"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DocumentReference_doc-old\"> </a><p class=\"res-header-id\"><b>Narratif généré : RéférenceDocument doc-old</b></p><a name=\"doc-old\"> </a><a name=\"hcdoc-old\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <code>https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference</code></p></div><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_A04-TypeDocument 11502}\">11502</span></p><p><b>category</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_A05-CategorieDocument CR}\">CR</span></p><p><b>subject</b>: <a href=\"Bundle-Bundle-CRBio-Replace-ANS.html#urn-uuid-11111111-1111-4111-8111-111111111111\">JEAN DUPONT  Male, Date de Naissance :1989-07-09 ( urn:oid:1.2.250.1.213.1.4.8#189079912345678)</a></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Url</b></td></tr><tr><td style=\"display: none\">*</td><td>application/pdf</td><td><a href=\"Bundle-Bundle-CRBio-Replace-ANS.html#urn-uuid-22222222-2222-4222-8222-222222222222\">Binary: application/pdf (8 bytes base64)</a></td></tr></table><p><b>format</b>: <a href=\"https://profiles.ihe.net/fhir/ihe.formatcode.fhir/1.1.0/CodeSystem-formatcode.html#formatcode-urn.58ihe.58iti.58xds-sd.58pdf.582008\">IHE Format Code set for use with Document Sharing: urn:ihe:iti:xds-sd:pdf:2008</a> (ITI XDS-SD PDF)</p></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_A04-TypeDocument"^^xsd:anyURI ;
+         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_A04-TypeDocument>
+       ] ;
+       fhir:code [ fhir:v "11502" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_A05-CategorieDocument"^^xsd:anyURI ;
+         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_A05-CategorieDocument>
+       ] ;
+       fhir:code [ fhir:v "CR" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:l <urn:uuid:11111111-1111-4111-8111-111111111111> ;
+     fhir:reference [ fhir:v "urn:uuid:11111111-1111-4111-8111-111111111111" ]
+  ] ; # 
+  fhir:content ( [
+     fhir:attachment [
+       fhir:contentType [ fhir:v "application/pdf" ] ;
+       fhir:url [
+         fhir:v "urn:uuid:22222222-2222-4222-8222-222222222222"^^xsd:anyURI ;
+         fhir:l <urn:uuid:22222222-2222-4222-8222-222222222222>
+       ]
+     ] ;
+     fhir:format [
+       fhir:system [
+         fhir:v "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode"^^xsd:anyURI ;
+         fhir:l <http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode>
+       ] ;
+       fhir:code [ fhir:v "urn:ihe:iti:xds-sd:pdf:2008" ]
+     ]
+  ] ) . # 
+
+<urn:uuid:55555555-5555-4555-8555-555555555555> a fhir:DocumentReference ;
+  fhir:id [ fhir:v "doc-new"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DocumentReference_doc-new\"> </a><p class=\"res-header-id\"><b>Narratif généré : RéférenceDocument doc-new</b></p><a name=\"doc-new\"> </a><a name=\"hcdoc-new\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <code>https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference</code></p></div><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_A04-TypeDocument 11502}\">11502</span></p><p><b>category</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_A05-CategorieDocument CR}\">CR</span></p><p><b>subject</b>: <a href=\"Bundle-Bundle-CRBio-Replace-ANS.html#urn-uuid-11111111-1111-4111-8111-111111111111\">JEAN DUPONT  Male, Date de Naissance :1989-07-09 ( urn:oid:1.2.250.1.213.1.4.8#189079912345678)</a></p><h3>RelatesTos</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Target</b></td></tr><tr><td style=\"display: none\">*</td><td>Replaces</td><td><a href=\"Bundle-Bundle-CRBio-Replace-ANS.html#urn-uuid-44444444-4444-4444-8444-444444444444\">DocumentReference : status = current; type = 11502; category = CR</a></td></tr></table><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Url</b></td></tr><tr><td style=\"display: none\">*</td><td>application/pdf</td><td><a href=\"Bundle-Bundle-CRBio-Replace-ANS.html#urn-uuid-33333333-3333-4333-8333-333333333333\">Binary: application/pdf (8 bytes base64)</a></td></tr></table><p><b>format</b>: <a href=\"https://profiles.ihe.net/fhir/ihe.formatcode.fhir/1.1.0/CodeSystem-formatcode.html#formatcode-urn.58ihe.58iti.58xds-sd.58pdf.582008\">IHE Format Code set for use with Document Sharing: urn:ihe:iti:xds-sd:pdf:2008</a> (ITI XDS-SD PDF)</p></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_A04-TypeDocument"^^xsd:anyURI ;
+         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_A04-TypeDocument>
+       ] ;
+       fhir:code [ fhir:v "11502" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_A05-CategorieDocument"^^xsd:anyURI ;
+         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_A05-CategorieDocument>
+       ] ;
+       fhir:code [ fhir:v "CR" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:l <urn:uuid:11111111-1111-4111-8111-111111111111> ;
+     fhir:reference [ fhir:v "urn:uuid:11111111-1111-4111-8111-111111111111" ]
+  ] ; # 
+  fhir:relatesTo ( [
+     fhir:code [ fhir:v "replaces" ] ;
+     fhir:target [
+       fhir:l <urn:uuid:44444444-4444-4444-8444-444444444444> ;
+       fhir:reference [ fhir:v "urn:uuid:44444444-4444-4444-8444-444444444444" ]
+     ]
+  ] ) ; # 
+  fhir:content ( [
+     fhir:attachment [
+       fhir:contentType [ fhir:v "application/pdf" ] ;
+       fhir:url [
+         fhir:v "urn:uuid:33333333-3333-4333-8333-333333333333"^^xsd:anyURI ;
+         fhir:l <urn:uuid:33333333-3333-4333-8333-333333333333>
+       ]
+     ] ;
+     fhir:format [
+       fhir:system [
+         fhir:v "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode"^^xsd:anyURI ;
+         fhir:l <http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode>
+       ] ;
+       fhir:code [ fhir:v "urn:ihe:iti:xds-sd:pdf:2008" ]
+     ]
+  ] ) . # 
+
+<urn:uuid:66666666-6666-4666-8666-666666666666> a fhir:List ;
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-submissionset"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-submissionset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"List_null\"> </a><p class=\"res-header-id\"><b>Narratif généré : Liste </b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <code>https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-submissionset</code></p></div><table class=\"clstu\"><tr><td>Mode : Working List </td><td>Statut : Current </td><td>Code : submissionset </td></tr><tr><td>Sujet : <a href=\"Bundle-Bundle-CRBio-Replace-ANS.html#urn-uuid-11111111-1111-4111-8111-111111111111\">JEAN DUPONT  Male, Date de Naissance :1989-07-09 ( urn:oid:1.2.250.1.213.1.4.8#189079912345678)</a></td></tr></table><table class=\"grid\"><tr style=\"backgound-color: #eeeeee\"><td><b>Éléments</b></td></tr><tr><td><a href=\"Bundle-Bundle-CRBio-Replace-ANS.html#urn-uuid-55555555-5555-4555-8555-555555555555\">DocumentReference : status = current; type = 11502; category = CR</a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:mode [ fhir:v "working"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://ihe.net/fhir/CodeSystem/MHDlistTypes"^^xsd:anyURI ;
+         fhir:l <http://ihe.net/fhir/CodeSystem/MHDlistTypes>
+       ] ;
+       fhir:code [ fhir:v "submissionset" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <urn:uuid:11111111-1111-4111-8111-111111111111> ;
+     fhir:reference [ fhir:v "urn:uuid:11111111-1111-4111-8111-111111111111" ]
+  ] ; # 
+  fhir:entry ( [
+     fhir:item [
+       fhir:l <urn:uuid:55555555-5555-4555-8555-555555555555> ;
+       fhir:reference [ fhir:v "urn:uuid:55555555-5555-4555-8555-555555555555" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
