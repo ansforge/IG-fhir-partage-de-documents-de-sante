@@ -64,7 +64,7 @@ These are example instances that show what data produced and consumed by systems
 
 | | |
 | :--- | :--- |
-| [Bundle-CRBio-Replace-ANS](Bundle-Bundle-CRBio-Replace-ANS.md) |  |
+| [Bundle-CRBio-Replace](Bundle-Bundle-CRBio-Replace.md) |  |
 | [Exemple de Classeur PDSm](List-ExampleFolder.md) | Exemple d’une instance conforme au profil PDSm_FolderComprehensive regroupant des fiches de documents. |
 | [Exemple de DocumentReference pour PDSm](DocumentReference-exemple-pdsm-documentreference.md) | Exemple illustratif d’un DocumentReference conforme au profil PDSm_ComprehensiveDocumentReference. |
 | [Exemple de bundle de type transaction-response du flux 2](Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.md) |  |

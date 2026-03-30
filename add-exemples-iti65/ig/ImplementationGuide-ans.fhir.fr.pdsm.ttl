@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "PDSm"] ; # 
   fhir:title [ fhir:v "Partage de Documents de Santé en mobilité (PDSm)"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-03-30T08:42:52+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-03-30T08:55:18+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -1383,10 +1383,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/Bundle/Bundle-CRBio-Replace-ANS> ;
-         fhir:reference [ fhir:v "Bundle/Bundle-CRBio-Replace-ANS" ]
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/Bundle/Bundle-CRBio-Replace> ;
+         fhir:reference [ fhir:v "Bundle/Bundle-CRBio-Replace" ]
        ] ;
-       fhir:name [ fhir:v "Bundle-CRBio-Replace-ANS" ] ;
+       fhir:name [ fhir:v "Bundle-CRBio-Replace" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"^^xsd:anyURI ;

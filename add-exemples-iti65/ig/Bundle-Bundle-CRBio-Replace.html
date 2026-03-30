@@ -1,13 +1,9 @@
-<!-- layouts\layout-changehistory.html -->
-<!-- get modelType -->
-
-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title> - Partage de Documents de Santé en mobilité (PDSm) v3.1.1</title>
+    <title>Bundle-CRBio-Replace - Partage de Documents de Santé en mobilité (PDSm) v3.1.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -47,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:""}
-    h3,h4,h5,h6{--heading-prefix:""}</style>
+    <style type="text/css">h2{--heading-prefix:"6.20"}
+    h3,h4,h5,h6{--heading-prefix:"6.20"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -195,11 +191,15 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Bundle-CRBio-Replace</b></li>
 
           <span style="float:right;">
 
+            <a href="StructureDefinition-pdsm-ext-is-archived.profile.ttl.html">&lt;prev</a> | 
+
             <a href="#bottom">bottom</a>
+
+          | <a href="Bundle-Bundle-CRBio-Replace.xml.html">next&gt;</a>
 
           </span>
 
@@ -212,9 +212,9 @@
       <div class="container">  <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
-
-<div style="counter-reset: section 10" class="col-12">
+<div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Partage de Documents de Santé en mobilité (PDSm) - version de développement local (intégration continue v3.1.1) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://interop.esante.gouv.fr/ig/fhir/pdsm/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
+
   
 
 
@@ -226,29 +226,29 @@
 
 <ul class="nav nav-tabs">
 
-  <li>
-    <a href="Bundle-Bundle-CRBio-Replace-ANS.html">Narrative Content</a>
+  <li class="active">
+    <a href="#">Narrative Content</a>
   </li>
 
 
 
   
     <li>
-      <a href="Bundle-Bundle-CRBio-Replace-ANS.xml.html">XML</a>
+      <a href="Bundle-Bundle-CRBio-Replace.xml.html">XML</a>
     </li>
   
 
 
   
     <li>
-      <a href="Bundle-Bundle-CRBio-Replace-ANS.json.html">JSON</a>
+      <a href="Bundle-Bundle-CRBio-Replace.json.html">JSON</a>
     </li>
   
 
 
   
     <li>
-      <a href="Bundle-Bundle-CRBio-Replace-ANS.ttl.html">TTL</a>
+      <a href="Bundle-Bundle-CRBio-Replace.ttl.html">TTL</a>
     </li>
   
 
@@ -258,13 +258,35 @@
 
 
   <a name="root"> </a>
-  <h2 id="root">: Bundle/Bundle-CRBio-Replace-ANS - Change History</h2>
-  <p>History of changes for Bundle-CRBio-Replace-ANS .</p>
+
+
+  <h2 id="root">Example Bundle: Bundle-CRBio-Replace</h2>
+
+
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <div data-fhir="generated"><p class="res-header-id"/><a name="Bundle-CRBio-Replace"> </a><a name="hcBundle-CRBio-Replace"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-pdsm-comprehensive-provide-document-bundle.html">PDSm Comprehensive Provide Document Bundle</a></p></div><p>Bundle Bundle-CRBio-Replace de type transaction</p><a name="urn-uuid-11111111-1111-4111-8111-111111111111"> </a><a name="Patient_patient-1"> </a><a name="hcPatient_patient-1"> </a><hr/><p>Entrée 1 - fullUrl = urn:uuid:11111111-1111-4111-8111-111111111111</p><p>Ressource Patient :</p><blockquote><p class="res-header-id"/><a name="Bundle-CRBio-Replace/patient-1"> </a><a name="hcBundle-CRBio-Replace/patient-1"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">JEAN DUPONT  Male, Date de Naissance :1989-07-09 ( urn:oid:1.2.250.1.213.1.4.8#189079912345678)</p><hr/></blockquote><p>Requête :</p><pre>POST Patient
+</pre><a name="urn-uuid-22222222-2222-4222-8222-222222222222"> </a><a name="Binary_22222222-2222-4222-8222-222222222222"> </a><a name="hcBinary_22222222-2222-4222-8222-222222222222"> </a><hr/><p>Entrée 2 - fullUrl = urn:uuid:22222222-2222-4222-8222-222222222222</p><p>Ressource Binary :</p><blockquote><p class="res-header-id"/><p><b>contentType</b>: application/pdf</p><p><b>data</b>: <code>SGVsbG8=</code></p></blockquote><p>Requête :</p><pre>POST Binary
+</pre><a name="urn-uuid-33333333-3333-4333-8333-333333333333"> </a><a name="Binary_33333333-3333-4333-8333-333333333333"> </a><a name="hcBinary_33333333-3333-4333-8333-333333333333"> </a><hr/><p>Entrée 3 - fullUrl = urn:uuid:33333333-3333-4333-8333-333333333333</p><p>Ressource Binary :</p><blockquote><p class="res-header-id"/><p><b>contentType</b>: application/pdf</p><p><b>data</b>: <code>SGVsbG8=</code></p></blockquote><p>Requête :</p><pre>POST Binary
+</pre><a name="urn-uuid-44444444-4444-4444-8444-444444444444"> </a><a name="DocumentReference_doc-old"> </a><a name="hcDocumentReference_doc-old"> </a><hr/><p>Entrée 4 - fullUrl = urn:uuid:44444444-4444-4444-8444-444444444444</p><p>Ressource DocumentReference :</p><blockquote><p class="res-header-id"/><a name="Bundle-CRBio-Replace/doc-old"> </a><a name="hcBundle-CRBio-Replace/doc-old"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <code>https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference</code></p></div><p><b>status</b>: Current</p><p><b>type</b>: <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_A04-TypeDocument 11502}">11502</span></p><p><b>category</b>: <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_A05-CategorieDocument CR}">CR</span></p><p><b>subject</b>: <a href="Bundle-Bundle-CRBio-Replace.html#urn-uuid-11111111-1111-4111-8111-111111111111">JEAN DUPONT  Male, Date de Naissance :1989-07-09 ( urn:oid:1.2.250.1.213.1.4.8#189079912345678)</a></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ContentType</b></td><td><b>Url</b></td></tr><tr><td style="display: none">*</td><td>application/pdf</td><td><a href="Bundle-Bundle-CRBio-Replace.html#urn-uuid-22222222-2222-4222-8222-222222222222">Binary: application/pdf (8 bytes base64)</a></td></tr></table></blockquote></blockquote><p>Requête :</p><pre>POST DocumentReference
+</pre><a name="urn-uuid-55555555-5555-4555-8555-555555555555"> </a><a name="DocumentReference_doc-new"> </a><a name="hcDocumentReference_doc-new"> </a><hr/><p>Entrée 5 - fullUrl = urn:uuid:55555555-5555-4555-8555-555555555555</p><p>Ressource DocumentReference :</p><blockquote><p class="res-header-id"/><a name="Bundle-CRBio-Replace/doc-new"> </a><a name="hcBundle-CRBio-Replace/doc-new"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <code>https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference</code></p></div><p><b>status</b>: Current</p><p><b>type</b>: <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_A04-TypeDocument 11502}">11502</span></p><p><b>category</b>: <span title="Codes :{https://mos.esante.gouv.fr/NOS/TRE_A05-CategorieDocument CR}">CR</span></p><p><b>subject</b>: <a href="Bundle-Bundle-CRBio-Replace.html#urn-uuid-11111111-1111-4111-8111-111111111111">JEAN DUPONT  Male, Date de Naissance :1989-07-09 ( urn:oid:1.2.250.1.213.1.4.8#189079912345678)</a></p><h3>RelatesTos</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Target</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes :{http://hl7.org/fhir/document-relationship-type replaces}">Replaces</span></td><td><a href="Bundle-Bundle-CRBio-Replace.html#urn-uuid-44444444-4444-4444-8444-444444444444">DocumentReference : status = current; type = 11502; category = CR</a></td></tr></table><blockquote><p><b>content</b></p><h3>Attachments</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ContentType</b></td><td><b>Url</b></td></tr><tr><td style="display: none">*</td><td>application/pdf</td><td><a href="Bundle-Bundle-CRBio-Replace.html#urn-uuid-33333333-3333-4333-8333-333333333333">Binary: application/pdf (8 bytes base64)</a></td></tr></table></blockquote></blockquote><p>Requête :</p><pre>POST DocumentReference
+</pre><a name="urn-uuid-77777777-7777-4777-8777-777777777777"> </a><a name="Parameters_77777777-7777-4777-8777-777777777777"> </a><a name="hcParameters_77777777-7777-4777-8777-777777777777"> </a><hr/><p>Entrée 6 - fullUrl = urn:uuid:77777777-7777-4777-8777-777777777777</p><p>Ressource Parameters :</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="https://profiles.ihe.net/ITI/MHD/4.2.0/StructureDefinition-IHE.MHD.Patch.Parameters.html">MHD DocumentReference Patch Parameters</a></p></div><h2>Paramètres</h2><table class="grid" data-fhir="generated"><tr><td>operation</td><td/></tr><tr><td> path</td><td>DocumentReference.status</td></tr><tr><td> type</td><td>replace</td></tr><tr><td> value</td><td>superseded</td></tr></table></blockquote><p>Requête :</p><pre>PATCH DocumentReference/doc-old
+</pre><a name="urn-uuid-66666666-6666-4666-8666-666666666666"> </a><a name="List_66666666-6666-4666-8666-666666666666"> </a><a name="hcList_66666666-6666-4666-8666-666666666666"> </a><hr/><p>Entrée 7 - fullUrl = urn:uuid:66666666-6666-4666-8666-666666666666</p><p>Ressource List :</p><blockquote><p class="res-header-id"/><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <code>https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-submissionset</code></p></div><table class="clstu" data-fhir="generated"><tr><td>Mode : Working List </td><td>Statut : Current </td><td>Code : submissionset </td></tr><tr><td>Sujet : <a href="Bundle-Bundle-CRBio-Replace.html#urn-uuid-11111111-1111-4111-8111-111111111111">JEAN DUPONT  Male, Date de Naissance :1989-07-09 ( urn:oid:1.2.250.1.213.1.4.8#189079912345678)</a></td></tr></table><table class="grid" data-fhir="generated"><tr style="backgound-color: #eeeeee"><td><b>Éléments</b></td></tr><tr><td><a href="Bundle-Bundle-CRBio-Replace.html#urn-uuid-55555555-5555-4555-8555-555555555555">DocumentReference : status = current; type = 11502; category = CR</a></td></tr></table></blockquote><p>Requête :</p><pre>POST List
+</pre></div>
 
   
 
-</div>
+  <!-- insert notes if present -->
+  
 
+
+
+</div>
         </div>  <!-- /inner-wrapper -->
       </div>  <!-- /row -->
     </div>  <!-- /container -->
@@ -272,8 +294,6 @@
 
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
-
-  <script type="text/javascript" src="assets/js/tabs.js"> </script>
 
 <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
@@ -286,7 +306,7 @@
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <span style="visibility:hidden">&lt;prev</span>
+                <a href="StructureDefinition-pdsm-ext-is-archived.profile.ttl.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -294,7 +314,7 @@
               </td>
               <td style="text-align:right">&#xA0;
 
-                <span style="visibility:hidden">next&gt;</span>
+                <a href="Bundle-Bundle-CRBio-Replace.xml.html">next&gt;</a>
 
               </td>
             </tr>
@@ -304,7 +324,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 30, 2026 08:42+0000">2026-03-30</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 30, 2026 08:55+0000">2026-03-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
