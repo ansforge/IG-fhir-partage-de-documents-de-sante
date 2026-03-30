@@ -82,7 +82,7 @@ Usage: #example
 * entry[=].resource.content[0].attachment.contentType = #application/pdf
 * entry[=].resource.content[0].attachment.url = "urn:uuid:22222222-2222-4222-8222-222222222222"
 
-* entry[=].resource.subject.reference = "urn:uuid:11111111-1111-4111-8111-111111111111"
+* entry[=].resource.subject.reference = Reference(fr-patient-123)
 
 * entry[=].request.method = #POST
 * entry[=].request.url = "DocumentReference"
