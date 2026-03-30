@@ -83,6 +83,19 @@
      ]
   ] [
      fhir:fullUrl [
+       fhir:v "urn:uuid:77777777-7777-4777-8777-777777777777"^^xsd:anyURI ;
+       fhir:l <urn:uuid:77777777-7777-4777-8777-777777777777>
+     ] ;
+     fhir:resource ( <urn:uuid:77777777-7777-4777-8777-777777777777> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PATCH" ] ;
+       fhir:url [
+         fhir:v "DocumentReference/doc-old"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/DocumentReference/doc-old>
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
        fhir:v "urn:uuid:66666666-6666-4666-8666-666666666666"^^xsd:anyURI ;
        fhir:l <urn:uuid:66666666-6666-4666-8666-666666666666>
      ] ;
@@ -233,6 +246,36 @@
        ] ;
        fhir:code [ fhir:v "urn:ihe:iti:xds-sd:pdf:2008" ]
      ]
+  ] ) . # 
+
+<urn:uuid:77777777-7777-4777-8777-777777777777> a fhir:Parameters ;
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Patch.Parameters"^^xsd:anyURI ;
+       fhir:l <https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Patch.Parameters>
+     ] )
+  ] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "operation" ] ;
+     fhir:part ( [
+       fhir:name [ fhir:v "path" ] ;
+       fhir:value [
+         a fhir:String ;
+         fhir:v "DocumentReference.status"
+       ]
+     ] [
+       fhir:name [ fhir:v "type" ] ;
+       fhir:value [
+         a fhir:Code ;
+         fhir:v "replace"
+       ]
+     ] [
+       fhir:name [ fhir:v "value" ] ;
+       fhir:value [
+         a fhir:Code ;
+         fhir:v "superseded"
+       ]
+     ] )
   ] ) . # 
 
 <urn:uuid:66666666-6666-4666-8666-666666666666> a fhir:List ;

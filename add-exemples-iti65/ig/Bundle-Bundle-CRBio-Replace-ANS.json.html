@@ -453,6 +453,40 @@
       }
     },
     {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:77777777-7777-4777-8777-777777777777",
+      "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/parameters.html">resourceType</a>" : "Parameters",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Parameters.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="https://profiles.ihe.net/ITI/MHD/4.2.0/StructureDefinition-IHE.MHD.Patch.Parameters.html" style="color: Maroon">&#x1F517;</a> "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Patch.Parameters"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter">parameter</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "operation",
+            "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.part">part</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "path",
+                "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">valueString</a>" : "DocumentReference.status"
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "type",
+                "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">valueCode</a>" : "replace"
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "value",
+                "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">valueCode</a>" : "superseded"
+              }
+            ]
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "PATCH",
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "DocumentReference/doc-old"
+      }
+    },
+    {
       "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:66666666-6666-4666-8666-666666666666",
       "<a href="http://hl7.org/fhir/R4/list.html#List">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/list.html">resourceType</a>" : "List",
@@ -538,7 +572,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 27, 2026 16:32+0000">2026-03-27</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 30, 2026 08:42+0000">2026-03-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

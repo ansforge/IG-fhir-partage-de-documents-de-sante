@@ -152,6 +152,35 @@
     </request>
   </entry>
   <entry>
+    <fullUrl value="urn:uuid:77777777-7777-4777-8777-777777777777"/>
+    <resource>
+      <Parameters>
+        <meta>
+          <profile value="https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Patch.Parameters"/>
+        </meta>
+        <parameter>
+          <name value="operation"/>
+          <part>
+            <name value="path"/>
+            <valueString value="DocumentReference.status"/>
+          </part>
+          <part>
+            <name value="type"/>
+            <valueCode value="replace"/>
+          </part>
+          <part>
+            <name value="value"/>
+            <valueCode value="superseded"/>
+          </part>
+        </parameter>
+      </Parameters>
+    </resource>
+    <request>
+      <method value="PATCH"/>
+      <url value="DocumentReference/doc-old"/>
+    </request>
+  </entry>
+  <entry>
     <fullUrl value="urn:uuid:66666666-6666-4666-8666-666666666666"/>
     <resource>
       <List>

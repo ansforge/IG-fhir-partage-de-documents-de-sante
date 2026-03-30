@@ -341,6 +341,16 @@
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> fhir:DocumentReference       ]     ]
   ] [
 <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:uuid:77777777-7777-4777-8777-777777777777&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;urn:uuid:77777777-7777-4777-8777-777777777777&gt;     ] ;
+    ( <a href="http://hl7.org/fhir/R4/parameters.html#Parameters">fhir:resource</a> &lt;urn:uuid:77777777-7777-4777-8777-777777777777&gt; ) ;
+<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">fhir:request</a> [
+<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">fhir:method</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;PATCH&quot; ] ;
+<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;DocumentReference/doc-old&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> fhir:DocumentReference/doc-old       ]     ]
+  ] [
+<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:uuid:66666666-6666-4666-8666-666666666666&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;urn:uuid:66666666-6666-4666-8666-666666666666&gt;     ] ;
     ( <a href="http://hl7.org/fhir/R4/list.html#List">fhir:resource</a> &lt;urn:uuid:66666666-6666-4666-8666-666666666666&gt; ) ;
@@ -470,6 +480,29 @@
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;urn:ihe:iti:xds-sd:pdf:2008&quot; ]     ]
   ] ) . # 
 
+&lt;urn:uuid:77777777-7777-4777-8777-777777777777&gt; <a href="http://hl7.org/fhir/R4/parameters.html">a</a> fhir:Parameters ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Parameters.meta">fhir:meta</a> [
+    ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Patch.Parameters&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Patch.Parameters&gt;     ] )
+  ] ; # 
+  <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter">fhir:parameter</a> ( [
+<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;operation&quot; ] ;
+    ( <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.part">fhir:part</a> [
+<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;path&quot; ] ;
+<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;DocumentReference.status&quot;       ]     ] [
+<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;type&quot; ] ;
+<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#code">a</a> fhir:Code ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;replace&quot;       ]     ] [
+<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;value&quot; ] ;
+<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#code">a</a> fhir:Code ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;superseded&quot;       ]     ] )
+  ] ) . # 
+
 &lt;urn:uuid:66666666-6666-4666-8666-666666666666&gt; <a href="http://hl7.org/fhir/R4/list.html">a</a> fhir:List ;
   <a href="http://hl7.org/fhir/R4/resource.html#List.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
@@ -546,7 +579,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 27, 2026 16:32+0000">2026-03-27</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 30, 2026 08:42+0000">2026-03-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

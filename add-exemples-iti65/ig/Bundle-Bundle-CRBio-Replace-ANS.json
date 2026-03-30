@@ -149,6 +149,34 @@
     }
   },
   {
+    "fullUrl" : "urn:uuid:77777777-7777-4777-8777-777777777777",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "meta" : {
+        "profile" : ["https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Patch.Parameters"]
+      },
+      "parameter" : [{
+        "name" : "operation",
+        "part" : [{
+          "name" : "path",
+          "valueString" : "DocumentReference.status"
+        },
+        {
+          "name" : "type",
+          "valueCode" : "replace"
+        },
+        {
+          "name" : "value",
+          "valueCode" : "superseded"
+        }]
+      }]
+    },
+    "request" : {
+      "method" : "PATCH",
+      "url" : "DocumentReference/doc-old"
+    }
+  },
+  {
     "fullUrl" : "urn:uuid:66666666-6666-4666-8666-666666666666",
     "resource" : {
       "resourceType" : "List",
