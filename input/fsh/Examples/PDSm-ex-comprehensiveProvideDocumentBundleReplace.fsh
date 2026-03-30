@@ -105,12 +105,48 @@ Usage: #example
 
 * entry[=].resource.subject.reference = "urn:uuid:11111111-1111-4111-8111-111111111111"
 
-//  mécanisme PDSm officiel
+// REMPLACEMENT
 * entry[=].resource.relatesTo[0].code = #replaces
 * entry[=].resource.relatesTo[0].target.reference = "urn:uuid:44444444-4444-4444-8444-444444444444"
 
 * entry[=].request.method = #POST
 * entry[=].request.url = "DocumentReference"
+
+
+// ==========================================================
+// PATCH MHD - status = superseded (DocumentReference OLD)
+// ==========================================================
+
+* entry[+].fullUrl = "urn:uuid:77777777-7777-4777-8777-777777777777"
+
+* entry[=].resource.resourceType = "Parameters"
+
+* entry[=].resource.meta.profile = "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Patch.Parameters"
+
+// operation
+
+* entry[=].resource.parameter[0].name = "operation"
+
+// path
+
+* entry[=].resource.parameter[0].part[0].name = "path"
+* entry[=].resource.parameter[0].part[0].valueString = "DocumentReference.status"
+
+// type = replace
+
+* entry[=].resource.parameter[0].part[1].name = "type"
+* entry[=].resource.parameter[0].part[1].valueCode = #replace
+
+// value = superseded
+
+* entry[=].resource.parameter[0].part[2].name = "value"
+* entry[=].resource.parameter[0].part[2].valueCode = #superseded
+
+// requête PATCH sur l'ancien document
+
+* entry[=].request.method = #PATCH
+* entry[=].request.url = "DocumentReference/doc-old"
+
 
 // ==========================================================
 // SUBMISSIONSET
@@ -129,7 +165,7 @@ Usage: #example
 
 * entry[=].resource.subject.reference = "urn:uuid:11111111-1111-4111-8111-111111111111"
 
-//  uniquement le nouveau doc
+// uniquement le nouveau doc
 * entry[=].resource.entry[0].item.reference = "urn:uuid:55555555-5555-4555-8555-555555555555"
 
 * entry[=].request.method = #POST
