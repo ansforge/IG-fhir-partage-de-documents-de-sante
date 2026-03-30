@@ -1,8 +1,8 @@
 // ==========================================================
-// BUNDLE PDSm IT-65 - CR BIO CORRIGÉ (JDV ANS)
+// BUNDLE PDSm IT-65 : exemple de remplacement de document
 // ==========================================================
 
-Instance: Bundle-CRBio-Replace-ANS
+Instance: Bundle-CRBio-Replace
 InstanceOf: Bundle
 Usage: #example
 
@@ -10,7 +10,7 @@ Usage: #example
 * type = #transaction
 
 // ==========================================================
-// PATIENT (INS-NIR simulé)
+// PATIENT
 // ==========================================================
 
 * entry[+].fullUrl = "urn:uuid:11111111-1111-4111-8111-111111111111"
@@ -30,7 +30,7 @@ Usage: #example
 * entry[=].request.url = "Patient"
 
 // ==========================================================
-// BINARY OLD
+// BINARY ANCIEN DOCUMENT
 // ==========================================================
 
 * entry[+].fullUrl = "urn:uuid:22222222-2222-4222-8222-222222222222"
@@ -41,7 +41,7 @@ Usage: #example
 * entry[=].request.url = "Binary"
 
 // ==========================================================
-// BINARY NEW
+// BINARY NOUVEAU DOCUMENT
 // ==========================================================
 
 * entry[+].fullUrl = "urn:uuid:33333333-3333-4333-8333-333333333333"
@@ -52,7 +52,7 @@ Usage: #example
 * entry[=].request.url = "Binary"
 
 // ==========================================================
-// DOCUMENT OLD
+// ANCIEN DOCUMENT
 // ==========================================================
 
 * entry[+].fullUrl = "urn:uuid:44444444-4444-4444-8444-444444444444"
@@ -81,7 +81,7 @@ Usage: #example
 * entry[=].request.url = "DocumentReference"
 
 // ==========================================================
-// DOCUMENT NEW (REMPLACEMENT)
+// NOUVEAU DOCUMENT (REMPLACEMENT)
 // ==========================================================
 
 * entry[+].fullUrl = "urn:uuid:55555555-5555-4555-8555-555555555555"
@@ -114,7 +114,7 @@ Usage: #example
 
 
 // ==========================================================
-// PATCH MHD - status = superseded (DocumentReference OLD)
+// PATCH MHD - status = superseded (DocumentReference ancien Document)
 // ==========================================================
 
 * entry[+].fullUrl = "urn:uuid:77777777-7777-4777-8777-777777777777"
