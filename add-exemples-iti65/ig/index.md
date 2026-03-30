@@ -112,7 +112,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-03-30T08:55:18+00:00",
+  "date" : "2026-03-30T09:31:51+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -755,17 +755,6 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/Bundle-CRBio-Replace"
-      },
-      "name" : "Bundle-CRBio-Replace",
-      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
       }],
       "reference" : {
@@ -798,6 +787,18 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
       "name" : "CI-SIS Partage-De-Documents-De-Sante - ProducteurDeDocuments",
       "description" : "Il s’agit d’un système d’information ou d’un composant de système d’information qui envoie au gestionnaire de partage de documents une  demande d’ajout de nouveaux documents et/ou des nouvelles versions de documents. Ce système fournit également les modifications des  métadonnées du document.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/bundle-exemple-comprehensiveprovidedocument-replace"
+      },
+      "name" : "Exemple de bundle ComprehensiveProvideDocument pour PDSm dans le contexte d'un remplacement de document",
+      "description" : "Exemple illustratif du remplacement de Document conforme au profil PDSm_ComprehensiveDocumentReference et à ITI-65 :\n\n* un document existant est remplacé\n* l'ancien est marqué superseded\n* un nouveau document est publié",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"
     },
     {
       "extension" : [{

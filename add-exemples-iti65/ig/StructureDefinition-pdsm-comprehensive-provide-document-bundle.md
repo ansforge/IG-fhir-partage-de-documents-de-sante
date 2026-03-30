@@ -21,7 +21,7 @@ Profil basé sur la transaction IHE "Provide Document Bundle [ITI-65]" du profil
 
 **Utilisations:**
 
-* Exemples pour ce/t/te Profil: [Bundle/Bundle-CRBio-Replace](Bundle-Bundle-CRBio-Replace.md)
+* Exemples pour ce/t/te Profil: [Bundle/bundle-exemple-comprehensiveprovidedocument-replace](Bundle-bundle-exemple-comprehensiveprovidedocument-replace.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.pdsm|current/StructureDefinition/pdsm-comprehensive-provide-document-bundle)
 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-comprehensive-p
   "name" : "PDSm_ComprehensiveProvideDocumentBundle",
   "title" : "PDSm Comprehensive Provide Document Bundle",
   "status" : "active",
-  "date" : "2026-03-30T08:55:18+00:00",
+  "date" : "2026-03-30T09:31:51+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

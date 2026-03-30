@@ -62,8 +62,8 @@
 ### Examples
 
 * [6789 (Binary)](Binary-6789.md)
-* [Bundle-CRBio-Replace (Bundle)](Bundle-Bundle-CRBio-Replace.md)
 * [a9c10f8a-882d-4000-a280-7150e0aeb478 (Bundle)](Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.md)
+* [bundle-exemple-comprehensiveprovidedocument-replace (Bundle)](Bundle-bundle-exemple-comprehensiveprovidedocument-replace.md)
 * [PDSmSimplifiedExample (DocumentReference)](DocumentReference-PDSmSimplifiedExample.md)
 * [exemple-pdsm-documentreference (DocumentReference)](DocumentReference-exemple-pdsm-documentreference.md)
 * [Classeur de suivi diabète (List)](List-ExampleFolder.md)

@@ -64,9 +64,12 @@ These are example instances that show what data produced and consumed by systems
 
 | | |
 | :--- | :--- |
-| [Bundle-CRBio-Replace](Bundle-Bundle-CRBio-Replace.md) |  |
 | [Exemple de Classeur PDSm](List-ExampleFolder.md) | Exemple d’une instance conforme au profil PDSm_FolderComprehensive regroupant des fiches de documents. |
 | [Exemple de DocumentReference pour PDSm](DocumentReference-exemple-pdsm-documentreference.md) | Exemple illustratif d’un DocumentReference conforme au profil PDSm_ComprehensiveDocumentReference. |
+| [Exemple de bundle ComprehensiveProvideDocument pour PDSm dans le contexte d'un remplacement de document](Bundle-bundle-exemple-comprehensiveprovidedocument-replace.md) | Exemple illustratif du remplacement de Document conforme au profil PDSm_ComprehensiveDocumentReference et à ITI-65 :* un document existant est remplacé
+* l'ancien est marqué superseded
+* un nouveau document est publié
+ |
 | [Exemple de bundle de type transaction-response du flux 2](Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.md) |  |
 | [Exemple de lot de soumission PDSm](List-ExampleSubmissionSet.md) | Exemple conforme au profil PDSm_SubmissionSetComprehensive. |
 | [Exemple de publication simplifiée PDSm](DocumentReference-PDSmSimplifiedExample.md) | Note d'évolution suite à une consultation de suivi. |
