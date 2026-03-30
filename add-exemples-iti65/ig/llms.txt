@@ -7,7 +7,7 @@
 * [Spécifications fonctionnelles - vue d'ensemble](specifications_fonctionnelles.md)
 * [Ajout simplifié d'un document (ITI-105)](st_ajout_simplifie.md)
 * [Historique des changements](changes.md)
-* [Ajout d'un lot de documents (ITI-65)](st_ajout.md)
+* [Ajout et remplacement de documents (ITI-65)](st_ajout.md)
 * [Consultation de documents](sf_consultation.md)
 * [Mise à jour de documents](st_maj.md)
 * [Ajout d'un lot de documents](sf_ajout.md)

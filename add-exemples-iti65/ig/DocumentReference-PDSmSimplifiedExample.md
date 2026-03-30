@@ -18,7 +18,7 @@ Profil: [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-si
 
 **category**: Compte rendu
 
-**subject**: [Martin Claire Male, Date de Naissance :1980-01-15](Patient-fr-patient-123.md)
+**subject**: [Martin Claire (official) Male, Date de Naissance :1980-01-15 ( NIR: 180017505600103 (use: official, ))](Patient-fr-patient-123.md)
 
 **date**: 2025-04-30 09:30:00+0100
 

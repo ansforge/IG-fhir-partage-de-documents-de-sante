@@ -112,7 +112,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-03-30T13:30:37+00:00",
+  "date" : "2026-03-30T16:30:41+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -797,7 +797,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
         "reference" : "Bundle/bundle-exemple-comprehensiveprovidedocument-replace"
       },
       "name" : "Exemple de bundle ComprehensiveProvideDocument pour PDSm dans le contexte d'un remplacement de document",
-      "description" : "Exemple illustratif du remplacement de Document conforme au profil PDSm_ComprehensiveDocumentReference et à ITI-65 :\n\n* un document existant est remplacé\n* l'ancien est marqué superseded\n* un nouveau document est publié",
+      "description" : "Exemple illustratif du remplacement de Document conforme au profil PDSm_ComprehensiveDocumentReference et à ITI-65 :\n\n* un document existant (DocumentReference/doc-old) est remplacé\n* l'ancien est marqué superseded via un PATCH (géré par le Document Source)\n* un nouveau document est publié avec relatesTo.code = #replaces\n* le patient (Patient/fr-patient-123) est déjà enregistré sur le serveur avec une identité INS qualifiée — il n'est pas inclus dans le bundle",
       "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"
     },
     {
@@ -1160,7 +1160,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
             "valueUrl" : "st_ajout.html"
           }],
           "nameUrl" : "st_ajout.html",
-          "title" : "Ajout d'un lot de documents (ITI-65)",
+          "title" : "Ajout et remplacement de documents (ITI-65)",
           "generation" : "markdown"
         },
         {

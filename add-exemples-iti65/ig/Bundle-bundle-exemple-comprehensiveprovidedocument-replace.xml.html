@@ -131,7 +131,7 @@
         <a href="construction_des_flux.html">Vue d&apos;ensemble</a>
       </li>
       <li>
-        <a href="st_ajout.html">Ajout d&apos;un lot de soumission (ITI-65)</a>
+        <a href="st_ajout.html">Ajout et remplacement de documents (ITI-65)</a>
       </li>
       <li>
         <a href="st_maj.html">Mise à jour des métadonnées d&apos;un document</a>
@@ -280,32 +280,6 @@
   &lt;/<a href="http://hl7.org/fhir/R4/resource.html#Bundle.meta">meta</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;transaction&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:uuid:11111111-1111-4111-8111-111111111111&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient">resource</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient">Patient</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/resource.html#Patient.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;patient-123&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#Patient.text">text</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Patient_patient-123&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Narratif généré : Patient patient-123&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;patient-123&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcpatient-123&quot;&gt; &lt;/a&gt;&lt;p style=&quot;border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;&quot;&gt;Martin Claire  Male, Date de Naissance :1980-01-15 ( urn:oid:1.2.250.1.213.1.4.8#189079912345678)&lt;/p&gt;&lt;hr/&gt;&lt;/div&gt;<a name="end-xhtml"></a>
-        &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#Patient.text">text</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">identifier</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.250.1.213.1.4.8&quot;/&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;189079912345678&quot;/&gt;
-        &lt;/<a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">identifier</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.name">name</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Claire&quot;/&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Martin&quot;/&gt;
-        &lt;/<a href="http://hl7.org/fhir/R4/patient.html#Patient.name">name</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.gender">gender</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;male&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">birthDate</a> <a href="http://hl7.org/fhir/R4/datatypes.html#date">value</a>=&quot;1980-01-15&quot;/&gt;
-      &lt;/<a href="http://hl7.org/fhir/R4/patient.html#Patient">Patient</a>&gt;
-    &lt;/resource&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;POST&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Patient&quot;/&gt;
-    &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>&gt;
-  &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:uuid:33333333-3333-4333-8333-333333333333&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/binary.html#Binary">resource</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/binary.html#Binary">Binary</a>&gt;
@@ -319,102 +293,130 @@
     &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:uuid:44444444-4444-4444-8444-444444444444&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference">resource</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference">DocumentReference</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/resource.html#DocumentReference.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;doc-old&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/resource.html#DocumentReference.meta">meta</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
-                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference&quot;/&gt;
-        &lt;/<a href="http://hl7.org/fhir/R4/resource.html#DocumentReference.meta">meta</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#DocumentReference.text">text</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;DocumentReference_doc-old&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Narratif généré : RéférenceDocument doc-old&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;doc-old&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcdoc-old&quot;&gt; &lt;/a&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profil: &lt;code&gt;https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Current&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_A04-TypeDocument 11502}&quot;&gt;11502&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_A05-CategorieDocument CR}&quot;&gt;CR&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=&quot;Patient-fr-patient-123.html&quot;&gt;Martin Claire  Male, Date de Naissance :1980-01-15&lt;/a&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;content&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Attachments&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;ContentType&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Url&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td&gt;application/pdf&lt;/td&gt;&lt;td&gt;urn:uuid:22222222-2222-4222-8222-222222222222&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;format&lt;/b&gt;: &lt;a href=&quot;https://profiles.ihe.net/fhir/ihe.formatcode.fhir/1.1.0/CodeSystem-formatcode.html#formatcode-urn.58ihe.58iti.58xds-sd.58pdf.582008&quot;&gt;IHE Format Code set for use with Document Sharing: urn:ihe:iti:xds-sd:pdf:2008&lt;/a&gt; (ITI XDS-SD PDF)&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;
-        &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#DocumentReference.text">text</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;current&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.type">type</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
-                    <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://mos.esante.gouv.fr/NOS/TRE_A04-TypeDocument&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;11502&quot;/&gt;
-          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
-        &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.type">type</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.category">category</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
-                    <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://mos.esante.gouv.fr/NOS/TRE_A05-CategorieDocument&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;CR&quot;/&gt;
-          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
-        &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.category">category</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.subject">subject</a>&gt;<a href="Patient-fr-patient-123.html" style="color: Maroon">&#x1F517;</a> 
-          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/fr-patient-123&quot;/&gt;
-        &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.subject">subject</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.content">content</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.content.attachment">attachment</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">contentType</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;application/pdf&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.url">url</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;urn:uuid:22222222-2222-4222-8222-222222222222&quot;/&gt;
-          &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.content.attachment">attachment</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.content.format">format</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
-                    <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;urn:ihe:iti:xds-sd:pdf:2008&quot;/&gt;
-          &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.content.format">format</a>&gt;
-        &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.content">content</a>&gt;
-      &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference">DocumentReference</a>&gt;
-    &lt;/resource&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;PUT&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;DocumentReference/doc-old&quot;/&gt;
-    &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>&gt;
-  &lt;/<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:uuid:55555555-5555-4555-8555-555555555555&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference">resource</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference">DocumentReference</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/resource.html#DocumentReference.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;doc-new&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/resource.html#DocumentReference.meta">meta</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
-                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference&quot;/&gt;
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-document-reference&quot;/&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/resource.html#DocumentReference.meta">meta</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#DocumentReference.text">text</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;DocumentReference_doc-new&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Narratif généré : RéférenceDocument doc-new&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;doc-new&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcdoc-new&quot;&gt; &lt;/a&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profil: &lt;code&gt;https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-documentreference&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Current&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_A04-TypeDocument 11502}&quot;&gt;11502&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_A05-CategorieDocument CR}&quot;&gt;CR&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=&quot;Patient-fr-patient-123.html&quot;&gt;Martin Claire  Male, Date de Naissance :1980-01-15&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;RelatesTos&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td&gt;Replaces&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;Bundle-bundle-exemple-comprehensiveprovidedocument-replace.html#urn-uuid-44444444-4444-4444-8444-444444444444&quot;&gt;DocumentReference : status = current; type = 11502; category = CR&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;content&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Attachments&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;ContentType&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Url&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td&gt;application/pdf&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;Bundle-bundle-exemple-comprehensiveprovidedocument-replace.html#urn-uuid-33333333-3333-4333-8333-333333333333&quot;&gt;Binary: application/pdf (8 bytes base64)&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;format&lt;/b&gt;: &lt;a href=&quot;https://profiles.ihe.net/fhir/ihe.formatcode.fhir/1.1.0/CodeSystem-formatcode.html#formatcode-urn.58ihe.58iti.58xds-sd.58pdf.582008&quot;&gt;IHE Format Code set for use with Document Sharing: urn:ihe:iti:xds-sd:pdf:2008&lt;/a&gt; (ITI XDS-SD PDF)&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;DocumentReference_doc-new&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Narratif généré : RéférenceDocument doc-new&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;doc-new&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcdoc-new&quot;&gt; &lt;/a&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profil: &lt;a href=&quot;StructureDefinition-pdsm-comprehensive-document-reference.html&quot;&gt;PDSm Comprehensive DocumentReference&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;masterIdentifier&lt;/b&gt;: &lt;a href=&quot;http://terminology.hl7.org/6.0.2/NamingSystem-uri.html&quot; title=&quot;As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt 
+
+This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: 
+
+Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.
+
+This OID may also be used in CD.codeSystem.&quot;&gt;Uniform Resource Identifier (URI)&lt;/a&gt;/urn:uuid:55555555-5555-4555-8555-555555555555&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Current&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=&quot;Codes :{http://loinc.org 34133-9}&quot;&gt;Résumé de sortie d'hospitalisation&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_A03-ClasseDocument/FHIR/TRE-A03-ClasseDocument 10}&quot;&gt;Compte-rendu&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=&quot;Patient-fr-patient-123.html&quot;&gt;Martin Claire (official) Male, Date de Naissance :1980-01-15 ( NIR: 180017505600103 (use: official, ))&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: 2025-06-01 12:00:00+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;author&lt;/b&gt;: &lt;a href=&quot;#hcdoc-new/auteur&quot;&gt;PractitionerRole : identifier = https://rpps.esante.gouv.fr#1011848351&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;authenticator&lt;/b&gt;: &lt;a href=&quot;#hcdoc-new/authentificateur&quot;&gt;Organization HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;RelatesTos&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td&gt;Replaces&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;DocumentReference/doc-old&quot;&gt;DocumentReference/doc-old&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: Compte rendu de consultation - version de remplacement&lt;/p&gt;&lt;p&gt;&lt;b&gt;securityLabel&lt;/b&gt;: &lt;span title=&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_A07-StatusVisibiliteDocument/FHIR/TRE-A07-StatusVisibiliteDocument N}&quot;&gt;Normal&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;content&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Attachments&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;ContentType&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Language&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Url&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Size&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Hash&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Title&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Creation&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td&gt;application/pdf&lt;/td&gt;&lt;td&gt;Français (France)&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;Bundle-bundle-exemple-comprehensiveprovidedocument-replace.html#urn-uuid-33333333-3333-4333-8333-333333333333&quot;&gt;Binary: application/pdf (8 bytes base64)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;&lt;code&gt;qvTGHdzF6KLavt4PO0gs2a6pQ00=&lt;/code&gt;&lt;/td&gt;&lt;td&gt;CR Consultation - Version remplaçante&lt;/td&gt;&lt;td&gt;2025-06-01 10:00:00+0100&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;format&lt;/b&gt;: &lt;a href=&quot;https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A11-IheFormatCode.html#TRE-A11-IheFormatCode-urn.58ihe.58iti.58xds-sd.58pdf.582008&quot;&gt;TRE_A11_IheFormatCode: urn:ihe:iti:xds-sd:pdf:2008&lt;/a&gt; (xds-sd:pdf)&lt;/p&gt;&lt;/blockquote&gt;&lt;h3&gt;Contexts&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Period&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;FacilityType&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;PracticeSetting&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;SourcePatientInfo&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td&gt;2025-06-01 08:00:00+0100 --&amp;gt; 2025-06-01 10:00:00+0100&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite SA01}&quot;&gt;Etablissement public de santé&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/FHIR/TRE-A01-CadreExercice ETABLISSEMENT}&quot;&gt;Etablissement de santé&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;Patient-fr-patient-123.html&quot;&gt;Martin Claire (official) Male, Date de Naissance :1980-01-15 ( NIR: 180017505600103 (use: official, ))&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Narratif généré : PractitionerRole #auteur&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;doc-new/auteur&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcdoc-new/auteur&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://rpps.esante.gouv.fr&lt;/code&gt;/1011848351&lt;/p&gt;&lt;/blockquote&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Narratif généré : Organisation #authentificateur&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;doc-new/authentificateur&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcdoc-new/authentificateur&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;urn:oid:1.2.250.1.71.4.2.2&lt;/code&gt;/2264403106&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;<a name="end-xhtml"></a>
         &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#DocumentReference.text">text</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">contained</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">PractitionerRole</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;auteur&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.identifier">identifier</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://rpps.esante.gouv.fr&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1011848351&quot;/&gt;
+            &lt;/<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.identifier">identifier</a>&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">PractitionerRole</a>&gt;
+        &lt;/contained&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization">contained</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization">Organization</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/resource.html#Organization.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;authentificateur&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.250.1.71.4.2.2&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;2264403106&quot;/&gt;
+            &lt;/<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G&quot;/&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/organization.html#Organization">Organization</a>&gt;
+        &lt;/contained&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.masterIdentifier">masterIdentifier</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:ietf:rfc:3986&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;urn:uuid:55555555-5555-4555-8555-555555555555&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.masterIdentifier">masterIdentifier</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;current&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.type">type</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
-                    <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://mos.esante.gouv.fr/NOS/TRE_A04-TypeDocument&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;11502&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;34133-9&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Résumé de sortie d'hospitalisation&quot;/&gt;
           &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.type">type</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.category">category</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
-                    <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://mos.esante.gouv.fr/NOS/TRE_A05-CategorieDocument&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;CR&quot;/&gt;
+                    <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://mos.esante.gouv.fr/NOS/TRE_A03-ClasseDocument/FHIR/TRE-A03-ClasseDocument&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;10&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Compte-rendu&quot;/&gt;
           &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.category">category</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.subject">subject</a>&gt;<a href="Patient-fr-patient-123.html" style="color: Maroon">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/fr-patient-123&quot;/&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.subject">subject</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#instant">value</a>=&quot;2025-06-01T12:00:00+01:00&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.author">author</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;#auteur&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.author">author</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.authenticator">authenticator</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;#authentificateur&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.authenticator">authenticator</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.relatesTo">relatesTo</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.relatesTo.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;replaces&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.relatesTo.target">target</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;urn:uuid:44444444-4444-4444-8444-444444444444&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;DocumentReference/doc-old&quot;/&gt;
           &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.relatesTo.target">target</a>&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.relatesTo">relatesTo</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.description">description</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Compte rendu de consultation - version de remplacement&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.securityLabel">securityLabel</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+                    <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://mos.esante.gouv.fr/NOS/TRE_A07-StatusVisibiliteDocument/FHIR/TRE-A07-StatusVisibiliteDocument&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;N&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Normal&quot;/&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.securityLabel">securityLabel</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.content">content</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.content.attachment">attachment</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">contentType</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;application/pdf&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.language">language</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;fr-FR&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.url">url</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;urn:uuid:33333333-3333-4333-8333-333333333333&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.size">size</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;5&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.hash">hash</a> <a href="http://hl7.org/fhir/R4/datatypes.html#base64Binary">value</a>=&quot;qvTGHdzF6KLavt4PO0gs2a6pQ00=&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CR Consultation - Version remplaçante&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.creation">creation</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2025-06-01T10:00:00+01:00&quot;/&gt;
           &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.content.attachment">attachment</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.content.format">format</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
-                    <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode&quot;/&gt;
+                    <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://mos.esante.gouv.fr/NOS/TRE_A11-IheFormatCode/FHIR/TRE-A11-IheFormatCode&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;urn:ihe:iti:xds-sd:pdf:2008&quot;/&gt;
           &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.content.format">format</a>&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.content">content</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.context">context</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.context.period">period</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2025-06-01T08:00:00+01:00&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2025-06-01T10:00:00+01:00&quot;/&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.context.period">period</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.context.facilityType">facilityType</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+                      <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SA01&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Etablissement public de santé&quot;/&gt;
+            &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.context.facilityType">facilityType</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.context.practiceSetting">practiceSetting</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+                      <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/FHIR/TRE-A01-CadreExercice&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;ETABLISSEMENT&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Etablissement de santé&quot;/&gt;
+            &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.context.practiceSetting">practiceSetting</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.context.sourcePatientInfo">sourcePatientInfo</a>&gt;<a href="Patient-fr-patient-123.html" style="color: Maroon">&#x1F517;</a> 
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/fr-patient-123&quot;/&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.context.sourcePatientInfo">sourcePatientInfo</a>&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.context">context</a>&gt;
       &lt;/<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference">DocumentReference</a>&gt;
     &lt;/resource&gt;
     &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>&gt;
@@ -458,23 +460,55 @@
       &lt;<a href="http://hl7.org/fhir/R4/list.html#List">List</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/resource.html#List.meta">meta</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
-                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-submissionset&quot;/&gt;
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-submissionset-comprehensive&quot;/&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/resource.html#List.meta">meta</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#List.text">text</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;List_null&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Narratif généré : Liste &lt;/b&gt;&lt;/p&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profil: &lt;code&gt;https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-submissionset&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;&lt;table class=&quot;clstu&quot;&gt;&lt;tr&gt;&lt;td&gt;Mode : Working List &lt;/td&gt;&lt;td&gt;Statut : Current &lt;/td&gt;&lt;td&gt;Code : submissionset &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Sujet : &lt;a href=&quot;Patient-fr-patient-123.html&quot;&gt;Martin Claire  Male, Date de Naissance :1980-01-15&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr style=&quot;backgound-color: #eeeeee&quot;&gt;&lt;td&gt;&lt;b&gt;Éléments&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Bundle-bundle-exemple-comprehensiveprovidedocument-replace.html#urn-uuid-55555555-5555-4555-8555-555555555555&quot;&gt;DocumentReference : status = current; type = 11502; category = CR&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;List_null&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Narratif généré : Liste &lt;/b&gt;&lt;/p&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profil: &lt;a href=&quot;StructureDefinition-pdsm-submissionset-comprehensive.html&quot;&gt;PDSm SubmissionSet Comprehensive&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;table class=&quot;clstu&quot;&gt;&lt;tr&gt;&lt;td&gt;Date : 2025-06-01 12:00:00+0100 &lt;/td&gt;&lt;td&gt;Mode : Working List &lt;/td&gt;&lt;td&gt;Statut : Current &lt;/td&gt;&lt;td&gt;Code : SubmissionSet as a FHIR List &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Sujet : &lt;a href=&quot;Patient-fr-patient-123.html&quot;&gt;Martin Claire (official) Male, Date de Naissance :1980-01-15 ( NIR: 180017505600103 (use: official, ))&lt;/a&gt;Source &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr style=&quot;backgound-color: #eeeeee&quot;&gt;&lt;td&gt;&lt;b&gt;Éléments&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Bundle-bundle-exemple-comprehensiveprovidedocument-replace.html#urn-uuid-55555555-5555-4555-8555-555555555555&quot;&gt;DocumentReference : masterIdentifier = UUID:55555555-5555-4555-8555-555555555555; status = current; type = Résumé de sortie d'hospitalisation; category = Compte-rendu; date = 2025-06-01 12:00:00+0100; description = Compte rendu de consultation - version de remplacement; securityLabel = Normal&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Ressource contenue&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;a name=&quot;null/source-auteur&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;PractitionerRole #source-auteur&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;hcnull/source-auteur&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://rpps.esante.gouv.fr&lt;/code&gt;/1011848351&lt;/p&gt;&lt;/div&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#List.text">text</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">contained</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">PractitionerRole</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;source-auteur&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.identifier">identifier</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://rpps.esante.gouv.fr&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1011848351&quot;/&gt;
+            &lt;/<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.identifier">identifier</a>&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">PractitionerRole</a>&gt;
+        &lt;/contained&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#List.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-designationType&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCodeableConcept</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+                      <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SA01&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Etablissement public de santé&quot;/&gt;
+            &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCodeableConcept</a>&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#List.extension">extension</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#List.extension">extension</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-sourceId&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueIdentifier</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.250.1.213.1.1.1&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;SRC-01&quot;/&gt;
+          &lt;/<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueIdentifier</a>&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#List.extension">extension</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/list.html#List.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;current&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/list.html#List.mode">mode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;working&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/list.html#List.code">code</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://ihe.net/fhir/CodeSystem/MHDlistTypes&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+                    <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes&quot;/&gt;
             &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;submissionset&quot;/&gt;
           &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/list.html#List.code">code</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/list.html#List.subject">subject</a>&gt;<a href="Patient-fr-patient-123.html" style="color: Maroon">&#x1F517;</a> 
           &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/fr-patient-123&quot;/&gt;
         &lt;/<a href="http://hl7.org/fhir/R4/list.html#List.subject">subject</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/list.html#List.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2025-06-01T12:00:00+01:00&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/list.html#List.source">source</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;#source-auteur&quot;/&gt;
+        &lt;/<a href="http://hl7.org/fhir/R4/list.html#List.source">source</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/list.html#List.entry">entry</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/list.html#List.entry.item">item</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;urn:uuid:55555555-5555-4555-8555-555555555555&quot;/&gt;
@@ -533,7 +567,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 30, 2026 13:30+0000">2026-03-30</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 30, 2026 16:30+0000">2026-03-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

@@ -129,7 +129,7 @@
         <a href="construction_des_flux.html">Vue d&apos;ensemble</a>
       </li>
       <li>
-        <a href="st_ajout.html">Ajout d&apos;un lot de soumission (ITI-65)</a>
+        <a href="st_ajout.html">Ajout et remplacement de documents (ITI-65)</a>
       </li>
       <li>
         <a href="st_maj.html">Mise à jour des métadonnées d&apos;un document</a>
@@ -500,9 +500,10 @@ Dans le cas d’une mise à jour d’un classeur, comme List.status ou List.entr
 <p>Exemple illustratif du remplacement de Document conforme au profil PDSm_ComprehensiveDocumentReference et à ITI-65 :</p>
 
 <ul>
-  <li>un document existant est remplacé</li>
-  <li>l'ancien est marqué superseded</li>
-  <li>un nouveau document est publié</li>
+  <li>un document existant (DocumentReference/doc-old) est remplacé</li>
+  <li>l'ancien est marqué superseded via un PATCH (géré par le Document Source)</li>
+  <li>un nouveau document est publié avec relatesTo.code = #replaces</li>
+  <li>le patient (Patient/fr-patient-123) est déjà enregistré sur le serveur avec une identité INS qualifiée — il n'est pas inclus dans le bundle</li>
 </ul>
 </td>
          </tr>
@@ -598,7 +599,7 @@ Dans le cas d’une mise à jour d’un classeur, comme List.status ou List.entr
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 30, 2026 13:30+0000">2026-03-30</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 30, 2026 16:30+0000">2026-03-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

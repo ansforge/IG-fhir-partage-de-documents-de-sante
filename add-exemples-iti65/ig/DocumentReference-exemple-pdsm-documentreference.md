@@ -18,7 +18,7 @@ Profil: [PDSm Comprehensive DocumentReference](StructureDefinition-pdsm-comprehe
 
 **category**: Compte-rendu
 
-**subject**: [Martin Claire Male, Date de Naissance :1980-01-15](Patient-fr-patient-123.md)
+**subject**: [Martin Claire (official) Male, Date de Naissance :1980-01-15 ( NIR: 180017505600103 (use: official, ))](Patient-fr-patient-123.md)
 
 **date**: 2025-04-29 12:00:00+0100
 
@@ -46,7 +46,7 @@ Profil: [PDSm Comprehensive DocumentReference](StructureDefinition-pdsm-comprehe
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
 | - | **Period** | **FacilityType** | **PracticeSetting** | **SourcePatientInfo** |
-| * | 2025-04-20 08:00:00+0100 --> 2025-04-25 08:00:00+0100 | Etablissement public de santé | Etablissement de santé | [Martin Claire Male, Date de Naissance :1980-01-15](Patient-fr-patient-123.md) |
+| * | 2025-04-20 08:00:00+0100 --> 2025-04-25 08:00:00+0100 | Etablissement public de santé | Etablissement de santé | [Martin Claire (official) Male, Date de Naissance :1980-01-15 ( NIR: 180017505600103 (use: official, ))](Patient-fr-patient-123.md) |
 
 -------
 

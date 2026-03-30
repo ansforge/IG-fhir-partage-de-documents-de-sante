@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>Ajout d'un lot de documents (ITI-65) - Partage de Documents de Santé en mobilité (PDSm) v3.1.1</title>
+    <title>Ajout et remplacement de documents (ITI-65) - Partage de Documents de Santé en mobilité (PDSm) v3.1.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -129,7 +129,7 @@
         <a href="construction_des_flux.html">Vue d'ensemble</a>
       </li>
       <li>
-        <a href="st_ajout.html">Ajout d'un lot de soumission (ITI-65)</a>
+        <a href="st_ajout.html">Ajout et remplacement de documents (ITI-65)</a>
       </li>
       <li>
         <a href="st_maj.html">Mise à jour des métadonnées d'un document</a>
@@ -191,7 +191,7 @@
     <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
       <div class="container">    <!-- container -->
         <ul class="breadcrumb">
-          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="construction_des_flux.html"><b>Spécifications techniques - vue d'ensemble</b></a></li><li><b>Ajout d'un lot de documents (ITI-65)</b></li>
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="construction_des_flux.html"><b>Spécifications techniques - vue d'ensemble</b></a></li><li><b>Ajout et remplacement de documents (ITI-65)</b></li>
 
           <span style="float:right;">
 
@@ -221,7 +221,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
     <!-- ReleaseHeader --><p id="publish-box">Partage de Documents de Santé en mobilité (PDSm) - version de développement local (intégration continue v3.1.1) construite par les outils de publication FHIR (HL7&reg; FHIR&reg; Standard). Voir le <a href="https://interop.esante.gouv.fr/ig/fhir/pdsm/history.html">répertoire des versions publiées</a></p>  <!-- EndReleaseHeader -->
-  <h2>Ajout d'un lot de documents (ITI-65)</h2>
+  <h2>Ajout et remplacement de documents (ITI-65)</h2>
   
 
 
@@ -238,36 +238,157 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p>  <!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#flux-01--ajout-dun-lot-de-documents" id="markdown-toc-flux-01--ajout-dun-lot-de-documents">Flux 01 : Ajout d’un lot de documents</a></li>
+  <li><a href="#flux-01--ajout-dun-lot-de-documents" id="markdown-toc-flux-01--ajout-dun-lot-de-documents">Flux 01 : Ajout d'un lot de documents</a></li>
   <li><a href="#flux-02--résultat-de-lajout-dun-lot-de-documents" id="markdown-toc-flux-02--résultat-de-lajout-dun-lot-de-documents">Flux 02 : Résultat de l'ajout d'un lot de documents</a></li>
 </ul>
 
 </div>
-<p>Ce flux permet l’ajout ou le remplacement d’un document au dossier patient. Cette demande de modification est faite par le producteur de documents.</p>
+<p>Ce flux permet l'ajout ou le remplacement d'un document au dossier patient. Cette demande de modification est faite par le producteur de documents.</p>
 
 <p>Ces flux se basent sur la requête et la réponse de la transaction IHE "Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html">ITI-65</a>" du profil MHD.</p>
 
-<h3 id="flux-01--ajout-dun-lot-de-documents">Flux 01 : Ajout d’un lot de documents</h3>
+<h3 id="flux-01--ajout-dun-lot-de-documents">Flux 01 : Ajout d'un lot de documents</h3>
 
 <p>La première étape de la construction du flux 01 de la demande de modification du dossier patient consiste à organiser son contenu dans une ressource Bundle. Un profil spécifique dérivé du profil IHE MHD v4.0.1 « ComprehensiveProvideDocumentBundle » est créé pour ce volet et nommé <a href="StructureDefinition-pdsm-comprehensive-provide-document-bundle.html">PDSm Comprehensive Provide Document Bundle</a>.</p>
 
 <p>Le flux doit contenir :</p>
 <ul>
   <li>une ressource de type « List » représentant le lot de soumission (profil <a href="StructureDefinition-pdsm-submissionset-comprehensive.html">PDSm_SubmissionsSetComprehensive</a>)</li>
-  <li>une à plusieurs ressources de type « DocumentReference », représentant les fiches de documents (profil <a href="StructureDefinition-pdsm-comprehensive-document-reference.html">PDSm_ComprehensiveDocumentReference</a>),</li>
-  <li>zero à plusieurs ressources « Binary » représentant les documents envoyés dans le flux (ressource <a href="https://www.hl7.org/fhir/binary.html">Binary</a>).,</li>
-  <li>zero à plusieurs ressources de type « List » représentant les classeurs (profil PDSm_FolderComprehensive).</li>
+  <li>une à plusieurs ressources de type « DocumentReference », représentant les fiches de documents (profil <a href="StructureDefinition-pdsm-comprehensive-document-reference.html">PDSm_ComprehensiveDocumentReference</a>)</li>
+  <li>zéro à plusieurs ressources « Binary » représentant les documents envoyés dans le flux (ressource <a href="https://www.hl7.org/fhir/binary.html">Binary</a>)</li>
+  <li>zéro à plusieurs ressources de type « List » représentant les classeurs (profil PDSm_FolderComprehensive)</li>
 </ul>
 
-<p>Dans le cas d’un dépôt d’un nouveau document, l’élément <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code> doit pointer vers une ressource Binary, représentant le document, présente dans le flux.</p>
+<p>Le corps de la requête est une ressource « Bundle » de type <code class="language-plaintext highlighter-rouge">transaction</code> encapsulant toutes les ressources listées précédemment. Cet objet de type JSON ou XML sera envoyé dans le contenu de la requête HTTP POST.</p>
 
-<p>Dans le cas d’une demande de mise à jour d’un document par remplacement, l’élément DocumentReference.relatesTo doit être renseigné afin d’indiquer le lien avec un DocumentReference existant et de préciser la nature de la mise à jour. L’élément <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code> doit pointer vers une ressource Binary, représentant le document qui remplace l’ancien, présente dans le flux.</p>
+<h4 id="cas-1--ajout-dun-nouveau-document">Cas 1 : Ajout d'un nouveau document</h4>
 
-<p>Dans le cas d’une mise à jour d’un classeur, comme <code class="language-plaintext highlighter-rouge">List.status</code> ou <code class="language-plaintext highlighter-rouge">List.entry</code> pour reclasser des documents, une nouvelle version de la ressource List est envoyée.</p>
+<p>Dans le cas d'un dépôt d'un nouveau document, l'élément <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code> doit pointer vers une ressource <code class="language-plaintext highlighter-rouge">Binary</code>, représentant le document, présente dans le flux.</p>
 
-<p>Le corps de la requête est une ressource "Bundle" de type "transaction" encapsulant toutes les ressources listées précédemment. Cet objet de type JSON ou XML sera envoyé dans le contenu de la requête HTTP POST.</p>
+<p>Le patient (<code class="language-plaintext highlighter-rouge">DocumentReference.subject</code> et <code class="language-plaintext highlighter-rouge">List.subject</code>) peut être référencé de deux manières :</p>
+<ul>
+  <li>par une référence logique vers un patient déjà enregistré sur le serveur (<code class="language-plaintext highlighter-rouge">Patient/[id]</code>),</li>
+  <li>ou en incluant la ressource Patient dans le bundle (requête HTTP POST), notamment lorsque le serveur destinataire ne dispose pas encore du patient avec son identité INS qualifiée.</li>
+</ul>
 
-<p>A la réception de la demande, le gestionnaire de partage de documents doit valider les ressources et répondre avec un HTTP Code statut</p>
+<p>Dans le cas d'une mise à jour d'un classeur, comme <code class="language-plaintext highlighter-rouge">List.status</code> ou <code class="language-plaintext highlighter-rouge">List.entry</code> pour reclasser des documents, une nouvelle version de la ressource List est envoyée.</p>
+
+<h4 id="cas-2--remplacement-dun-document-existant">Cas 2 : Remplacement d'un document existant</h4>
+
+<p>Le remplacement consiste à publier un nouveau document qui se substitue à un document existant, dont la fiche est marquée comme remplacée (<code class="language-plaintext highlighter-rouge">superseded</code>). Cette opération est atomique : elle est réalisée en une seule transaction ITI-65.</p>
+
+<h5 id="pré-conditions">Pré-conditions</h5>
+
+<ul>
+  <li>Le document à remplacer (<code class="language-plaintext highlighter-rouge">DocumentReference/[id-ancien]</code>) est déjà persisté sur le serveur avec le statut <code class="language-plaintext highlighter-rouge">current</code>.</li>
+  <li>Le patient est déjà enregistré sur le serveur avec une identité INS qualifiée. Il <strong>ne doit pas</strong> être inclus dans le bundle de remplacement.</li>
+</ul>
+
+<h5 id="contenu-du-bundle">Contenu du bundle</h5>
+
+<p>Le bundle de remplacement contient les entrées suivantes, dans l'ordre recommandé :</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Entrée</th>
+      <th>Type</th>
+      <th>Méthode</th>
+      <th>Rôle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nouveau contenu documentaire</td>
+      <td><code class="language-plaintext highlighter-rouge">Binary</code></td>
+      <td><code class="language-plaintext highlighter-rouge">POST</code></td>
+      <td>Contenu binaire du document de remplacement</td>
+    </tr>
+    <tr>
+      <td>Nouvelle fiche</td>
+      <td><code class="language-plaintext highlighter-rouge">DocumentReference</code></td>
+      <td><code class="language-plaintext highlighter-rouge">POST</code></td>
+      <td>Fiche du nouveau document, avec <code class="language-plaintext highlighter-rouge">relatesTo</code> pointant vers l'ancien</td>
+    </tr>
+    <tr>
+      <td>Passage de l'ancien document en superseded</td>
+      <td><code class="language-plaintext highlighter-rouge">Parameters</code> (PATCH)</td>
+      <td><code class="language-plaintext highlighter-rouge">PATCH</code></td>
+      <td>Mise à jour du statut de l'ancien document à <code class="language-plaintext highlighter-rouge">superseded</code></td>
+    </tr>
+    <tr>
+      <td>Lot de soumission</td>
+      <td><code class="language-plaintext highlighter-rouge">List</code></td>
+      <td><code class="language-plaintext highlighter-rouge">POST</code></td>
+      <td>SubmissionSet contenant uniquement la nouvelle fiche</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Le patient n'est <strong>pas</strong> inclus dans le bundle : ses références (<code class="language-plaintext highlighter-rouge">subject</code>, <code class="language-plaintext highlighter-rouge">context.sourcePatientInfo</code>) pointent directement vers <code class="language-plaintext highlighter-rouge">Patient/[id]</code> sur le serveur.</p>
+
+<h5 id="nouvelle-fiche-documentreference">Nouvelle fiche (DocumentReference)</h5>
+
+<p>La nouvelle fiche doit comporter l'élément <code class="language-plaintext highlighter-rouge">relatesTo</code> renseigné comme suit :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DocumentReference.relatesTo[0].code    = #replaces
+DocumentReference.relatesTo[0].target  = Reference(DocumentReference/[id-ancien])
+DocumentReference.status               = #current
+</code></pre></div></div>
+
+<p>L'élément <code class="language-plaintext highlighter-rouge">content.attachment.url</code> doit pointer vers la ressource <code class="language-plaintext highlighter-rouge">Binary</code> du nouveau document, présente dans le même bundle.</p>
+
+<p>Conformément au profil <a href="StructureDefinition-pdsm-comprehensive-document-reference.html">PDSm_ComprehensiveDocumentReference</a>, l'élément <code class="language-plaintext highlighter-rouge">relatesTo</code> est obligatoire (<code class="language-plaintext highlighter-rouge">[1..1]</code>) dans le contexte d'un remplacement.</p>
+
+<h5 id="passage-de-lancien-document-en-superseded">Passage de l'ancien document en superseded</h5>
+
+<p>Le producteur de documents inclut dans le bundle une entrée de type <code class="language-plaintext highlighter-rouge">PATCH</code> afin de mettre à jour le statut de l'ancienne fiche. Cette entrée utilise la ressource <code class="language-plaintext highlighter-rouge">Parameters</code> conforme au profil <a href="https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Patch.Parameters">IHE.MHD.Patch.Parameters</a> :</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parameters"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"operation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"part"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path"</span><span class="p">,</span><span class="w">  </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DocumentReference.status"</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"type"</span><span class="p">,</span><span class="w">  </span><span class="nl">"valueCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"replace"</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w"> </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="p">,</span><span class="w"> </span><span class="nl">"valueCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"superseded"</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>La requête associée dans le bundle est :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>request.method = PATCH
+request.url    = DocumentReference/[id-ancien]
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Note :</strong> L'ancienne fiche ne doit <strong>pas</strong> être incluse comme entrée <code class="language-plaintext highlighter-rouge">PUT</code> dans le bundle. Le <code class="language-plaintext highlighter-rouge">PATCH</code> seul suffit à mettre à jour son statut. Inclure simultanément un <code class="language-plaintext highlighter-rouge">PUT</code> avec <code class="language-plaintext highlighter-rouge">status = current</code> et un <code class="language-plaintext highlighter-rouge">PATCH</code> vers <code class="language-plaintext highlighter-rouge">superseded</code> créerait un conflit dans la transaction.</p>
+</blockquote>
+
+<h5 id="lot-de-soumission-submissionset">Lot de soumission (SubmissionSet)</h5>
+
+<p>Le lot de soumission ne doit référencer que la <strong>nouvelle</strong> fiche. L'ancienne fiche n'est pas listée dans <code class="language-plaintext highlighter-rouge">List.entry</code>.</p>
+
+<h5 id="comportement-du-gestionnaire-document-recipient">Comportement du gestionnaire (Document Recipient)</h5>
+
+<p>À réception du bundle de remplacement, le gestionnaire de partage de documents :</p>
+
+<ol>
+  <li>crée la nouvelle ressource <code class="language-plaintext highlighter-rouge">Binary</code> et lui affecte un identifiant logique,</li>
+  <li>crée la nouvelle <code class="language-plaintext highlighter-rouge">DocumentReference</code> avec <code class="language-plaintext highlighter-rouge">status = current</code> et enregistre le lien <code class="language-plaintext highlighter-rouge">relatesTo</code>,</li>
+  <li>applique le <code class="language-plaintext highlighter-rouge">PATCH</code> sur l'ancienne <code class="language-plaintext highlighter-rouge">DocumentReference</code> et positionne son statut à <code class="language-plaintext highlighter-rouge">superseded</code>,</li>
+  <li>crée le lot de soumission (<code class="language-plaintext highlighter-rouge">List</code>).</li>
+</ol>
+
+<p>Ces quatre opérations sont traitées de manière atomique (succès ou échec global de la transaction).</p>
+
+<h5 id="exemple">Exemple</h5>
+
+<p>Un exemple complet de bundle de remplacement conforme au profil PDSm est disponible : <a href="Bundle-bundle-exemple-comprehensiveprovidedocument-replace.html">bundle-exemple-comprehensiveprovidedocument-replace</a>.</p>
+
+<hr/>
 
 <h3 id="flux-02--résultat-de-lajout-dun-lot-de-documents">Flux 02 : Résultat de l'ajout d'un lot de documents</h3>
 
@@ -275,18 +396,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Il doit être indiqué dans la réponse, le statut (succès ou échec) de chaque élément mentionné dans la requête. Le contenu qui a été créé ou modifié est aussi retourné.</p>
 
-  <!-- * [PDSmSubmissionSetComprehensive](StructureDefinition-PDSmSubmissionSetComprehensive.html) représentant le LotDeSoumission
-* [PDSmComprehensiveDocumentReference](StructureDefinition-PDSmComprehensiveDocumentReference.html) représentant la Fiche
-* [PDSmFolderComprehensive](StructureDefinition-PDSmFolderComprehensive.html) représentant le Classeur -->
-  <!-- Utiliser à chaque fois le nom du profil et non le lot de soumission, et rajouter le nom fonctionnel à côté -->
+<p>Le gestionnaire de partage de documents de santé retourne un « HTTP Status code » approprié au résultat de la demande comme indiqué dans la spécification du profil MHD. Le corps de la réponse doit être un Bundle de type <code class="language-plaintext highlighter-rouge">transaction-response</code> avec un élément <code class="language-plaintext highlighter-rouge">entry</code> pour chaque ressource reçue dans le Bundle de la requête, dans le même ordre, avec le résultat du traitement de l'élément.</p>
 
-<p><a name="l514">​</a>Le gestionnaire de partage de documents de santé retourne un "HTTP Status code" approprié au résultat de la demande comme indiqué dans la spécification du profil MHD. Le corps de la réponse doit être un Bundle de type transaction-response avec un élément entry pour chaque ressource reçue dans le Bundle de la requête, dans le même ordre, avec le résultat du traitement de l'élément.
-Le corps de la réponse doit être conforme au profil <a href="/IHE.MHD.ProvideDocumentBundleResponse">ProvideDocumentBundleResponse</a> (<a href="Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.json.html">exemple de contenu d'un payload</a>).</p>
+<p><a name="l1004">​</a>Le corps de la réponse doit être conforme au profil <a href="/IHE.MHD.ProvideDocumentBundleResponse">ProvideDocumentBundleResponse</a> (<a href="Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.json.html">exemple de contenu d'un payload</a>).</p>
 
 <p>Ce flux sert à communiquer un succès ou un échec.
 Un succès n'est indiqué que lorsque le ou les documents sont reçus, complètement traités et conservés selon les besoins de la configuration du gestionnaire de partage de documents.</p>
 
-<p>Les messages de warning concernant le traitement des associations entre fiches, l’élément DocumentReference.relatesTo, ou le traitement des classeurs sont définis par le profil MHD.</p>
+<p>Dans le cas d'un <strong>remplacement</strong>, la réponse contient une entrée pour chaque ressource soumise, y compris le résultat de l'opération <code class="language-plaintext highlighter-rouge">PATCH</code> sur l'ancienne fiche. Si l'une des opérations échoue (par exemple si l'ancienne fiche est introuvable ou déjà <code class="language-plaintext highlighter-rouge">superseded</code>), l'ensemble de la transaction est rejeté.</p>
+
+<p>Les messages de warning concernant le traitement des associations entre fiches, l'élément <code class="language-plaintext highlighter-rouge">DocumentReference.relatesTo</code>, ou le traitement des classeurs sont définis par le profil MHD.</p>
+
 
 
 
@@ -328,7 +448,7 @@ Un succès n'est indiqué que lorsque le ou les documents sont reçus, complète
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 30, 2026 13:30+0000">2026-03-30</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 30, 2026 16:30+0000">2026-03-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

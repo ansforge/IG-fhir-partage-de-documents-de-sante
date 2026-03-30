@@ -13,7 +13,7 @@ Profil: [PDSm SubmissionSet Comprehensive](StructureDefinition-pdsm-submissionse
 | | | | |
 | :--- | :--- | :--- | :--- |
 | Date : 2025-04-30 14:00:00+0100 | Mode : Working List | Statut : Current | Code : Submission Set |
-| Sujet :[Martin Claire Male, Date de Naissance :1980-01-15](Patient-fr-patient-123.md)Source | | | |
+| Sujet :[Martin Claire (official) Male, Date de Naissance :1980-01-15 ( NIR: 180017505600103 (use: official, ))](Patient-fr-patient-123.md)Source | | | |
 
 note
 
