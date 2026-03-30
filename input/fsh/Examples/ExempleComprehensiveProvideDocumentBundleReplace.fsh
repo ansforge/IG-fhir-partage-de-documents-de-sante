@@ -2,8 +2,15 @@
 // BUNDLE PDSm IT-65 : exemple de remplacement de document
 // ==========================================================
 
-Instance: Bundle-CRBio-Replace
+Instance: bundle-exemple-comprehensiveprovidedocument-replace
 InstanceOf: Bundle
+Title: "Exemple de bundle ComprehensiveProvideDocument pour PDSm dans le contexte d'un remplacement de document"
+Description: "Exemple illustratif du remplacement de Document conforme au profil PDSm_ComprehensiveDocumentReference et à ITI-65 :
+
+* un document existant est remplacé
+* l'ancien est marqué superseded
+* un nouveau document est publié
+"
 Usage: #example
 
 * meta.profile = "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-provide-document-bundle"
