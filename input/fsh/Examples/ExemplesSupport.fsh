@@ -139,7 +139,7 @@ Usage: #example
 * birthDate = "1980-01-15"
 
 // Fiabilité de l'identité (obligatoire — identité validée via INSi)
-* extension[$fr-core-identity-reliability].valueCodeableConcept = $fr-core-cs-patient-ident-reliability#VALI "Identité validée"
+* extension[$fr-core-identity-reliability].valueCoding = $fr-core-cs-patient-ident-reliability#VALI "Identité validée"
 
 // Lieu de naissance (COG — obligatoire depuis v1.7)
 * extension[$patient-birthPlace].valueAddress.city = "Paris"
