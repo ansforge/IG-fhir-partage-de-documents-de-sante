@@ -20,6 +20,8 @@ Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-bir
 Alias: $fr-core-patient-birth-list-given-name = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name
 Alias: $fr-core-address-insee-code = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-address-insee-code
 Alias: $TRE-R13-CommuneOM = https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM
+Alias: $fr-core-identity-reliability = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability
+Alias: $fr-core-cs-patient-ident-reliability = https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-patient-ident-reliability
 
 Instance: practitioner-example
 InstanceOf: Practitioner
@@ -135,6 +137,9 @@ Usage: #example
 // Sexe et date de naissance
 * gender = #male
 * birthDate = "1980-01-15"
+
+// Fiabilité de l'identité (obligatoire — identité validée via INSi)
+* extension[$fr-core-identity-reliability].valueCodeableConcept = $fr-core-cs-patient-ident-reliability#VALI "Identité validée"
 
 // Lieu de naissance (COG — obligatoire depuis v1.7)
 * extension[$patient-birthPlace].valueAddress.city = "Paris"
