@@ -22,30 +22,19 @@ Usage: #example
 
 * entry[+].fullUrl = "urn:uuid:11111111-1111-4111-8111-111111111111"
 * entry[=].resource.resourceType = "Patient"
-* entry[=].resource.id = "patient-1"
+* entry[=].resource.id = "patient-123"
 
 * entry[=].resource.identifier.system = "urn:oid:1.2.250.1.213.1.4.8"
 * entry[=].resource.identifier.value = "189079912345678"
 
-* entry[=].resource.name.family = "DUPONT"
-* entry[=].resource.name.given[0] = "JEAN"
+* entry[=].resource.name.family = "Claire"
+* entry[=].resource.name.given[0] = "Martin"
 
 * entry[=].resource.gender = #male
-* entry[=].resource.birthDate = "1989-07-09"
+* entry[=].resource.birthDate = "1980-01-15"
 
 * entry[=].request.method = #POST
 * entry[=].request.url = "Patient"
-
-// ==========================================================
-// BINARY ANCIEN DOCUMENT
-// ==========================================================
-
-* entry[+].fullUrl = "urn:uuid:22222222-2222-4222-8222-222222222222"
-* entry[=].resource.resourceType = "Binary"
-* entry[=].resource.contentType = #application/pdf
-* entry[=].resource.data = "SGVsbG8="
-* entry[=].request.method = #POST
-* entry[=].request.url = "Binary"
 
 // ==========================================================
 // BINARY NOUVEAU DOCUMENT
@@ -82,10 +71,10 @@ Usage: #example
 * entry[=].resource.content[0].attachment.contentType = #application/pdf
 * entry[=].resource.content[0].attachment.url = "urn:uuid:22222222-2222-4222-8222-222222222222"
 
-* entry[=].resource.subject.reference = "fr-patient-123"
+* entry[=].resource.subject.reference = "Patient/fr-patient-123"
 
-* entry[=].request.method = #POST
-* entry[=].request.url = "DocumentReference"
+* entry[=].request.method = #PUT
+* entry[=].request.url = "DocumentReference/doc-old"
 
 // ==========================================================
 // NOUVEAU DOCUMENT (REMPLACEMENT)
@@ -110,7 +99,7 @@ Usage: #example
 * entry[=].resource.content[0].attachment.contentType = #application/pdf
 * entry[=].resource.content[0].attachment.url = "urn:uuid:33333333-3333-4333-8333-333333333333"
 
-* entry[=].resource.subject.reference = "urn:uuid:11111111-1111-4111-8111-111111111111"
+* entry[=].resource.subject.reference = "Patient/fr-patient-123"
 
 // REMPLACEMENT
 * entry[=].resource.relatesTo[0].code = #replaces
@@ -170,7 +159,7 @@ Usage: #example
 * entry[=].resource.code.coding.system = "http://ihe.net/fhir/CodeSystem/MHDlistTypes"
 * entry[=].resource.code.coding.code = #submissionset
 
-* entry[=].resource.subject.reference = "urn:uuid:11111111-1111-4111-8111-111111111111"
+* entry[=].resource.subject.reference = "Patient/fr-patient-123"
 
 // uniquement le nouveau doc
 * entry[=].resource.entry[0].item.reference = "urn:uuid:55555555-5555-4555-8555-555555555555"
