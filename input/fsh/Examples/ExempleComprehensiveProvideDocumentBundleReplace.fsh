@@ -50,6 +50,11 @@ Usage: #example
 * entry[=].resource.contained[1].identifier.value = "2264403106"
 * entry[=].resource.contained[1].name = "HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G"
 
+* entry[=].resource.contained[2].resourceType = "Patient"
+* entry[=].resource.contained[2].id = "patient-local"
+* entry[=].resource.contained[2].identifier[0].system = "urn:oid:1.2.250.1.213.1.4.8"
+* entry[=].resource.contained[2].identifier[0].value = "123456789012345"
+
 * entry[=].resource.masterIdentifier.system = "urn:ietf:rfc:3986"
 * entry[=].resource.masterIdentifier.value = "urn:uuid:55555555-5555-4555-8555-555555555555"
 
@@ -100,8 +105,8 @@ Usage: #example
 * entry[=].resource.context.practiceSetting.coding.code = #ETABLISSEMENT
 * entry[=].resource.context.practiceSetting.coding.display = "Etablissement de santé"
 
-// Référence vers le patient déjà enregistré sur le serveur avec son INS
-* entry[=].resource.context.sourcePatientInfo.reference = "Patient/fr-patient-123"
+// Snapshot local du patient (contained, obligatoire)
+* entry[=].resource.context.sourcePatientInfo.reference = "#patient-local"
 
 // REMPLACEMENT : référence vers le documentreference existant sur le serveur
 * entry[=].resource.relatesTo[0].code = #replaces
