@@ -57,11 +57,11 @@ Usage: #example
 
 * entry[=].resource.type.coding.system = "http://loinc.org"
 * entry[=].resource.type.coding.code = #34133-9
-* entry[=].resource.type.coding.display = "Résumé de sortie d'hospitalisation"
+* entry[=].resource.type.coding.display = "Synthèse d'épisode de soins"
 
 * entry[=].resource.category[0].coding.system = "https://mos.esante.gouv.fr/NOS/TRE_A03-ClasseDocument/FHIR/TRE-A03-ClasseDocument"
 * entry[=].resource.category[0].coding.code = #10
-* entry[=].resource.category[0].coding.display = "Compte-rendu"
+* entry[=].resource.category[0].coding.display = "Compte rendu"
 
 // Référence vers le patient déjà enregistré sur le serveur avec son INS
 * entry[=].resource.subject.reference = "Patient/fr-patient-123"
