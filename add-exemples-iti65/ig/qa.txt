@@ -1,9 +1,9 @@
 PDSm : Validation Results
 =========================================
 
-err = 57, warn = 106, info = 67
+err = 57, warn = 107, info = 67
 IG Publisher Version: 2.2.4
-Generated Mon Mar 30 16:33:23 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.pdsm#3.1.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/pdsm)
+Generated Tue Mar 31 10:04:49 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.pdsm#3.1.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/pdsm)
  Build Errors : 8 / 7 / 0
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Binary-6789 : 0 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478 : 0 / 4 / 1
@@ -13,7 +13,7 @@ Generated Mon Mar 30 16:33:23 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.pdsm#
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-ProducteurDeDocuments : 1 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/DocumentReference-PDSmSimplifiedExample : 7 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/DocumentReference-exemple-pdsm-documentreference : 9 / 5 / 10
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.pdsm : 1 / 1 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.pdsm : 1 / 2 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/List-ExampleFolder : 3 / 0 / 3
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/List-ExampleSubmissionSet : 7 / 4 / 16
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Organization-org-example : 0 / 2 / 7
@@ -47,7 +47,7 @@ ERROR: DocumentReference-PDSmSimplifiedExample.html#/html/body/div/div/div/div/d
 ERROR: DocumentReference-PDSmSimplifiedExample.html#/html/body/div/div/div/div/div/div/p/a at Line 279, column 744: The link 'PractitionerRole/practitionerrole-example' for "PractitionerRole/practitionerrole-example" cannot be resolved
 ERROR: DocumentReference-exemple-pdsm-documentreference.html#/html/body/div/div/div/div/div/div/p/a at Line 279, column 653: The link 'PractitionerRole/practitionerrole-example' for "PractitionerRole/practitionerrole-example" cannot be resolved
 ERROR: List-ExampleSubmissionSet.html#/html/body/div/div/div/div/div/div/p/a at Line 274, column 1531: The link 'Practitioner/practitioner-example' for "Practitioner/practitioner-example" cannot be resolved
-ERROR: st_ajout.html#/html/body/div/div/div/div/div/p/a at Line 401, column 57: The link '/IHE.MHD.ProvideDocumentBundleResponse' for "ProvideDocumentBundleResponse" cannot be resolved
+ERROR: st_ajout.html#/html/body/div/div/div/div/div/p/a at Line 398, column 57: The link '/IHE.MHD.ProvideDocumentBundleResponse' for "ProvideDocumentBundleResponse" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
@@ -114,6 +114,7 @@ ERROR: DocumentReference.text.div: Hyperlink 'PractitionerRole/practitionerrole-
 == fsh-generated/resources/ImplementationGuide-ans.fhir.fr.pdsm.json ==
 ERROR: ImplementationGuide/ans.fhir.fr.pdsm: ImplementationGuide.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. Valid display is 'France (la)' (fr) (for the language(s) 'fr-FR')
 WARNING: ImplementationGuide/ans.fhir.fr.pdsm: ImplementationGuide.dependsOn[2]: The ImplementationGuide uses package ihe.iti.mhd#4.2.0 released on 2022-12-07, but the most recent appropriate version is 5.0.0. This reference is getting old and the more recent version should be considered
+WARNING: ImplementationGuide/ans.fhir.fr.pdsm: ImplementationGuide.dependsOn[4]: The ImplementationGuide uses package hl7.fhir.fr.core#2.1.0 released on 2024-09-04, but the most recent appropriate version is 2.2.0. This reference is getting old and the more recent version should be considered
 == fsh-generated/resources/List-ExampleFolder.json ==
 INFORMATION: List/ExampleFolder: List.identifier[0]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-folder-comprehensive|3.1.1 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: List/ExampleFolder: List.identifier[1]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-folder-comprehensive|3.1.1 (this may not be a problem, but you should check that it's not intended to match a slice)

@@ -36,16 +36,16 @@ Dans le cas d'une mise à jour d'un classeur, comme `List.status` ou `List.entry
 
 #### Cas 2 : Remplacement d'un document existant
 
-Le remplacement consiste à publier un nouveau document qui se substitue à un document existant, dont la fiche est marquée comme remplacée (`superseded`). Cette opération est atomique : elle est réalisée en une seule transaction ITI-65.
+Le remplacement consiste à publier un nouveau document qui se substitue à un document existant, dont la fiche est marquée comme remplacée (`superseded`). Cette opération est réalisée en une seule transaction ITI-65.
 
 ##### Pré-conditions
 
-* Le document à remplacer (`DocumentReference/[id-ancien]`) est déjà persisté sur le serveur avec le statut `current`.
+* Le document à remplacer (`DocumentReference/[id-ancien]`) est déjà présent sur le serveur avec le statut `current`.
 * Le patient est déjà enregistré sur le serveur avec une identité INS qualifiée. Il **ne doit pas** être inclus dans le bundle de remplacement.
 
 ##### Contenu du bundle
 
-Le bundle de remplacement contient les entrées suivantes, dans l'ordre recommandé :
+Le bundle de remplacement contient les entrées suivantes :
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -98,8 +98,6 @@ request.url    = DocumentReference/[id-ancien]
 
 ```
 
-> **Note :** L'ancienne fiche ne doit **pas** être incluse comme entrée `PUT` dans le bundle. Le `PATCH` seul suffit à mettre à jour son statut. Inclure simultanément un `PUT` avec `status = current` et un `PATCH` vers `superseded` créerait un conflit dans la transaction.
-
 ##### Lot de soumission (SubmissionSet)
 
 Le lot de soumission ne doit référencer que la **nouvelle** fiche. L'ancienne fiche n'est pas listée dans `List.entry`.
@@ -113,7 +111,7 @@ Le lot de soumission ne doit référencer que la **nouvelle** fiche. L'ancienne 
 1. applique le`PATCH`sur l'ancienne`DocumentReference`et positionne son statut à`superseded`,
 1. crée le lot de soumission (`List`).
 
-Ces quatre opérations sont traitées de manière atomique (succès ou échec global de la transaction).
+Ces quatre opérations sont traitées de manière transactionnelle (succès ou échec global de la transaction).
 
 ##### Exemple
 

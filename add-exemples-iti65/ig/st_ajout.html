@@ -275,18 +275,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="cas-2--remplacement-dun-document-existant">Cas 2 : Remplacement d'un document existant</h4>
 
-<p>Le remplacement consiste à publier un nouveau document qui se substitue à un document existant, dont la fiche est marquée comme remplacée (<code class="language-plaintext highlighter-rouge">superseded</code>). Cette opération est atomique : elle est réalisée en une seule transaction ITI-65.</p>
+<p>Le remplacement consiste à publier un nouveau document qui se substitue à un document existant, dont la fiche est marquée comme remplacée (<code class="language-plaintext highlighter-rouge">superseded</code>).
+Cette opération est réalisée en une seule transaction ITI-65.</p>
 
 <h5 id="pré-conditions">Pré-conditions</h5>
 
 <ul>
-  <li>Le document à remplacer (<code class="language-plaintext highlighter-rouge">DocumentReference/[id-ancien]</code>) est déjà persisté sur le serveur avec le statut <code class="language-plaintext highlighter-rouge">current</code>.</li>
+  <li>Le document à remplacer (<code class="language-plaintext highlighter-rouge">DocumentReference/[id-ancien]</code>) est déjà présent sur le serveur avec le statut <code class="language-plaintext highlighter-rouge">current</code>.</li>
   <li>Le patient est déjà enregistré sur le serveur avec une identité INS qualifiée. Il <strong>ne doit pas</strong> être inclus dans le bundle de remplacement.</li>
 </ul>
 
 <h5 id="contenu-du-bundle">Contenu du bundle</h5>
 
-<p>Le bundle de remplacement contient les entrées suivantes, dans l'ordre recommandé :</p>
+<p>Le bundle de remplacement contient les entrées suivantes :</p>
 
 <table>
   <thead>
@@ -363,10 +364,6 @@ DocumentReference.status               = #current
 request.url    = DocumentReference/[id-ancien]
 </code></pre></div></div>
 
-<blockquote>
-  <p><strong>Note :</strong> L'ancienne fiche ne doit <strong>pas</strong> être incluse comme entrée <code class="language-plaintext highlighter-rouge">PUT</code> dans le bundle. Le <code class="language-plaintext highlighter-rouge">PATCH</code> seul suffit à mettre à jour son statut. Inclure simultanément un <code class="language-plaintext highlighter-rouge">PUT</code> avec <code class="language-plaintext highlighter-rouge">status = current</code> et un <code class="language-plaintext highlighter-rouge">PATCH</code> vers <code class="language-plaintext highlighter-rouge">superseded</code> créerait un conflit dans la transaction.</p>
-</blockquote>
-
 <h5 id="lot-de-soumission-submissionset">Lot de soumission (SubmissionSet)</h5>
 
 <p>Le lot de soumission ne doit référencer que la <strong>nouvelle</strong> fiche. L'ancienne fiche n'est pas listée dans <code class="language-plaintext highlighter-rouge">List.entry</code>.</p>
@@ -382,7 +379,7 @@ request.url    = DocumentReference/[id-ancien]
   <li>crée le lot de soumission (<code class="language-plaintext highlighter-rouge">List</code>).</li>
 </ol>
 
-<p>Ces quatre opérations sont traitées de manière atomique (succès ou échec global de la transaction).</p>
+<p>Ces quatre opérations sont traitées de manière transactionnelle (succès ou échec global de la transaction).</p>
 
 <h5 id="exemple">Exemple</h5>
 
@@ -398,7 +395,7 @@ request.url    = DocumentReference/[id-ancien]
 
 <p>Le gestionnaire de partage de documents de santé retourne un « HTTP Status code » approprié au résultat de la demande comme indiqué dans la spécification du profil MHD. Le corps de la réponse doit être un Bundle de type <code class="language-plaintext highlighter-rouge">transaction-response</code> avec un élément <code class="language-plaintext highlighter-rouge">entry</code> pour chaque ressource reçue dans le Bundle de la requête, dans le même ordre, avec le résultat du traitement de l'élément.</p>
 
-<p><a name="l1004">​</a>Le corps de la réponse doit être conforme au profil <a href="/IHE.MHD.ProvideDocumentBundleResponse">ProvideDocumentBundleResponse</a> (<a href="Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.json.html">exemple de contenu d'un payload</a>).</p>
+<p><a name="l975">​</a>Le corps de la réponse doit être conforme au profil <a href="/IHE.MHD.ProvideDocumentBundleResponse">ProvideDocumentBundleResponse</a> (<a href="Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.json.html">exemple de contenu d'un payload</a>).</p>
 
 <p>Ce flux sert à communiquer un succès ou un échec.
 Un succès n'est indiqué que lorsque le ou les documents sont reçus, complètement traités et conservés selon les besoins de la configuration du gestionnaire de partage de documents.</p>
@@ -448,7 +445,7 @@ Un succès n'est indiqué que lorsque le ou les documents sont reçus, complète
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 30, 2026 16:30+0000">2026-03-30</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Mar 31, 2026 10:02+0000">2026-03-31</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

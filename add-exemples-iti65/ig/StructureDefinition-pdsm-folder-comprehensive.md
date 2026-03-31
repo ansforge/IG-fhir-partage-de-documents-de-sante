@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-folder-comprehensive | *Version*:3.1.1 |
-| Active as of 2026-03-30 | *Computable Name*:PDSm_FolderComprehensive |
+| Active as of 2026-03-31 | *Computable Name*:PDSm_FolderComprehensive |
 
  
 Profil du Classeur dérivé de la ressource List et du profil IHE MHD « Comprehensive Folder ». 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-folder-comprehe
   "name" : "PDSm_FolderComprehensive",
   "title" : "PDSm Folder Comprehensive",
   "status" : "active",
-  "date" : "2026-03-30T16:30:41+00:00",
+  "date" : "2026-03-31T10:02:00+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
