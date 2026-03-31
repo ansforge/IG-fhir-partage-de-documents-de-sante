@@ -112,7 +112,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-03-31T10:02:00+00:00",
+  "date" : "2026-03-31T16:37:48+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
