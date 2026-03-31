@@ -29,7 +29,7 @@ Usage: #example
 * entry[=].request.url = "Binary"
 
 // ==========================================================
-// NOUVEAU DOCUMENT (REMPLACEMENT)
+// New DocumentReference (REMPLACEMENT)
 // ==========================================================
 
 * entry[+].fullUrl = "urn:uuid:55555555-5555-4555-8555-555555555555"
@@ -103,7 +103,7 @@ Usage: #example
 // Référence vers le patient déjà enregistré sur le serveur avec son INS
 * entry[=].resource.context.sourcePatientInfo.reference = "Patient/fr-patient-123"
 
-// REMPLACEMENT : référence vers le document existant sur le serveur
+// REMPLACEMENT : référence vers le documentreference existant sur le serveur
 * entry[=].resource.relatesTo[0].code = #replaces
 * entry[=].resource.relatesTo[0].target.reference = "DocumentReference/doc-old"
 
@@ -112,7 +112,7 @@ Usage: #example
 
 
 // ==========================================================
-// PATCH MHD - status = superseded sur l'ancien document
+// PATCH MHD - status = superseded sur l'ancien DocumentReference
 // ==========================================================
 
 * entry[+].fullUrl = "urn:uuid:77777777-7777-4777-8777-777777777777"
@@ -136,7 +136,7 @@ Usage: #example
 * entry[=].resource.parameter[0].part[2].name = "value"
 * entry[=].resource.parameter[0].part[2].valueCode = #superseded
 
-// requête PATCH sur l'ancien document (déjà persisté sur le serveur)
+// requête PATCH sur l'ancien documentreference (déjà présent sur le serveur)
 * entry[=].request.method = #PATCH
 * entry[=].request.url = "DocumentReference/doc-old"
 
@@ -156,7 +156,7 @@ Usage: #example
 * entry[=].resource.contained[0].identifier.system = "https://rpps.esante.gouv.fr"
 * entry[=].resource.contained[0].identifier.value = "1011848351"
 
-// Extensions obligatoires (minimum 2)
+// Extensions obligatoires
 * entry[=].resource.extension[0].url = "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-designationType"
 * entry[=].resource.extension[0].valueCodeableConcept.coding.system = "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite"
 * entry[=].resource.extension[0].valueCodeableConcept.coding.code = #SA01
@@ -180,7 +180,6 @@ Usage: #example
 // Auteur du lot de soumission (contained)
 * entry[=].resource.source.reference = "#source-auteur"
 
-// Uniquement le nouveau document (l'ancien n'est pas dans le SubmissionSet)
 * entry[=].resource.entry[0].item.reference = "urn:uuid:55555555-5555-4555-8555-555555555555"
 
 * entry[=].request.method = #POST
