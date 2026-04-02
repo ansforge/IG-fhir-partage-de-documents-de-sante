@@ -271,7 +271,7 @@
 
 
 
-  <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+  <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle">resourceType</a>" : "Bundle",
   "<a href="http://hl7.org/fhir/R4/resource.html#Bundle.id">id</a>" : "bundle-exemple-comprehensiveprovidedocument-replace",
   "<a href="http://hl7.org/fhir/R4/resource.html#Bundle.meta">meta</a>" : {
@@ -282,22 +282,216 @@
   "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">type</a>" : "transaction",
   "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>" : [
     {
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:33333333-3333-4333-8333-333333333333",
-      "<a href="http://hl7.org/fhir/R4/binary.html#Binary">resource</a>" : {
-        "<a href="http://hl7.org/fhir/R4/binary.html">resourceType</a>" : "Binary",
-        "<a href="http://hl7.org/fhir/R4/binary.html#Binary.contentType">contentType</a>" : "application/pdf",
-        "<a href="http://hl7.org/fhir/R4/binary.html#Binary.data">data</a>" : "SGVsbG8="
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:66666666-6666-4666-8666-666666666666",
+      "<a href="http://hl7.org/fhir/R4/list.html#List">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/list.html">resourceType</a>" : "List",
+        "<a href="http://hl7.org/fhir/R4/resource.html#List.id">id</a>" : "submissionset-doc-replace",
+        "<a href="http://hl7.org/fhir/R4/resource.html#List.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-pdsm-submissionset-comprehensive.html" style="color: Maroon">&#x1F517;</a> "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-submissionset-comprehensive"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/domainresource.html#List.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;List_submissionset-doc-replace\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Liste submissionset-doc-replace&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;submissionset-doc-replace\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcsubmissionset-doc-replace\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-pdsm-submissionset-comprehensive.html\&quot;&gt;PDSm SubmissionSet Comprehensive&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;table class=\&quot;clstu\&quot;&gt;&lt;tr&gt;&lt;td&gt;Date : 2025-06-01 12:00:00+0100 &lt;/td&gt;&lt;td&gt;Mode : Working List &lt;/td&gt;&lt;td&gt;Statut : Current &lt;/td&gt;&lt;td&gt;Code : SubmissionSet as a FHIR List &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Sujet : &lt;a href=\&quot;Patient-fr-patient-123.html\&quot;&gt;Martin Claire (official) Male, Date de Naissance :1980-01-15 ( NIR: 180017505600103\u00a0(use:\u00a0official,\u00a0))&lt;/a&gt;Source &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr style=\&quot;backgound-color: #eeeeee\&quot;&gt;&lt;td&gt;&lt;b&gt;Éléments&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Bundle-bundle-exemple-comprehensiveprovidedocument-replace.html#DocumentReference_docref-doc-new-replace\&quot;&gt;DocumentReference : masterIdentifier = UUID:55555555-5555-4555-8555-555555555555; status = current; type = Synthèse d'épisode de soins; category = Compte rendu; date = 2025-06-01 12:00:00+0100; description = Compte rendu de consultation - version de remplacement; securityLabel = Normal&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Ressources contenues&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;a name=\&quot;submissionset-doc-replace/practitionerrole-example\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;PractitionerRole #practitionerrole-example&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;hcsubmissionset-doc-replace/practitionerrole-example\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;version : 1; Dernière mise à jour : 2025-04-28 18:19:34+0200; Langue : fr; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Information Source: &lt;a href=\&quot;https://annuaire.sante.fr\&quot;&gt;https://annuaire.sante.fr&lt;/a&gt;&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profils: &lt;a href=\&quot;https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner-role.html\&quot;&gt;FR Core Practitioner Role&lt;/a&gt;, &lt;a href=\&quot;https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-dp-practitionerrole.html\&quot;&gt;AS Donnée Publique PractitionerRole Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://rpps.esante.gouv.fr&lt;/code&gt;/1011848351\u00a0(utilisation :\u00a0official,\u00a0)&lt;/p&gt;&lt;p&gt;&lt;b&gt;active&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=\&quot;Practitioner/practitioner-example\&quot;&gt;Practitioner/practitioner-example&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: &lt;a href=\&quot;#hcsubmissionset-doc-replace/org-example\&quot;&gt;Organization HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R22-GenreActivite/FHIR/TRE-R22-GenreActivite GENR01}\&quot;&gt;Soignant&lt;/span&gt;, &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExercice/FHIR/TRE-R23-ModeExercice L}\&quot;&gt;Libéral,indép,artisan,commerç&lt;/span&gt;, &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R21-Fonction/FHIR/TRE-R21-Fonction FON-05}\&quot;&gt;Adjoint&lt;/span&gt;&lt;/p&gt;&lt;hr/&gt;&lt;a name=\&quot;submissionset-doc-replace/org-example\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Organisation #org-example&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;hcsubmissionset-doc-replace/org-example\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;version : 1; Dernière mise à jour : 2025-04-28 19:35:45+0200; Langue : fr; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Information Source: &lt;a href=\&quot;https://annuaire.sante.fr\&quot;&gt;https://annuaire.sante.fr&lt;/a&gt;&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profils: &lt;a href=\&quot;https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-organization.html\&quot;&gt;FR Core Organization Profile&lt;/a&gt;, &lt;a href=\&quot;https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-dp-organization.html\&quot;&gt;AS Donnée Publique Organization Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identification nationale de structure définie par l’ANS dans le CI_SIS/2264403106\u00a0(utilisation :\u00a0official,\u00a0), Identification de l'organisation au SIREN/264403106\u00a0(utilisation :\u00a0official,\u00a0)&lt;/p&gt;&lt;p&gt;&lt;b&gt;active&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-3307 LEGAL-ENTITY}\&quot;&gt;Entité légale&lt;/span&gt;, &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite SA43}\&quot;&gt;Secteur non défini&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G&lt;/p&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">contained</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/practitionerrole.html">resourceType</a>" : "PractitionerRole",
+            "<a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.id">id</a>" : "practitionerrole-example",
+            "<a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.meta">meta</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a>" : "1",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2025-04-28T18:19:34.908+02:00",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.source">source</a>" : "https://annuaire.sante.fr",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+                <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner-role.html" style="color: Maroon">&#x1F517;</a> "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role"<a href="https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-dp-practitionerrole.html" style="color: Maroon">&#x1F517;</a> ,
+                "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole"
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.language">language</a>" : "fr",
+            "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.identifier">identifier</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "official",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "https://rpps.esante.gouv.fr",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "1011848351"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.active">active</a>" : true,
+            "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>" : {
+              "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/practitioner-example"
+            },
+            "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.organization">organization</a>" : {
+              "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "#org-example"
+            },
+            "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.code">code</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R22-GenreActivite/FHIR/TRE-R22-GenreActivite",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "GENR01"
+                  }
+                ]
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExercice/FHIR/TRE-R23-ModeExercice",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "L"
+                  }
+                ]
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R21-Fonction/FHIR/TRE-R21-Fonction",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "FON-05"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/organization.html">resourceType</a>" : "Organization",
+            "<a href="http://hl7.org/fhir/R4/resource.html#Organization.id">id</a>" : "org-example",
+            "<a href="http://hl7.org/fhir/R4/resource.html#Organization.meta">meta</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Meta.extension">extension</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
+                    {
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "systeme-information",
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "CG"
+                    }
+                  ],
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-data-trace"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a>" : "1",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2025-04-28T19:35:45.507+02:00",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.source">source</a>" : "https://annuaire.sante.fr",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+                <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-organization.html" style="color: Maroon">&#x1F517;</a> "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization"<a href="https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-dp-organization.html" style="color: Maroon">&#x1F517;</a> ,
+                "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-organization"
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/resource.html#Organization.language">language</a>" : "fr",
+            "<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "official",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                    {
+                      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
+                      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "IDNST"
+                    }
+                  ]
+                },
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.2.250.1.71.4.2.2",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "2264403106"
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "official",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                    {
+                      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
+                      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "SIREN"
+                    }
+                  ]
+                },
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "https://sirene.fr",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "264403106"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/organization.html#Organization.active">active</a>" : true,
+            "<a href="http://hl7.org/fhir/R4/organization.html#Organization.type">type</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#CodeableConcept.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "organizationType"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-3307",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "LEGAL-ENTITY"
+                  }
+                ]
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#CodeableConcept.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "secteurActiviteRASS"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "SA43"
+                  }
+                ]
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/organization.html#Organization.name">name</a>" : "HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/domainresource.html#List.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-designationType",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCodeableConcept</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "SA01",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Etablissement public de santé"
+                }
+              ]
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-sourceId",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueIdentifier</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.2.250.1.213.1.1.1",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "SRC-01"
+            }
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/list.html#List.status">status</a>" : "current",
+        "<a href="http://hl7.org/fhir/R4/list.html#List.mode">mode</a>" : "working",
+        "<a href="http://hl7.org/fhir/R4/list.html#List.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "submissionset"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/list.html#List.subject">subject</a>" : {
+          <a href="Patient-fr-patient-123.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/fr-patient-123"
+        },
+        "<a href="http://hl7.org/fhir/R4/list.html#List.date">date</a>" : "2025-06-01T12:00:00+01:00",
+        "<a href="http://hl7.org/fhir/R4/list.html#List.source">source</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "#practitionerrole-example"
+        },
+        "<a href="http://hl7.org/fhir/R4/list.html#List.entry">entry</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/list.html#List.entry.item">item</a>" : {
+              "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "DocumentReference/docref-doc-new-replace"
+            }
+          }
+        ]
       },
       "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
         "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "POST",
-        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "Binary"
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "List"
       }
     },
     {
       "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:55555555-5555-4555-8555-555555555555",
       "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/documentreference.html">resourceType</a>" : "DocumentReference",
-        "<a href="http://hl7.org/fhir/R4/resource.html#DocumentReference.id">id</a>" : "doc-new",
+        "<a href="http://hl7.org/fhir/R4/resource.html#DocumentReference.id">id</a>" : "docref-doc-new-replace",
         "<a href="http://hl7.org/fhir/R4/resource.html#DocumentReference.meta">meta</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
             <a href="StructureDefinition-pdsm-comprehensive-document-reference.html" style="color: Maroon">&#x1F517;</a> "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-document-reference"
@@ -305,39 +499,147 @@
         },
         "<a href="http://hl7.org/fhir/R4/domainresource.html#DocumentReference.text">text</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;DocumentReference_doc-new\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : RéférenceDocument doc-new&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;doc-new\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcdoc-new\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-pdsm-comprehensive-document-reference.html\&quot;&gt;PDSm Comprehensive DocumentReference&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;masterIdentifier&lt;/b&gt;: &lt;a href=\&quot;http://terminology.hl7.org/6.0.2/NamingSystem-uri.html\&quot; title=\&quot;As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt \r\n\r\nThis oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: \r\n\r\nNote that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.\r\n\r\nThis OID may also be used in CD.codeSystem.\&quot;&gt;Uniform Resource Identifier (URI)&lt;/a&gt;/urn:uuid:55555555-5555-4555-8555-555555555555&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Current&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes :{http://loinc.org 34133-9}\&quot;&gt;Synthèse d'épisode de soins&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_A03-ClasseDocument/FHIR/TRE-A03-ClasseDocument 10}\&quot;&gt;Compte rendu&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-fr-patient-123.html\&quot;&gt;Martin Claire (official) Male, Date de Naissance :1980-01-15 ( NIR: 180017505600103\u00a0(use:\u00a0official,\u00a0))&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: 2025-06-01 12:00:00+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;author&lt;/b&gt;: &lt;a href=\&quot;#hcdoc-new/auteur\&quot;&gt;PractitionerRole : identifier = https://rpps.esante.gouv.fr#1011848351&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;authenticator&lt;/b&gt;: &lt;a href=\&quot;#hcdoc-new/authentificateur\&quot;&gt;Organization HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;RelatesTos&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;Replaces&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;DocumentReference/doc-old\&quot;&gt;DocumentReference/doc-old&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: Compte rendu de consultation - version de remplacement&lt;/p&gt;&lt;p&gt;&lt;b&gt;securityLabel&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_A07-StatusVisibiliteDocument/FHIR/TRE-A07-StatusVisibiliteDocument N}\&quot;&gt;Normal&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;content&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Attachments&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;ContentType&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Language&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Url&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Size&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Hash&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Title&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Creation&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;application/pdf&lt;/td&gt;&lt;td&gt;Français (France)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Bundle-bundle-exemple-comprehensiveprovidedocument-replace.html#urn-uuid-33333333-3333-4333-8333-333333333333\&quot;&gt;Binary: application/pdf (8 bytes base64)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;&lt;code&gt;qvTGHdzF6KLavt4PO0gs2a6pQ00=&lt;/code&gt;&lt;/td&gt;&lt;td&gt;CR Consultation - Version remplaçante&lt;/td&gt;&lt;td&gt;2025-06-01 10:00:00+0100&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;format&lt;/b&gt;: &lt;a href=\&quot;https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A11-IheFormatCode.html#TRE-A11-IheFormatCode-urn.58ihe.58iti.58xds-sd.58pdf.582008\&quot;&gt;TRE_A11_IheFormatCode: urn:ihe:iti:xds-sd:pdf:2008&lt;/a&gt; (xds-sd:pdf)&lt;/p&gt;&lt;/blockquote&gt;&lt;h3&gt;Contexts&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Period&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;FacilityType&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;PracticeSetting&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;SourcePatientInfo&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;2025-06-01 08:00:00+0100 --&amp;gt; 2025-06-01 10:00:00+0100&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite SA01}\&quot;&gt;Etablissement public de santé&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/FHIR/TRE-A01-CadreExercice ETABLISSEMENT}\&quot;&gt;Etablissement de santé&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;#hcdoc-new/patient-local\&quot;&gt;Patient Anonyme (sexe non précisé), Date de Naissance inconnue ( urn:oid:1.2.250.1.213.1.4.8#123456789012345)&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : PractitionerRole #auteur&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;doc-new/auteur\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcdoc-new/auteur\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://rpps.esante.gouv.fr&lt;/code&gt;/1011848351&lt;/p&gt;&lt;/blockquote&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Organisation #authentificateur&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;doc-new/authentificateur\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcdoc-new/authentificateur\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;urn:oid:1.2.250.1.71.4.2.2&lt;/code&gt;/2264403106&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G&lt;/p&gt;&lt;/blockquote&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Patient #patient-local&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;doc-new/patient-local\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcdoc-new/patient-local\&quot;&gt; &lt;/a&gt;&lt;p style=\&quot;border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\&quot;&gt;Patient Anonyme (sexe non précisé), Date de Naissance inconnue ( urn:oid:1.2.250.1.213.1.4.8#123456789012345)&lt;/p&gt;&lt;hr/&gt;&lt;/blockquote&gt;&lt;/div&gt;"
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;DocumentReference_docref-doc-new-replace\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : RéférenceDocument docref-doc-new-replace&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;docref-doc-new-replace\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcdocref-doc-new-replace\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-pdsm-comprehensive-document-reference.html\&quot;&gt;PDSm Comprehensive DocumentReference&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;masterIdentifier&lt;/b&gt;: &lt;a href=\&quot;http://terminology.hl7.org/6.0.2/NamingSystem-uri.html\&quot; title=\&quot;As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt \r\n\r\nThis oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: \r\n\r\nNote that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.\r\n\r\nThis OID may also be used in CD.codeSystem.\&quot;&gt;Uniform Resource Identifier (URI)&lt;/a&gt;/urn:uuid:55555555-5555-4555-8555-555555555555&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Current&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes :{http://loinc.org 34133-9}\&quot;&gt;Synthèse d'épisode de soins&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_A03-ClasseDocument/FHIR/TRE-A03-ClasseDocument 10}\&quot;&gt;Compte rendu&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-fr-patient-123.html\&quot;&gt;Martin Claire (official) Male, Date de Naissance :1980-01-15 ( NIR: 180017505600103\u00a0(use:\u00a0official,\u00a0))&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: 2025-06-01 12:00:00+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;author&lt;/b&gt;: &lt;a href=\&quot;#hcdocref-doc-new-replace/practitionerrole-example\&quot;&gt;PractitionerRole Soignant&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;authenticator&lt;/b&gt;: &lt;a href=\&quot;#hcdocref-doc-new-replace/org-example\&quot;&gt;Organization HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;RelatesTos&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;Replaces&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;DocumentReference/doc-old\&quot;&gt;DocumentReference/doc-old&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: Compte rendu de consultation - version de remplacement&lt;/p&gt;&lt;p&gt;&lt;b&gt;securityLabel&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_A07-StatusVisibiliteDocument/FHIR/TRE-A07-StatusVisibiliteDocument N}\&quot;&gt;Normal&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;content&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Attachments&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;ContentType&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Language&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Url&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Size&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Hash&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Title&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Creation&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;application/pdf&lt;/td&gt;&lt;td&gt;Français (France)&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Bundle-bundle-exemple-comprehensiveprovidedocument-replace.html#urn-uuid-33333333-3333-4333-8333-333333333333\&quot;&gt;Binary: application/pdf (8 bytes base64)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;&lt;code&gt;qvTGHdzF6KLavt4PO0gs2a6pQ00=&lt;/code&gt;&lt;/td&gt;&lt;td&gt;CR Consultation - Version remplaçante&lt;/td&gt;&lt;td&gt;2025-06-01 10:00:00+0100&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;format&lt;/b&gt;: &lt;a href=\&quot;https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A11-IheFormatCode.html#TRE-A11-IheFormatCode-urn.58ihe.58iti.58xds-sd.58pdf.582008\&quot;&gt;TRE_A11_IheFormatCode: urn:ihe:iti:xds-sd:pdf:2008&lt;/a&gt; (xds-sd:pdf)&lt;/p&gt;&lt;/blockquote&gt;&lt;h3&gt;Contexts&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Period&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;FacilityType&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;PracticeSetting&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;SourcePatientInfo&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;2025-06-01 08:00:00+0100 --&amp;gt; 2025-06-01 10:00:00+0100&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite SA01}\&quot;&gt;Etablissement public de santé&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/FHIR/TRE-A01-CadreExercice ETABLISSEMENT}\&quot;&gt;Etablissement de santé&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Patient-fr-patient-123.html\&quot;&gt;Martin Claire (official) Male, Date de Naissance :1980-01-15 ( NIR: 180017505600103\u00a0(use:\u00a0official,\u00a0))&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : PractitionerRole #practitionerrole-example&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;docref-doc-new-replace/practitionerrole-example\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcdocref-doc-new-replace/practitionerrole-example\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;version : 1; Dernière mise à jour : 2025-04-28 18:19:34+0200; Langue : fr; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Information Source: &lt;a href=\&quot;https://annuaire.sante.fr\&quot;&gt;https://annuaire.sante.fr&lt;/a&gt;&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profils: &lt;a href=\&quot;https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner-role.html\&quot;&gt;FR Core Practitioner Role&lt;/a&gt;, &lt;a href=\&quot;https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-dp-practitionerrole.html\&quot;&gt;AS Donnée Publique PractitionerRole Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://rpps.esante.gouv.fr&lt;/code&gt;/1011848351\u00a0(utilisation :\u00a0official,\u00a0)&lt;/p&gt;&lt;p&gt;&lt;b&gt;active&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=\&quot;Practitioner/practitioner-example\&quot;&gt;Practitioner/practitioner-example&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: &lt;a href=\&quot;#hcdocref-doc-new-replace/org-example\&quot;&gt;Organization HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R22-GenreActivite/FHIR/TRE-R22-GenreActivite GENR01}\&quot;&gt;Soignant&lt;/span&gt;, &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExercice/FHIR/TRE-R23-ModeExercice L}\&quot;&gt;Libéral,indép,artisan,commerç&lt;/span&gt;, &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R21-Fonction/FHIR/TRE-R21-Fonction FON-05}\&quot;&gt;Adjoint&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Organisation #org-example&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;docref-doc-new-replace/org-example\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcdocref-doc-new-replace/org-example\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;version : 1; Dernière mise à jour : 2025-04-28 19:35:45+0200; Langue : fr; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Information Source: &lt;a href=\&quot;https://annuaire.sante.fr\&quot;&gt;https://annuaire.sante.fr&lt;/a&gt;&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profils: &lt;a href=\&quot;https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-organization.html\&quot;&gt;FR Core Organization Profile&lt;/a&gt;, &lt;a href=\&quot;https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-dp-organization.html\&quot;&gt;AS Donnée Publique Organization Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identification nationale de structure définie par l’ANS dans le CI_SIS/2264403106\u00a0(utilisation :\u00a0official,\u00a0), Identification de l'organisation au SIREN/264403106\u00a0(utilisation :\u00a0official,\u00a0)&lt;/p&gt;&lt;p&gt;&lt;b&gt;active&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-3307 LEGAL-ENTITY}\&quot;&gt;Entité légale&lt;/span&gt;, &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite SA43}\&quot;&gt;Secteur non défini&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"
         },
         "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">contained</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/practitionerrole.html">resourceType</a>" : "PractitionerRole",
-            "<a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.id">id</a>" : "auteur",
+            "<a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.id">id</a>" : "practitionerrole-example",
+            "<a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.meta">meta</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a>" : "1",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2025-04-28T18:19:34.908+02:00",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.source">source</a>" : "https://annuaire.sante.fr",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+                <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner-role.html" style="color: Maroon">&#x1F517;</a> "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role"<a href="https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-dp-practitionerrole.html" style="color: Maroon">&#x1F517;</a> ,
+                "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole"
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.language">language</a>" : "fr",
             "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.identifier">identifier</a>" : [
               {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "official",
                 "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "https://rpps.esante.gouv.fr",
                 "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "1011848351"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.active">active</a>" : true,
+            "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>" : {
+              "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/practitioner-example"
+            },
+            "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.organization">organization</a>" : {
+              "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "#org-example"
+            },
+            "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.code">code</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R22-GenreActivite/FHIR/TRE-R22-GenreActivite",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "GENR01"
+                  }
+                ]
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExercice/FHIR/TRE-R23-ModeExercice",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "L"
+                  }
+                ]
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R21-Fonction/FHIR/TRE-R21-Fonction",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "FON-05"
+                  }
+                ]
               }
             ]
           },
           {
             "<a href="http://hl7.org/fhir/R4/organization.html">resourceType</a>" : "Organization",
-            "<a href="http://hl7.org/fhir/R4/resource.html#Organization.id">id</a>" : "authentificateur",
+            "<a href="http://hl7.org/fhir/R4/resource.html#Organization.id">id</a>" : "org-example",
+            "<a href="http://hl7.org/fhir/R4/resource.html#Organization.meta">meta</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Meta.extension">extension</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
+                    {
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "systeme-information",
+                      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "CG"
+                    }
+                  ],
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-data-trace"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a>" : "1",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2025-04-28T19:35:45.507+02:00",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.source">source</a>" : "https://annuaire.sante.fr",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+                <a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-organization.html" style="color: Maroon">&#x1F517;</a> "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization"<a href="https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-dp-organization.html" style="color: Maroon">&#x1F517;</a> ,
+                "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-organization"
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/resource.html#Organization.language">language</a>" : "fr",
             "<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>" : [
               {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "official",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                    {
+                      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
+                      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "IDNST"
+                    }
+                  ]
+                },
                 "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.2.250.1.71.4.2.2",
                 "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "2264403106"
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "official",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                    {
+                      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
+                      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "SIREN"
+                    }
+                  ]
+                },
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "https://sirene.fr",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "264403106"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/organization.html#Organization.active">active</a>" : true,
+            "<a href="http://hl7.org/fhir/R4/organization.html#Organization.type">type</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#CodeableConcept.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "organizationType"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-3307",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "LEGAL-ENTITY"
+                  }
+                ]
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#CodeableConcept.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types",
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "secteurActiviteRASS"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "SA43"
+                  }
+                ]
               }
             ],
             "<a href="http://hl7.org/fhir/R4/organization.html#Organization.name">name</a>" : "HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/patient.html">resourceType</a>" : "Patient",
-            "<a href="http://hl7.org/fhir/R4/resource.html#Patient.id">id</a>" : "patient-local",
-            "<a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">identifier</a>" : [
-              {
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.2.250.1.213.1.4.8",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "123456789012345"
-              }
-            ]
           }
         ],
         "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.masterIdentifier">masterIdentifier</a>" : {
@@ -371,11 +673,11 @@
         "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.date">date</a>" : "2025-06-01T12:00:00+01:00",
         "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.author">author</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "#auteur"
+            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "#practitionerrole-example"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.authenticator">authenticator</a>" : {
-          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "#authentificateur"
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "#org-example"
         },
         "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.relatesTo">relatesTo</a>" : [
           {
@@ -438,7 +740,7 @@
             ]
           },
           "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.context.sourcePatientInfo">sourcePatientInfo</a>" : {
-            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "#patient-local"
+            <a href="Patient-fr-patient-123.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/fr-patient-123"
           }
         }
       },
@@ -451,6 +753,7 @@
       "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:77777777-7777-4777-8777-777777777777",
       "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/parameters.html">resourceType</a>" : "Parameters",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Parameters.id">id</a>" : "patch-params-replace",
         "<a href="http://hl7.org/fhir/R4/resource.html#Parameters.meta">meta</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
             <a href="https://profiles.ihe.net/ITI/MHD/4.2.0/StructureDefinition-IHE.MHD.Patch.Parameters.html" style="color: Maroon">&#x1F517;</a> "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Patch.Parameters"
@@ -482,79 +785,16 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:66666666-6666-4666-8666-666666666666",
-      "<a href="http://hl7.org/fhir/R4/list.html#List">resource</a>" : {
-        "<a href="http://hl7.org/fhir/R4/list.html">resourceType</a>" : "List",
-        "<a href="http://hl7.org/fhir/R4/resource.html#List.meta">meta</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
-            <a href="StructureDefinition-pdsm-submissionset-comprehensive.html" style="color: Maroon">&#x1F517;</a> "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-submissionset-comprehensive"
-          ]
-        },
-        "<a href="http://hl7.org/fhir/R4/domainresource.html#List.text">text</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;List_null\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Liste &lt;/b&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-pdsm-submissionset-comprehensive.html\&quot;&gt;PDSm SubmissionSet Comprehensive&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;table class=\&quot;clstu\&quot;&gt;&lt;tr&gt;&lt;td&gt;Date : 2025-06-01 12:00:00+0100 &lt;/td&gt;&lt;td&gt;Mode : Working List &lt;/td&gt;&lt;td&gt;Statut : Current &lt;/td&gt;&lt;td&gt;Code : SubmissionSet as a FHIR List &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Sujet : &lt;a href=\&quot;Patient-fr-patient-123.html\&quot;&gt;Martin Claire (official) Male, Date de Naissance :1980-01-15 ( NIR: 180017505600103\u00a0(use:\u00a0official,\u00a0))&lt;/a&gt;Source &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr style=\&quot;backgound-color: #eeeeee\&quot;&gt;&lt;td&gt;&lt;b&gt;Éléments&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Bundle-bundle-exemple-comprehensiveprovidedocument-replace.html#urn-uuid-55555555-5555-4555-8555-555555555555\&quot;&gt;DocumentReference : masterIdentifier = UUID:55555555-5555-4555-8555-555555555555; status = current; type = Synthèse d'épisode de soins; category = Compte rendu; date = 2025-06-01 12:00:00+0100; description = Compte rendu de consultation - version de remplacement; securityLabel = Normal&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Ressource contenue&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;a name=\&quot;null/source-auteur\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;PractitionerRole #source-auteur&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;hcnull/source-auteur\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://rpps.esante.gouv.fr&lt;/code&gt;/1011848351&lt;/p&gt;&lt;/div&gt;"
-        },
-        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">contained</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/practitionerrole.html">resourceType</a>" : "PractitionerRole",
-            "<a href="http://hl7.org/fhir/R4/resource.html#PractitionerRole.id">id</a>" : "source-auteur",
-            "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.identifier">identifier</a>" : [
-              {
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "https://rpps.esante.gouv.fr",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "1011848351"
-              }
-            ]
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/domainresource.html#List.extension">extension</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-designationType",
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCodeableConcept</a>" : {
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
-                {
-                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite",
-                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "SA01",
-                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Etablissement public de santé"
-                }
-              ]
-            }
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-sourceId",
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueIdentifier</a>" : {
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.2.250.1.213.1.1.1",
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "SRC-01"
-            }
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/list.html#List.status">status</a>" : "current",
-        "<a href="http://hl7.org/fhir/R4/list.html#List.mode">mode</a>" : "working",
-        "<a href="http://hl7.org/fhir/R4/list.html#List.code">code</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes",
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "submissionset"
-            }
-          ]
-        },
-        "<a href="http://hl7.org/fhir/R4/list.html#List.subject">subject</a>" : {
-          <a href="Patient-fr-patient-123.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/fr-patient-123"
-        },
-        "<a href="http://hl7.org/fhir/R4/list.html#List.date">date</a>" : "2025-06-01T12:00:00+01:00",
-        "<a href="http://hl7.org/fhir/R4/list.html#List.source">source</a>" : {
-          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "#source-auteur"
-        },
-        "<a href="http://hl7.org/fhir/R4/list.html#List.entry">entry</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/list.html#List.entry.item">item</a>" : {
-              "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:55555555-5555-4555-8555-555555555555"
-            }
-          }
-        ]
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:33333333-3333-4333-8333-333333333333",
+      "<a href="http://hl7.org/fhir/R4/binary.html#Binary">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/binary.html">resourceType</a>" : "Binary",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Binary.id">id</a>" : "binary-doc-new-replace",
+        "<a href="http://hl7.org/fhir/R4/binary.html#Binary.contentType">contentType</a>" : "application/pdf",
+        "<a href="http://hl7.org/fhir/R4/binary.html#Binary.data">data</a>" : "SGVsbG8="
       },
       "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
         "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "POST",
-        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "List"
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "Binary"
       }
     }
   ]
@@ -604,7 +844,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Mar 31, 2026 17:09+0000">2026-03-31</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 2, 2026 08:54+0000">2026-04-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

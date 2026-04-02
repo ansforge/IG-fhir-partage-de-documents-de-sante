@@ -99,6 +99,7 @@
       "Patient.name"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-data-trace": [
+      "Bundle.entry.resource.contained.meta",
       "List.contained.meta",
       "Organization.meta"
     ],
@@ -106,6 +107,7 @@
       "DocumentReference.contained.telecom"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types": [
+      "Bundle.entry.resource.contained.type",
       "List.contained.type",
       "Organization.type"
     ],
