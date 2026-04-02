@@ -38,6 +38,9 @@ InstanceOf: FRCorePatientProfile
 Usage: #inline
 * identifier[0].system = "urn:oid:1.2.250.1.213.1.4.8"
 * identifier[0].value = "180017505600103"
+* name[0].use = #official
+* name[0].family = "Claire"
+* name[0].given = "Martin"
 * gender = #male
 * birthDate = "1980-01-15"
 
