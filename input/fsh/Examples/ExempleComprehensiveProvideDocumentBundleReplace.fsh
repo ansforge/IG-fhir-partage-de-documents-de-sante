@@ -2,6 +2,30 @@
 // BUNDLE PDSm ITI-65 : exemple de remplacement de document
 // ==========================================================
 
+// --- PractitionerRole minimal : auteur (contained dans DocumentReference et SubmissionSet) ---
+// Pas de meta.versionId ni meta.lastUpdated (interdit par dom-4 dans les ressources contained)
+// Pas de référence externe à Practitioner (non résolvable dans un bundle)
+
+Instance: pr-auteur-replace
+InstanceOf: PractitionerRole
+Usage: #inline
+* meta.profile = "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole"
+* identifier.system = "https://rpps.esante.gouv.fr"
+* identifier.value = "1011848351"
+* active = true
+
+
+// --- Organization minimale : authentificateur (contained dans DocumentReference) ---
+
+Instance: org-auth-replace
+InstanceOf: Organization
+Usage: #inline
+* meta.profile = "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-organization"
+* identifier.system = "urn:oid:1.2.250.1.71.4.2.2"
+* identifier.value = "2264403106"
+* name = "HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G"
+
+
 // --- Binary : nouveau document à déposer ---
 
 Instance: binary-doc-new-replace
@@ -20,23 +44,22 @@ Usage: #inline
 * masterIdentifier.system = "urn:ietf:rfc:3986"
 * masterIdentifier.value = "urn:uuid:55555555-5555-4555-8555-555555555555"
 
+* contained[0] = pr-auteur-replace
+* contained[1] = org-auth-replace
+
 * status = #current
 
-* contained[0] = practitionerrole-example
-* contained[1] = org-example
-
-* type = http://loinc.org#34133-9 "Synthèse d'épisode de soins"
+* type = http://loinc.org#34133-9
 
 * category = https://mos.esante.gouv.fr/NOS/TRE_A03-ClasseDocument/FHIR/TRE-A03-ClasseDocument#10 "Compte rendu"
 
-// Référence vers le patient déjà enregistré sur le serveur avec son INS
 * subject = Reference(fr-patient-123)
 
 * date = "2025-06-01T12:00:00+01:00"
 
-* author = Reference(practitionerrole-example)
+* author = Reference(pr-auteur-replace)
 
-* authenticator = Reference(org-example)
+* authenticator = Reference(org-auth-replace)
 
 * description = "Compte rendu de consultation - version de remplacement"
 
@@ -59,7 +82,6 @@ Usage: #inline
 
 * context.practiceSetting = https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/FHIR/TRE-A01-CadreExercice#ETABLISSEMENT "Etablissement de santé"
 
-// Snapshot local du patient (contained via fr-patient-123, obligatoire)
 * context.sourcePatientInfo = Reference(fr-patient-123)
 
 // REMPLACEMENT : référence vers le DocumentReference existant sur le serveur
@@ -88,8 +110,7 @@ Instance: submissionset-doc-replace
 InstanceOf: PDSm_SubmissionSetComprehensive
 Usage: #inline
 
-* contained[0] = practitionerrole-example
-* contained[1] = org-example
+* contained[0] = pr-auteur-replace
 
 * extension[designationType].valueCodeableConcept = https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite#SA01 "Etablissement public de santé"
 
@@ -103,13 +124,12 @@ Usage: #inline
 
 * code = https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes#submissionset
 
-// Référence vers le patient déjà enregistré sur le serveur avec son INS
 * subject = Reference(fr-patient-123)
 
-// Auteur du lot de soumission (contained)
-* source = Reference(practitionerrole-example)
+* source = Reference(pr-auteur-replace)
 
-* entry[0].item = Reference(docref-doc-new-replace)
+// Référence par fullUrl urn:uuid pour cohérence avec l'entrée du bundle
+* entry[0].item.reference = "urn:uuid:55555555-5555-4555-8555-555555555555"
 
 
 // --- Bundle complet ---
