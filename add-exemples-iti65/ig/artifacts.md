@@ -65,6 +65,7 @@ These are example instances that show what data produced and consumed by systems
 | | |
 | :--- | :--- |
 | [Exemple de Classeur PDSm](List-ExampleFolder.md) | Exemple d’une instance conforme au profil PDSm_FolderComprehensive regroupant des fiches de documents. |
+| [Exemple de DocumentReference existant - cible du remplacement](DocumentReference-doc-old.md) | Fiche de document existante sur le serveur DMP, remplacée par le bundle d'exemple ITI-65. |
 | [Exemple de DocumentReference pour PDSm](DocumentReference-exemple-pdsm-documentreference.md) | Exemple illustratif d’un DocumentReference conforme au profil PDSm_ComprehensiveDocumentReference. |
 | [Exemple de bundle ComprehensiveProvideDocument pour PDSm dans le contexte d'un remplacement de document](Bundle-bundle-exemple-comprehensiveprovidedocument-replace.md) | Exemple illustratif du remplacement de Document conforme au profil PDSm_ComprehensiveDocumentReference et à ITI-65 :* un document existant (DocumentReference/doc-old) est remplacé
 * l'ancien est marqué superseded via un PATCH (géré par le Document Source)

@@ -112,7 +112,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-04-02T12:48:18+00:00",
+  "date" : "2026-04-02T13:07:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -822,6 +822,18 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
       "name" : "Exemple de Classeur PDSm",
       "description" : "Exemple d’une instance conforme au profil PDSm_FolderComprehensive regroupant des fiches de documents.",
       "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-folder-comprehensive"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DocumentReference"
+      }],
+      "reference" : {
+        "reference" : "DocumentReference/doc-old"
+      },
+      "name" : "Exemple de DocumentReference existant - cible du remplacement",
+      "description" : "Fiche de document existante sur le serveur DMP, remplacée par le bundle d'exemple ITI-65.",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-document-reference"
     },
     {
       "extension" : [{
