@@ -2,28 +2,44 @@
 // BUNDLE PDSm ITI-65 : exemple de remplacement de document
 // ==========================================================
 
-// --- PractitionerRole minimal : auteur (contained dans DocumentReference et SubmissionSet) ---
-// Pas de meta.versionId ni meta.lastUpdated (interdit par dom-4 dans les ressources contained)
-// Pas de référence externe à Practitioner (non résolvable dans un bundle)
+// --- PractitionerRole minimal (contained dans DocumentReference et SubmissionSet) ---
+// Le profil as-practitionerrole requiert fr-core-practitioner-role dans meta.profile
 
 Instance: pr-auteur-replace
 InstanceOf: PractitionerRole
 Usage: #inline
-* meta.profile = "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole"
+* meta.profile[0] = "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole"
+* meta.profile[+] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role"
 * identifier.system = "https://rpps.esante.gouv.fr"
 * identifier.value = "1011848351"
 * active = true
 
 
-// --- Organization minimale : authentificateur (contained dans DocumentReference) ---
+// --- Organization (contained dans DocumentReference) ---
+// Le profil as-organization requiert fr-core-organization dans meta.profile
+// L'identifiant doit avoir le type IDNST pour correspondre au slice as-organization
 
 Instance: org-auth-replace
 InstanceOf: Organization
 Usage: #inline
-* meta.profile = "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-organization"
+* meta.profile[0] = "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-organization"
+* meta.profile[+] = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization"
+* identifier.type.coding.system = "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"
+* identifier.type.coding.code = #IDNST
 * identifier.system = "urn:oid:1.2.250.1.71.4.2.2"
 * identifier.value = "2264403106"
 * name = "HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G"
+
+
+// --- Patient local (contained obligatoire dans DocumentReference — aggregation = contained selon MHD) ---
+
+Instance: patient-local-replace
+InstanceOf: FRCorePatientProfile
+Usage: #inline
+* identifier[0].system = "urn:oid:1.2.250.1.213.1.4.8"
+* identifier[0].value = "180017505600103"
+* gender = #male
+* birthDate = "1980-01-15"
 
 
 // --- Binary : nouveau document à déposer ---
@@ -36,6 +52,7 @@ Usage: #inline
 
 
 // --- DocumentReference : nouveau document (remplacement) ---
+// MHD v4.0.1 impose aggregation=contained pour author, authenticator et context.sourcePatientInfo
 
 Instance: docref-doc-new-replace
 InstanceOf: PDSm_ComprehensiveDocumentReference
@@ -46,6 +63,7 @@ Usage: #inline
 
 * contained[0] = pr-auteur-replace
 * contained[1] = org-auth-replace
+* contained[2] = patient-local-replace
 
 * status = #current
 
@@ -82,7 +100,8 @@ Usage: #inline
 
 * context.practiceSetting = https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/FHIR/TRE-A01-CadreExercice#ETABLISSEMENT "Etablissement de santé"
 
-* context.sourcePatientInfo = Reference(fr-patient-123)
+// Snapshot local du patient (aggregation = contained, obligatoire dans MHD)
+* context.sourcePatientInfo = Reference(patient-local-replace)
 
 // REMPLACEMENT : référence vers le DocumentReference existant sur le serveur
 * relatesTo[0].code = #replaces
@@ -130,6 +149,59 @@ Usage: #inline
 
 // Référence par fullUrl urn:uuid pour cohérence avec l'entrée du bundle
 * entry[0].item.reference = "urn:uuid:55555555-5555-4555-8555-555555555555"
+
+
+// --- DocumentReference existant sur le serveur (cible du remplacement) ---
+// Cet exemple représente la fiche qui sera marquée superseded par le PATCH.
+
+Instance: doc-old
+InstanceOf: PDSm_ComprehensiveDocumentReference
+Title: "Exemple de DocumentReference existant - cible du remplacement"
+Description: "Fiche de document existante sur le serveur DMP, remplacée par le bundle d'exemple ITI-65."
+Usage: #example
+
+* masterIdentifier.system = "urn:ietf:rfc:3986"
+* masterIdentifier.value = "urn:uuid:44444444-4444-4444-8444-444444444444"
+
+* contained[0] = practitionerrole-example
+* contained[1] = org-example
+
+* status = #superseded
+
+* type = http://loinc.org#34133-9
+
+* category = https://mos.esante.gouv.fr/NOS/TRE_A03-ClasseDocument/FHIR/TRE-A03-ClasseDocument#10 "Compte rendu"
+
+* subject = Reference(fr-patient-123)
+
+* date = "2025-01-01T10:00:00+01:00"
+
+* author = Reference(practitionerrole-example)
+
+* authenticator = Reference(org-example)
+
+* description = "Compte rendu de consultation - version initiale (remplacée)"
+
+* securityLabel = https://mos.esante.gouv.fr/NOS/TRE_A07-StatusVisibiliteDocument/FHIR/TRE-A07-StatusVisibiliteDocument#N "Normal"
+
+* content[0].attachment.contentType = #application/pdf
+* content[0].attachment.language = #fr-FR
+* content[0].attachment.url = "Binary/6789"
+* content[0].attachment.size = 345678
+* content[0].attachment.hash = "2jmj7l5rSw0yVb/vlWAYkK/YBwk="
+* content[0].attachment.title = "CR Consultation - Version initiale"
+* content[0].attachment.creation = "2025-01-01T09:00:00+01:00"
+
+* content[0].format = https://mos.esante.gouv.fr/NOS/TRE_A11-IheFormatCode/FHIR/TRE-A11-IheFormatCode#urn:ihe:iti:xds-sd:pdf:2008
+
+* context.period.start = "2025-01-01T08:00:00+01:00"
+* context.period.end = "2025-01-01T10:00:00+01:00"
+
+* context.facilityType = https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite#SA01 "Etablissement public de santé"
+
+* context.practiceSetting = https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/FHIR/TRE-A01-CadreExercice#ETABLISSEMENT "Etablissement de santé"
+
+* context.sourcePatientInfo = Reference(fr-patient-123)
 
 
 // --- Bundle complet ---
