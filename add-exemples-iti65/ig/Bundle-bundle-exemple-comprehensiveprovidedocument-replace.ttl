@@ -81,176 +81,25 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"List_submissionset-doc-replace\"> </a><p class=\"res-header-id\"><b>Narratif généré : Liste submissionset-doc-replace</b></p><a name=\"submissionset-doc-replace\"> </a><a name=\"hcsubmissionset-doc-replace\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-pdsm-submissionset-comprehensive.html\">PDSm SubmissionSet Comprehensive</a></p></div><table class=\"clstu\"><tr><td>Date : 2025-06-01 12:00:00+0100 </td><td>Mode : Working List </td><td>Statut : Current </td><td>Code : SubmissionSet as a FHIR List </td></tr><tr><td>Sujet : <a href=\"Patient-fr-patient-123.html\">Martin Claire (official) Male, Date de Naissance :1980-01-15 ( NIR: 180017505600103 (use: official, ))</a>Source </td></tr></table><table class=\"grid\"><tr style=\"backgound-color: #eeeeee\"><td><b>Éléments</b></td></tr><tr><td><a href=\"Bundle-bundle-exemple-comprehensiveprovidedocument-replace.html#DocumentReference_docref-doc-new-replace\">DocumentReference : masterIdentifier = UUID:55555555-5555-4555-8555-555555555555; status = current; type = Synthèse d'épisode de soins; category = Compte rendu; date = 2025-06-01 12:00:00+0100; description = Compte rendu de consultation - version de remplacement; securityLabel = Normal</a></td></tr></table><hr/><p><b>Ressources contenues</b></p><hr/><a name=\"submissionset-doc-replace/practitionerrole-example\"> </a><p class=\"res-header-id\"><b>PractitionerRole #practitionerrole-example</b></p><a name=\"hcsubmissionset-doc-replace/practitionerrole-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version : 1; Dernière mise à jour : 2025-04-28 18:19:34+0200; Langue : fr; </p><p style=\"margin-bottom: 0px\">Information Source: <a href=\"https://annuaire.sante.fr\">https://annuaire.sante.fr</a></p><p style=\"margin-bottom: 0px\">Profils: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner-role.html\">FR Core Practitioner Role</a>, <a href=\"https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-dp-practitionerrole.html\">AS Donnée Publique PractitionerRole Profile</a></p></div><p><b>identifier</b>: <code>https://rpps.esante.gouv.fr</code>/1011848351 (utilisation : official, )</p><p><b>active</b>: true</p><p><b>practitioner</b>: <a href=\"Practitioner/practitioner-example\">Practitioner/practitioner-example</a></p><p><b>organization</b>: <a href=\"#hcsubmissionset-doc-replace/org-example\">Organization HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G</a></p><p><b>code</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R22-GenreActivite/FHIR/TRE-R22-GenreActivite GENR01}\">Soignant</span>, <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExercice/FHIR/TRE-R23-ModeExercice L}\">Libéral,indép,artisan,commerç</span>, <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R21-Fonction/FHIR/TRE-R21-Fonction FON-05}\">Adjoint</span></p><hr/><a name=\"submissionset-doc-replace/org-example\"> </a><p class=\"res-header-id\"><b>Organisation #org-example</b></p><a name=\"hcsubmissionset-doc-replace/org-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version : 1; Dernière mise à jour : 2025-04-28 19:35:45+0200; Langue : fr; </p><p style=\"margin-bottom: 0px\">Information Source: <a href=\"https://annuaire.sante.fr\">https://annuaire.sante.fr</a></p><p style=\"margin-bottom: 0px\">Profils: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-organization.html\">FR Core Organization Profile</a>, <a href=\"https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-dp-organization.html\">AS Donnée Publique Organization Profile</a></p></div><p><b>identifier</b>: Identification nationale de structure définie par l’ANS dans le CI_SIS/2264403106 (utilisation : official, ), Identification de l'organisation au SIREN/264403106 (utilisation : official, )</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes :{https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-3307 LEGAL-ENTITY}\">Entité légale</span>, <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite SA43}\">Secteur non défini</span></p><p><b>name</b>: HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G</p></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"List_submissionset-doc-replace\"> </a><p class=\"res-header-id\"><b>Narratif généré : Liste submissionset-doc-replace</b></p><a name=\"submissionset-doc-replace\"> </a><a name=\"hcsubmissionset-doc-replace\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-pdsm-submissionset-comprehensive.html\">PDSm SubmissionSet Comprehensive</a></p></div><table class=\"clstu\"><tr><td>Date : 2025-06-01 12:00:00+0100 </td><td>Mode : Working List </td><td>Statut : Current </td><td>Code : SubmissionSet as a FHIR List </td></tr><tr><td>Sujet : <a href=\"Patient-fr-patient-123.html\">Martin Claire (official) Male, Date de Naissance :1980-01-15 ( NIR: 180017505600103 (use: official, ))</a>Source </td></tr></table><table class=\"grid\"><tr style=\"backgound-color: #eeeeee\"><td><b>Éléments</b></td></tr><tr><td><a href=\"Bundle-bundle-exemple-comprehensiveprovidedocument-replace.html#urn-uuid-55555555-5555-4555-8555-555555555555\">DocumentReference : masterIdentifier = UUID:55555555-5555-4555-8555-555555555555; status = current; type = Summary of episode note; category = Compte rendu; date = 2025-06-01 12:00:00+0100; description = Compte rendu de consultation - version de remplacement; securityLabel = Normal</a></td></tr></table><hr/><p><b>Ressource contenue</b></p><hr/><a name=\"submissionset-doc-replace/pr-auteur-replace\"> </a><p class=\"res-header-id\"><b>PractitionerRole #pr-auteur-replace</b></p><a name=\"hcsubmissionset-doc-replace/pr-auteur-replace\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-practitionerrole.html\">AS PractitionerRole Profile</a></p></div><p><b>identifier</b>: <code>https://rpps.esante.gouv.fr</code>/1011848351</p><p><b>active</b>: true</p></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:contained ( [
      a fhir:PractitionerRole ;
-     fhir:id [ fhir:v "practitionerrole-example" ] ;
+     fhir:id [ fhir:v "pr-auteur-replace" ] ;
      fhir:meta [
-       fhir:versionId [ fhir:v "1" ] ;
-       fhir:lastUpdated [ fhir:v "2025-04-28T18:19:34.908+02:00"^^xsd:dateTime ] ;
-       fhir:source [
-         fhir:v "https://annuaire.sante.fr"^^xsd:anyURI ;
-         fhir:l <https://annuaire.sante.fr>
-       ] ;
        fhir:profile ( [
-         fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role"^^xsd:anyURI ;
-         fhir:l <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role>
-       ] [
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole"^^xsd:anyURI ;
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole>
        ] )
      ] ;
-     fhir:language [ fhir:v "fr" ] ;
      fhir:identifier ( [
-       fhir:use [ fhir:v "official" ] ;
        fhir:system [
          fhir:v "https://rpps.esante.gouv.fr"^^xsd:anyURI ;
          fhir:l <https://rpps.esante.gouv.fr>
        ] ;
        fhir:value [ fhir:v "1011848351" ]
      ] ) ;
-     fhir:active [ fhir:v true ] ;
-     fhir:practitioner [
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/Practitioner/practitioner-example> ;
-       fhir:reference [ fhir:v "Practitioner/practitioner-example" ]
-     ] ;
-     fhir:organization [
-       fhir:l <#org-example> ;
-       fhir:reference [ fhir:v "#org-example" ]
-     ] ;
-     fhir:code ( [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R22-GenreActivite/FHIR/TRE-R22-GenreActivite"^^xsd:anyURI ;
-           fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R22-GenreActivite/FHIR/TRE-R22-GenreActivite>
-         ] ;
-         fhir:code [ fhir:v "GENR01" ]
-       ] )
-     ] [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExercice/FHIR/TRE-R23-ModeExercice"^^xsd:anyURI ;
-           fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExercice/FHIR/TRE-R23-ModeExercice>
-         ] ;
-         fhir:code [ fhir:v "L" ]
-       ] )
-     ] [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R21-Fonction/FHIR/TRE-R21-Fonction"^^xsd:anyURI ;
-           fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R21-Fonction/FHIR/TRE-R21-Fonction>
-         ] ;
-         fhir:code [ fhir:v "FON-05" ]
-       ] )
-     ] )
-  ] [
-     a fhir:Organization ;
-     fhir:id [ fhir:v "org-example" ] ;
-     fhir:meta [
-       fhir:extension ( [
-         fhir:extension ( [
-           fhir:url [
-             fhir:v "systeme-information"^^xsd:anyURI ;
-             fhir:l fhir:systeme-information
-           ] ;
-           fhir:value [
-             a fhir:Code ;
-             fhir:v "CG"
-           ]
-         ] ) ;
-         fhir:url [
-           fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-data-trace"^^xsd:anyURI ;
-           fhir:l <https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-data-trace>
-         ]
-       ] ) ;
-       fhir:versionId [ fhir:v "1" ] ;
-       fhir:lastUpdated [ fhir:v "2025-04-28T19:35:45.507+02:00"^^xsd:dateTime ] ;
-       fhir:source [
-         fhir:v "https://annuaire.sante.fr"^^xsd:anyURI ;
-         fhir:l <https://annuaire.sante.fr>
-       ] ;
-       fhir:profile ( [
-         fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization"^^xsd:anyURI ;
-         fhir:l <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization>
-       ] [
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-organization"^^xsd:anyURI ;
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-organization>
-       ] )
-     ] ;
-     fhir:language [ fhir:v "fr" ] ;
-     fhir:identifier ( [
-       fhir:use [ fhir:v "official" ] ;
-       fhir:type [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ;
-             fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203>
-           ] ;
-           fhir:code [ fhir:v "IDNST" ]
-         ] )
-       ] ;
-       fhir:system [
-         fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ;
-         fhir:l <urn:oid:1.2.250.1.71.4.2.2>
-       ] ;
-       fhir:value [ fhir:v "2264403106" ]
-     ] [
-       fhir:use [ fhir:v "official" ] ;
-       fhir:type [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ;
-             fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203>
-           ] ;
-           fhir:code [ fhir:v "SIREN" ]
-         ] )
-       ] ;
-       fhir:system [
-         fhir:v "https://sirene.fr"^^xsd:anyURI ;
-         fhir:l <https://sirene.fr>
-       ] ;
-       fhir:value [ fhir:v "264403106" ]
-     ] ) ;
-     fhir:active [ fhir:v true ] ;
-     fhir:type ( [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types"^^xsd:anyURI ;
-           fhir:l <https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types>
-         ] ;
-         fhir:value [
-           a fhir:Code ;
-           fhir:v "organizationType"
-         ]
-       ] ) ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-3307"^^xsd:anyURI ;
-           fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-3307>
-         ] ;
-         fhir:code [ fhir:v "LEGAL-ENTITY" ]
-       ] )
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types"^^xsd:anyURI ;
-           fhir:l <https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types>
-         ] ;
-         fhir:value [
-           a fhir:Code ;
-           fhir:v "secteurActiviteRASS"
-         ]
-       ] ) ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite"^^xsd:anyURI ;
-           fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite>
-         ] ;
-         fhir:code [ fhir:v "SA43" ]
-       ] )
-     ] ) ;
-     fhir:name [ fhir:v "HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G" ]
+     fhir:active [ fhir:v true ]
   ] ) ; # 
   fhir:extension ( [
      fhir:url [
@@ -299,13 +148,13 @@
   ] ; # 
   fhir:date [ fhir:v "2025-06-01T12:00:00+01:00"^^xsd:dateTime] ; # 
   fhir:source [
-     fhir:l <#practitionerrole-example> ;
-     fhir:reference [ fhir:v "#practitionerrole-example" ]
+     fhir:l <#pr-auteur-replace> ;
+     fhir:reference [ fhir:v "#pr-auteur-replace" ]
   ] ; # 
   fhir:entry ( [
      fhir:item [
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/DocumentReference/docref-doc-new-replace> ;
-       fhir:reference [ fhir:v "DocumentReference/docref-doc-new-replace" ]
+       fhir:l <urn:uuid:55555555-5555-4555-8555-555555555555> ;
+       fhir:reference [ fhir:v "urn:uuid:55555555-5555-4555-8555-555555555555" ]
      ]
   ] ) . # 
 
@@ -319,174 +168,40 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DocumentReference_docref-doc-new-replace\"> </a><p class=\"res-header-id\"><b>Narratif généré : RéférenceDocument docref-doc-new-replace</b></p><a name=\"docref-doc-new-replace\"> </a><a name=\"hcdocref-doc-new-replace\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-pdsm-comprehensive-document-reference.html\">PDSm Comprehensive DocumentReference</a></p></div><p><b>masterIdentifier</b>: <a href=\"http://terminology.hl7.org/6.0.2/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt #xD;#xA;#xD;#xA;This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: #xD;#xA;#xD;#xA;Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.#xD;#xA;#xD;#xA;This OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:55555555-5555-4555-8555-555555555555</p><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes :{http://loinc.org 34133-9}\">Synthèse d'épisode de soins</span></p><p><b>category</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_A03-ClasseDocument/FHIR/TRE-A03-ClasseDocument 10}\">Compte rendu</span></p><p><b>subject</b>: <a href=\"Patient-fr-patient-123.html\">Martin Claire (official) Male, Date de Naissance :1980-01-15 ( NIR: 180017505600103 (use: official, ))</a></p><p><b>date</b>: 2025-06-01 12:00:00+0100</p><p><b>author</b>: <a href=\"#hcdocref-doc-new-replace/practitionerrole-example\">PractitionerRole Soignant</a></p><p><b>authenticator</b>: <a href=\"#hcdocref-doc-new-replace/org-example\">Organization HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G</a></p><h3>RelatesTos</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Target</b></td></tr><tr><td style=\"display: none\">*</td><td>Replaces</td><td><a href=\"DocumentReference/doc-old\">DocumentReference/doc-old</a></td></tr></table><p><b>description</b>: Compte rendu de consultation - version de remplacement</p><p><b>securityLabel</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_A07-StatusVisibiliteDocument/FHIR/TRE-A07-StatusVisibiliteDocument N}\">Normal</span></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Language</b></td><td><b>Url</b></td><td><b>Size</b></td><td><b>Hash</b></td><td><b>Title</b></td><td><b>Creation</b></td></tr><tr><td style=\"display: none\">*</td><td>application/pdf</td><td>Français (France)</td><td><a href=\"Bundle-bundle-exemple-comprehensiveprovidedocument-replace.html#urn-uuid-33333333-3333-4333-8333-333333333333\">Binary: application/pdf (8 bytes base64)</a></td><td>5</td><td><code>qvTGHdzF6KLavt4PO0gs2a6pQ00=</code></td><td>CR Consultation - Version remplaçante</td><td>2025-06-01 10:00:00+0100</td></tr></table><p><b>format</b>: <a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A11-IheFormatCode.html#TRE-A11-IheFormatCode-urn.58ihe.58iti.58xds-sd.58pdf.582008\">TRE_A11_IheFormatCode: urn:ihe:iti:xds-sd:pdf:2008</a> (xds-sd:pdf)</p></blockquote><h3>Contexts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Period</b></td><td><b>FacilityType</b></td><td><b>PracticeSetting</b></td><td><b>SourcePatientInfo</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-06-01 08:00:00+0100 --&gt; 2025-06-01 10:00:00+0100</td><td><span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite SA01}\">Etablissement public de santé</span></td><td><span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/FHIR/TRE-A01-CadreExercice ETABLISSEMENT}\">Etablissement de santé</span></td><td><a href=\"Patient-fr-patient-123.html\">Martin Claire (official) Male, Date de Naissance :1980-01-15 ( NIR: 180017505600103 (use: official, ))</a></td></tr></table><hr/><blockquote><p class=\"res-header-id\"><b>Narratif généré : PractitionerRole #practitionerrole-example</b></p><a name=\"docref-doc-new-replace/practitionerrole-example\"> </a><a name=\"hcdocref-doc-new-replace/practitionerrole-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version : 1; Dernière mise à jour : 2025-04-28 18:19:34+0200; Langue : fr; </p><p style=\"margin-bottom: 0px\">Information Source: <a href=\"https://annuaire.sante.fr\">https://annuaire.sante.fr</a></p><p style=\"margin-bottom: 0px\">Profils: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner-role.html\">FR Core Practitioner Role</a>, <a href=\"https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-dp-practitionerrole.html\">AS Donnée Publique PractitionerRole Profile</a></p></div><p><b>identifier</b>: <code>https://rpps.esante.gouv.fr</code>/1011848351 (utilisation : official, )</p><p><b>active</b>: true</p><p><b>practitioner</b>: <a href=\"Practitioner/practitioner-example\">Practitioner/practitioner-example</a></p><p><b>organization</b>: <a href=\"#hcdocref-doc-new-replace/org-example\">Organization HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G</a></p><p><b>code</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R22-GenreActivite/FHIR/TRE-R22-GenreActivite GENR01}\">Soignant</span>, <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExercice/FHIR/TRE-R23-ModeExercice L}\">Libéral,indép,artisan,commerç</span>, <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R21-Fonction/FHIR/TRE-R21-Fonction FON-05}\">Adjoint</span></p></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Narratif généré : Organisation #org-example</b></p><a name=\"docref-doc-new-replace/org-example\"> </a><a name=\"hcdocref-doc-new-replace/org-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version : 1; Dernière mise à jour : 2025-04-28 19:35:45+0200; Langue : fr; </p><p style=\"margin-bottom: 0px\">Information Source: <a href=\"https://annuaire.sante.fr\">https://annuaire.sante.fr</a></p><p style=\"margin-bottom: 0px\">Profils: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-organization.html\">FR Core Organization Profile</a>, <a href=\"https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-dp-organization.html\">AS Donnée Publique Organization Profile</a></p></div><p><b>identifier</b>: Identification nationale de structure définie par l’ANS dans le CI_SIS/2264403106 (utilisation : official, ), Identification de l'organisation au SIREN/264403106 (utilisation : official, )</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes :{https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-3307 LEGAL-ENTITY}\">Entité légale</span>, <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite SA43}\">Secteur non défini</span></p><p><b>name</b>: HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G</p></blockquote></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DocumentReference_docref-doc-new-replace\"> </a><p class=\"res-header-id\"><b>Narratif généré : RéférenceDocument docref-doc-new-replace</b></p><a name=\"docref-doc-new-replace\"> </a><a name=\"hcdocref-doc-new-replace\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-pdsm-comprehensive-document-reference.html\">PDSm Comprehensive DocumentReference</a></p></div><p><b>masterIdentifier</b>: <a href=\"http://terminology.hl7.org/6.0.2/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt #xD;#xA;#xD;#xA;This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: #xD;#xA;#xD;#xA;Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.#xD;#xA;#xD;#xA;This OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:55555555-5555-4555-8555-555555555555</p><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes :{http://loinc.org 34133-9}\">Summary of episode note</span></p><p><b>category</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_A03-ClasseDocument/FHIR/TRE-A03-ClasseDocument 10}\">Compte rendu</span></p><p><b>subject</b>: <a href=\"Patient-fr-patient-123.html\">Martin Claire (official) Male, Date de Naissance :1980-01-15 ( NIR: 180017505600103 (use: official, ))</a></p><p><b>date</b>: 2025-06-01 12:00:00+0100</p><p><b>author</b>: <a href=\"#hcdocref-doc-new-replace/pr-auteur-replace\">PractitionerRole : identifier = https://rpps.esante.gouv.fr#1011848351</a></p><p><b>authenticator</b>: <a href=\"#hcdocref-doc-new-replace/org-auth-replace\">Organization HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G</a></p><h3>RelatesTos</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Target</b></td></tr><tr><td style=\"display: none\">*</td><td>Replaces</td><td><a href=\"DocumentReference/doc-old\">DocumentReference/doc-old</a></td></tr></table><p><b>description</b>: Compte rendu de consultation - version de remplacement</p><p><b>securityLabel</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_A07-StatusVisibiliteDocument/FHIR/TRE-A07-StatusVisibiliteDocument N}\">Normal</span></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Language</b></td><td><b>Url</b></td><td><b>Size</b></td><td><b>Hash</b></td><td><b>Title</b></td><td><b>Creation</b></td></tr><tr><td style=\"display: none\">*</td><td>application/pdf</td><td>Français (France)</td><td><a href=\"Bundle-bundle-exemple-comprehensiveprovidedocument-replace.html#urn-uuid-33333333-3333-4333-8333-333333333333\">Binary: application/pdf (8 bytes base64)</a></td><td>5</td><td><code>qvTGHdzF6KLavt4PO0gs2a6pQ00=</code></td><td>CR Consultation - Version remplaçante</td><td>2025-06-01 10:00:00+0100</td></tr></table><p><b>format</b>: <a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A11-IheFormatCode.html#TRE-A11-IheFormatCode-urn.58ihe.58iti.58xds-sd.58pdf.582008\">TRE_A11_IheFormatCode: urn:ihe:iti:xds-sd:pdf:2008</a> (xds-sd:pdf)</p></blockquote><h3>Contexts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Period</b></td><td><b>FacilityType</b></td><td><b>PracticeSetting</b></td><td><b>SourcePatientInfo</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-06-01 08:00:00+0100 --&gt; 2025-06-01 10:00:00+0100</td><td><span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite SA01}\">Etablissement public de santé</span></td><td><span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/FHIR/TRE-A01-CadreExercice ETABLISSEMENT}\">Etablissement de santé</span></td><td><a href=\"Patient-fr-patient-123.html\">Martin Claire (official) Male, Date de Naissance :1980-01-15 ( NIR: 180017505600103 (use: official, ))</a></td></tr></table><hr/><blockquote><p class=\"res-header-id\"><b>Narratif généré : PractitionerRole #pr-auteur-replace</b></p><a name=\"docref-doc-new-replace/pr-auteur-replace\"> </a><a name=\"hcdocref-doc-new-replace/pr-auteur-replace\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-practitionerrole.html\">AS PractitionerRole Profile</a></p></div><p><b>identifier</b>: <code>https://rpps.esante.gouv.fr</code>/1011848351</p><p><b>active</b>: true</p></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Narratif généré : Organisation #org-auth-replace</b></p><a name=\"docref-doc-new-replace/org-auth-replace\"> </a><a name=\"hcdocref-doc-new-replace/org-auth-replace\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-organization.html\">AS Organization Profile</a></p></div><p><b>identifier</b>: <code>urn:oid:1.2.250.1.71.4.2.2</code>/2264403106</p><p><b>name</b>: HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G</p></blockquote></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:contained ( [
      a fhir:PractitionerRole ;
-     fhir:id [ fhir:v "practitionerrole-example" ] ;
+     fhir:id [ fhir:v "pr-auteur-replace" ] ;
      fhir:meta [
-       fhir:versionId [ fhir:v "1" ] ;
-       fhir:lastUpdated [ fhir:v "2025-04-28T18:19:34.908+02:00"^^xsd:dateTime ] ;
-       fhir:source [
-         fhir:v "https://annuaire.sante.fr"^^xsd:anyURI ;
-         fhir:l <https://annuaire.sante.fr>
-       ] ;
        fhir:profile ( [
-         fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role"^^xsd:anyURI ;
-         fhir:l <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role>
-       ] [
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole"^^xsd:anyURI ;
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole>
        ] )
      ] ;
-     fhir:language [ fhir:v "fr" ] ;
      fhir:identifier ( [
-       fhir:use [ fhir:v "official" ] ;
        fhir:system [
          fhir:v "https://rpps.esante.gouv.fr"^^xsd:anyURI ;
          fhir:l <https://rpps.esante.gouv.fr>
        ] ;
        fhir:value [ fhir:v "1011848351" ]
      ] ) ;
-     fhir:active [ fhir:v true ] ;
-     fhir:practitioner [
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/Practitioner/practitioner-example> ;
-       fhir:reference [ fhir:v "Practitioner/practitioner-example" ]
-     ] ;
-     fhir:organization [
-       fhir:l <#org-example> ;
-       fhir:reference [ fhir:v "#org-example" ]
-     ] ;
-     fhir:code ( [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R22-GenreActivite/FHIR/TRE-R22-GenreActivite"^^xsd:anyURI ;
-           fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R22-GenreActivite/FHIR/TRE-R22-GenreActivite>
-         ] ;
-         fhir:code [ fhir:v "GENR01" ]
-       ] )
-     ] [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExercice/FHIR/TRE-R23-ModeExercice"^^xsd:anyURI ;
-           fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExercice/FHIR/TRE-R23-ModeExercice>
-         ] ;
-         fhir:code [ fhir:v "L" ]
-       ] )
-     ] [
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R21-Fonction/FHIR/TRE-R21-Fonction"^^xsd:anyURI ;
-           fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R21-Fonction/FHIR/TRE-R21-Fonction>
-         ] ;
-         fhir:code [ fhir:v "FON-05" ]
-       ] )
-     ] )
+     fhir:active [ fhir:v true ]
   ] [
      a fhir:Organization ;
-     fhir:id [ fhir:v "org-example" ] ;
+     fhir:id [ fhir:v "org-auth-replace" ] ;
      fhir:meta [
-       fhir:extension ( [
-         fhir:extension ( [
-           fhir:url [
-             fhir:v "systeme-information"^^xsd:anyURI ;
-             fhir:l fhir:systeme-information
-           ] ;
-           fhir:value [
-             a fhir:Code ;
-             fhir:v "CG"
-           ]
-         ] ) ;
-         fhir:url [
-           fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-data-trace"^^xsd:anyURI ;
-           fhir:l <https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-data-trace>
-         ]
-       ] ) ;
-       fhir:versionId [ fhir:v "1" ] ;
-       fhir:lastUpdated [ fhir:v "2025-04-28T19:35:45.507+02:00"^^xsd:dateTime ] ;
-       fhir:source [
-         fhir:v "https://annuaire.sante.fr"^^xsd:anyURI ;
-         fhir:l <https://annuaire.sante.fr>
-       ] ;
        fhir:profile ( [
-         fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization"^^xsd:anyURI ;
-         fhir:l <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization>
-       ] [
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-organization"^^xsd:anyURI ;
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-organization>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-organization"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-organization>
        ] )
      ] ;
-     fhir:language [ fhir:v "fr" ] ;
      fhir:identifier ( [
-       fhir:use [ fhir:v "official" ] ;
-       fhir:type [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ;
-             fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203>
-           ] ;
-           fhir:code [ fhir:v "IDNST" ]
-         ] )
-       ] ;
        fhir:system [
          fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ;
          fhir:l <urn:oid:1.2.250.1.71.4.2.2>
        ] ;
        fhir:value [ fhir:v "2264403106" ]
-     ] [
-       fhir:use [ fhir:v "official" ] ;
-       fhir:type [
-         fhir:coding ( [
-           fhir:system [
-             fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ;
-             fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203>
-           ] ;
-           fhir:code [ fhir:v "SIREN" ]
-         ] )
-       ] ;
-       fhir:system [
-         fhir:v "https://sirene.fr"^^xsd:anyURI ;
-         fhir:l <https://sirene.fr>
-       ] ;
-       fhir:value [ fhir:v "264403106" ]
-     ] ) ;
-     fhir:active [ fhir:v true ] ;
-     fhir:type ( [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types"^^xsd:anyURI ;
-           fhir:l <https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types>
-         ] ;
-         fhir:value [
-           a fhir:Code ;
-           fhir:v "organizationType"
-         ]
-       ] ) ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-3307"^^xsd:anyURI ;
-           fhir:l <https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-3307>
-         ] ;
-         fhir:code [ fhir:v "LEGAL-ENTITY" ]
-       ] )
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types"^^xsd:anyURI ;
-           fhir:l <https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types>
-         ] ;
-         fhir:value [
-           a fhir:Code ;
-           fhir:v "secteurActiviteRASS"
-         ]
-       ] ) ;
-       fhir:coding ( [
-         fhir:system [
-           fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite"^^xsd:anyURI ;
-           fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite>
-         ] ;
-         fhir:code [ fhir:v "SA43" ]
-       ] )
      ] ) ;
      fhir:name [ fhir:v "HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G" ]
   ] ) ; # 
@@ -505,8 +220,7 @@
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
        ] ;
-       fhir:code [ fhir:v "34133-9" ] ;
-       fhir:display [ fhir:v "Synthèse d'épisode de soins" ]
+       fhir:code [ fhir:v "34133-9" ]
      ] )
   ] ; # 
   fhir:category ( [
@@ -525,12 +239,12 @@
   ] ; # 
   fhir:date [ fhir:v "2025-06-01T12:00:00+01:00"^^xsd:dateTime] ; # 
   fhir:author ( [
-     fhir:l <#practitionerrole-example> ;
-     fhir:reference [ fhir:v "#practitionerrole-example" ]
+     fhir:l <#pr-auteur-replace> ;
+     fhir:reference [ fhir:v "#pr-auteur-replace" ]
   ] ) ; # 
   fhir:authenticator [
-     fhir:l <#org-example> ;
-     fhir:reference [ fhir:v "#org-example" ]
+     fhir:l <#org-auth-replace> ;
+     fhir:reference [ fhir:v "#org-auth-replace" ]
   ] ; # 
   fhir:relatesTo ( [
      fhir:code [ fhir:v "replaces" ] ;
