@@ -32,7 +32,7 @@ Cette opération est réalisée en une seule transaction ITI-65.
 ##### Pré-conditions
 
 * Le document à remplacer (`DocumentReference/[id-ancien]`) est déjà présent sur le serveur avec le statut `current`.
-* Le patient est déjà enregistré sur le serveur avec une identité INS qualifiée. Il **ne doit pas** être inclus dans le bundle de remplacement.
+* Le patient est déjà enregistré sur le serveur avec une identité INS qualifiée.
 
 ##### Contenu du bundle
 
@@ -85,10 +85,6 @@ La requête associée dans le bundle est :
 request.method = PATCH
 request.url    = DocumentReference/[id-ancien]
 ```
-
-##### Lot de soumission (SubmissionSet)
-
-Le lot de soumission ne doit référencer que la **nouvelle** fiche. L'ancienne fiche n'est pas listée dans `List.entry`.
 
 ##### Comportement du gestionnaire (Document Recipient)
 
