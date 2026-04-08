@@ -282,7 +282,7 @@ Cette opération est réalisée en une seule transaction ITI-65.</p>
 
 <ul>
   <li>Le document à remplacer (<code class="language-plaintext highlighter-rouge">DocumentReference/[id-ancien]</code>) est déjà présent sur le serveur avec le statut <code class="language-plaintext highlighter-rouge">current</code>.</li>
-  <li>Le patient est déjà enregistré sur le serveur avec une identité INS qualifiée. Il <strong>ne doit pas</strong> être inclus dans le bundle de remplacement.</li>
+  <li>Le patient est déjà enregistré sur le serveur avec une identité INS qualifiée.</li>
 </ul>
 
 <h5 id="contenu-du-bundle">Contenu du bundle</h5>
@@ -364,10 +364,6 @@ DocumentReference.status               = #current
 request.url    = DocumentReference/[id-ancien]
 </code></pre></div></div>
 
-<h5 id="lot-de-soumission-submissionset">Lot de soumission (SubmissionSet)</h5>
-
-<p>Le lot de soumission ne doit référencer que la <strong>nouvelle</strong> fiche. L'ancienne fiche n'est pas listée dans <code class="language-plaintext highlighter-rouge">List.entry</code>.</p>
-
 <h5 id="comportement-du-gestionnaire-document-recipient">Comportement du gestionnaire (Document Recipient)</h5>
 
 <p>À réception du bundle de remplacement, le gestionnaire de partage de documents :</p>
@@ -395,7 +391,7 @@ request.url    = DocumentReference/[id-ancien]
 
 <p>Le gestionnaire de partage de documents de santé retourne un « HTTP Status code » approprié au résultat de la demande comme indiqué dans la spécification du profil MHD. Le corps de la réponse doit être un Bundle de type <code class="language-plaintext highlighter-rouge">transaction-response</code> avec un élément <code class="language-plaintext highlighter-rouge">entry</code> pour chaque ressource reçue dans le Bundle de la requête, dans le même ordre, avec le résultat du traitement de l'élément.</p>
 
-<p><a name="l975">​</a>Le corps de la réponse doit être conforme au profil <a href="/IHE.MHD.ProvideDocumentBundleResponse">ProvideDocumentBundleResponse</a> (<a href="Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.json.html">exemple de contenu d'un payload</a>).</p>
+<p><a name="l960">​</a>Le corps de la réponse doit être conforme au profil <a href="/IHE.MHD.ProvideDocumentBundleResponse">ProvideDocumentBundleResponse</a> (<a href="Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.json.html">exemple de contenu d'un payload</a>).</p>
 
 <p>Ce flux sert à communiquer un succès ou un échec.
 Un succès n'est indiqué que lorsque le ou les documents sont reçus, complètement traités et conservés selon les besoins de la configuration du gestionnaire de partage de documents.</p>
@@ -445,7 +441,7 @@ Un succès n'est indiqué que lorsque le ou les documents sont reçus, complète
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 2, 2026 14:06+0000">2026-04-02</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 8, 2026 08:33+0000">2026-04-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
