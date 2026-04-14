@@ -23,16 +23,16 @@ Le flux doit contenir :
 
 Le corps de la requête est une ressource « Bundle » de type `transaction` encapsulant toutes les ressources listées précédemment. Cet objet de type JSON ou XML sera envoyé dans le contenu de la requête HTTP POST.
 
+Dans le cas d'une mise à jour d'un classeur, comme `List.status` ou `List.entry` pour reclasser des documents, une nouvelle version de la ressource List est envoyée.
+
 #### Cas 1 : Ajout d'un nouveau document
 
 Dans le cas d'un dépôt d'un nouveau document, l'élément `DocumentReference.content.attachment.url` doit pointer vers une ressource `Binary`, représentant le document, présente dans le flux.
 
-Le patient (`DocumentReference.subject` et `List.subject`) peut être référencé de deux manières :
+Le patient (`DocumentReference.subject` et `List.subject`) peut être référencé de deux manières (comformément au [profil IHE MHD](https://profiles.ihe.net/ITI/MHD/ITI-65.html#23654122-patient-identity)):
 
 * par une référence logique vers un patient déjà enregistré sur le serveur (`Patient/[id]`),
 * ou en incluant la ressource Patient dans le bundle (requête HTTP POST), notamment lorsque le serveur destinataire ne dispose pas encore du patient avec son identité INS qualifiée.
-
-Dans le cas d'une mise à jour d'un classeur, comme `List.status` ou `List.entry` pour reclasser des documents, une nouvelle version de la ressource List est envoyée.
 
 #### Cas 2 : Remplacement d'un document existant
 

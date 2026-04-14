@@ -8,7 +8,7 @@
 
 Profil: [PDSm Comprehensive DocumentReference](StructureDefinition-pdsm-comprehensive-document-reference.md)
 
-**masterIdentifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/6.0.2/NamingSystem-uri.html)/urn:uuid:44444444-4444-4444-8444-444444444444
+**masterIdentifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/7.1.0/NamingSystem-uri.html)/urn:uuid:44444444-4444-4444-8444-444444444444
 
 **status**: Superseded
 

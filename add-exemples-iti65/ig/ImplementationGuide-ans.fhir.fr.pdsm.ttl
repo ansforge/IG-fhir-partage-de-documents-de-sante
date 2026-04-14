@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "PDSm"] ; # 
   fhir:title [ fhir:v "Partage de Documents de Santé en mobilité (PDSm)"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-04-08T08:33:04+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-04-14T16:36:20+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -1514,7 +1514,7 @@
          fhir:reference [ fhir:v "DocumentReference/doc-old" ]
        ] ;
        fhir:name [ fhir:v "Exemple de DocumentReference existant - cible du remplacement" ] ;
-       fhir:description [ fhir:v "Fiche de document existante sur le serveur DMP, remplacée par le bundle d'exemple ITI-65." ] ;
+       fhir:description [ fhir:v "Fiche de document existante sur le serveur qui sera remplacée." ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-document-reference"^^xsd:anyURI ;

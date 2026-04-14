@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm | *Version*:3.1.1 |
-| Active as of 2026-04-08 | *Computable Name*:PDSm |
+| Active as of 2026-04-14 | *Computable Name*:PDSm |
 
  **PDSm Implementation Guide**
  This document presents the technical specifications of the “Partage de documents de santé en mobilité” section. This is a part of the service layer specifying the terms of document sharing without constraining them. The specifications related to health documents constitute the components of the business layer of CI-SIS. 
@@ -112,7 +112,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-04-08T08:33:04+00:00",
+  "date" : "2026-04-14T16:36:20+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -832,7 +832,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
         "reference" : "DocumentReference/doc-old"
       },
       "name" : "Exemple de DocumentReference existant - cible du remplacement",
-      "description" : "Fiche de document existante sur le serveur DMP, remplacée par le bundle d'exemple ITI-65.",
+      "description" : "Fiche de document existante sur le serveur qui sera remplacée.",
       "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-document-reference"
     },
     {

@@ -261,17 +261,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Le corps de la requête est une ressource « Bundle » de type <code class="language-plaintext highlighter-rouge">transaction</code> encapsulant toutes les ressources listées précédemment. Cet objet de type JSON ou XML sera envoyé dans le contenu de la requête HTTP POST.</p>
 
+<p>Dans le cas d'une mise à jour d'un classeur, comme <code class="language-plaintext highlighter-rouge">List.status</code> ou <code class="language-plaintext highlighter-rouge">List.entry</code> pour reclasser des documents, une nouvelle version de la ressource List est envoyée.</p>
+
 <h4 id="cas-1--ajout-dun-nouveau-document">Cas 1 : Ajout d'un nouveau document</h4>
 
 <p>Dans le cas d'un dépôt d'un nouveau document, l'élément <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code> doit pointer vers une ressource <code class="language-plaintext highlighter-rouge">Binary</code>, représentant le document, présente dans le flux.</p>
 
-<p>Le patient (<code class="language-plaintext highlighter-rouge">DocumentReference.subject</code> et <code class="language-plaintext highlighter-rouge">List.subject</code>) peut être référencé de deux manières :</p>
+<p>Le patient (<code class="language-plaintext highlighter-rouge">DocumentReference.subject</code> et <code class="language-plaintext highlighter-rouge">List.subject</code>) peut être référencé de deux manières (comformément au <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html#23654122-patient-identity">profil IHE MHD</a>):</p>
 <ul>
   <li>par une référence logique vers un patient déjà enregistré sur le serveur (<code class="language-plaintext highlighter-rouge">Patient/[id]</code>),</li>
   <li>ou en incluant la ressource Patient dans le bundle (requête HTTP POST), notamment lorsque le serveur destinataire ne dispose pas encore du patient avec son identité INS qualifiée.</li>
 </ul>
-
-<p>Dans le cas d'une mise à jour d'un classeur, comme <code class="language-plaintext highlighter-rouge">List.status</code> ou <code class="language-plaintext highlighter-rouge">List.entry</code> pour reclasser des documents, une nouvelle version de la ressource List est envoyée.</p>
 
 <h4 id="cas-2--remplacement-dun-document-existant">Cas 2 : Remplacement d'un document existant</h4>
 
@@ -391,7 +391,7 @@ request.url    = DocumentReference/[id-ancien]
 
 <p>Le gestionnaire de partage de documents de santé retourne un « HTTP Status code » approprié au résultat de la demande comme indiqué dans la spécification du profil MHD. Le corps de la réponse doit être un Bundle de type <code class="language-plaintext highlighter-rouge">transaction-response</code> avec un élément <code class="language-plaintext highlighter-rouge">entry</code> pour chaque ressource reçue dans le Bundle de la requête, dans le même ordre, avec le résultat du traitement de l'élément.</p>
 
-<p><a name="l960">​</a>Le corps de la réponse doit être conforme au profil <a href="/IHE.MHD.ProvideDocumentBundleResponse">ProvideDocumentBundleResponse</a> (<a href="Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.json.html">exemple de contenu d'un payload</a>).</p>
+<p><a name="l963">​</a>Le corps de la réponse doit être conforme au profil <a href="/IHE.MHD.ProvideDocumentBundleResponse">ProvideDocumentBundleResponse</a> (<a href="Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.json.html">exemple de contenu d'un payload</a>).</p>
 
 <p>Ce flux sert à communiquer un succès ou un échec.
 Un succès n'est indiqué que lorsque le ou les documents sont reçus, complètement traités et conservés selon les besoins de la configuration du gestionnaire de partage de documents.</p>
@@ -441,7 +441,7 @@ Un succès n'est indiqué que lorsque le ou les documents sont reçus, complète
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 8, 2026 08:33+0000">2026-04-08</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 14, 2026 16:36+0000">2026-04-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
