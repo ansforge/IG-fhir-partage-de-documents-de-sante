@@ -2,8 +2,7 @@
 // BUNDLE PDSm ITI-65 : exemple de remplacement de document
 // ==========================================================
 
-// --- PractitionerRole minimal (contained dans DocumentReference et SubmissionSet) ---
-// Le profil as-practitionerrole requiert fr-core-practitioner-role dans meta.profile
+// --- PractitionerRole (contained dans DocumentReference et SubmissionSet) ---
 
 Instance: pr-auteur-replace
 InstanceOf: PractitionerRole
@@ -16,8 +15,6 @@ Usage: #inline
 
 
 // --- Organization (contained dans DocumentReference) ---
-// Le profil as-organization requiert fr-core-organization dans meta.profile
-// L'identifiant doit avoir le type IDNST pour correspondre au slice as-organization
 
 Instance: org-auth-replace
 InstanceOf: Organization
@@ -160,7 +157,7 @@ Usage: #inline
 Instance: doc-old
 InstanceOf: PDSm_ComprehensiveDocumentReference
 Title: "Exemple de DocumentReference existant - cible du remplacement"
-Description: "Fiche de document existante sur le serveur DMP, remplacée par le bundle d'exemple ITI-65."
+Description: "Fiche de document existante sur le serveur qui sera remplacée."
 Usage: #example
 
 * masterIdentifier.system = "urn:ietf:rfc:3986"
