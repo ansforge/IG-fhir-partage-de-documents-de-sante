@@ -48,7 +48,7 @@ ERROR: DocumentReference-PDSmSimplifiedExample.html#/html/body/div/div/div/div/d
 ERROR: DocumentReference-doc-old.html#/html/body/div/div/div/div/div/div/blockquote/p/a at Line 279, column 3801: The link 'Practitioner/practitioner-example' for "Practitioner/practitioner-example" cannot be resolved
 ERROR: DocumentReference-exemple-pdsm-documentreference.html#/html/body/div/div/div/div/div/div/p/a at Line 279, column 653: The link 'PractitionerRole/practitionerrole-example' for "PractitionerRole/practitionerrole-example" cannot be resolved
 ERROR: List-ExampleSubmissionSet.html#/html/body/div/div/div/div/div/div/p/a at Line 274, column 1531: The link 'Practitioner/practitioner-example' for "Practitioner/practitioner-example" cannot be resolved
-ERROR: st_ajout.html#/html/body/div/div/div/div/div/p/a at Line 394, column 57: The link '/IHE.MHD.ProvideDocumentBundleResponse' for "ProvideDocumentBundleResponse" cannot be resolved
+ERROR: st_ajout.html#/html/body/div/div/div/div/div/p/a at Line 392, column 57: The link '/IHE.MHD.ProvideDocumentBundleResponse' for "ProvideDocumentBundleResponse" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide

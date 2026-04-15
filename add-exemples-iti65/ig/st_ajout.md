@@ -51,10 +51,8 @@ Le bundle de remplacement contient les entrées suivantes :
 | :--- | :--- | :--- | :--- |
 | Nouveau contenu documentaire | `Binary` | `POST` | Contenu binaire du document de remplacement |
 | Nouvelle fiche | `DocumentReference` | `POST` | Fiche du nouveau document, avec`relatesTo`pointant vers l'ancien |
-| Passage de l'ancien document en superseded | `Parameters`(PATCH) | `PATCH` | Mise à jour du statut de l'ancien document à`superseded` |
+| Passage de l'ancienne fiche en superseded | `Parameters`(PATCH) | `PATCH` | Mise à jour du statut de l'ancienne fiche à`superseded` |
 | Lot de soumission | `List` | `POST` | SubmissionSet contenant uniquement la nouvelle fiche |
-
-Le patient n'est **pas** inclus dans le bundle : ses références (`subject`, `context.sourcePatientInfo`) pointent directement vers `Patient/[id]` sur le serveur.
 
 ##### Nouvelle fiche (DocumentReference)
 
@@ -71,7 +69,7 @@ L'élément `content.attachment.url` doit pointer vers la ressource `Binary` du 
 
 Conformément au profil [PDSm_ComprehensiveDocumentReference](StructureDefinition-pdsm-comprehensive-document-reference.md), l'élément `relatesTo` est obligatoire (`[1..1]`) dans le contexte d'un remplacement.
 
-##### Passage de l'ancien document en superseded
+##### Passage de l'ancienne fiche (DocumentReference) en superseded
 
 Le producteur de documents inclut dans le bundle une entrée de type `PATCH` afin de mettre à jour le statut de l'ancienne fiche. Cette entrée utilise la ressource `Parameters` conforme au profil [IHE.MHD.Patch.Parameters](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Patch.Parameters) :
 

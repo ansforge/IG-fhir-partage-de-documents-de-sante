@@ -312,10 +312,10 @@ Cette opération est réalisée en une seule transaction ITI-65.</p>
       <td>Fiche du nouveau document, avec <code class="language-plaintext highlighter-rouge">relatesTo</code> pointant vers l'ancien</td>
     </tr>
     <tr>
-      <td>Passage de l'ancien document en superseded</td>
+      <td>Passage de l'ancienne fiche en superseded</td>
       <td><code class="language-plaintext highlighter-rouge">Parameters</code> (PATCH)</td>
       <td><code class="language-plaintext highlighter-rouge">PATCH</code></td>
-      <td>Mise à jour du statut de l'ancien document à <code class="language-plaintext highlighter-rouge">superseded</code></td>
+      <td>Mise à jour du statut de l'ancienne fiche à <code class="language-plaintext highlighter-rouge">superseded</code></td>
     </tr>
     <tr>
       <td>Lot de soumission</td>
@@ -325,8 +325,6 @@ Cette opération est réalisée en une seule transaction ITI-65.</p>
     </tr>
   </tbody>
 </table>
-
-<p>Le patient n'est <strong>pas</strong> inclus dans le bundle : ses références (<code class="language-plaintext highlighter-rouge">subject</code>, <code class="language-plaintext highlighter-rouge">context.sourcePatientInfo</code>) pointent directement vers <code class="language-plaintext highlighter-rouge">Patient/[id]</code> sur le serveur.</p>
 
 <h5 id="nouvelle-fiche-documentreference">Nouvelle fiche (DocumentReference)</h5>
 
@@ -341,7 +339,7 @@ DocumentReference.status               = #current
 
 <p>Conformément au profil <a href="StructureDefinition-pdsm-comprehensive-document-reference.html">PDSm_ComprehensiveDocumentReference</a>, l'élément <code class="language-plaintext highlighter-rouge">relatesTo</code> est obligatoire (<code class="language-plaintext highlighter-rouge">[1..1]</code>) dans le contexte d'un remplacement.</p>
 
-<h5 id="passage-de-lancien-document-en-superseded">Passage de l'ancien document en superseded</h5>
+<h5 id="passage-de-lancienne-fiche-documentreference-en-superseded">Passage de l'ancienne fiche (DocumentReference) en superseded</h5>
 
 <p>Le producteur de documents inclut dans le bundle une entrée de type <code class="language-plaintext highlighter-rouge">PATCH</code> afin de mettre à jour le statut de l'ancienne fiche. Cette entrée utilise la ressource <code class="language-plaintext highlighter-rouge">Parameters</code> conforme au profil <a href="https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Patch.Parameters">IHE.MHD.Patch.Parameters</a> :</p>
 
@@ -391,7 +389,7 @@ request.url    = DocumentReference/[id-ancien]
 
 <p>Le gestionnaire de partage de documents de santé retourne un « HTTP Status code » approprié au résultat de la demande comme indiqué dans la spécification du profil MHD. Le corps de la réponse doit être un Bundle de type <code class="language-plaintext highlighter-rouge">transaction-response</code> avec un élément <code class="language-plaintext highlighter-rouge">entry</code> pour chaque ressource reçue dans le Bundle de la requête, dans le même ordre, avec le résultat du traitement de l'élément.</p>
 
-<p><a name="l963">​</a>Le corps de la réponse doit être conforme au profil <a href="/IHE.MHD.ProvideDocumentBundleResponse">ProvideDocumentBundleResponse</a> (<a href="Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.json.html">exemple de contenu d'un payload</a>).</p>
+<p><a name="l948">​</a>Le corps de la réponse doit être conforme au profil <a href="/IHE.MHD.ProvideDocumentBundleResponse">ProvideDocumentBundleResponse</a> (<a href="Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.json.html">exemple de contenu d'un payload</a>).</p>
 
 <p>Ce flux sert à communiquer un succès ou un échec.
 Un succès n'est indiqué que lorsque le ou les documents sont reçus, complètement traités et conservés selon les besoins de la configuration du gestionnaire de partage de documents.</p>
@@ -441,7 +439,7 @@ Un succès n'est indiqué que lorsque le ou les documents sont reçus, complète
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 14, 2026 16:36+0000">2026-04-14</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 15, 2026 12:53+0000">2026-04-15</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
