@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-comprehensive-d
   "name" : "PDSm_ComprehensiveDocumentReference",
   "title" : "PDSm Comprehensive DocumentReference",
   "status" : "active",
-  "date" : "2026-04-22T16:14:13+00:00",
+  "date" : "2026-04-22T16:17:14+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -268,7 +268,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-comprehensive-d
     {
       "id" : "DocumentReference.authenticator",
       "path" : "DocumentReference.authenticator",
-      "short" : "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents. Si l’auteur est un dispositif, cet attribut doit représenter l'organisation responsable de l’action effectuée par le dispositif. Dans le cas où le document est poussé par le patient, l'authenticator doit rester vide.",
+      "short" : "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents. Si l’auteur est un dispositif, cet attribut doit représenter l'organisation responsable de l’action effectuée par le dispositif. L'authenticator DOIT être renseigné, sauf dans le cas où le document est une expression personnelle du patient, auquel cas l'authenticator doit rester vide.",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole",
