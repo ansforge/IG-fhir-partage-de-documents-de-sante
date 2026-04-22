@@ -10,7 +10,7 @@ version : 1
 
 Profil: [PDSm Comprehensive DocumentReference](StructureDefinition-pdsm-comprehensive-document-reference.md)
 
-**masterIdentifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/6.5.0/NamingSystem-uri.html)/urn:uuid:12345678-abcd-1234-abcd-1234567890ab
+**masterIdentifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/6.2.0/NamingSystem-uri.html)/urn:uuid:12345678-abcd-1234-abcd-1234567890ab
 
 **status**: Current
 
@@ -39,7 +39,7 @@ Profil: [PDSm Comprehensive DocumentReference](StructureDefinition-pdsm-comprehe
 | - | **ContentType** | **Language** | **Url** | **Size** | **Hash** | **Title** | **Creation** |
 | * | application/pdf | Français (France) | [Binary: application/pdf (16 bytes base64)](Binary-6789.md) | 345678 | `2jmj7l5rSw0yVb/vlWAYkK/YBwk=` | CR Hospitalisation | 2025-04-25 09:30:00+0100 |
 
-**format**: [TRE_A11_IheFormatCode: urn:ihe:lab:xd-lab:2008](https://interop.esante.gouv.fr/terminologies/1.4.0/CodeSystem-TRE-A11-IheFormatCode.html#TRE-A11-IheFormatCode-urn.58ihe.58lab.58xd-lab.582008) (Compte rendu structuré d'examens de biologie médicale)
+**format**: [TRE_A11_IheFormatCode: urn:ihe:lab:xd-lab:2008](https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A11-IheFormatCode.html#TRE-A11-IheFormatCode-urn.58ihe.58lab.58xd-lab.582008) (Compte rendu structuré d'examens de biologie médicale)
 
 ### Contexts
 

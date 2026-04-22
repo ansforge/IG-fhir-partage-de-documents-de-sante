@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-find-documentreferences-comprehensive-response | *Version*:3.1.1 |
-| Active as of 2026-02-24 | *Computable Name*:PDSm_FindDocumentReferencesComprehensiveResponse |
+| Active as of 2026-04-22 | *Computable Name*:PDSm_FindDocumentReferencesComprehensiveResponse |
 
  
 Profil de réponse de la transaction IHE "Find Document References [ITI-67]" basée sur le bundle MHD FindDocumentReferencesComprehensiveResponseMessage 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-find-documentre
   "name" : "PDSm_FindDocumentReferencesComprehensiveResponse",
   "title" : "PDSm Find DocumentReferences Comprehensive Response",
   "status" : "active",
-  "date" : "2026-02-24T15:04:42+00:00",
+  "date" : "2026-04-22T16:14:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
