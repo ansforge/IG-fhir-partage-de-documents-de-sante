@@ -40,6 +40,9 @@ Description: "Profil contenant les métadonnées du document ainsi que le lien v
 * subject MS
 * subject ^short = "Référence vers le patient concerné par le document. Cette même ressource est référencée depuis context.sourcePatientInfo."
 
+* custodian 1..
+* custodian ^short = "Organisme responsable de la gestion du document. Information transmise dans le VIHF."
+
 * date MS
 * date ^short = "Représente la date de création de la ressource DocumentReference dans FHIR"
 
