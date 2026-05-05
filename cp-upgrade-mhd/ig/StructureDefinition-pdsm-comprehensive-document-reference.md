@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-comprehensive-d
   "name" : "PDSm_ComprehensiveDocumentReference",
   "title" : "PDSm Comprehensive DocumentReference",
   "status" : "active",
-  "date" : "2026-05-05T15:39:30+00:00",
+  "date" : "2026-05-05T15:54:06+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -65,6 +65,11 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-comprehensive-d
   "mapping" : [{
     "identity" : "specmetier-to-PDSmComprehensiveDocumentReference",
     "name" : "Spécification métier vers le profil PDSm_ComprehensiveDocumentReference"
+  },
+  {
+    "identity" : "DocumentEntry-Mapping",
+    "uri" : "urn:ihe:iti:xds:documententry",
+    "name" : "XDS and MHD Mapping"
   },
   {
     "identity" : "workflow",
@@ -100,11 +105,6 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-comprehensive-d
     "identity" : "xds",
     "uri" : "http://ihe.net/xds",
     "name" : "XDS metadata equivalent"
-  },
-  {
-    "identity" : "DocumentEntry-Mapping",
-    "uri" : "XDS",
-    "name" : "XDS and MHD Mapping"
   }],
   "kind" : "resource",
   "abstract" : false,

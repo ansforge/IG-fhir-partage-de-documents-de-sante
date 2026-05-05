@@ -22,7 +22,7 @@ note
 Classeur regroupant les documents liés à l’intervention chirurgicale d’appendicectomie et au suivi post-opératoire du patient.
 
 
-* **Éléments**: [DocumentReference : masterIdentifier = UUID:12345678-abcd-1234-abcd-1234567890ab; status = current; type = Résumé de sortie d’hospitalisation; category = Compte-rendu; date = 2025-04-29 12:00:00+0100; description = Compte rendu d’hospitalisation suite à une chirurgie.; securityLabel = Normal](DocumentReference-exemple-pdsm-documentreference.md)
+* **Éléments**: [DocumentReference : masterIdentifier = UUID:12345678-abcd-1234-abcd-1234567890ab (use: usual, ); status = current; type = Résumé de sortie d’hospitalisation; category = Compte-rendu; date = 2025-04-29 12:00:00+0100; description = Compte rendu d’hospitalisation suite à une chirurgie.; securityLabel = Normal](DocumentReference-exemple-pdsm-documentreference.md)
 
 
 
@@ -46,12 +46,14 @@ Classeur regroupant les documents liés à l’intervention chirurgicale d’app
     }
   }],
   "identifier" : [{
-    "system" : "urn:ietf:rfc:3986",
-    "value" : "urn:uuid:77777777-dddd-eeee-ffff-888888888888"
-  },
-  {
+    "use" : "usual",
     "system" : "urn:ietf:rfc:3986",
     "value" : "urn:uuid:55555555-aaaa-bbbb-cccc-666666666666"
+  },
+  {
+    "use" : "official",
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:uuid:77777777-dddd-eeee-ffff-888888888888"
   }],
   "status" : "current",
   "mode" : "working",

@@ -10,7 +10,7 @@ version : 1
 
 Profil: [PDSm Comprehensive DocumentReference](StructureDefinition-pdsm-comprehensive-document-reference.md)
 
-**masterIdentifier**: [URI](http://terminology.hl7.org/5.0.0/NamingSystem-uri.html)/urn:uuid:12345678-abcd-1234-abcd-1234567890ab
+**masterIdentifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/6.2.0/NamingSystem-uri.html)/urn:uuid:12345678-abcd-1234-abcd-1234567890ab (utilisation : usual, )
 
 **status**: Current
 
@@ -198,6 +198,7 @@ Profils: [FR Core Practitioner Profile](https://hl7.fr/ig/fhir/core/2.1.0/Struct
     }]
   }],
   "masterIdentifier" : {
+    "use" : "usual",
     "system" : "urn:ietf:rfc:3986",
     "value" : "urn:uuid:12345678-abcd-1234-abcd-1234567890ab"
   },

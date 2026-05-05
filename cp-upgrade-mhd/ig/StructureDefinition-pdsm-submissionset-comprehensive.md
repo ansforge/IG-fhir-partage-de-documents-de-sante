@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-submissionset-c
   "name" : "PDSm_SubmissionSetComprehensive",
   "title" : "PDSm SubmissionSet Comprehensive",
   "status" : "active",
-  "date" : "2026-05-05T15:39:30+00:00",
+  "date" : "2026-05-05T15:54:06+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -66,6 +66,11 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-submissionset-c
     "name" : "Spécification métier vers le profil PDSm_SubmissionSetComprehensive"
   },
   {
+    "identity" : "SubmissionSet-Mapping",
+    "uri" : "urn:ihe:iti:xds:submissionset",
+    "name" : "XDS and MHD Mapping"
+  },
+  {
     "identity" : "rim",
     "uri" : "http://hl7.org/v3",
     "name" : "RIM Mapping"
@@ -74,11 +79,6 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-submissionset-c
     "identity" : "w5",
     "uri" : "http://hl7.org/fhir/fivews",
     "name" : "FiveWs Pattern Mapping"
-  },
-  {
-    "identity" : "SubmissionSet-Mapping",
-    "uri" : "XDS",
-    "name" : "XDS and MHD Mapping"
   }],
   "kind" : "resource",
   "abstract" : false,
@@ -180,7 +180,6 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-submissionset-c
       "path" : "List.identifier",
       "sliceName" : "uniqueId",
       "short" : "IdUnique : Identifiant unique global affecté à ce lot de soumission par son créateur. Cet attribut est utilisé à des fins de références externes alors que idLotSoumission est destiné à des fins de gestion interne.",
-      "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-PDSmSubmissionSetComprehensive",
         "map" : "idUnique : [0..1] Identifiant"
@@ -191,7 +190,6 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-submissionset-c
       "path" : "List.identifier",
       "sliceName" : "entryUUID",
       "short" : "idLotSoumission : Identifiant unique du lot de soumission. Cet attribut est destiné à des fins de gestion interne alors que idUnique est utilisé à des fins de références externes.",
-      "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-PDSmSubmissionSetComprehensive",
         "map" : "idLotSoumission : [0..*] Identifiant"
