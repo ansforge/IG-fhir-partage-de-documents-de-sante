@@ -19,6 +19,8 @@ Usage: #example
 
 * date = "2025-04-29T12:00:00+01:00"
 
+* custodian = Reference(org-example)
+
 * author = Reference(practitionerrole-example)
 
 * authenticator = Reference(org-example)
