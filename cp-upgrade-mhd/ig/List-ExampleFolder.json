@@ -1,0 +1,51 @@
+{
+  "resourceType" : "List",
+  "id" : "ExampleFolder",
+  "meta" : {
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-folder-comprehensive"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Liste ExampleFolder</b></p><a name=\"ExampleFolder\"> </a><a name=\"hcExampleFolder\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-pdsm-folder-comprehensive.html\">PDSm Folder Comprehensive</a></p></div><h2>Classeur de suivi diabète</h2><table class=\"clstu\"><tr><td>Date : 2025-04-28 10:30:00+0100 </td><td>Mode : Working List </td><td>Statut : Current </td><td>Code : Folder </td></tr><tr><td>Sujet : <a href=\"Patient-fr-patient-123.html\">Martin Claire  Male, Date de Naissance :1980-01-15</a></td></tr></table><p>note</p><blockquote><div><p>Classeur regroupant les documents liés à l’intervention chirurgicale d’appendicectomie et au suivi post-opératoire du patient.</p>\n</div></blockquote><table class=\"grid\"><tr style=\"backgound-color: #eeeeee\"><td><b>Éléments</b></td></tr><tr><td><a href=\"DocumentReference-exemple-pdsm-documentreference.html\">DocumentReference : masterIdentifier = UUID:12345678-abcd-1234-abcd-1234567890ab; status = current; type = Résumé de sortie d’hospitalisation; category = Compte-rendu; date = 2025-04-29 12:00:00+0100; description = Compte rendu d’hospitalisation suite à une chirurgie.; securityLabel = Normal</a></td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-designationType",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "80146002",
+        "display" : "Appendectomy (procedure)"
+      }]
+    }
+  }],
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:uuid:77777777-dddd-eeee-ffff-888888888888"
+  },
+  {
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:uuid:55555555-aaaa-bbbb-cccc-666666666666"
+  }],
+  "status" : "current",
+  "mode" : "working",
+  "title" : "Classeur de suivi diabète",
+  "code" : {
+    "coding" : [{
+      "system" : "https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes",
+      "code" : "folder",
+      "display" : "Folder"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/fr-patient-123"
+  },
+  "date" : "2025-04-28T10:30:00+01:00",
+  "note" : [{
+    "text" : "Classeur regroupant les documents liés à l’intervention chirurgicale d’appendicectomie et au suivi post-opératoire du patient."
+  }],
+  "entry" : [{
+    "item" : {
+      "reference" : "DocumentReference/exemple-pdsm-documentreference"
+    }
+  }]
+}
