@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-comprehensive-d
   "name" : "PDSm_ComprehensiveDocumentReference",
   "title" : "PDSm Comprehensive DocumentReference",
   "status" : "active",
-  "date" : "2026-05-05T15:58:57+00:00",
+  "date" : "2026-05-05T16:17:29+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -281,6 +281,12 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-comprehensive-d
         "identity" : "specmetier-to-PDSmComprehensiveDocumentReference",
         "map" : "authentificateur : [1..1] Identifiant"
       }]
+    },
+    {
+      "id" : "DocumentReference.custodian",
+      "path" : "DocumentReference.custodian",
+      "short" : "Organisme responsable de la gestion du document. Information transmise dans le VIHF.",
+      "min" : 1
     },
     {
       "id" : "DocumentReference.relatesTo",
