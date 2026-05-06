@@ -26,6 +26,8 @@ Profil: [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-si
 
 **authenticator**: [PractitionerRole/practitionerrole-example](PractitionerRole/practitionerrole-example)
 
+**custodian**: [Organization HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G](Organization-org-example.md)
+
 **description**: Note d'évolution suite à une consultation de suivi.
 
 > **content**
@@ -86,6 +88,9 @@ Profil: [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-si
   }],
   "authenticator" : {
     "reference" : "PractitionerRole/practitionerrole-example"
+  },
+  "custodian" : {
+    "reference" : "Organization/org-example"
   },
   "description" : "Note d'évolution suite à une consultation de suivi.",
   "content" : [{

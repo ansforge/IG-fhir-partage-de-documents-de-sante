@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish | *Version*:3.1.1 |
-| Active as of 2026-05-05 | *Computable Name*:PDSm_SimplifiedPublish |
+| Active as of 2026-05-06 | *Computable Name*:PDSm_SimplifiedPublish |
 
  
 Profil utilisé dans le cadre du flux 9 d'ajout simplifié de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105. 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-simplified-publ
   "name" : "PDSm_SimplifiedPublish",
   "title" : "PDSm Simplified Publish Document Reference",
   "status" : "active",
-  "date" : "2026-05-05T16:17:29+00:00",
+  "date" : "2026-05-06T12:21:18+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -197,6 +197,12 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-simplified-publ
         "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-organization"]
       }],
       "mustSupport" : true
+    },
+    {
+      "id" : "DocumentReference.custodian",
+      "path" : "DocumentReference.custodian",
+      "short" : "Organisme responsable de la gestion du document. Information transmise dans le VIHF.",
+      "min" : 1
     },
     {
       "id" : "DocumentReference.description",
