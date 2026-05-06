@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm | *Version*:3.1.1 |
-| Active as of 2026-03-04 | *Computable Name*:PDSm |
+| Active as of 2026-05-06 | *Computable Name*:PDSm |
 
  **PDSm Implementation Guide**
  This document presents the technical specifications of the “Partage de documents de santé en mobilité” section. This is a part of the service layer specifying the terms of document sharing without constraining them. The specifications related to health documents constitute the components of the business layer of CI-SIS. 
@@ -100,7 +100,6 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
 
 
 
-
 ## Resource Content
 
 ```json
@@ -112,7 +111,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-03-04T16:46:41+00:00",
+  "date" : "2026-05-06T07:19:11+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -139,7 +138,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.0.1"
+    "version" : "7.1.0"
   },
   {
     "id" : "hl7ext",
@@ -155,7 +154,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
     "id" : "ihe_iti_mhd",
     "uri" : "https://profiles.ihe.net/ITI/MHD/ImplementationGuide/ihe.iti.mhd",
     "packageId" : "ihe.iti.mhd",
-    "version" : "4.2.0"
+    "version" : "4.2.3"
   },
   {
     "id" : "ans_fhir_fr_annuaire",
@@ -464,7 +463,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools.r4#0.9.0"
+      "valueCode" : "hl7.fhir.uv.tools.r4#1.1.2"
     },
     {
       "extension" : [{

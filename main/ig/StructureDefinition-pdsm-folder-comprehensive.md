@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-folder-comprehensive | *Version*:3.1.1 |
-| Active as of 2026-03-04 | *Computable Name*:PDSm_FolderComprehensive |
+| Active as of 2026-05-06 | *Computable Name*:PDSm_FolderComprehensive |
 
  
 Profil du Classeur dérivé de la ressource List et du profil IHE MHD « Comprehensive Folder ». 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-folder-comprehe
   "name" : "PDSm_FolderComprehensive",
   "title" : "PDSm Folder Comprehensive",
   "status" : "active",
-  "date" : "2026-03-04T16:46:41+00:00",
+  "date" : "2026-05-06T07:19:11+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -66,6 +66,11 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-folder-comprehe
     "name" : "Spécification métier vers le profil PDSm_FolderComprehensive"
   },
   {
+    "identity" : "Folder-Mapping",
+    "uri" : "urn:ihe:iti:xds:folder",
+    "name" : "XDS and MHD Mapping"
+  },
+  {
     "identity" : "rim",
     "uri" : "http://hl7.org/v3",
     "name" : "RIM Mapping"
@@ -74,11 +79,6 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-folder-comprehe
     "identity" : "w5",
     "uri" : "http://hl7.org/fhir/fivews",
     "name" : "FiveWs Pattern Mapping"
-  },
-  {
-    "identity" : "Folder-Mapping",
-    "uri" : "XDS",
-    "name" : "XDS and MHD Mapping"
   }],
   "kind" : "resource",
   "abstract" : false,
@@ -110,7 +110,6 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-folder-comprehe
       "path" : "List.identifier",
       "sliceName" : "uniqueId",
       "short" : "Identifiant unique du classeur attribué par le système initiateur.",
-      "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-PDSmFolderComprehensive",
         "map" : "idUnique : [0..*] Identifiant"
@@ -120,8 +119,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-folder-comprehe
       "id" : "List.identifier:entryUUID",
       "path" : "List.identifier",
       "sliceName" : "entryUUID",
-      "short" : "Identifiant attribué par le système cible.",
-      "mustSupport" : true
+      "short" : "Identifiant attribué par le système cible."
     },
     {
       "id" : "List.status",

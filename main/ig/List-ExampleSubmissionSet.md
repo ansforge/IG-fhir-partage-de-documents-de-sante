@@ -22,7 +22,7 @@ note
 Suivi post-chirurgical – documents cliniques regroupés.
 
 
-* **Éléments**: [DocumentReference : masterIdentifier = UUID:12345678-abcd-1234-abcd-1234567890ab; status = current; type = Résumé de sortie d’hospitalisation; category = Compte-rendu; date = 2025-04-29 12:00:00+0100; description = Compte rendu d’hospitalisation suite à une chirurgie.; securityLabel = Normal](DocumentReference-exemple-pdsm-documentreference.md)
+* **Éléments**: [DocumentReference : masterIdentifier = UUID:12345678-abcd-1234-abcd-1234567890ab (use: usual, ); status = current; type = Résumé de sortie d’hospitalisation; category = Compte-rendu; date = 2025-04-29 12:00:00+0100; description = Compte rendu d’hospitalisation suite à une chirurgie.; securityLabel = Normal](DocumentReference-exemple-pdsm-documentreference.md)
 
 -------
 
@@ -206,10 +206,12 @@ Profils: [FR Core Organization Profile](https://hl7.fr/ig/fhir/core/2.1.0/Struct
     }
   }],
   "identifier" : [{
+    "use" : "usual",
     "system" : "urn:ietf:rfc:3986",
     "value" : "urn:uuid:11111111-aaaa-bbbb-cccc-222222222222"
   },
   {
+    "use" : "official",
     "system" : "urn:ietf:rfc:3986",
     "value" : "urn:uuid:33333333-dddd-eeee-ffff-444444444444"
   }],

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-archived | *Version*:3.1.1 |
-| Active as of 2026-03-04 | *Computable Name*:PDSm_IsArchived |
+| Active as of 2026-05-06 | *Computable Name*:PDSm_IsArchived |
 
 Extension définie par le volet ANS "Volet Partage de documents de santé en mobilité" sur les ressources List et DocumentReference pour distinguer les lots de soumission et les fiches archivés des actives.
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-ext-is-archived
   "name" : "PDSm_IsArchived",
   "title" : "PDSm_isArchived",
   "status" : "active",
-  "date" : "2026-03-04T16:46:41+00:00",
+  "date" : "2026-05-06T07:19:11+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
