@@ -36,6 +36,7 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 * subject only Reference(FRCorePatientProfile) 
 
 * date MS
+* date 1..
 * date ^short = "Représente la date de création de la ressource DocumentReference dans FHIR"
 
 * author MS
