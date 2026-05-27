@@ -39,7 +39,7 @@ pages:
     construction_des_flux.md:
         title: Spécifications techniques - vue d'ensemble
         st_ajout.md:
-            title: Ajout d'un lot de documents (ITI-65)
+            title: Ajout et remplacement de documents (ITI-65)
         st_maj.md:
             title: Mise à jour de documents
         st_recherche_lot.md:
@@ -71,7 +71,7 @@ menu:
         Consultation de documents: sf_consultation.html
     Volume 2 - Détail des transactions:
         Vue d'ensemble: construction_des_flux.html
-        Ajout d'un lot de soumission (ITI-65): st_ajout.html 
+        Ajout et remplacement de documents (ITI-65): st_ajout.html
         Mise à jour des métadonnées d'un document: st_maj.html
         Recherche de lot de soumission (ITI-66): st_recherche_lot.html
         Recherche de fiche (ITI-67): st_recherche_fiche.html
