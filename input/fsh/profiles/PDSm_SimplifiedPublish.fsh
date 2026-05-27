@@ -45,8 +45,7 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 
 
 * authenticator MS
-* authenticator 0..1
-* authenticator ^short = "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents. Si l’auteur est un dispositif, cet attribut doit représenter la personne responsable de l’action effectuée par le dispositif."
+* authenticator ^short = "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents."
 * authenticator only Reference(AsPractitionerRoleProfile or AsOrganizationProfile)
 
 * description MS

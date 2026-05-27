@@ -48,8 +48,8 @@ Description: "Profil contenant les métadonnées du document ainsi que le lien v
 * author 1..
 * author only Reference(AsPractitionerRoleProfile or Device or FRCorePatientProfile)
 
-* authenticator MS // Authenticator contained dans le profil MHD
-* authenticator ^short = "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents. Si l’auteur est un dispositif, cet attribut doit représenter l'organisation responsable de l’action effectuée par le dispositif. L'authenticator DOIT être renseigné, sauf dans le cas où le document est une expression personnelle du patient, auquel cas l'authenticator doit rester vide." 
+* authenticator MS
+* authenticator ^short = "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents."
 * authenticator only Reference(AsPractitionerRoleProfile or AsOrganizationProfile)
 
 * relatesTo MS
