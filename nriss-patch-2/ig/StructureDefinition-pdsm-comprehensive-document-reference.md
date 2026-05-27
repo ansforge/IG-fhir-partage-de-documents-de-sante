@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-comprehensive-d
   "name" : "PDSm_ComprehensiveDocumentReference",
   "title" : "PDSm Comprehensive DocumentReference",
   "status" : "active",
-  "date" : "2026-05-27T14:01:46+00:00",
+  "date" : "2026-05-27T14:12:51+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -255,7 +255,8 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-comprehensive-d
       "min" : 1,
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole",
+        "targetProfile" : ["https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitioner",
+        "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole",
         "http://hl7.org/fhir/StructureDefinition/Device",
         "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"],
         "aggregation" : ["contained"]
@@ -271,7 +272,8 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-comprehensive-d
       "short" : "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents.",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole",
+        "targetProfile" : ["https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitioner",
+        "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole",
         "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-organization"],
         "aggregation" : ["contained"]
       }],
