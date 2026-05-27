@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-document-reference | *Version*:3.1.1 |
-| Active as of 2026-05-06 | *Computable Name*:PDSm_ComprehensiveDocumentReference |
+| Active as of 2026-05-27 | *Computable Name*:PDSm_ComprehensiveDocumentReference |
 
  
 Profil contenant les métadonnées du document ainsi que le lien vers la ressource Binary contenant le document dérivé de la ressource DocumentReference et du profil IHE MHD v4.0.1 "ComprehensiveDocumentReference" 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-comprehensive-d
   "name" : "PDSm_ComprehensiveDocumentReference",
   "title" : "PDSm Comprehensive DocumentReference",
   "status" : "active",
-  "date" : "2026-05-06T07:19:11+00:00",
+  "date" : "2026-05-27T14:14:06+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -255,7 +255,8 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-comprehensive-d
       "min" : 1,
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole",
+        "targetProfile" : ["https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitioner",
+        "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole",
         "http://hl7.org/fhir/StructureDefinition/Device",
         "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"],
         "aggregation" : ["contained"]
@@ -268,11 +269,11 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-comprehensive-d
     {
       "id" : "DocumentReference.authenticator",
       "path" : "DocumentReference.authenticator",
-      "short" : "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents. Si l’auteur est un dispositif, cet attribut doit représenter la personne responsable de l’action effectuée par le dispositif. Pour les documents d’expression personnelle du patient, cet attribut fait référence au patient.",
-      "min" : 1,
+      "short" : "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents.",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole",
+        "targetProfile" : ["https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitioner",
+        "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole",
         "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-organization"],
         "aggregation" : ["contained"]
       }],

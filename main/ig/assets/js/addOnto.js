@@ -1,4 +1,4 @@
-var url = new URL($('#newissue').attr('href'));
+const url = new URL($('#newissue').attr('href'));
 url.searchParams.set('title', $('#idValue').val() );
 $('#newissue').attr('href',url)
 
@@ -20,10 +20,10 @@ $(document).ready(function(){
         .done((data) => {
     
           if (data.items != null) {   
-            $('#divDemande').html('<div id="demande"><table class="grid table table-bordered"> <thead> <tr> <td> </td> <td>Titre</td>        <td>Auteur</td>        <td>Date</td>    </tr></thead>    <tbody id="idDemande"> </tbody> </table>  </div>	      	      ');
+            $('#divDemande').html('<div id="demande"><table class="grid table table-bordered"> <thead> <tr> <td> </td> <td>Titre</td>        <td>Auteur</td>        <td>Date</td>    </tr></thead>    <tbody id="idDemande"> </tbody> </table>  </div>                ');
 
             $.each(data.items, function (i, obj) { 
-            var content = '<tr>' ;
+            let content = '<tr>' ;
             content += '<td>'+  obj.state +'</td><td><a  target="_blank"  href="https://github.com/ansforge/IG-terminologie-de-sante/issues/'+ obj.number  +'"> ' + obj.title +'</a></td><td>' + obj.user.login + '</td><td>' + obj.created_at  + '</td>';
             content += '</tr>';
             $('#idDemande').append(content);
@@ -56,7 +56,7 @@ $(document).ready(function(){
 
 
     if ( $("#divHistoire").length ) {
-    $('#divHistoire').html('<div id="histoire"><table class="grid table table-bordered"> <thead> <tr> <td>Histoire</td> <td>Version</td>        <td>Demande</td>       <td>Resultat</td> <td>Date</td>    </tr></thead>    <tbody id="idHistoire"> </tbody> </table>  </div>	      	      ');
+    $('#divHistoire').html('<div id="histoire"><table class="grid table table-bordered"> <thead> <tr> <td>Histoire</td> <td>Version</td>        <td>Demande</td>       <td>Resultat</td> <td>Date</td>    </tr></thead>    <tbody id="idHistoire"> </tbody> </table>  </div>                  ');
     
     
     $.ajax({
@@ -69,13 +69,13 @@ $(document).ready(function(){
     
           if (data.entry != null) {   
             $.each(data.entry, function (i, obj) { 
-            var content = '<tr>' ;
+            let content = '<tr>' ;
             content += '<td style="background-color: #C5C8DA;color:white">'+  obj.resource.meta.versionId +'</td><td  style="background-color: #C5C8DA;color:white">' + obj.resource.version +'</td><td style="background-color: #C5C8DA;color:white">' + obj.request.method  +'</td><td style="background-color: #C5C8DA;color:white"> ' + obj.response.status  + '</td><td style="background-color: #C5C8DA;color:white"> '+ obj.response.lastModified  +'</td>';
             content += '</tr>';
             $('#idHistoire').append(content);
             
             
-            content ='<tr><td colspan="5"><table style="font-size:10px;width:100%" class="table-striped"><tr><tr><td  style="background-color: #697097;color:white">Operation</td><td  style="background-color: #697097;color:white">Chemin</td  style="background-color: #697097;color:white"><td style="background-color: #697097;color:white">Nom</td><td  style="background-color: #697097;color:white">Valeur</td> <td  style="background-color: #697097;color:white">Précédent</td></tr><tbody id="histoire'+ obj.resource.meta.versionId + '"></tbody></tr></table></td></tr>';		
+            content ='<tr><td colspan="5"><table style="font-size:10px;width:100%" class="table-striped"><tr><tr><td  style="background-color: #697097;color:white">Operation</td><td  style="background-color: #697097;color:white">Chemin</td  style="background-color: #697097;color:white"><td style="background-color: #697097;color:white">Nom</td><td  style="background-color: #697097;color:white">Valeur</td> <td  style="background-color: #697097;color:white">Précédent</td></tr><tbody id="histoire'+ obj.resource.meta.versionId + '"></tbody></tr></table></td></tr>';      
             console.log("https://smt.esante.gouv.fr/fhir/" + obj.id  +  "/$diff");   
             $('#idHistoire').append(content);          
                 $.ajax({
@@ -87,11 +87,11 @@ $(document).ready(function(){
                 .done((data) => {
                   if (data.parameter != null) {   
                     $.each(data.parameter, function (i, obj2) { 
-                        var operation = "";
-                        var chemin  = "";
-                        var nom  = "";
-                        var precedent ="";
-                        var valeur ="";
+                        let operation = "";
+                        let chemin  = "";
+                        let nom  = "";
+                        let precedent ="";
+                        let valeur ="";
                         $.each(obj2.part, function (ipart, objPart) { 
                             if(Object.values(objPart)[0] == "type")
                                 operation = Object.values(objPart)[1];
@@ -110,7 +110,7 @@ $(document).ready(function(){
     
                     });
                  }   
-                });		
+                });     
     
             });
     
@@ -141,8 +141,8 @@ $(document).ready(function(){
     
         
         $("#terminologit-search-content-valueset-cld").addClass("accordion-group");
-        //$("#terminologit-search-content-valueset-cld").attr("id","logical-definition-accordion-group");
-        var logicalDefHeading = $("#terminologit-search-content-valueset-cld").find("#logical-definition-cld");
+        
+        const logicalDefHeading = $("#terminologit-search-content-valueset-cld").find("#logical-definition-cld");
         $(logicalDefHeading).addClass("accordion-heading");
         $(logicalDefHeading).append('<a class="accordion-toggle" data-toggle="collapse" href="#logical-definition-cld-collapse"><i class="gg-chevron-down"></i></a>');
         $(logicalDefHeading).next().addClass("accordion-body collapse in");
@@ -155,7 +155,7 @@ $(document).ready(function(){
         });
     
         
-         $(window).scroll(function () {
+         $(globalThis).scroll(function () {
                 if ($(this).scrollTop() > 50) {
                     $('#back-to-top').fadeIn();
                 } else {
@@ -177,7 +177,6 @@ $(document).ready(function(){
     $('#ontoSearch').on( "change", function() {
       $('#resultOnto').html("Recherche ...");
       $('#counterOnto').html("");
-      resultOnto      
       $.ajax({
         type: 'get',
         url: "https://smt.esante.gouv.fr/fhir//ValueSet/" + $('#idValue').val() + "/$expand?_format=json&filter=" + $('#ontoSearch').val(),
@@ -190,7 +189,7 @@ $(document).ready(function(){
           if (data.expansion.contains != null) {   
             $('#resultOnto').html('<table  class="codes table table-bordered  table-striped"><thead><tr><th><b>Code</b></th><th><b>System</b></th><th><b>Display</b></th></tr></thead><tbody id="bodyOntoTable"></tbody></table>');
             $.each(data.expansion.contains, function (i, obj) { 
-            var content = '<tr>' ;
+            let content = '<tr>' ;
             content += '<td  >' + obj.code +'</td><td  >' + obj.system+'</td><td  >' + obj.display+'</td>';
             content += '</tr>';
              $('#bodyOntoTable').append(content);
@@ -211,17 +210,16 @@ $(document).ready(function(){
       if($(this).find("tr").length ==1) {
         $(this).parent().hide();
     }
-        $('<div class="form-group pull-right"> <input type="text"  style="height:auto;font-size:12px" class="search' + indextable +' form-control" placeholder="Recherche">  <span class="counter' + indextable + ' "></span></div>').insertBefore($(this));	
-        firstTr = $(this).find('tr:first').remove()
+        $('<div class="form-group pull-right"> <input type="text"  style="height:auto;font-size:12px" class="search' + indextable +' form-control" placeholder="Recherche">  <span class="counter' + indextable + ' "></span></div>').insertBefore($(this));    
+        const firstTr = $(this).find('tr:first').remove()
         firstTr.find('td').contents().unwrap().wrap('<th>')
         $(this).prepend($('<thead></thead>').append(firstTr))
         $(this).addClass("results"+indextable); 
           $(this).addClass("table-striped");
     
       $(".search"+indextable).keyup(function () {
-        var searchTerm = $(".search"+indextable).val();
-        var listItem = $('.results'+indextable +' tbody').children('tr');
-        var searchSplit = searchTerm.replace(/ /g, "'):containsi('")
+        const searchTerm = $(".search"+indextable).val();
+        const searchSplit = searchTerm.replaceAll(" ", "'):containsi('")
         
       $.extend($.expr[':'], {'containsi': function(elem, i, match, array){
             return (elem.textContent || elem.innerText || '').toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
@@ -254,8 +252,8 @@ $(document).ready(function(){
       if($(this).find("tr").length ==1) {
         $(this).parent().hide();
     }
-        $('<div class="form-group pull-right"> <input type="text"  style="height:auto;font-size:12px" class="search' + indextable +' form-control" placeholder="Recherche">  <span class="counter' + indextable + ' "></span></div>').insertBefore($(this));	
-        firstTr = $(this).find('tr:first').remove()
+        $('<div class="form-group pull-right"> <input type="text"  style="height:auto;font-size:12px" class="search' + indextable +' form-control" placeholder="Recherche">  <span class="counter' + indextable + ' "></span></div>').insertBefore($(this));    
+        const firstTr = $(this).find('tr:first').remove()
         firstTr.find('td').contents().unwrap().wrap('<th>')
         $(this).prepend($('<thead></thead>').append(firstTr))
         $(this).addClass("results"+indextable); 

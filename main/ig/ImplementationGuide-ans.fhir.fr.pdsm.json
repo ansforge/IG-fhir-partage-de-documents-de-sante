@@ -10,7 +10,7 @@
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-05-06T07:19:11+00:00",
+  "date" : "2026-05-27T14:14:06+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -47,7 +47,7 @@
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.2.0"
+    "version" : "5.3.0"
   },
   {
     "id" : "ihe_iti_mhd",
@@ -71,7 +71,7 @@
     "id" : "ans_fr_terminologies",
     "uri" : "https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies",
     "packageId" : "ans.fr.terminologies",
-    "version" : "1.7.0"
+    "version" : "1.9.2"
   }],
   "definition" : {
     "extension" : [{
