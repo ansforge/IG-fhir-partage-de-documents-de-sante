@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm | *Version*:3.1.1 |
-| Active as of 2026-04-22 | *Computable Name*:PDSm |
+| Active as of 2026-05-27 | *Computable Name*:PDSm |
 
  **PDSm Implementation Guide**
  This document presents the technical specifications of the “Partage de documents de santé en mobilité” section. This is a part of the service layer specifying the terms of document sharing without constraining them. The specifications related to health documents constitute the components of the business layer of CI-SIS. 
@@ -101,6 +101,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
 
 
 
+
 ## Resource Content
 
 ```json
@@ -112,7 +113,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-04-22T16:17:14+00:00",
+  "date" : "2026-05-27T14:01:46+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -149,7 +150,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.2.0"
+    "version" : "5.3.0"
   },
   {
     "id" : "ihe_iti_mhd",
@@ -173,7 +174,7 @@ Une [mise en équivalence](equivalences.md) entre les acteurs et les flux identi
     "id" : "ans_fr_terminologies",
     "uri" : "https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies",
     "packageId" : "ans.fr.terminologies",
-    "version" : "1.7.0"
+    "version" : "1.9.2"
   }],
   "definition" : {
     "extension" : [{

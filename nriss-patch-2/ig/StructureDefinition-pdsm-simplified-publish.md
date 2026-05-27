@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish | *Version*:3.1.1 |
-| Active as of 2026-04-22 | *Computable Name*:PDSm_SimplifiedPublish |
+| Active as of 2026-05-27 | *Computable Name*:PDSm_SimplifiedPublish |
 
  
 Profil utilisé dans le cadre du flux 9 d'ajout simplifié de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105. 
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-simplified-publ
   "name" : "PDSm_SimplifiedPublish",
   "title" : "PDSm Simplified Publish Document Reference",
   "status" : "active",
-  "date" : "2026-04-22T16:17:14+00:00",
+  "date" : "2026-05-27T14:01:46+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -190,7 +190,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-simplified-publ
     {
       "id" : "DocumentReference.authenticator",
       "path" : "DocumentReference.authenticator",
-      "short" : "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents. Si l’auteur est un dispositif, cet attribut doit représenter la personne responsable de l’action effectuée par le dispositif.",
+      "short" : "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents.",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole",
