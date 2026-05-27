@@ -32,7 +32,7 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 * category obeys constr-bind-category
 
 * custodian 1..
-* custodian ^short = "Organisme responsable de la gestion du document. Information transmise dans le VIHF."
+* custodian ^short = "Organisme responsable de la gestion du document. Dans le cadre XDS, il s'agit d'une information transmise dans le VIHF."
 
 * subject 1..1
 * subject ^short = "Patient concerné par ce document. La ressource référencée peut être présente sous l’élément DocumentReference.contained ou via le champ identifier."
