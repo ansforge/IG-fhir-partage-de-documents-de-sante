@@ -42,6 +42,7 @@ Description: "Profil contenant les métadonnées du document ainsi que le lien v
 
 * date MS
 * date ^short = "Représente la date de création de la ressource DocumentReference dans FHIR"
+* date 1..
 
 * author MS // Author contained dans le profil MHD
 * author ^short = "Personnes physiques ou morales et/ou les dispositifs auteurs d'un document."
