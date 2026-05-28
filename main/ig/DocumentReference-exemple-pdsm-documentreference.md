@@ -10,7 +10,7 @@ version : 1
 
 Profil: [PDSm Comprehensive DocumentReference](StructureDefinition-pdsm-comprehensive-document-reference.md)
 
-**masterIdentifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/5.5.0/NamingSystem-uri.html)/urn:uuid:12345678-abcd-1234-abcd-1234567890ab (utilisation : usual, )
+**masterIdentifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/6.2.0/NamingSystem-uri.html)/urn:uuid:12345678-abcd-1234-abcd-1234567890ab (utilisation : usual, )
 
 **status**: Current
 
@@ -25,6 +25,8 @@ Profil: [PDSm Comprehensive DocumentReference](StructureDefinition-pdsm-comprehe
 **author**: [PractitionerRole/practitionerrole-example](PractitionerRole/practitionerrole-example)
 
 **authenticator**: [Organization HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G](Organization-org-example.md)
+
+**custodian**: [Organization HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G](Organization-org-example.md)
 
 **description**: Compte rendu d’hospitalisation suite à une chirurgie.
 
@@ -225,6 +227,9 @@ Profils: [FR Core Practitioner Profile](https://hl7.fr/ig/fhir/core/2.1.0/Struct
     "reference" : "PractitionerRole/practitionerrole-example"
   }],
   "authenticator" : {
+    "reference" : "Organization/org-example"
+  },
+  "custodian" : {
     "reference" : "Organization/org-example"
   },
   "description" : "Compte rendu d’hospitalisation suite à une chirurgie.",

@@ -10,7 +10,7 @@ version : 1
 
 Profil: [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-simplified-publish.md)
 
-**masterIdentifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/5.5.0/NamingSystem-uri.html)/urn:uuid:abcd-efgh-ijkl-mnop
+**masterIdentifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/6.2.0/NamingSystem-uri.html)/urn:uuid:abcd-efgh-ijkl-mnop
 
 **status**: Current
 
@@ -25,6 +25,8 @@ Profil: [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-si
 **author**: [PractitionerRole/practitionerrole-example](PractitionerRole/practitionerrole-example)
 
 **authenticator**: [PractitionerRole/practitionerrole-example](PractitionerRole/practitionerrole-example)
+
+**custodian**: [Organization HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G](Organization-org-example.md)
 
 **description**: Note d'évolution suite à une consultation de suivi.
 
@@ -86,6 +88,9 @@ Profil: [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-si
   }],
   "authenticator" : {
     "reference" : "PractitionerRole/practitionerrole-example"
+  },
+  "custodian" : {
+    "reference" : "Organization/org-example"
   },
   "description" : "Note d'évolution suite à une consultation de suivi.",
   "content" : [{
