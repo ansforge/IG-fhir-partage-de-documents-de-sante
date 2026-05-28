@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-document-reference | *Version*:3.1.1 |
-| Active as of 2026-05-27 | *Computable Name*:PDSm_ComprehensiveDocumentReference |
+| Active as of 2026-05-28 | *Computable Name*:PDSm_ComprehensiveDocumentReference |
 
  
 Profil contenant les métadonnées du document ainsi que le lien vers la ressource Binary contenant le document dérivé de la ressource DocumentReference et du profil IHE MHD v4.0.1 "ComprehensiveDocumentReference" 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-comprehensive-d
   "name" : "PDSm_ComprehensiveDocumentReference",
   "title" : "PDSm Comprehensive DocumentReference",
   "status" : "active",
-  "date" : "2026-05-27T14:14:06+00:00",
+  "date" : "2026-05-28T14:04:20+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -246,7 +246,8 @@ Other representations of profile: [CSV](StructureDefinition-pdsm-comprehensive-d
     {
       "id" : "DocumentReference.date",
       "path" : "DocumentReference.date",
-      "short" : "Représente la date de création de la ressource DocumentReference dans FHIR"
+      "short" : "Représente la date de création de la ressource DocumentReference dans FHIR",
+      "min" : 1
     },
     {
       "id" : "DocumentReference.author",
