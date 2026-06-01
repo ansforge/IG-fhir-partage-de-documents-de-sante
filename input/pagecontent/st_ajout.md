@@ -9,8 +9,8 @@ La première étape de la construction du flux 01 de la demande de modification 
 Le flux doit contenir :
 * une ressource de type « List » représentant le lot de soumission (profil [PDSm_SubmissionsSetComprehensive](StructureDefinition-pdsm-submissionset-comprehensive.html))
 * une à plusieurs ressources de type « DocumentReference », représentant les fiches de documents (profil [PDSm_ComprehensiveDocumentReference](StructureDefinition-pdsm-comprehensive-document-reference.html))
-* zéro à plusieurs ressources « Binary » représentant les documents envoyés dans le flux (ressource [Binary](https://www.hl7.org/fhir/binary.html))
-* zéro à plusieurs ressources de type « List » représentant les classeurs (profil PDSm_FolderComprehensive)
+* zéro à plusieurs ressources « Binary » représentant les documents envoyés dans le flux (ressource [Binary](https://hl7.org/fhir/R4/binary.html))
+* zéro à plusieurs ressources de type « List » représentant les classeurs (profil [PDSm_FolderComprehensive](StructureDefinition-pdsm-folder-comprehensive.html))
 
 Le corps de la requête est une ressource « Bundle » de type `transaction` encapsulant toutes les ressources listées précédemment. Cet objet de type JSON ou XML sera envoyé dans le contenu de la requête HTTP POST.
 
