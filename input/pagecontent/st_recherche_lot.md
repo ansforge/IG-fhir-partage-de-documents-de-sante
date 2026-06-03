@@ -25,7 +25,7 @@ Le flux 05-a contient les critères suivants :
 | [source](SearchParameter-PDSm-List-PatientAsSource.html)* | reference | recherche l'élément patient.identifier |
 | [source](SearchParameter-PDSm-List-PractitionerRoleAsSource.html)* | reference | recherche l'élément source:PractitionerRole.practitioner:Practitioner.given et source:PractitionerRole.practitioner:Practitioner.family |
 | [authorOrg](SearchParameter-PDSm-List-authorOrg.html)* | reference | Référence vers l'auteur source |
-| [patient](SearchParameter-PDSm-List-PatientAsSubject.html)* | reference | Recherche dans subject:Patient.identifier |
+| patient.identifier | token | Recherche sur l'identifiant du subject lorqu'il fait reference à une ressource Patient. Le search Parameter `patient` étant déjà restreint à Patient dans sa [définition](https://hl7.org/fhir/R4/list.html#search) |
 | code | token | Recherche sur le cas d'utilisation de la ressource List |
 | source:Patient.given <br/> source:PractitionerRole.name  | string | Recherche sur le prénom de la personne (praticien ou patient) à l'origine du document |
 | source:Patient.family <br/> source:PractitionerRole.name | string   | Recherche sur le nom de famille de la personne (praticien ou patient) à l'origine du document |
