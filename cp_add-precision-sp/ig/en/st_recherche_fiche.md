@@ -20,7 +20,7 @@ Le flux 05-b contient les critères suivants :
 | facility | token | Recherche sur le secteur d'activité associé au document |
 | setting | token | Recherche du cadre d'exercice du document |
 | identifier | token | Recherche dans l'identifiant de la fiche (idUnique ou idFiche) |
-| creation | date | Recherche sur la date de création du document |
+| creation** | date | Recherche sur la date de création du document |
 | security-label | token | Recherche sur le niveau de confidentialité du document |
 | status | token | Recherche sur le statut de la fiche |
 | [isArchived](SearchParameter-PDSm-isArchived.md)* | token | Recherche les documents archivés ou non |
@@ -34,7 +34,7 @@ Le flux 05-b contient les critères suivants :
 | patient | token | Recherche de l'identifiant du patient |
 | author | token | Recherche du praticien par identifiant, nom ou prénom |
 
-> * Paramètre de recherche créé pour le volet PDSm
+> * Paramètre de recherche créé pour le volet PDSm ** Paramètre de recherche défini dans [MHD](https://profiles.ihe.net/ITI/MHD/artifacts.html#behavior-search-parameters)
 
 >  Conformément au profil MHD [[ITI-67]](https://profiles.ihe.net/ITI/MHD/ITI-67.html), la recherche de fiche DOIT à minima inclure les paramètres patient ou patient.identifier et status. 
 
