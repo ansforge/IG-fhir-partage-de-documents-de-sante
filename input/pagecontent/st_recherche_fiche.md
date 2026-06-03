@@ -16,7 +16,7 @@ Le flux 05-b contient les critères suivants :
 | facility | token | Recherche sur le secteur d'activité associé au document |
 | setting | token | Recherche du cadre d'exercice du document |
 | identifier | token | Recherche dans l'identifiant de la fiche (idUnique ou idFiche) |
-| creation | date | Recherche sur la date de création du document |
+| creation** | date | Recherche sur la date de création du document |
 | security-label | token | Recherche sur le niveau de confidentialité du document |
 | status | token | Recherche sur le statut de la fiche |
 | [isArchived](SearchParameter-PDSm-isArchived.html)* | token | Recherche les documents archivés ou non |
@@ -32,6 +32,7 @@ Le flux 05-b contient les critères suivants :
 {: .grid }
 
 > \* Paramètre de recherche créé pour le volet PDSm
+> \** Paramètre de recherche défini dans [MHD](https://profiles.ihe.net/ITI/MHD/artifacts.html#behavior-search-parameters)
 
 <div style="width: 65%">
 <blockquote class="note note">

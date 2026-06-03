@@ -16,12 +16,12 @@ Le flux 05-a contient les critères suivants :
 | Critère de recherche FHIR | Type | Description |
 | ----- | ----- | ----- |
 | date | date | Date de soumission du lot |
-| designationType | token | Type d'activité |
+| designationType** | token | Type d'activité |
 | identifier | token | Identifiant unique ou identifiant du lot de soumission |
 | status | token | Statut du lot|
 | [isArchived](SearchParameter-PDSm-isArchived.html)* | token | Recherche des documents archivés ou non |
 | title | string | Titre du lot |
-| sourceId | reference | Identifiant de la source |
+| sourceId** | reference | Identifiant de la source |
 | [source](SearchParameter-PDSm-List-PatientAsSource.html)* | reference | recherche l'élément patient.identifier |
 | [source](SearchParameter-PDSm-List-PractitionerRoleAsSource.html)* | reference | recherche l'élément source:PractitionerRole.practitioner:Practitioner.given et source:PractitionerRole.practitioner:Practitioner.family |
 | [authorOrg](SearchParameter-PDSm-List-authorOrg.html)* | reference | Référence vers l'auteur source |
@@ -32,6 +32,7 @@ Le flux 05-a contient les critères suivants :
 {: .grid }
 
 > \* Paramètre de recherche créé pour le volet PDSm
+> \** Paramètre de recherche défini dans [MHD](https://profiles.ihe.net/ITI/MHD/artifacts.html#behavior-search-parameters)
 
 
 <div style="width: 65%">
