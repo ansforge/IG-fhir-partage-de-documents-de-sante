@@ -26,14 +26,14 @@ Le flux 05-a contient les critères suivants :
 | [source](SearchParameter-PDSm-List-PatientAsSource.md)* | reference | recherche l'élément patient.identifier |
 | [source](SearchParameter-PDSm-List-PractitionerRoleAsSource.md)* | reference | recherche l'élément source:PractitionerRole.practitioner:Practitioner.given et source:PractitionerRole.practitioner:Practitioner.family |
 | [authorOrg](SearchParameter-PDSm-List-authorOrg.md)* | reference | Référence vers l'auteur source |
-| [patient](SearchParameter-PDSm-List-PatientAsSubject.md)* | reference | Recherche dans subject:Patient.identifier |
+| patient.identifier | token | Recherche sur l'identifiant du subject lorqu'il fait reference à une ressource Patient. Le search Parameter`patient`étant déjà restreint à Patient dans sa[définition](https://hl7.org/fhir/R4/list.html#search) |
 | code | token | Recherche sur le cas d'utilisation de la ressource List |
 | source:Patient.givensource:PractitionerRole.name | string | Recherche sur le prénom de la personne (praticien ou patient) à l'origine du document |
 | source:Patient.familysource:PractitionerRole.name | string | Recherche sur le nom de famille de la personne (praticien ou patient) à l'origine du document |
 
 > * Paramètre de recherche créé pour le volet PDSm ** Paramètre de recherche défini dans [MHD](https://profiles.ihe.net/ITI/MHD/artifacts.html#behavior-search-parameters)
 
->  Conformément au profil MHD [[ITI-66]](https://profiles.ihe.net/ITI/MHD/4.2.0/ITI-66.html), la recherche de fiche DOIT à minima inclure les paramètres patient ou patient.identifier, code et status. 
+>  Conformément au profil MHD [[ITI-66]](https://profiles.ihe.net/ITI/MHD/4.2.3/ITI-66.html), la recherche de fiche DOIT à minima inclure les paramètres patient ou patient.identifier, code et status. 
 
 #### Paramètre de recherche de la ressource Patient
 

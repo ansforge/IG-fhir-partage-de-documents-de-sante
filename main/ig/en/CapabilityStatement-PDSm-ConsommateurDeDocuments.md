@@ -125,10 +125,10 @@ Il s’agit d’un système d’information ou d’un composant de système d’
         "documentation" : "Recherche sur les éléments source:Patient.given et source:Patient.family."
       },
       {
-        "name" : "PDSm_List_PatientAsSubject",
-        "definition" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-PatientAsSubject",
+        "name" : "patient",
+        "definition" : "https://hl7.org/fhir/R4/searchparameter-registry.html#clinical-patient",
         "type" : "reference",
-        "documentation" : "Recherche sur l'élément subject:Patient.identifier."
+        "documentation" : "Recherche sur l'élément subject restreint à la ressource Patient."
       },
       {
         "name" : "PDSm_List_PractitionerRoleAsSource",

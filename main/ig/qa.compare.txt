@@ -1,14 +1,14 @@
 PDSm : Validation Results
 =========================================
 
-err = 27, warn = 91, info = 65
+err = 27, warn = 93, info = 67
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.pdsm#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/pdsm)
- Build Errors : 18 / 7 / 0
+ Build Errors : 17 / 7 / 0
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Binary-6789 : 0 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478 : 0 / 4 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-ConsommateurDeDocuments : 0 / 0 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-GestionnaireDePartageDeDocuments : 0 / 0 / 1
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-ConsommateurDeDocuments : 0 / 1 / 2
+ /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-GestionnaireDePartageDeDocuments : 0 / 1 / 2
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-ProducteurDeDocuments : 0 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/DocumentReference-PDSmSimplifiedExample : 7 / 0 / 4
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/DocumentReference-exemple-pdsm-documentreference : 9 / 5 / 13
@@ -20,7 +20,6 @@ Generated $--. FHIR version $-- for ans.fhir.fr.pdsm#$-- (canonical = https://in
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-DocumentReference-period-end : 0 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-DocumentReference-period-start : 0 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-List-PatientAsSource : 0 / 0 / 1
- /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-List-PatientAsSubject : 0 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-List-PractitionerRoleAsSource : 0 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-List-authorOrg : 0 / 0 / 1
  /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-isArchived : 0 / 0 / 1
@@ -42,9 +41,9 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/org-example.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/output/en/logo-ANS.svg: Unable to Parse HTML - does not start with tag. Found 'P'  at line 1 column 0
 ERROR: /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/output/logo-ANS.svg: Unable to Parse HTML - does not start with tag. Found 'P'  at line 1 column 0
-ERROR: en/DocumentReference-PDSmSimplifiedExample.html#/html/body/div/div/div/div/div/div/p/a at Line 295, column 550: The link 'PractitionerRole/practitionerrole-example' for "PractitionerRole/practitionerrole-example" cannot be resolved
-ERROR: en/DocumentReference-PDSmSimplifiedExample.html#/html/body/div/div/div/div/div/div/p/a at Line 295, column 676: The link 'PractitionerRole/practitionerrole-example' for "PractitionerRole/practitionerrole-example" cannot be resolved
-ERROR: en/DocumentReference-exemple-pdsm-documentreference.html#/html/body/div/div/div/div/div/div/p/a at Line 295, column 600: The link 'PractitionerRole/practitionerrole-example' for "PractitionerRole/practitionerrole-example" cannot be resolved
+ERROR: en/DocumentReference-PDSmSimplifiedExample.html#/html/body/div/div/div/div/div/div/p/a at Line 295, column 520: The link 'PractitionerRole/practitionerrole-example' for "PractitionerRole/practitionerrole-example" cannot be resolved
+ERROR: en/DocumentReference-PDSmSimplifiedExample.html#/html/body/div/div/div/div/div/div/p/a at Line 295, column 646: The link 'PractitionerRole/practitionerrole-example' for "PractitionerRole/practitionerrole-example" cannot be resolved
+ERROR: en/DocumentReference-exemple-pdsm-documentreference.html#/html/body/div/div/div/div/div/div/p/a at Line 295, column 570: The link 'PractitionerRole/practitionerrole-example' for "PractitionerRole/practitionerrole-example" cannot be resolved
 ERROR: en/List-ExampleSubmissionSet.html#/html/body/div/div/div/div/div/div/p/a at Line 290, column 1524: The link 'Practitioner/practitioner-example' for "Practitioner/practitioner-example" cannot be resolved
 ERROR: en/downloads.html#/html/body/div/div/div/div/div/p/a at Line 256, column 48: The link 'package.tgz' for "téléchargeable ici" cannot be resolved
 ERROR: en/downloads.html#/html/body/div/div/div/div/div/p/a at Line 258, column 44: The link 'package.tgz' for "package.tgz" cannot be resolved
@@ -56,7 +55,6 @@ ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 280, col
 ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 281, column 8: The link 'examples.json.zip' for "Exemples JSON (zip)" cannot be resolved
 ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 282, column 8: The link 'examples.ttl.zip' for "Exemples JSON (zip)" cannot be resolved
 ERROR: en/st_ajout.html#/html/body/div/div/div/div/div/p/a at Line 294, column 54: The link '/IHE.MHD.ProvideDocumentBundleResponse' for "ProvideDocumentBundleResponse" cannot be resolved
-ERROR: en/st_recherche_lot.html#/html/body/div/div/div/div/div/div/blockquote/p/a at Line 362, column 31: The link 'https://profiles.ihe.net/ITI/MHD/4.2.0/ITI-66.html' for "[ITI-66]" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
@@ -67,7 +65,11 @@ WARNING: Bundle/a9c10f8a-882d-4000-a280-7150e0aeb478: Bundle.entry[0].response.l
 WARNING: Bundle/a9c10f8a-882d-4000-a280-7150e0aeb478: Bundle.entry[1].response.location: No definition could be found for URL value 'DocumentReference/1'
 WARNING: Bundle/a9c10f8a-882d-4000-a280-7150e0aeb478: Bundle.entry[2].response.location: No definition could be found for URL value 'Binary/1'
 == fsh-generated/resources/CapabilityStatement-PDSm-ConsommateurDeDocuments.json ==
+INFORMATION: CapabilityStatement/PDSm-ConsommateurDeDocuments: CapabilityStatement.rest[0].resource[0].searchParam[11].definition: A definition could not be found for Canonical URL 'https://hl7.org/fhir/R4/searchparameter-registry.html#clinical-patient' but a definition can be found for 'http://hl7.org/fhir/R4/searchparameter-registry.html#clinical-patient' - change from https: to http:
+WARNING: CapabilityStatement/PDSm-ConsommateurDeDocuments: CapabilityStatement.rest[0].resource[0].searchParam[11].definition: A definition could not be found for Canonical URL 'https://hl7.org/fhir/R4/searchparameter-registry.html#clinical-patient'
 == fsh-generated/resources/CapabilityStatement-PDSm-GestionnaireDePartageDeDocuments.json ==
+INFORMATION: CapabilityStatement/PDSm-GestionnaireDePartageDeDocuments: CapabilityStatement.rest[0].resource[0].searchParam[11].definition: A definition could not be found for Canonical URL 'https://hl7.org/fhir/R4/searchparameter-registry.html#clinical-patient' but a definition can be found for 'http://hl7.org/fhir/R4/searchparameter-registry.html#clinical-patient' - change from https: to http:
+WARNING: CapabilityStatement/PDSm-GestionnaireDePartageDeDocuments: CapabilityStatement.rest[0].resource[0].searchParam[11].definition: A definition could not be found for Canonical URL 'https://hl7.org/fhir/R4/searchparameter-registry.html#clinical-patient'
 == fsh-generated/resources/CapabilityStatement-PDSm-ProducteurDeDocuments.json ==
 == fsh-generated/resources/DocumentReference-PDSmSimplifiedExample.json ==
 ERROR: DocumentReference/PDSmSimplifiedExample: DocumentReference.type.coding[0].display: Wrong Display Name 'Note d’évolution' for http://loinc.org#15507-7. Valid display is 'Emergency department Progress note' (en-US), 'Emergency department Progress note' (en-US), 'ED Prog note' (en-US) or 'CR de passage aux urgences' (for the language(s) 'en')
@@ -143,7 +145,6 @@ INFORMATION: Patient/fr-patient-123: Patient.name[0]: This element does not matc
 == fsh-generated/resources/SearchParameter-PDSm-DocumentReference-period-end.json ==
 == fsh-generated/resources/SearchParameter-PDSm-DocumentReference-period-start.json ==
 == fsh-generated/resources/SearchParameter-PDSm-List-PatientAsSource.json ==
-== fsh-generated/resources/SearchParameter-PDSm-List-PatientAsSubject.json ==
 == fsh-generated/resources/SearchParameter-PDSm-List-PractitionerRoleAsSource.json ==
 == fsh-generated/resources/SearchParameter-PDSm-List-authorOrg.json ==
 == fsh-generated/resources/SearchParameter-PDSm-isArchived.json ==

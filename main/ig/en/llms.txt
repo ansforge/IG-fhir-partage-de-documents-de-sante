@@ -54,7 +54,6 @@
 * [PDSmDocumentReferencePeriodEnd](SearchParameter-PDSm-DocumentReference-period-end.md)
 * [PDSmDocumentReferencePeriodStart](SearchParameter-PDSm-DocumentReference-period-start.md)
 * [PDSmListPatientAsSource](SearchParameter-PDSm-List-PatientAsSource.md)
-* [PDSmListPatientAsSubject](SearchParameter-PDSm-List-PatientAsSubject.md)
 * [PDSmListPractitionerRoleAsSource](SearchParameter-PDSm-List-PractitionerRoleAsSource.md)
 * [PDSmAuthorOrg](SearchParameter-PDSm-List-authorOrg.md)
 * [PDSmIsArchived](SearchParameter-PDSm-isArchived.md)
