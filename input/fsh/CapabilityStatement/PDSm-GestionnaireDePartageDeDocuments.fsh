@@ -71,10 +71,10 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = Canonical(PDSm-List-PatientAsSource)
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Recherche sur les éléments source:Patient.given et source:Patient.family."
-* rest.resource[=].searchParam[+].name = "PDSm_List_PatientAsSubject"
-* rest.resource[=].searchParam[=].definition = Canonical(PDSm-List-PatientAsSubject)
+* rest.resource[=].searchParam[+].name = #patient
+* rest.resource[=].searchParam[=].definition = "https://hl7.org/fhir/R4/searchparameter-registry.html#clinical-patient"
 * rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "Recherche sur l'élément subject:Patient.identifier."
+* rest.resource[=].searchParam[=].documentation = "Recherche sur l'élément subject restreint à la ressource Patient."
 * rest.resource[=].searchParam[+].name = "PDSm_List_PractitionerRoleAsSource"
 * rest.resource[=].searchParam[=].definition = Canonical(PDSm-List-PractitionerRoleAsSource)
 * rest.resource[=].searchParam[=].type = #reference
