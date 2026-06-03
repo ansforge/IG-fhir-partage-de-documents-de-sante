@@ -213,9 +213,9 @@
             }
           },
           {
-            "name": "PDSm_List_PatientAsSubject",
+            "name": "patient",
             "in": "query",
-            "description": "Paramètre de recherche chaîné créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l\u0027élément subject:Patient.identifier",
+            "description": "Recherche sur l\u0027élément subject restreint à la ressource Patient.",
             "schema": {
               "type": "string"
             }

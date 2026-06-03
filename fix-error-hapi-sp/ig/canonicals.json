@@ -48,13 +48,6 @@
   "name" : "PDSmListPatientAsSource"
 },
 {
-  "id" : "PDSm-List-PatientAsSubject",
-  "type" : "SearchParameter",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-PatientAsSubject",
-  "version" : "3.1.1",
-  "name" : "PDSmListPatientAsSubject"
-},
-{
   "id" : "PDSm-List-PractitionerRoleAsSource",
   "type" : "SearchParameter",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-List-PractitionerRoleAsSource",
