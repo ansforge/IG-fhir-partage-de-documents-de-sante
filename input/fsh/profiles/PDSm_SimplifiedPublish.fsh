@@ -52,7 +52,7 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 * description MS
 * description ^short = "Commentaire associé au document."
 
-* securityLabel obeys constr-bind-securityLabel
+* securityLabel from https://mos.esante.gouv.fr/NOS/JDV_J08-XdsConfidentialityCode-CISIS/FHIR/JDV-J08-XdsConfidentialityCode-CISIS (extensible)
 * securityLabel ^short = "Contient les informations définissant le niveau de confidentialité d'un document."
 
 // ###########
