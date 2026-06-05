@@ -66,7 +66,7 @@
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/FHIR/JDV-J07-XdsTypeCode-CISIS",
-    "version" : "20260202120000",
+    "version" : "20260601120000",
     "status" : "active",
     "name" : "JDV_J07_XdsTypeCode_CISIS",
     "title" : null,
@@ -76,6 +76,22 @@
     "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire"],
     "oids" : ["1.2.250.1.213.1.1.5.471"],
     "sources" : ["1.2.250.1.213.1.1.5.471"],
+    "uses" : {
+    },
+    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference",
+    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/JDV_J08-XdsConfidentialityCode-CISIS/FHIR/JDV-J08-XdsConfidentialityCode-CISIS",
+    "version" : "20200424120000",
+    "status" : "active",
+    "name" : "JDV_J08_XdsConfidentialityCode_CISIS",
+    "title" : null,
+    "description" : "XDS confidentialityCode - CI-SIS",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_A07-StatutVisibiliteDocument/FHIR/TRE-A07-StatutVisibiliteDocument",
+    "https://mos.esante.gouv.fr/NOS/TRE_A08-HL7Confidentiality/FHIR/TRE-A08-HL7Confidentiality"],
+    "oids" : ["1.2.250.1.213.1.1.5.463"],
+    "sources" : ["1.2.250.1.213.1.1.5.463"],
     "uses" : {
     },
     "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference",
