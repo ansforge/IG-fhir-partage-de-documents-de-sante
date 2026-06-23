@@ -11,7 +11,7 @@
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-06-23T12:56:02+00:00",
+  "date" : "2026-06-23T16:52:07+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -1040,6 +1040,15 @@
           }],
           "nameUrl" : "sf_consultation.html",
           "title" : "Consultation de documents",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "sf_ajout_simplifie.html"
+          }],
+          "nameUrl" : "sf_ajout_simplifie.html",
+          "title" : "Ajout simplifié d'un document",
           "generation" : "markdown"
         }]
       },

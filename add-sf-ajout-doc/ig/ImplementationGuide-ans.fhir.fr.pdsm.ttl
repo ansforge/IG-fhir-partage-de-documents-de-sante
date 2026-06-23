@@ -19,7 +19,7 @@
   fhir:name [ fhir:v "PDSm"] ; # 
   fhir:title [ fhir:v "Partage de Documents de Santé en mobilité (PDSm)"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-06-23T12:56:02+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-06-23T16:52:07+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -1485,6 +1485,20 @@
              fhir:v "sf_consultation.html"^^xsd:anyURI
            ] ;
            fhir:title [ fhir:v "Consultation de documents" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [
+               a fhir:url ;
+               fhir:v "sf_ajout_simplifie.html"^^xsd:anyURI
+             ]
+           ] ) ;
+           fhir:name [
+             a fhir:url ;
+             fhir:v "sf_ajout_simplifie.html"^^xsd:anyURI
+           ] ;
+           fhir:title [ fhir:v "Ajout simplifié d'un document" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] )
        ] [

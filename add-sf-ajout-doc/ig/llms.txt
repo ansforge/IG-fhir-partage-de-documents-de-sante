@@ -10,6 +10,7 @@
 * [Ajout d'un lot de documents (ITI-65)](en/st_ajout.md)
 * [Autres Ressources](en/autres_ressources.md)
 * [Consultation de documents](en/sf_consultation.md)
+* [Ajout simplifié d'un document](en/sf_ajout_simplifie.md)
 * [Artifacts Summary](en/artifacts.md)
 * [Sécurité](en/securite.md)
 * [Mise à jour de documents](en/sf_maj.md)
