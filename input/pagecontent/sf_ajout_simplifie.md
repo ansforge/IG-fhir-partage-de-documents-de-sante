@@ -48,7 +48,7 @@
 ### Flux 9 - AjoutSimplifieDocument MODELISATION DES FLUX D'INFORMATIONS
 
 <div class="figure" style='text-align: center;'>
-    <img src="fonctionnel/fig_18.png" alt="Figure 18" title="Figure 18 Flux 9 - AjoutSimplifieDocument" style="width:80%;">
+    <img src="fonctionnel/fig_18.png" alt="Figure 18" title="Figure 18 Flux 9 - AjoutSimplifieDocument" style="width:20%;">
     <figcaption><b>Figure 18 : Flux 9 - AjoutSimplifieDocument</b></figcaption>
 </div>
 <br>
@@ -86,7 +86,7 @@ Une fiche représente le document stocké dans l'infrastructure de partage de do
 ### Flux 10 - ResultatAjoutSimplifieDocument MODELISATION DES FLUX D'INFORMATIONS
 
 <div class="figure" style='text-align: center;'>
-    <img src="fonctionnel/fig_19.png" alt="Figure 19" title="Figure 19 Flux 10 - ResultatAjoutSimplifieDocument" style="width:80%;">
+    <img src="fonctionnel/fig_19.png" alt="Figure 19" title="Figure 19 Flux 10 - ResultatAjoutSimplifieDocument" style="width:20%;">
     <figcaption><b>Figure 19 : Flux 10 - ResultatAjoutSimplifieDocument</b></figcaption>
 </div>
 <br>
