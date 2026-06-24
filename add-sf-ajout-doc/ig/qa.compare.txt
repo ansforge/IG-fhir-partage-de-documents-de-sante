@@ -41,20 +41,20 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/org-example.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/output/en/logo-ANS.svg: Unable to Parse HTML - does not start with tag. Found 'P'  at line 1 column 0
 ERROR: /home/runner/work/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/output/logo-ANS.svg: Unable to Parse HTML - does not start with tag. Found 'P'  at line 1 column 0
-ERROR: en/DocumentReference-PDSmSimplifiedExample.html#/html/body/div/div/div/div/div/div/p/a at Line 298, column 550: The link 'PractitionerRole/practitionerrole-example' for "PractitionerRole/practitionerrole-example" cannot be resolved
-ERROR: en/DocumentReference-PDSmSimplifiedExample.html#/html/body/div/div/div/div/div/div/p/a at Line 298, column 676: The link 'PractitionerRole/practitionerrole-example' for "PractitionerRole/practitionerrole-example" cannot be resolved
-ERROR: en/DocumentReference-exemple-pdsm-documentreference.html#/html/body/div/div/div/div/div/div/p/a at Line 298, column 600: The link 'PractitionerRole/practitionerrole-example' for "PractitionerRole/practitionerrole-example" cannot be resolved
-ERROR: en/List-ExampleSubmissionSet.html#/html/body/div/div/div/div/div/div/p/a at Line 293, column 1524: The link 'Practitioner/practitioner-example' for "Practitioner/practitioner-example" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/p/a at Line 259, column 48: The link 'package.tgz' for "téléchargeable ici" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/p/a at Line 261, column 44: The link 'package.tgz' for "package.tgz" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 269, column 8: The link 'package.tgz' for "Package (tgz)" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 275, column 8: The link 'definitions.json.zip' for "Définitions JSON (zip)" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 276, column 8: The link 'definitions.xml.zip' for "Définitions XML (zip)" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 277, column 8: The link 'definitions.ttl.zip' for "Définitions Turtle (zip)" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 283, column 8: The link 'examples.xml.zip' for "Exemples XML (zip)" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 284, column 8: The link 'examples.json.zip' for "Exemples JSON (zip)" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 285, column 8: The link 'examples.ttl.zip' for "Exemples JSON (zip)" cannot be resolved
-ERROR: en/st_ajout.html#/html/body/div/div/div/div/div/p/a at Line 297, column 54: The link '/IHE.MHD.ProvideDocumentBundleResponse' for "ProvideDocumentBundleResponse" cannot be resolved
+ERROR: en/DocumentReference-PDSmSimplifiedExample.html#/html/body/div/div/div/div/div/div/p/a at Line 301, column 550: The link 'PractitionerRole/practitionerrole-example' for "PractitionerRole/practitionerrole-example" cannot be resolved
+ERROR: en/DocumentReference-PDSmSimplifiedExample.html#/html/body/div/div/div/div/div/div/p/a at Line 301, column 676: The link 'PractitionerRole/practitionerrole-example' for "PractitionerRole/practitionerrole-example" cannot be resolved
+ERROR: en/DocumentReference-exemple-pdsm-documentreference.html#/html/body/div/div/div/div/div/div/p/a at Line 301, column 600: The link 'PractitionerRole/practitionerrole-example' for "PractitionerRole/practitionerrole-example" cannot be resolved
+ERROR: en/List-ExampleSubmissionSet.html#/html/body/div/div/div/div/div/div/p/a at Line 296, column 1524: The link 'Practitioner/practitioner-example' for "Practitioner/practitioner-example" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/p/a at Line 262, column 48: The link 'package.tgz' for "téléchargeable ici" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/p/a at Line 264, column 44: The link 'package.tgz' for "package.tgz" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 272, column 8: The link 'package.tgz' for "Package (tgz)" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 278, column 8: The link 'definitions.json.zip' for "Définitions JSON (zip)" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 279, column 8: The link 'definitions.xml.zip' for "Définitions XML (zip)" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 280, column 8: The link 'definitions.ttl.zip' for "Définitions Turtle (zip)" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 286, column 8: The link 'examples.xml.zip' for "Exemples XML (zip)" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 287, column 8: The link 'examples.json.zip' for "Exemples JSON (zip)" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 288, column 8: The link 'examples.ttl.zip' for "Exemples JSON (zip)" cannot be resolved
+ERROR: en/st_ajout.html#/html/body/div/div/div/div/div/p/a at Line 300, column 54: The link '/IHE.MHD.ProvideDocumentBundleResponse' for "ProvideDocumentBundleResponse" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide

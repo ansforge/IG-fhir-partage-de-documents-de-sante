@@ -41,7 +41,9 @@
   </head>
   <body onload="document.body.style.opacity='1'">
 
-	  <script src="assets/js/prism.js"></script>
+	  <script src="assets/js/prism.js" type="text/javascript"></script>
+	  <script src="assets/js/prism-fhirpath.js" type="text/javascript"></script>
+	  <script src="assets/js/prism-cql.js" type="text/javascript"></script>
     <script src="assets/js/mermaid.js" type="text/javascript"></script>
     <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
     <style type="text/css">h2{--heading-prefix:"4.3"}
@@ -222,6 +224,7 @@
       <div class="container">    <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
+
 <style type="text/css">
 h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
 h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
@@ -254,9 +257,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p><a name="l438">​</a>L'implementation guide contient un package <a href="package.tgz">téléchargeable ici</a> permettant de valider les instances par rapport aux profils qu'il contient.</p>
+<p><a name="l442">​</a>L'implementation guide contient un package <a href="package.tgz">téléchargeable ici</a> permettant de valider les instances par rapport aux profils qu'il contient.</p>
 
-<p><a name="l444">​</a>Pour cela, il suffit de télécharger le <a href="package.tgz">package.tgz</a> et l'importer dans un serveur, par exemple sur hapi en suivant ce <a href="https://github.com/nmdp-bioinformatics/igloader">script python</a> open source.</p>
+<p><a name="l448">​</a>Pour cela, il suffit de télécharger le <a href="package.tgz">package.tgz</a> et l'importer dans un serveur, par exemple sur hapi en suivant ce <a href="https://github.com/nmdp-bioinformatics/igloader">script python</a> open source.</p>
 
 <p>Vous pourrez ensuite utiliser l'opération <a href="https://www.hl7.org/fhir/resource-operation-validate.html">$validate</a> pour valider les instances de ressource contre un profil issu de cette spécification.</p>
 
@@ -264,23 +267,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li><a href="full-ig.zip">L'ensemble de la specification (zip)</a></li>
-  <li><a name="l468">​</a><a href="package.tgz">Package (tgz)</a></li>
+  <li><a name="l472">​</a><a href="package.tgz">Package (tgz)</a></li>
 </ul>
 
 <h3 id="définitions">Définitions</h3>
 
 <ul>
-  <li><a name="l478">​</a><a href="definitions.json.zip">Définitions JSON (zip)</a></li>
-  <li><a name="l482">​</a><a href="definitions.xml.zip">Définitions XML (zip)</a></li>
-  <li><a name="l486">​</a><a href="definitions.ttl.zip">Définitions Turtle (zip)</a></li>
+  <li><a name="l482">​</a><a href="definitions.json.zip">Définitions JSON (zip)</a></li>
+  <li><a name="l486">​</a><a href="definitions.xml.zip">Définitions XML (zip)</a></li>
+  <li><a name="l490">​</a><a href="definitions.ttl.zip">Définitions Turtle (zip)</a></li>
 </ul>
 
 <h3 id="exemples">Exemples</h3>
 
 <ul>
-  <li><a name="l496">​</a><a href="examples.xml.zip">Exemples XML (zip)</a></li>
-  <li><a name="l500">​</a><a href="examples.json.zip">Exemples JSON (zip)</a></li>
-  <li><a name="l504">​</a><a href="examples.ttl.zip">Exemples JSON (zip)</a></li>
+  <li><a name="l500">​</a><a href="examples.xml.zip">Exemples XML (zip)</a></li>
+  <li><a name="l504">​</a><a href="examples.json.zip">Exemples JSON (zip)</a></li>
+  <li><a name="l508">​</a><a href="examples.ttl.zip">Exemples JSON (zip)</a></li>
 </ul>
 
 
@@ -331,8 +334,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-23 16:52:00 +0000">
-    2026-06-23
+  <span title="2026-06-24 09:41:00 +0000">
+    2026-06-24
   </span>
 
           <br/>
