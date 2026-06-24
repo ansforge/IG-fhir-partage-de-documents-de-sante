@@ -41,9 +41,19 @@
 
 **Figure 18 : Flux 9 - AjoutSimplifieDocument**
 
+#### Classe "Document"
+
+Un document est la plus petite unité d'information déposée dans l'infrastructure de partage de documents. Dans le cadre de l'ajout simplifié, le contenu du document est directement inclus dans la fiche (et non transmis dans une ressource séparée).
+
+| | |
+| :--- | :--- |
+| contenuDocument : [1..1] ObjetBinaire | Contient le document au format binaire. |
+
+**Table 30 Attributs de la classe "Document"**
+
 #### Classe "Fiche"
 
-Une fiche représente le document stocké dans l'infrastructure de partage de documents. Elle contient les informations décrivant les caractéristiques principales d'un document servant au classement et à la recherche des documents. Dans le cadre de l'ajout simplifié, le contenu du document est directement inclus dans la fiche.
+Une fiche représente le document stocké dans l'infrastructure de partage de documents. Elle contient les informations décrivant les caractéristiques principales d'un document servant au classement et à la recherche des documents.
 
 | | |
 | :--- | :--- |
@@ -67,9 +77,8 @@ Une fiche représente le document stocké dans l'infrastructure de partage de do
 | formatDocument : [0..1] Code | Format technique détaillé du document.Nomenclatures utilisées :TRE_A06-FormatCodeComplementaireTRE_A09-DICOMuidRegistryTRE_A10-NomenclatureURNTRE_A11-IheFormatCodeASS_X11-CorresModeleCDA-XdsFormatCode-CISISASS_A12-CorresMediaTypeCDANonStructure-XdsFormatCode-CISIS |
 | actePathologie : [0..1] Code | Actes et pathologies en rapport avec le document.Nomenclatures utilisées :** CCAM pour les actes médicaux (OID="1.2.250.1.213.2.5");** CIM-10 pour les diagnostics de pathologie (OID="2.16.840.1.113883.6.3");** TRE_A00-ProducteurDocNonPS pour les documents d'expression personnelle du patient. |
 | version : [0..1] Numerique | Numéro de version de la fiche d'un document. La valeur de la métadonnée version est égale à 1 pour la première version de la fiche. |
-| contenuDocument : [1..1] ObjetBinaire | Contient le document au format binaire. Contrairement à l'ajout de lot de documents, le contenu est directement inclus dans la fiche et non transmis dans une ressource séparée. |
 
-**Table 30 Attributs de la classe "Fiche"**
+**Table 31 Attributs de la classe "Fiche"**
 
 ### Flux 10 - ResultatAjoutSimplifieDocument MODELISATION DES FLUX D'INFORMATIONS
 
@@ -83,5 +92,5 @@ Une fiche représente le document stocké dans l'infrastructure de partage de do
 | :--- | :--- |
 | statutAttributFiche : [0..*] Texte | La réponse de la demande d'ajout simplifié d'un document peut contenir une fiche qui contient le statut (réussite ou échec) de chaque attribut renseigné lors de la demande d'ajout. |
 
-**Table 31 Attributs de la classe "Fiche"**
+**Table 32 Attributs de la classe "Fiche"**
 

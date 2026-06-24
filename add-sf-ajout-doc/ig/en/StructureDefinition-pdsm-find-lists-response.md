@@ -32,7 +32,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-find-lists-r
   "name" : "PDSm_FindListsResponse",
   "title" : "PDSm Find Lists Response",
   "status" : "active",
-  "date" : "2026-06-24T10:01:26+00:00",
+  "date" : "2026-06-24T12:42:06+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

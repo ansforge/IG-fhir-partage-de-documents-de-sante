@@ -369,8 +369,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <p><br /></p>
 
+<h4 id="classe-document">Classe "Document"</h4>
+
+<p>Un document est la plus petite unité d'information déposée dans l'infrastructure de partage de documents. Dans le cadre de l'ajout simplifié, le contenu du document est directement inclus dans la fiche (et non transmis dans une ressource séparée).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Nom</strong></th>
+      <th><strong>Description</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>contenuDocument : [1..1] ObjetBinaire</td>
+      <td>Contient le document au format binaire.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Table 30 Attributs de la classe "Document"</strong></p>
+
 <h4 id="classe-fiche">Classe "Fiche"</h4>
-<p>Une fiche représente le document stocké dans l'infrastructure de partage de documents. Elle contient les informations décrivant les caractéristiques principales d'un document servant au classement et à la recherche des documents. Dans le cadre de l'ajout simplifié, le contenu du document est directement inclus dans la fiche.</p>
+<p>Une fiche représente le document stocké dans l'infrastructure de partage de documents. Elle contient les informations décrivant les caractéristiques principales d'un document servant au classement et à la recherche des documents.</p>
 
 <table>
   <thead>
@@ -460,14 +481,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>version : [0..1] Numerique</td>
       <td>Numéro de version de la fiche d'un document. La valeur de la métadonnée version est égale à 1 pour la première version de la fiche.</td>
     </tr>
-    <tr>
-      <td>contenuDocument : [1..1] ObjetBinaire</td>
-      <td>Contient le document au format binaire. Contrairement à l'ajout de lot de documents, le contenu est directement inclus dans la fiche et non transmis dans une ressource séparée.</td>
-    </tr>
   </tbody>
 </table>
 
-<p><strong>Table 30 Attributs de la classe "Fiche"</strong></p>
+<p><strong>Table 31 Attributs de la classe "Fiche"</strong></p>
 
 <h3 id="flux-10---resultatajoutsimplifiedocument-modelisation-des-flux-dinformations">Flux 10 - ResultatAjoutSimplifieDocument MODELISATION DES FLUX D'INFORMATIONS</h3>
 
@@ -496,7 +513,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p><strong>Table 31 Attributs de la classe "Fiche"</strong></p>
+<p><strong>Table 32 Attributs de la classe "Fiche"</strong></p>
 
 
 
@@ -547,7 +564,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-24 10:01:00 +0000">
+  <span title="2026-06-24 12:42:00 +0000">
     2026-06-24
   </span>
 
