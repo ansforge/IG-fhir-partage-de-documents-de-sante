@@ -35,7 +35,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
   "name" : "PDSm_ComprehensiveDocumentReference",
   "title" : "PDSm Comprehensive DocumentReference",
   "status" : "active",
-  "date" : "2026-06-25T15:20:15+00:00",
+  "date" : "2026-06-25T15:53:08+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -327,7 +327,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
     {
       "id" : "DocumentReference.description",
       "path" : "DocumentReference.description",
-      "short" : "Commentaire associé au document.",
+      "short" : "Description du document source, lisible par l'homme correspondant au commentaire associé au document",
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-PDSmComprehensiveDocumentReference",
