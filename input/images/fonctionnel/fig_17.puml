@@ -1,0 +1,32 @@
+@startuml
+skinparam backgroundColor white
+skinparam DefaultFontName Arial
+skinparam DefaultFontSize 12
+
+skinparam activity {
+  BackgroundColor #dce8f5
+  BorderColor #888888
+  FontColor #000000
+  ArrowColor #000000
+  StartColor #B8860B
+  EndColor #B8860B
+  FontSize 12
+}
+skinparam swimlane {
+  BorderColor #888888
+  TitleFontSize 13
+  TitleFontColor #000000
+  TitleBackgroundColor white
+}
+
+|Producteur de documents|
+start
+:Préparer le document;
+-> <<flow>>\nFlux 9 - AjoutSimplifieDocument;
+|Gestionnaire de partage de documents|
+:Traiter la demande\nd'ajout simplifié;
+-[dashed]-> <<flow>>\nFlux 10 - ResultatAjoutSimplifieDocument;
+|Producteur de documents|
+:Traiter la réponse;
+stop
+@enduml
