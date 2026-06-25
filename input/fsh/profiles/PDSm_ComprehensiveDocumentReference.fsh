@@ -68,7 +68,7 @@ Description: "Profil contenant les métadonnées du document ainsi que le lien v
 * relatesTo.target obeys constr-bind-relatesToTarget
 
 * description MS
-* description ^short = "Description du document source, lisible par l'homme correspondant au commentaire associé au document"
+* description ^short = "Description du document source, lisible par l'homme, correspondant au commentaire associé au document"
 
 * securityLabel obeys constr-bind-securityLabel
 //* securityLabel from https://mos.esante.gouv.fr/NOS/JDV_J08-XdsConfidentialityCode-CISIS/FHIR/JDV-J08-XdsConfidentialityCode-CISIS (required)
