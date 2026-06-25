@@ -4,36 +4,7 @@
 
 ### Définition
 
-```
-@startuml
-skinparam backgroundColor white
-skinparam DefaultFontName Arial
-skinparam DefaultFontSize 12
-skinparam Padding 5
-skinparam usecase {
-  BackgroundColor #e8e8e8
-  BorderColor #888888
-  BorderThickness 1
-  FontSize 12
-}
-skinparam actor {
-  BorderColor #FF7777
-  BackgroundColor #FF9999
-  FontColor #000000
-  FontSize 12
-}
-skinparam ArrowColor #000000
-left to right direction
-actor "Producteur de documents" as PROD <<Rôle>>
-usecase "Ajout simplifié\nd'un document" as UC
-actor "Gestionnaire de partage\nde documents" as GEST <<Rôle>>
-PROD -- UC
-UC -- GEST
-@enduml
-
-```
-
-**Figure 16 : Processus collaboratif "Ajout simplifié d'un document"** 
+**Figure 16 : Processus collaboratif "Ajout simplifié d'un document"**
 
 | | |
 | :--- | :--- |
@@ -47,41 +18,7 @@ UC -- GEST
 
 ### Description et identification des flux
 
-```
-@startuml
-skinparam backgroundColor white
-skinparam DefaultFontName Arial
-skinparam DefaultFontSize 12
-skinparam activity {
-  BackgroundColor #dce8f5
-  BorderColor #888888
-  FontColor #000000
-  ArrowColor #000000
-  StartColor #B8860B
-  EndColor #B8860B
-  FontSize 12
-}
-skinparam swimlane {
-  BorderColor #888888
-  TitleFontSize 13
-  TitleFontColor #000000
-  TitleBackgroundColor white
-}
-|Producteur de documents|
-start
-:Préparer le document;
--> <<flow>>\nFlux 9 - AjoutSimplifieDocument;
-|Gestionnaire de partage de documents|
-:Traiter la demande\nd'ajout simplifié;
--[dashed]-> <<flow>>\nFlux 10 - ResultatAjoutSimplifieDocument;
-|Producteur de documents|
-:Traiter la réponse;
-stop
-@enduml
-
-```
-
-**Figure 17 : Processus collaboratif "Ajout simplifié d'un document"** 
+**Figure 17 : Processus collaboratif "Ajout simplifié d'un document"**
 
 #### Description des actions
 
@@ -102,54 +39,7 @@ stop
 
 ### Flux 9 - AjoutSimplifieDocument MODELISATION DES FLUX D'INFORMATIONS
 
-```
-@startuml
-hide circle
-skinparam backgroundColor white
-skinparam DefaultFontName Arial
-skinparam DefaultFontSize 11
-skinparam class {
-  BackgroundColor white
-  BorderColor #888888
-  HeaderBackgroundColor #dce8f5
-  ArrowColor #000000
-  FontColor #000000
-  FontSize 11
-}
-skinparam ClassAttributeFontSize 10
-class AjoutSimplifieDocument
-class Fiche {
-  idFiche : Identifiant [0..*]
-  idUnique : Identifiant [0..1]
-  auteur : Identifiant [1..*]
-  statut : Code [1..1]
-  classeDocument : Code [0..1]
-  typeDocument : Code [0..1]
-  authentificateur : Identifiant [0..1]
-  dateCreationDocument : DateHeure [1..1]
-  niveauConfidentialite : Code [0..*]
-  cadreExercice : Code [0..1]
-  idPatient : Identifiant [0..1]
-  secteurActivite : Code [0..1]
-  dateDebutActe : DateHeure [0..1]
-  dateFinActe : DateHeure [0..1]
-  commentaire : Texte [0..1]
-  titreDocument : Texte [0..1]
-  langueDocument : Code [0..1]
-  formatDocument : Code [0..1]
-  actePathologie : Code [0..1]
-  version : Numerique [0..1]
-}
-class Document {
-  contenuDocument : ObjetBinaire [1..1]
-}
-AjoutSimplifieDocument "1" --> "1" Fiche
-Fiche "1" --> "1" Document
-@enduml
-
-```
-
-**Figure 18 : Flux 9 - AjoutSimplifieDocument** 
+**Figure 18 : Flux 9 - AjoutSimplifieDocument**
 
 #### Classe "Document"
 
@@ -192,30 +82,7 @@ Une fiche représente le document stocké dans l'infrastructure de partage de do
 
 ### Flux 10 - ResultatAjoutSimplifieDocument MODELISATION DES FLUX D'INFORMATIONS
 
-```
-@startuml
-hide circle
-skinparam backgroundColor white
-skinparam DefaultFontName Arial
-skinparam DefaultFontSize 11
-skinparam class {
-  BackgroundColor white
-  BorderColor #888888
-  HeaderBackgroundColor #dce8f5
-  ArrowColor #000000
-  FontColor #000000
-  FontSize 11
-}
-class ResultatAjoutSimplifieDocument
-class Fiche {
-  statutAttributFiche : Texte [0..*]
-}
-ResultatAjoutSimplifieDocument "0..1" --> "*" Fiche
-@enduml
-
-```
-
-**Figure 19 : Flux 10 - ResultatAjoutSimplifieDocument** 
+**Figure 19 : Flux 10 - ResultatAjoutSimplifieDocument**
 
 #### Classe "Fiche"
 

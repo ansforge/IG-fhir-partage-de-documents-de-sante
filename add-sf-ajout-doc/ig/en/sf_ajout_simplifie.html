@@ -263,35 +263,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h3 id="définition">Définition</h3>
 
-<pre><code class="language-plantuml">@startuml
-skinparam backgroundColor white
-skinparam DefaultFontName Arial
-skinparam DefaultFontSize 12
-skinparam Padding 5
-skinparam usecase {
-  BackgroundColor #e8e8e8
-  BorderColor #888888
-  BorderThickness 1
-  FontSize 12
-}
-skinparam actor {
-  BorderColor #FF7777
-  BackgroundColor #FF9999
-  FontColor #000000
-  FontSize 12
-}
-skinparam ArrowColor #000000
-left to right direction
-actor "Producteur de documents" as PROD &lt;&lt;Rôle&gt;&gt;
-usecase "Ajout simplifié\nd'un document" as UC
-actor "Gestionnaire de partage\nde documents" as GEST &lt;&lt;Rôle&gt;&gt;
-PROD -- UC
-UC -- GEST
-@enduml
-</code></pre>
-
-<p><strong>Figure 16 : Processus collaboratif "Ajout simplifié d'un document"</strong>
-<br /></p>
+<div class="figure" style="text-align: center;">
+    <img src="fonctionnel/fig_16.png" alt="Figure 16" title="Figure 16 : Processus collaboratif Ajout simplifié d'un document" style="width:60%;" />
+    <figcaption><b>Figure 16 : Processus collaboratif "Ajout simplifié d'un document"</b></figcaption>
+</div>
+<p><br /></p>
 
 <table>
   <tbody>
@@ -322,40 +298,11 @@ UC -- GEST
 
 <h3 id="description-et-identification-des-flux">Description et identification des flux</h3>
 
-<pre><code class="language-plantuml">@startuml
-skinparam backgroundColor white
-skinparam DefaultFontName Arial
-skinparam DefaultFontSize 12
-skinparam activity {
-  BackgroundColor #dce8f5
-  BorderColor #888888
-  FontColor #000000
-  ArrowColor #000000
-  StartColor #B8860B
-  EndColor #B8860B
-  FontSize 12
-}
-skinparam swimlane {
-  BorderColor #888888
-  TitleFontSize 13
-  TitleFontColor #000000
-  TitleBackgroundColor white
-}
-|Producteur de documents|
-start
-:Préparer le document;
--&gt; &lt;&lt;flow&gt;&gt;\nFlux 9 - AjoutSimplifieDocument;
-|Gestionnaire de partage de documents|
-:Traiter la demande\nd'ajout simplifié;
--[dashed]-&gt; &lt;&lt;flow&gt;&gt;\nFlux 10 - ResultatAjoutSimplifieDocument;
-|Producteur de documents|
-:Traiter la réponse;
-stop
-@enduml
-</code></pre>
-
-<p><strong>Figure 17 : Processus collaboratif "Ajout simplifié d'un document"</strong>
-<br /></p>
+<div class="figure" style="text-align: center;">
+    <img src="fonctionnel/fig_17.png" alt="Figure 17" title="Figure 17 : Processus collaboratif Ajout simplifié d'un document" style="width:60%;" />
+    <figcaption><b>Figure 17 : Processus collaboratif "Ajout simplifié d'un document"</b></figcaption>
+</div>
+<p><br /></p>
 
 <h4 id="description-des-actions">Description des actions</h4>
 
@@ -416,53 +363,11 @@ stop
 
 <h3 id="flux-9---ajoutsimplifiedocument-modelisation-des-flux-dinformations">Flux 9 - AjoutSimplifieDocument MODELISATION DES FLUX D'INFORMATIONS</h3>
 
-<pre><code class="language-plantuml">@startuml
-hide circle
-skinparam backgroundColor white
-skinparam DefaultFontName Arial
-skinparam DefaultFontSize 11
-skinparam class {
-  BackgroundColor white
-  BorderColor #888888
-  HeaderBackgroundColor #dce8f5
-  ArrowColor #000000
-  FontColor #000000
-  FontSize 11
-}
-skinparam ClassAttributeFontSize 10
-class AjoutSimplifieDocument
-class Fiche {
-  idFiche : Identifiant [0..*]
-  idUnique : Identifiant [0..1]
-  auteur : Identifiant [1..*]
-  statut : Code [1..1]
-  classeDocument : Code [0..1]
-  typeDocument : Code [0..1]
-  authentificateur : Identifiant [0..1]
-  dateCreationDocument : DateHeure [1..1]
-  niveauConfidentialite : Code [0..*]
-  cadreExercice : Code [0..1]
-  idPatient : Identifiant [0..1]
-  secteurActivite : Code [0..1]
-  dateDebutActe : DateHeure [0..1]
-  dateFinActe : DateHeure [0..1]
-  commentaire : Texte [0..1]
-  titreDocument : Texte [0..1]
-  langueDocument : Code [0..1]
-  formatDocument : Code [0..1]
-  actePathologie : Code [0..1]
-  version : Numerique [0..1]
-}
-class Document {
-  contenuDocument : ObjetBinaire [1..1]
-}
-AjoutSimplifieDocument "1" --&gt; "1" Fiche
-Fiche "1" --&gt; "1" Document
-@enduml
-</code></pre>
-
-<p><strong>Figure 18 : Flux 9 - AjoutSimplifieDocument</strong>
-<br /></p>
+<div class="figure" style="text-align: center;">
+    <img src="fonctionnel/fig_18.png" alt="Figure 18" title="Figure 18 Flux 9 - AjoutSimplifieDocument" style="width:20%;" />
+    <figcaption><b>Figure 18 : Flux 9 - AjoutSimplifieDocument</b></figcaption>
+</div>
+<p><br /></p>
 
 <h4 id="classe-document">Classe "Document"</h4>
 
@@ -583,29 +488,11 @@ Fiche "1" --&gt; "1" Document
 
 <h3 id="flux-10---resultatajoutsimplifiedocument-modelisation-des-flux-dinformations">Flux 10 - ResultatAjoutSimplifieDocument MODELISATION DES FLUX D'INFORMATIONS</h3>
 
-<pre><code class="language-plantuml">@startuml
-hide circle
-skinparam backgroundColor white
-skinparam DefaultFontName Arial
-skinparam DefaultFontSize 11
-skinparam class {
-  BackgroundColor white
-  BorderColor #888888
-  HeaderBackgroundColor #dce8f5
-  ArrowColor #000000
-  FontColor #000000
-  FontSize 11
-}
-class ResultatAjoutSimplifieDocument
-class Fiche {
-  statutAttributFiche : Texte [0..*]
-}
-ResultatAjoutSimplifieDocument "0..1" --&gt; "*" Fiche
-@enduml
-</code></pre>
-
-<p><strong>Figure 19 : Flux 10 - ResultatAjoutSimplifieDocument</strong>
-<br /></p>
+<div class="figure" style="text-align: center;">
+    <img src="fonctionnel/fig_19.png" alt="Figure 19" title="Figure 19 Flux 10 - ResultatAjoutSimplifieDocument" style="width:20%;" />
+    <figcaption><b>Figure 19 : Flux 10 - ResultatAjoutSimplifieDocument</b></figcaption>
+</div>
+<p><br /></p>
 
 <h4 id="classe-fiche-1">Classe "Fiche"</h4>
 
@@ -677,7 +564,7 @@ ResultatAjoutSimplifieDocument "0..1" --&gt; "*" Fiche
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-25 13:49:00 +0000">
+  <span title="2026-06-25 14:28:00 +0000">
     2026-06-25
   </span>
 

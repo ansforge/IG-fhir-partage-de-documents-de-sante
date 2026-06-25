@@ -1,0 +1,29 @@
+@startuml
+skinparam backgroundColor white
+skinparam DefaultFontName Arial
+skinparam DefaultFontSize 12
+skinparam Padding 5
+
+skinparam usecase {
+  BackgroundColor #e8e8e8
+  BorderColor #888888
+  BorderThickness 1
+  FontSize 12
+}
+skinparam actor {
+  BorderColor #FF7777
+  BackgroundColor #FF9999
+  FontColor #000000
+  FontSize 12
+}
+skinparam ArrowColor #000000
+
+left to right direction
+
+actor "Producteur de documents" as PROD <<Rôle>>
+usecase "Ajout simplifié\nd'un document" as UC
+actor "Gestionnaire de partage\nde documents" as GEST <<Rôle>>
+
+PROD -- UC
+UC -- GEST
+@enduml

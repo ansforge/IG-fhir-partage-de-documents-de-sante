@@ -1,0 +1,48 @@
+@startuml
+hide circle
+skinparam backgroundColor white
+skinparam DefaultFontName Arial
+skinparam DefaultFontSize 11
+
+skinparam class {
+  BackgroundColor white
+  BorderColor #888888
+  HeaderBackgroundColor #dce8f5
+  ArrowColor #000000
+  FontColor #000000
+  FontSize 11
+}
+skinparam ClassAttributeFontSize 10
+
+class AjoutSimplifieDocument
+
+class Fiche {
+  idFiche : Identifiant [0..*]
+  idUnique : Identifiant [0..1]
+  auteur : Identifiant [1..*]
+  statut : Code [1..1]
+  classeDocument : Code [0..1]
+  typeDocument : Code [0..1]
+  authentificateur : Identifiant [0..1]
+  dateCreationDocument : DateHeure [1..1]
+  niveauConfidentialite : Code [0..*]
+  cadreExercice : Code [0..1]
+  idPatient : Identifiant [0..1]
+  secteurActivite : Code [0..1]
+  dateDebutActe : DateHeure [0..1]
+  dateFinActe : DateHeure [0..1]
+  commentaire : Texte [0..1]
+  titreDocument : Texte [0..1]
+  langueDocument : Code [0..1]
+  formatDocument : Code [0..1]
+  actePathologie : Code [0..1]
+  version : Numerique [0..1]
+}
+
+class Document {
+  contenuDocument : ObjetBinaire [1..1]
+}
+
+AjoutSimplifieDocument "1" --> "1" Fiche
+Fiche "1" --> "1" Document
+@enduml
