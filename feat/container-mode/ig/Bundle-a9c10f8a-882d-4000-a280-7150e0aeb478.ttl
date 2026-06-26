@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/pdsm/Bundle/a9c10f8a-882d-4000-a280-7150e0aeb478> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "a9c10f8a-882d-4000-a280-7150e0aeb478"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.ProvideDocumentBundleResponse" ;
+       fhir:index 0 ;
+       fhir:link <https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.ProvideDocumentBundleResponse>
+     ]
+  ] ;
+  fhir:Bundle.type [ fhir:value "transaction-response"] ;
+  fhir:Bundle.link [
+     fhir:index 0 ;
+     fhir:Bundle.link.relation [ fhir:value "self" ] ;
+     fhir:Bundle.link.url [ fhir:value "http://exemple.com/fhir" ]
+  ] ;
+  fhir:Bundle.entry [
+     fhir:index 0 ;
+     fhir:Bundle.entry.response [
+       fhir:Element.id [ fhir:value "urn:uuid:a9a16511-43ad-11e8-afb2-4107535a99ef" ] ;
+       fhir:Bundle.entry.response.status [ fhir:value "201" ] ;
+       fhir:Bundle.entry.response.location [ fhir:value "List/1" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Bundle.entry.response [
+       fhir:Element.id [ fhir:value "urn:uuid:a9a16512-43ad-11e8-afb2-4107535a99ef" ] ;
+       fhir:Bundle.entry.response.status [ fhir:value "201" ] ;
+       fhir:Bundle.entry.response.location [ fhir:value "DocumentReference/1" ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:Bundle.entry.response [
+       fhir:Element.id [ fhir:value "urn:uuid:8da1cfcc-05db-4aca-86ad82aa756a64bb" ] ;
+       fhir:Bundle.entry.response.status [ fhir:value "201" ] ;
+       fhir:Bundle.entry.response.location [ fhir:value "Binary/1" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/pdsm/Bundle/a9c10f8a-882d-4000-a280-7150e0aeb478.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
