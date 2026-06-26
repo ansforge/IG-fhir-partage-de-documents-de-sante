@@ -7,6 +7,8 @@ on:
 jobs:
   run-sushi-tests_gitHubPages:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/ansforge/fhir-ig-builder:latest
     steps:
       - uses: actions/checkout@v3
         with:      
@@ -20,4 +22,4 @@ jobs:
           bake: "false"
           validator_cli: "false"
           generate_testscript: "false"
-          generate_plantuml : "false"
+          generate_plantuml : "false"          container_mode: "true"
