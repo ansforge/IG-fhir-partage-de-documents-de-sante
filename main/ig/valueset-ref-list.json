@@ -82,6 +82,22 @@
     "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
   },
   {
+    "url" : "https://mos.esante.gouv.fr/NOS/JDV_J08-XdsConfidentialityCode-CISIS/FHIR/JDV-J08-XdsConfidentialityCode-CISIS",
+    "version" : "20200424120000",
+    "status" : "active",
+    "name" : "JDV_J08_XdsConfidentialityCode_CISIS",
+    "title" : null,
+    "description" : "XDS confidentialityCode - CI-SIS",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_A07-StatutVisibiliteDocument/FHIR/TRE-A07-StatutVisibiliteDocument",
+    "https://mos.esante.gouv.fr/NOS/TRE_A08-HL7Confidentiality/FHIR/TRE-A08-HL7Confidentiality"],
+    "oids" : ["1.2.250.1.213.1.1.5.463"],
+    "sources" : ["1.2.250.1.213.1.1.5.463"],
+    "uses" : {
+    },
+    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference",
+    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
+  },
+  {
     "url" : "https://mos.esante.gouv.fr/NOS/JDV_J10-XdsFormatCode-CISIS/FHIR/JDV-J10-XdsFormatCode-CISIS",
     "version" : "20251029120000",
     "status" : "active",

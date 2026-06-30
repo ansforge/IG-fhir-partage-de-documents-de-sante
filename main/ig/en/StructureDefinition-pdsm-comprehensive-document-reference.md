@@ -35,7 +35,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
   "name" : "PDSm_ComprehensiveDocumentReference",
   "title" : "PDSm Comprehensive DocumentReference",
   "status" : "active",
-  "date" : "2026-06-30T13:34:41+00:00",
+  "date" : "2026-06-30T16:19:40+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -338,12 +338,10 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
       "id" : "DocumentReference.securityLabel",
       "path" : "DocumentReference.securityLabel",
       "short" : "Contient les informations définissant le niveau de confidentialité d'un document.",
-      "constraint" : [{
-        "key" : "constr-bind-securityLabel",
-        "severity" : "error",
-        "human" : "Les codes pour cet élément doivent provenir du ValueSet spécifié par le standard. Lorsqu’aucun code ne correspond au concept recherché, un code provenant de la terminologie de référence TRE_A07-StatusVisibiliteDocument, OID : 1.2.250.1.213.1.1.4.13 peut être utilisé.",
-        "source" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-document-reference"
-      }],
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J08-XdsConfidentialityCode-CISIS/FHIR/JDV-J08-XdsConfidentialityCode-CISIS"
+      },
       "mapping" : [{
         "identity" : "specmetier-to-PDSmComprehensiveDocumentReference",
         "map" : "niveauConfidentialite : [0..*] code"
