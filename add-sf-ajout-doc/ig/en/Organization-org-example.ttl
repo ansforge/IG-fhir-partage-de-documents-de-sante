@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,81 +7,91 @@
 
 <https://interop.esante.gouv.fr/ig/fhir/pdsm/Organization/org-example> a fhir:Organization ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "org-example"] ; # 
-  fhir:meta [
-     fhir:extension ( [
-       fhir:extension ( [
-         fhir:url [ fhir:v "systeme-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:code ;
-           fhir:v "CG"
-         ]
-       ] ) ;
-       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-data-trace"^^xsd:anyURI ]
-     ] ) ;
-     fhir:versionId [ fhir:v "1" ] ;
-     fhir:lastUpdated [ fhir:v "2025-04-28T19:35:45.507+02:00"^^xsd:dateTime ] ;
-     fhir:source [ fhir:v "https://annuaire.sante.fr"^^xsd:anyURI ] ;
-     fhir:profile ( [
-       fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization"^^xsd:anyURI ;
+  fhir:Resource.id [ fhir:value "org-example"] ;
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "systeme-information" ] ;
+         fhir:Extension.valueCode [ fhir:value "CG" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-data-trace" ]
+     ] ;
+     fhir:Meta.versionId [ fhir:value "1" ] ;
+     fhir:Meta.lastUpdated [ fhir:value "2025-04-28T19:35:45.507+02:00"^^xsd:dateTime ] ;
+     fhir:Meta.source [ fhir:value "https://annuaire.sante.fr" ] ;
+     fhir:Meta.profile [
+       fhir:value "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization" ;
+       fhir:index -1 ;
        fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization>
-     ] [
-       fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-organization"^^xsd:anyURI ;
+     ], [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-organization" ;
+       fhir:index -1 ;
        fhir:link <https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-organization>
-     ] )
-  ] ; # 
-  fhir:language [ fhir:v "en"] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ]
-  ] ; # 
-  fhir:identifier ( [
-     fhir:use [ fhir:v "official" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "IDNST" ]
-       ] )
-     ] ;
-     fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "2264403106" ]
-  ] [
-     fhir:use [ fhir:v "official" ] ;
-     fhir:type [
-       fhir:coding ( [
-         fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "SIREN" ]
-       ] )
-     ] ;
-     fhir:system [ fhir:v "https://sirene.fr"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "264403106" ]
-  ] ) ; # 
-  fhir:active [ fhir:v true] ; # 
-  fhir:type ( [
-     fhir:extension ( [
-       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types"^^xsd:anyURI ] ;
-       fhir:value [
-         a fhir:code ;
-         fhir:v "organizationType"
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Organization.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.use [ fhir:value "official" ] ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "IDNST" ]
        ]
-     ] ) ;
-     fhir:coding ( [
-       fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-3307"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "LEGAL-ENTITY" ]
-     ] )
-  ] [
-     fhir:extension ( [
-       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types"^^xsd:anyURI ] ;
-       fhir:value [
-         a fhir:code ;
-         fhir:v "secteurActiviteRASS"
+     ] ;
+     fhir:Identifier.system [ fhir:value "urn:oid:1.2.250.1.71.4.2.2" ] ;
+     fhir:Identifier.value [ fhir:value "2264403106" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Identifier.use [ fhir:value "official" ] ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "SIREN" ]
        ]
-     ] ) ;
-     fhir:coding ( [
-       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "SA43" ]
-     ] )
-  ] ) ; # 
-  fhir:name [ fhir:v "HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G"] . # 
+     ] ;
+     fhir:Identifier.system [ fhir:value "https://sirene.fr" ] ;
+     fhir:Identifier.value [ fhir:value "264403106" ]
+  ] ;
+  fhir:Organization.active [ fhir:value "true"^^xsd:boolean] ;
+  fhir:Organization.type [
+     fhir:index -1 ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types" ] ;
+       fhir:Extension.valueCode [ fhir:value "organizationType" ]
+     ] ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-3307" ] ;
+       fhir:Coding.code [ fhir:value "LEGAL-ENTITY" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types" ] ;
+       fhir:Extension.valueCode [ fhir:value "secteurActiviteRASS" ]
+     ] ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite" ] ;
+       fhir:Coding.code [ fhir:value "SA43" ]
+     ]
+  ] ;
+  fhir:Organization.name [ fhir:value "HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G"] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/pdsm/Organization/org-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

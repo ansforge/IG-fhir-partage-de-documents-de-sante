@@ -273,7 +273,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <tbody>
     <tr>
       <td><strong>Service attendu</strong></td>
-      <td>Le producteur de documents envoie au gestionnaire de partage de documents une demande d'ajout simplifié d'un document.</td>
+      <td>Le producteur de documents envoie au gestionnaire de partage de documents une demande d'ajout simplifié d'un document. Ce document peut être un nouveau document ou remplacer un document existant.</td>
     </tr>
     <tr>
       <td><strong>Pré-conditions</strong></td>
@@ -324,7 +324,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td>Traiter la demande d'ajout simplifié</td>
-      <td>L'infrastructure de partage de documents traite la demande d'ajout simplifié, exécute les actions nécessaires au traitement de cette demande et retourne le résultat du traitement.</td>
+      <td>L'infrastructure de partage de documents traite la demande d'ajout simplifié, exécute les actions nécessaires au traitement de cette demande (y compris le passage au statut « superseded » du document remplacé le cas échéant) et retourne le résultat du traitement.</td>
     </tr>
   </tbody>
 </table>
@@ -481,6 +481,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>version : [0..1] Numerique</td>
       <td>Numéro de version de la fiche d'un document. La valeur de la métadonnée version est égale à 1 pour la première version de la fiche.</td>
     </tr>
+    <tr>
+      <td>documentRemplace : [0..1] Identifiant</td>
+      <td>Identifiant unique de la fiche du document remplacé. Lorsque cet attribut est renseigné, le document soumis remplace le document existant dont le statut est alors passé à « superseded » par le gestionnaire de partage de documents.</td>
+    </tr>
   </tbody>
 </table>
 
@@ -564,8 +568,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-25 14:28:00 +0000">
-    2026-06-25
+  <span title="2026-06-30 14:30:00 +0000">
+    2026-06-30
   </span>
 
           <br/>

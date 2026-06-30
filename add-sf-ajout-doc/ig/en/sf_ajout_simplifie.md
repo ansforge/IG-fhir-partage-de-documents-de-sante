@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| **Service attendu** | Le producteur de documents envoie au gestionnaire de partage de documents une demande d'ajout simplifié d'un document. |
+| **Service attendu** | Le producteur de documents envoie au gestionnaire de partage de documents une demande d'ajout simplifié d'un document. Ce document peut être un nouveau document ou remplacer un document existant. |
 | **Pré-conditions** | Le producteur de documents doit au préalable :1. être en possession du document à ajouter,2. être habilité |
 | **Post-conditions** | N/A |
 | **Contraintes fonctionnelles** | N/A |
@@ -26,7 +26,7 @@
 | :--- | :--- |
 | Préparer le document | Le producteur de documents prépare le document à ajouter dans l'infrastructure de partage de documents. |
 | Traiter la réponse | Le producteur de documents reçoit et traite le résultat de la demande d'ajout simplifié du document. Il peut afficher à l'utilisateur le résultat de la demande. |
-| Traiter la demande d'ajout simplifié | L'infrastructure de partage de documents traite la demande d'ajout simplifié, exécute les actions nécessaires au traitement de cette demande et retourne le résultat du traitement. |
+| Traiter la demande d'ajout simplifié | L'infrastructure de partage de documents traite la demande d'ajout simplifié, exécute les actions nécessaires au traitement de cette demande (y compris le passage au statut « superseded » du document remplacé le cas échéant) et retourne le résultat du traitement. |
 
 **Table 14 Tableau des actions**
 
@@ -77,6 +77,7 @@ Une fiche représente le document stocké dans l'infrastructure de partage de do
 | formatDocument : [0..1] Code | Format technique détaillé du document.Nomenclatures utilisées :TRE_A06-FormatCodeComplementaireTRE_A09-DICOMuidRegistryTRE_A10-NomenclatureURNTRE_A11-IheFormatCodeASS_X11-CorresModeleCDA-XdsFormatCode-CISISASS_A12-CorresMediaTypeCDANonStructure-XdsFormatCode-CISIS |
 | actePathologie : [0..1] Code | Actes et pathologies en rapport avec le document.Nomenclatures utilisées :** CCAM pour les actes médicaux (OID="1.2.250.1.213.2.5");** CIM-10 pour les diagnostics de pathologie (OID="2.16.840.1.113883.6.3");** TRE_A00-ProducteurDocNonPS pour les documents d'expression personnelle du patient. |
 | version : [0..1] Numerique | Numéro de version de la fiche d'un document. La valeur de la métadonnée version est égale à 1 pour la première version de la fiche. |
+| documentRemplace : [0..1] Identifiant | Identifiant unique de la fiche du document remplacé. Lorsque cet attribut est renseigné, le document soumis remplace le document existant dont le statut est alors passé à « superseded » par le gestionnaire de partage de documents. |
 
 **Table 31 Attributs de la classe "Fiche"**
 
