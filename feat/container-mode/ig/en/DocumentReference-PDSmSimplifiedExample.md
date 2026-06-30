@@ -6,7 +6,7 @@ version: 1
 
 Profile: [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-simplified-publish.md)
 
-**masterIdentifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/7.2.0/NamingSystem-uri.html)/urn:uuid:abcd-efgh-ijkl-mnop
+**masterIdentifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/5.5.0/NamingSystem-uri.html)/urn:uuid:abcd-efgh-ijkl-mnop
 
 **status**: Current
 

@@ -35,7 +35,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
   "name" : "PDSm_ComprehensiveDocumentReference",
   "title" : "PDSm Comprehensive DocumentReference",
   "status" : "active",
-  "date" : "2026-06-26T12:13:25+00:00",
+  "date" : "2026-06-30T13:22:30+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
