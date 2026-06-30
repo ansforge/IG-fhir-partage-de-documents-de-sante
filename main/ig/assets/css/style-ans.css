@@ -125,7 +125,6 @@ video {
     -webkit-padding-before: 0;
     -webkit-padding-after: 0;
     border: 0;
-    font: inherit;
     margin: 0;
    /* padding: 0;*/
     vertical-align: baseline;
@@ -536,8 +535,6 @@ h6 {
 hr {
     border: 0;
     border-top: 0.1rem solid var(--border-color, var(--gray-400, #dee0ea));
-    margin-bottom: 3.6rem;
-    margin-top: 3.6rem;
 }
 .small,
 small {
