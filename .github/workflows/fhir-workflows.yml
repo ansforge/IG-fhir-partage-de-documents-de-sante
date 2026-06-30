@@ -22,3 +22,4 @@ jobs:
           generate_testscript: "false"
           generate_plantuml: "false"
           container_mode: "true"
+          timing: "true"
