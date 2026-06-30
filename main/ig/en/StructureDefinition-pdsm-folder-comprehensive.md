@@ -34,7 +34,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-folder-compr
   "name" : "PDSm_FolderComprehensive",
   "title" : "PDSm Folder Comprehensive",
   "status" : "active",
-  "date" : "2026-06-30T13:26:19+00:00",
+  "date" : "2026-06-30T13:34:41+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
