@@ -70,9 +70,7 @@ Description: "Profil contenant les métadonnées du document ainsi que le lien v
 * description MS
 * description ^short = "Description du document source, lisible par l'homme, correspondant au commentaire associé au document"
 
-* securityLabel obeys constr-bind-securityLabel
-//* securityLabel from https://mos.esante.gouv.fr/NOS/JDV_J08-XdsConfidentialityCode-CISIS/FHIR/JDV-J08-XdsConfidentialityCode-CISIS (required)
-// Pb : JDV de base par FHIR extensible
+* securityLabel from https://mos.esante.gouv.fr/NOS/JDV_J08-XdsConfidentialityCode-CISIS/FHIR/JDV-J08-XdsConfidentialityCode-CISIS (extensible)
 * securityLabel ^short = "Contient les informations définissant le niveau de confidentialité d'un document."
 
 // ###########
@@ -174,12 +172,6 @@ Severity:    #error
 Invariant:  constr-bind-relatesToTarget
 Description: "Référence contrainte au profil PDSm_ComprehensiveDocumentReference"
 // Expression:       "f:relatesTo/f:target"
-Severity:    #error
-
-
-Invariant: constr-bind-securityLabel
-Description: "Les codes pour cet élément doivent provenir du ValueSet spécifié par le standard. Lorsqu’aucun code ne correspond au concept recherché, un code provenant de la terminologie de référence TRE_A07-StatusVisibiliteDocument, OID : 1.2.250.1.213.1.1.4.13 peut être utilisé."
-// Expression:       "f:securityLabel"
 Severity:    #error
 
 Invariant: constr-bind-attachmenturl
