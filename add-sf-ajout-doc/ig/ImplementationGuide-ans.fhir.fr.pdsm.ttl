@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.name [ fhir:value "PDSm"] ;
   fhir:ImplementationGuide.title [ fhir:value "Partage de Documents de Santé en mobilité (PDSm)"] ;
   fhir:ImplementationGuide.status [ fhir:value "active"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-06-30T14:30:17+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-07-13T10:36:56+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "ANS"] ;
   fhir:ImplementationGuide.contact [
      fhir:index 0 ;
@@ -107,7 +107,7 @@
        fhir:link <https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies>
      ] ;
      fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "ans.fr.terminologies" ] ;
-     fhir:ImplementationGuide.dependsOn.version [ fhir:value "1.10.0" ]
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "1.11.1" ]
   ] ;
   fhir:ImplementationGuide.definition [
      fhir:Element.extension [

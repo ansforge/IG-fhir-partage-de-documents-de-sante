@@ -14,7 +14,7 @@
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-06-30T14:30:17+00:00",
+  "date" : "2026-07-13T10:36:56+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -75,7 +75,7 @@
     "id" : "ans_fr_terminologies",
     "uri" : "https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies",
     "packageId" : "ans.fr.terminologies",
-    "version" : "1.10.0"
+    "version" : "1.11.1"
   }],
   "definition" : {
     "extension" : [{

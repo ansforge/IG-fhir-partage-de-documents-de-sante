@@ -4,6 +4,7 @@
 
 ### Définition
 
+
 **Figure 16 : Processus collaboratif "Ajout simplifié d'un document"**
 
 | | |
@@ -17,6 +18,7 @@
 **Table 5 Caractéristiques du processus collaboratif**
 
 ### Description et identification des flux
+
 
 **Figure 17 : Processus collaboratif "Ajout simplifié d'un document"**
 
@@ -38,6 +40,7 @@
 | Flux 10 - ResultatAjoutSimplifieDocument | Ajout simplifié d'un document | Gestionnaire de partage de documents | Producteur de documents | Oui |
 
 ### Flux 9 - AjoutSimplifieDocument MODELISATION DES FLUX D'INFORMATIONS
+
 
 **Figure 18 : Flux 9 - AjoutSimplifieDocument**
 
@@ -82,6 +85,7 @@ Une fiche représente le document stocké dans l'infrastructure de partage de do
 **Table 31 Attributs de la classe "Fiche"**
 
 ### Flux 10 - ResultatAjoutSimplifieDocument MODELISATION DES FLUX D'INFORMATIONS
+
 
 **Figure 19 : Flux 10 - ResultatAjoutSimplifieDocument**
 
