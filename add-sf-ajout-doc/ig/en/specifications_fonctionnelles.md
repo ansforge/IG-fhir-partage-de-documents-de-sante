@@ -7,7 +7,7 @@ Ces spécifications fonctionnelles présentent une étude métier pour la mise e
 Ces spécifications fonctionnelles sont dérivées en deux spécifications techniques :
 
 * Les spécifications techniques se basant sur le standard FHIR et IHE MHD (dans ce guide)
-* Les spécifications techniques se basant sur IHE XDS accessible dans la page CI-SIS https://esante.gouv.fr/volet-partage-de-documents-de-sante
+* Les spécifications techniques se basant sur IHE XDS accessible dans la page CI-SIS [https://esante.gouv.fr/volet-partage-de-documents-de-sante](https://esante.gouv.fr/volet-partage-de-documents-de-sante)
 
 ### CADRE JURIDIQUE ET ORIENTATIONS ORGANISATIONNELLES
 
