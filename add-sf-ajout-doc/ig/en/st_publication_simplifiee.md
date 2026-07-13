@@ -1,10 +1,10 @@
-# Ajout simplifié d'un document (ITI-105) - Partage de Documents de Santé en mobilité (PDSm) v3.1.1
+# Publication simplifiée d'un document (ITI-105) - Partage de Documents de Santé en mobilité (PDSm) v3.1.1
 
-## Ajout simplifié d'un document (ITI-105)
+## Publication simplifiée d'un document (ITI-105)
 
-Ce flux permet l'ajout simplifié d'un document en respectant la requête de la transaction IHE "Simplified Publish [ITI-105]" du profil MHD.
+Ce flux permet la publication simplifiée d'un document en respectant la requête de la transaction IHE "Simplified Publish [ITI-105]" du profil MHD.
 
-### Flux 09 : ajout simplifié d’un document
+### Flux 09 : publication simplifiée d’un document
 
 Ce flux correspond à une interaction « CREATE » où le créateur de document va émettre une requête HTTP POST dont le corps contient une ressource de type DocumentReference. Un profil spécifique héritant du profil IHE MHD « SimplifiedPublish.DocumentReference » est créé pour ce volet et nommé PDSm_SimplifiedDocumentReference.
 
@@ -16,9 +16,9 @@ Les ressources référencées à partir de ce profil (ex : Patient, via l’attr
 * Avec une référence vers un fragment interne (via l’attribut contained). L’élément DocumentReference.contained [0..*] peut contenir l’ensemble des ressources référencées.
  
 
-### Flux 10 : résultat de l’ajout simplifié d’un document
+### Flux 10 : résultat de la publication simplifiée d’un document
 
-Le résultat de l’ajout simplifié d’un document doit être conforme au résultat de l’interaction HTTP « CREATE » de FHIR . En cas de succès, le serveur retourne :
+Le résultat de la publication simplifiée d’un document doit être conforme au résultat de l’interaction HTTP « CREATE » de FHIR . En cas de succès, le serveur retourne :
 
 * Le HTTP Code 201 Created
 * Un body contenant la ressource créée avec les attributs ; id, lastUpdated et versionId mis à jour

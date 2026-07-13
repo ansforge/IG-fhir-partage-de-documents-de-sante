@@ -11,7 +11,7 @@
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-07-13T10:36:56+00:00",
+  "date" : "2026-07-13T14:55:38+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -870,7 +870,7 @@
         "reference" : "StructureDefinition/pdsm-simplified-publish"
       },
       "name" : "PDSm Simplified Publish Document Reference",
-      "description" : "Profil utilisé dans le cadre du flux 9 d'ajout simplifié de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105.\n\nContrairement au profil PDSm_ComprehensiveDocumentReference, le document est directement inclus dans DocumentReference.attachment.data et non dans une ressource « Binary » externe.\n\nLa publication simplifiée est une simple requête HTTP POST d'une ressource DocumentReference conforme à ce profil.",
+      "description" : "Profil utilisé dans le cadre du flux 9 de publication simplifiée de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105.\n\nContrairement au profil PDSm_ComprehensiveDocumentReference, le document est directement inclus dans DocumentReference.attachment.data et non dans une ressource « Binary » externe.\n\nLa publication simplifiée est une simple requête HTTP POST d'une ressource DocumentReference conforme à ce profil.",
       "exampleBoolean" : false
     },
     {
@@ -1045,10 +1045,10 @@
         {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "sf_ajout_simplifie.html"
+            "valueUrl" : "sf_publication_simplifiee.html"
           }],
-          "nameUrl" : "sf_ajout_simplifie.html",
-          "title" : "Ajout simplifié d'un document",
+          "nameUrl" : "sf_publication_simplifiee.html",
+          "title" : "Publication simplifiée d'un document",
           "generation" : "markdown"
         }]
       },
@@ -1108,10 +1108,10 @@
         {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "st_ajout_simplifie.html"
+            "valueUrl" : "st_publication_simplifiee.html"
           }],
-          "nameUrl" : "st_ajout_simplifie.html",
-          "title" : "Ajout simplifié d'un document (ITI-105)",
+          "nameUrl" : "st_publication_simplifiee.html",
+          "title" : "Publication simplifiée d'un document (ITI-105)",
           "generation" : "markdown"
         }]
       },

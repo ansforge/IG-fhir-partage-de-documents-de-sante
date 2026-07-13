@@ -127,7 +127,7 @@
         <a href="sf_consultation.html">Consultation de documents</a>
       </li>
       <li>
-        <a href="sf_ajout_simplifie.html">Ajout simplifié d&apos;un document</a>
+        <a href="sf_publication_simplifiee.html">Publication simplifiée d&apos;un document</a>
       </li>
     </ul>
   </li>
@@ -155,7 +155,7 @@
         <a href="st_consultation.html">Consultation de documents (ITI-68)</a>
       </li>
       <li>
-        <a href="st_ajout_simplifie.html">Ajout simplifié d&apos;un document (ITI-105)</a>
+        <a href="st_publication_simplifiee.html">Publication simplifiée d&apos;un document (ITI-105)</a>
       </li>
     </ul>
   </li>
@@ -350,7 +350,7 @@ Dans le cas d’une mise à jour d’un classeur, comme List.status ou List.entr
 </div></td><td>Profil de réponse de la transaction IHE &quot;Find Document References [ITI-67]&quot; basée sur le bundle MHD FindDocumentReferencesComprehensiveResponseMessage</td></tr><tr><td><div><p><a href="StructureDefinition-pdsm-find-lists-response.html">PDSm Find Lists Response</a></p>
 </div></td><td>Profil de réponse de la transaction IHE &quot;Find Document Lists [ITI-66]&quot; basée sur le bundle MHD FindDocumentListsResponseMessage</td></tr><tr><td><div><p><a href="StructureDefinition-pdsm-folder-comprehensive.html">PDSm Folder Comprehensive</a></p>
 </div></td><td>Profil du Classeur dérivé de la ressource List et du profil IHE MHD « Comprehensive Folder ».</td></tr><tr><td><div><p><a href="StructureDefinition-pdsm-simplified-publish.html">PDSm Simplified Publish Document Reference</a></p>
-</div></td><td><div><p>Profil utilisé dans le cadre du flux 9 d'ajout simplifié de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105.</p>
+</div></td><td><div><p>Profil utilisé dans le cadre du flux 9 de publication simplifiée de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105.</p>
 <p>Contrairement au profil PDSm_ComprehensiveDocumentReference, le document est directement inclus dans DocumentReference.attachment.data et non dans une ressource « Binary » externe.</p>
 <p>La publication simplifiée est une simple requête HTTP POST d'une ressource DocumentReference conforme à ce profil.</p>
 </div></td></tr><tr><td><div><p><a href="StructureDefinition-pdsm-submissionset-comprehensive.html">PDSm SubmissionSet Comprehensive</a></p>
@@ -395,8 +395,8 @@ Dans le cas d’une mise à jour d’un classeur, comme List.status ou List.entr
       <td>Pour demander la consultation d'un ou de plusieurs document ainsi que le résultat de la demande</td>
     </tr>
     <tr>
-      <td><a href="st_ajout_simplifie.html">Les flux 09 et 10</a></td>
-      <td>AjoutSimplifieDocument et ResultatAjoutSimplifieDocument</td>
+      <td><a href="st_publication_simplifiee.html">Les flux 09 et 10</a></td>
+      <td>PublicationSimplifieeDocument et ResultatPublicationSimplifieeDocument</td>
       <td>Pour publier un document de manière simplifiée ainsi que le résultat de la demande</td>
     </tr>
   </tbody>
@@ -557,7 +557,7 @@ Dans le cas d’une mise à jour d’un classeur, comme List.status ou List.entr
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-13 10:36:00 +0000">
+  <span title="2026-07-13 14:55:00 +0000">
     2026-07-13
   </span>
 

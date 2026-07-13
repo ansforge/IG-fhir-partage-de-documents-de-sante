@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.name [ fhir:value "PDSm"] ;
   fhir:ImplementationGuide.title [ fhir:value "Partage de Documents de Santé en mobilité (PDSm)"] ;
   fhir:ImplementationGuide.status [ fhir:value "active"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-07-13T10:36:56+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-07-13T14:55:38+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "ANS"] ;
   fhir:ImplementationGuide.contact [
      fhir:index -1 ;
@@ -1007,7 +1007,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/pdsm-simplified-publish" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "PDSm Simplified Publish Document Reference" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profil utilisé dans le cadre du flux 9 d'ajout simplifié de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105.\n\nContrairement au profil PDSm_ComprehensiveDocumentReference, le document est directement inclus dans DocumentReference.attachment.data et non dans une ressource « Binary » externe.\n\nLa publication simplifiée est une simple requête HTTP POST d'une ressource DocumentReference conforme à ce profil." ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profil utilisé dans le cadre du flux 9 de publication simplifiée de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105.\n\nContrairement au profil PDSm_ComprehensiveDocumentReference, le document est directement inclus dans DocumentReference.attachment.data et non dans une ressource « Binary » externe.\n\nLa publication simplifiée est une simple requête HTTP POST d'une ressource DocumentReference conforme à ce profil." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index -1 ;
@@ -1210,10 +1210,10 @@
            fhir:Element.extension [
              fhir:index -1 ;
              fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
-             fhir:Extension.valueUrl [ fhir:value "sf_ajout_simplifie.html" ]
+             fhir:Extension.valueUrl [ fhir:value "sf_publication_simplifiee.html" ]
            ] ;
-           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "sf_ajout_simplifie.html" ] ;
-           fhir:ImplementationGuide.definition.page.title [ fhir:value "Ajout simplifié d'un document" ] ;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "sf_publication_simplifiee.html" ] ;
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Publication simplifiée d'un document" ] ;
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
          ]
        ], [
@@ -1281,10 +1281,10 @@
            fhir:Element.extension [
              fhir:index -1 ;
              fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
-             fhir:Extension.valueUrl [ fhir:value "st_ajout_simplifie.html" ]
+             fhir:Extension.valueUrl [ fhir:value "st_publication_simplifiee.html" ]
            ] ;
-           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "st_ajout_simplifie.html" ] ;
-           fhir:ImplementationGuide.definition.page.title [ fhir:value "Ajout simplifié d'un document (ITI-105)" ] ;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "st_publication_simplifiee.html" ] ;
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Publication simplifiée d'un document (ITI-105)" ] ;
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
          ]
        ], [
