@@ -56,7 +56,7 @@ La documentation complète est accessible <a href="st_recherche_fiche.html">ici<
 ### Consultation de documents
 
 <div class="figure" style='text-align: center;'>
-    <img src="PDSm-flux7_8.png" alt="Flux 07 08" title="Flux 07 et 08" style="width:40%;">
+    <p>{% include PDSm-flux7_8.svg %}</p>
     <figcaption><b>Consultation de documents : Flux 07 et 08"</b></figcaption>
 </div>
 <br>
@@ -71,7 +71,7 @@ La documentation complète est accessible <a href="st_consultation.html">ici</a>
 ### Ajout simplifié de document
 
 <div class="figure" style='text-align: center;'>
-    <img src="PDSm-flux9_10.png" alt="Flux 09 10" title="Flux 09 et 10" style="width:40%;">
+    <p>{% include PDSm-flux9_10.svg %}</p>
     <figcaption><b>Ajout simplifié de document : Flux 09 et 10"</b></figcaption>
 </div>
 <br>
