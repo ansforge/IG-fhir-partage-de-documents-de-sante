@@ -13,11 +13,11 @@ skinparam class {
   FontSize 11
 }
 
-class ResultatAjoutSimplifieDocument
+class ResultatPublicationSimplifieeDocument
 
 class Fiche {
   statutAttributFiche : Texte [0..*]
 }
 
-ResultatAjoutSimplifieDocument "0..1" --> "*" Fiche
+ResultatPublicationSimplifieeDocument "0..1" --> "*" Fiche
 @enduml

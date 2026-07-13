@@ -27,8 +27,8 @@
 [ITI-67]: st_recherche_fiche.html
 [Consultation de documents (ITI-68)]: st_consultation.html
 [ITI-68]: st_consultation.html
-[Ajout simplifié d'un document (ITI-105)]: st_ajout_simplifie.html
-[ITI-105]: st_ajout_simplifie.html
+[Publication simplifiée d'un document (ITI-105)]: st_publication_simplifiee.html
+[ITI-105]: st_publication_simplifiee.html
 
 <!-- Autres ressources -->
 [Autres ressources]: autres_ressources.html

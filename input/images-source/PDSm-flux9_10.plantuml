@@ -18,10 +18,10 @@ participant "Consommateur\n de documents" as CONS
 participant "Gestionnaire de partage\n de documents" as INFRA
 
 
-CONS-[#black]> INFRA : Flux 9 **AjoutSimplifieDocument** [ITI-105] \n <color #FireBrick>HTTP POST [base] + ressource "DocumentReference"</color>
+CONS-[#black]> INFRA : Flux 9 **PublicationSimplifieeDocument** [ITI-105] \n <color #FireBrick>HTTP POST [base] + ressource "DocumentReference"</color>
 activate INFRA
 activate CONS
-INFRA-[#black]-> CONS : Flux 10 **ResultatAjoutSimplifieDocument** [ITI-105] \n <color #FireBrick>HTTP OK 20O (+ ressource "DocumentReference")</color>
+INFRA-[#black]-> CONS : Flux 10 **ResultatPublicationSimplifieeDocument** [ITI-105] \n <color #FireBrick>HTTP OK 20O (+ ressource "DocumentReference")</color>
 deactivate CONS
 deactivate INFRA
 @enduml

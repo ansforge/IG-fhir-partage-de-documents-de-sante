@@ -22,10 +22,10 @@ skinparam swimlane {
 |Producteur de documents|
 start
 :Préparer le document;
--> <<flow>>\nFlux 9 - AjoutSimplifieDocument;
+-> <<flow>>\nFlux 9 - PublicationSimplifieeDocument;
 |Gestionnaire de partage de documents|
-:Traiter la demande\nd'ajout simplifié;
--[dashed]-> <<flow>>\nFlux 10 - ResultatAjoutSimplifieDocument;
+:Traiter la demande\nde publication simplifiée;
+-[dashed]-> <<flow>>\nFlux 10 - ResultatPublicationSimplifieeDocument;
 |Producteur de documents|
 :Traiter la réponse;
 stop

@@ -3,11 +3,11 @@
 
 <div class="figure" style='text-align: center;'>
     <p>{% include fig_16.svg %}</p>
-    <figcaption><b>Figure 16 : Processus collaboratif "Ajout simplifié d'un document"</b></figcaption>
+    <figcaption><b>Figure 16 : Processus collaboratif "Publication simplifiée d'un document"</b></figcaption>
 </div>
 <br>
 
-| **Service attendu** | Le producteur de documents envoie au gestionnaire de partage de documents une demande d'ajout simplifié d'un document. Ce document peut être un nouveau document ou remplacer un document existant. |
+| **Service attendu** | Le producteur de documents envoie au gestionnaire de partage de documents une demande de publication simplifiée d'un document. Ce document peut être un nouveau document ou remplacer un document existant. |
 | **Pré-conditions** | Le producteur de documents doit au préalable :<br>1. être en possession du document à ajouter,<br>2. être habilité |
 | **Post-conditions** | N/A |
 | **Contraintes fonctionnelles** | N/A |
@@ -20,7 +20,7 @@
 
 <div class="figure" style='text-align: center;'>
     <p>{% include fig_17.svg %}</p>
-    <figcaption><b>Figure 17 : Processus collaboratif "Ajout simplifié d'un document"</b></figcaption>
+    <figcaption><b>Figure 17 : Processus collaboratif "Publication simplifiée d'un document"</b></figcaption>
 </div>
 <br>
 
@@ -30,8 +30,8 @@
 | **Action** | **Description** |
 | ------ | ------ |
 | Préparer le document | Le producteur de documents prépare le document à ajouter dans l'infrastructure de partage de documents. |
-| Traiter la réponse | Le producteur de documents reçoit et traite le résultat de la demande d'ajout simplifié du document. Il peut afficher à l'utilisateur le résultat de la demande. |
-| Traiter la demande d'ajout simplifié | L'infrastructure de partage de documents traite la demande d'ajout simplifié, exécute les actions nécessaires au traitement de cette demande (y compris le passage au statut « superseded » du document remplacé le cas échéant) et retourne le résultat du traitement. |
+| Traiter la réponse | Le producteur de documents reçoit et traite le résultat de la demande de publication simplifiée du document. Il peut afficher à l'utilisateur le résultat de la demande. |
+| Traiter la demande de publication simplifiée | L'infrastructure de partage de documents traite la demande de publication simplifiée, exécute les actions nécessaires au traitement de cette demande (y compris le passage au statut « superseded » du document remplacé le cas échéant) et retourne le résultat du traitement. |
 
 **Table 14 Tableau des actions**
 
@@ -41,21 +41,21 @@
 
 | **Flux** | **Processus** | **Emetteur** | **Récepteur** | **Périmètre** |
 | ------ | ------ | ------ | ------ | ------ |
-| Flux 9 - AjoutSimplifieDocument | Ajout simplifié d'un document | Producteur de documents | Gestionnaire de partage de documents | Oui |
-| Flux 10 - ResultatAjoutSimplifieDocument | Ajout simplifié d'un document | Gestionnaire de partage de documents | Producteur de documents | Oui |
+| Flux 9 - PublicationSimplifieeDocument | Publication simplifiée d'un document | Producteur de documents | Gestionnaire de partage de documents | Oui |
+| Flux 10 - ResultatPublicationSimplifieeDocument | Publication simplifiée d'un document | Gestionnaire de partage de documents | Producteur de documents | Oui |
 
 
-### Flux 9 - AjoutSimplifieDocument MODELISATION DES FLUX D'INFORMATIONS
+### Flux 9 - PublicationSimplifieeDocument MODELISATION DES FLUX D'INFORMATIONS
 
 <div class="figure" style='text-align: center;'>
     <p>{% include fig_18.svg %}</p>
-    <figcaption><b>Figure 18 : Flux 9 - AjoutSimplifieDocument</b></figcaption>
+    <figcaption><b>Figure 18 : Flux 9 - PublicationSimplifieeDocument</b></figcaption>
 </div>
 <br>
 
 #### Classe "Document"
 
-Un document est la plus petite unité d'information déposée dans l'infrastructure de partage de documents. Dans le cadre de l'ajout simplifié, le contenu du document est directement inclus dans la fiche (et non transmis dans une ressource séparée).
+Un document est la plus petite unité d'information déposée dans l'infrastructure de partage de documents. Dans le cadre de la publication simplifiée, le contenu du document est directement inclus dans la fiche (et non transmis dans une ressource séparée).
 
 | **Nom** | **Description** |
 | ----- | ----- |
@@ -93,11 +93,11 @@ Une fiche représente le document stocké dans l'infrastructure de partage de do
 **Table 31 Attributs de la classe "Fiche"**
 
 
-### Flux 10 - ResultatAjoutSimplifieDocument MODELISATION DES FLUX D'INFORMATIONS
+### Flux 10 - ResultatPublicationSimplifieeDocument MODELISATION DES FLUX D'INFORMATIONS
 
 <div class="figure" style='text-align: center;'>
     <p>{% include fig_19.svg %}</p>
-    <figcaption><b>Figure 19 : Flux 10 - ResultatAjoutSimplifieDocument</b></figcaption>
+    <figcaption><b>Figure 19 : Flux 10 - ResultatPublicationSimplifieeDocument</b></figcaption>
 </div>
 <br>
 
@@ -107,6 +107,6 @@ Une fiche représente le document stocké dans l'infrastructure de partage de do
 
 | **Nom** | **Description** |
 | ----- | ----- |
-| statutAttributFiche : [0..*] Texte | La réponse de la demande d'ajout simplifié d'un document peut contenir une fiche qui contient le statut (réussite ou échec) de chaque attribut renseigné lors de la demande d'ajout. |
+| statutAttributFiche : [0..*] Texte | La réponse de la demande de publication simplifiée d'un document peut contenir une fiche qui contient le statut (réussite ou échec) de chaque attribut renseigné lors de la demande de publication. |
 
 **Table 32 Attributs de la classe "Fiche"**

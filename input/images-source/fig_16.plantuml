@@ -21,7 +21,7 @@ skinparam ArrowColor #000000
 left to right direction
 
 actor "Producteur de documents" as PROD <<Rôle>>
-usecase "Ajout simplifié\nd'un document" as UC
+usecase "Publication simplifiée\nd'un document" as UC
 actor "Gestionnaire de partage\nde documents" as GEST <<Rôle>>
 
 PROD -- UC

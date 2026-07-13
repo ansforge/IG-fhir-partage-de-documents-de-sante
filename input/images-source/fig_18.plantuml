@@ -14,7 +14,7 @@ skinparam class {
 }
 skinparam ClassAttributeFontSize 10
 
-class AjoutSimplifieDocument
+class PublicationSimplifieeDocument
 
 class Fiche {
   idFiche : Identifiant [0..*]
@@ -43,6 +43,6 @@ class Document {
   contenuDocument : ObjetBinaire [1..1]
 }
 
-AjoutSimplifieDocument "1" --> "1" Fiche
+PublicationSimplifieeDocument "1" --> "1" Fiche
 Fiche "1" --> "1" Document
 @enduml
