@@ -57,6 +57,8 @@ Le périmètre de l'étude englobe les processus en couleur sur le diagramme de 
 | Flux 6 - ResultatRechercheDocument | Recherche de documents | Gestionnaire de partage de documents | Consommateur de documents | Oui | 
 | Flux 7 - DemandeConsultationDocument | Consultation de documents | Consommateur de documents | Gestionnaire de partage de documents | Oui |
 | Flux 8 - ResultatDemandeConsultationDocument | Consultation de documents | Gestionnaire de partage de documents | Consommateur de documents | Oui |
+| Flux 9 - PublicationSimplifieeDocument | Publication simplifiée d'un document | Producteur de documents | Gestionnaire de partage de documents | Oui |
+| Flux 10 - ResultatPublicationSimplifieeDocument | Publication simplifiée d'un document | Gestionnaire de partage de documents | Producteur de documents | Oui |
 
 ### IDENTIFICATION DES CONCEPTS VEHICULES DANS LES FLUX D’INFORMATIONS ET CORRESPONDANCE AVEC LES CLASSES ET ATTRIBUTS DU MOS
 
@@ -84,3 +86,4 @@ Pour consulter les spécifications fonctionnelles détaillées de chaque process
 * [Mise à jour de documents](sf_maj.html)
 * [Recherche de documents](sf_recherche.html)
 * [Consultation de documents](sf_consultation.html)
+* [Publication simplifiée d'un document](sf_publication_simplifiee.html)
