@@ -3,10 +3,11 @@
 ## Pages
 
 * [Accueil](en/index.md)
-* [Ajout simplifié d'un document (ITI-105)](en/st_ajout_simplifie.md)
 * [Ajout d'un lot de documents](en/sf_ajout.md)
 * [Téléchargements et usages](en/downloads.md)
 * [Equivalences](en/equivalences.md)
+* [Publication simplifiée d'un document (ITI-105)](en/st_publication_simplifiee.md)
+* [Publication simplifiée d'un document](en/sf_publication_simplifiee.md)
 * [Ajout d'un lot de documents (ITI-65)](en/st_ajout.md)
 * [Autres Ressources](en/autres_ressources.md)
 * [Consultation de documents](en/sf_consultation.md)

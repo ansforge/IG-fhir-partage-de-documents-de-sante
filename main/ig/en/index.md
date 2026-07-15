@@ -31,7 +31,7 @@ Le tableau ci-après spécifie les profils utilisés pour les ressources et type
 | [PDSm Find DocumentReferences Comprehensive Response](StructureDefinition-pdsm-find-documentreferences-comprehensive-response.md) | Profil de réponse de la transaction IHE "Find Document References [ITI-67]" basée sur le bundle MHD FindDocumentReferencesComprehensiveResponseMessage |
 | [PDSm Find Lists Response](StructureDefinition-pdsm-find-lists-response.md) | Profil de réponse de la transaction IHE "Find Document Lists [ITI-66]" basée sur le bundle MHD FindDocumentListsResponseMessage |
 | [PDSm Folder Comprehensive](StructureDefinition-pdsm-folder-comprehensive.md) | Profil du Classeur dérivé de la ressource List et du profil IHE MHD « Comprehensive Folder ». |
-| [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-simplified-publish.md) | Profil utilisé dans le cadre du flux 9 d'ajout simplifié de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105.Contrairement au profil PDSm_ComprehensiveDocumentReference, le document est directement inclus dans DocumentReference.attachment.data et non dans une ressource « Binary » externe.La publication simplifiée est une simple requête HTTP POST d'une ressource DocumentReference conforme à ce profil. |
+| [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-simplified-publish.md) | Profil utilisé dans le cadre du flux 9 de publication simplifiée de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105.Contrairement au profil PDSm_ComprehensiveDocumentReference, le document est directement inclus dans DocumentReference.attachment.data et non dans une ressource « Binary » externe.La publication simplifiée est une simple requête HTTP POST d'une ressource DocumentReference conforme à ce profil. |
 | [PDSm SubmissionSet Comprehensive](StructureDefinition-pdsm-submissionset-comprehensive.md) | Profil du lot de soumission dérivé de la ressource List et du profil IHE MHD « ComprehensiveSubmissionSet ». |
 
 ### Les flux
@@ -45,7 +45,7 @@ Un flux est un échange entre deux systèmes. Des flux ont été identifiés lor
 | [Les flux 05a et 06a](st_recherche_lot.md) | RechercheDocument et ResultatRechercheDocument | Pour la recherche de lot de documents à l'aide de critères de recherche ainsi que le résultat de la demande |
 | [Les flux 05b et 06b](st_recherche_fiche.md) | RechercheDocument et ResultatRechercheDocument | Pour la recherche de fiches à l'aide de critères de recherche ainsi que le résultat de la demande |
 | [Les flux 07 et 08](st_consultation.md) | DemandeConsultationDocument et ResultatDemandeConsultationDocument | Pour demander la consultation d'un ou de plusieurs document ainsi que le résultat de la demande |
-| [Les flux 09 et 10](st_ajout_simplifie.md) | AjoutSimplifieDocument et ResultatAjoutSimplifieDocument | Pour publier un document de manière simplifiée ainsi que le résultat de la demande |
+| [Les flux 09 et 10](st_publication_simplifiee.md) | PublicationSimplifieeDocument et ResultatPublicationSimplifieeDocument | Pour publier un document de manière simplifiée ainsi que le résultat de la demande |
 
 #### Alimentation utilisant Comprehensive Metadata
 

@@ -6,8 +6,8 @@
   "status" : "active",
   "package-id" : "ans.fhir.fr.pdsm",
   "ig-ver" : "3.1.1",
-  "date" : "Tue, 30 Jun, 2026 16:19:40 +0000",
-  "dateISO8601" : "2026-06-30T16:19:40+00:00",
+  "date" : "Wed, 15 Jul, 2026 16:15:50 +0000",
+  "dateISO8601" : "2026-07-15T16:15:50+00:00",
   "errs" : 27,
   "warnings" : 92,
   "hints" : 82,
@@ -15,5 +15,5 @@
   "suppressed-warnings" : 0,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 3865298440
+  "maxMemory" : 3859917824
 }

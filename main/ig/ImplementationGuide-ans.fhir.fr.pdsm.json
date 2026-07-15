@@ -11,7 +11,7 @@
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-06-30T16:19:40+00:00",
+  "date" : "2026-07-15T16:15:50+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -72,7 +72,7 @@
     "id" : "ans_fr_terminologies",
     "uri" : "https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies",
     "packageId" : "ans.fr.terminologies",
-    "version" : "1.10.0"
+    "version" : "1.11.1"
   }],
   "definition" : {
     "extension" : [{
@@ -870,7 +870,7 @@
         "reference" : "StructureDefinition/pdsm-simplified-publish"
       },
       "name" : "PDSm Simplified Publish Document Reference",
-      "description" : "Profil utilisé dans le cadre du flux 9 d'ajout simplifié de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105.\n\nContrairement au profil PDSm_ComprehensiveDocumentReference, le document est directement inclus dans DocumentReference.attachment.data et non dans une ressource « Binary » externe.\n\nLa publication simplifiée est une simple requête HTTP POST d'une ressource DocumentReference conforme à ce profil.",
+      "description" : "Profil utilisé dans le cadre du flux 9 de publication simplifiée de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105.\n\nContrairement au profil PDSm_ComprehensiveDocumentReference, le document est directement inclus dans DocumentReference.attachment.data et non dans une ressource « Binary » externe.\n\nLa publication simplifiée est une simple requête HTTP POST d'une ressource DocumentReference conforme à ce profil.",
       "exampleBoolean" : false
     },
     {
@@ -1041,6 +1041,15 @@
           "nameUrl" : "sf_consultation.html",
           "title" : "Consultation de documents",
           "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "sf_publication_simplifiee.html"
+          }],
+          "nameUrl" : "sf_publication_simplifiee.html",
+          "title" : "Publication simplifiée d'un document",
+          "generation" : "markdown"
         }]
       },
       {
@@ -1099,10 +1108,10 @@
         {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "st_ajout_simplifie.html"
+            "valueUrl" : "st_publication_simplifiee.html"
           }],
-          "nameUrl" : "st_ajout_simplifie.html",
-          "title" : "Ajout simplifié d'un document (ITI-105)",
+          "nameUrl" : "st_publication_simplifiee.html",
+          "title" : "Publication simplifiée d'un document (ITI-105)",
           "generation" : "markdown"
         }]
       },

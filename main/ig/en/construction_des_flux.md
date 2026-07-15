@@ -40,6 +40,7 @@ La recherche de fiches correspond à la transaction IHE "Find Document Reference
 
 ### Consultation de documents
 
+
 **Consultation de documents : Flux 07 et 08"**
 
 * Le flux 07 de demande de consultation de documents repose sur l’interaction « read » de FHIR. Le gestionnaire de partage de documents doit supporter les requêtes HTTP GET.
@@ -47,12 +48,13 @@ La recherche de fiches correspond à la transaction IHE "Find Document Reference
 
 Les flux 07 et 08 correspondent aux transactions IHE "Retrieve Document [ITI-68]". La documentation complète est accessible [ici](st_consultation.md)
 
-### Ajout simplifié de document
+### Publication simplifiée de document
 
-**Ajout simplifié de document : Flux 09 et 10"**
 
-* Le flux 09 d’ajout d’un document de manière simplifiée repose sur l'interaction « create » de FHIR.
-* Le flux 10 de résultat de la demande d’ajout simplifié d'un document sera assuré par la réponse à la requête HTTP POST.
+**Publication simplifiée de document : Flux 09 et 10"**
 
-La documentation complète est accessible [ici](st_ajout_simplifie.md)
+* Le flux 09 de publication simplifiée d’un document repose sur l'interaction « create » de FHIR.
+* Le flux 10 de résultat de la demande de publication simplifiée d'un document sera assuré par la réponse à la requête HTTP POST.
+
+La documentation complète est accessible [ici](st_publication_simplifiee.md)
 

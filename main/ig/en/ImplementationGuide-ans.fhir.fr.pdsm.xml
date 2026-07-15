@@ -11,7 +11,7 @@
   <name value="PDSm"/>
   <title value="Partage de Documents de Santé en mobilité (PDSm)"/>
   <status value="active"/>
-  <date value="2026-06-30T16:19:40+00:00"/>
+  <date value="2026-07-15T16:15:50+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -64,7 +64,7 @@
   <dependsOn id="ans_fr_terminologies">
     <uri value="https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies"/>
     <packageId value="ans.fr.terminologies"/>
-    <version value="1.10.0"/>
+    <version value="1.11.1"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -682,7 +682,7 @@
         <reference value="StructureDefinition/pdsm-simplified-publish"/>
       </reference>
       <name value="PDSm Simplified Publish Document Reference"/>
-      <description value="Profil utilisé dans le cadre du flux 9 d'ajout simplifié de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105.&#xA;&#xA;Contrairement au profil PDSm_ComprehensiveDocumentReference, le document est directement inclus dans DocumentReference.attachment.data et non dans une ressource « Binary » externe.&#xA;&#xA;La publication simplifiée est une simple requête HTTP POST d'une ressource DocumentReference conforme à ce profil."/>
+      <description value="Profil utilisé dans le cadre du flux 9 de publication simplifiée de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105.&#xA;&#xA;Contrairement au profil PDSm_ComprehensiveDocumentReference, le document est directement inclus dans DocumentReference.attachment.data et non dans une ressource « Binary » externe.&#xA;&#xA;La publication simplifiée est une simple requête HTTP POST d'une ressource DocumentReference conforme à ce profil."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -838,6 +838,14 @@
           <title value="Consultation de documents"/>
           <generation value="markdown"/>
         </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="sf_publication_simplifiee.html"/>
+          </extension>
+          <nameUrl value="sf_publication_simplifiee.html"/>
+          <title value="Publication simplifiée d'un document"/>
+          <generation value="markdown"/>
+        </page>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -888,10 +896,10 @@
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="st_ajout_simplifie.html"/>
+            <valueUrl value="st_publication_simplifiee.html"/>
           </extension>
-          <nameUrl value="st_ajout_simplifie.html"/>
-          <title value="Ajout simplifié d'un document (ITI-105)"/>
+          <nameUrl value="st_publication_simplifiee.html"/>
+          <title value="Publication simplifiée d'un document (ITI-105)"/>
           <generation value="markdown"/>
         </page>
       </page>
