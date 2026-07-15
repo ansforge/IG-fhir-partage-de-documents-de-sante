@@ -36,6 +36,8 @@ pages:
             title: Recherche de documents
         sf_consultation.md:
             title: Consultation de documents
+        sf_publication_simplifiee.md:
+            title: Publication simplifiée d'un document
     construction_des_flux.md:
         title: Spécifications techniques - vue d'ensemble
         st_ajout.md:
@@ -48,8 +50,8 @@ pages:
             title: Recherche de fiche (ITI-67)
         st_consultation.md:
             title: Consultation de documents (ITI-68)
-        st_ajout_simplifie.md:
-            title: Ajout simplifié d'un document (ITI-105)            
+        st_publication_simplifiee.md:
+            title: Publication simplifiée d'un document (ITI-105)
     autres_ressources.md:
         title: Autres Ressources
         securite.md:
@@ -69,6 +71,7 @@ menu:
         Mise à jour de documents: sf_maj.html
         Recherche de documents: sf_recherche.html
         Consultation de documents: sf_consultation.html
+        Publication simplifiée d'un document: sf_publication_simplifiee.html
     Volume 2 - Détail des transactions:
         Vue d'ensemble: construction_des_flux.html
         Ajout d'un lot de soumission (ITI-65): st_ajout.html 
@@ -76,7 +79,7 @@ menu:
         Recherche de lot de soumission (ITI-66): st_recherche_lot.html
         Recherche de fiche (ITI-67): st_recherche_fiche.html
         Consultation de documents (ITI-68): st_consultation.html
-        Ajout simplifié d'un document (ITI-105): st_ajout_simplifie.html
+        Publication simplifiée d'un document (ITI-105): st_publication_simplifiee.html
     Ressources de conformité: artifacts.html
     Autres ressources:
         Sécurité: securite.html

@@ -56,7 +56,7 @@ La documentation complète est accessible <a href="st_recherche_fiche.html">ici<
 ### Consultation de documents
 
 <div class="figure" style='text-align: center;'>
-    <img src="PDSm-flux7_8.png" alt="Flux 07 08" title="Flux 07 et 08" style="width:40%;">
+    <p>{% include PDSm-flux7_8.svg %}</p>
     <figcaption><b>Consultation de documents : Flux 07 et 08"</b></figcaption>
 </div>
 <br>
@@ -68,16 +68,16 @@ Les flux 07 et 08 correspondent aux transactions IHE "Retrieve Document [ITI-68]
 La documentation complète est accessible <a href="st_consultation.html">ici</a>
 
 
-### Ajout simplifié de document
+### Publication simplifiée de document
 
 <div class="figure" style='text-align: center;'>
-    <img src="PDSm-flux9_10.png" alt="Flux 09 10" title="Flux 09 et 10" style="width:40%;">
-    <figcaption><b>Ajout simplifié de document : Flux 09 et 10"</b></figcaption>
+    <p>{% include PDSm-flux9_10.svg %}</p>
+    <figcaption><b>Publication simplifiée de document : Flux 09 et 10"</b></figcaption>
 </div>
 <br>
 
 
-* Le flux 09 d’ajout d’un document de manière simplifiée repose sur l'interaction « create » de FHIR.
-* Le flux 10 de résultat de la demande d’ajout simplifié d'un document sera assuré par la réponse à la requête HTTP POST.
+* Le flux 09 de publication simplifiée d’un document repose sur l'interaction « create » de FHIR.
+* Le flux 10 de résultat de la demande de publication simplifiée d'un document sera assuré par la réponse à la requête HTTP POST.
 
-La documentation complète est accessible <a href="st_ajout_simplifie.html">ici</a>
+La documentation complète est accessible <a href="st_publication_simplifiee.html">ici</a>

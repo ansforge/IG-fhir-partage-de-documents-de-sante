@@ -3,7 +3,7 @@ Ces spécifications fonctionnelles présentent une étude métier pour la mise e
 Ces spécifications fonctionnelles sont dérivées en deux spécifications techniques :
 
 * Les spécifications techniques se basant sur le standard FHIR et IHE MHD (dans ce guide)
-* Les spécifications techniques se basant sur IHE XDS accessible dans la page CI-SIS https://esante.gouv.fr/volet-partage-de-documents-de-sante
+* Les spécifications techniques se basant sur IHE XDS accessible dans la page CI-SIS <https://esante.gouv.fr/volet-partage-de-documents-de-sante>
 
 ### CADRE JURIDIQUE ET ORIENTATIONS ORGANISATIONNELLES
 
@@ -57,6 +57,8 @@ Le périmètre de l'étude englobe les processus en couleur sur le diagramme de 
 | Flux 6 - ResultatRechercheDocument | Recherche de documents | Gestionnaire de partage de documents | Consommateur de documents | Oui | 
 | Flux 7 - DemandeConsultationDocument | Consultation de documents | Consommateur de documents | Gestionnaire de partage de documents | Oui |
 | Flux 8 - ResultatDemandeConsultationDocument | Consultation de documents | Gestionnaire de partage de documents | Consommateur de documents | Oui |
+| Flux 9 - PublicationSimplifieeDocument | Publication simplifiée d'un document | Producteur de documents | Gestionnaire de partage de documents | Oui |
+| Flux 10 - ResultatPublicationSimplifieeDocument | Publication simplifiée d'un document | Gestionnaire de partage de documents | Producteur de documents | Oui |
 
 ### IDENTIFICATION DES CONCEPTS VEHICULES DANS LES FLUX D’INFORMATIONS ET CORRESPONDANCE AVEC LES CLASSES ET ATTRIBUTS DU MOS
 
@@ -65,8 +67,8 @@ Le périmètre de l'étude englobe les processus en couleur sur le diagramme de 
 
 | **Nom** | **Description** | **Flux** |
 | ------ | ------ | ------ |
-| Document | Un document est la plus petite unité d'information déposée dans l’infrastructure de partage de documents. Une fois stocké dans l’infrastructure de partage de documents avec un identifiant unique, le document ne subit plus aucune modification. | Flux 1 - AjoutLotDocument <br />Flux 7 - ResultatDemandeConsultationDocument | 
-| Fiche | Une fiche représente le document stocké dans l’infrastructure de partage de documents. Elle contient les informations décrivant les caractéristiques principales d’un document servant au classement et à la recherche des documents. | Flux 1 - AjoutLotDocument <br /> Flux 3 - MiseAJourMetadoneeFiche <br /> Flux 2 - ResultatAjoutLotDocument <br /> Flux 5 - ResultatRechercheDocument | 
+| Document | Un document est la plus petite unité d'information déposée dans l’infrastructure de partage de documents. Une fois stocké dans l’infrastructure de partage de documents avec un identifiant unique, le document ne subit plus aucune modification. | Flux 1 - AjoutLotDocument <br />Flux 7 - ResultatDemandeConsultationDocument <br /> Flux 9 - PublicationSimplifieeDocument | 
+| Fiche | Une fiche représente le document stocké dans l’infrastructure de partage de documents. Elle contient les informations décrivant les caractéristiques principales d’un document servant au classement et à la recherche des documents. | Flux 1 - AjoutLotDocument <br /> Flux 3 - MiseAJourMetadoneeFiche <br /> Flux 2 - ResultatAjoutLotDocument <br /> Flux 5 - ResultatRechercheDocument <br /> Flux 9 - PublicationSimplifieeDocument <br /> Flux 10 - ResultatPublicationSimplifieeDocument | 
 | Classeur | Un assemblage de fiches regroupées par catégorie. | Flux 1 - AjoutLotDocument <br /> Flux 2 - ResultatAjoutLotDocument | 
 | LotSoumission | Un lot de soumission regroupe les fiches et les classeurs faisant partie d’une même demande de modification du contenu du dossier. Il atteste l’existence et le statut de la demande et est décrit par un ensemble d’attributs, ses métadonnées. Une fois créé, un lot de soumission est immuable à l'exception de son statut. | Flux 1 - AjoutLotDocument <br /> Flux 2 - ResultatAjoutLotDocument <br /> Flux 5 - ResultatRechercheDocument |
 
@@ -84,3 +86,4 @@ Pour consulter les spécifications fonctionnelles détaillées de chaque process
 * [Mise à jour de documents](sf_maj.html)
 * [Recherche de documents](sf_recherche.html)
 * [Consultation de documents](sf_consultation.html)
+* [Publication simplifiée d'un document](sf_publication_simplifiee.html)

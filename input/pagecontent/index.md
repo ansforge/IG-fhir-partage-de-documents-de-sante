@@ -45,7 +45,7 @@ Un flux est un échange entre deux systèmes. Des flux ont été identifiés lor
 | <a href="st_recherche_lot.html">Les flux 05a et 06a</a> | RechercheDocument et ResultatRechercheDocument | Pour la recherche de lot de documents à l'aide de critères de recherche ainsi que le résultat de la demande |
 | <a href="st_recherche_fiche.html">Les flux 05b et 06b</a> | RechercheDocument et ResultatRechercheDocument | Pour la recherche de fiches à l'aide de critères de recherche ainsi que le résultat de la demande |
 | <a href="st_consultation.html">Les flux 07 et 08</a> | DemandeConsultationDocument et ResultatDemandeConsultationDocument | Pour demander la consultation d'un ou de plusieurs document ainsi que le résultat de la demande |
-| <a href="st_ajout_simplifie.html">Les flux 09 et 10</a> | AjoutSimplifieDocument et ResultatAjoutSimplifieDocument | Pour publier un document de manière simplifiée ainsi que le résultat de la demande |
+| <a href="st_publication_simplifiee.html">Les flux 09 et 10</a> | PublicationSimplifieeDocument et ResultatPublicationSimplifieeDocument | Pour publier un document de manière simplifiée ainsi que le résultat de la demande |
 
 #### Alimentation utilisant Comprehensive Metadata
 
