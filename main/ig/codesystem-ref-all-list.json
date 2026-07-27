@@ -59,8 +59,8 @@
     "uses" : {
     },
     "https://profiles.ihe.net/ITI/MHD/4.2.3/ValueSet-MHDprovidePatientActions.html" : "MHD Patient Types ValueSet",
-    "https://profiles.ihe.net/ITI/MHD/4.2.3/ValueSet-MHDprovideFolderActions.html" : "MHD Folder List Types ValueSet",
-    "http://hl7.org/fhir/R4/valueset-http-verb.html" : "HTTPVerb"
+    "http://hl7.org/fhir/R4/valueset-http-verb.html" : "HTTPVerb",
+    "https://profiles.ihe.net/ITI/MHD/4.2.3/ValueSet-MHDprovideFolderActions.html" : "MHD Folder List Types ValueSet"
   },
   {
     "url" : "http://hl7.org/fhir/identifier-use",
@@ -183,7 +183,7 @@
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-    "version" : "10.0.0",
+    "version" : "11.0.0",
     "status" : "active",
     "name" : "ActCode",
     "title" : "ActCode",
@@ -191,7 +191,7 @@
     "oids" : ["2.16.840.1.113883.5.4"],
     "uses" : {
     },
-    "http://terminology.hl7.org/7.2.0/ValueSet-v3-ActCode.html" : "v3 Code System ActCode"
+    "http://terminology.hl7.org/7.3.0/ValueSet-v3-ActCode.html" : "v3 Code System ActCode"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/FHIR/TRE-A00-ProducteurDocNonPS",
@@ -301,8 +301,8 @@
     "oids" : ["URN"],
     "uses" : {
     },
-    "https://interop.esante.gouv.fr/terminologies/1.11.1/ValueSet-JDV-J10-XdsFormatCode-CISIS.html" : "JDV_J10_XdsFormatCode_CISIS",
-    "https://interop.esante.gouv.fr/terminologies/1.11.1/ValueSet-JDV-J06-XdsClassCode-CISIS.html" : "JDV_J06_XdsClassCode_CISIS"
+    "https://interop.esante.gouv.fr/terminologies/1.11.1/ValueSet-JDV-J06-XdsClassCode-CISIS.html" : "JDV_J06_XdsClassCode_CISIS",
+    "https://interop.esante.gouv.fr/terminologies/1.11.1/ValueSet-JDV-J10-XdsFormatCode-CISIS.html" : "JDV_J10_XdsFormatCode_CISIS"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_A11-IheFormatCode/FHIR/TRE-A11-IheFormatCode",

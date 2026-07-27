@@ -265,6 +265,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Ce flux correspond à une interaction « CREATE » où le créateur de document va émettre une requête HTTP POST dont le corps contient une ressource de type DocumentReference. Un profil spécifique héritant du profil IHE MHD « SimplifiedPublish.DocumentReference » est créé pour ce volet et nommé PDSm_SimplifiedDocumentReference.</p>
 
+<p>Dans le cas d’un dépôt d’un nouveau document, aucune contrainte supplémentaire ne s’applique.</p>
+
+<p>Dans le cas d’une demande de remplacement d’un document existant, l’élément <code class="language-plaintext highlighter-rouge">DocumentReference.relatesTo</code> doit être renseigné afin d’indiquer le lien avec le document remplacé :</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">relatesTo.code</code> = <code class="language-plaintext highlighter-rouge">replaces</code></li>
+  <li><code class="language-plaintext highlighter-rouge">relatesTo.target</code> référence le DocumentReference existant, conforme au profil PDSm_SimplifiedPublish, correspondant au document remplacé.</li>
+</ul>
+
+<p>Conformément à la transaction IHE MHD « Simplified Publish [ITI-105] », le gestionnaire de partage de documents fait alors passer le statut du DocumentReference remplacé à « superseded ». Si le gestionnaire de partage de documents ne supporte pas ce type de relation, il retourne un avertissement (warning) plutôt qu’une erreur, conformément au profil MHD.</p>
+
 <p>Les ressources référencées à partir de ce profil (ex : Patient, via l’attribut PDSm_SimplifiedDocumentReference.subject) peuvent être  :</p>
 
 <ul>
@@ -293,6 +304,8 @@ En cas de succès, le serveur retourne :</p>
   <li>un HTTP Code statut (400 Bad Request, 404 Not Found, 422 Unprocessable Entity, …)</li>
   <li>En cas d’erreur 422, le corps de la réponse devrait contenir la ressource OperationOutcome détaillant l’erreur.</li>
 </ul>
+
+<p>Dans le cas d’une demande de remplacement, si le gestionnaire de partage de documents ne supporte pas la relation <code class="language-plaintext highlighter-rouge">relatesTo</code> demandée, la réponse reste un succès (HTTP 201 Created) mais le corps de la réponse contient un avertissement (OperationOutcome de sévérité <code class="language-plaintext highlighter-rouge">warning</code>), conformément au profil MHD [ITI-105].</p>
 
 
 
@@ -343,8 +356,8 @@ En cas de succès, le serveur retourne :</p>
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-07-15 16:15:00 +0000">
-    2026-07-15
+  <span title="2026-07-27 15:55:00 +0000">
+    2026-07-27
   </span>
 
           <br/>

@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.name [ fhir:value "PDSm"] ;
   fhir:ImplementationGuide.title [ fhir:value "Partage de Documents de Santé en mobilité (PDSm)"] ;
   fhir:ImplementationGuide.status [ fhir:value "active"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-07-15T16:15:50+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-07-27T15:55:54+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "ANS"] ;
   fhir:ImplementationGuide.contact [
      fhir:index -1 ;
@@ -57,7 +57,7 @@
        fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.terminology.r4" ] ;
-     fhir:ImplementationGuide.dependsOn.version [ fhir:value "7.2.0" ]
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "7.3.0" ]
   ], [
      fhir:index -1 ;
      fhir:Element.id [ fhir:value "hl7ext" ] ;

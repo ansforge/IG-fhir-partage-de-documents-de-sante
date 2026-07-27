@@ -34,7 +34,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
   "name" : "PDSm_SimplifiedPublish",
   "title" : "PDSm Simplified Publish Document Reference",
   "status" : "active",
-  "date" : "2026-07-15T16:15:50+00:00",
+  "date" : "2026-07-27T15:55:54+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -197,6 +197,40 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
       "short" : "Organisme responsable de la gestion du document. Dans le cadre XDS, il s'agit d'une information transmise dans le VIHF.",
       "definition" : "Correspond à l’organisation responsable de la conservation, de la maintenance et/ou de l’accès au document, et non nécessairement à l’auteur ou à l’hébergeur technique.",
       "min" : 1
+    },
+    {
+      "id" : "DocumentReference.relatesTo",
+      "path" : "DocumentReference.relatesTo",
+      "short" : "Relation avec le document remplacé",
+      "definition" : "Renseigné lorsque le flux envoyé correspond au remplacement d’un document existant.",
+      "constraint" : [{
+        "key" : "constr-sp-relatesTo-rempl",
+        "severity" : "error",
+        "human" : "Renseigné lorsque le flux envoyé correspond au remplacement d’un document existant.",
+        "source" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish"
+      }]
+    },
+    {
+      "id" : "DocumentReference.relatesTo.code",
+      "path" : "DocumentReference.relatesTo.code",
+      "short" : "Représente le type d’association entre deux documents.",
+      "constraint" : [{
+        "key" : "constr-sp-bind-relatesToCode",
+        "severity" : "error",
+        "human" : "Doit valoir « replaces » lorsque le flux envoyé correspond au remplacement d’un document existant.",
+        "source" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish"
+      }]
+    },
+    {
+      "id" : "DocumentReference.relatesTo.target",
+      "path" : "DocumentReference.relatesTo.target",
+      "short" : "Représente l’identifiant du document remplacé.",
+      "constraint" : [{
+        "key" : "constr-sp-bind-relatesToTarget",
+        "severity" : "error",
+        "human" : "Référence contrainte au profil PDSm_SimplifiedPublish.",
+        "source" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish"
+      }]
     },
     {
       "id" : "DocumentReference.description",
