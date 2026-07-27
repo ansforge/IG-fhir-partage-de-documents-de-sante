@@ -53,6 +53,19 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 * authenticator ^short = "Cet attribut représente l’acteur validant le document et prenant la responsabilité du contenu médical de celui-ci. Il peut s’agir de l’auteur du document si celui-ci est une personne et s’il endosse la responsabilité du contenu médical de ses documents."
 * authenticator only Reference(AsPractitionerProfile or AsPractitionerRoleProfile or AsOrganizationProfile)
 
+// relatesTo porte le remplacement d'un document existant (cf. IHE MHD Simplified Publish [ITI-105] : relatesTo.code "replaces" + relatesTo.target vers le document remplacé,
+// qui passe alors au statut "superseded"). Alignement avec la contrainte équivalente du profil PDSm_ComprehensiveDocumentReference.
+* relatesTo MS
+* relatesTo ^short = "Relation avec le document remplacé"
+* relatesTo ^definition = "Renseigné lorsque le flux envoyé correspond au remplacement d’un document existant."
+* relatesTo obeys constr-sp-relatesTo-rempl
+
+* relatesTo.code ^short = "Représente le type d’association entre deux documents."
+* relatesTo.code obeys constr-sp-bind-relatesToCode
+
+* relatesTo.target ^short = "Représente l’identifiant du document remplacé."
+* relatesTo.target obeys constr-sp-bind-relatesToTarget
+
 * description MS
 * description ^short = "Commentaire associé au document."
 
@@ -118,4 +131,21 @@ Description: "L’utilisation de cette nomenclature est recommandée mais non ob
 Les valeurs possibles peuvent être restreintes en fonction du jeu de valeurs correspondant mis à disposition par le projet (exemple : JDV_J61-HealthcareFacilityTypeCode-DMP).
 En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J02-XdsHealthcareFacilityTypeCode-CISIS peut être utilisé."
 // Expression:       "f:context/f:practiceSetting or f:context/f:facilityType"
+Severity:    #error
+
+// Invariants relatesTo : documentent le remplacement d'un document existant (IHE MHD Simplified Publish [ITI-105]),
+// en miroir des invariants relatesTo du profil PDSm_ComprehensiveDocumentReference.
+Invariant: constr-sp-relatesTo-rempl
+Description: "Renseigné lorsque le flux envoyé correspond au remplacement d’un document existant."
+// Expression:       "f:relatesTo"
+Severity:    #error
+
+Invariant: constr-sp-bind-relatesToCode
+Description: "Doit valoir « replaces » lorsque le flux envoyé correspond au remplacement d’un document existant."
+// Expression:       "f:relatesTo/f:code"
+Severity:    #error
+
+Invariant: constr-sp-bind-relatesToTarget
+Description: "Référence contrainte au profil PDSm_SimplifiedPublish."
+// Expression:       "f:relatesTo/f:target"
 Severity:    #error
