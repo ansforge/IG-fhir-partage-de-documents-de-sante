@@ -42,8 +42,10 @@ Le bundle de remplacement contient les entrées suivantes :
 |---|---|---|---|
 | Nouveau contenu documentaire | `Binary` | `POST` | Contenu binaire du document de remplacement |
 | Nouvelle fiche | `DocumentReference` | `POST` | Fiche du nouveau document, avec `relatesTo` pointant vers l'ancien |
-| Passage de l'ancienne fiche en superseded | `Parameters` (PATCH) | `PATCH` | Mise à jour du statut de l'ancienne fiche à `superseded` |
 | Lot de soumission | `List` | `POST` | SubmissionSet contenant uniquement la nouvelle fiche |
+| Passage de l'ancienne fiche en superseded | `Parameters` (PATCH) | `PATCH` | Mise à jour du statut de l'ancienne fiche à `superseded` |
+
+Conformément aux [règles de traitement transactionnel FHIR](https://hl7.org/fhir/R4/http.html#trules) (`DELETE` puis `POST` puis `PUT`/`PATCH` puis `GET`, indépendamment de l'ordre des entrées dans le bundle), l'ensemble des créations (`POST`) est appliqué avant la mise à jour par `PATCH` de l'ancienne fiche.
 
 
 ##### Nouvelle fiche (DocumentReference)

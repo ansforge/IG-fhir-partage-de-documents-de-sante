@@ -220,11 +220,11 @@ Usage: #example
 
 * type = #transaction
 
-// Lot de soumission (SubmissionSet)
-* entry[SubmissionSet].fullUrl = "urn:uuid:66666666-6666-4666-8666-666666666666"
-* entry[SubmissionSet].resource = submissionset-doc-replace
-* entry[SubmissionSet].request.method = #POST
-* entry[SubmissionSet].request.url = "List"
+// Document binaire (nouveau contenu PDF)
+* entry[Documents].fullUrl = "urn:uuid:33333333-3333-4333-8333-333333333333"
+* entry[Documents].resource = binary-doc-new-replace
+* entry[Documents].request.method = #POST
+* entry[Documents].request.url = "Binary"
 
 // Nouvelle fiche de document (DocumentReference de remplacement)
 * entry[DocumentRefs].fullUrl = "urn:uuid:55555555-5555-4555-8555-555555555555"
@@ -232,14 +232,14 @@ Usage: #example
 * entry[DocumentRefs].request.method = #POST
 * entry[DocumentRefs].request.url = "DocumentReference"
 
+// Lot de soumission (SubmissionSet)
+* entry[SubmissionSet].fullUrl = "urn:uuid:66666666-6666-4666-8666-666666666666"
+* entry[SubmissionSet].resource = submissionset-doc-replace
+* entry[SubmissionSet].request.method = #POST
+* entry[SubmissionSet].request.url = "List"
+
 // PATCH MHD — mise à jour du statut de l'ancien DocumentReference à superseded
 * entry[UpdateDocumentRefs].fullUrl = "urn:uuid:77777777-7777-4777-8777-777777777777"
 * entry[UpdateDocumentRefs].resource = patch-params-replace
 * entry[UpdateDocumentRefs].request.method = #PATCH
 * entry[UpdateDocumentRefs].request.url = "DocumentReference/doc-old"
-
-// Document binaire (nouveau contenu PDF)
-* entry[Documents].fullUrl = "urn:uuid:33333333-3333-4333-8333-333333333333"
-* entry[Documents].resource = binary-doc-new-replace
-* entry[Documents].request.method = #POST
-* entry[Documents].request.url = "Binary"
