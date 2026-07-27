@@ -1,0 +1,63 @@
+p, li, td {
+    color: #343548;
+}
+
+pre {
+    width: 100%
+}
+
+#segment-header {
+    background-color: white;
+}
+
+#segment-footer > .container {
+    background-color: #464c6d;
+}
+
+
+#stripe {
+
+    background: none;
+}
+
+#segment-footer {
+     background: none;
+}
+
+
+#hl7-search-lnk >img {
+    height: 40px;
+}
+
+
+.breadcrumb,
+.breadcrumb-item {
+
+     display: unset;
+}
+
+.navbar {
+	background-color : #464c6d;
+}
+
+body {
+    font-size: 14px;
+}
+
+
+
+
+ol,
+ul {
+    list-style: unset;
+}
+
+
+.dropdown-toggle:after{
+    content:  none;
+
+}
+
+#content > .inner-wrapper, .container > .row > .inner-wrapper {
+margin : 10px;
+}
