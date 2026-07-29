@@ -41,7 +41,9 @@
   </head>
   <body onload="document.body.style.opacity='1'">
 
-	  <script src="assets/js/prism.js"></script>
+	  <script src="assets/js/prism.js" type="text/javascript"></script>
+	  <script src="assets/js/prism-fhirpath.js" type="text/javascript"></script>
+	  <script src="assets/js/prism-cql.js" type="text/javascript"></script>
     <script src="assets/js/mermaid.js" type="text/javascript"></script>
     <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
     <style type="text/css">h2{--heading-prefix:"3.1"}
@@ -219,6 +221,7 @@
       <div class="container">    <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
+
 <style type="text/css">
 h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
 h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
@@ -320,19 +323,21 @@ Cette opération est réalisée en une seule transaction ITI-65.</p>
       <td>Fiche du nouveau document, avec <code class="language-plaintext highlighter-rouge">relatesTo</code> pointant vers l'ancien</td>
     </tr>
     <tr>
-      <td>Passage de l'ancienne fiche en superseded</td>
-      <td><code class="language-plaintext highlighter-rouge">Parameters</code> (PATCH)</td>
-      <td><code class="language-plaintext highlighter-rouge">PATCH</code></td>
-      <td>Mise à jour du statut de l'ancienne fiche à <code class="language-plaintext highlighter-rouge">superseded</code></td>
-    </tr>
-    <tr>
       <td>Lot de soumission</td>
       <td><code class="language-plaintext highlighter-rouge">List</code></td>
       <td><code class="language-plaintext highlighter-rouge">POST</code></td>
       <td>SubmissionSet contenant uniquement la nouvelle fiche</td>
     </tr>
+    <tr>
+      <td>Passage de l'ancienne fiche en superseded</td>
+      <td><code class="language-plaintext highlighter-rouge">Parameters</code> (PATCH)</td>
+      <td><code class="language-plaintext highlighter-rouge">PATCH</code></td>
+      <td>Mise à jour du statut de l'ancienne fiche à <code class="language-plaintext highlighter-rouge">superseded</code></td>
+    </tr>
   </tbody>
 </table>
+
+<p>Conformément aux <a href="https://hl7.org/fhir/R4/http.html#trules">règles de traitement transactionnel FHIR</a> (<code class="language-plaintext highlighter-rouge">DELETE</code> puis <code class="language-plaintext highlighter-rouge">POST</code> puis <code class="language-plaintext highlighter-rouge">PUT</code>/<code class="language-plaintext highlighter-rouge">PATCH</code> puis <code class="language-plaintext highlighter-rouge">GET</code>, indépendamment de l'ordre des entrées dans le bundle), l'ensemble des créations (<code class="language-plaintext highlighter-rouge">POST</code>) est appliqué avant la mise à jour par <code class="language-plaintext highlighter-rouge">PATCH</code> de l'ancienne fiche.</p>
 
 <h5 id="nouvelle-fiche-documentreference">Nouvelle fiche (DocumentReference)</h5>
 
@@ -397,7 +402,7 @@ request.url    = DocumentReference/[id-ancien]
 
 <p>Le gestionnaire de partage de documents de santé retourne un « HTTP Status code » approprié au résultat de la demande comme indiqué dans la spécification du profil MHD. Le corps de la réponse doit être un Bundle de type <code class="language-plaintext highlighter-rouge">transaction-response</code> avec un élément <code class="language-plaintext highlighter-rouge">entry</code> pour chaque ressource reçue dans le Bundle de la requête, dans le même ordre, avec le résultat du traitement de l'élément.</p>
 
-<p><a name="l954">​</a>Le corps de la réponse doit être conforme au profil <a href="/IHE.MHD.ProvideDocumentBundleResponse">ProvideDocumentBundleResponse</a> (<a href="Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.json.html">exemple de contenu d'un payload</a>).</p>
+<p><a name="l985">​</a>Le corps de la réponse doit être conforme au profil <a href="/IHE.MHD.ProvideDocumentBundleResponse">ProvideDocumentBundleResponse</a> (<a href="Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.json.html">exemple de contenu d'un payload</a>).</p>
 
 <p>Ce flux sert à communiquer un succès ou un échec.
 Un succès n'est indiqué que lorsque le ou les documents sont reçus, complètement traités et conservés selon les besoins de la configuration du gestionnaire de partage de documents.</p>
@@ -455,8 +460,8 @@ Un succès n'est indiqué que lorsque le ou les documents sont reçus, complète
           IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-01 14:30:00 +0000">
-    2026-06-01
+  <span title="2026-07-29 08:00:00 +0000">
+    2026-07-29
   </span>
 
           <br/>

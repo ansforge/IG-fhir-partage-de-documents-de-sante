@@ -14,7 +14,7 @@
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-06-01T14:30:20+00:00",
+  "date" : "2026-07-29T08:00:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -41,7 +41,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.1.0"
+    "version" : "7.3.0"
   },
   {
     "id" : "hl7ext",
@@ -75,7 +75,7 @@
     "id" : "ans_fr_terminologies",
     "uri" : "https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies",
     "packageId" : "ans.fr.terminologies",
-    "version" : "1.9.2"
+    "version" : "1.11.1"
   }],
   "definition" : {
     "extension" : [{
@@ -680,6 +680,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CapabilityStatement-PDSm-ConsommateurDeDocuments.html"
       }],
       "reference" : {
         "reference" : "CapabilityStatement/PDSm-ConsommateurDeDocuments"
@@ -692,6 +696,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CapabilityStatement-PDSm-GestionnaireDePartageDeDocuments.html"
       }],
       "reference" : {
         "reference" : "CapabilityStatement/PDSm-GestionnaireDePartageDeDocuments"
@@ -704,6 +712,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CapabilityStatement-PDSm-ProducteurDeDocuments.html"
       }],
       "reference" : {
         "reference" : "CapabilityStatement/PDSm-ProducteurDeDocuments"
@@ -716,6 +728,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-bundle-exemple-comprehensiveprovidedocument-replace.html"
       }],
       "reference" : {
         "reference" : "Bundle/bundle-exemple-comprehensiveprovidedocument-replace"
@@ -728,6 +744,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.html"
       }],
       "reference" : {
         "reference" : "Bundle/a9c10f8a-882d-4000-a280-7150e0aeb478"
@@ -739,6 +759,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "List"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "List-ExampleFolder.html"
       }],
       "reference" : {
         "reference" : "List/ExampleFolder"
@@ -751,6 +775,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "DocumentReference-doc-old.html"
       }],
       "reference" : {
         "reference" : "DocumentReference/doc-old"
@@ -763,6 +791,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "DocumentReference-exemple-pdsm-documentreference.html"
       }],
       "reference" : {
         "reference" : "DocumentReference/exemple-pdsm-documentreference"
@@ -775,6 +807,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "List"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "List-ExampleSubmissionSet.html"
       }],
       "reference" : {
         "reference" : "List/ExampleSubmissionSet"
@@ -787,6 +823,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "DocumentReference-PDSmSimplifiedExample.html"
       }],
       "reference" : {
         "reference" : "DocumentReference/PDSmSimplifiedExample"
@@ -799,6 +839,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Binary"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Binary-6789.html"
       }],
       "reference" : {
         "reference" : "Binary/6789"
@@ -810,6 +854,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-fr-patient-123.html"
       }],
       "reference" : {
         "reference" : "Patient/fr-patient-123"
@@ -821,6 +869,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Organization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Organization-org-example.html"
       }],
       "reference" : {
         "reference" : "Organization/org-example"
@@ -832,6 +884,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-pdsm-comprehensive-document-reference.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pdsm-comprehensive-document-reference"
@@ -844,6 +900,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-pdsm-comprehensive-provide-document-bundle.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pdsm-comprehensive-provide-document-bundle"
@@ -856,6 +916,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-pdsm-find-documentreferences-comprehensive-response.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pdsm-find-documentreferences-comprehensive-response"
@@ -868,6 +932,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-pdsm-find-lists-response.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pdsm-find-lists-response"
@@ -880,6 +948,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-pdsm-folder-comprehensive.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pdsm-folder-comprehensive"
@@ -892,6 +964,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-pdsm-simplified-publish.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pdsm-simplified-publish"
@@ -904,6 +980,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-pdsm-submissionset-comprehensive.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pdsm-submissionset-comprehensive"
@@ -916,6 +996,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-PDSm-DocumentReference-period-end.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/PDSm-DocumentReference-period-end"
@@ -928,6 +1012,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-PDSm-DocumentReference-period-start.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/PDSm-DocumentReference-period-start"
@@ -940,6 +1028,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-PDSm-isArchived.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/PDSm-isArchived"
@@ -952,6 +1044,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-PDSm-List-authorOrg.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/PDSm-List-authorOrg"
@@ -964,6 +1060,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-PDSm-List-PatientAsSource.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/PDSm-List-PatientAsSource"
@@ -976,6 +1076,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-PDSm-List-PatientAsSubject.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/PDSm-List-PatientAsSubject"
@@ -988,6 +1092,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-PDSm-List-PractitionerRoleAsSource.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/PDSm-List-PractitionerRoleAsSource"
@@ -1000,6 +1108,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-pdsm-ext-intended-recipient.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pdsm-ext-intended-recipient"
@@ -1012,6 +1124,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-pdsm-ext-is-archived.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pdsm-ext-is-archived"

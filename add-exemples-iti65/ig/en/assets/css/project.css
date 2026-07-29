@@ -568,6 +568,9 @@ p > img {
   margin-bottom: 10px;
   margin-left: 0;
 }
+th{
+  font-weight: bold;
+}
 .table td {
   padding: 6px;
   line-height: 18px;
@@ -719,6 +722,21 @@ li a[href^="http://"]:not([no-external^="true"]):after,li a[href^="https://"]:no
 
 /* ----------New content for ballot styling------*/
 
+tr.new-content > :first-child {
+  position: relative; 
+}
+tr.new-content > :first-child::before {
+  content: "New \A Content:";
+  white-space: pre;
+  position: absolute; 
+  top: 50%;
+  transform: translateY(-50%);
+  left: -62px;
+  width: 62px;
+  text-align: left;
+  color: red;
+  font-weight: bold;
+}
 span.new-content::before,
 li.new-content::before {
   content: "New Content: ";
@@ -727,6 +745,12 @@ li.new-content::before {
   display: inline-block;
   margin-right: 0.25em;
 }
+table.new-content::before {
+  display: table-caption;
+  caption-side: top;
+  text-align: left;
+}
+table.new-content::before,
 p.new-content::before,
 div.new-content::before {
   white-space: pre;
@@ -745,6 +769,12 @@ div.fhir-conformance.new-content::before {
   border: none;
   width: auto;
 }
+table.new-content::before {
+  display: table-caption;
+  caption-side: top;
+  text-align: left;
+}
+
 
 /* Replicate the bracket using ::after for the combined case */
 p.fhir-conformance.new-content::after,
@@ -760,20 +790,26 @@ div.fhir-conformance.new-content::after {
   border-bottom: 1px solid #aaa;
 }
 
-span.new-content,
-li.new-content{
-    padding: 2px;
+table.new-content,
+tr.new-content{
     color: #3c763d;
     background-color: #dff0d8;
     border-color: #d6e9c6;
 }
-p.new-content,
-div.new-content{
-    margin: 5px;
-    padding: 10px;
+span.new-content,
+li.new-content{
     color: #3c763d;
     background-color: #dff0d8;
     border-color: #d6e9c6;
+    padding: 2px;
+}
+p.new-content,
+div.new-content{
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    margin: 5px;
+    padding: 10px;
 }
 
 .changes-disabled .new-content::before {
@@ -789,7 +825,21 @@ div.new-content{
     background-color: revert;
     border-color: revert;
 }
-
+tr.modified-content > :first-child {
+  position: relative; 
+}
+tr.modified-content > :first-child::before {
+  content: "Modified\A Content:";
+  white-space: pre;
+  position: absolute; 
+  top: 50%;
+  transform: translateY(-50%);
+  left: -62px;
+  width: 62px;
+  text-align: left;
+  color: red;
+  font-weight: bold;
+}
 span.modified-content::before,
 li.modified-content::before {
   content: "Modified Content: ";
@@ -798,12 +848,18 @@ li.modified-content::before {
   display: inline-block;
   margin-right: 0.25em;
 }
+table.modified-content::before,
 p.modified-content::before,
 div.modified-content::before {
   white-space: pre;
   content: "Modified Content\A ";
   color: red;
   font-weight: bold;
+}
+table.modified-content::before {
+  display: table-caption;
+  caption-side: top;
+  text-align: left;
 }
 p.fhir-conformance.modified-content::before,
 div.fhir-conformance.modified-content::before {
@@ -830,6 +886,12 @@ div.fhir-conformance.modified-content::after {
   border-bottom: 1px solid #aaa;
 }
 
+table.modified-content,
+tr.modified-content{
+    color: #784212;
+    background-color: #fef9e7;
+    border-color: #f9e79f;
+}
 span.modified-content,
 li.modified-content{
     padding: 2px;
