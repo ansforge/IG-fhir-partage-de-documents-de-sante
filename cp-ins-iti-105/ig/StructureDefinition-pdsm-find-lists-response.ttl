@@ -17,7 +17,7 @@
   fhir:StructureDefinition.name [ fhir:value "PDSm_FindListsResponse"] ;
   fhir:StructureDefinition.title [ fhir:value "PDSm Find Lists Response"] ;
   fhir:StructureDefinition.status [ fhir:value "active"] ;
-  fhir:StructureDefinition.date [ fhir:value "2026-07-29T16:40:58+00:00"^^xsd:dateTime] ;
+  fhir:StructureDefinition.date [ fhir:value "2026-07-29T17:09:31+00:00"^^xsd:dateTime] ;
   fhir:StructureDefinition.publisher [ fhir:value "ANS"] ;
   fhir:StructureDefinition.contact [
      fhir:index 0 ;

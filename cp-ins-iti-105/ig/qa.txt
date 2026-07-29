@@ -1,9 +1,9 @@
 PDSm : Validation Results
 =========================================
 
-err = 27, warn = 98, info = 88
+err = 28, warn = 98, info = 88
 IG Publisher Version: 2.2.11
-Generated Wed Jul 29 16:43:01 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.pdsm#3.1.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/pdsm)
+Generated Wed Jul 29 17:11:38 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.pdsm#3.1.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/pdsm)
  Build Errors : 17 / 7 / 0
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Binary-6789 : 0 / 0 / 1
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478 : 0 / 4 / 1
@@ -30,7 +30,7 @@ Generated Wed Jul 29 16:43:01 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.pdsm#
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-find-documentreferences-comprehensive-response : 0 / 1 / 2
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-find-lists-response : 0 / 1 / 2
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-folder-comprehensive : 0 / 0 / 2
- /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-simplified-publish : 0 / 31 / 20
+ /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-simplified-publish : 1 / 31 / 20
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-submissionset-comprehensive : 0 / 4 / 4
 </table>
 == n/a ==
@@ -281,6 +281,7 @@ INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.sn
 INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.snapshot.element[57].constraint[1]: The constraint 'constr-bind-context-event' has no computable expression, so validators will not be able to check it
 INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.snapshot.element[59].constraint[1]: The constraint 'constr-bind-ProducteurDoc-simplified' has no computable expression, so validators will not be able to check it
 INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.snapshot.element[60].constraint[1]: The constraint 'constr-bind-ProducteurDoc-simplified' has no computable expression, so validators will not be able to check it
+ERROR: StructureDefinition/pdsm-simplified-publish: StructureDefinition.snapshot.element[61].constraint[1]: Error in constraint 'constr-sp-sourcePatientInfo-contained' with expression 'context.sourcePatientInfo.reference.exists() implies context.sourcePatientInfo.reference.startsWith('#')': Error evaluating FHIRPath expression: The name 'context' is not valid for any of the possible types: [http://hl7.org/fhir/StructureDefinition/Reference] (@char 1)
 INFORMATION: Resource: The resource StructureDefinition/pdsm-simplified-publish could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-pdsm-submissionset-comprehensive.json ==
 WARNING: StructureDefinition/pdsm-submissionset-comprehensive: StructureDefinition.snapshot.element[16].constraint[2]: Constraint failed: eld-21: 'Constraints should have an expression or else validators will not be able to enforce them (expression.exists())'
