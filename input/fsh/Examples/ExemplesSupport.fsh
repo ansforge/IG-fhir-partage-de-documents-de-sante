@@ -16,6 +16,13 @@ Alias: $TRE-R02-SecteurActivite = https://mos.esante.gouv.fr/NOS/TRE_R02-Secteur
 Alias: $fr-core-cs-v2-0203 = https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203
 Alias: $fr-core-cs-v2-3307 = https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-3307
 
+Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
+Alias: $fr-core-patient-birth-list-given-name = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name
+Alias: $fr-core-address-insee-code = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-address-insee-code
+Alias: $TRE-R13-CommuneOM = https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM
+Alias: $fr-core-identity-reliability = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability
+Alias: $fr-core-cs-v2-0445 = https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445
+
 Instance: practitioner-example
 InstanceOf: Practitioner
 Usage: #inline
@@ -112,12 +119,33 @@ Usage: #example
 
 
 Instance: fr-patient-123
-InstanceOf: FRCorePatientProfile
-Usage:  #example
-* name[0].family = "Claire"
-* name[0].given = "Martin"
+InstanceOf: FRCorePatientINSProfile
+Usage: #example
+
+// Matricule INS (NIR) — traits stricts obligatoires de l'INS (art. R.1111-8-6 CSP)
+* identifier[INS-NIR].use = #official
+* identifier[INS-NIR].type = $fr-core-cs-v2-0203#INS-NIR "NIR"
+* identifier[INS-NIR].system = "urn:oid:1.2.250.1.213.1.4.8"
+* identifier[INS-NIR].value = "180017505600103"
+
+// Nom de naissance et prénoms de naissance (use = official)
+* name[officialName].use = #official
+* name[officialName].family = "Claire"
+* name[officialName].given = "Martin"
+* name[officialName].extension[$fr-core-patient-birth-list-given-name].valueString = "Martin"
+
+// Sexe et date de naissance
 * gender = #male
 * birthDate = "1980-01-15"
+
+// Fiabilité de l'identité (obligatoire — identité validée via INSi)
+* extension[$fr-core-identity-reliability]
+  * extension[identityStatus].valueCoding = $fr-core-cs-v2-0445#VALI "Identité validée"
+
+// Lieu de naissance (COG — obligatoire depuis v1.7)
+* extension[$patient-birthPlace].valueAddress.city = "Paris"
+* extension[$patient-birthPlace].valueAddress.extension[$fr-core-address-insee-code].valueCoding.system = $TRE-R13-CommuneOM
+* extension[$patient-birthPlace].valueAddress.extension[$fr-core-address-insee-code].valueCoding.code = #75056
 
 
 
