@@ -37,7 +37,7 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 
 * subject 1..1
 * subject ^short = "Patient concerné par ce document. La ressource référencée peut être présente sous l’élément DocumentReference.contained ou via le champ identifier."
-* subject only Reference(FRCorePatientProfile or FRCorePatientINSProfile) 
+* subject only Reference(FRCorePatientProfile) 
 
 * date MS
 * date 1..
@@ -124,8 +124,8 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 // ---------------------------------------------------------------------
 // sourcePatientInfo — porteur des traits ; référence contained (IHE ITI-105)
 // ---------------------------------------------------------------------
-* context.sourcePatientInfo only Reference(FRCorePatientProfile or FRCorePatientINSProfile)
-* context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier. Conformément à IHE MHD ITI-105, lorsque fournie, cette référence pointe une ressource Patient contenue (contained). Selon le statut d'identité, la ressource est conforme au profil FR Core Patient (identité non qualifiée) ou FR Core Patient INS (identité qualifiée, matricule INS + traits INSi)."
+* context.sourcePatientInfo only Reference(FRCorePatientProfile)
+* context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier. Conformément à IHE MHD ITI-105, lorsque fournie, cette référence pointe une ressource Patient contenue (contained). Selon le statut d'identité, la ressource est conforme au profil FR Core Patient (identité non qualifiée) ou FR Core Patient INS (identité qualifiée, matricule INS + traits INSi) qui hérite de profil FR Core Patient."
 * context.sourcePatientInfo obeys constr-sp-sourcePatientInfo-contained
 
 
