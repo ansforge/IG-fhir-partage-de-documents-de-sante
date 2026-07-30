@@ -161,5 +161,5 @@ Severity:    #error
 // ---------------------------------------------------------------------
 Invariant: constr-sp-sourcePatientInfo-contained
 Description: "Lorsqu'il est fourni, context.sourcePatientInfo doit référencer une ressource Patient contenue (contained), c'est-à-dire une référence interne commençant par '#' (IHE MHD ITI-105 §2:3.105.4.1.2.2)."
-Expression: "context.sourcePatientInfo.reference.exists() implies context.sourcePatientInfo.reference.startsWith('#')"
+Expression: "reference.exists() implies reference.startsWith('#')"
 Severity: #error
