@@ -34,7 +34,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
   "name" : "PDSm_SimplifiedPublish",
   "title" : "PDSm Simplified Publish Document Reference",
   "status" : "active",
-  "date" : "2026-07-29T17:09:31+00:00",
+  "date" : "2026-07-30T07:55:20+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -155,8 +155,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
       "short" : "Patient concerné par ce document. La ressource référencée peut être présente sous l’élément DocumentReference.contained ou via le champ identifier.",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient",
-        "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins"]
+        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"]
       }]
     },
     {
@@ -349,11 +348,10 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
     {
       "id" : "DocumentReference.context.sourcePatientInfo",
       "path" : "DocumentReference.context.sourcePatientInfo",
-      "short" : "Référence vers la ressource Patient titulaire du dossier. Conformément à IHE MHD ITI-105, lorsque fournie, cette référence pointe une ressource Patient contenue (contained). Selon le statut d'identité, la ressource est conforme au profil FR Core Patient (identité non qualifiée) ou FR Core Patient INS (identité qualifiée, matricule INS + traits INSi).",
+      "short" : "Référence vers la ressource Patient titulaire du dossier. Conformément à IHE MHD ITI-105, lorsque fournie, cette référence pointe une ressource Patient contenue (contained). Selon le statut d'identité, la ressource est conforme au profil FR Core Patient (identité non qualifiée) ou FR Core Patient INS (identité qualifiée, matricule INS + traits INSi) qui hérite de profil FR Core Patient.",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient",
-        "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins"]
+        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"]
       }],
       "constraint" : [{
         "key" : "constr-sp-sourcePatientInfo-contained",

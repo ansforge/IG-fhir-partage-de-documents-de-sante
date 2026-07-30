@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.name [ fhir:value "PDSm"] ;
   fhir:ImplementationGuide.title [ fhir:value "Partage de Documents de Santé en mobilité (PDSm)"] ;
   fhir:ImplementationGuide.status [ fhir:value "active"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-07-29T17:09:31+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-07-30T07:55:20+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "ANS"] ;
   fhir:ImplementationGuide.contact [
      fhir:index 0 ;
