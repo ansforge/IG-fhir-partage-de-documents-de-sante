@@ -2,48 +2,6 @@
 
 ## Example DocumentReference: Exemple de publication simplifiée PDSm
 
-version: 1
-
-Profile: [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-simplified-publish.md)
-
-**masterIdentifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/5.5.0/NamingSystem-uri.html)/urn:uuid:abcd-efgh-ijkl-mnop
-
-**status**: Current
-
-**type**: CR de passage aux urgences
-
-**category**: Compte rendu
-
-**subject**: [Martin Claire Male, DoB: 1980-01-15](Patient-fr-patient-123.md)
-
-**date**: 2025-04-30 09:30:00+0100
-
-**author**: [PractitionerRole Activité de soin et de pharmacie](PractitionerRole-practitionerrole-example.md)
-
-**authenticator**: [PractitionerRole Activité de soin et de pharmacie](PractitionerRole-practitionerrole-example.md)
-
-**custodian**: [Organization HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G](Organization-org-example.md)
-
-**description**: Note d'évolution suite à une consultation de suivi.
-
-> **content**
-
-### Attachments
-
-| | | | | | | | |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| - | **ContentType** | **Language** | **Data** | **Size** | **Hash** | **Title** | **Creation** |
-| * | application/pdf | French (France) | `SGVsbG8gV29ybGQ=` | 11 | `Ck1VqNd45QIvq3AZd8XYQLvEhtA=` | Note de suivi du 30 avril 2025 | 2025-04-29 17:00:00+0100 |
-
-**format**: [TRE_A11_IheFormatCode: urn:ihe:iti:xds-sd:pdf:2008](https://interop.esante.gouv.fr/terminologies/1.11.1/CodeSystem-TRE-A11-IheFormatCode.html#TRE-A11-IheFormatCode-urn.58ihe.58iti.58xds-sd.58pdf.582008) (Document à corps non structuré en Pdf/A-1)
-
-### Contexts
-
-| | | |
-| :--- | :--- | :--- |
-| - | **FacilityType** | **PracticeSetting** |
-| * | Centre de santé | Etablissement de santé |
-
 
 
 ## Resource Content
@@ -56,6 +14,58 @@ Profile: [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-s
     "versionId" : "1",
     "profile" : ["https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish"]
   },
+  "contained" : [{
+    "resourceType" : "Patient",
+    "id" : "sourcePatientInfo-example",
+    "meta" : {
+      "profile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins"]
+    },
+    "extension" : [{
+      "extension" : [{
+        "url" : "identityStatus",
+        "valueCoding" : {
+          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445",
+          "code" : "VALI",
+          "display" : "Identité validée"
+        }
+      }],
+      "url" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+      "valueAddress" : {
+        "extension" : [{
+          "url" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-address-insee-code",
+          "valueCoding" : {
+            "system" : "https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM",
+            "code" : "75056",
+            "display" : "Paris"
+          }
+        }]
+      }
+    }],
+    "identifier" : [{
+      "type" : {
+        "coding" : [{
+          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
+          "code" : "INS-NIR-TEST"
+        }]
+      },
+      "system" : "urn:oid:1.2.250.1.213.1.4.10",
+      "value" : "180126978912536"
+    }],
+    "name" : [{
+      "extension" : [{
+        "url" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name",
+        "valueString" : "Martin"
+      }],
+      "use" : "official",
+      "family" : "Claire",
+      "given" : ["Martin"]
+    }],
+    "gender" : "male",
+    "birthDate" : "1980-01-15"
+  }],
   "masterIdentifier" : {
     "system" : "urn:ietf:rfc:3986",
     "value" : "urn:uuid:abcd-efgh-ijkl-mnop"
@@ -119,6 +129,9 @@ Profile: [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-s
         "code" : "ETABLISSEMENT",
         "display" : "Etablissement de santé"
       }]
+    },
+    "sourcePatientInfo" : {
+      "reference" : "#sourcePatientInfo-example"
     }
   }
 }

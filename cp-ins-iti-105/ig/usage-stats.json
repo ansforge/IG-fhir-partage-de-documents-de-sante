@@ -63,6 +63,9 @@
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
       "StructureDefinition.snapshot.element"
     ],
+    "http://hl7.org/fhir/StructureDefinition/patient-birthPlace": [
+      "DocumentReference.contained"
+    ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
       "StructureDefinition.snapshot.element.type"
     ],
@@ -89,6 +92,12 @@
     "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-contact-point-email-type": [
       "DocumentReference.contained.telecom",
       "Practitioner.telecom"
+    ],
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability": [
+      "DocumentReference.contained"
+    ],
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name": [
+      "DocumentReference.contained.name"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-data-trace": [
       "List.contained.meta",

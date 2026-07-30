@@ -1,16 +1,16 @@
 PDSm : Validation Results
 =========================================
 
-err = 14, warn = 103, info = 91
+err = 14, warn = 104, info = 94
 IG Publisher Version: 2.2.11
-Generated Thu Jul 30 08:33:44 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.pdsm#3.1.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/pdsm)
+Generated Thu Jul 30 10:09:23 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.pdsm#3.1.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/pdsm)
  Build Errors : 13 / 9 / 0
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Binary-6789 : 0 / 0 / 1
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478 : 0 / 4 / 1
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-ConsommateurDeDocuments : 0 / 1 / 3
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-GestionnaireDePartageDeDocuments : 0 / 1 / 3
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-ProducteurDeDocuments : 0 / 0 / 2
- /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/DocumentReference-PDSmSimplifiedExample : 0 / 0 / 3
+ /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/DocumentReference-PDSmSimplifiedExample : 0 / 1 / 8
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/DocumentReference-exemple-pdsm-documentreference : 7 / 4 / 13
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.pdsm : 0 / 2 / 2
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/List-ExampleFolder : 2 / 1 / 1
@@ -75,6 +75,10 @@ INFORMATION: Resource: The resource CapabilityStatement/PDSm-GestionnaireDeParta
 == fsh-generated/resources/CapabilityStatement-PDSm-ProducteurDeDocuments.json ==
 INFORMATION: Resource: The resource CapabilityStatement/PDSm-ProducteurDeDocuments could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/DocumentReference-PDSmSimplifiedExample.json ==
+INFORMATION: DocumentReference/PDSmSimplifiedExample: DocumentReference.contained[0]/*Patient/sourcePatientInfo-example*/.extension[0].extension[0].value.ofType(Coding): Reference to draft CodeSystem https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445|2.1.0
+WARNING: DocumentReference/PDSmSimplifiedExample: DocumentReference.contained[0]/*Patient/sourcePatientInfo-example*/.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.213.1.4.10'
+INFORMATION: DocumentReference/PDSmSimplifiedExample: DocumentReference.contained[0]/*Patient/sourcePatientInfo-example*/.meta.profile[0]: This element does not match any known slice defined in the profile https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins|2.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: DocumentReference/PDSmSimplifiedExample: DocumentReference.contained[0]/*Patient/sourcePatientInfo-example*/.name[0].extension[0]: This element does not match any known slice defined in the profile https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-human-name|2.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: DocumentReference/PDSmSimplifiedExample: DocumentReference.context.facilityType.coding[0].display: There are no valid display names found for the code https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite#SA05 for language(s) 'en'. The display is 'Centre de santé' which is a valid display for the default language
 INFORMATION: DocumentReference/PDSmSimplifiedExample: DocumentReference.context.practiceSetting.coding[0].display: There are no valid display names found for the code https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/FHIR/TRE-A01-CadreExercice#ETABLISSEMENT for language(s) 'en'. The display is 'Etablissement de santé' which is a valid display for the default language
 == fsh-generated/resources/DocumentReference-exemple-pdsm-documentreference.json ==
