@@ -35,3 +35,30 @@ Usage: #example
 
 * context.facilityType = https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite#SA05 "Centre de santé"
 * context.practiceSetting = https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/FHIR/TRE-A01-CadreExercice#ETABLISSEMENT "Etablissement de santé"
+
+* contained[0] = sourcePatientInfo-example
+* context.sourcePatientInfo = Reference(sourcePatientInfo-example)
+
+
+Instance: sourcePatientInfo-example
+InstanceOf: FRCorePatientINSProfile
+Usage: #inline
+Title: "Exemple de ressource Patient contenue (sourcePatientInfo) - identité qualifiée INS"
+
+* identifier[INS-NIR-TEST].type = https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203#INS-NIR-TEST
+* identifier[INS-NIR-TEST].system = "urn:oid:1.2.250.1.213.1.4.10"
+* identifier[INS-NIR-TEST].value = "180126978912536"
+
+* extension[identityReliability].extension[identityStatus].url = "identityStatus"
+* extension[identityReliability].extension[identityStatus].valueCoding = https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445#VALI "Identité validée"
+
+* extension[birthPlace].valueAddress.extension[inseeCode].url = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-address-insee-code"
+* extension[birthPlace].valueAddress.extension[inseeCode].valueCoding = https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM#75056 "Paris"
+
+* name[officialName].use = #official
+* name[officialName].family = "Claire"
+* name[officialName].given = "Martin"
+* name[officialName].extension[birth-list-given-name].valueString = "Martin"
+
+* gender = #male
+* birthDate = "1980-01-15"
