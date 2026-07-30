@@ -34,7 +34,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
   "name" : "PDSm_SimplifiedPublish",
   "title" : "PDSm Simplified Publish Document Reference",
   "status" : "active",
-  "date" : "2026-07-30T07:55:20+00:00",
+  "date" : "2026-07-30T08:19:35+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -357,7 +357,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
         "key" : "constr-sp-sourcePatientInfo-contained",
         "severity" : "error",
         "human" : "Lorsqu'il est fourni, context.sourcePatientInfo doit référencer une ressource Patient contenue (contained), c'est-à-dire une référence interne commençant par '#' (IHE MHD ITI-105 §2:3.105.4.1.2.2).",
-        "expression" : "context.sourcePatientInfo.reference.exists() implies context.sourcePatientInfo.reference.startsWith('#')",
+        "expression" : "reference.exists() implies reference.startsWith('#')",
         "source" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish"
       }]
     }]

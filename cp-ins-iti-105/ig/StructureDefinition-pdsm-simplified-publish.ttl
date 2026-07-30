@@ -17,7 +17,7 @@
   fhir:StructureDefinition.name [ fhir:value "PDSm_SimplifiedPublish"] ;
   fhir:StructureDefinition.title [ fhir:value "PDSm Simplified Publish Document Reference"] ;
   fhir:StructureDefinition.status [ fhir:value "active"] ;
-  fhir:StructureDefinition.date [ fhir:value "2026-07-30T07:55:20+00:00"^^xsd:dateTime] ;
+  fhir:StructureDefinition.date [ fhir:value "2026-07-30T08:19:35+00:00"^^xsd:dateTime] ;
   fhir:StructureDefinition.publisher [ fhir:value "ANS"] ;
   fhir:StructureDefinition.contact [
      fhir:index 0 ;
@@ -3308,7 +3308,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "constr-sp-sourcePatientInfo-contained" ] ;
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
          fhir:ElementDefinition.constraint.human [ fhir:value "Lorsqu'il est fourni, context.sourcePatientInfo doit référencer une ressource Patient contenue (contained), c'est-à-dire une référence interne commençant par '#' (IHE MHD ITI-105 §2:3.105.4.1.2.2)." ] ;
-         fhir:ElementDefinition.constraint.expression [ fhir:value "context.sourcePatientInfo.reference.exists() implies context.sourcePatientInfo.reference.startsWith('#')" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "reference.exists() implies reference.startsWith('#')" ] ;
          fhir:ElementDefinition.constraint.source [
            fhir:value "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish" ;
            fhir:link <https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish>
@@ -3752,7 +3752,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "constr-sp-sourcePatientInfo-contained" ] ;
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
          fhir:ElementDefinition.constraint.human [ fhir:value "Lorsqu'il est fourni, context.sourcePatientInfo doit référencer une ressource Patient contenue (contained), c'est-à-dire une référence interne commençant par '#' (IHE MHD ITI-105 §2:3.105.4.1.2.2)." ] ;
-         fhir:ElementDefinition.constraint.expression [ fhir:value "context.sourcePatientInfo.reference.exists() implies context.sourcePatientInfo.reference.startsWith('#')" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "reference.exists() implies reference.startsWith('#')" ] ;
          fhir:ElementDefinition.constraint.source [
            fhir:value "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish" ;
            fhir:link <https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish>
