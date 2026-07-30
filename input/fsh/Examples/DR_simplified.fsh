@@ -9,7 +9,7 @@ Usage: #example
 
 * status = #current
 
-* type = http://loinc.org#15507-7 "Note d’évolution" // SNOMED ou LOINC selon le code attendu
+* type = http://loinc.org#15507-7 "CR de passage aux urgences" // SNOMED ou LOINC selon le code attendu
 * category = https://mos.esante.gouv.fr/NOS/TRE_A03-ClasseDocument/FHIR/TRE-A03-ClasseDocument#10 "Compte rendu"
 
 * subject = Reference(fr-patient-123)
@@ -28,8 +28,8 @@ Usage: #example
 * content.attachment.data = "SGVsbG8gV29ybGQ="
 * content.attachment.title = "Note de suivi du 30 avril 2025"
 * content.attachment.creation = "2025-04-29T17:00:00+01:00"
-* content.attachment.size = 250000
-* content.attachment.hash = "2jmj7l5rSw0yVb/vlWAYkK/YBwk=" // SHA-1 exemple
+* content.attachment.size = 11
+* content.attachment.hash = "Ck1VqNd45QIvq3AZd8XYQLvEhtA=" // SHA-1 de "Hello World"
 
 * content.format = https://mos.esante.gouv.fr/NOS/TRE_A11-IheFormatCode/FHIR/TRE-A11-IheFormatCode#urn:ihe:iti:xds-sd:pdf:2008 "Document à corps non structuré en Pdf/A-1"
 
