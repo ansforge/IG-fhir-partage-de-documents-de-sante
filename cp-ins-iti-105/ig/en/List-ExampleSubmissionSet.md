@@ -36,7 +36,7 @@ Profiles: [FR Core Practitioner Role](https://hl7.fr/ig/fhir/core/2.1.0/Structur
 
 **active**: true
 
-**practitioner**: [Practitioner/practitioner-example](Practitioner/practitioner-example)
+**practitioner**: [Practitioner Leclerc Sophie](Practitioner-practitioner-example.md)
 
 **organization**: [Organization HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G](#hcExampleSubmissionSet/org-example)
 

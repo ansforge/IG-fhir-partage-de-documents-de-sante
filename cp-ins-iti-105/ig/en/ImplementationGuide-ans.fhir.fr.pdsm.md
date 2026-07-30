@@ -14,7 +14,7 @@
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-07-30T08:19:35+00:00",
+  "date" : "2026-07-30T08:31:43+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -1087,6 +1087,36 @@
       "name" : "PDSm_isArchived",
       "description" : "Extension définie par le volet ANS \"Volet Partage de documents de santé en mobilité\" sur les ressources List et DocumentReference pour distinguer les lots de soumission et les fiches archivés des actives.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Practitioner-practitioner-example.html"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/practitioner-example"
+      },
+      "name" : "practitioner-example",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PractitionerRole"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "PractitionerRole-practitionerrole-example.html"
+      }],
+      "reference" : {
+        "reference" : "PractitionerRole/practitionerrole-example"
+      },
+      "name" : "practitionerrole-example",
+      "exampleBoolean" : true
     }],
     "page" : {
       "extension" : [{

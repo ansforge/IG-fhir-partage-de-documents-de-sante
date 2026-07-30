@@ -10,7 +10,7 @@ Profile: [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-s
 
 **status**: Current
 
-**type**: Note d’évolution
+**type**: CR de passage aux urgences
 
 **category**: Compte rendu
 
@@ -18,9 +18,9 @@ Profile: [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-s
 
 **date**: 2025-04-30 09:30:00+0100
 
-**author**: [PractitionerRole/practitionerrole-example](PractitionerRole/practitionerrole-example)
+**author**: [PractitionerRole Activité de soin et de pharmacie](PractitionerRole-practitionerrole-example.md)
 
-**authenticator**: [PractitionerRole/practitionerrole-example](PractitionerRole/practitionerrole-example)
+**authenticator**: [PractitionerRole Activité de soin et de pharmacie](PractitionerRole-practitionerrole-example.md)
 
 **custodian**: [Organization HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G](Organization-org-example.md)
 
@@ -33,7 +33,7 @@ Profile: [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-s
 | | | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | - | **ContentType** | **Language** | **Data** | **Size** | **Hash** | **Title** | **Creation** |
-| * | application/pdf | French (France) | `SGVsbG8gV29ybGQ=` | 250000 | `2jmj7l5rSw0yVb/vlWAYkK/YBwk=` | Note de suivi du 30 avril 2025 | 2025-04-29 17:00:00+0100 |
+| * | application/pdf | French (France) | `SGVsbG8gV29ybGQ=` | 11 | `Ck1VqNd45QIvq3AZd8XYQLvEhtA=` | Note de suivi du 30 avril 2025 | 2025-04-29 17:00:00+0100 |
 
 **format**: [TRE_A11_IheFormatCode: urn:ihe:iti:xds-sd:pdf:2008](https://interop.esante.gouv.fr/terminologies/1.11.1/CodeSystem-TRE-A11-IheFormatCode.html#TRE-A11-IheFormatCode-urn.58ihe.58iti.58xds-sd.58pdf.582008) (Document à corps non structuré en Pdf/A-1)
 
@@ -65,7 +65,7 @@ Profile: [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-s
     "coding" : [{
       "system" : "http://loinc.org",
       "code" : "15507-7",
-      "display" : "Note d’évolution"
+      "display" : "CR de passage aux urgences"
     }]
   },
   "category" : [{
@@ -94,8 +94,8 @@ Profile: [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-s
       "contentType" : "application/pdf",
       "language" : "fr-FR",
       "data" : "SGVsbG8gV29ybGQ=",
-      "size" : 250000,
-      "hash" : "2jmj7l5rSw0yVb/vlWAYkK/YBwk=",
+      "size" : 11,
+      "hash" : "Ck1VqNd45QIvq3AZd8XYQLvEhtA=",
       "title" : "Note de suivi du 30 avril 2025",
       "creation" : "2025-04-29T17:00:00+01:00"
     },

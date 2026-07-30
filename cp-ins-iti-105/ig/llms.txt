@@ -69,3 +69,5 @@
 * [Dossier de suivi post-opératoire (List)](en/List-ExampleSubmissionSet.md)
 * [HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G (Organization)](en/Organization-org-example.md)
 * [fr-patient-123 (Patient)](en/Patient-fr-patient-123.md)
+* [practitioner-example (Practitioner)](en/Practitioner-practitioner-example.md)
+* [practitionerrole-example (PractitionerRole)](en/PractitionerRole-practitionerrole-example.md)

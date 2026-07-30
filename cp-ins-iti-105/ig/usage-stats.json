@@ -87,21 +87,24 @@
       "StructureDefinition.snapshot"
     ],
     "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-contact-point-email-type": [
-      "DocumentReference.contained.telecom"
+      "DocumentReference.contained.telecom",
+      "Practitioner.telecom"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-data-trace": [
       "List.contained.meta",
       "Organization.meta"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-mailbox-mss-metadata": [
-      "DocumentReference.contained.telecom"
+      "DocumentReference.contained.telecom",
+      "Practitioner.telecom"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types": [
       "List.contained.type",
       "Organization.type"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-smartcard": [
-      "DocumentReference.contained"
+      "DocumentReference.contained",
+      "Practitioner"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-intended-recipient": [
       "List"

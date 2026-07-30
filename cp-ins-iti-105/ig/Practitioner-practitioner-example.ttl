@@ -1,0 +1,165 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/pdsm/Practitioner/practitioner-example> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "practitioner-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2025-04-28T18:19:26.335+02:00"^^xsd:dateTime ] ;
+     fhir:Meta.source [ fhir:value "https://annuaire.sante.fr" ] ;
+     fhir:Meta.profile [
+       fhir:value "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner" ;
+       fhir:index 0 ;
+       fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner>
+     ], [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitioner" ;
+       fhir:index 1 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitioner>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "fr"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr\" lang=\"fr\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner practitioner-example</b></p><a name=\"practitioner-example\"> </a><a name=\"hcpractitioner-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2025-04-28 18:19:26+0200; Language: fr; </p><p style=\"margin-bottom: 0px\">Information Source: <a href=\"https://annuaire.sante.fr\">https://annuaire.sante.fr</a></p><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner.html\">FR Core Practitioner Profile</a>, <a href=\"https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-dp-practitioner.html\">AS Donnée Publique Practitioner Profile</a></p></div><blockquote><p><b>AS Smart Card Extension</b></p><ul><li>type: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R87-TypeCarte/FHIR/TRE-R87-TypeCarte CPS}\">Carte de Professionnel de Santé (CPS)</span></li><li>number: 3100345668</li><li>period: 2024-02-21 --&gt; 2027-02-21</li></ul></blockquote><p><b>identifier</b>: Identifiant National de Professionnel de Santé/810101201234 (use: official, ), N° RPPS/10101201234 (use: official, )</p><p><b>active</b>: true</p><p><b>name</b>: Leclerc Sophie</p><p><b>telecom</b>: <a href=\"mailto:sophie.leclerc@mssante.fr\">sophie.leclerc@mssante.fr</a></p><blockquote><p><b>qualification</b></p><p><b>code</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R14-TypeDiplome/FHIR/TRE-R14-TypeDiplome DE}, {https://mos.esante.gouv.fr/NOS/TRE_R48-DiplomeEtatFrancais/FHIR/TRE-R48-DiplomeEtatFrancais DE11}\">Diplôme d'Etat français</span></p></blockquote><blockquote><p><b>qualification</b></p><p><b>code</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R09-CategorieProfessionnelle/FHIR/TRE-R09-CategorieProfessionnelle C}, {https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante 70}\">Civil</span></p></blockquote></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Extension.url [ fhir:value "type" ] ;
+       fhir:Extension.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R87-TypeCarte/FHIR/TRE-R87-TypeCarte" ] ;
+           fhir:Coding.code [ fhir:value "CPS" ]
+         ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:Extension.url [ fhir:value "number" ] ;
+       fhir:Extension.valueString [ fhir:value "3100345668" ]
+     ], [
+       fhir:index 2 ;
+       fhir:Extension.url [ fhir:value "period" ] ;
+       fhir:Extension.valuePeriod [
+         fhir:Period.start [ fhir:value "2024-02-21"^^xsd:date ] ;
+         fhir:Period.end [ fhir:value "2027-02-21"^^xsd:date ]
+       ]
+     ] ;
+     fhir:Extension.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-smartcard" ]
+  ] ;
+  fhir:Practitioner.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.use [ fhir:value "official" ] ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "IDNPS" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "urn:oid:1.2.250.1.71.4.2.1" ] ;
+     fhir:Identifier.value [ fhir:value "810101201234" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Identifier.use [ fhir:value "official" ] ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "RPPS" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "https://rpps.esante.gouv.fr" ] ;
+     fhir:Identifier.value [ fhir:value "10101201234" ]
+  ] ;
+  fhir:Practitioner.active [ fhir:value "true"^^xsd:boolean] ;
+  fhir:Practitioner.name [
+     fhir:index 0 ;
+     fhir:HumanName.text [ fhir:value "Leclerc Sophie" ] ;
+     fhir:HumanName.family [ fhir:value "Leclerc" ] ;
+     fhir:HumanName.given [
+       fhir:value "Sophie" ;
+       fhir:index 0
+     ] ;
+     fhir:HumanName.prefix [
+       fhir:value "MME" ;
+       fhir:index 0
+     ] ;
+     fhir:HumanName.suffix [
+       fhir:value "DR" ;
+       fhir:index 0
+     ]
+  ] ;
+  fhir:Practitioner.telecom [
+     fhir:index 0 ;
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Extension.url [ fhir:value "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-contact-point-email-type" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie" ] ;
+         fhir:Coding.code [ fhir:value "MSSANTE" ] ;
+         fhir:Coding.display [ fhir:value "MSSANTE" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "type" ] ;
+         fhir:Extension.valueCodeableConcept [
+           fhir:CodeableConcept.coding [
+             fhir:index 0 ;
+             fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R257-TypeBAL/FHIR/TRE-R257-TypeBAL" ] ;
+             fhir:Coding.code [ fhir:value "PER" ]
+           ]
+         ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "digitization" ] ;
+         fhir:Extension.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+       ] ;
+       fhir:Extension.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-mailbox-mss-metadata" ]
+     ] ;
+     fhir:ContactPoint.system [ fhir:value "email" ] ;
+     fhir:ContactPoint.value [ fhir:value "sophie.leclerc@mssante.fr" ] ;
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ] ;
+  fhir:Practitioner.qualification [
+     fhir:index 0 ;
+     fhir:Practitioner.qualification.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R14-TypeDiplome/FHIR/TRE-R14-TypeDiplome" ] ;
+         fhir:Coding.code [ fhir:value "DE" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R48-DiplomeEtatFrancais/FHIR/TRE-R48-DiplomeEtatFrancais" ] ;
+         fhir:Coding.code [ fhir:value "DE11" ]
+       ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Practitioner.qualification.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R09-CategorieProfessionnelle/FHIR/TRE-R09-CategorieProfessionnelle" ] ;
+         fhir:Coding.code [ fhir:value "C" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante" ] ;
+         fhir:Coding.code [ fhir:value "70" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/pdsm/Practitioner/practitioner-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
