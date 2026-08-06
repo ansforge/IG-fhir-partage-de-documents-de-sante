@@ -35,7 +35,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
   "name" : "PDSm_ComprehensiveDocumentReference",
   "title" : "PDSm Comprehensive DocumentReference",
   "status" : "active",
-  "date" : "2026-08-06T13:28:00+00:00",
+  "date" : "2026-08-06T13:33:58+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -339,7 +339,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
       "path" : "DocumentReference.securityLabel",
       "slicing" : {
         "discriminator" : [{
-          "type" : "pattern",
+          "type" : "value",
           "path" : "$this"
         }],
         "description" : "Slice sur securityLabel (pattern sur coding.system) pour distinguer le niveau de confidentialité (NRV) du statut de visibilité complémentaire (TRE A07)",

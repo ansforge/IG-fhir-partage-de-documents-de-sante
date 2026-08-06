@@ -1,7 +1,7 @@
 PDSm : Validation Results
 =========================================
 
-err = 27, warn = 105, info = 94
+err = 27, warn = 105, info = 90
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.pdsm#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/pdsm)
  Build Errors : 17 / 7 / 0
@@ -23,14 +23,14 @@ Generated $--. FHIR version $-- for ans.fhir.fr.pdsm#$-- (canonical = https://in
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-List-PractitionerRoleAsSource : 0 / 0 / 2
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-List-authorOrg : 0 / 0 / 2
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/SearchParameter-PDSm-isArchived : 0 / 0 / 2
- /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-comprehensive-document-reference : 0 / 38 / 28
+ /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-comprehensive-document-reference : 0 / 38 / 26
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-comprehensive-provide-document-bundle : 0 / 1 / 2
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-ext-intended-recipient : 0 / 0 / 2
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-ext-is-archived : 0 / 0 / 2
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-find-documentreferences-comprehensive-response : 0 / 1 / 2
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-find-lists-response : 0 / 1 / 2
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-folder-comprehensive : 0 / 0 / 2
- /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-simplified-publish : 0 / 35 / 23
+ /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-simplified-publish : 0 / 35 / 21
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/StructureDefinition-pdsm-submissionset-comprehensive : 0 / 4 / 4
 </table>
 == n/a ==
@@ -200,7 +200,6 @@ INFORMATION: StructureDefinition/pdsm-comprehensive-document-reference: Structur
 INFORMATION: StructureDefinition/pdsm-comprehensive-document-reference: StructureDefinition.differential.element[15].constraint[0]: The constraint 'constr-cdr-rempl' has no computable expression, so validators will not be able to check it
 INFORMATION: StructureDefinition/pdsm-comprehensive-document-reference: StructureDefinition.differential.element[15].constraint[1]: The constraint 'constr-bind-relatesTo' has no computable expression, so validators will not be able to check it
 INFORMATION: StructureDefinition/pdsm-comprehensive-document-reference: StructureDefinition.differential.element[17].constraint[0]: The constraint 'constr-bind-relatesToTarget' has no computable expression, so validators will not be able to check it
-INFORMATION: StructureDefinition/pdsm-comprehensive-document-reference: StructureDefinition.differential.element[19].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/pdsm-comprehensive-document-reference: StructureDefinition.differential.element[24].constraint[0]: The constraint 'constr-bind-attachmenturl' has no computable expression, so validators will not be able to check it
 INFORMATION: StructureDefinition/pdsm-comprehensive-document-reference: StructureDefinition.differential.element[29].constraint[0]: The constraint 'constr-bind-format' has no computable expression, so validators will not be able to check it
 INFORMATION: StructureDefinition/pdsm-comprehensive-document-reference: StructureDefinition.differential.element[31].constraint[0]: The constraint 'constr-bind-context-event' has no computable expression, so validators will not be able to check it
@@ -212,7 +211,6 @@ INFORMATION: StructureDefinition/pdsm-comprehensive-document-reference: Structur
 INFORMATION: StructureDefinition/pdsm-comprehensive-document-reference: StructureDefinition.snapshot.element[30].constraint[1]: The constraint 'constr-cdr-rempl' has no computable expression, so validators will not be able to check it
 INFORMATION: StructureDefinition/pdsm-comprehensive-document-reference: StructureDefinition.snapshot.element[30].constraint[2]: The constraint 'constr-bind-relatesTo' has no computable expression, so validators will not be able to check it
 INFORMATION: StructureDefinition/pdsm-comprehensive-document-reference: StructureDefinition.snapshot.element[35].constraint[1]: The constraint 'constr-bind-relatesToTarget' has no computable expression, so validators will not be able to check it
-INFORMATION: StructureDefinition/pdsm-comprehensive-document-reference: StructureDefinition.snapshot.element[37].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/pdsm-comprehensive-document-reference: StructureDefinition.snapshot.element[39].pattern.ofType(CodeableConcept): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 INFORMATION: StructureDefinition/pdsm-comprehensive-document-reference: StructureDefinition.snapshot.element[50].constraint[1]: The constraint 'constr-bind-attachmenturl' has no computable expression, so validators will not be able to check it
 INFORMATION: StructureDefinition/pdsm-comprehensive-document-reference: StructureDefinition.snapshot.element[55].constraint[1]: The constraint 'constr-bind-format' has no computable expression, so validators will not be able to check it
@@ -278,7 +276,6 @@ INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.di
 INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.differential.element[12].constraint[0]: The constraint 'constr-sp-relatesTo-rempl' has no computable expression, so validators will not be able to check it
 INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.differential.element[13].constraint[0]: The constraint 'constr-sp-bind-relatesToCode' has no computable expression, so validators will not be able to check it
 INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.differential.element[14].constraint[0]: The constraint 'constr-sp-bind-relatesToTarget' has no computable expression, so validators will not be able to check it
-INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.differential.element[16].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.differential.element[26].constraint[0]: The constraint 'constr-bind-format' has no computable expression, so validators will not be able to check it
 INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.differential.element[28].constraint[0]: The constraint 'constr-bind-context-event' has no computable expression, so validators will not be able to check it
 INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.differential.element[29].constraint[0]: The constraint 'constr-bind-ProducteurDoc-simplified' has no computable expression, so validators will not be able to check it
@@ -288,7 +285,6 @@ INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.sn
 INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.snapshot.element[28].constraint[1]: The constraint 'constr-sp-relatesTo-rempl' has no computable expression, so validators will not be able to check it
 INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.snapshot.element[32].constraint[1]: The constraint 'constr-sp-bind-relatesToCode' has no computable expression, so validators will not be able to check it
 INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.snapshot.element[33].constraint[1]: The constraint 'constr-sp-bind-relatesToTarget' has no computable expression, so validators will not be able to check it
-INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.snapshot.element[35].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.snapshot.element[37].pattern.ofType(CodeableConcept): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.snapshot.element[53].constraint[1]: The constraint 'constr-bind-format' has no computable expression, so validators will not be able to check it
 INFORMATION: StructureDefinition/pdsm-simplified-publish: StructureDefinition.snapshot.element[59].constraint[1]: The constraint 'constr-bind-context-event' has no computable expression, so validators will not be able to check it
