@@ -14,7 +14,7 @@
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-08-06T14:18:59+00:00",
+  "date" : "2026-08-06T14:57:23+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

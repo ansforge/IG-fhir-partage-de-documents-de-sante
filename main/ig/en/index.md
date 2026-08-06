@@ -5,7 +5,7 @@
  **PDSm Implementation Guide**
  This document presents the technical specifications of the “Partage de documents de santé en mobilité” section. This is a part of the service layer specifying the terms of document sharing without constraining them. The specifications related to health documents constitute the components of the business layer of CI-SIS. 
 
->  **Attention !** Cette version du guide d'implémentation est en intégration continue (version de travail) et est soumise à des changements réguliers. La version officielle est accessible à l'adresse [https://interop.esante.gouv.fr/ig/fhir/pdsm](https://interop.esante.gouv.fr/ig/fhir/pdsm)</b> 
+>  **Attention !** Cette version du guide d'implémentation est en intégration continue (version de travail) et est soumise à des changements réguliers. La version officielle est accessible à l'adresse [https://interop.esante.gouv.fr/ig/fhir/pdsm](https://interop.esante.gouv.fr/ig/fhir/pdsm) 
 
 ### Introduction
 
