@@ -72,7 +72,7 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 * securityLabel ^slicing.discriminator.type = #value
 * securityLabel ^slicing.discriminator.path = "$this"
 * securityLabel ^slicing.rules = #open
-* securityLabel ^slicing.description = "Slice sur securityLabel pour distinguer le niveau de confidentialité (NRV) du statut de visibilité complémentaire (TRE A07) : chaque slice est discriminée par son required binding sur un ValueSet fermé (v3-ConfidentialityClassification pour confidentiality, JDV_J110-StatutVisibiliteDocument-CISIS pour visibilityStatus)"
+* securityLabel ^slicing.description = "Slice sur securityLabel pour distinguer le niveau de confidentialité (U, L, M, N, R, V) du statut de visibilité (MASQUE_PS, INVISIBLE_PATIENT, etc...) : chaque slice est discriminée par son required binding sur un ValueSet fermé (v3-ConfidentialityClassification pour confidentiality, JDV_J110-StatutVisibiliteDocument-CISIS pour visibilityStatus)"
 * securityLabel ^short = "Contient les informations définissant le niveau de confidentialité d'un document."
 
 * securityLabel contains confidentiality 1..1 and visibilityStatus 0..*
