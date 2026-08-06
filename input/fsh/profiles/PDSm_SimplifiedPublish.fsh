@@ -82,7 +82,7 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 * securityLabel[confidentiality] from http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification (required)
 
 * securityLabel[visibilityStatus] MS
-* securityLabel[visibilityStatus] ^short = "Statut de visibilité complémentaire du document (motifs de masquage patient, représentants légaux, professionnels)."
+* securityLabel[visibilityStatus] ^short = "Statut de visibilité du document (invisible patient, invisible représentants légaux, masqué PS, etc...)."
 * securityLabel[visibilityStatus] from $JDV-J110-StatutVisibiliteDocument-CISIS (required)
 
 // ###########
