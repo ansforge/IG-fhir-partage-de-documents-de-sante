@@ -73,14 +73,13 @@ Description: "Profil contenant les métadonnées du document ainsi que le lien v
 * securityLabel ^slicing.discriminator.type = #value
 * securityLabel ^slicing.discriminator.path = "$this"
 * securityLabel ^slicing.rules = #open
-* securityLabel ^slicing.description = "Slice sur securityLabel (pattern sur coding.system) pour distinguer le niveau de confidentialité (NRV) du statut de visibilité complémentaire (TRE A07)"
+* securityLabel ^slicing.description = "Slice sur securityLabel pour distinguer le niveau de confidentialité (NRV) du statut de visibilité complémentaire (TRE A07) : confidentiality est discriminée par son required binding (ValueSet fermé v3-ConfidentialityClassification), visibilityStatus par un pattern sur coding.system (JDV_J110-StatutVisibiliteDocument-CISIS)"
 * securityLabel ^short = "Contient les informations définissant le niveau de confidentialité d'un document."
 
 * securityLabel contains confidentiality 1..1 and visibilityStatus 0..*
 
 * securityLabel[confidentiality] MS
 * securityLabel[confidentiality] ^short = "Niveau de confidentialité standard du document (Normal, Restreint, Très restreint)."
-* securityLabel[confidentiality] ^patternCodeableConcept.coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
 * securityLabel[confidentiality] from http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification (required)
 
 * securityLabel[visibilityStatus] MS
