@@ -17,7 +17,7 @@
   fhir:StructureDefinition.name [ fhir:value "PDSm_IsArchived"] ;
   fhir:StructureDefinition.title [ fhir:value "PDSm_isArchived"] ;
   fhir:StructureDefinition.status [ fhir:value "active"] ;
-  fhir:StructureDefinition.date [ fhir:value "2026-08-06T14:05:46+00:00"^^xsd:dateTime] ;
+  fhir:StructureDefinition.date [ fhir:value "2026-08-06T14:06:47+00:00"^^xsd:dateTime] ;
   fhir:StructureDefinition.publisher [ fhir:value "ANS"] ;
   fhir:StructureDefinition.contact [
      fhir:index 0 ;

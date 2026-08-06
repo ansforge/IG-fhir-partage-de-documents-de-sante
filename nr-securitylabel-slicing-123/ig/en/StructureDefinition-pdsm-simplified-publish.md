@@ -34,7 +34,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
   "name" : "PDSm_SimplifiedPublish",
   "title" : "PDSm Simplified Publish Document Reference",
   "status" : "active",
-  "date" : "2026-08-06T14:05:46+00:00",
+  "date" : "2026-08-06T14:06:47+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -269,7 +269,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
       "id" : "DocumentReference.securityLabel:visibilityStatus",
       "path" : "DocumentReference.securityLabel",
       "sliceName" : "visibilityStatus",
-      "short" : "Statut de visibilité complémentaire du document (motifs de masquage patient, représentants légaux, professionnels).",
+      "short" : "Statut de visibilité du document (invisible patient, invisible représentants légaux, masqué PS, etc...).",
       "min" : 0,
       "max" : "*",
       "mustSupport" : true,

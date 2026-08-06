@@ -88,7 +88,7 @@ En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J02-Xd
   <name value="PDSm_ComprehensiveDocumentReference"/>
   <title value="PDSm Comprehensive DocumentReference"/>
   <status value="active"/>
-  <date value="2026-08-06T14:05:46+00:00"/>
+  <date value="2026-08-06T14:06:47+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -1820,7 +1820,7 @@ En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J02-Xd
           <type value="value"/>
           <path value="$this"/>
         </discriminator>
-        <description value="Slice sur securityLabel pour distinguer le niveau de confidentialité (NRV) du statut de visibilité complémentaire (TRE A07) : chaque slice est discriminée par son required binding sur un ValueSet fermé (v3-ConfidentialityClassification pour confidentiality, JDV_J110-StatutVisibiliteDocument-CISIS pour visibilityStatus)"/>
+        <description value="Slice sur securityLabel pour distinguer le niveau de confidentialité (U, L, M, N, R, V) du statut de visibilité (MASQUE_PS, INVISIBLE_PATIENT, etc...) : chaque slice est discriminée par son required binding sur un ValueSet fermé (v3-ConfidentialityClassification pour confidentiality, JDV_J110-StatutVisibiliteDocument-CISIS pour visibilityStatus)"/>
         <rules value="open"/>
       </slicing>
       <short value="Contient les informations définissant le niveau de confidentialité d'un document."/>
@@ -4771,7 +4771,7 @@ En l’absence de spécifications complémentaires, le jeu de valeurs JDV_J02-Xd
           <type value="value"/>
           <path value="$this"/>
         </discriminator>
-        <description value="Slice sur securityLabel pour distinguer le niveau de confidentialité (NRV) du statut de visibilité complémentaire (TRE A07) : chaque slice est discriminée par son required binding sur un ValueSet fermé (v3-ConfidentialityClassification pour confidentiality, JDV_J110-StatutVisibiliteDocument-CISIS pour visibilityStatus)"/>
+        <description value="Slice sur securityLabel pour distinguer le niveau de confidentialité (U, L, M, N, R, V) du statut de visibilité (MASQUE_PS, INVISIBLE_PATIENT, etc...) : chaque slice est discriminée par son required binding sur un ValueSet fermé (v3-ConfidentialityClassification pour confidentiality, JDV_J110-StatutVisibiliteDocument-CISIS pour visibilityStatus)"/>
         <rules value="open"/>
       </slicing>
       <short value="Contient les informations définissant le niveau de confidentialité d'un document."/>

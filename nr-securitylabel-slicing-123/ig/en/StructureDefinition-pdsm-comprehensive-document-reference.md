@@ -35,7 +35,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
   "name" : "PDSm_ComprehensiveDocumentReference",
   "title" : "PDSm Comprehensive DocumentReference",
   "status" : "active",
-  "date" : "2026-08-06T14:05:46+00:00",
+  "date" : "2026-08-06T14:06:47+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -342,7 +342,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
           "type" : "value",
           "path" : "$this"
         }],
-        "description" : "Slice sur securityLabel pour distinguer le niveau de confidentialité (NRV) du statut de visibilité complémentaire (TRE A07) : chaque slice est discriminée par son required binding sur un ValueSet fermé (v3-ConfidentialityClassification pour confidentiality, JDV_J110-StatutVisibiliteDocument-CISIS pour visibilityStatus)",
+        "description" : "Slice sur securityLabel pour distinguer le niveau de confidentialité (U, L, M, N, R, V) du statut de visibilité (MASQUE_PS, INVISIBLE_PATIENT, etc...) : chaque slice est discriminée par son required binding sur un ValueSet fermé (v3-ConfidentialityClassification pour confidentiality, JDV_J110-StatutVisibiliteDocument-CISIS pour visibilityStatus)",
         "rules" : "open"
       },
       "short" : "Contient les informations définissant le niveau de confidentialité d'un document.",
