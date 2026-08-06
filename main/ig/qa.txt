@@ -3,8 +3,8 @@ PDSm : Validation Results
 
 err = 27, warn = 98, info = 88
 IG Publisher Version: 2.3.0
-Generated Thu Aug 06 13:09:01 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.pdsm#3.1.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/pdsm)
- Build Errors : 17 / 7 / 0
+Generated Thu Aug 06 14:21:12 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.pdsm#3.1.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/pdsm)
+ Build Errors : 17 / 8 / 0
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Binary-6789 : 0 / 0 / 1
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478 : 0 / 4 / 1
  /__w/IG-fhir-partage-de-documents-de-sante/IG-fhir-partage-de-documents-de-sante/igSource/fsh-generated/resources/CapabilityStatement-PDSm-ConsommateurDeDocuments : 0 / 1 / 3
@@ -54,6 +54,7 @@ ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 280, col
 ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 286, column 8: The link 'examples.xml.zip' for "Exemples XML (zip)" cannot be resolved
 ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 287, column 8: The link 'examples.json.zip' for "Exemples JSON (zip)" cannot be resolved
 ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 288, column 8: The link 'examples.ttl.zip' for "Exemples JSON (zip)" cannot be resolved
+WARNING: en/index.html#/html/body/div/div/div/div/div/div/blockquote/p/a at Line 326, column 205: The link 'https://interop.esante.gouv.fr/ig/fhir/pdsm' for "https://interop.esante.gouv.fr/ig/fhir/pdsm" is a canonical link and is therefore unsafe with regard to versions
 ERROR: en/st_ajout.html#/html/body/div/div/div/div/div/p/a at Line 300, column 54: The link '/IHE.MHD.ProvideDocumentBundleResponse' for "ProvideDocumentBundleResponse" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
