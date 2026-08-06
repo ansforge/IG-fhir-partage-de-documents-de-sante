@@ -121,8 +121,13 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 * context.practiceSetting obeys constr-bind-ProducteurDoc-simplified
 * context.practiceSetting ^short = "Cadre d’exercice de l’acte qui a engendré la création du document."
 
+// ---------------------------------------------------------------------
+// sourcePatientInfo — porteur des traits ; référence contained (IHE ITI-105)
+// ---------------------------------------------------------------------
 * context.sourcePatientInfo only Reference(FRCorePatientProfile)
-* context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier."
+* context.sourcePatientInfo ^type.aggregation = #contained
+* context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier. Conformément à IHE MHD ITI-105, lorsque fournie, cette référence pointe une ressource Patient contenue (contained). Selon le statut d'identité, la ressource est conforme au profil FR Core Patient (identité non qualifiée) ou FR Core Patient INS (identité qualifiée, matricule INS + traits INSi) qui hérite de profil FR Core Patient."
+* context.sourcePatientInfo obeys constr-sp-sourcePatientInfo-contained
 
 
 Invariant: constr-bind-ProducteurDoc-simplified
@@ -149,3 +154,13 @@ Invariant: constr-sp-bind-relatesToTarget
 Description: "Référence contrainte au profil PDSm_SimplifiedPublish."
 // Expression:       "f:relatesTo/f:target"
 Severity:    #error
+
+// ---------------------------------------------------------------------
+// INVARIANT : caractère "contained" (#) de sourcePatientInfo (IHE ITI-105).
+// Ne s'applique que si sourcePatientInfo est présent (UnContained Reference
+// Option : sourcePatientInfo peut être absent).
+// ---------------------------------------------------------------------
+Invariant: constr-sp-sourcePatientInfo-contained
+Description: "Lorsqu'il est fourni, context.sourcePatientInfo doit référencer une ressource Patient contenue (contained), cf spécifications IHE MHD ITI-105 §2:3.105.4.1.2.2."
+Expression: "reference.exists() implies reference.startsWith('#')"
+Severity: #error
