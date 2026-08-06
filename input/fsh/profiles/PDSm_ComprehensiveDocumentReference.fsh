@@ -80,6 +80,7 @@ Description: "Profil contenant les métadonnées du document ainsi que le lien v
 
 * securityLabel[confidentiality] MS
 * securityLabel[confidentiality] ^short = "Niveau de confidentialité standard du document (Normal, Restreint, Très restreint)."
+* securityLabel[confidentiality] ^definition = "En l'absence d'information de confidentialité disponible, la valeur par défaut à utiliser est N (Normal), conformément à ce qui est déjà pratiqué aujourd'hui pour les documents CDA."
 * securityLabel[confidentiality] from http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification (required)
 
 * securityLabel[visibilityStatus] MS
