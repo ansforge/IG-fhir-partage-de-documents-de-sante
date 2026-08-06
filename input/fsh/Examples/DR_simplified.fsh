@@ -23,6 +23,8 @@ Usage: #example
 
 * description = "Note d'évolution suite à une consultation de suivi."
 
+* securityLabel[confidentiality] = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "Normal"
+
 * content.attachment.contentType = #application/pdf
 * content.attachment.language = #fr-FR
 * content.attachment.data = "SGVsbG8gV29ybGQ="
