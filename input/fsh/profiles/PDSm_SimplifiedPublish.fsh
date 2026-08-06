@@ -69,22 +69,22 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 * description MS
 * description ^short = "Commentaire associé au document."
 
-* securityLabel ^slicing.discriminator.type = #value
-* securityLabel ^slicing.discriminator.path = "coding.system"
+* securityLabel ^slicing.discriminator.type = #pattern
+* securityLabel ^slicing.discriminator.path = "$this"
 * securityLabel ^slicing.rules = #open
-* securityLabel ^slicing.description = "Slice sur securityLabel.coding.system pour distinguer le niveau de confidentialité (NRV) du statut de visibilité complémentaire (TRE A07)"
+* securityLabel ^slicing.description = "Slice sur securityLabel (pattern sur coding.system) pour distinguer le niveau de confidentialité (NRV) du statut de visibilité complémentaire (TRE A07)"
 * securityLabel ^short = "Contient les informations définissant le niveau de confidentialité d'un document."
 
 * securityLabel contains confidentiality 1..1 and visibilityStatus 0..*
 
 * securityLabel[confidentiality] MS
 * securityLabel[confidentiality] ^short = "Niveau de confidentialité standard du document (Normal, Restreint, Très restreint)."
-* securityLabel[confidentiality].coding.system = "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+* securityLabel[confidentiality] ^patternCodeableConcept.coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
 * securityLabel[confidentiality] from http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification (required)
 
 * securityLabel[visibilityStatus] MS
 * securityLabel[visibilityStatus] ^short = "Statut de visibilité complémentaire du document (motifs de masquage patient, représentants légaux, professionnels)."
-* securityLabel[visibilityStatus].coding.system = "https://mos.esante.gouv.fr/NOS/TRE_A07-StatutVisibiliteDocument/FHIR/TRE-A07-StatutVisibiliteDocument"
+* securityLabel[visibilityStatus] ^patternCodeableConcept.coding[0].system = "https://mos.esante.gouv.fr/NOS/TRE_A07-StatutVisibiliteDocument/FHIR/TRE-A07-StatutVisibiliteDocument"
 * securityLabel[visibilityStatus] from $JDV-J110-StatutVisibiliteDocument-CISIS (required)
 
 // ###########
