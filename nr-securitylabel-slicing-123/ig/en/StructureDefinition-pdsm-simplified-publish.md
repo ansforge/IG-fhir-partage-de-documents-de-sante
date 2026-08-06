@@ -34,7 +34,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
   "name" : "PDSm_SimplifiedPublish",
   "title" : "PDSm Simplified Publish Document Reference",
   "status" : "active",
-  "date" : "2026-08-06T13:54:33+00:00",
+  "date" : "2026-08-06T13:55:54+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -256,8 +256,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
       "id" : "DocumentReference.securityLabel:confidentiality",
       "path" : "DocumentReference.securityLabel",
       "sliceName" : "confidentiality",
-      "short" : "Niveau de confidentialité standard du document (Normal, Restreint, Très restreint).",
-      "definition" : "En l'absence d'information de confidentialité disponible, la valeur par défaut à utiliser est N (Normal), conformément à ce qui est déjà pratiqué aujourd'hui pour les documents CDA.",
+      "short" : "Niveau de confidentialité standard du document (Normal, Restreint, Très restreint, ...). En l'absence d'information de confidentialité disponible, la valeur par défaut à utiliser est N (Normal), conformément à ce qui est déjà pratiqué aujourd'hui pour les documents CDA.",
       "min" : 1,
       "max" : "1",
       "mustSupport" : true,
