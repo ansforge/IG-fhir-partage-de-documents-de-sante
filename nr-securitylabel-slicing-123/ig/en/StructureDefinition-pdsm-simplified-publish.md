@@ -34,7 +34,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
   "name" : "PDSm_SimplifiedPublish",
   "title" : "PDSm Simplified Publish Document Reference",
   "status" : "active",
-  "date" : "2026-08-06T13:33:58+00:00",
+  "date" : "2026-08-06T13:37:30+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -246,7 +246,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
           "type" : "value",
           "path" : "$this"
         }],
-        "description" : "Slice sur securityLabel (pattern sur coding.system) pour distinguer le niveau de confidentialité (NRV) du statut de visibilité complémentaire (TRE A07)",
+        "description" : "Slice sur securityLabel pour distinguer le niveau de confidentialité (NRV) du statut de visibilité complémentaire (TRE A07) : confidentiality est discriminée par son required binding (ValueSet fermé v3-ConfidentialityClassification), visibilityStatus par un pattern sur coding.system (JDV_J110-StatutVisibiliteDocument-CISIS)",
         "rules" : "open"
       },
       "short" : "Contient les informations définissant le niveau de confidentialité d'un document.",
@@ -259,11 +259,6 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
       "short" : "Niveau de confidentialité standard du document (Normal, Restreint, Très restreint).",
       "min" : 1,
       "max" : "1",
-      "patternCodeableConcept" : {
-        "coding" : [{
-          "system" : "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
-        }]
-      },
       "mustSupport" : true,
       "binding" : {
         "strength" : "required",
