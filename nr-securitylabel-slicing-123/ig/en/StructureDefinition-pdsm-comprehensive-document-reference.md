@@ -35,7 +35,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
   "name" : "PDSm_ComprehensiveDocumentReference",
   "title" : "PDSm Comprehensive DocumentReference",
   "status" : "active",
-  "date" : "2026-08-06T13:37:30+00:00",
+  "date" : "2026-08-06T13:40:23+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -342,7 +342,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
           "type" : "value",
           "path" : "$this"
         }],
-        "description" : "Slice sur securityLabel pour distinguer le niveau de confidentialité (NRV) du statut de visibilité complémentaire (TRE A07) : confidentiality est discriminée par son required binding (ValueSet fermé v3-ConfidentialityClassification), visibilityStatus par un pattern sur coding.system (JDV_J110-StatutVisibiliteDocument-CISIS)",
+        "description" : "Slice sur securityLabel pour distinguer le niveau de confidentialité (NRV) du statut de visibilité complémentaire (TRE A07) : chaque slice est discriminée par son required binding sur un ValueSet fermé (v3-ConfidentialityClassification pour confidentiality, JDV_J110-StatutVisibiliteDocument-CISIS pour visibilityStatus)",
         "rules" : "open"
       },
       "short" : "Contient les informations définissant le niveau de confidentialité d'un document.",
@@ -371,11 +371,6 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
       "short" : "Statut de visibilité complémentaire du document (motifs de masquage patient, représentants légaux, professionnels).",
       "min" : 0,
       "max" : "*",
-      "patternCodeableConcept" : {
-        "coding" : [{
-          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A07-StatutVisibiliteDocument/FHIR/TRE-A07-StatutVisibiliteDocument"
-        }]
-      },
       "mustSupport" : true,
       "binding" : {
         "strength" : "required",
