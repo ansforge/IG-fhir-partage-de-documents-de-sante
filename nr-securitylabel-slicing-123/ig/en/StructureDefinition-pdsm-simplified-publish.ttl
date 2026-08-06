@@ -18,7 +18,7 @@
   fhir:StructureDefinition.name [ fhir:value "PDSm_SimplifiedPublish"] ;
   fhir:StructureDefinition.title [ fhir:value "PDSm Simplified Publish Document Reference"] ;
   fhir:StructureDefinition.status [ fhir:value "active"] ;
-  fhir:StructureDefinition.date [ fhir:value "2026-08-06T14:06:47+00:00"^^xsd:dateTime] ;
+  fhir:StructureDefinition.date [ fhir:value "2026-08-06T14:07:32+00:00"^^xsd:dateTime] ;
   fhir:StructureDefinition.publisher [ fhir:value "ANS"] ;
   fhir:StructureDefinition.contact [
      fhir:index -1 ;
@@ -1952,7 +1952,7 @@
            fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "value" ] ;
            fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "$this" ]
          ] ;
-         fhir:ElementDefinition.slicing.description [ fhir:value "Slice sur securityLabel pour distinguer le niveau de confidentialité (NRV) du statut de visibilité complémentaire (TRE A07) : chaque slice est discriminée par son required binding sur un ValueSet fermé (v3-ConfidentialityClassification pour confidentiality, JDV_J110-StatutVisibiliteDocument-CISIS pour visibilityStatus)" ] ;
+         fhir:ElementDefinition.slicing.description [ fhir:value "Slice sur securityLabel pour distinguer le niveau de confidentialité (U, L, M, N, R, V) du statut de visibilité (MASQUE_PS, INVISIBLE_PATIENT, etc...) : chaque slice est discriminée par son required binding sur un ValueSet fermé (v3-ConfidentialityClassification pour confidentiality, JDV_J110-StatutVisibiliteDocument-CISIS pour visibilityStatus)" ] ;
          fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
        ] ;
        fhir:ElementDefinition.short [ fhir:value "Contient les informations définissant le niveau de confidentialité d'un document." ] ;
@@ -3740,7 +3740,7 @@
            fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "value" ] ;
            fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "$this" ]
          ] ;
-         fhir:ElementDefinition.slicing.description [ fhir:value "Slice sur securityLabel pour distinguer le niveau de confidentialité (NRV) du statut de visibilité complémentaire (TRE A07) : chaque slice est discriminée par son required binding sur un ValueSet fermé (v3-ConfidentialityClassification pour confidentiality, JDV_J110-StatutVisibiliteDocument-CISIS pour visibilityStatus)" ] ;
+         fhir:ElementDefinition.slicing.description [ fhir:value "Slice sur securityLabel pour distinguer le niveau de confidentialité (U, L, M, N, R, V) du statut de visibilité (MASQUE_PS, INVISIBLE_PATIENT, etc...) : chaque slice est discriminée par son required binding sur un ValueSet fermé (v3-ConfidentialityClassification pour confidentiality, JDV_J110-StatutVisibiliteDocument-CISIS pour visibilityStatus)" ] ;
          fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
        ] ;
        fhir:ElementDefinition.short [ fhir:value "Contient les informations définissant le niveau de confidentialité d'un document." ] ;
