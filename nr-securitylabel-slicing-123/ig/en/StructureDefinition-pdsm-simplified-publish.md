@@ -34,7 +34,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
   "name" : "PDSm_SimplifiedPublish",
   "title" : "PDSm Simplified Publish Document Reference",
   "status" : "active",
-  "date" : "2026-08-06T13:19:16+00:00",
+  "date" : "2026-08-06T13:23:45+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -266,6 +266,12 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
       }
     },
     {
+      "id" : "DocumentReference.securityLabel:confidentiality.coding.system",
+      "path" : "DocumentReference.securityLabel.coding.system",
+      "min" : 1,
+      "patternUri" : "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+    },
+    {
       "id" : "DocumentReference.securityLabel:visibilityStatus",
       "path" : "DocumentReference.securityLabel",
       "sliceName" : "visibilityStatus",
@@ -277,6 +283,12 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J110-StatutVisibiliteDocument-CISIS/FHIR/JDV-J110-StatutVisibiliteDocument-CISIS"
       }
+    },
+    {
+      "id" : "DocumentReference.securityLabel:visibilityStatus.coding.system",
+      "path" : "DocumentReference.securityLabel.coding.system",
+      "min" : 1,
+      "patternUri" : "https://mos.esante.gouv.fr/NOS/TRE_A07-StatutVisibiliteDocument/FHIR/TRE-A07-StatutVisibiliteDocument"
     },
     {
       "id" : "DocumentReference.content",
