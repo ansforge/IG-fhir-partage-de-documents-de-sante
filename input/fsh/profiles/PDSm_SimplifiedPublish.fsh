@@ -69,7 +69,7 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 * description MS
 * description ^short = "Commentaire associé au document."
 
-* securityLabel ^slicing.discriminator.type = #pattern
+* securityLabel ^slicing.discriminator.type = #value
 * securityLabel ^slicing.discriminator.path = "$this"
 * securityLabel ^slicing.rules = #open
 * securityLabel ^slicing.description = "Slice sur securityLabel (pattern sur coding.system) pour distinguer le niveau de confidentialité (NRV) du statut de visibilité complémentaire (TRE A07)"

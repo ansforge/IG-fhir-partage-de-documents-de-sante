@@ -70,7 +70,7 @@ Description: "Profil contenant les métadonnées du document ainsi que le lien v
 * description MS
 * description ^short = "Description du document source, lisible par l'homme, correspondant au commentaire associé au document"
 
-* securityLabel ^slicing.discriminator.type = #pattern
+* securityLabel ^slicing.discriminator.type = #value
 * securityLabel ^slicing.discriminator.path = "$this"
 * securityLabel ^slicing.rules = #open
 * securityLabel ^slicing.description = "Slice sur securityLabel (pattern sur coding.system) pour distinguer le niveau de confidentialité (NRV) du statut de visibilité complémentaire (TRE A07)"
