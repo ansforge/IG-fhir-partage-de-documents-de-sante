@@ -34,7 +34,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
   "name" : "PDSm_SimplifiedPublish",
   "title" : "PDSm Simplified Publish Document Reference",
   "status" : "active",
-  "date" : "2026-08-06T13:23:45+00:00",
+  "date" : "2026-08-06T13:28:00+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -243,10 +243,10 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
       "path" : "DocumentReference.securityLabel",
       "slicing" : {
         "discriminator" : [{
-          "type" : "value",
-          "path" : "coding.system"
+          "type" : "pattern",
+          "path" : "$this"
         }],
-        "description" : "Slice sur securityLabel.coding.system pour distinguer le niveau de confidentialité (NRV) du statut de visibilité complémentaire (TRE A07)",
+        "description" : "Slice sur securityLabel (pattern sur coding.system) pour distinguer le niveau de confidentialité (NRV) du statut de visibilité complémentaire (TRE A07)",
         "rules" : "open"
       },
       "short" : "Contient les informations définissant le niveau de confidentialité d'un document.",
@@ -259,17 +259,16 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
       "short" : "Niveau de confidentialité standard du document (Normal, Restreint, Très restreint).",
       "min" : 1,
       "max" : "1",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+        }]
+      },
       "mustSupport" : true,
       "binding" : {
         "strength" : "required",
         "valueSet" : "http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification"
       }
-    },
-    {
-      "id" : "DocumentReference.securityLabel:confidentiality.coding.system",
-      "path" : "DocumentReference.securityLabel.coding.system",
-      "min" : 1,
-      "patternUri" : "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
     },
     {
       "id" : "DocumentReference.securityLabel:visibilityStatus",
@@ -278,17 +277,16 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
       "short" : "Statut de visibilité complémentaire du document (motifs de masquage patient, représentants légaux, professionnels).",
       "min" : 0,
       "max" : "*",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A07-StatutVisibiliteDocument/FHIR/TRE-A07-StatutVisibiliteDocument"
+        }]
+      },
       "mustSupport" : true,
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J110-StatutVisibiliteDocument-CISIS/FHIR/JDV-J110-StatutVisibiliteDocument-CISIS"
       }
-    },
-    {
-      "id" : "DocumentReference.securityLabel:visibilityStatus.coding.system",
-      "path" : "DocumentReference.securityLabel.coding.system",
-      "min" : 1,
-      "patternUri" : "https://mos.esante.gouv.fr/NOS/TRE_A07-StatutVisibiliteDocument/FHIR/TRE-A07-StatutVisibiliteDocument"
     },
     {
       "id" : "DocumentReference.content",

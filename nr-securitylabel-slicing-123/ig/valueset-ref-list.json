@@ -11,8 +11,8 @@
     "sources" : ["2.16.840.1.113883.1.11.10228"],
     "uses" : {
     },
-    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference",
-    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
+    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference",
+    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS/FHIR/JDV-J02-XdsHealthcareFacilityTypeCode-CISIS",
@@ -27,8 +27,8 @@
     "sources" : ["1.2.250.1.213.1.1.5.466"],
     "uses" : {
     },
-    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference",
-    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
+    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference",
+    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/JDV_J03-XdsContentTypeCode-CISIS/FHIR/JDV-J03-XdsContentTypeCode-CISIS",
@@ -60,8 +60,8 @@
     "sources" : ["1.2.250.1.213.1.1.5.467"],
     "uses" : {
     },
-    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference",
-    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
+    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference",
+    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/JDV_J06-XdsClassCode-CISIS/FHIR/JDV-J06-XdsClassCode-CISIS",
@@ -76,8 +76,8 @@
     "sources" : ["1.2.250.1.213.1.1.5.462"],
     "uses" : {
     },
-    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference",
-    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
+    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference",
+    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/FHIR/JDV-J07-XdsTypeCode-CISIS",
@@ -93,8 +93,8 @@
     "sources" : ["1.2.250.1.213.1.1.5.471"],
     "uses" : {
     },
-    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference",
-    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
+    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference",
+    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/JDV_J10-XdsFormatCode-CISIS/FHIR/JDV-J10-XdsFormatCode-CISIS",
@@ -111,8 +111,8 @@
     "sources" : ["1.2.250.1.213.1.1.5.465"],
     "uses" : {
     },
-    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference",
-    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
+    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference",
+    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/JDV_J110-StatutVisibiliteDocument-CISIS/FHIR/JDV-J110-StatutVisibiliteDocument-CISIS",
@@ -126,7 +126,7 @@
     "sources" : ["1.2.250.1.213.1.1.5.480"],
     "uses" : {
     },
-    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference",
-    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
+    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference",
+    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference"
   }]
 }
