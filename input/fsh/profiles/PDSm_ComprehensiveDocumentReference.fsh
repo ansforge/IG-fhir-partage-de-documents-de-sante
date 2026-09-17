@@ -79,8 +79,8 @@ Description: "Profil contenant les métadonnées du document ainsi que le lien v
 * securityLabel contains confidentiality 1..1 and visibilityStatus 0..*
 
 * securityLabel[confidentiality] MS
-* securityLabel[confidentiality] ^short = "Niveau de confidentialité standard du document (Normal, Restreint, Très restreint, ...). En l'absence d'information de confidentialité disponible, la valeur par défaut à utiliser est N (Normal), conformément à ce qui est déjà pratiqué aujourd'hui pour les documents CDA."
-* securityLabel[confidentiality] from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-xBasicConfidentialityKind-cisis (required)
+* securityLabel[confidentiality] ^short = "Niveau de confidentialité standard du document (Normal, Restreint, Très restreint, ...). En l'absence d'information de confidentialité disponible, la valeur par défaut à utiliser est N (Normal), conformément à ce qui est déjà pratiqué aujourd'hui pour les documents CDA. L'ensemble des codes est autorisé pour permettre un usage large de PDSm."
+* securityLabel[confidentiality] from http://terminology.hl7.org/ValueSet/v3-Confidentiality (required)
 
 * securityLabel[visibilityStatus] MS
 * securityLabel[visibilityStatus] ^short = "Statut de visibilité du document (invisible patient, invisible représentants légaux, masqué PS, etc...)."
