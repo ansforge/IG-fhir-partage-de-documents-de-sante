@@ -1,5 +1,19 @@
 {
   "codeSystems" : [{
+    "url" : "http://terminology.hl7.org/ValueSet/v3-Confidentiality",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "Confidentiality",
+    "title" : "Confidentiality",
+    "description" : "Set of codes used to value Act.Confidentiality and Role.Confidentiality attribute in accordance with the definition for concept domain \"Confidentiality\".",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-Confidentiality"],
+    "oids" : ["2.16.840.1.113883.1.11.10228"],
+    "sources" : ["2.16.840.1.113883.1.11.10228"],
+    "uses" : {
+    },
+    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
+  },
+  {
     "url" : "http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification",
     "version" : "2014-03-26",
     "status" : "active",
@@ -127,19 +141,5 @@
     },
     "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference",
     "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference"
-  },
-  {
-    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-xBasicConfidentialityKind-cisis",
-    "version" : "20260716085852",
-    "status" : "active",
-    "name" : "XBasicConfidentialityKind",
-    "title" : "x_BasicConfidentialityKind",
-    "description" : "x_BasicConfidentialityKind",
-    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-Confidentiality"],
-    "oids" : ["2.16.840.1.113883.1.11.16926"],
-    "sources" : ["2.16.840.1.113883.1.11.16926"],
-    "uses" : {
-    },
-    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
   }]
 }

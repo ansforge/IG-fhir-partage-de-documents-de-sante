@@ -35,7 +35,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
   "name" : "PDSm_ComprehensiveDocumentReference",
   "title" : "PDSm Comprehensive DocumentReference",
   "status" : "active",
-  "date" : "2026-09-17T10:04:49+00:00",
+  "date" : "2026-09-17T10:08:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -355,13 +355,13 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
       "id" : "DocumentReference.securityLabel:confidentiality",
       "path" : "DocumentReference.securityLabel",
       "sliceName" : "confidentiality",
-      "short" : "Niveau de confidentialité standard du document (Normal, Restreint, Très restreint, ...). En l'absence d'information de confidentialité disponible, la valeur par défaut à utiliser est N (Normal), conformément à ce qui est déjà pratiqué aujourd'hui pour les documents CDA.",
+      "short" : "Niveau de confidentialité standard du document (Normal, Restreint, Très restreint, ...). En l'absence d'information de confidentialité disponible, la valeur par défaut à utiliser est N (Normal), conformément à ce qui est déjà pratiqué aujourd'hui pour les documents CDA. L'ensemble des codes est autorisé pour permettre un usage large de PDSm.",
       "min" : 1,
       "max" : "1",
       "mustSupport" : true,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-xBasicConfidentialityKind-cisis"
+        "valueSet" : "http://terminology.hl7.org/ValueSet/v3-Confidentiality"
       }
     },
     {
