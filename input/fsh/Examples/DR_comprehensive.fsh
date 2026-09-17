@@ -27,7 +27,7 @@ Usage: #example
 
 * description = "Compte rendu d’hospitalisation suite à une chirurgie."
 
-* securityLabel = https://mos.esante.gouv.fr/NOS/TRE_A07-StatusVisibiliteDocument/FHIR/TRE-A07-StatusVisibiliteDocument#N "Normal"
+* securityLabel[confidentiality] = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "Normal"
 
 * content[0].attachment.contentType = #application/pdf
 * content[0].attachment.language = #fr-FR
