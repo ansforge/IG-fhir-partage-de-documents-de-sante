@@ -34,7 +34,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-submissionse
   "name" : "PDSm_SubmissionSetComprehensive",
   "title" : "PDSm SubmissionSet Comprehensive",
   "status" : "active",
-  "date" : "2026-09-30T12:48:42+00:00",
+  "date" : "2026-09-30T13:49:36+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

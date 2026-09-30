@@ -35,7 +35,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
   "name" : "PDSm_ComprehensiveDocumentReference",
   "title" : "PDSm Comprehensive DocumentReference",
   "status" : "active",
-  "date" : "2026-09-30T12:48:42+00:00",
+  "date" : "2026-09-30T13:49:36+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -107,10 +107,10 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
       "id" : "DocumentReference",
       "path" : "DocumentReference",
       "constraint" : [{
-        "key" : "constr-cdr-isarchived-status",
+        "key" : "constr-cdr-status",
         "severity" : "error",
-        "human" : "Lorsque l'extension PDSm_IsArchived vaut true, l'élément status doit valoir current ou superseded.",
-        "expression" : "extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-archived' and value = true).exists() implies (status = 'current' or status = 'superseded')",
+        "human" : "La valeur entered-in-error ne doit pas être utilisée pour l'élément status (cf. https://github.com/IHE/ITI.MHD/issues/274).",
+        "expression" : "status != 'entered-in-error'",
         "source" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-document-reference"
       },
       {

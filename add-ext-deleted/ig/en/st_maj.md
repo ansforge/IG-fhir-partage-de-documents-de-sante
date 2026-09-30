@@ -19,6 +19,8 @@ Lorsque l’extension PDSm_IsArchived ou PDSm_IsDeleted est positionnée à `tru
 | `isArchived` | `current`ou`superseded` |
 | `isDeleted` | `superseded` |
 
+La valeur `entered-in-error` ne doit pas être utilisée pour l’élément `DocumentReference.status` (cf. [IHE ITI.MHD issue #274](https://github.com/IHE/ITI.MHD/issues/274)).
+
 La requête Patch contient l’identifiant métier de la ressource à modifier ainsi que la liste des mises à jour à effectuer.
 
 Afin d’effectuer la demande de mise à jour sur l’identifiant métier et non l’identifiant logique de la ressource DocumentReference, le gestionnaire de partage de documents doit prendre en charge le « conditional Patch ».

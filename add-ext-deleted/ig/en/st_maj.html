@@ -290,6 +290,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
+<p>La valeur <code class="language-plaintext highlighter-rouge">entered-in-error</code> ne doit pas être utilisée pour l’élément <code class="language-plaintext highlighter-rouge">DocumentReference.status</code> (cf. <a href="https://github.com/IHE/ITI.MHD/issues/274">IHE ITI.MHD issue #274</a>).</p>
+
 <p>La requête Patch contient l’identifiant métier de la ressource à modifier ainsi que la liste des mises à jour à effectuer.</p>
 
 <p>Afin d’effectuer la demande de mise à jour sur l’identifiant métier et non l’identifiant logique de la ressource DocumentReference, le gestionnaire de partage de documents doit prendre en charge le « conditional Patch ».</p>
@@ -437,7 +439,7 @@ ETag : W/"2"
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-30 12:48:00 +0000">
+  <span title="2026-09-30 13:49:00 +0000">
     2026-09-30
   </span>
 
