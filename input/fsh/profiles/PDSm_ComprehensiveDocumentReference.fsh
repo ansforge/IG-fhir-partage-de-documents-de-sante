@@ -22,6 +22,10 @@ Description: "Profil contenant les métadonnées du document ainsi que le lien v
 * extension[isArchived] MS
 * extension[isArchived] ^short = "Extension définie pour distinguer les fiches archivées des actives."
 
+* extension contains PDSm_IsDeleted named isDeleted 0..1
+* extension[isDeleted] MS
+* extension[isDeleted] ^short = "Extension définie pour distinguer les fiches supprimées. Suppression logique pas physique."
+
 * identifier MS
 
 * status MS
@@ -214,6 +218,7 @@ Title:    "Spécification métier vers le profil PDSm_ComprehensiveDocumentRefer
 * author -> "auteur : [1..*] Identifiant"
 * status -> "statut : [1..1] Code"
 * extension[isArchived] -> "statut : [1..1] Code"
+* extension[isDeleted] -> "statut : [1..1] Code"
 * category -> "classeDocument : [0..1] Code"
 * type -> "typeDocument : [0..1] Code"
 * identifier -> "idFiche : [0..*] Identifiant"

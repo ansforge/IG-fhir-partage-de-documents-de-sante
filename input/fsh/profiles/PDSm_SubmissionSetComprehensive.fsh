@@ -23,10 +23,13 @@ Description: "Profil du lot de soumission dérivé de la ressource List et du pr
 
 * extension contains
     PDSm_IsArchived named isArchived 0..1 and
+    PDSm_IsDeleted named isDeleted 0..1 and
     pdsm-ext-intended-recipient named PDSmintendedRecipient 0..*
 
 
 * extension[isArchived] ^short = "Extension définie par ce volet pour distinguer les lots de soumission archivés des actives."
+
+* extension[isDeleted] ^short = "Extension définie par ce volet pour distinguer les lots de soumission supprimés. Suppression logique pas physique."
 
 // Extension intendedRecipient est déjà définie dans MHD : https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-intendedRecipient. Sauf qu'elle ne permet pas de référencer un PractitionerRole.
 * extension[PDSmintendedRecipient] MS
@@ -94,6 +97,7 @@ Title:    "Spécification métier vers le profil PDSm_SubmissionSetComprehensive
 * -> "LotDeSoumission"
 * source.extension[ihe-authorOrg] -> "auteur : [1..1] Identifiant"
 * extension[isArchived] -> "statut : [1..1] Code"
+* extension[isDeleted] -> "statut : [1..1] Code"
 * status -> "statut : [1..1] Code"
 * extension[ihe-designationType] -> "typeActivite : [1..1] Code"
 * identifier[uniqueId] -> "idUnique : [0..1] Identifiant"
