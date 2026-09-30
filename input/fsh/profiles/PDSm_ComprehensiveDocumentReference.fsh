@@ -26,6 +26,8 @@ Description: "Profil contenant les métadonnées du document ainsi que le lien v
 * extension[isDeleted] MS
 * extension[isDeleted] ^short = "Extension définie pour distinguer les fiches supprimées. Suppression logique pas physique."
 
+* obeys constr-cdr-isarchived-status and constr-cdr-isdeleted-status
+
 * identifier MS
 
 * status MS
@@ -242,3 +244,13 @@ Title:    "Spécification métier vers le profil PDSm_ComprehensiveDocumentRefer
 * content.attachment.url -> "Document : [0..1]"
 
 
+
+Invariant:   constr-cdr-isarchived-status
+Description: "Lorsque l'extension PDSm_IsArchived vaut true, l'élément status doit valoir current ou superseded."
+Expression:  "extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-archived' and value = true).exists() implies (status = 'current' or status = 'superseded')"
+Severity:    #error
+
+Invariant:   constr-cdr-isdeleted-status
+Description: "Lorsque l'extension PDSm_IsDeleted vaut true, l'élément status doit valoir superseded."
+Expression:  "extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted' and value = true).exists() implies status = 'superseded'"
+Severity:    #error
