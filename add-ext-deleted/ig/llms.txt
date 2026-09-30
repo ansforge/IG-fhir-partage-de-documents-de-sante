@@ -39,6 +39,7 @@
 
 * [PDSm_intendedRecipient](en/StructureDefinition-pdsm-ext-intended-recipient.md)
 * [PDSm_isArchived](en/StructureDefinition-pdsm-ext-is-archived.md)
+* [PDSm_isDeleted](en/StructureDefinition-pdsm-ext-is-deleted.md)
 
 ### CapabilityStatements
 

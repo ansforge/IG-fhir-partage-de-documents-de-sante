@@ -97,6 +97,13 @@
   "name" : "PDSm_IsArchived"
 },
 {
+  "id" : "pdsm-ext-is-deleted",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted",
+  "version" : "3.1.1",
+  "name" : "PDSm_IsDeleted"
+},
+{
   "id" : "pdsm-find-documentreferences-comprehensive-response",
   "type" : "StructureDefinition",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-find-documentreferences-comprehensive-response",

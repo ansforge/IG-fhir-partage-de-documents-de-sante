@@ -35,7 +35,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
   "name" : "PDSm_ComprehensiveDocumentReference",
   "title" : "PDSm Comprehensive DocumentReference",
   "status" : "active",
-  "date" : "2026-09-29T08:38:17+00:00",
+  "date" : "2026-09-30T10:37:32+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -149,6 +149,23 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
       "type" : [{
         "code" : "Extension",
         "profile" : ["https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-archived"]
+      }],
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-PDSmComprehensiveDocumentReference",
+        "map" : "statut : [1..1] Code"
+      }]
+    },
+    {
+      "id" : "DocumentReference.extension:isDeleted",
+      "path" : "DocumentReference.extension",
+      "sliceName" : "isDeleted",
+      "short" : "Extension définie pour distinguer les fiches supprimées. Suppression logique pas physique.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted"]
       }],
       "mustSupport" : true,
       "mapping" : [{

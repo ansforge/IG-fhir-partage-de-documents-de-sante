@@ -34,7 +34,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-submissionse
   "name" : "PDSm_SubmissionSetComprehensive",
   "title" : "PDSm SubmissionSet Comprehensive",
   "status" : "active",
-  "date" : "2026-09-29T08:38:17+00:00",
+  "date" : "2026-09-30T10:37:32+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -136,6 +136,22 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-submissionse
       "type" : [{
         "code" : "Extension",
         "profile" : ["https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-archived"]
+      }],
+      "mapping" : [{
+        "identity" : "specmetier-to-PDSmSubmissionSetComprehensive",
+        "map" : "statut : [1..1] Code"
+      }]
+    },
+    {
+      "id" : "List.extension:isDeleted",
+      "path" : "List.extension",
+      "sliceName" : "isDeleted",
+      "short" : "Extension définie par ce volet pour distinguer les lots de soumission supprimés. Suppression logique pas physique.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted"]
       }],
       "mapping" : [{
         "identity" : "specmetier-to-PDSmSubmissionSetComprehensive",

@@ -55,6 +55,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Extension définie pour distinguer les fiches archivées des actives.","Extension définie par le volet ANS ""Volet Partage de documents de santé en mobilité"" sur les ressources List et DocumentReference pour distinguer les lots de soumission et les fiches archivés des actives.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","statut : [1..1] Code"
+"DocumentReference.extension:isDeleted","DocumentReference.extension","isDeleted","","",0,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted]]} {[]}
+","Extension définie pour distinguer les fiches supprimées. Suppression logique pas physique.","Extension définie par le volet ANS ""Volet Partage de documents de santé en mobilité"" sur les ressources List et DocumentReference pour distinguer les lots de soumission et les fiches supprimées. A noter que la suppression est logique et pas physique.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","statut : [1..1] Code"
 "DocumentReference.modifierExtension","DocumentReference.modifierExtension","","","",0,0,"","Y","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"

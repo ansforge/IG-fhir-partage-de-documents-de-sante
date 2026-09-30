@@ -14,7 +14,7 @@
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-09-29T08:38:17+00:00",
+  "date" : "2026-09-30T10:37:32+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -1086,6 +1086,22 @@
       },
       "name" : "PDSm_isArchived",
       "description" : "Extension définie par le volet ANS \"Volet Partage de documents de santé en mobilité\" sur les ressources List et DocumentReference pour distinguer les lots de soumission et les fiches archivés des actives.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-pdsm-ext-is-deleted.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pdsm-ext-is-deleted"
+      },
+      "name" : "PDSm_isDeleted",
+      "description" : "Extension définie par le volet ANS \"Volet Partage de documents de santé en mobilité\" sur les ressources List et DocumentReference pour distinguer les lots de soumission et les fiches supprimées. A noter que la suppression est logique et pas physique.",
       "exampleBoolean" : false
     }],
     "page" : {
