@@ -267,28 +267,43 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Au niveau applicatif, les mises à jour sont restreintes aux éléments <code class="language-plaintext highlighter-rouge">DocumentReference.status</code>, <code class="language-plaintext highlighter-rouge">DocumentReference.securityLabel</code> et aux extensions <a href="StructureDefinition-pdsm-ext-is-archived.html">PDSm_IsArchived</a> et <a href="StructureDefinition-pdsm-ext-is-deleted.html">PDSm_IsDeleted</a>.</p>
 
-<p>La suppression d’une fiche est logique et non physique : elle consiste à positionner l’extension PDSm_IsDeleted à <code class="language-plaintext highlighter-rouge">true</code>. La ressource DocumentReference est conservée par le gestionnaire de partage de documents.</p>
+<p>La suppression d’une fiche est logique et non physique : elle consiste à positionner l’extension PDSm_IsDeleted à <code class="language-plaintext highlighter-rouge">true</code>. La ressource DocumentReference est conservée par le gestionnaire de partage de documents. Les règles applicables sont décrites dans la section « Suppression logique d’une fiche » ci-dessous.</p>
 
-<p>Lorsque l’extension PDSm_IsArchived ou PDSm_IsDeleted est positionnée à <code class="language-plaintext highlighter-rouge">true</code>, l’élément <code class="language-plaintext highlighter-rouge">DocumentReference.status</code> doit prendre l’une des valeurs suivantes :</p>
+<p>La correspondance entre les valeurs de la métadonnée availabilityStatus d’une fiche définies dans le <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.16.4.pdf">volet Partage de documents de santé</a> (section 3.3.5.2.1, Tableau 1) et les éléments de la ressource DocumentReference est la suivante :</p>
 
 <table>
   <thead>
     <tr>
+      <th>availabilityStatus (volet XDS)</th>
       <th>Extension</th>
       <th><code class="language-plaintext highlighter-rouge">DocumentReference.status</code></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">isArchived</code></td>
+      <td>Approved</td>
+      <td>–</td>
+      <td><code class="language-plaintext highlighter-rouge">current</code></td>
+    </tr>
+    <tr>
+      <td>Deprecated</td>
+      <td>–</td>
+      <td><code class="language-plaintext highlighter-rouge">superseded</code></td>
+    </tr>
+    <tr>
+      <td>Archived</td>
+      <td><code class="language-plaintext highlighter-rouge">isArchived</code> = <code class="language-plaintext highlighter-rouge">true</code></td>
       <td><code class="language-plaintext highlighter-rouge">current</code> ou <code class="language-plaintext highlighter-rouge">superseded</code></td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">isDeleted</code></td>
+      <td>Deleted</td>
+      <td><code class="language-plaintext highlighter-rouge">isDeleted</code> = <code class="language-plaintext highlighter-rouge">true</code></td>
       <td><code class="language-plaintext highlighter-rouge">superseded</code></td>
     </tr>
   </tbody>
 </table>
+
+<p>Les changements d’état autorisés et leurs conséquences sont ceux décrits dans le Tableau 1 du volet Partage de documents de santé. En particulier, une fiche archivée qui est remplacée par une nouvelle version passe au statut <code class="language-plaintext highlighter-rouge">superseded</code> et la nouvelle version reprend la valeur de l’extension PDSm_IsArchived, et aucun changement d’état n’est possible depuis une fiche supprimée.</p>
 
 <p>La valeur <code class="language-plaintext highlighter-rouge">entered-in-error</code> ne doit pas être utilisée pour l’élément <code class="language-plaintext highlighter-rouge">DocumentReference.status</code> (cf. <a href="https://github.com/IHE/ITI.MHD/issues/274">IHE ITI.MHD issue #274</a>).</p>
 
@@ -342,6 +357,11 @@ Content-Type: application/json-patch+json
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"op"</span><span class="p">:</span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"path"</span><span class="p">:</span><span class="s2">"/status"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"value"</span><span class="p">:</span><span class="s2">"current"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
         </span><span class="nl">"op"</span><span class="p">:</span><span class="s2">"replace"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"path"</span><span class="p">:</span><span class="s2">"/status"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"value"</span><span class="p">:</span><span class="s2">"superseded"</span><span class="w">
@@ -354,7 +374,26 @@ Content-Type: application/json-patch+json
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Dans cet exemple, l’extension PDSm_IsDeleted (<code class="language-plaintext highlighter-rouge">https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted</code>) est supposée être en position 1 du tableau <code class="language-plaintext highlighter-rouge">extension</code>. Si l’extension n’est pas présente, l’opération <code class="language-plaintext highlighter-rouge">add</code> doit être utilisée.</p>
+<p>Dans cet exemple, l’extension PDSm_IsDeleted (<code class="language-plaintext highlighter-rouge">https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted</code>) est supposée être en position 1 du tableau <code class="language-plaintext highlighter-rouge">extension</code>. Si l’extension n’est pas présente, l’opération <code class="language-plaintext highlighter-rouge">add</code> doit être utilisée. L’opération <code class="language-plaintext highlighter-rouge">test</code> permet au gestionnaire de partage de documents de vérifier que la fiche est bien dans l’état attendu par le producteur avant de la supprimer ; si ce n’est pas le cas, la demande est rejetée.</p>
+
+<h4 id="suppression-logique-dune-fiche">Suppression logique d’une fiche</h4>
+
+<p>La suppression logique d’une fiche correspond à la dépublication d’un document définie par le <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.16.4.pdf">volet Partage de documents de santé</a> (valeur « Deleted » de la métadonnée availabilityStatus en XDS). Elle est faite à la demande du patient ou d’un professionnel de santé ; la définition des acteurs habilités à la demander est du ressort du gestionnaire de partage de documents. Le document reste stocké par le gestionnaire de partage de documents mais n’est plus accessible.</p>
+
+<p>Les règles suivantes s’appliquent :</p>
+
+<ul>
+  <li><strong>Fiche concernée</strong> : la demande de suppression porte sur la version la plus récente de la fiche (<code class="language-plaintext highlighter-rouge">DocumentReference.status</code> = <code class="language-plaintext highlighter-rouge">current</code>), archivée ou non. Une fiche dont le statut est <code class="language-plaintext highlighter-rouge">superseded</code> ne peut pas être supprimée directement : elle l’est uniquement par propagation (voir ci-dessous).</li>
+  <li><strong>Mise à jour de la fiche</strong> : le gestionnaire de partage de documents positionne l’extension PDSm_IsDeleted à <code class="language-plaintext highlighter-rouge">true</code> et l’élément <code class="language-plaintext highlighter-rouge">DocumentReference.status</code> à <code class="language-plaintext highlighter-rouge">superseded</code>. Si la fiche était archivée, l’extension PDSm_IsArchived est positionnée à <code class="language-plaintext highlighter-rouge">false</code> : une fiche supprimée n’est plus considérée comme archivée.</li>
+  <li><strong>Propagation aux versions antérieures</strong> : le gestionnaire de partage de documents positionne l’extension PDSm_IsDeleted à <code class="language-plaintext highlighter-rouge">true</code> sur toutes les versions antérieures de la fiche, c’est-à-dire les fiches remplacées, directement ou non, par la fiche supprimée (<code class="language-plaintext highlighter-rouge">DocumentReference.relatesTo.code</code> = <code class="language-plaintext highlighter-rouge">replaces</code>).</li>
+  <li><strong>Suppression logique du document</strong> : le document référencé par <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code> de la fiche supprimée et de ses versions antérieures n’est plus accessible (voir <a href="st_consultation.html">Consultation d’un document</a>).</li>
+  <li><strong>Inaccessibilité</strong> : une fiche supprimée n’est plus retournée par la recherche de fiches (voir <a href="st_recherche_fiche.html">Recherche de fiches</a>) et ne peut plus faire l’objet d’une mise à jour.</li>
+  <li><strong>Irréversibilité</strong> : la suppression logique est définitive. L’extension PDSm_IsDeleted d’une fiche ne peut pas repasser à <code class="language-plaintext highlighter-rouge">false</code>.</li>
+  <li><strong>Document transformé</strong> : lorsque deux documents sont liés par une transformation (<code class="language-plaintext highlighter-rouge">DocumentReference.relatesTo.code</code> = <code class="language-plaintext highlighter-rouge">transforms</code>) et doivent être supprimés ensemble, le producteur de documents envoie une demande de suppression pour chacune des deux fiches.</li>
+  <li><strong>Traçabilité</strong> : la traçabilité des suppressions logiques doit être assurée par le gestionnaire de partage de documents, par exemple dans ses traces fonctionnelles.</li>
+</ul>
+
+<p>La répercussion de la suppression logique sur les lots de soumission et les classeurs n’est pas traitée dans cette version du volet.</p>
 
 <h3 id="flux-04--résultat-de-la-mise-à-jour-des-métadonnées-de-la-fiche">Flux 04 : résultat de la mise à jour des métadonnées de la fiche</h3>
 
@@ -369,6 +408,8 @@ Content-Type: application/json-patch+json
 <ul>
   <li>Si la mise à jour de la ressource DocumentReference est correctement effectuée, un code HTTP 200 « OK » doit être retourné.</li>
   <li>Si la mise à jour de la ressource DocumentReference porte sur des éléments autres que status, securityLabel, PDSm_isArchived et PDSm_isDeleted, une erreur 405 « Method Not Allowed » doit être retournée.</li>
+  <li>Si la fiche visée a été supprimée logiquement, elle est considérée comme inexistante : une erreur 404 « Not Found » doit être retournée.</li>
+  <li>Si la demande de suppression logique porte sur une fiche qui n’est pas la version la plus récente, ou si une opération <code class="language-plaintext highlighter-rouge">test</code> échoue, une erreur 422 « Unprocessable Entity » doit être retournée.</li>
 </ul>
 
 <p>Pour des informations sur les autres codes HTTP retournés en cas d’échec, consultez la documentation relative à <a href="https://www.hl7.org/fhir/R4/http.html#summary">l’interaction « patch »</a> de l’API REST FHIR.</p>
@@ -439,7 +480,7 @@ ETag : W/"2"
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-30 13:49:00 +0000">
+  <span title="2026-09-30 15:53:00 +0000">
     2026-09-30
   </span>
 

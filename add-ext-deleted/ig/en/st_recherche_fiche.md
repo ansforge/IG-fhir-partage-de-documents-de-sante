@@ -36,6 +36,8 @@ Le flux 05-b contient les critères suivants :
 
 > * Paramètre de recherche créé pour le volet PDSm ** Paramètre de recherche défini dans [MHD](https://profiles.ihe.net/ITI/MHD/artifacts.html#behavior-search-parameters)
 
+Les fiches supprimées logiquement (extension [PDSm_IsDeleted](StructureDefinition-pdsm-ext-is-deleted.md) à `true`) ne sont jamais retournées par la recherche de fiches, quels que soient les critères de recherche utilisés (voir [Mise à jour des métadonnées de la fiche](st_maj.md)).
+
 >  Conformément au profil MHD [[ITI-67]](https://profiles.ihe.net/ITI/MHD/ITI-67.html), la recherche de fiche DOIT à minima inclure les paramètres patient ou patient.identifier et status. 
 
 #### Paramètre de recherche sur les ressources Patient / Practitioner / Device

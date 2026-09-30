@@ -285,7 +285,7 @@ Information Source:           <a href="https://annuaire.sante.fr">https://annuai
           Package ans.fhir.fr.pdsm#3.1.1 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
 .
           Generated 
-            <span title="2026-09-30 13:49:00 +0000">
+            <span title="2026-09-30 15:53:00 +0000">
     2026-09-30
   </span>
 
@@ -1013,6 +1013,18 @@ Les spécifications techniques se basant sur IHE XDS accessible dans la page CI-
           <a href="en/st_maj.html">web</a>
         </td>
         <td>
+          <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.16.4.pdf">esante.gouv.fr</a>
+        </td>
+        <td>
+La correspondance entre les valeurs de la métadonnée availabilityStatus d’une fiche définies dans le           <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.16.4.pdf">volet Partage de documents de santé</a>
+ (section 3.3.5.2.1, Tableau 1) et les éléments de la ressource DocumentReference est la suivante :
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/st_maj.html">web</a>
+        </td>
+        <td>
           <a href="https://github.com/IHE/ITI.MHD/issues/274">github.com</a>
         </td>
         <td>
@@ -1020,6 +1032,18 @@ La valeur           <code class="language-plaintext highlighter-rouge">entered-i
  ne doit pas être utilisée pour l’élément           <code class="language-plaintext highlighter-rouge">DocumentReference.status</code>
  (cf.           <a href="https://github.com/IHE/ITI.MHD/issues/274">IHE ITI.MHD issue #274</a>
 ).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/st_maj.html">web</a>
+        </td>
+        <td>
+          <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.16.4.pdf">esante.gouv.fr</a>
+        </td>
+        <td>
+La suppression logique d’une fiche correspond à la dépublication d’un document définie par le           <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.16.4.pdf">volet Partage de documents de santé</a>
+ (valeur « Deleted » de la métadonnée availabilityStatus en XDS). Elle est faite à la demande du patient ou d’un professionnel de santé ; la définition des acteurs habilités à la demander est du ressort du gestionnaire de partage de documents. Le document reste stocké par le gestionnaire de partage de documents mais n’est plus accessible.
         </td>
       </tr>
     </table>

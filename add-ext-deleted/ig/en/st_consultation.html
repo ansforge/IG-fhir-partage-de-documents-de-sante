@@ -281,6 +281,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Le gestionnaire de partage de documents doit fournir le document dans le MIME type demandé ou répondre avec un "HTTP Status Code" indiquant la condition d'erreur. Le gestionnaire de partage de documents n'est pas obligé de transformer le document.</p>
 
+<p>Un document dont la fiche a été supprimée logiquement (extension <a href="StructureDefinition-pdsm-ext-is-deleted.html">PDSm_IsDeleted</a> à <code class="language-plaintext highlighter-rouge">true</code>) n'est plus accessible : le gestionnaire de partage de documents doit répondre avec un code <code class="language-plaintext highlighter-rouge">HTTP 404 Not Found</code> (voir <a href="st_maj.html">Mise à jour des métadonnées de la fiche</a>).</p>
+
 <p>Les situations d'erreur et les réponses HTTP correspondantes sont listées dans le <a href="https://profiles.ihe.net/ITI/MHD/index.html">profil MHD</a>.</p>
 
 
@@ -331,7 +333,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-30 13:49:00 +0000">
+  <span title="2026-09-30 15:53:00 +0000">
     2026-09-30
   </span>
 

@@ -14,7 +14,7 @@
   "name" : "PDSm",
   "title" : "Partage de Documents de Santé en mobilité (PDSm)",
   "status" : "active",
-  "date" : "2026-09-30T13:49:36+00:00",
+  "date" : "2026-09-30T15:53:21+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -1101,7 +1101,7 @@
         "reference" : "StructureDefinition/pdsm-ext-is-deleted"
       },
       "name" : "PDSm_isDeleted",
-      "description" : "Extension définie par le volet ANS \"Volet Partage de documents de santé en mobilité\" sur les ressources List et DocumentReference pour distinguer les lots de soumission et les fiches supprimées. A noter que la suppression est logique et pas physique.",
+      "description" : "Extension définie par le volet ANS \"Volet Partage de documents de santé en mobilité\" sur la ressource DocumentReference pour distinguer les fiches supprimées. A noter que la suppression est logique et pas physique.",
       "exampleBoolean" : false
     }],
     "page" : {

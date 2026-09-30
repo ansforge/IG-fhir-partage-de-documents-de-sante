@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.name [ fhir:value "PDSm"] ;
   fhir:ImplementationGuide.title [ fhir:value "Partage de Documents de Santé en mobilité (PDSm)"] ;
   fhir:ImplementationGuide.status [ fhir:value "active"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-09-30T13:49:36+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-09-30T15:53:21+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "ANS"] ;
   fhir:ImplementationGuide.contact [
      fhir:index -1 ;
@@ -1147,7 +1147,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/pdsm-ext-is-deleted" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "PDSm_isDeleted" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Extension définie par le volet ANS \"Volet Partage de documents de santé en mobilité\" sur les ressources List et DocumentReference pour distinguer les lots de soumission et les fiches supprimées. A noter que la suppression est logique et pas physique." ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Extension définie par le volet ANS \"Volet Partage de documents de santé en mobilité\" sur la ressource DocumentReference pour distinguer les fiches supprimées. A noter que la suppression est logique et pas physique." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ] ;
      fhir:ImplementationGuide.definition.page [

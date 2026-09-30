@@ -35,7 +35,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
   "name" : "PDSm_ComprehensiveDocumentReference",
   "title" : "PDSm Comprehensive DocumentReference",
   "status" : "active",
-  "date" : "2026-09-30T13:49:36+00:00",
+  "date" : "2026-09-30T15:53:21+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -118,6 +118,13 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
         "severity" : "error",
         "human" : "Lorsque l'extension PDSm_IsDeleted vaut true, l'élément status doit valoir superseded.",
         "expression" : "extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted' and value = true).exists() implies status = 'superseded'",
+        "source" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-document-reference"
+      },
+      {
+        "key" : "constr-cdr-isdeleted-isarchived",
+        "severity" : "error",
+        "human" : "Une fiche supprimée logiquement (extension PDSm_IsDeleted à true) ne peut pas être archivée (extension PDSm_IsArchived à true).",
+        "expression" : "extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted' and value = true).exists() implies extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-archived' and value = true).empty()",
         "source" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-document-reference"
       }],
       "mapping" : [{

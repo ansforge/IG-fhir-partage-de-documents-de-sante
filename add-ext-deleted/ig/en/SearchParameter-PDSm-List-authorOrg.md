@@ -17,7 +17,7 @@ Recherche sur l'auteur d'une organisation
   "version" : "3.1.1",
   "name" : "PDSmAuthorOrg",
   "status" : "active",
-  "date" : "2026-09-30T13:49:36+00:00",
+  "date" : "2026-09-30T15:53:21+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

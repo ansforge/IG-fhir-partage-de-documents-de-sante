@@ -118,8 +118,7 @@
       "List"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted": [
-      "DocumentReference",
-      "List"
+      "DocumentReference"
     ],
     "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-authorOrg": [
       "List.source"

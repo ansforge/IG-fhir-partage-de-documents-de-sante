@@ -34,7 +34,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
   "name" : "PDSm_SimplifiedPublish",
   "title" : "PDSm Simplified Publish Document Reference",
   "status" : "active",
-  "date" : "2026-09-30T13:49:36+00:00",
+  "date" : "2026-09-30T15:53:21+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

@@ -2,7 +2,7 @@
 
 ## Extension: PDSm_isDeleted 
 
-Extension définie par le volet ANS "Volet Partage de documents de santé en mobilité" sur les ressources List et DocumentReference pour distinguer les lots de soumission et les fiches supprimées. A noter que la suppression est logique et pas physique.
+Extension définie par le volet ANS "Volet Partage de documents de santé en mobilité" sur la ressource DocumentReference pour distinguer les fiches supprimées. A noter que la suppression est logique et pas physique.
 
 **Context of Use**
 
@@ -10,7 +10,7 @@ Extension définie par le volet ANS "Volet Partage de documents de santé en mob
 
 **Usages:**
 
-* Use this Extension: [PDSm Comprehensive DocumentReference](StructureDefinition-pdsm-comprehensive-document-reference.md) and [PDSm SubmissionSet Comprehensive](StructureDefinition-pdsm-submissionset-comprehensive.md)
+* Use this Extension: [PDSm Comprehensive DocumentReference](StructureDefinition-pdsm-comprehensive-document-reference.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fhir.fr.pdsm|current/StructureDefinition/StructureDefinition-pdsm-ext-is-deleted.json)
 
@@ -35,7 +35,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-ext-is-delet
   "name" : "PDSm_IsDeleted",
   "title" : "PDSm_isDeleted",
   "status" : "active",
-  "date" : "2026-09-30T13:49:36+00:00",
+  "date" : "2026-09-30T15:53:21+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-ext-is-delet
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Extension définie par le volet ANS \"Volet Partage de documents de santé en mobilité\" sur les ressources List et DocumentReference pour distinguer les lots de soumission et les fiches supprimées. A noter que la suppression est logique et pas physique.",
+  "description" : "Extension définie par le volet ANS \"Volet Partage de documents de santé en mobilité\" sur la ressource DocumentReference pour distinguer les fiches supprimées. A noter que la suppression est logique et pas physique.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -63,10 +63,6 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-ext-is-delet
   "context" : [{
     "type" : "element",
     "expression" : "DocumentReference"
-  },
-  {
-    "type" : "element",
-    "expression" : "List"
   }],
   "type" : "Extension",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",
@@ -76,7 +72,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-ext-is-delet
       "id" : "Extension",
       "path" : "Extension",
       "short" : "PDSm_isDeleted",
-      "definition" : "Extension définie par le volet ANS \"Volet Partage de documents de santé en mobilité\" sur les ressources List et DocumentReference pour distinguer les lots de soumission et les fiches supprimées. A noter que la suppression est logique et pas physique."
+      "definition" : "Extension définie par le volet ANS \"Volet Partage de documents de santé en mobilité\" sur la ressource DocumentReference pour distinguer les fiches supprimées. A noter que la suppression est logique et pas physique."
     },
     {
       "id" : "Extension.extension",
