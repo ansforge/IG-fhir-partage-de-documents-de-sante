@@ -259,13 +259,36 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p>Ce flux contient les informations relatives à la modification des métadonnées clés de la fiche (statut, niveau de confidentialité et archivage). Cette demande de modification est faite par le producteur de documents.</p>
+<p>Ce flux contient les informations relatives à la modification des métadonnées clés de la fiche (statut, niveau de confidentialité, archivage et suppression logique). Cette demande de modification est faite par le producteur de documents.</p>
 
 <h3 id="flux-03--mise-à-jour-des-métadonnées-de-la-fiche">Flux 03 : mise à jour des métadonnées de la fiche</h3>
 
 <p>Le flux de mise à jour des métadonnées de la fiche est basé sur l’interaction « <a href="https://www.hl7.org/fhir/R4/http.html#patch">patch</a> » de l’API REST FHIR qui est assurée par une requête HTTP PATCH. Elle permet la mise à jour partielle d’une ressource DocumentReference.</p>
 
-<p>Au niveau applicatif, les mises à jour sont restreintes aux éléments <code class="language-plaintext highlighter-rouge">DocumentReference.status</code>, <code class="language-plaintext highlighter-rouge">DocumentReference.securityLabel</code> et l’extension <a href="StructureDefinition-pdsm-ext-is-archived.html">PDSm_IsArchived</a>.</p>
+<p>Au niveau applicatif, les mises à jour sont restreintes aux éléments <code class="language-plaintext highlighter-rouge">DocumentReference.status</code>, <code class="language-plaintext highlighter-rouge">DocumentReference.securityLabel</code> et aux extensions <a href="StructureDefinition-pdsm-ext-is-archived.html">PDSm_IsArchived</a> et <a href="StructureDefinition-pdsm-ext-is-deleted.html">PDSm_IsDeleted</a>.</p>
+
+<p>La suppression d’une fiche est logique et non physique : elle consiste à positionner l’extension PDSm_IsDeleted à <code class="language-plaintext highlighter-rouge">true</code>. La ressource DocumentReference est conservée par le gestionnaire de partage de documents.</p>
+
+<p>Lorsque l’extension PDSm_IsArchived ou PDSm_IsDeleted est positionnée à <code class="language-plaintext highlighter-rouge">true</code>, l’élément <code class="language-plaintext highlighter-rouge">DocumentReference.status</code> doit prendre l’une des valeurs suivantes :</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Extension</th>
+      <th><code class="language-plaintext highlighter-rouge">DocumentReference.status</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">isArchived</code></td>
+      <td><code class="language-plaintext highlighter-rouge">current</code> ou <code class="language-plaintext highlighter-rouge">superseded</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">isDeleted</code></td>
+      <td><code class="language-plaintext highlighter-rouge">superseded</code></td>
+    </tr>
+  </tbody>
+</table>
 
 <p>La requête Patch contient l’identifiant métier de la ressource à modifier ainsi que la liste des mises à jour à effectuer.</p>
 
@@ -282,7 +305,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Lorsque toutes les modifications sont traitées, le serveur traite la fiche du document de la même façon qu’au cours d’une opération update créant ainsi une nouvelle version (modification des éléments <code class="language-plaintext highlighter-rouge">meta.versionId</code> et <code class="language-plaintext highlighter-rouge">meta.lastUpdated</code>).</p>
 
-<p>Ci-dessous un exemple de requête avec le body en JSON :</p>
+<p>Ci-dessous un exemple de requête avec le body en JSON pour la mise à jour du statut, du niveau de confidentialité et de l’archivage :</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PATCH [base]/DocumentReference?identifier=http://my-lab-system|123 HTTP/1.1
 Content-Type: application/json-patch+json
@@ -290,21 +313,46 @@ Content-Type: application/json-patch+json
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"op"</span><span class="p">:</span><span class="s2">"replace"</span><span class="w"> </span><span class="p">,</span><span class="w">
-        </span><span class="nl">"path"</span><span class="p">:</span><span class="s2">"/status"</span><span class="w"> </span><span class="p">,</span><span class="w">
-        </span><span class="nl">"value"</span><span class="p">:</span><span class="s2">"current "</span><span class="w">
+        </span><span class="nl">"op"</span><span class="p">:</span><span class="s2">"replace"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"path"</span><span class="p">:</span><span class="s2">"/status"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"value"</span><span class="p">:</span><span class="s2">"current"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"op"</span><span class="p">:</span><span class="s2">"replace"</span><span class="w"> </span><span class="p">,</span><span class="w"> 
-        </span><span class="nl">"path"</span><span class="p">:</span><span class="s2">"/securityLabel"</span><span class="w"> </span><span class="p">,</span><span class="w"> 
+        </span><span class="nl">"op"</span><span class="p">:</span><span class="s2">"replace"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"path"</span><span class="p">:</span><span class="s2">"/securityLabel"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"value"</span><span class="p">:</span><span class="s2">"restricted"</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">   </span><span class="nl">"op"</span><span class="p">:</span><span class="s2">"replace"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"path"</span><span class="p">:</span><span class="s2">"/extension[url:”https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-isArchived”]/valueBoolean"</span><span class="p">,</span><span class="w"> 
-        </span><span class="nl">"value"</span><span class="p">:</span><span class="s2">"true"</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"op"</span><span class="p">:</span><span class="s2">"replace"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"path"</span><span class="p">:</span><span class="s2">"/extension/0/valueBoolean"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"value"</span><span class="p">:</span><span class="kc">true</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
+
+<p>Dans cet exemple, l’extension PDSm_IsArchived (<code class="language-plaintext highlighter-rouge">https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-archived</code>) est supposée être en position 0 du tableau <code class="language-plaintext highlighter-rouge">extension</code>. JSON Patch adressant les éléments par index, le client doit connaître la position de l’extension dans la ressource. Si l’extension n’est pas présente, l’opération <code class="language-plaintext highlighter-rouge">add</code> doit être utilisée.</p>
+
+<p>Ci-dessous un exemple de requête avec le body en JSON pour la suppression logique de la fiche :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PATCH [base]/DocumentReference?identifier=http://my-lab-system|123 HTTP/1.1
+Content-Type: application/json-patch+json
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"op"</span><span class="p">:</span><span class="s2">"replace"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"path"</span><span class="p">:</span><span class="s2">"/status"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"value"</span><span class="p">:</span><span class="s2">"superseded"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"op"</span><span class="p">:</span><span class="s2">"replace"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"path"</span><span class="p">:</span><span class="s2">"/extension/1/valueBoolean"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"value"</span><span class="p">:</span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Dans cet exemple, l’extension PDSm_IsDeleted (<code class="language-plaintext highlighter-rouge">https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted</code>) est supposée être en position 1 du tableau <code class="language-plaintext highlighter-rouge">extension</code>. Si l’extension n’est pas présente, l’opération <code class="language-plaintext highlighter-rouge">add</code> doit être utilisée.</p>
 
 <h3 id="flux-04--résultat-de-la-mise-à-jour-des-métadonnées-de-la-fiche">Flux 04 : résultat de la mise à jour des métadonnées de la fiche</h3>
 
@@ -318,7 +366,7 @@ Content-Type: application/json-patch+json
 
 <ul>
   <li>Si la mise à jour de la ressource DocumentReference est correctement effectuée, un code HTTP 200 « OK » doit être retourné.</li>
-  <li>Si la mise à jour de la ressource DocumentReference porte sur des éléments autres que status, securityLabel et PDSm_isArchived, une erreur 405 « Method Not Allowed » doit être retournée.</li>
+  <li>Si la mise à jour de la ressource DocumentReference porte sur des éléments autres que status, securityLabel, PDSm_isArchived et PDSm_isDeleted, une erreur 405 « Method Not Allowed » doit être retournée.</li>
 </ul>
 
 <p>Pour des informations sur les autres codes HTTP retournés en cas d’échec, consultez la documentation relative à <a href="https://www.hl7.org/fhir/R4/http.html#summary">l’interaction « patch »</a> de l’API REST FHIR.</p>
@@ -389,7 +437,7 @@ ETag : W/"2"
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-30 10:37:00 +0000">
+  <span title="2026-09-30 12:38:00 +0000">
     2026-09-30
   </span>
 

@@ -2,13 +2,22 @@
 
 ## Mise à jour de documents
 
-Ce flux contient les informations relatives à la modification des métadonnées clés de la fiche (statut, niveau de confidentialité et archivage). Cette demande de modification est faite par le producteur de documents.
+Ce flux contient les informations relatives à la modification des métadonnées clés de la fiche (statut, niveau de confidentialité, archivage et suppression logique). Cette demande de modification est faite par le producteur de documents.
 
 ### Flux 03 : mise à jour des métadonnées de la fiche
 
 Le flux de mise à jour des métadonnées de la fiche est basé sur l’interaction « [patch](https://www.hl7.org/fhir/R4/http.html#patch) » de l’API REST FHIR qui est assurée par une requête HTTP PATCH. Elle permet la mise à jour partielle d’une ressource DocumentReference.
 
-Au niveau applicatif, les mises à jour sont restreintes aux éléments `DocumentReference.status`, `DocumentReference.securityLabel` et l’extension [PDSm_IsArchived](StructureDefinition-pdsm-ext-is-archived.md).
+Au niveau applicatif, les mises à jour sont restreintes aux éléments `DocumentReference.status`, `DocumentReference.securityLabel` et aux extensions [PDSm_IsArchived](StructureDefinition-pdsm-ext-is-archived.md) et [PDSm_IsDeleted](StructureDefinition-pdsm-ext-is-deleted.md).
+
+La suppression d’une fiche est logique et non physique : elle consiste à positionner l’extension PDSm_IsDeleted à `true`. La ressource DocumentReference est conservée par le gestionnaire de partage de documents.
+
+Lorsque l’extension PDSm_IsArchived ou PDSm_IsDeleted est positionnée à `true`, l’élément `DocumentReference.status` doit prendre l’une des valeurs suivantes :
+
+| | |
+| :--- | :--- |
+| `isArchived` | `current`ou`superseded` |
+| `isDeleted` | `superseded` |
 
 La requête Patch contient l’identifiant métier de la ressource à modifier ainsi que la liste des mises à jour à effectuer.
 
@@ -24,7 +33,7 @@ A noter que la méthode JSON patch est mature et plus adaptée à un usage en mo
 
 Lorsque toutes les modifications sont traitées, le serveur traite la fiche du document de la même façon qu’au cours d’une opération update créant ainsi une nouvelle version (modification des éléments `meta.versionId` et `meta.lastUpdated`).
 
-Ci-dessous un exemple de requête avec le body en JSON :
+Ci-dessous un exemple de requête avec le body en JSON pour la mise à jour du statut, du niveau de confidentialité et de l’archivage :
 
 ```
 PATCH [base]/DocumentReference?identifier=http://my-lab-system|123 HTTP/1.1
@@ -35,22 +44,51 @@ Content-Type: application/json-patch+json
 ```
 [
     {
-        "op":"replace" ,
-        "path":"/status" ,
-        "value":"current "
+        "op":"replace",
+        "path":"/status",
+        "value":"current"
     },
     {
-        "op":"replace" , 
-        "path":"/securityLabel" , 
+        "op":"replace",
+        "path":"/securityLabel",
         "value":"restricted"
     },
-    {   "op":"replace",
-        "path":"/extension[url:”https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-isArchived”]/valueBoolean", 
-        "value":"true"
+    {
+        "op":"replace",
+        "path":"/extension/0/valueBoolean",
+        "value":true
     }
 ]
 
 ```
+
+Dans cet exemple, l’extension PDSm_IsArchived (`https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-archived`) est supposée être en position 0 du tableau `extension`. JSON Patch adressant les éléments par index, le client doit connaître la position de l’extension dans la ressource. Si l’extension n’est pas présente, l’opération `add` doit être utilisée.
+
+Ci-dessous un exemple de requête avec le body en JSON pour la suppression logique de la fiche :
+
+```
+PATCH [base]/DocumentReference?identifier=http://my-lab-system|123 HTTP/1.1
+Content-Type: application/json-patch+json
+
+```
+
+```
+[
+    {
+        "op":"replace",
+        "path":"/status",
+        "value":"superseded"
+    },
+    {
+        "op":"replace",
+        "path":"/extension/1/valueBoolean",
+        "value":true
+    }
+]
+
+```
+
+Dans cet exemple, l’extension PDSm_IsDeleted (`https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted`) est supposée être en position 1 du tableau `extension`. Si l’extension n’est pas présente, l’opération `add` doit être utilisée.
 
 ### Flux 04 : résultat de la mise à jour des métadonnées de la fiche
 
@@ -63,7 +101,7 @@ Il s'agit de la réponse à la demande de mise à jour des métadonnées de la f
 Le gestionnaire de partage de documents de santé retourne un "HTTP Status code" approprié au résultat de la mise à jour de chaque élément contenu dans la requête. Par exemple :
 
 * Si la mise à jour de la ressource DocumentReference est correctement effectuée, un code HTTP 200 « OK » doit être retourné.
-* Si la mise à jour de la ressource DocumentReference porte sur des éléments autres que status, securityLabel et PDSm_isArchived, une erreur 405 « Method Not Allowed » doit être retournée.
+* Si la mise à jour de la ressource DocumentReference porte sur des éléments autres que status, securityLabel, PDSm_isArchived et PDSm_isDeleted, une erreur 405 « Method Not Allowed » doit être retournée.
 
 Pour des informations sur les autres codes HTTP retournés en cas d’échec, consultez la documentation relative à [l’interaction « patch »](https://www.hl7.org/fhir/R4/http.html#summary) de l’API REST FHIR.
 
