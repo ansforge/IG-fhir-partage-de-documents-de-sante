@@ -6,14 +6,18 @@ Le flux de mise à jour des métadonnées de la fiche est basé sur l’interact
 
 Au niveau applicatif, les mises à jour sont restreintes aux éléments `DocumentReference.status`, `DocumentReference.securityLabel` et aux extensions [PDSm_IsArchived](StructureDefinition-pdsm-ext-is-archived.html) et [PDSm_IsDeleted](StructureDefinition-pdsm-ext-is-deleted.html).
 
-La suppression d’une fiche est logique et non physique : elle consiste à positionner l’extension PDSm_IsDeleted à `true`. La ressource DocumentReference est conservée par le gestionnaire de partage de documents.
+La suppression d’une fiche est logique et non physique : elle consiste à positionner l’extension PDSm_IsDeleted à `true`. La ressource DocumentReference est conservée par le gestionnaire de partage de documents. Les règles applicables sont décrites dans la section « Suppression logique d’une fiche » ci-dessous.
 
-Lorsque l’extension PDSm_IsArchived ou PDSm_IsDeleted est positionnée à `true`, l’élément `DocumentReference.status` doit prendre l’une des valeurs suivantes :
+La correspondance entre les valeurs de la métadonnée availabilityStatus d’une fiche définies dans le [volet Partage de documents de santé](https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.16.4.pdf) (section 3.3.5.2.1, Tableau 1) et les éléments de la ressource DocumentReference est la suivante :
 
-| Extension | `DocumentReference.status` |
-|---|---|
-| `isArchived` | `current` ou `superseded` |
-| `isDeleted` | `superseded` |
+| availabilityStatus (volet XDS) | Extension | `DocumentReference.status` |
+|---|---|---|
+| Approved | – | `current` |
+| Deprecated | – | `superseded` |
+| Archived | `isArchived` = `true` | `current` ou `superseded` |
+| Deleted | `isDeleted` = `true` | `superseded` |
+
+Les changements d’état autorisés et leurs conséquences sont ceux décrits dans le Tableau 1 du volet Partage de documents de santé. En particulier, une fiche archivée qui est remplacée par une nouvelle version passe au statut `superseded` et la nouvelle version reprend la valeur de l’extension PDSm_IsArchived, et aucun changement d’état n’est possible depuis une fiche supprimée.
 
 La valeur `entered-in-error` ne doit pas être utilisée pour l’élément `DocumentReference.status` (cf. [IHE ITI.MHD issue #274](https://github.com/IHE/ITI.MHD/issues/274)).
 
@@ -69,6 +73,11 @@ Content-Type: application/json-patch+json
 ```json
 [
     {
+        "op":"test",
+        "path":"/status",
+        "value":"current"
+    },
+    {
         "op":"replace",
         "path":"/status",
         "value":"superseded"
@@ -81,7 +90,24 @@ Content-Type: application/json-patch+json
 ]
 ```
 
-Dans cet exemple, l’extension PDSm_IsDeleted (`https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted`) est supposée être en position 1 du tableau `extension`. Si l’extension n’est pas présente, l’opération `add` doit être utilisée.
+Dans cet exemple, l’extension PDSm_IsDeleted (`https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted`) est supposée être en position 1 du tableau `extension`. Si l’extension n’est pas présente, l’opération `add` doit être utilisée. L’opération `test` permet au gestionnaire de partage de documents de vérifier que la fiche est bien dans l’état attendu par le producteur avant de la supprimer ; si ce n’est pas le cas, la demande est rejetée.
+
+#### Suppression logique d’une fiche
+
+La suppression logique d’une fiche correspond à la dépublication d’un document définie par le [volet Partage de documents de santé](https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.16.4.pdf) (valeur « Deleted » de la métadonnée availabilityStatus en XDS). Elle est faite à la demande du patient ou d’un professionnel de santé ; la définition des acteurs habilités à la demander est du ressort du gestionnaire de partage de documents. Le document reste stocké par le gestionnaire de partage de documents mais n’est plus accessible.
+
+Les règles suivantes s’appliquent :
+
+* **Fiche concernée** : la demande de suppression porte sur la version la plus récente de la fiche (`DocumentReference.status` = `current`), archivée ou non. Une fiche dont le statut est `superseded` ne peut pas être supprimée directement : elle l’est uniquement par propagation (voir ci-dessous).
+* **Mise à jour de la fiche** : le gestionnaire de partage de documents positionne l’extension PDSm_IsDeleted à `true` et l’élément `DocumentReference.status` à `superseded`. Si la fiche était archivée, l’extension PDSm_IsArchived est positionnée à `false` : une fiche supprimée n’est plus considérée comme archivée.
+* **Propagation aux versions antérieures** : le gestionnaire de partage de documents positionne l’extension PDSm_IsDeleted à `true` sur toutes les versions antérieures de la fiche, c’est-à-dire les fiches remplacées, directement ou non, par la fiche supprimée (`DocumentReference.relatesTo.code` = `replaces`).
+* **Suppression logique du document** : le document référencé par `DocumentReference.content.attachment.url` de la fiche supprimée et de ses versions antérieures n’est plus accessible (voir [Consultation d’un document](st_consultation.html)).
+* **Inaccessibilité** : une fiche supprimée n’est plus retournée par la recherche de fiches (voir [Recherche de fiches](st_recherche_fiche.html)) et ne peut plus faire l’objet d’une mise à jour.
+* **Irréversibilité** : la suppression logique est définitive. L’extension PDSm_IsDeleted d’une fiche ne peut pas repasser à `false`.
+* **Document transformé** : lorsque deux documents sont liés par une transformation (`DocumentReference.relatesTo.code` = `transforms`) et doivent être supprimés ensemble, le producteur de documents envoie une demande de suppression pour chacune des deux fiches.
+* **Traçabilité** : la traçabilité des suppressions logiques doit être assurée par le gestionnaire de partage de documents, par exemple dans ses traces fonctionnelles.
+
+La répercussion de la suppression logique sur les lots de soumission et les classeurs n’est pas traitée dans cette version du volet.
 
 ### Flux 04 : résultat de la mise à jour des métadonnées de la fiche
 
@@ -95,6 +121,8 @@ Le gestionnaire de partage de documents de santé retourne un "HTTP Status code"
 
 * Si la mise à jour de la ressource DocumentReference est correctement effectuée, un code HTTP 200 « OK » doit être retourné.
 * Si la mise à jour de la ressource DocumentReference porte sur des éléments autres que status, securityLabel, PDSm_isArchived et PDSm_isDeleted, une erreur 405 « Method Not Allowed » doit être retournée.
+* Si la fiche visée a été supprimée logiquement, elle est considérée comme inexistante : une erreur 404 « Not Found » doit être retournée.
+* Si la demande de suppression logique porte sur une fiche qui n’est pas la version la plus récente, ou si une opération `test` échoue, une erreur 422 « Unprocessable Entity » doit être retournée.
 
 Pour des informations sur les autres codes HTTP retournés en cas d’échec, consultez la documentation relative à [l’interaction « patch »](https://www.hl7.org/fhir/R4/http.html#summary) de l’API REST FHIR.
 
