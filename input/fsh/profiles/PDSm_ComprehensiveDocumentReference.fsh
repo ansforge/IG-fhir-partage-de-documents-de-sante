@@ -22,6 +22,12 @@ Description: "Profil contenant les métadonnées du document ainsi que le lien v
 * extension[isArchived] MS
 * extension[isArchived] ^short = "Extension définie pour distinguer les fiches archivées des actives."
 
+* extension contains PDSm_IsDeleted named isDeleted 0..1
+* extension[isDeleted] MS
+* extension[isDeleted] ^short = "Extension définie pour distinguer les fiches supprimées. Suppression logique pas physique."
+
+* obeys constr-cdr-status and constr-cdr-isdeleted-status and constr-cdr-isdeleted-isarchived
+
 * identifier MS
 
 * status MS
@@ -214,6 +220,7 @@ Title:    "Spécification métier vers le profil PDSm_ComprehensiveDocumentRefer
 * author -> "auteur : [1..*] Identifiant"
 * status -> "statut : [1..1] Code"
 * extension[isArchived] -> "statut : [1..1] Code"
+* extension[isDeleted] -> "statut : [1..1] Code"
 * category -> "classeDocument : [0..1] Code"
 * type -> "typeDocument : [0..1] Code"
 * identifier -> "idFiche : [0..*] Identifiant"
@@ -237,3 +244,18 @@ Title:    "Spécification métier vers le profil PDSm_ComprehensiveDocumentRefer
 * content.attachment.url -> "Document : [0..1]"
 
 
+
+Invariant:   constr-cdr-status
+Description: "La valeur entered-in-error ne doit pas être utilisée pour l'élément status (cf. https://github.com/IHE/ITI.MHD/issues/274)."
+Expression:  "status != 'entered-in-error'"
+Severity:    #error
+
+Invariant:   constr-cdr-isdeleted-status
+Description: "Lorsque l'extension PDSm_IsDeleted vaut true, l'élément status doit valoir superseded."
+Expression:  "extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted' and value = true).exists() implies status = 'superseded'"
+Severity:    #error
+
+Invariant:   constr-cdr-isdeleted-isarchived
+Description: "Une fiche supprimée logiquement (extension PDSm_IsDeleted à true) ne peut pas être archivée (extension PDSm_IsArchived à true)."
+Expression:  "extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted' and value = true).exists() implies extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-archived' and value = true).empty()"
+Severity:    #error
