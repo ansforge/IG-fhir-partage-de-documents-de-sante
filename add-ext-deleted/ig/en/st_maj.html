@@ -322,10 +322,37 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Lorsque toutes les modifications sont traitées, le serveur traite la fiche du document de la même façon qu’au cours d’une opération update créant ainsi une nouvelle version (modification des éléments <code class="language-plaintext highlighter-rouge">meta.versionId</code> et <code class="language-plaintext highlighter-rouge">meta.lastUpdated</code>).</p>
 
+<h4 id="mise-à-jour-des-extensions-avec-json-patch">Mise à jour des extensions avec JSON Patch</h4>
+
+<p>Les règles suivantes s’appliquent lorsque la demande de mise à jour est transmise au format JSON Patch :</p>
+
+<ul>
+  <li><strong>Adressage par index</strong> : en JSON Patch, le chemin (<code class="language-plaintext highlighter-rouge">path</code>) d’une opération est un <a href="https://datatracker.ietf.org/doc/html/rfc6901">JSON Pointer</a> qui désigne un élément de tableau par sa position et non par la valeur d’un de ses attributs. Une extension est donc désignée par sa position dans le tableau <code class="language-plaintext highlighter-rouge">extension</code> (par exemple <code class="language-plaintext highlighter-rouge">/extension/1/valueBoolean</code> pour la deuxième extension, les positions commençant à 0). Le producteur de documents doit au préalable lire la fiche pour connaître la position de l’extension à modifier.</li>
+  <li><strong>Extension absente</strong> : l’opération <code class="language-plaintext highlighter-rouge">replace</code> échoue si le chemin n’existe pas. Si l’extension n’est pas encore présente dans la fiche, elle doit être ajoutée avec l’opération <code class="language-plaintext highlighter-rouge">add</code> ; la position <code class="language-plaintext highlighter-rouge">-</code> ajoute l’élément à la fin du tableau :</li>
+</ul>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"op"</span><span class="p">:</span><span class="s2">"add"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"path"</span><span class="p">:</span><span class="s2">"/extension/-"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"value"</span><span class="p">:{</span><span class="w">
+        </span><span class="nl">"url"</span><span class="p">:</span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"valueBoolean"</span><span class="p">:</span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<ul>
+  <li><strong>Vérification de l’état de la fiche</strong> : l’opération <a href="https://datatracker.ietf.org/doc/html/rfc6902#section-4.6"><code class="language-plaintext highlighter-rouge">test</code></a> ne modifie pas la fiche ; elle vérifie que la valeur d’un élément est celle attendue par le producteur de documents. Une demande JSON Patch étant atomique, si une opération <code class="language-plaintext highlighter-rouge">test</code> échoue, aucune des opérations de la demande n’est appliquée et la demande est rejetée. Ce mécanisme correspond à la vérification de l’annotation « OriginalStatus » par le registre dans le volet Partage de documents de santé.</li>
+  <li><strong>Modification concurrente</strong> : pour éviter qu’une modification intervenue entre la lecture de la fiche et la demande de mise à jour ne décale les positions des extensions, le producteur de documents doit transmettre l’en-tête HTTP <a href="https://www.hl7.org/fhir/R4/http.html#concurrency"><code class="language-plaintext highlighter-rouge">If-Match</code></a> contenant la valeur de l’<a href="https://www.hl7.org/fhir/R4/http.html#versioning"><code class="language-plaintext highlighter-rouge">ETag</code></a> obtenue lors de la lecture de la fiche. Si la fiche a été modifiée entre-temps, le gestionnaire de partage de documents rejette la demande.</li>
+</ul>
+
+<p>A noter que le format FHIRPath Patch permet de désigner une extension par son URL (par exemple <code class="language-plaintext highlighter-rouge">extension.where(url='https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted')</code>) et évite ainsi l’adressage par index.</p>
+
 <p>Ci-dessous un exemple de requête avec le body en JSON pour la mise à jour du statut, du niveau de confidentialité et de l’archivage :</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PATCH [base]/DocumentReference?identifier=http://my-lab-system|123 HTTP/1.1
 Content-Type: application/json-patch+json
+If-Match: W/"1"
 </code></pre></div></div>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
@@ -347,12 +374,13 @@ Content-Type: application/json-patch+json
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Dans cet exemple, l’extension PDSm_IsArchived (<code class="language-plaintext highlighter-rouge">https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-archived</code>) est supposée être en position 0 du tableau <code class="language-plaintext highlighter-rouge">extension</code>. JSON Patch adressant les éléments par index, le client doit connaître la position de l’extension dans la ressource. Si l’extension n’est pas présente, l’opération <code class="language-plaintext highlighter-rouge">add</code> doit être utilisée.</p>
+<p>Dans cet exemple, l’extension PDSm_IsArchived (<code class="language-plaintext highlighter-rouge">https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-archived</code>) est en position 0 du tableau <code class="language-plaintext highlighter-rouge">extension</code> de la fiche.</p>
 
 <p>Ci-dessous un exemple de requête avec le body en JSON pour la suppression logique de la fiche :</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PATCH [base]/DocumentReference?identifier=http://my-lab-system|123 HTTP/1.1
 Content-Type: application/json-patch+json
+If-Match: W/"1"
 </code></pre></div></div>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
@@ -374,7 +402,7 @@ Content-Type: application/json-patch+json
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Dans cet exemple, l’extension PDSm_IsDeleted (<code class="language-plaintext highlighter-rouge">https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted</code>) est supposée être en position 1 du tableau <code class="language-plaintext highlighter-rouge">extension</code>. Si l’extension n’est pas présente, l’opération <code class="language-plaintext highlighter-rouge">add</code> doit être utilisée. L’opération <code class="language-plaintext highlighter-rouge">test</code> permet au gestionnaire de partage de documents de vérifier que la fiche est bien dans l’état attendu par le producteur avant de la supprimer ; si ce n’est pas le cas, la demande est rejetée.</p>
+<p>Dans cet exemple, l’extension PDSm_IsDeleted (<code class="language-plaintext highlighter-rouge">https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted</code>) est en position 1 du tableau <code class="language-plaintext highlighter-rouge">extension</code> de la fiche. L’opération <code class="language-plaintext highlighter-rouge">test</code> vérifie que la fiche est la version la plus récente (<code class="language-plaintext highlighter-rouge">status</code> = <code class="language-plaintext highlighter-rouge">current</code>) avant de la supprimer.</p>
 
 <h4 id="suppression-logique-dune-fiche">Suppression logique d’une fiche</h4>
 
@@ -409,7 +437,8 @@ Content-Type: application/json-patch+json
   <li>Si la mise à jour de la ressource DocumentReference est correctement effectuée, un code HTTP 200 « OK » doit être retourné.</li>
   <li>Si la mise à jour de la ressource DocumentReference porte sur des éléments autres que status, securityLabel, PDSm_isArchived et PDSm_isDeleted, une erreur 405 « Method Not Allowed » doit être retournée.</li>
   <li>Si la fiche visée a été supprimée logiquement, elle est considérée comme inexistante : une erreur 404 « Not Found » doit être retournée.</li>
-  <li>Si la demande de suppression logique porte sur une fiche qui n’est pas la version la plus récente, ou si une opération <code class="language-plaintext highlighter-rouge">test</code> échoue, une erreur 422 « Unprocessable Entity » doit être retournée.</li>
+  <li>Si la demande de suppression logique porte sur une fiche qui n’est pas la version la plus récente, ou si une opération <code class="language-plaintext highlighter-rouge">test</code> échoue, une erreur 422 « Unprocessable Entity » doit être retournée. Ce code est celui prévu par <a href="https://www.hl7.org/fhir/R4/http.html#update">FHIR R4</a> lorsque la demande enfreint les règles métier du serveur ; <a href="https://hl7.org/fhir/R5/http.html#patch">FHIR R5</a> le précise explicitement pour l’échec d’une opération <code class="language-plaintext highlighter-rouge">test</code>.</li>
+  <li>Si la valeur de l’en-tête <code class="language-plaintext highlighter-rouge">If-Match</code> ne correspond pas à la version courante de la fiche, une erreur 412 « Precondition Failed » doit être retournée.</li>
 </ul>
 
 <p>Pour des informations sur les autres codes HTTP retournés en cas d’échec, consultez la documentation relative à <a href="https://www.hl7.org/fhir/R4/http.html#summary">l’interaction « patch »</a> de l’API REST FHIR.</p>
@@ -480,8 +509,8 @@ ETag : W/"2"
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-30 15:53:00 +0000">
-    2026-09-30
+  <span title="2026-10-01 13:59:00 +0000">
+    2026-10-01
   </span>
 
           <br/>

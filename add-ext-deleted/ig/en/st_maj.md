@@ -39,11 +39,36 @@ A noter que la méthode JSON patch est mature et plus adaptée à un usage en mo
 
 Lorsque toutes les modifications sont traitées, le serveur traite la fiche du document de la même façon qu’au cours d’une opération update créant ainsi une nouvelle version (modification des éléments `meta.versionId` et `meta.lastUpdated`).
 
+#### Mise à jour des extensions avec JSON Patch
+
+Les règles suivantes s’appliquent lorsque la demande de mise à jour est transmise au format JSON Patch :
+
+* **Adressage par index** : en JSON Patch, le chemin (`path`) d’une opération est un [JSON Pointer](https://datatracker.ietf.org/doc/html/rfc6901) qui désigne un élément de tableau par sa position et non par la valeur d’un de ses attributs. Une extension est donc désignée par sa position dans le tableau `extension` (par exemple `/extension/1/valueBoolean` pour la deuxième extension, les positions commençant à 0). Le producteur de documents doit au préalable lire la fiche pour connaître la position de l’extension à modifier.
+* **Extension absente** : l’opération `replace` échoue si le chemin n’existe pas. Si l’extension n’est pas encore présente dans la fiche, elle doit être ajoutée avec l’opération `add` ; la position `-` ajoute l’élément à la fin du tableau :
+
+```
+{
+    "op":"add",
+    "path":"/extension/-",
+    "value":{
+        "url":"https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted",
+        "valueBoolean":true
+    }
+}
+
+```
+
+* **Vérification de l’état de la fiche** : l’opération [`test`](https://datatracker.ietf.org/doc/html/rfc6902#section-4.6) ne modifie pas la fiche ; elle vérifie que la valeur d’un élément est celle attendue par le producteur de documents. Une demande JSON Patch étant atomique, si une opération `test` échoue, aucune des opérations de la demande n’est appliquée et la demande est rejetée. Ce mécanisme correspond à la vérification de l’annotation « OriginalStatus » par le registre dans le volet Partage de documents de santé.
+* **Modification concurrente** : pour éviter qu’une modification intervenue entre la lecture de la fiche et la demande de mise à jour ne décale les positions des extensions, le producteur de documents doit transmettre l’en-tête HTTP [`If-Match`](https://www.hl7.org/fhir/R4/http.html#concurrency) contenant la valeur de l’[`ETag`](https://www.hl7.org/fhir/R4/http.html#versioning) obtenue lors de la lecture de la fiche. Si la fiche a été modifiée entre-temps, le gestionnaire de partage de documents rejette la demande.
+
+A noter que le format FHIRPath Patch permet de désigner une extension par son URL (par exemple `extension.where(url='https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted')`) et évite ainsi l’adressage par index.
+
 Ci-dessous un exemple de requête avec le body en JSON pour la mise à jour du statut, du niveau de confidentialité et de l’archivage :
 
 ```
 PATCH [base]/DocumentReference?identifier=http://my-lab-system|123 HTTP/1.1
 Content-Type: application/json-patch+json
+If-Match: W/"1"
 
 ```
 
@@ -68,13 +93,14 @@ Content-Type: application/json-patch+json
 
 ```
 
-Dans cet exemple, l’extension PDSm_IsArchived (`https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-archived`) est supposée être en position 0 du tableau `extension`. JSON Patch adressant les éléments par index, le client doit connaître la position de l’extension dans la ressource. Si l’extension n’est pas présente, l’opération `add` doit être utilisée.
+Dans cet exemple, l’extension PDSm_IsArchived (`https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-archived`) est en position 0 du tableau `extension` de la fiche.
 
 Ci-dessous un exemple de requête avec le body en JSON pour la suppression logique de la fiche :
 
 ```
 PATCH [base]/DocumentReference?identifier=http://my-lab-system|123 HTTP/1.1
 Content-Type: application/json-patch+json
+If-Match: W/"1"
 
 ```
 
@@ -99,7 +125,7 @@ Content-Type: application/json-patch+json
 
 ```
 
-Dans cet exemple, l’extension PDSm_IsDeleted (`https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted`) est supposée être en position 1 du tableau `extension`. Si l’extension n’est pas présente, l’opération `add` doit être utilisée. L’opération `test` permet au gestionnaire de partage de documents de vérifier que la fiche est bien dans l’état attendu par le producteur avant de la supprimer ; si ce n’est pas le cas, la demande est rejetée.
+Dans cet exemple, l’extension PDSm_IsDeleted (`https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted`) est en position 1 du tableau `extension` de la fiche. L’opération `test` vérifie que la fiche est la version la plus récente (`status` = `current`) avant de la supprimer.
 
 #### Suppression logique d’une fiche
 
@@ -131,7 +157,8 @@ Le gestionnaire de partage de documents de santé retourne un "HTTP Status code"
 * Si la mise à jour de la ressource DocumentReference est correctement effectuée, un code HTTP 200 « OK » doit être retourné.
 * Si la mise à jour de la ressource DocumentReference porte sur des éléments autres que status, securityLabel, PDSm_isArchived et PDSm_isDeleted, une erreur 405 « Method Not Allowed » doit être retournée.
 * Si la fiche visée a été supprimée logiquement, elle est considérée comme inexistante : une erreur 404 « Not Found » doit être retournée.
-* Si la demande de suppression logique porte sur une fiche qui n’est pas la version la plus récente, ou si une opération `test` échoue, une erreur 422 « Unprocessable Entity » doit être retournée.
+* Si la demande de suppression logique porte sur une fiche qui n’est pas la version la plus récente, ou si une opération `test` échoue, une erreur 422 « Unprocessable Entity » doit être retournée. Ce code est celui prévu par [FHIR R4](https://www.hl7.org/fhir/R4/http.html#update) lorsque la demande enfreint les règles métier du serveur ; [FHIR R5](https://hl7.org/fhir/R5/http.html#patch) le précise explicitement pour l’échec d’une opération `test`.
+* Si la valeur de l’en-tête `If-Match` ne correspond pas à la version courante de la fiche, une erreur 412 « Precondition Failed » doit être retournée.
 
 Pour des informations sur les autres codes HTTP retournés en cas d’échec, consultez la documentation relative à [l’interaction « patch »](https://www.hl7.org/fhir/R4/http.html#summary) de l’API REST FHIR.
 
