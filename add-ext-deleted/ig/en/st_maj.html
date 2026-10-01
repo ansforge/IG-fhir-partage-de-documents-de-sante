@@ -412,16 +412,30 @@ If-Match: W/"1"
 
 <ul>
   <li><strong>Fiche concernée</strong> : la demande de suppression porte sur la version la plus récente de la fiche (<code class="language-plaintext highlighter-rouge">DocumentReference.status</code> = <code class="language-plaintext highlighter-rouge">current</code>), archivée ou non. Une fiche dont le statut est <code class="language-plaintext highlighter-rouge">superseded</code> ne peut pas être supprimée directement : elle l’est uniquement par propagation (voir ci-dessous).</li>
-  <li><strong>Mise à jour de la fiche</strong> : le gestionnaire de partage de documents positionne l’extension PDSm_IsDeleted à <code class="language-plaintext highlighter-rouge">true</code> et l’élément <code class="language-plaintext highlighter-rouge">DocumentReference.status</code> à <code class="language-plaintext highlighter-rouge">superseded</code>. Si la fiche était archivée, l’extension PDSm_IsArchived est positionnée à <code class="language-plaintext highlighter-rouge">false</code> : une fiche supprimée n’est plus considérée comme archivée.</li>
-  <li><strong>Propagation aux versions antérieures</strong> : le gestionnaire de partage de documents positionne l’extension PDSm_IsDeleted à <code class="language-plaintext highlighter-rouge">true</code> sur toutes les versions antérieures de la fiche, c’est-à-dire les fiches remplacées, directement ou non, par la fiche supprimée (<code class="language-plaintext highlighter-rouge">DocumentReference.relatesTo.code</code> = <code class="language-plaintext highlighter-rouge">replaces</code>).</li>
+  <li><strong>Mise à jour de la fiche</strong> : la demande du producteur de documents positionne l’extension PDSm_IsDeleted à <code class="language-plaintext highlighter-rouge">true</code> et l’élément <code class="language-plaintext highlighter-rouge">DocumentReference.status</code> à <code class="language-plaintext highlighter-rouge">superseded</code>. À réception de la demande, le gestionnaire de partage de documents vérifie que ces deux valeurs sont bien demandées et, si la fiche était archivée, positionne l’extension PDSm_IsArchived à <code class="language-plaintext highlighter-rouge">false</code> : une fiche supprimée n’est plus considérée comme archivée.</li>
+  <li><strong>Propagation aux versions antérieures</strong> : la suppression s’applique à toutes les versions antérieures de la fiche :
+    <ul>
+      <li>les fiches remplacées, directement ou non, par la fiche supprimée (<code class="language-plaintext highlighter-rouge">DocumentReference.relatesTo.code</code> = <code class="language-plaintext highlighter-rouge">replaces</code>) : le gestionnaire de partage de documents positionne leur extension PDSm_IsDeleted à <code class="language-plaintext highlighter-rouge">true</code> ;</li>
+      <li>les versions historiques de la ressource DocumentReference de la fiche supprimée et des fiches remplacées (<code class="language-plaintext highlighter-rouge">meta.versionId</code>), créées par les mises à jour successives : elles ne sont plus accessibles par les interactions <a href="https://www.hl7.org/fhir/R4/http.html#vread">vread</a> et <a href="https://www.hl7.org/fhir/R4/http.html#history">history</a>.</li>
+    </ul>
+  </li>
   <li><strong>Suppression logique du document</strong> : le document référencé par <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code> de la fiche supprimée et de ses versions antérieures n’est plus accessible (voir <a href="st_consultation.html">Consultation d’un document</a>).</li>
-  <li><strong>Inaccessibilité</strong> : une fiche supprimée n’est plus retournée par la recherche de fiches (voir <a href="st_recherche_fiche.html">Recherche de fiches</a>) et ne peut plus faire l’objet d’une mise à jour.</li>
+  <li><strong>Inaccessibilité</strong> : une fiche supprimée ne peut plus faire l’objet d’une mise à jour. De plus, dans le présent volet, une fiche supprimée n’est plus retournée par la recherche de fiches (voir <a href="st_recherche_fiche.html">Recherche de fiches</a>) ; le volet Partage de documents de santé précisant uniquement que le document n’est plus accessible, cette règle est propre au présent volet.</li>
   <li><strong>Irréversibilité</strong> : la suppression logique est définitive. L’extension PDSm_IsDeleted d’une fiche ne peut pas repasser à <code class="language-plaintext highlighter-rouge">false</code>.</li>
   <li><strong>Document transformé</strong> : lorsque deux documents sont liés par une transformation (<code class="language-plaintext highlighter-rouge">DocumentReference.relatesTo.code</code> = <code class="language-plaintext highlighter-rouge">transforms</code>) et doivent être supprimés ensemble, le producteur de documents envoie une demande de suppression pour chacune des deux fiches.</li>
   <li><strong>Traçabilité</strong> : la traçabilité des suppressions logiques doit être assurée par le gestionnaire de partage de documents, par exemple dans ses traces fonctionnelles.</li>
 </ul>
 
-<p>La répercussion de la suppression logique sur les lots de soumission et les classeurs n’est pas traitée dans cette version du volet.</p>
+<p>Répercussion sur les lots de soumission et les classeurs :</p>
+
+<p>Dans le volet Partage de documents de santé, la suppression logique d’une fiche fait passer à l’état « Deprecated » les associations qui la lient, ainsi que ses versions antérieures, à son lot de soumission et à ses classeurs (Tableau 1 et Tableau 3). Dans le présent volet, ces liens sont portés par l’élément <code class="language-plaintext highlighter-rouge">List.entry</code> du lot de soumission (<a href="StructureDefinition-pdsm-submissionset-comprehensive.html">PDSm_SubmissionSetComprehensive</a>) et du classeur (<a href="StructureDefinition-pdsm-folder-comprehensive.html">PDSm_FolderComprehensive</a>). Le profil MHD interdisant l’élément <code class="language-plaintext highlighter-rouge">List.entry.deleted</code>, la désactivation d’un lien se traduit par le retrait de l’entrée correspondante. Lors de la suppression logique d’une fiche, le gestionnaire de partage de documents :</p>
+
+<ul>
+  <li>retire du lot de soumission de la fiche supprimée, et du lot de soumission de chacune de ses versions antérieures, l’entrée qui référence cette fiche ; les autres éléments du lot de soumission ne sont pas modifiés et le lot de soumission n’est pas supprimé ;</li>
+  <li>retire de chaque classeur l’entrée qui référence la fiche supprimée ou l’une de ses versions antérieures, et met à jour l’élément <code class="language-plaintext highlighter-rouge">List.date</code> du classeur avec la date et l’heure de la suppression.</li>
+</ul>
+
+<p>Le retrait d’une entrée est définitif.</p>
 
 <h3 id="flux-04--résultat-de-la-mise-à-jour-des-métadonnées-de-la-fiche">Flux 04 : résultat de la mise à jour des métadonnées de la fiche</h3>
 
@@ -509,7 +523,7 @@ ETag : W/"2"
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-10-01 13:59:00 +0000">
+  <span title="2026-10-01 15:54:00 +0000">
     2026-10-01
   </span>
 
