@@ -124,15 +124,24 @@ La suppression logique d’une fiche correspond à la dépublication d’un docu
 Les règles suivantes s’appliquent :
 
 * **Fiche concernée** : la demande de suppression porte sur la version la plus récente de la fiche (`DocumentReference.status` = `current`), archivée ou non. Une fiche dont le statut est `superseded` ne peut pas être supprimée directement : elle l’est uniquement par propagation (voir ci-dessous).
-* **Mise à jour de la fiche** : le gestionnaire de partage de documents positionne l’extension PDSm_IsDeleted à `true` et l’élément `DocumentReference.status` à `superseded`. Si la fiche était archivée, l’extension PDSm_IsArchived est positionnée à `false` : une fiche supprimée n’est plus considérée comme archivée.
-* **Propagation aux versions antérieures** : le gestionnaire de partage de documents positionne l’extension PDSm_IsDeleted à `true` sur toutes les versions antérieures de la fiche, c’est-à-dire les fiches remplacées, directement ou non, par la fiche supprimée (`DocumentReference.relatesTo.code` = `replaces`).
+* **Mise à jour de la fiche** : la demande du producteur de documents positionne l’extension PDSm_IsDeleted à `true` et l’élément `DocumentReference.status` à `superseded`. À réception de la demande, le gestionnaire de partage de documents vérifie que ces deux valeurs sont bien demandées et, si la fiche était archivée, positionne l’extension PDSm_IsArchived à `false` : une fiche supprimée n’est plus considérée comme archivée.
+* **Propagation aux versions antérieures** : la suppression s’applique à toutes les versions antérieures de la fiche :
+  * les fiches remplacées, directement ou non, par la fiche supprimée (`DocumentReference.relatesTo.code` = `replaces`) : le gestionnaire de partage de documents positionne leur extension PDSm_IsDeleted à `true` ;
+  * les versions historiques de la ressource DocumentReference de la fiche supprimée et des fiches remplacées (`meta.versionId`), créées par les mises à jour successives : elles ne sont plus accessibles par les interactions [vread](https://www.hl7.org/fhir/R4/http.html#vread) et [history](https://www.hl7.org/fhir/R4/http.html#history).
 * **Suppression logique du document** : le document référencé par `DocumentReference.content.attachment.url` de la fiche supprimée et de ses versions antérieures n’est plus accessible (voir [Consultation d’un document](st_consultation.html)).
-* **Inaccessibilité** : une fiche supprimée n’est plus retournée par la recherche de fiches (voir [Recherche de fiches](st_recherche_fiche.html)) et ne peut plus faire l’objet d’une mise à jour.
+* **Inaccessibilité** : une fiche supprimée ne peut plus faire l’objet d’une mise à jour. De plus, dans le présent volet, une fiche supprimée n’est plus retournée par la recherche de fiches (voir [Recherche de fiches](st_recherche_fiche.html)) ; le volet Partage de documents de santé précisant uniquement que le document n’est plus accessible, cette règle est propre au présent volet.
 * **Irréversibilité** : la suppression logique est définitive. L’extension PDSm_IsDeleted d’une fiche ne peut pas repasser à `false`.
 * **Document transformé** : lorsque deux documents sont liés par une transformation (`DocumentReference.relatesTo.code` = `transforms`) et doivent être supprimés ensemble, le producteur de documents envoie une demande de suppression pour chacune des deux fiches.
 * **Traçabilité** : la traçabilité des suppressions logiques doit être assurée par le gestionnaire de partage de documents, par exemple dans ses traces fonctionnelles.
 
-La répercussion de la suppression logique sur les lots de soumission et les classeurs n’est pas traitée dans cette version du volet.
+Répercussion sur les lots de soumission et les classeurs :
+
+Dans le volet Partage de documents de santé, la suppression logique d’une fiche fait passer à l’état « Deprecated » les associations qui la lient, ainsi que ses versions antérieures, à son lot de soumission et à ses classeurs (Tableau 1 et Tableau 3). Dans le présent volet, ces liens sont portés par l’élément `List.entry` du lot de soumission ([PDSm_SubmissionSetComprehensive](StructureDefinition-pdsm-submissionset-comprehensive.html)) et du classeur ([PDSm_FolderComprehensive](StructureDefinition-pdsm-folder-comprehensive.html)). Le profil MHD interdisant l’élément `List.entry.deleted`, la désactivation d’un lien se traduit par le retrait de l’entrée correspondante. Lors de la suppression logique d’une fiche, le gestionnaire de partage de documents :
+
+* retire du lot de soumission de la fiche supprimée, et du lot de soumission de chacune de ses versions antérieures, l’entrée qui référence cette fiche ; les autres éléments du lot de soumission ne sont pas modifiés et le lot de soumission n’est pas supprimé ;
+* retire de chaque classeur l’entrée qui référence la fiche supprimée ou l’une de ses versions antérieures, et met à jour l’élément `List.date` du classeur avec la date et l’heure de la suppression.
+
+Le retrait d’une entrée est définitif.
 
 ### Flux 04 : résultat de la mise à jour des métadonnées de la fiche
 
