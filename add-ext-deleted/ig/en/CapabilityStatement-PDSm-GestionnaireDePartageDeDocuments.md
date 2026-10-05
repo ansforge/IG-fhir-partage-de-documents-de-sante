@@ -2,9 +2,6 @@
 
 ## CapabilityStatement: CI-SIS Partage-De-Documents-De-Sante - GestionnaireDePartageDeDocuments 
 
- 
-Il s’agit d’un système d’information ou d’un composant d'un système d’information qui stocke, classe et archive les documents d’un dossier patient. 
-
  [Raw OpenAPI-Swagger Definition file](../PDSm-GestionnaireDePartageDeDocuments.openapi.json) | [Download](../PDSm-GestionnaireDePartageDeDocuments.openapi.json) 
 
 

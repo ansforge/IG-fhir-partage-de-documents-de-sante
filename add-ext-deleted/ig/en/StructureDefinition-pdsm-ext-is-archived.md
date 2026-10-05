@@ -2,8 +2,6 @@
 
 ## Extension: PDSm_isArchived 
 
-Extension définie par le volet ANS "Volet Partage de documents de santé en mobilité" sur les ressources List et DocumentReference pour distinguer les lots de soumission et les fiches archivés des actives.
-
 **Context of Use**
 
 **Usage info**
@@ -36,7 +34,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-ext-is-archi
   "name" : "PDSm_IsArchived",
   "title" : "PDSm_isArchived",
   "status" : "active",
-  "date" : "2026-10-01T15:54:53+00:00",
+  "date" : "2026-10-05T14:15:07+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

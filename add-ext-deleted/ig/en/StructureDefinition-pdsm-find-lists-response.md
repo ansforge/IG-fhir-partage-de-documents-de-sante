@@ -2,9 +2,6 @@
 
 ## Resource Profile: PDSm Find Lists Response 
 
- 
-Profil de réponse de la transaction IHE "Find Document Lists [ITI-66]" basée sur le bundle MHD FindDocumentListsResponseMessage 
-
 **Usages:**
 
 * This Profile is not used by any profiles in this Specification
@@ -32,7 +29,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-find-lists-r
   "name" : "PDSm_FindListsResponse",
   "title" : "PDSm Find Lists Response",
   "status" : "active",
-  "date" : "2026-10-01T15:54:53+00:00",
+  "date" : "2026-10-05T14:15:07+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

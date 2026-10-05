@@ -59,7 +59,7 @@ Les règles suivantes s’appliquent lorsque la demande de mise à jour est tran
 ```
 
 * **Vérification de l’état de la fiche** : l’opération [`test`](https://datatracker.ietf.org/doc/html/rfc6902#section-4.6) ne modifie pas la fiche ; elle vérifie que la valeur d’un élément est celle attendue par le producteur de documents. Une demande JSON Patch étant atomique, si une opération `test` échoue, aucune des opérations de la demande n’est appliquée et la demande est rejetée. Ce mécanisme correspond à la vérification de l’annotation « OriginalStatus » par le registre dans le volet Partage de documents de santé.
-* **Modification concurrente** : pour éviter qu’une modification intervenue entre la lecture de la fiche et la demande de mise à jour ne décale les positions des extensions, le producteur de documents doit transmettre l’en-tête HTTP [`If-Match`](https://www.hl7.org/fhir/R4/http.html#concurrency) contenant la valeur de l’[`ETag`](https://www.hl7.org/fhir/R4/http.html#versioning) obtenue lors de la lecture de la fiche. Si la fiche a été modifiée entre-temps, le gestionnaire de partage de documents rejette la demande.
+* **Modification concurrente** : pour éviter qu’une modification intervenue entre la lecture de la fiche et la demande de mise à jour ne décale les positions des extensions, le producteur de documents doit transmettre l’en-tête HTTP [`If-Match`](https://www.hl7.org/fhir/R4/http.html#concurrency) contenant la version de la fiche obtenue lors de sa lecture : valeur de l’[`ETag`](https://www.hl7.org/fhir/R4/http.html#versioning) en cas de lecture directe, ou `W/"[meta.versionId]"` en cas de recherche, la réponse à une recherche ne comportant pas d’`ETag` par fiche. Si la fiche a été modifiée entre-temps, le gestionnaire de partage de documents rejette la demande.
 
 A noter que le format FHIRPath Patch permet de désigner une extension par son URL (par exemple `extension.where(url='https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted')`) et évite ainsi l’adressage par index.
 
@@ -130,6 +130,9 @@ Dans cet exemple, l’extension PDSm_IsDeleted (`https://interop.esante.gouv.fr/
 #### Suppression logique d’une fiche
 
 La suppression logique d’une fiche correspond à la dépublication d’un document définie par le [volet Partage de documents de santé](https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.16.4.pdf) (valeur « Deleted » de la métadonnée availabilityStatus en XDS). Elle est faite à la demande du patient ou d’un professionnel de santé ; la définition des acteurs habilités à la demander est du ressort du gestionnaire de partage de documents. Le document reste stocké par le gestionnaire de partage de documents mais n’est plus accessible.
+
+
+**Suppression logique d’une fiche : Flux 03 et 04**
 
 Les règles suivantes s’appliquent :
 

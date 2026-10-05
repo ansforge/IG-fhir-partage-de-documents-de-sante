@@ -2,9 +2,6 @@
 
 ## CapabilityStatement: CI-SIS Partage-De-Documents-De-Sante - ProducteurDeDocuments 
 
- 
-Il s’agit d’un système d’information ou d’un composant de système d’information qui envoie au gestionnaire de partage de documents une demande d’ajout de nouveaux documents et/ou des nouvelles versions de documents. Ce système fournit également les modifications des métadonnées du document. 
-
  [Raw OpenAPI-Swagger Definition file](../PDSm-ProducteurDeDocuments.openapi.json) | [Download](../PDSm-ProducteurDeDocuments.openapi.json) 
 
 

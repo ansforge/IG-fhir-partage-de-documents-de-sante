@@ -2,9 +2,6 @@
 
 ## SearchParameter: PDSm-DocumentReference-period-end 
 
- 
-Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément context.period.end correspondant à lobjet dateFinActe 
-
 
 
 ## Resource Content

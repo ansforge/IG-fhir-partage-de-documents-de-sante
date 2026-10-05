@@ -2,9 +2,6 @@
 
 ## SearchParameter: PDSm-DocumentReference-period-start 
 
- 
-Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément context.period.start correspondant à lobjet dateDebutActe 
-
 
 
 ## Resource Content

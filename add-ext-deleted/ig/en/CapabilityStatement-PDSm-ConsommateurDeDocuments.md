@@ -2,9 +2,6 @@
 
 ## CapabilityStatement: CI-SIS Partage-De-Documents-De-Sante - ConsommateurDeDocuments 
 
- 
-Il s’agit d’un système d’information ou d’un composant de système d’information qui recherche des documents selon certains critères, et qui peut consulter les documents qui l’intéressent. 
-
  [Raw OpenAPI-Swagger Definition file](../PDSm-ConsommateurDeDocuments.openapi.json) | [Download](../PDSm-ConsommateurDeDocuments.openapi.json) 
 
 
