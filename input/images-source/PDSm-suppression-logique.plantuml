@@ -17,21 +17,25 @@ skinparam  roundcorner 20
 participant "Producteur\n de documents" as PROD
 participant "Gestionnaire de partage\n de documents" as INFRA
 
-PROD-[#black]> INFRA : Lecture de la fiche \n <color #FireBrick>HTTP GET [base]/DocumentReference?identifier=...</color>
-INFRA-[#black]-> PROD : <color #FireBrick>HTTP 200 OK + ressource "Bundle" (DocumentReference avec meta.versionId)</color>
+opt état courant de la fiche (version, position des extensions) inconnu du producteur
+  PROD-[#black]> INFRA : Flux 05-b **RechercheDocument** (lecture de la fiche) \n <color #FireBrick>HTTP GET [base]/DocumentReference?patient.identifier=...&status=current&identifier=...</color>
+  INFRA-[#black]-> PROD : Flux 06-b **ResultatRechercheDocument** \n <color #FireBrick>HTTP 200 OK + ressource "Bundle" (DocumentReference avec meta.versionId)</color>
+end
 
-PROD-[#black]> INFRA : Flux 03 **MiseAJourMetadonneeFiche** (suppression logique) \n <color #FireBrick>HTTP PATCH [base]/DocumentReference?identifier=... + If-Match</color> \n test /status = current \n replace /status = superseded \n replace ou add PDSm_IsDeleted = true
+PROD-[#black]> INFRA : Flux 03 **MiseAJourMetadonneeFiche** (suppression logique) \n <color #FireBrick>HTTP PATCH [base]/DocumentReference?identifier=... + If-Match</color> \n test /status = current \n replace /status = superseded \n test /extension/n/url = PDSm_IsDeleted (si replace) \n replace ou add PDSm_IsDeleted = true
 activate INFRA
 activate PROD
 
-group Vérifications
-  INFRA -> INFRA : If-Match = version courante de la fiche ?\n sinon <color #FireBrick>412</color>
-  INFRA -> INFRA : fiche non supprimée ?\n sinon <color #FireBrick>404</color>
-  INFRA -> INFRA : opérations test réussies (fiche la plus récente) ?\n sinon <color #FireBrick>422</color>
+group Vérifications (dans cet ordre)
+  INFRA -> INFRA : recherche de la fiche par son identifiant :\n aucune fiche (ou fiche supprimée) : <color #FireBrick>404</color>\n plusieurs fiches : <color #FireBrick>412</color>
+  INFRA -> INFRA : If-Match différent de la version courante : <color #FireBrick>412</color>
+  INFRA -> INFRA : élément autre que status, securityLabel,\n PDSm_IsArchived, PDSm_IsDeleted : <color #FireBrick>405</color>
+  INFRA -> INFRA : opération test en échec : <color #FireBrick>422</color>
+  INFRA -> INFRA : fiche qui n'est pas la plus récente (status ≠ current)\n ou résultat différent de status = superseded\n et PDSm_IsDeleted = true : <color #FireBrick>422</color>
 end
 
 group Mise à jour de la fiche
-  INFRA -> INFRA : status = superseded, PDSm_IsDeleted = true
+  INFRA -> INFRA : application de la demande\n (status = superseded, PDSm_IsDeleted = true)
   INFRA -> INFRA : PDSm_IsArchived = false si la fiche était archivée
 end
 

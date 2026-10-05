@@ -38,7 +38,8 @@ Lorsque toutes les modifications sont traitées, le serveur traite la fiche du d
 
 Les règles suivantes s’appliquent lorsque la demande de mise à jour est transmise au format JSON Patch :
 
-* **Adressage par index** : en JSON Patch, le chemin (`path`) d’une opération est un [JSON Pointer](https://datatracker.ietf.org/doc/html/rfc6901) qui désigne un élément de tableau par sa position et non par la valeur d’un de ses attributs. Une extension est donc désignée par sa position dans le tableau `extension` (par exemple `/extension/1/valueBoolean` pour la deuxième extension, les positions commençant à 0). Le producteur de documents doit au préalable lire la fiche pour connaître la position de l’extension à modifier.
+* **Adressage par index** : en JSON Patch, le chemin (`path`) d’une opération est un [JSON Pointer](https://datatracker.ietf.org/doc/html/rfc6901) qui désigne un élément de tableau par sa position et non par la valeur d’un de ses attributs. Une extension est donc désignée par sa position dans le tableau `extension` (par exemple `/extension/1/valueBoolean` pour la deuxième extension, les positions commençant à 0). Le producteur de documents doit donc connaître l’état courant de la fiche (version et position des extensions). S’il ne le connaît pas, par exemple parce que la fiche a été modifiée depuis son dépôt ou sa dernière mise à jour, il l’obtient au préalable par le [flux 05-b de recherche de fiches](st_recherche_fiche.html#flux-05-b-de-recherche-de-fiches).
+* **Vérification de la position** : une opération `test` sur l’URL de l’extension (par exemple `/extension/1/url`) placée avant l’opération qui la modifie permet de s’assurer que la position utilisée désigne bien l’extension attendue ; si ce n’est pas le cas, la demande est rejetée au lieu de modifier une autre extension.
 * **Extension absente** : l’opération `replace` échoue si le chemin n’existe pas. Si l’extension n’est pas encore présente dans la fiche, elle doit être ajoutée avec l’opération `add` ; la position `-` ajoute l’élément à la fin du tableau :
 
 ```json
@@ -108,6 +109,11 @@ If-Match: W/"1"
         "value":"superseded"
     },
     {
+        "op":"test",
+        "path":"/extension/1/url",
+        "value":"https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted"
+    },
+    {
         "op":"replace",
         "path":"/extension/1/valueBoolean",
         "value":true
@@ -115,7 +121,7 @@ If-Match: W/"1"
 ]
 ```
 
-Dans cet exemple, l’extension PDSm_IsDeleted (`https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted`) est en position 1 du tableau `extension` de la fiche. L’opération `test` vérifie que la fiche est la version la plus récente (`status` = `current`) avant de la supprimer.
+Dans cet exemple, l’extension PDSm_IsDeleted (`https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted`) est en position 1 du tableau `extension` de la fiche. La première opération `test` vérifie que la fiche est la version la plus récente (`status` = `current`) avant de la supprimer ; la seconde vérifie que la position 1 du tableau `extension` correspond bien à l’extension PDSm_IsDeleted.
 
 #### Suppression logique d’une fiche
 
@@ -161,8 +167,9 @@ Le gestionnaire de partage de documents de santé retourne un "HTTP Status code"
 
 * Si la mise à jour de la ressource DocumentReference est correctement effectuée, un code HTTP 200 « OK » doit être retourné.
 * Si la mise à jour de la ressource DocumentReference porte sur des éléments autres que status, securityLabel, PDSm_isArchived et PDSm_isDeleted, une erreur 405 « Method Not Allowed » doit être retournée.
-* Si la fiche visée a été supprimée logiquement, elle est considérée comme inexistante : une erreur 404 « Not Found » doit être retournée.
-* Si la demande de suppression logique porte sur une fiche qui n’est pas la version la plus récente, ou si une opération `test` échoue, une erreur 422 « Unprocessable Entity » doit être retournée. Ce code est celui prévu par [FHIR R4](https://www.hl7.org/fhir/R4/http.html#update) lorsque la demande enfreint les règles métier du serveur ; [FHIR R5](https://hl7.org/fhir/R5/http.html#patch) le précise explicitement pour l’échec d’une opération `test`.
+* Si aucune fiche ne correspond à l’identifiant métier, ou si la fiche visée a été supprimée logiquement (elle est alors considérée comme inexistante), une erreur 404 « Not Found » doit être retournée.
+* Si plusieurs fiches correspondent à l’identifiant métier, une erreur 412 « Precondition Failed » doit être retournée, conformément au [« conditional Patch »](https://www.hl7.org/fhir/R4/http.html#patch).
+* Si la demande de suppression logique porte sur une fiche qui n’est pas la version la plus récente, si elle ne conduit pas à `DocumentReference.status` = `superseded` et à l’extension PDSm_IsDeleted à `true`, ou si une opération `test` échoue, une erreur 422 « Unprocessable Entity » doit être retournée. Ce code est celui prévu par [FHIR R4](https://www.hl7.org/fhir/R4/http.html#update) lorsque la demande enfreint les règles métier du serveur ; [FHIR R5](https://hl7.org/fhir/R5/http.html#patch) le précise explicitement pour l’échec d’une opération `test`.
 * Si la valeur de l’en-tête `If-Match` ne correspond pas à la version courante de la fiche, une erreur 412 « Precondition Failed » doit être retournée.
 
 Pour des informations sur les autres codes HTTP retournés en cas d’échec, consultez la documentation relative à [l’interaction « patch »](https://www.hl7.org/fhir/R4/http.html#summary) de l’API REST FHIR.
