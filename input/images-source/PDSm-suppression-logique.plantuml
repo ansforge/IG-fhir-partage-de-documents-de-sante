@@ -1,0 +1,54 @@
+@startuml
+hide footbox
+
+skinparam sequence {
+ arrowColor black
+ ParticipantBorderColor RoyalBlue
+ ParticipantBackgroundColor white
+ LifeLineBorderColor RoyalBlue
+ LifeLineBackgroundColor RoyalBlue
+ ParticipantFontSize 14
+ ParticipantFontName arial
+ ParticipantPadding 20
+}
+skinparam  roundcorner 20
+
+
+participant "Producteur\n de documents" as PROD
+participant "Gestionnaire de partage\n de documents" as INFRA
+
+PROD-[#black]> INFRA : Lecture de la fiche \n <color #FireBrick>HTTP GET [base]/DocumentReference?identifier=...</color>
+INFRA-[#black]-> PROD : <color #FireBrick>HTTP 200 OK + ressource "Bundle" (DocumentReference avec meta.versionId)</color>
+
+PROD-[#black]> INFRA : Flux 03 **MiseAJourMetadonneeFiche** (suppression logique) \n <color #FireBrick>HTTP PATCH [base]/DocumentReference?identifier=... + If-Match</color> \n test /status = current \n replace /status = superseded \n replace ou add PDSm_IsDeleted = true
+activate INFRA
+activate PROD
+
+group Vérifications
+  INFRA -> INFRA : If-Match = version courante de la fiche ?\n sinon <color #FireBrick>412</color>
+  INFRA -> INFRA : fiche non supprimée ?\n sinon <color #FireBrick>404</color>
+  INFRA -> INFRA : opérations test réussies (fiche la plus récente) ?\n sinon <color #FireBrick>422</color>
+end
+
+group Mise à jour de la fiche
+  INFRA -> INFRA : status = superseded, PDSm_IsDeleted = true
+  INFRA -> INFRA : PDSm_IsArchived = false si la fiche était archivée
+end
+
+group Propagation
+  INFRA -> INFRA : PDSm_IsDeleted = true sur les fiches remplacées\n (relatesTo.code = replaces)
+  INFRA -> INFRA : versions historiques (meta.versionId)\n inaccessibles en vread et history
+  INFRA -> INFRA : documents (content.attachment.url)\n inaccessibles
+  INFRA -> INFRA : retrait des entrées List.entry\n dans les lots de soumission
+  INFRA -> INFRA : retrait des entrées List.entry\n dans les classeurs + mise à jour de List.date
+end
+
+INFRA-[#black]-> PROD : Flux 04 **ResultatMAJMetadonneFiche** \n <color #FireBrick>HTTP 200 OK + ressource "DocumentReference"</color>
+deactivate PROD
+deactivate INFRA
+
+note over PROD, INFRA
+  Suppression définitive : la fiche n'est plus retournée par la recherche
+  et toute nouvelle demande la concernant reçoit une erreur 404.
+end note
+@enduml
