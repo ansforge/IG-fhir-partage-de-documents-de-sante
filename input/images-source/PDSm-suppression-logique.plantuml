@@ -17,21 +17,16 @@ skinparam  roundcorner 20
 participant "Producteur\n de documents" as PROD
 participant "Gestionnaire de partage\n de documents" as INFRA
 
-opt Si le producteur ne connaît pas la version actuelle de la fiche
-  PROD-[#black]> INFRA : Flux 05-b **RechercheDocument** \n Le producteur relit la fiche \n <color #FireBrick>HTTP GET [base]/DocumentReference?patient.identifier=...&status=current&identifier=...</color>
-  INFRA-[#black]-> PROD : Flux 06-b **ResultatRechercheDocument** \n Le gestionnaire renvoie la fiche, avec sa version et ses extensions \n <color #FireBrick>HTTP 200 OK + ressource "Bundle"</color>
-end
-
-PROD-[#black]> INFRA : Flux 03 **MiseAJourMetadonneeFiche** \n Le producteur demande la suppression de la fiche \n <color #FireBrick>HTTP PATCH [base]/DocumentReference?identifier=... + en-tête If-Match (version de la fiche)</color> \n La demande contient : \n • vérifier que la fiche est la version la plus récente <color #FireBrick>(test /status = current)</color> \n • passer la fiche au statut remplacé <color #FireBrick>(replace /status = superseded)</color> \n • marquer la fiche comme supprimée <color #FireBrick>(PDSm_IsDeleted = true)</color>
+PROD-[#black]> INFRA : Flux 03 **MiseAJourMetadonneeFiche** \n Le producteur demande la suppression de la fiche \n <color #FireBrick>HTTP PATCH [base]/DocumentReference?identifier=... + en-tête If-Match recommandé (version de la fiche)</color> \n La demande (FHIRPath Patch) contient : \n • passer la fiche au statut remplacé <color #FireBrick>(replace DocumentReference.status = superseded)</color> \n • marquer la fiche comme supprimée <color #FireBrick>(add ou replace PDSm_IsDeleted = true)</color>
 activate INFRA
 activate PROD
 
 group 1. Contrôles avant la suppression
+  INFRA -> INFRA : Le format de la demande est accepté ? \n <color #FireBrick>sinon erreur 415</color>
   INFRA -> INFRA : La fiche existe et n'est pas déjà supprimée ? \n <color #FireBrick>sinon erreur 404</color>
   INFRA -> INFRA : Une seule fiche correspond à l'identifiant ? \n <color #FireBrick>sinon erreur 412</color>
-  INFRA -> INFRA : La fiche est toujours dans la version connue du producteur ? \n <color #FireBrick>sinon erreur 412 (If-Match)</color>
+  INFRA -> INFRA : Si If-Match est transmis : la fiche est toujours dans la version connue du producteur ? \n <color #FireBrick>sinon erreur 412 (If-Match)</color>
   INFRA -> INFRA : La demande ne modifie que les éléments autorisés ? \n <color #FireBrick>sinon erreur 405</color>
-  INFRA -> INFRA : Les vérifications contenues dans la demande sont satisfaites ? \n <color #FireBrick>sinon erreur 422 (test)</color>
   INFRA -> INFRA : La fiche est la version la plus récente \n et la demande la marque bien comme supprimée ? \n <color #FireBrick>sinon erreur 422</color>
 end
 
