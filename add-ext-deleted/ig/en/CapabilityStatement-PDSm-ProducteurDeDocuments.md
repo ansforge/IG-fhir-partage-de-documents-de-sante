@@ -50,7 +50,8 @@
       "type" : "DocumentReference",
       "profile" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-comprehensive-document-reference",
       "interaction" : [{
-        "code" : "patch"
+        "code" : "patch",
+        "documentation" : "Demande de mise à jour des métadonnées de la fiche (flux 03) au format FHIRPath Patch (ressource Parameters)."
       }],
       "conditionalUpdate" : true
     }],

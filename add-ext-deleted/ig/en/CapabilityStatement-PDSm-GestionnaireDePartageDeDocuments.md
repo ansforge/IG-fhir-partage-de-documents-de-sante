@@ -144,7 +144,8 @@
         "code" : "search-type"
       },
       {
-        "code" : "patch"
+        "code" : "patch",
+        "documentation" : "Mise à jour des métadonnées de la fiche (flux 03). Le gestionnaire de partage de documents doit accepter le format FHIRPath Patch (ressource Parameters). Les formats JSON Patch et XML Patch sont optionnels et, s'ils sont acceptés, sont déclarés dans l'élément patchFormat."
       }],
       "conditionalUpdate" : true,
       "searchParam" : [{

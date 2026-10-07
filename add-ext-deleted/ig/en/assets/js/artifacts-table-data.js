@@ -4,7 +4,8 @@ window.artifactsTableData = {
       "type":        "Type",
       "category":    "Category",
       "useGrouping": "Use grouping",
-      "clearAll":    "Clear all"
+      "clearAll":      "Clear all",
+      "linkToSection": "Link to this section"
     },
     "groupDescriptions": {
       "-dyn-capabilitystatement": "<p>The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide.  Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements.</p>\n"
