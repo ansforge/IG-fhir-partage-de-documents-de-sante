@@ -326,7 +326,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li><strong>Opérations</strong> : chaque modification est décrite par un paramètre <code class="language-plaintext highlighter-rouge">operation</code> dont les parties indiquent le type d’opération (<code class="language-plaintext highlighter-rouge">type</code>), l’élément visé sous la forme d’une expression FHIRPath (<code class="language-plaintext highlighter-rouge">path</code>) et la nouvelle valeur (<code class="language-plaintext highlighter-rouge">value</code>).</li>
   <li><strong>Désignation des extensions</strong> : une extension est désignée par son URL, par exemple <code class="language-plaintext highlighter-rouge">DocumentReference.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-deleted').value</code>. Il n’est donc pas nécessaire de connaître sa position dans la ressource.</li>
-  <li><strong>Extension absente</strong> : l’opération <code class="language-plaintext highlighter-rouge">replace</code> échoue si le chemin ne désigne aucun élément. Si l’extension n’est pas encore présente dans la fiche, elle doit être ajoutée avec l’opération <code class="language-plaintext highlighter-rouge">add</code> sur l’élément <code class="language-plaintext highlighter-rouge">DocumentReference</code>, avec la partie <code class="language-plaintext highlighter-rouge">name</code> valant <code class="language-plaintext highlighter-rouge">extension</code> (voir l’exemple de suppression logique ci-dessous).</li>
+  <li><strong>Extension absente</strong> : l’opération <code class="language-plaintext highlighter-rouge">replace</code> échoue si le chemin ne désigne aucun élément. Si l’extension n’est pas encore présente dans la fiche, elle doit être ajoutée avec l’opération <code class="language-plaintext highlighter-rouge">add</code> sur l’élément <code class="language-plaintext highlighter-rouge">DocumentReference</code> (voir l’exemple de suppression logique ci-dessous).</li>
   <li><strong>Vérification de l’état de la fiche</strong> : le format FHIRPath Patch ne propose pas d’opération permettant au producteur de documents de vérifier la valeur d’un élément avant de le modifier. C’est le gestionnaire de partage de documents qui vérifie que la demande est applicable à l’état courant de la fiche (voir les règles de suppression logique et le flux 04). Ce mécanisme correspond à la vérification de l’annotation « OriginalStatus » par le registre dans le volet Partage de documents de santé.</li>
   <li><strong>Modification concurrente</strong> : pour éviter d’appliquer une demande à une fiche modifiée entre-temps, le producteur de documents devrait transmettre l’en-tête HTTP <a href="https://www.hl7.org/fhir/R4/http.html#concurrency"><code class="language-plaintext highlighter-rouge">If-Match</code></a> contenant la version de la fiche qu’il connaît, c’est-à-dire la valeur de l’<a href="https://www.hl7.org/fhir/R4/http.html#versioning"><code class="language-plaintext highlighter-rouge">ETag</code></a> retournée lors du dépôt de la fiche ou de sa dernière mise à jour. Si la fiche a été modifiée entre-temps, le gestionnaire de partage de documents rejette la demande. En l’absence de cet en-tête, les contrôles réalisés par le gestionnaire de partage de documents sur l’état courant de la fiche s’appliquent.</li>
 </ul>
@@ -537,8 +537,8 @@ ETag : W/"2"
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  
           Package ans.fhir.fr.pdsm#3.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-10-07 16:07:00 +0000">
-    2026-10-07
+  <span title="2026-10-08 08:40:00 +0000">
+    2026-10-08
   </span>
 
           <br/>
