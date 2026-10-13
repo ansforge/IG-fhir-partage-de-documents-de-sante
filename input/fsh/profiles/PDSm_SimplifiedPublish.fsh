@@ -79,7 +79,7 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 
 * securityLabel[confidentiality] MS
 * securityLabel[confidentiality] ^short = "Niveau de confidentialité standard du document (Normal, Restreint, Très restreint, ...). En l'absence d'information de confidentialité disponible, la valeur par défaut à utiliser est N (Normal), conformément à ce qui est déjà pratiqué aujourd'hui pour les documents CDA."
-* securityLabel[confidentiality] from http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification (required)
+* securityLabel[confidentiality] from http://terminology.hl7.org/ValueSet/v3-Confidentiality (required)
 
 * securityLabel[visibilityStatus] MS
 * securityLabel[visibilityStatus] ^short = "Statut de visibilité du document (invisible patient, invisible représentants légaux, masqué PS, etc...)."
