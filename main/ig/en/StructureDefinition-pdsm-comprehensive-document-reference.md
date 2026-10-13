@@ -2,9 +2,6 @@
 
 ## Resource Profile: PDSm Comprehensive DocumentReference 
 
- 
-Profil contenant les métadonnées du document ainsi que le lien vers la ressource Binary contenant le document dérivé de la ressource DocumentReference et du profil IHE MHD v4.0.1 "ComprehensiveDocumentReference" 
-
 **Usages:**
 
 * Use this Profile: [PDSm Comprehensive Provide Document Bundle](StructureDefinition-pdsm-comprehensive-provide-document-bundle.md) and [PDSm Find DocumentReferences Comprehensive Response](StructureDefinition-pdsm-find-documentreferences-comprehensive-response.md)
@@ -35,7 +32,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
   "name" : "PDSm_ComprehensiveDocumentReference",
   "title" : "PDSm Comprehensive DocumentReference",
   "status" : "active",
-  "date" : "2026-08-06T14:57:23+00:00",
+  "date" : "2026-10-13T09:06:28+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -337,15 +334,45 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-comprehensiv
     {
       "id" : "DocumentReference.securityLabel",
       "path" : "DocumentReference.securityLabel",
-      "short" : "Contient les informations définissant le niveau de confidentialité d'un document.",
-      "binding" : {
-        "strength" : "extensible",
-        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J08-XdsConfidentialityCode-CISIS/FHIR/JDV-J08-XdsConfidentialityCode-CISIS"
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "$this"
+        }],
+        "description" : "Slice sur securityLabel pour distinguer le niveau de confidentialité (U, L, M, N, R, V) du statut de visibilité (MASQUE_PS, INVISIBLE_PATIENT, etc...) : chaque slice est discriminée par son required binding sur un ValueSet fermé (v3-ConfidentialityClassification pour confidentiality, JDV_J110-StatutVisibiliteDocument-CISIS pour visibilityStatus)",
+        "rules" : "open"
       },
+      "short" : "Contient les informations définissant le niveau de confidentialité d'un document.",
       "mapping" : [{
         "identity" : "specmetier-to-PDSmComprehensiveDocumentReference",
         "map" : "niveauConfidentialite : [0..*] code"
       }]
+    },
+    {
+      "id" : "DocumentReference.securityLabel:confidentiality",
+      "path" : "DocumentReference.securityLabel",
+      "sliceName" : "confidentiality",
+      "short" : "Niveau de confidentialité standard du document (Normal, Restreint, Très restreint, ...). En l'absence d'information de confidentialité disponible, la valeur par défaut à utiliser est N (Normal), conformément à ce qui est déjà pratiqué aujourd'hui pour les documents CDA. L'ensemble des codes est autorisé pour permettre un usage large de PDSm.",
+      "min" : 1,
+      "max" : "1",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://terminology.hl7.org/ValueSet/v3-Confidentiality"
+      }
+    },
+    {
+      "id" : "DocumentReference.securityLabel:visibilityStatus",
+      "path" : "DocumentReference.securityLabel",
+      "sliceName" : "visibilityStatus",
+      "short" : "Statut de visibilité du document (invisible patient, invisible représentants légaux, masqué PS, etc...).",
+      "min" : 0,
+      "max" : "*",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J110-StatutVisibiliteDocument-CISIS/FHIR/JDV-J110-StatutVisibiliteDocument-CISIS"
+      }
     },
     {
       "id" : "DocumentReference.content",

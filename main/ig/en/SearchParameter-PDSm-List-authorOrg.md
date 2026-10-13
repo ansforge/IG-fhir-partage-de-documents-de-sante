@@ -2,9 +2,6 @@
 
 ## SearchParameter: PDSm-List-authorOrg 
 
- 
-Recherche sur l'auteur d'une organisation 
-
 
 
 ## Resource Content
@@ -17,7 +14,7 @@ Recherche sur l'auteur d'une organisation
   "version" : "3.1.1",
   "name" : "PDSmAuthorOrg",
   "status" : "active",
-  "date" : "2026-08-06T14:57:23+00:00",
+  "date" : "2026-10-13T09:06:28+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

@@ -2,11 +2,6 @@
 
 ## Resource Profile: PDSm Simplified Publish Document Reference 
 
- 
-Profil utilisé dans le cadre du flux 9 de publication simplifiée de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105. 
-Contrairement au profil PDSm_ComprehensiveDocumentReference, le document est directement inclus dans DocumentReference.attachment.data et non dans une ressource « Binary » externe. 
-La publication simplifiée est une simple requête HTTP POST d'une ressource DocumentReference conforme à ce profil. 
-
 **Usages:**
 
 * Examples for this Profile: [DocumentReference/PDSmSimplifiedExample](DocumentReference-PDSmSimplifiedExample.md)
@@ -34,7 +29,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
   "name" : "PDSm_SimplifiedPublish",
   "title" : "PDSm Simplified Publish Document Reference",
   "status" : "active",
-  "date" : "2026-08-06T14:57:23+00:00",
+  "date" : "2026-10-13T09:06:28+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -241,10 +236,41 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
     {
       "id" : "DocumentReference.securityLabel",
       "path" : "DocumentReference.securityLabel",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "$this"
+        }],
+        "description" : "Slice sur securityLabel pour distinguer le niveau de confidentialité (U, L, M, N, R, V) du statut de visibilité (MASQUE_PS, INVISIBLE_PATIENT, etc...) : chaque slice est discriminée par son required binding sur un ValueSet fermé (v3-ConfidentialityClassification pour confidentiality, JDV_J110-StatutVisibiliteDocument-CISIS pour visibilityStatus)",
+        "rules" : "open"
+      },
       "short" : "Contient les informations définissant le niveau de confidentialité d'un document.",
+      "min" : 1
+    },
+    {
+      "id" : "DocumentReference.securityLabel:confidentiality",
+      "path" : "DocumentReference.securityLabel",
+      "sliceName" : "confidentiality",
+      "short" : "Niveau de confidentialité standard du document (Normal, Restreint, Très restreint, ...). En l'absence d'information de confidentialité disponible, la valeur par défaut à utiliser est N (Normal), conformément à ce qui est déjà pratiqué aujourd'hui pour les documents CDA.",
+      "min" : 1,
+      "max" : "1",
+      "mustSupport" : true,
       "binding" : {
-        "strength" : "extensible",
-        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J08-XdsConfidentialityCode-CISIS/FHIR/JDV-J08-XdsConfidentialityCode-CISIS"
+        "strength" : "required",
+        "valueSet" : "http://terminology.hl7.org/ValueSet/v3-Confidentiality"
+      }
+    },
+    {
+      "id" : "DocumentReference.securityLabel:visibilityStatus",
+      "path" : "DocumentReference.securityLabel",
+      "sliceName" : "visibilityStatus",
+      "short" : "Statut de visibilité du document (invisible patient, invisible représentants légaux, masqué PS, etc...).",
+      "min" : 0,
+      "max" : "*",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J110-StatutVisibiliteDocument-CISIS/FHIR/JDV-J110-StatutVisibiliteDocument-CISIS"
       }
     },
     {

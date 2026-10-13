@@ -2,9 +2,6 @@
 
 ## SearchParameter: PDSm-List-PatientAsSource 
 
- 
-Paramètre de recherche chaîné créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément source:Patient.given et source:Patient.family 
-
 
 
 ## Resource Content

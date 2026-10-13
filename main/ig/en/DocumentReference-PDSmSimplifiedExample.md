@@ -6,7 +6,7 @@ version: 1
 
 Profile: [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-simplified-publish.md)
 
-**masterIdentifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/7.2.0/NamingSystem-uri.html)/urn:uuid:abcd-efgh-ijkl-mnop
+**masterIdentifier**: [Uniform Resource Identifier (URI)](http://terminology.hl7.org/6.3.0/NamingSystem-uri.html)/urn:uuid:abcd-efgh-ijkl-mnop
 
 **status**: Current
 
@@ -26,6 +26,8 @@ Profile: [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-s
 
 **description**: Note d'évolution suite à une consultation de suivi.
 
+**securityLabel**: Normal
+
 > **content**
 
 ### Attachments
@@ -35,7 +37,7 @@ Profile: [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-s
 | - | **ContentType** | **Language** | **Data** | **Size** | **Hash** | **Title** | **Creation** |
 | * | application/pdf | French (France) | `SGVsbG8gV29ybGQ=` | 250000 | `2jmj7l5rSw0yVb/vlWAYkK/YBwk=` | Note de suivi du 30 avril 2025 | 2025-04-29 17:00:00+0100 |
 
-**format**: [TRE_A11_IheFormatCode: urn:ihe:iti:xds-sd:pdf:2008](https://interop.esante.gouv.fr/terminologies/1.11.1/CodeSystem-TRE-A11-IheFormatCode.html#TRE-A11-IheFormatCode-urn.58ihe.58iti.58xds-sd.58pdf.582008) (Document à corps non structuré en Pdf/A-1)
+**format**: [TRE_A11_IheFormatCode: urn:ihe:iti:xds-sd:pdf:2008](https://interop.esante.gouv.fr/terminologies/1.14.0/CodeSystem-TRE-A11-IheFormatCode.html#TRE-A11-IheFormatCode-urn.58ihe.58iti.58xds-sd.58pdf.582008) (Document à corps non structuré en Pdf/A-1)
 
 ### Contexts
 
@@ -89,6 +91,13 @@ Profile: [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-s
     "reference" : "Organization/org-example"
   },
   "description" : "Note d'évolution suite à une consultation de suivi.",
+  "securityLabel" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+      "code" : "N",
+      "display" : "Normal"
+    }]
+  }],
   "content" : [{
     "attachment" : {
       "contentType" : "application/pdf",
