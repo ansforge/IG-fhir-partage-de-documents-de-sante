@@ -2,9 +2,6 @@
 
 ## SearchParameter: PDSm-List-PractitionerRoleAsSource 
 
- 
-Paramètre de recherche chaîné créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément source:PractitionerRole.practitioner:Practitioner.given et source:PractitionerRole.practitioner:Practitioner.family 
-
 
 
 ## Resource Content

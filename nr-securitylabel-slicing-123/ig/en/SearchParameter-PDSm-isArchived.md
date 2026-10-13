@@ -2,9 +2,6 @@
 
 ## SearchParameter: PDSm-isArchived 
 
- 
-Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère derecherche l'élément isArchived qui permet distinguer les lots de soumission et les fiches archivés des actives. 
-
 
 
 ## Resource Content

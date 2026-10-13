@@ -2,9 +2,6 @@
 
 ## Resource Profile: PDSm SubmissionSet Comprehensive 
 
- 
-Profil du lot de soumission dérivé de la ressource List et du profil IHE MHD « ComprehensiveSubmissionSet ». 
-
 **Usages:**
 
 * Use this Profile: [PDSm Comprehensive Provide Document Bundle](StructureDefinition-pdsm-comprehensive-provide-document-bundle.md) and [PDSm Find Lists Response](StructureDefinition-pdsm-find-lists-response.md)
@@ -34,7 +31,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-submissionse
   "name" : "PDSm_SubmissionSetComprehensive",
   "title" : "PDSm SubmissionSet Comprehensive",
   "status" : "active",
-  "date" : "2026-09-17T12:36:17+00:00",
+  "date" : "2026-10-13T07:43:49+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

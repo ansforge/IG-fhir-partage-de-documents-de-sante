@@ -11,21 +11,8 @@
     "sources" : ["2.16.840.1.113883.1.11.10228"],
     "uses" : {
     },
+    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference",
     "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
-  },
-  {
-    "url" : "http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification",
-    "version" : "2014-03-26",
-    "status" : "active",
-    "name" : "v3.ConfidentialityClassification",
-    "title" : "V3 Value SetConfidentialityClassification",
-    "description" : " Set of codes used to value Act.Confidentiality and Role.Confidentiality attribute in accordance with the definition for concept domain \"Confidentiality\".",
-    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-Confidentiality"],
-    "oids" : ["2.16.840.1.113883.1.11.10228"],
-    "sources" : ["2.16.840.1.113883.1.11.10228"],
-    "uses" : {
-    },
-    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS/FHIR/JDV-J02-XdsHealthcareFacilityTypeCode-CISIS",
@@ -40,12 +27,12 @@
     "sources" : ["1.2.250.1.213.1.1.5.466"],
     "uses" : {
     },
-    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference",
-    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference"
+    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference",
+    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/JDV_J03-XdsContentTypeCode-CISIS/FHIR/JDV-J03-XdsContentTypeCode-CISIS",
-    "version" : "20260223120000",
+    "version" : "20260928120000",
     "status" : "active",
     "name" : "JDV_J03_XdsContentTypeCode_CISIS",
     "title" : null,
@@ -73,8 +60,8 @@
     "sources" : ["1.2.250.1.213.1.1.5.467"],
     "uses" : {
     },
-    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference",
-    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference"
+    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference",
+    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/JDV_J06-XdsClassCode-CISIS/FHIR/JDV-J06-XdsClassCode-CISIS",
@@ -89,8 +76,8 @@
     "sources" : ["1.2.250.1.213.1.1.5.462"],
     "uses" : {
     },
-    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference",
-    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference"
+    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference",
+    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/JDV_J07-XdsTypeCode-CISIS/FHIR/JDV-J07-XdsTypeCode-CISIS",
@@ -106,26 +93,26 @@
     "sources" : ["1.2.250.1.213.1.1.5.471"],
     "uses" : {
     },
-    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference",
-    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference"
+    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference",
+    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/JDV_J10-XdsFormatCode-CISIS/FHIR/JDV-J10-XdsFormatCode-CISIS",
-    "version" : "20260629120000",
+    "version" : "20260928120000",
     "status" : "active",
     "name" : "JDV_J10_XdsFormatCode_CISIS",
     "title" : null,
     "description" : "XDS formatCode documents CI-SIS",
     "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_A10-NomenclatureURN/FHIR/TRE-A10-NomenclatureURN",
+    "http://dicom.nema.org/resources/ontology/DCMUID",
     "https://mos.esante.gouv.fr/NOS/TRE_A06-FormatCodeComplementaire/FHIR/TRE-A06-FormatCodeComplementaire",
-    "https://mos.esante.gouv.fr/NOS/TRE_A11-IheFormatCode/FHIR/TRE-A11-IheFormatCode",
-    "https://mos.esante.gouv.fr/NOS/TRE_A09-DICOMuidRegistry/FHIR/TRE-A09-DICOMuidRegistry"],
+    "https://mos.esante.gouv.fr/NOS/TRE_A11-IheFormatCode/FHIR/TRE-A11-IheFormatCode"],
     "oids" : ["1.2.250.1.213.1.1.5.465"],
     "sources" : ["1.2.250.1.213.1.1.5.465"],
     "uses" : {
     },
-    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference",
-    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference"
+    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference",
+    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/JDV_J110-StatutVisibiliteDocument-CISIS/FHIR/JDV-J110-StatutVisibiliteDocument-CISIS",
@@ -139,7 +126,7 @@
     "sources" : ["1.2.250.1.213.1.1.5.480"],
     "uses" : {
     },
-    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference",
-    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference"
+    "StructureDefinition-pdsm-simplified-publish.html" : "PDSm Simplified Publish Document Reference",
+    "StructureDefinition-pdsm-comprehensive-document-reference.html" : "PDSm Comprehensive DocumentReference"
   }]
 }

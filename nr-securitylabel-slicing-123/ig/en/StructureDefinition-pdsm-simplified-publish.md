@@ -2,11 +2,6 @@
 
 ## Resource Profile: PDSm Simplified Publish Document Reference 
 
- 
-Profil utilisé dans le cadre du flux 9 de publication simplifiée de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105. 
-Contrairement au profil PDSm_ComprehensiveDocumentReference, le document est directement inclus dans DocumentReference.attachment.data et non dans une ressource « Binary » externe. 
-La publication simplifiée est une simple requête HTTP POST d'une ressource DocumentReference conforme à ce profil. 
-
 **Usages:**
 
 * Examples for this Profile: [DocumentReference/PDSmSimplifiedExample](DocumentReference-PDSmSimplifiedExample.md)
@@ -34,7 +29,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
   "name" : "PDSm_SimplifiedPublish",
   "title" : "PDSm Simplified Publish Document Reference",
   "status" : "active",
-  "date" : "2026-09-17T12:36:17+00:00",
+  "date" : "2026-10-13T07:43:49+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -262,7 +257,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
       "mustSupport" : true,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification"
+        "valueSet" : "http://terminology.hl7.org/ValueSet/v3-Confidentiality"
       }
     },
     {
