@@ -1,0 +1,54 @@
+@startuml
+hide footbox
+
+skinparam sequence {
+ arrowColor black
+ ParticipantBorderColor RoyalBlue
+ ParticipantBackgroundColor white
+ LifeLineBorderColor RoyalBlue
+ LifeLineBackgroundColor RoyalBlue
+ ParticipantFontSize 14
+ ParticipantFontName arial
+ ParticipantPadding 20
+}
+skinparam  roundcorner 20
+
+
+participant "Producteur\n de documents" as PROD
+participant "Gestionnaire de partage\n de documents" as INFRA
+
+PROD-[#black]> INFRA : Flux 03 **MiseAJourMetadonneeFiche** \n Le producteur demande la suppression de la fiche \n <color #FireBrick>HTTP PATCH [base]/DocumentReference?identifier=... + en-tête If-Match recommandé (version de la fiche)</color> \n La demande (FHIRPath Patch) contient : \n • passer la fiche au statut remplacé <color #FireBrick>(replace DocumentReference.status = superseded)</color> \n • marquer la fiche comme supprimée <color #FireBrick>(add ou replace PDSm_IsDeleted = true)</color>
+activate INFRA
+activate PROD
+
+group 1. Contrôles avant la suppression
+  INFRA -> INFRA : Le format de la demande est accepté ? \n <color #FireBrick>sinon erreur 415</color>
+  INFRA -> INFRA : La fiche existe et n'est pas déjà supprimée ? \n <color #FireBrick>sinon erreur 404</color>
+  INFRA -> INFRA : Une seule fiche correspond à l'identifiant ? \n <color #FireBrick>sinon erreur 412</color>
+  INFRA -> INFRA : Si If-Match est transmis : la fiche est toujours dans la version connue du producteur ? \n <color #FireBrick>sinon erreur 412 (If-Match)</color>
+  INFRA -> INFRA : La demande ne modifie que les éléments autorisés ? \n <color #FireBrick>sinon erreur 405</color>
+  INFRA -> INFRA : La fiche est la version la plus récente \n et la demande la marque bien comme supprimée ? \n <color #FireBrick>sinon erreur 422</color>
+end
+
+group 2. Suppression de la fiche
+  INFRA -> INFRA : La fiche est marquée comme supprimée \n <color #FireBrick>(status = superseded, PDSm_IsDeleted = true)</color>
+  INFRA -> INFRA : Si la fiche était archivée, elle ne l'est plus \n <color #FireBrick>(PDSm_IsArchived = false)</color>
+end
+
+group 3. Suppression des éléments liés à la fiche
+  INFRA -> INFRA : Les anciennes versions du document sont aussi marquées comme supprimées \n <color #FireBrick>(fiches remplacées : relatesTo.code = replaces)</color>
+  INFRA -> INFRA : L'historique de la fiche n'est plus consultable \n <color #FireBrick>(vread et history)</color>
+  INFRA -> INFRA : Le document lui-même n'est plus consultable \n <color #FireBrick>(content.attachment.url)</color>
+  INFRA -> INFRA : La fiche et ses anciennes versions sont retirées de leur lot de soumission \n <color #FireBrick>(List.entry)</color>
+  INFRA -> INFRA : La fiche et ses anciennes versions sont retirées des classeurs, \n dont la date de mise à jour est actualisée \n <color #FireBrick>(List.entry, List.date)</color>
+end
+
+INFRA-[#black]-> PROD : Flux 04 **ResultatMAJMetadonneFiche** \n Le gestionnaire confirme la suppression \n <color #FireBrick>HTTP 200 OK + ressource "DocumentReference"</color>
+deactivate PROD
+deactivate INFRA
+
+note over PROD, INFRA
+  La suppression est définitive : la fiche n'apparaît plus dans les recherches
+  et toute nouvelle demande la concernant reçoit une erreur 404.
+end note
+@enduml

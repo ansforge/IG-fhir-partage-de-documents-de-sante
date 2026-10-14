@@ -87,6 +87,7 @@ Usage: #definition
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].interaction[+].code = #patch
+* rest.resource[=].interaction[=].documentation = "Mise à jour des métadonnées de la fiche (flux 03). Le gestionnaire de partage de documents doit accepter le format FHIRPath Patch (ressource Parameters). Les formats JSON Patch et XML Patch sont optionnels et, s'ils sont acceptés, sont déclarés dans l'élément patchFormat."
 * rest.resource[=].conditionalUpdate = true
 * rest.resource[=].searchParam[0].name = "type"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-type"

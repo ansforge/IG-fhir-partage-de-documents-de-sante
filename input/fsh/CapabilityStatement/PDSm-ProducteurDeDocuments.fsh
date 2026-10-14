@@ -20,6 +20,7 @@ Usage: #definition
 * rest.resource.type = #DocumentReference
 * rest.resource.profile = Canonical(PDSm_ComprehensiveDocumentReference)
 * rest.resource.interaction.code = #patch
+* rest.resource.interaction.documentation = "Demande de mise à jour des métadonnées de la fiche (flux 03) au format FHIRPath Patch (ressource Parameters)."
 * rest.resource.conditionalUpdate = true
 * rest.interaction.code = #transaction
 * rest.interaction.documentation = Canonical(PDSm_ComprehensiveProvideDocumentBundle)
