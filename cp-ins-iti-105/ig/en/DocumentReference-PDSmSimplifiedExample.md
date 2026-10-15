@@ -109,6 +109,13 @@
     "reference" : "Organization/org-example"
   },
   "description" : "Compte rendu de passage aux urgences.",
+  "securityLabel" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+      "code" : "N",
+      "display" : "Normal"
+    }]
+  }],
   "content" : [{
     "attachment" : {
       "contentType" : "application/pdf",

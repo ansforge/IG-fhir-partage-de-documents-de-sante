@@ -12,6 +12,18 @@
     "https://interop.esante.gouv.fr/terminologies/1.14.0/ValueSet-JDV-J07-XdsTypeCode-CISIS.html" : "JDV_J07_XdsTypeCode_CISIS"
   },
   {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "Confidentiality",
+    "title" : "Confidentiality",
+    "description" : "A set of codes specifying the security classification of acts and roles in accordance with the definition for concept domain \"Confidentiality\".",
+    "oids" : ["2.16.840.1.113883.5.25"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.4.0/ValueSet-v3-Confidentiality.html" : "Confidentiality"
+  },
+  {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/FHIR/TRE-A00-ProducteurDocNonPS",
     "version" : "20240329120000",
     "status" : "active",
@@ -83,19 +95,7 @@
     "oids" : ["1.2.250.1.213.1.1.4.13"],
     "uses" : {
     },
-    "https://interop.esante.gouv.fr/terminologies/1.14.0/ValueSet-JDV-J08-XdsConfidentialityCode-CISIS.html" : "JDV_J08_XdsConfidentialityCode_CISIS"
-  },
-  {
-    "url" : "https://mos.esante.gouv.fr/NOS/TRE_A08-HL7Confidentiality/FHIR/TRE-A08-HL7Confidentiality",
-    "version" : "20231215120000",
-    "status" : "active",
-    "name" : "TRE_A08_HL7Confidentiality",
-    "title" : null,
-    "description" : "HL7 confidentiality",
-    "oids" : ["2.16.840.1.113883.5.25"],
-    "uses" : {
-    },
-    "https://interop.esante.gouv.fr/terminologies/1.14.0/ValueSet-JDV-J08-XdsConfidentialityCode-CISIS.html" : "JDV_J08_XdsConfidentialityCode_CISIS"
+    "https://interop.esante.gouv.fr/terminologies/1.14.0/ValueSet-JDV-J110-StatutVisibiliteDocument-CISIS.html" : "JDV_J110_StatutVisibiliteDocument_CISIS"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_A10-NomenclatureURN/FHIR/TRE-A10-NomenclatureURN",
@@ -107,8 +107,8 @@
     "oids" : ["URN"],
     "uses" : {
     },
-    "https://interop.esante.gouv.fr/terminologies/1.14.0/ValueSet-JDV-J06-XdsClassCode-CISIS.html" : "JDV_J06_XdsClassCode_CISIS",
-    "https://interop.esante.gouv.fr/terminologies/1.14.0/ValueSet-JDV-J10-XdsFormatCode-CISIS.html" : "JDV_J10_XdsFormatCode_CISIS"
+    "https://interop.esante.gouv.fr/terminologies/1.14.0/ValueSet-JDV-J10-XdsFormatCode-CISIS.html" : "JDV_J10_XdsFormatCode_CISIS",
+    "https://interop.esante.gouv.fr/terminologies/1.14.0/ValueSet-JDV-J06-XdsClassCode-CISIS.html" : "JDV_J06_XdsClassCode_CISIS"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_A11-IheFormatCode/FHIR/TRE-A11-IheFormatCode",

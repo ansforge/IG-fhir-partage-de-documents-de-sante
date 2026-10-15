@@ -167,7 +167,7 @@
   "description" : "Compte rendu d’hospitalisation suite à une chirurgie.",
   "securityLabel" : [{
     "coding" : [{
-      "system" : "https://mos.esante.gouv.fr/NOS/TRE_A07-StatusVisibiliteDocument/FHIR/TRE-A07-StatusVisibiliteDocument",
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
       "code" : "N",
       "display" : "Normal"
     }]
