@@ -2,11 +2,6 @@
 
 ## Resource Profile: PDSm Simplified Publish Document Reference 
 
- 
-Profil utilisé dans le cadre du flux 9 de publication simplifiée de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105. 
-Contrairement au profil PDSm_ComprehensiveDocumentReference, le document est directement inclus dans DocumentReference.attachment.data et non dans une ressource « Binary » externe. 
-La publication simplifiée est une simple requête HTTP POST d'une ressource DocumentReference conforme à ce profil. 
-
 **Usages:**
 
 * Examples for this Profile: [DocumentReference/PDSmSimplifiedExample](DocumentReference-PDSmSimplifiedExample.md)
@@ -34,7 +29,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
   "name" : "PDSm_SimplifiedPublish",
   "title" : "PDSm Simplified Publish Document Reference",
   "status" : "active",
-  "date" : "2026-07-30T12:04:23+00:00",
+  "date" : "2026-10-15T15:21:59+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -95,7 +90,14 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
   "differential" : {
     "element" : [{
       "id" : "DocumentReference",
-      "path" : "DocumentReference"
+      "path" : "DocumentReference",
+      "constraint" : [{
+        "key" : "constr-sp-subject-sourcePatientInfo-ins",
+        "severity" : "error",
+        "human" : "Lorsque subject.identifier porte un matricule INS et que context.sourcePatientInfo est fourni, la ressource Patient contenue référencée par context.sourcePatientInfo doit porter le même matricule INS (même system et même value).",
+        "expression" : "(subject.identifier.where(system in ('urn:oid:1.2.250.1.213.1.4.8' | 'urn:oid:1.2.250.1.213.1.4.9' | 'urn:oid:1.2.250.1.213.1.4.10' | 'urn:oid:1.2.250.1.213.1.4.11')).exists() and context.sourcePatientInfo.exists()) implies contained.ofType(Patient).where(('#' + id) = %resource.context.sourcePatientInfo.reference).identifier.where(system = %resource.subject.identifier.system and value = %resource.subject.identifier.value).exists()",
+        "source" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish"
+      }]
     },
     {
       "id" : "DocumentReference.meta.versionId",
@@ -152,7 +154,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
     {
       "id" : "DocumentReference.subject",
       "path" : "DocumentReference.subject",
-      "short" : "Patient concerné par ce document. La ressource référencée peut être présente sous l’élément DocumentReference.contained ou via le champ identifier.",
+      "short" : "Patient titulaire du dossier dans le système cible. Lorsque le patient dispose d'une identité INS qualifiée, le matricule INS est porté par subject.identifier (référence logique, admise par IHE MHD ITI-105 §2:3.105.4.1.2.2 pour un identifiant national). La référence peut aussi pointer une ressource Patient déjà connue du système cible. Conformément à IHE MHD, la ressource Patient n'est pas contenue (contained) : les traits du patient tels que connus du producteur sont portés par context.sourcePatientInfo. Lorsque context.sourcePatientInfo est fourni, son matricule INS doit être identique à celui de subject.identifier (invariant constr-sp-subject-sourcePatientInfo-ins) ; en cas de discordance, la transaction est rejetée.",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"]
@@ -353,13 +355,6 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-simplified-p
         "code" : "Reference",
         "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"],
         "aggregation" : ["contained"]
-      }],
-      "constraint" : [{
-        "key" : "constr-sp-sourcePatientInfo-contained",
-        "severity" : "error",
-        "human" : "Lorsqu'il est fourni, context.sourcePatientInfo doit référencer une ressource Patient contenue (contained), cf spécifications IHE MHD ITI-105 §2:3.105.4.1.2.2.",
-        "expression" : "reference.exists() implies reference.startsWith('#')",
-        "source" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish"
       }]
     }]
   }

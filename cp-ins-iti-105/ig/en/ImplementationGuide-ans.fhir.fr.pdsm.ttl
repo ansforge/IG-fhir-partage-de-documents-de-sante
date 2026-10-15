@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.name [ fhir:value "PDSm"] ;
   fhir:ImplementationGuide.title [ fhir:value "Partage de Documents de Santé en mobilité (PDSm)"] ;
   fhir:ImplementationGuide.status [ fhir:value "active"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-07-30T12:04:23+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-10-15T15:21:59+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "ANS"] ;
   fhir:ImplementationGuide.contact [
      fhir:index -1 ;
@@ -57,7 +57,7 @@
        fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.terminology.r4" ] ;
-     fhir:ImplementationGuide.dependsOn.version [ fhir:value "7.3.0" ]
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "7.4.0" ]
   ], [
      fhir:index -1 ;
      fhir:Element.id [ fhir:value "hl7ext" ] ;
@@ -107,7 +107,7 @@
        fhir:link <https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies>
      ] ;
      fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "ans.fr.terminologies" ] ;
-     fhir:ImplementationGuide.dependsOn.version [ fhir:value "1.11.1" ]
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "1.14.0" ]
   ] ;
   fhir:ImplementationGuide.definition [
      fhir:Element.extension [
@@ -163,7 +163,7 @@
        fhir:Element.extension [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "code" ] ;
-         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+         fhir:Extension.valueString [ fhir:value "path-liquid-template" ]
        ], [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "value" ] ;
@@ -175,7 +175,7 @@
        fhir:Element.extension [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "code" ] ;
-         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+         fhir:Extension.valueString [ fhir:value "path-liquid-template" ]
        ], [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "value" ] ;
@@ -491,7 +491,7 @@
        fhir:Element.extension [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "code" ] ;
-         fhir:Extension.valueCode [ fhir:value "path-liquid" ]
+         fhir:Extension.valueCode [ fhir:value "path-liquid-template" ]
        ], [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "value" ] ;
@@ -503,7 +503,7 @@
        fhir:Element.extension [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "code" ] ;
-         fhir:Extension.valueCode [ fhir:value "path-liquid" ]
+         fhir:Extension.valueCode [ fhir:value "path-liquid-template" ]
        ], [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "value" ] ;
@@ -881,7 +881,7 @@
          fhir:Reference.reference [ fhir:value "DocumentReference/PDSmSimplifiedExample" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Exemple de publication simplifiée PDSm" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Note d'évolution suite à une consultation de suivi." ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Compte rendu de passage aux urgences." ] ;
        fhir:ImplementationGuide.definition.resource.exampleCanonical [
          fhir:value "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish" ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish>

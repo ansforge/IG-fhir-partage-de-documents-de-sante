@@ -17,7 +17,7 @@
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/JDV_J03-XdsContentTypeCode-CISIS/FHIR/JDV-J03-XdsContentTypeCode-CISIS",
-    "version" : "20260223120000",
+    "version" : "20260928120000",
     "status" : "active",
     "name" : "JDV_J03_XdsContentTypeCode_CISIS",
     "title" : null,
@@ -99,15 +99,15 @@
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/JDV_J10-XdsFormatCode-CISIS/FHIR/JDV-J10-XdsFormatCode-CISIS",
-    "version" : "20260629120000",
+    "version" : "20260928120000",
     "status" : "active",
     "name" : "JDV_J10_XdsFormatCode_CISIS",
     "title" : null,
     "description" : "XDS formatCode documents CI-SIS",
     "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_A10-NomenclatureURN/FHIR/TRE-A10-NomenclatureURN",
+    "http://dicom.nema.org/resources/ontology/DCMUID",
     "https://mos.esante.gouv.fr/NOS/TRE_A06-FormatCodeComplementaire/FHIR/TRE-A06-FormatCodeComplementaire",
-    "https://mos.esante.gouv.fr/NOS/TRE_A11-IheFormatCode/FHIR/TRE-A11-IheFormatCode",
-    "https://mos.esante.gouv.fr/NOS/TRE_A09-DICOMuidRegistry/FHIR/TRE-A09-DICOMuidRegistry"],
+    "https://mos.esante.gouv.fr/NOS/TRE_A11-IheFormatCode/FHIR/TRE-A11-IheFormatCode"],
     "oids" : ["1.2.250.1.213.1.1.5.465"],
     "sources" : ["1.2.250.1.213.1.1.5.465"],
     "uses" : {

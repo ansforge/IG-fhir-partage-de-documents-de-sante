@@ -38,8 +38,8 @@
           "url" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-address-insee-code",
           "valueCoding" : {
             "system" : "https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM",
-            "code" : "75056",
-            "display" : "Paris"
+            "code" : "29064",
+            "display" : "Goulven"
           }
         }]
       }
@@ -52,19 +52,19 @@
         }]
       },
       "system" : "urn:oid:1.2.250.1.213.1.4.10",
-      "value" : "180126978912536"
+      "value" : "185112906412322"
     }],
     "name" : [{
       "extension" : [{
         "url" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name",
-        "valueString" : "Martin"
+        "valueString" : "MAX PATRICK"
       }],
       "use" : "official",
-      "family" : "Claire",
-      "given" : ["Martin"]
+      "family" : "BRANCHY",
+      "given" : ["MAX"]
     }],
     "gender" : "male",
-    "birthDate" : "1980-01-15"
+    "birthDate" : "1985-11-01"
   }],
   "masterIdentifier" : {
     "system" : "urn:ietf:rfc:3986",
@@ -86,7 +86,17 @@
     }]
   }],
   "subject" : {
-    "reference" : "Patient/fr-patient-123"
+    "type" : "Patient",
+    "identifier" : {
+      "type" : {
+        "coding" : [{
+          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
+          "code" : "INS-NIR-TEST"
+        }]
+      },
+      "system" : "urn:oid:1.2.250.1.213.1.4.10",
+      "value" : "185112906412322"
+    }
   },
   "date" : "2025-04-30T09:30:00+01:00",
   "author" : [{
@@ -98,7 +108,7 @@
   "custodian" : {
     "reference" : "Organization/org-example"
   },
-  "description" : "Note d'évolution suite à une consultation de suivi.",
+  "description" : "Compte rendu de passage aux urgences.",
   "content" : [{
     "attachment" : {
       "contentType" : "application/pdf",
@@ -106,7 +116,7 @@
       "data" : "SGVsbG8gV29ybGQ=",
       "size" : 11,
       "hash" : "Ck1VqNd45QIvq3AZd8XYQLvEhtA=",
-      "title" : "Note de suivi du 30 avril 2025",
+      "title" : "CR de passage aux urgences du 30 avril 2025",
       "creation" : "2025-04-29T17:00:00+01:00"
     },
     "format" : {

@@ -2,8 +2,6 @@
 
 ## Extension: 
 
-Représente le destinataire du lot de soumission
-
 **Context of Use**
 
 **Usage info**
@@ -35,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-pdsm-ext-intended
   "version" : "3.1.1",
   "name" : "PDSm_intendedRecipient",
   "status" : "active",
-  "date" : "2026-07-30T12:04:23+00:00",
+  "date" : "2026-10-15T15:21:59+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
