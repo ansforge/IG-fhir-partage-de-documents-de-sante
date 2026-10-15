@@ -13,12 +13,23 @@ Dans le cas d’une demande de remplacement d’un document existant, l’élém
 
 Conformément à la transaction IHE MHD « Simplified Publish [ITI-105] », le gestionnaire de partage de documents fait alors passer le statut du DocumentReference remplacé à « superseded ». Si le gestionnaire de partage de documents ne supporte pas ce type de relation, il retourne un avertissement (warning) plutôt qu’une erreur, conformément au profil MHD.
 
-Les ressources référencées à partir de ce profil (ex : Patient, via l’attribut PDSm_SimplifiedDocumentReference.subject) peuvent être  :
+Les ressources référencées à partir de ce profil (ex : PractitionerRole, via l’attribut PDSm_SimplifiedDocumentReference.author) peuvent être  :
 
 * Logiques, via le champ identifier
 * Littérales,
   * Avec une URL absolue ou relative si la ressource référencée est déjà existante au niveau du système cible.
-  * Avec une référence vers un fragment interne (via l’attribut contained). L’élément DocumentReference.contained [0..*] peut contenir l’ensemble des ressources référencées.
+  * Avec une référence vers un fragment interne (via l’attribut contained). L’élément DocumentReference.contained [0..*] peut contenir l’ensemble des ressources référencées, à l’exception du patient référencé par `subject` (voir ci-dessous).
+
+#### Identification du patient
+
+Conformément à IHE MHD (section [2:3.105.4.1.2.2 Patient Identity](https://profiles.ihe.net/ITI/MHD/ITI-105.html#231054122-patient-identity) de la transaction ITI-105), deux éléments portent l'identité du patient :
+
+* `DocumentReference.subject` identifie le patient titulaire du dossier dans le système cible : c'est cet élément qui fait foi pour le rattachement du document. Il ne pointe pas une ressource contenue (contained). Lorsque le patient dispose d'une identité INS qualifiée, le matricule INS est porté par `subject.identifier` (référence logique). MHD admet explicitement une référence logique fondée sur un identifiant commun, tel qu'un identifiant national individuel. La référence peut aussi pointer une ressource Patient déjà connue du système cible.
+* `DocumentReference.context.sourcePatientInfo` porte l'identité du patient telle que connue du producteur du document. Lorsqu'il est fourni, il référence une ressource Patient contenue (contained), conforme au profil FR Core Patient INS lorsque l'identité est qualifiée (matricule INS et traits INSi), ou FR Core Patient sinon.
+
+En complément de MHD, qui n'impose pas de concordance entre ces deux éléments, PDSm exige que, lorsque `subject.identifier` porte un matricule INS et que `context.sourcePatientInfo` est fourni, la ressource Patient contenue porte le même matricule INS (invariant `constr-sp-subject-sourcePatientInfo-ins`).
+
+Le producteur du document est responsable de la cohérence de ces deux identités. En cas de discordance, le système cible doit rejeter la transaction en retournant une ressource OperationOutcome décrivant l'erreur, et ne doit pas tenter de la corriger. Il appartient au producteur de résoudre la discordance, conformément à ses procédures d'identitovigilance, avant de soumettre à nouveau le document.
 
 ### Flux 10 : résultat de la publication simplifiée d’un document
 
