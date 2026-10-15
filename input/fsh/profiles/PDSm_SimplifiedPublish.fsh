@@ -36,8 +36,10 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 * custodian ^definition = "Correspond à l’organisation responsable de la conservation, de la maintenance et/ou de l’accès au document, et non nécessairement à l’auteur ou à l’hébergeur technique."
 
 * subject 1..1
-* subject ^short = "Patient concerné par ce document. La ressource référencée peut être présente sous l’élément DocumentReference.contained ou via le champ identifier."
+* subject ^short = "Patient titulaire du dossier dans le système cible. Lorsque le patient dispose d'une identité INS qualifiée, le matricule INS est porté par subject.identifier (référence logique, admise par IHE MHD ITI-105 §2:3.105.4.1.2.2 pour un identifiant national). La référence peut aussi pointer une ressource Patient déjà connue du système cible. Conformément à IHE MHD, la ressource Patient n'est pas contenue (contained) : les traits du patient tels que connus du producteur sont portés par context.sourcePatientInfo. Lorsque context.sourcePatientInfo est fourni, son matricule INS doit être identique à celui de subject.identifier (invariant constr-sp-subject-sourcePatientInfo-ins) ; en cas de discordance, la transaction est rejetée."
 * subject only Reference(FRCorePatientProfile) 
+
+* obeys constr-sp-subject-sourcePatientInfo-ins
 
 * date MS
 * date 1..
@@ -134,8 +136,12 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 * context.practiceSetting obeys constr-bind-ProducteurDoc-simplified
 * context.practiceSetting ^short = "Cadre d’exercice de l’acte qui a engendré la création du document."
 
+// ---------------------------------------------------------------------
+// sourcePatientInfo — porteur des traits ; référence contained (IHE ITI-105)
+// ---------------------------------------------------------------------
 * context.sourcePatientInfo only Reference(FRCorePatientProfile)
-* context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier."
+* context.sourcePatientInfo ^type.aggregation = #contained
+* context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier. Conformément à IHE MHD ITI-105, lorsque fournie, cette référence pointe une ressource Patient contenue (contained). Selon le statut d'identité, la ressource est conforme au profil FR Core Patient (identité non qualifiée) ou FR Core Patient INS (identité qualifiée, matricule INS + traits INSi) qui hérite de profil FR Core Patient."
 
 
 Invariant: constr-bind-ProducteurDoc-simplified
@@ -162,3 +168,13 @@ Invariant: constr-sp-bind-relatesToTarget
 Description: "Référence contrainte au profil PDSm_SimplifiedPublish."
 // Expression:       "f:relatesTo/f:target"
 Severity:    #error
+
+// ---------------------------------------------------------------------
+// INVARIANT : cohérence du matricule INS entre subject et sourcePatientInfo.
+// Lorsque subject.identifier porte un matricule INS  et que sourcePatientInfo est fourni, le Patient
+// contenu doit porter le même matricule INS.
+// ---------------------------------------------------------------------
+Invariant: constr-sp-subject-sourcePatientInfo-ins
+Description: "Lorsque subject.identifier porte un matricule INS et que context.sourcePatientInfo est fourni, la ressource Patient contenue référencée par context.sourcePatientInfo doit porter le même matricule INS (même system et même value)."
+Expression: "(subject.identifier.where(system in ('urn:oid:1.2.250.1.213.1.4.8' | 'urn:oid:1.2.250.1.213.1.4.9' | 'urn:oid:1.2.250.1.213.1.4.10' | 'urn:oid:1.2.250.1.213.1.4.11')).exists() and context.sourcePatientInfo.exists()) implies contained.ofType(Patient).where(('#' + id) = %resource.context.sourcePatientInfo.reference).identifier.where(system = %resource.subject.identifier.system and value = %resource.subject.identifier.value).exists()"
+Severity: #error
