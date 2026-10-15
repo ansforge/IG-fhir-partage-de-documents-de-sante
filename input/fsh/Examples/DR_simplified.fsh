@@ -27,6 +27,8 @@ Usage: #example
 
 * description = "Compte rendu de passage aux urgences."
 
+* securityLabel[confidentiality] = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "Normal"
+
 * content.attachment.contentType = #application/pdf
 * content.attachment.language = #fr-FR
 * content.attachment.data = "SGVsbG8gV29ybGQ="
