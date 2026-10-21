@@ -36,11 +36,12 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 * custodian ^definition = "Correspond à l’organisation responsable de la conservation, de la maintenance et/ou de l’accès au document, et non nécessairement à l’auteur ou à l’hébergeur technique."
 
 * subject 1..1
-* subject ^short = "Patient titulaire du dossier dans le système cible. Lorsque le patient dispose d'une identité INS qualifiée, le matricule INS doit être porté par subject.identifier (référence logique, admise par IHE MHD ITI-105 §2:3.105.4.1.2.2 pour un identifiant national ; invariant constr-sp-ins-qualifiee-subject). subject.reference peut en complément pointer une ressource Patient déjà connue du système cible. Conformément à IHE MHD, la ressource Patient n'est pas contenue (contained) : les traits du patient tels que connus du producteur sont portés par context.sourcePatientInfo."
-* subject only Reference(FRCorePatientProfile) 
-
-* obeys constr-sp-subject-sourcePatientInfo-ins
-* obeys constr-sp-ins-qualifiee-subject
+* subject ^short = "Patient titulaire du dossier dans le système cible, identifié par son matricule INS (NIR ou NIA) porté par subject.identifier (équivalent de la métadonnée XDS patientId ; référence logique admise par IHE MHD ITI-105 §2:3.105.4.1.2.2 pour un identifiant national). subject.reference peut en complément pointer une ressource Patient déjà connue du système cible. Conformément à IHE MHD, la ressource Patient n'est pas contenue (contained) : l'identité du patient telle que connue du producteur est portée par context.sourcePatientInfo."
+* subject only Reference(FRCorePatientINSProfile)
+* subject.identifier 1..1
+* subject.identifier.system 1..1
+* subject.identifier.value 1..1
+* subject obeys constr-sp-subject-ins
 
 * date MS
 * date 1..
@@ -142,7 +143,7 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 // ---------------------------------------------------------------------
 * context.sourcePatientInfo only Reference(FRCorePatientProfile)
 * context.sourcePatientInfo ^type.aggregation = #contained
-* context.sourcePatientInfo ^short = "Identité du patient telle que connue du producteur du document. Obligatoire lorsque subject.identifier porte un matricule INS (invariant constr-sp-subject-sourcePatientInfo-ins). Conformément à IHE MHD ITI-105, lorsque fournie, cette référence pointe une ressource Patient contenue (contained)."
+* context.sourcePatientInfo ^short = "Identité du patient telle que connue du producteur du document (équivalent des métadonnées XDS sourcePatientId et sourcePatientInfo) : identifiant du patient dans le système du producteur (IPP, ou à défaut matricule INS) et traits d'identité. Conformément à IHE MHD ITI-105, lorsque fournie, cette référence pointe une ressource Patient contenue (contained)."
 
 
 Invariant: constr-bind-ProducteurDoc-simplified
@@ -171,24 +172,11 @@ Description: "Référence contrainte au profil PDSm_SimplifiedPublish."
 Severity:    #error
 
 // ---------------------------------------------------------------------
-// INVARIANT : cohérence du matricule INS entre subject et sourcePatientInfo.
-// Lorsque subject.identifier porte un matricule INS, sourcePatientInfo est obligatoire et le Patient
-// contenu doit porter le statut d'identité VALI (fr-core-identity-reliability) et le même matricule INS.
-// L'INS est constituée du matricule, de son OID et des traits de référence, transmis ensemble
-// (Référentiel INS EXI 15 et EXI 18, Guide d'implémentation §1.1 et §2.2.2).
+// INVARIANT : subject.identifier porte le matricule INS du patient, comme la métadonnée XDS patientId
+// (volet CI-SIS Partage de documents de santé §3.4.34). OID des autorités d'affectation de l'INS
+// (FR Core) : NIR, NIA, NIR de test, NIR de démonstration.
 // ---------------------------------------------------------------------
-Invariant: constr-sp-subject-sourcePatientInfo-ins
-Description: "Lorsque subject.identifier porte un matricule INS, context.sourcePatientInfo doit être fourni et la ressource Patient contenue qu'il référence doit porter le statut d'identité VALI et le même matricule INS (même system et même value)."
-Expression: "subject.identifier.where(system in ('urn:oid:1.2.250.1.213.1.4.8' | 'urn:oid:1.2.250.1.213.1.4.9' | 'urn:oid:1.2.250.1.213.1.4.10' | 'urn:oid:1.2.250.1.213.1.4.11')).exists() implies contained.ofType(Patient).where(('#' + id) = %resource.context.sourcePatientInfo.reference).where(extension('https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability').extension('identityStatus').value.code = 'VALI').identifier.where(system = %resource.subject.identifier.system and value = %resource.subject.identifier.value).exists()"
-Severity: #error
-
-// ---------------------------------------------------------------------
-// INVARIANT : une identité INS qualifiée doit être portée par subject.identifier.
-// Lorsque le Patient contenu référencé par sourcePatientInfo porte un matricule INS et le statut VALI,
-// subject.identifier doit porter un matricule INS ; la concordance est vérifiée par
-// constr-sp-subject-sourcePatientInfo-ins.
-// ---------------------------------------------------------------------
-Invariant: constr-sp-ins-qualifiee-subject
-Description: "Lorsque la ressource Patient contenue référencée par context.sourcePatientInfo porte un matricule INS et le statut d'identité VALI, subject.identifier doit porter un matricule INS."
-Expression: "contained.ofType(Patient).where(('#' + id) = %resource.context.sourcePatientInfo.reference and extension('https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability').extension('identityStatus').value.code = 'VALI').identifier.where(system in ('urn:oid:1.2.250.1.213.1.4.8' | 'urn:oid:1.2.250.1.213.1.4.9' | 'urn:oid:1.2.250.1.213.1.4.10' | 'urn:oid:1.2.250.1.213.1.4.11')).exists() implies subject.identifier.where(system in ('urn:oid:1.2.250.1.213.1.4.8' | 'urn:oid:1.2.250.1.213.1.4.9' | 'urn:oid:1.2.250.1.213.1.4.10' | 'urn:oid:1.2.250.1.213.1.4.11')).exists()"
+Invariant: constr-sp-subject-ins
+Description: "subject.identifier doit porter le matricule INS du patient (NIR ou NIA)."
+Expression: "identifier.system in ('urn:oid:1.2.250.1.213.1.4.8' | 'urn:oid:1.2.250.1.213.1.4.9' | 'urn:oid:1.2.250.1.213.1.4.10' | 'urn:oid:1.2.250.1.213.1.4.11')"
 Severity: #error

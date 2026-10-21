@@ -52,6 +52,10 @@ Usage: #inline
 Title: "Exemple de ressource Patient contenue (sourcePatientInfo) - identité INS de test, statut qualifié"
 // Patient fictif issu des jeux d'essais INS (ANS, v20260213) : cas nominal 1 (BRANCHY Max Patrick)
 
+// Identifiant du patient dans le système du producteur (IPP), équivalent de la métadonnée XDS sourcePatientId
+* identifier[PI].system = "urn:oid:1.2.250.1.71.4.2.7.1"
+* identifier[PI].value = "9312"
+
 * identifier[INS-NIR-TEST].type = https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203#INS-NIR-TEST
 * identifier[INS-NIR-TEST].system = "urn:oid:1.2.250.1.213.1.4.10"
 * identifier[INS-NIR-TEST].value = "185112906412322"
