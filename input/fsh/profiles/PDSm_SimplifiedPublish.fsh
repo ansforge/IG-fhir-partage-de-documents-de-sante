@@ -36,12 +36,11 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 * custodian ^definition = "Correspond à l’organisation responsable de la conservation, de la maintenance et/ou de l’accès au document, et non nécessairement à l’auteur ou à l’hébergeur technique."
 
 * subject 1..1
-* subject ^short = "Patient titulaire du dossier dans le système cible, identifié par son matricule INS (NIR ou NIA) porté par subject.identifier (équivalent de la métadonnée XDS patientId ; référence logique admise par IHE MHD ITI-105 §2:3.105.4.1.2.2 pour un identifiant national). subject.reference peut en complément pointer une ressource Patient déjà connue du système cible. Conformément à IHE MHD, la ressource Patient n'est pas contenue (contained) : l'identité du patient telle que connue du producteur est portée par context.sourcePatientInfo."
-* subject only Reference(FRCorePatientINSProfile)
+* subject ^short = "Patient titulaire du dossier dans le système cible, identifié par subject.identifier (équivalent de la métadonnée XDS patientId ; référence logique admise par IHE MHD ITI-105 §2:3.105.4.1.2.2) : matricule INS (NIR ou NIA) lorsque l'identité est qualifiée et que le partage sort du domaine d'identification du producteur, ou identifiant du patient dans le domaine d'identification commun au producteur et au système cible (ex : IPP pour un échange intra-établissement). subject.reference peut en complément pointer une ressource Patient déjà connue du système cible. Conformément à IHE MHD, la ressource Patient n'est pas contenue (contained) : l'identité du patient telle que connue du producteur est portée par context.sourcePatientInfo."
+* subject only Reference(FRCorePatientProfile)
 * subject.identifier 1..1
 * subject.identifier.system 1..1
 * subject.identifier.value 1..1
-* subject obeys constr-sp-subject-ins
 
 * date MS
 * date 1..
@@ -170,13 +169,3 @@ Invariant: constr-sp-bind-relatesToTarget
 Description: "Référence contrainte au profil PDSm_SimplifiedPublish."
 // Expression:       "f:relatesTo/f:target"
 Severity:    #error
-
-// ---------------------------------------------------------------------
-// INVARIANT : subject.identifier porte le matricule INS du patient, comme la métadonnée XDS patientId
-// (volet CI-SIS Partage de documents de santé §3.4.34). OID des autorités d'affectation de l'INS
-// (FR Core) : NIR, NIA, NIR de test, NIR de démonstration.
-// ---------------------------------------------------------------------
-Invariant: constr-sp-subject-ins
-Description: "subject.identifier doit porter le matricule INS du patient (NIR ou NIA)."
-Expression: "identifier.system in ('urn:oid:1.2.250.1.213.1.4.8' | 'urn:oid:1.2.250.1.213.1.4.9' | 'urn:oid:1.2.250.1.213.1.4.10' | 'urn:oid:1.2.250.1.213.1.4.11')"
-Severity: #error
