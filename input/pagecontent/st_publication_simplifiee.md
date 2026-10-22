@@ -29,13 +29,13 @@ Conformément à IHE MHD (section [2:3.105.4.1.2.2 Patient Identity](https://pro
   * identifiant local du patient (ex : IPP) lorsque le producteur et le système cible partagent un même domaine d'identification, notamment pour les échanges intra-établissement, où l'INS n'est pas nécessairement connu ou utilisé.
 
   `subject.reference` peut en complément pointer une ressource Patient déjà connue du système cible. `subject` ne pointe pas une ressource contenue (contained).
-* `DocumentReference.context.sourcePatientInfo` porte l'identité du patient telle que connue du producteur du document, et regroupe les métadonnées XDS `sourcePatientId` et `sourcePatientInfo` (volet §3.4.42 et §3.4.43). Lorsqu'il est fourni, il référence une ressource Patient contenue (contained), conforme au profil FR Core Patient, qui porte l'identifiant du patient dans le système du producteur (IPP, ou à défaut le matricule INS) et ses traits d'identité. Ces informations ne doivent pas être réutilisées par le système cible pour calculer un identifiant.
+* `DocumentReference.context.sourcePatientInfo` porte l'identité du patient telle que connue du producteur du document, et regroupe les métadonnées XDS `sourcePatientId` et `sourcePatientInfo` ([volet Partage de documents de santé](https://esante.gouv.fr/sites/default/files/media/document/CI-SIS_SERVICE_VOLET-PARTAGE-DOCUMENTS-SANTE_V1.16.5.pdf) du CI-SIS, §3.4.42 et §3.4.43). Lorsqu'il est fourni, il référence une ressource Patient contenue (contained), conforme au profil FR Core Patient, qui porte l'identifiant du patient dans le système du producteur (IPP, ou à défaut le matricule INS) et ses traits d'identité. Ces informations ne doivent pas être réutilisées par le système cible pour calculer un identifiant.
 
 Seul `subject` fait l'objet d'un contrôle : comme pour les métadonnées XDS `sourcePatientId` et `sourcePatientInfo`, aucun contrôle de concordance n'est effectué entre `subject` et `context.sourcePatientInfo`. Le producteur est responsable de la cohérence des identités transmises, conformément à ses procédures d'identitovigilance.
 
 Conformément au [Référentiel INS](https://esante.gouv.fr/sites/default/files/media_entity/documents/referentiel_identite_national_de_sante.pdf) (v2.1, décembre 2024, EXI 12) et à son [Guide d'implémentation](https://esante.gouv.fr/sites/default/files/media_entity/documents/ins-guide-implementation.pdf) (v3.0, décembre 2024, EXI ID 29), le matricule INS n'est transmis que si l'identité du patient est qualifiée : en dehors d'un domaine d'identification local, la publication simplifiée d'un document suppose donc une identité INS qualifiée.
 
-L'acceptation d'un document suppose que le système cible connaisse l'identifiant du patient ; la manière dont il en est informé (par exemple, lors de l'ouverture du dossier du patient) relève de sa responsabilité (volet §3.3.6).
+L'acceptation d'un document suppose que le système cible connaisse l'identifiant du patient ; la manière dont il en est informé (par exemple, lors de l'ouverture du dossier du patient) relève de sa responsabilité ([volet Partage de documents de santé](https://esante.gouv.fr/sites/default/files/media/document/CI-SIS_SERVICE_VOLET-PARTAGE-DOCUMENTS-SANTE_V1.16.5.pdf) du CI-SIS, §3.3.6).
 
 ### Flux 10 : résultat de la publication simplifiée d’un document
 
@@ -48,8 +48,6 @@ En cas de succès, le serveur retourne :
 En cas d’erreur, le serveur retourne :
 
 * un HTTP Code statut (400 Bad Request, 404 Not Found, 422 Unprocessable Entity, …)
-* En cas d’erreur 422, le corps de la réponse devrait contenir la ressource OperationOutcome détaillant l’erreur.
-
-En cas de non-respect des exigences d'identification du patient (voir flux 09), le serveur retourne le code HTTP 422 Unprocessable Entity et le corps de la réponse doit contenir une ressource OperationOutcome décrivant l'erreur.
+* un corps de réponse contenant une ressource OperationOutcome détaillant l’erreur, quel que soit le code HTTP, utilisant si approprié les codes d’erreur de la table ITI TF-3: Table 4.2.4.1-2 (IHE MHD [ITI-105] §2:3.105.4.1.3).
 
 Dans le cas d’une demande de remplacement, si le gestionnaire de partage de documents ne supporte pas la relation `relatesTo` demandée, la réponse reste un succès (HTTP 201 Created) mais le corps de la réponse contient un avertissement (OperationOutcome de sévérité `warning`), conformément au profil MHD [ITI-105].
