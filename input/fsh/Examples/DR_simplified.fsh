@@ -1,11 +1,11 @@
 Instance: PDSmSimplifiedExample
 InstanceOf: pdsm-simplified-publish
-Title: "Exemple de publication simplifiée PDSm"
+Title: "Exemple de publication simplifiée PDSm (généré à l'aide de l'IA)"
 Usage: #example
 
 * meta.versionId = "1"
 * masterIdentifier.system = "urn:ietf:rfc:3986"
-* masterIdentifier.value = "urn:uuid:abcd-efgh-ijkl-mnop"
+* masterIdentifier.value = "urn:uuid:3f1c9a2e-7b4d-4e8a-9c61-2d5f0b8e7a14"
 
 * status = #current
 
