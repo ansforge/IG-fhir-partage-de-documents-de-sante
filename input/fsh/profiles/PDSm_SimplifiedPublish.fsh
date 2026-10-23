@@ -36,11 +36,8 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 * custodian ^definition = "Correspond à l’organisation responsable de la conservation, de la maintenance et/ou de l’accès au document, et non nécessairement à l’auteur ou à l’hébergeur technique."
 
 * subject 1..1
-* subject ^short = "Patient titulaire du dossier dans le système cible, identifié par subject.identifier (donnée fonctionnelle idPatient, équivalent de la métadonnée XDS patientId ; référence logique admise par IHE MHD ITI-105 §2:3.105.4.1.2.2) : matricule INS (NIR ou NIA) lorsque l'identité est qualifiée et que le partage sort du domaine d'identification du producteur, ou identifiant du patient dans le domaine d'identification commun au producteur et au système cible (ex : IPP pour un échange intra-établissement). subject.reference peut en complément pointer une ressource Patient déjà connue du système cible. Conformément à IHE MHD, la ressource Patient n'est pas contenue (contained) : l'identité du patient telle que connue du producteur est portée par context.sourcePatientInfo."
+* subject ^short = "Patient titulaire du dossier dans le système cible (donnée fonctionnelle idPatient, équivalent de la métadonnée XDS patientId). Conformément à IHE MHD ITI-105 §2:3.105.4.1.2.2, au moins l'une des deux formes est renseignée : référence littérale (subject.reference) vers une ressource Patient hébergée par un serveur accessible au producteur et au système cible, ou référence logique (subject.identifier) fondée sur un identifiant commun : matricule INS (NIR ou NIA) lorsque l'identité est qualifiée et que le partage sort du domaine d'identification du producteur, ou identifiant du patient dans le domaine d'identification commun au producteur et au système cible (ex : IPP pour un échange intra-établissement). La ressource Patient n'est pas contenue (contained) : l'identité du patient telle que connue du producteur est portée par context.sourcePatientInfo."
 * subject only Reference(FRCorePatientProfile)
-* subject.identifier 1..1
-* subject.identifier.system 1..1
-* subject.identifier.value 1..1
 
 * date MS
 * date 1..
