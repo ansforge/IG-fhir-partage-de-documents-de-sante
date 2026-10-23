@@ -1,0 +1,209 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/pdsm/DocumentReference/PDSmSimplifiedExample> a fhir:DocumentReference ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "PDSmSimplifiedExample"] ;
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ] ;
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish" ;
+       fhir:index 0 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DocumentReference PDSmSimplifiedExample</b></p><a name=\"PDSmSimplifiedExample\"> </a><a name=\"hcPDSmSimplifiedExample\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-pdsm-simplified-publish.html\">PDSm Simplified Publish Document Reference</a></p></div><p><b>masterIdentifier</b>: <a href=\"http://terminology.hl7.org/5.5.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt #xD;#xA;#xD;#xA;This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: #xD;#xA;#xD;#xA;Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.#xD;#xA;#xD;#xA;This OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:3f1c9a2e-7b4d-4e8a-9c61-2d5f0b8e7a14</p><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 15507-7}\">CR de passage aux urgences</span></p><p><b>category</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_A03-ClasseDocument/FHIR/TRE-A03-ClasseDocument 10}\">Compte rendu</span></p><p><b>subject</b>: Identifier: NIR TEST/185112906412322</p><p><b>date</b>: 2025-04-30 09:30:00+0100</p><p><b>author</b>: <a href=\"PractitionerRole-practitionerrole-example.html\">Leclerc Sophie (Identifiant National de Professionnel de Santé: 810101201234 (use: official)): Activité de soin et de pharmacie, Libéral, indépendant, artisan, commerçant, Adjoint at HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G (Entité légale, Secteur non défini) (Identification nationale de structure définie par l’ANS dans le CI_SIS: 2264403106 (use: official)) (https://rpps.esante.gouv.fr#1011848351 (use: official))</a></p><p><b>authenticator</b>: <a href=\"PractitionerRole-practitionerrole-example.html\">Leclerc Sophie (Identifiant National de Professionnel de Santé: 810101201234 (use: official)): Activité de soin et de pharmacie, Libéral, indépendant, artisan, commerçant, Adjoint at HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G (Entité légale, Secteur non défini) (Identification nationale de structure définie par l’ANS dans le CI_SIS: 2264403106 (use: official)) (https://rpps.esante.gouv.fr#1011848351 (use: official))</a></p><p><b>custodian</b>: <a href=\"Organization-org-example.html\">HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G (Entité légale, Secteur non défini) (Identification nationale de structure définie par l’ANS dans le CI_SIS: 2264403106 (use: official))</a></p><p><b>description</b>: Compte rendu de passage aux urgences.</p><p><b>securityLabel</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-Confidentiality N}\">Normal</span></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Language</b></td><td><b>Data</b></td><td><b>Size</b></td><td><b>Hash</b></td><td><b>Title</b></td><td><b>Creation</b></td></tr><tr><td style=\"display: none\">*</td><td>application/pdf</td><td>French (France)</td><td><code>SGVsbG8gV29ybGQ=</code></td><td>11</td><td><code>Ck1VqNd45QIvq3AZd8XYQLvEhtA=</code></td><td>CR de passage aux urgences du 30 avril 2025</td><td>2025-04-29 17:00:00+0100</td></tr></table><p><b>format</b>: <a href=\"https://interop.esante.gouv.fr/terminologies/1.14.0/CodeSystem-TRE-A11-IheFormatCode.html#TRE-A11-IheFormatCode-urn.58ihe.58iti.58xds-sd.58pdf.582008\">TRE_A11_IheFormatCode: urn:ihe:iti:xds-sd:pdf:2008</a> (Document à corps non structuré en Pdf/A-1)</p></blockquote><h3>Contexts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>FacilityType</b></td><td><b>PracticeSetting</b></td><td><b>SourcePatientInfo</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite SA05}\">Centre de santé</span></td><td><span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/FHIR/TRE-A01-CadreExercice ETABLISSEMENT}\">Etablissement de santé</span></td><td><a href=\"#hcPDSmSimplifiedExample/sourcePatientInfo-example\">MAX BRANCHY (official) Male, DoB: 1985-11-01 ( Patient internal identifier: 9312)</a></td></tr></table><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Patient #sourcePatientInfo-example</b></p><a name=\"PDSmSimplifiedExample/sourcePatientInfo-example\"> </a><a name=\"hcPDSmSimplifiedExample/sourcePatientInfo-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient-ins.html\">FR Core Patient INS Profile</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">MAX BRANCHY (official) Male, DoB: 1985-11-01 ( Patient internal identifier: 9312)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\">NIR TEST/185112906412322</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements.\"><a href=\"http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-patient-birthPlace.html\">Patient Birth Place</a></td><td colspan=\"3\"></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Reliabilility of the patient's identity | Précision sur le degré de fiabilité de l'identité du patient (si provisoire, validé... avec la justification : quelle type de pièce d'identité ?) avec la méthode de collection\">FR Core Patient Ident Reliability Extension:</td><td colspan=\"3\"><ul><li>identityStatus: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-v2-0445.html#fr-core-cs-v2-0445-VALI\">FR Core CodeSystem v2-0445: VALI</a> (Identité validée)</li></ul></td></tr></table></blockquote></div>"
+  ] ;
+  fhir:DomainResource.contained [
+     a fhir:Patient ;
+     fhir:index 0 ;
+     fhir:Resource.id [ fhir:value "sourcePatientInfo-example" ] ;
+     fhir:Resource.meta [
+       fhir:Meta.profile [
+         fhir:value "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins" ;
+         fhir:index 0 ;
+         fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins>
+       ]
+     ] ;
+     fhir:DomainResource.extension [
+       fhir:index 0 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "identityStatus" ] ;
+         fhir:Extension.valueCoding [
+           fhir:Coding.system [ fhir:value "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445" ] ;
+           fhir:Coding.code [ fhir:value "VALI" ] ;
+           fhir:Coding.display [ fhir:value "Identité validée" ]
+         ]
+       ] ;
+       fhir:Extension.url [ fhir:value "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability" ]
+     ], [
+       fhir:index 1 ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/patient-birthPlace" ] ;
+       fhir:Extension.valueAddress [
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-address-insee-code" ] ;
+           fhir:Extension.valueCoding [
+             fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM" ] ;
+             fhir:Coding.code [ fhir:value "29064" ] ;
+             fhir:Coding.display [ fhir:value "Goulven" ]
+           ]
+         ]
+       ]
+     ] ;
+     fhir:Patient.identifier [
+       fhir:index 0 ;
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+           fhir:Coding.code [ fhir:value "PI" ] ;
+           fhir:Coding.display [ fhir:value "Patient internal identifier" ]
+         ]
+       ] ;
+       fhir:Identifier.system [ fhir:value "urn:oid:1.2.250.1.71.4.2.7.1" ] ;
+       fhir:Identifier.value [ fhir:value "9312" ]
+     ], [
+       fhir:index 1 ;
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203" ] ;
+           fhir:Coding.code [ fhir:value "INS-NIR-TEST" ]
+         ]
+       ] ;
+       fhir:Identifier.system [ fhir:value "urn:oid:1.2.250.1.213.1.4.10" ] ;
+       fhir:Identifier.value [ fhir:value "185112906412322" ]
+     ] ;
+     fhir:Patient.name [
+       fhir:index 0 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name" ] ;
+         fhir:Extension.valueString [ fhir:value "MAX PATRICK" ]
+       ] ;
+       fhir:HumanName.use [ fhir:value "official" ] ;
+       fhir:HumanName.family [ fhir:value "BRANCHY" ] ;
+       fhir:HumanName.given [
+         fhir:value "MAX" ;
+         fhir:index 0
+       ]
+     ] ;
+     fhir:Patient.gender [ fhir:value "male" ] ;
+     fhir:Patient.birthDate [ fhir:value "1985-11-01"^^xsd:date ]
+  ] ;
+  fhir:DocumentReference.masterIdentifier [
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ] ;
+     fhir:Identifier.value [ fhir:value "urn:uuid:3f1c9a2e-7b4d-4e8a-9c61-2d5f0b8e7a14" ]
+  ] ;
+  fhir:DocumentReference.status [ fhir:value "current"] ;
+  fhir:DocumentReference.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a loinc:15507-7 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "15507-7" ] ;
+       fhir:Coding.display [ fhir:value "CR de passage aux urgences" ]
+     ]
+  ] ;
+  fhir:DocumentReference.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_A03-ClasseDocument/FHIR/TRE-A03-ClasseDocument" ] ;
+       fhir:Coding.code [ fhir:value "10" ] ;
+       fhir:Coding.display [ fhir:value "Compte rendu" ]
+     ]
+  ] ;
+  fhir:DocumentReference.subject [
+     fhir:Reference.type [ fhir:value "Patient" ] ;
+     fhir:Reference.identifier [
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203" ] ;
+           fhir:Coding.code [ fhir:value "INS-NIR-TEST" ]
+         ]
+       ] ;
+       fhir:Identifier.system [ fhir:value "urn:oid:1.2.250.1.213.1.4.10" ] ;
+       fhir:Identifier.value [ fhir:value "185112906412322" ]
+     ]
+  ] ;
+  fhir:DocumentReference.date [ fhir:value "2025-04-30T09:30:00+01:00"^^xsd:dateTime] ;
+  fhir:DocumentReference.author [
+     fhir:index 0 ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/pdsm/PractitionerRole/practitionerrole-example> ;
+     fhir:Reference.reference [ fhir:value "PractitionerRole/practitionerrole-example" ]
+  ] ;
+  fhir:DocumentReference.authenticator [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/pdsm/PractitionerRole/practitionerrole-example> ;
+     fhir:Reference.reference [ fhir:value "PractitionerRole/practitionerrole-example" ]
+  ] ;
+  fhir:DocumentReference.custodian [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/pdsm/Organization/org-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-example" ]
+  ] ;
+  fhir:DocumentReference.description [ fhir:value "Compte rendu de passage aux urgences."] ;
+  fhir:DocumentReference.securityLabel [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-Confidentiality" ] ;
+       fhir:Coding.code [ fhir:value "N" ] ;
+       fhir:Coding.display [ fhir:value "Normal" ]
+     ]
+  ] ;
+  fhir:DocumentReference.content [
+     fhir:index 0 ;
+     fhir:DocumentReference.content.attachment [
+       fhir:Attachment.contentType [ fhir:value "application/pdf" ] ;
+       fhir:Attachment.language [ fhir:value "fr-FR" ] ;
+       fhir:Attachment.data [ fhir:value "SGVsbG8gV29ybGQ="^^xsd:base64Binary ] ;
+       fhir:Attachment.size [ fhir:value "11"^^xsd:nonNegativeInteger ] ;
+       fhir:Attachment.hash [ fhir:value "Ck1VqNd45QIvq3AZd8XYQLvEhtA="^^xsd:base64Binary ] ;
+       fhir:Attachment.title [ fhir:value "CR de passage aux urgences du 30 avril 2025" ] ;
+       fhir:Attachment.creation [ fhir:value "2025-04-29T17:00:00+01:00"^^xsd:dateTime ]
+     ] ;
+     fhir:DocumentReference.content.format [
+       fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_A11-IheFormatCode/FHIR/TRE-A11-IheFormatCode" ] ;
+       fhir:Coding.code [ fhir:value "urn:ihe:iti:xds-sd:pdf:2008" ] ;
+       fhir:Coding.display [ fhir:value "Document à corps non structuré en Pdf/A-1" ]
+     ]
+  ] ;
+  fhir:DocumentReference.context [
+     fhir:DocumentReference.context.facilityType [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite" ] ;
+         fhir:Coding.code [ fhir:value "SA05" ] ;
+         fhir:Coding.display [ fhir:value "Centre de santé" ]
+       ]
+     ] ;
+     fhir:DocumentReference.context.practiceSetting [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/FHIR/TRE-A01-CadreExercice" ] ;
+         fhir:Coding.code [ fhir:value "ETABLISSEMENT" ] ;
+         fhir:Coding.display [ fhir:value "Etablissement de santé" ]
+       ]
+     ] ;
+     fhir:DocumentReference.context.sourcePatientInfo [
+       fhir:Reference.reference [ fhir:value "#sourcePatientInfo-example" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/pdsm/DocumentReference/PDSmSimplifiedExample.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

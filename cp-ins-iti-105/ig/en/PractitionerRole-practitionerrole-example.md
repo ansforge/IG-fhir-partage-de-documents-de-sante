@@ -1,0 +1,53 @@
+# practitionerrole-example - Partage de Documents de Santé en mobilité (PDSm) v3.1.1
+
+## Example PractitionerRole: practitionerrole-example
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "PractitionerRole",
+  "id" : "practitionerrole-example",
+  "meta" : {
+    "versionId" : "1",
+    "lastUpdated" : "2025-04-28T18:19:34.908+02:00",
+    "source" : "https://annuaire.sante.fr",
+    "profile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role",
+    "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole"]
+  },
+  "language" : "fr",
+  "identifier" : [{
+    "use" : "official",
+    "system" : "https://rpps.esante.gouv.fr",
+    "value" : "1011848351"
+  }],
+  "active" : true,
+  "practitioner" : {
+    "reference" : "Practitioner/practitioner-example"
+  },
+  "organization" : {
+    "reference" : "Organization/org-example"
+  },
+  "code" : [{
+    "coding" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R22-GenreActivite/FHIR/TRE-R22-GenreActivite",
+      "code" : "GENR01"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExercice/FHIR/TRE-R23-ModeExercice",
+      "code" : "L"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R21-Fonction/FHIR/TRE-R21-Fonction",
+      "code" : "FON-05"
+    }]
+  }]
+}
+
+```

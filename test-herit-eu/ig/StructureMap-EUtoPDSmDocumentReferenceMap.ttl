@@ -1,0 +1,82 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureMap/EUtoPDSmDocumentReferenceMap> a fhir:StructureMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EUtoPDSmDocumentReferenceMap"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : StructureMap EUtoPDSmDocumentReferenceMap</b></p><a name=\"EUtoPDSmDocumentReferenceMap\"> </a><a name=\"hcEUtoPDSmDocumentReferenceMap\"> </a><pre class=\"fml\">#xD;\n<b>map</b><span style=\"color: navy\"> \"</span>http://example.org/fhir/StructureMap/EUtoPDSmDocumentReference<span style=\"color: navy\">\" = \"</span>EUtoPDSmDocumentReference<span style=\"color: navy\">\"#xD;\n#xD;\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">Mapping EU EehrxfMhdDocumentReference vers PDSm DocumentReference</span>#xD;\n#xD;\n<b>group </b>EUtoPDSm<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">src</span><span style=\"color: navy\"> : </span>DocumentReference, <b>target</b> <span style=\"color: maroon\">tgt</span><span style=\"color: navy\"> : </span>DocumentReference<span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  src.id<span style=\"color: navy\"><b> -&gt; </b></span>tgt.id <i>\"mapId\"</i><span style=\"color: navy\">;</span>#xD;\n  src.status<span style=\"color: navy\"><b> -&gt; </b></span>tgt.status <i>\"mapStatus\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span></pre></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://example.org/fhir/StructureMap/EUtoPDSmDocumentReference"^^xsd:anyURI ;
+     fhir:l <http://example.org/fhir/StructureMap/EUtoPDSmDocumentReference>
+  ] ; # 
+  fhir:version [ fhir:v "3.1.1"] ; # 
+  fhir:name [ fhir:v "EUtoPDSmDocumentReference"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2026-03-26T16:51:56+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "ANS"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "ANS" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://esante.gouv.fr" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Mapping EU EehrxfMhdDocumentReference vers PDSm DocumentReference"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
+  fhir:group ( [
+     fhir:name [ fhir:v "EUtoPDSm" ] ;
+     fhir:typeMode [ fhir:v "none" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "src" ] ;
+       fhir:type [ fhir:v "DocumentReference" ] ;
+       fhir:mode [ fhir:v "source" ]
+     ] [
+       fhir:name [ fhir:v "tgt" ] ;
+       fhir:type [ fhir:v "DocumentReference" ] ;
+       fhir:mode [ fhir:v "target" ]
+     ] ) ;
+     fhir:rule ( [
+       fhir:name [ fhir:v "mapId" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "id" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "id" ]
+       ] )
+     ] [
+       fhir:name [ fhir:v "mapStatus" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "status" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "status" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
