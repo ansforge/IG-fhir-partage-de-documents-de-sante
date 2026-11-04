@@ -14,14 +14,14 @@ skinparam sequence {
 skinparam  roundcorner 20
 
 
-participant "Consommateur\n de documents" as CONS
+participant "Producteur\n de documents" as CONS
 participant "Gestionnaire de partage\n de documents" as INFRA
 
 
 CONS-[#black]> INFRA : Flux 9 **PublicationSimplifieeDocument** [ITI-105] \n <color #FireBrick>HTTP POST [base] + ressource "DocumentReference"</color>
 activate INFRA
 activate CONS
-INFRA-[#black]-> CONS : Flux 10 **ResultatPublicationSimplifieeDocument** [ITI-105] \n <color #FireBrick>HTTP OK 20O (+ ressource "DocumentReference")</color>
+INFRA-[#black]-> CONS : Flux 10 **ResultatPublicationSimplifieeDocument** [ITI-105] \n <color #FireBrick>HTTP 201 Created + ressource "DocumentReference" (ou erreur + ressource "OperationOutcome")</color>
 deactivate CONS
 deactivate INFRA
 @enduml
