@@ -4,13 +4,13 @@ Id: pdsm-simplified-publish
 Title: "PDSm Simplified Publish Document Reference"
 Description:    """Profil utilisé dans le cadre du flux 9 de publication simplifiée de document. Le flux et le profil sont inspirés d’IHE MHD, transaction ITI-105.
 
-Contrairement au profil PDSm_ComprehensiveDocumentReference, le document est directement inclus dans DocumentReference.attachment.data et non dans une ressource « Binary » externe.
+Contrairement au profil PDSm_ComprehensiveDocumentReference, le document est directement inclus dans DocumentReference.content.attachment.data et non dans une ressource « Binary » externe.
 
 La publication simplifiée est une simple requête HTTP POST d'une ressource DocumentReference conforme à ce profil.
 """
 
 * meta.versionId MS
-* meta.versionId ^short = "Numéro de version de la fiche d’un document attribué par le système cible. La valeur de la métadonnée version est égale à 1 pour la première version de la fiche. Cet élément est requis lorsque le flux envoyé correspond à une mise à jour des données d’une fiche."
+* meta.versionId ^short = "Numéro de version de la fiche d’un document attribué par le système cible. La valeur de la métadonnée version est égale à 1 pour la première version de la fiche. Renseigné par le système cible dans la réponse (flux 10) ; la publication simplifiée ne met pas à jour une fiche existante : le remplacement d’un document passe par une nouvelle ressource DocumentReference portant relatesTo."
 
 * masterIdentifier MS
 * masterIdentifier ^short = "Représente l’identifiant unique global affecté au document par son créateur. Il est utilisable comme référence externe dans d’autres documents."
@@ -36,8 +36,8 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 * custodian ^definition = "Correspond à l’organisation responsable de la conservation, de la maintenance et/ou de l’accès au document, et non nécessairement à l’auteur ou à l’hébergeur technique."
 
 * subject 1..1
-* subject ^short = "Patient concerné par ce document. La ressource référencée peut être présente sous l’élément DocumentReference.contained ou via le champ identifier."
-* subject only Reference(FRCorePatientProfile) 
+* subject ^short = "Patient titulaire du dossier dans le système cible (donnée fonctionnelle idPatient, équivalent de la métadonnée XDS patientId). Conformément à IHE MHD ITI-105 §2:3.105.4.1.2.2, au moins l'une des deux formes est renseignée : référence littérale (subject.reference) vers une ressource Patient hébergée par un serveur accessible au producteur et au système cible, ou référence logique (subject.identifier) fondée sur un identifiant commun : matricule INS (NIR ou NIA) lorsque l'identité est qualifiée et que le partage sort du domaine d'identification du producteur, ou identifiant du patient dans le domaine d'identification commun au producteur et au système cible (ex : IPP pour un échange intra-établissement). La ressource Patient n'est pas contenue (contained) : l'identité du patient telle que connue du producteur est portée par context.sourcePatientInfo."
+* subject only Reference(FRCorePatientProfile)
 
 * date MS
 * date 1..
@@ -69,8 +69,21 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 * description MS
 * description ^short = "Commentaire associé au document."
 
-* securityLabel from https://mos.esante.gouv.fr/NOS/JDV_J08-XdsConfidentialityCode-CISIS/FHIR/JDV-J08-XdsConfidentialityCode-CISIS (extensible)
+* securityLabel ^slicing.discriminator.type = #value
+* securityLabel ^slicing.discriminator.path = "$this"
+* securityLabel ^slicing.rules = #open
+* securityLabel ^slicing.description = "Slice sur securityLabel pour distinguer le niveau de confidentialité (U, L, M, N, R, V) du statut de visibilité (MASQUE_PS, INVISIBLE_PATIENT, etc...) : chaque slice est discriminée par son required binding sur un ValueSet fermé (v3-ConfidentialityClassification pour confidentiality, JDV_J110-StatutVisibiliteDocument-CISIS pour visibilityStatus)"
 * securityLabel ^short = "Contient les informations définissant le niveau de confidentialité d'un document."
+
+* securityLabel contains confidentiality 1..1 and visibilityStatus 0..*
+
+* securityLabel[confidentiality] MS
+* securityLabel[confidentiality] ^short = "Niveau de confidentialité standard du document (Normal, Restreint, Très restreint, ...). En l'absence d'information de confidentialité disponible, la valeur par défaut à utiliser est N (Normal), conformément à ce qui est déjà pratiqué aujourd'hui pour les documents CDA."
+* securityLabel[confidentiality] from http://terminology.hl7.org/ValueSet/v3-Confidentiality (required)
+
+* securityLabel[visibilityStatus] MS
+* securityLabel[visibilityStatus] ^short = "Statut de visibilité du document (invisible patient, invisible représentants légaux, masqué PS, etc...)."
+* securityLabel[visibilityStatus] from $JDV-J110-StatutVisibiliteDocument-CISIS (required)
 
 // ###########
 // # CONTENT #
@@ -121,8 +134,12 @@ La publication simplifiée est une simple requête HTTP POST d'une ressource Doc
 * context.practiceSetting obeys constr-bind-ProducteurDoc-simplified
 * context.practiceSetting ^short = "Cadre d’exercice de l’acte qui a engendré la création du document."
 
+// ---------------------------------------------------------------------
+// sourcePatientInfo — porteur des traits ; référence contained (IHE ITI-105)
+// ---------------------------------------------------------------------
 * context.sourcePatientInfo only Reference(FRCorePatientProfile)
-* context.sourcePatientInfo ^short = "Référence vers la ressource Patient titulaire du dossier."
+* context.sourcePatientInfo ^type.aggregation = #contained
+* context.sourcePatientInfo ^short = "Identité du patient telle que connue du producteur du document (équivalent des métadonnées XDS sourcePatientId et sourcePatientInfo) : identifiant du patient dans le système du producteur (IPP, ou à défaut matricule INS) et traits d'identité. Conformément à IHE MHD ITI-105, lorsque fournie, cette référence pointe une ressource Patient contenue (contained)."
 
 
 Invariant: constr-bind-ProducteurDoc-simplified
