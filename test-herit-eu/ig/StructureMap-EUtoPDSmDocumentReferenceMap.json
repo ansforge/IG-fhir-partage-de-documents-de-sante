@@ -1,0 +1,68 @@
+{
+  "resourceType" : "StructureMap",
+  "id" : "EUtoPDSmDocumentReferenceMap",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : StructureMap EUtoPDSmDocumentReferenceMap</b></p><a name=\"EUtoPDSmDocumentReferenceMap\"> </a><a name=\"hcEUtoPDSmDocumentReferenceMap\"> </a><pre class=\"fml\">\r\n<b>map</b><span style=\"color: navy\"> &quot;</span>http://example.org/fhir/StructureMap/EUtoPDSmDocumentReference<span style=\"color: navy\">&quot; = &quot;</span>EUtoPDSmDocumentReference<span style=\"color: navy\">&quot;\r\n\r\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">Mapping EU EehrxfMhdDocumentReference vers PDSm DocumentReference</span>\r\n\r\n<b>group </b>EUtoPDSm<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">src</span><span style=\"color: navy\"> : </span>DocumentReference, <b>target</b> <span style=\"color: maroon\">tgt</span><span style=\"color: navy\"> : </span>DocumentReference<span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  src.id<span style=\"color: navy\"><b> -&gt; </b></span>tgt.id <i>&quot;mapId&quot;</i><span style=\"color: navy\">;</span>\r\n  src.status<span style=\"color: navy\"><b> -&gt; </b></span>tgt.status <i>&quot;mapStatus&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span></pre></div>"
+  },
+  "url" : "http://example.org/fhir/StructureMap/EUtoPDSmDocumentReference",
+  "version" : "3.1.1",
+  "name" : "EUtoPDSmDocumentReference",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-03-26T16:51:56+00:00",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping EU EehrxfMhdDocumentReference vers PDSm DocumentReference",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "group" : [{
+    "name" : "EUtoPDSm",
+    "typeMode" : "none",
+    "input" : [{
+      "name" : "src",
+      "type" : "DocumentReference",
+      "mode" : "source"
+    },
+    {
+      "name" : "tgt",
+      "type" : "DocumentReference",
+      "mode" : "target"
+    }],
+    "rule" : [{
+      "name" : "mapId",
+      "source" : [{
+        "context" : "src",
+        "element" : "id"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "id"
+      }]
+    },
+    {
+      "name" : "mapStatus",
+      "source" : [{
+        "context" : "src",
+        "element" : "status"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "status"
+      }]
+    }]
+  }]
+}

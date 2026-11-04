@@ -1,0 +1,34 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "PDSm-isArchived",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ParamètreRecherche PDSm-isArchived</b></p><a name=\"PDSm-isArchived\"> </a><a name=\"hcPDSm-isArchived\"> </a><h2>PDSmIsArchived</h2><p>Paramètre <code>isArchived</code>:<code>token</code></p><div><p>Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère derecherche l'élément isArchived qui permet distinguer les lots de soumission et les fiches archivés des actives.</p>\n</div><table class=\"grid\"><tr><td>Ressources</td><td><a href=\"http://hl7.org/fhir/R4/documentreference.html\">DocumentReference</a>, <a href=\"http://hl7.org/fhir/R4/list.html\">List</a></td></tr><tr><td>Expression</td><td><code>extension.where(url='https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-archived').value</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : Cest au serveur de décider si le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : Cest au serveur de décider si le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/SearchParameter/PDSm-isArchived",
+  "version" : "3.1.1",
+  "name" : "PDSmIsArchived",
+  "status" : "active",
+  "date" : "2021-07-30",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère derecherche l'élément isArchived qui permet distinguer les lots de soumission et les fiches archivés des actives.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "code" : "isArchived",
+  "base" : ["DocumentReference",
+  "List"],
+  "type" : "token",
+  "expression" : "extension.where(url='https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-ext-is-archived').value"
+}

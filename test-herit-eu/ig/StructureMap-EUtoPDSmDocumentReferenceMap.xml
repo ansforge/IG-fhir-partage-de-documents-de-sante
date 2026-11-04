@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureMap xmlns="http://hl7.org/fhir">
+  <id value="EUtoPDSmDocumentReferenceMap"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : StructureMap EUtoPDSmDocumentReferenceMap</b></p><a name="EUtoPDSmDocumentReferenceMap"> </a><a name="hcEUtoPDSmDocumentReferenceMap"> </a><pre class="fml">
+<b>map</b><span style="color: navy"> &quot;</span>http://example.org/fhir/StructureMap/EUtoPDSmDocumentReference<span style="color: navy">&quot; = &quot;</span>EUtoPDSmDocumentReference<span style="color: navy">&quot;
+
+</span><span style="color: navy">// </span><span style="color: green">Mapping EU EehrxfMhdDocumentReference vers PDSm DocumentReference</span>
+
+<b>group </b>EUtoPDSm<span style="color: navy">(</span><b>source</b> <span style="color: maroon">src</span><span style="color: navy"> : </span>DocumentReference, <b>target</b> <span style="color: maroon">tgt</span><span style="color: navy"> : </span>DocumentReference<span style="color: navy">)</span><span style="color: navy"> {
+</span>  src.id<span style="color: navy"><b> -&gt; </b></span>tgt.id <i>&quot;mapId&quot;</i><span style="color: navy">;</span>
+  src.status<span style="color: navy"><b> -&gt; </b></span>tgt.status <i>&quot;mapStatus&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span></pre></div>
+  </text>
+  <url value="http://example.org/fhir/StructureMap/EUtoPDSmDocumentReference"/>
+  <version value="3.1.1"/>
+  <name value="EUtoPDSmDocumentReference"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-03-26T16:51:56+00:00"/>
+  <publisher value="ANS"/>
+  <contact>
+    <name value="ANS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Mapping EU EehrxfMhdDocumentReference vers PDSm DocumentReference"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <name value="EUtoPDSm"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <type value="DocumentReference"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="tgt"/>
+      <type value="DocumentReference"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="mapId"/>
+      <source>
+        <context value="src"/>
+        <element value="id"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="id"/>
+      </target>
+    </rule>
+    <rule>
+      <name value="mapStatus"/>
+      <source>
+        <context value="src"/>
+        <element value="status"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="status"/>
+      </target>
+    </rule>
+  </group>
+</StructureMap>

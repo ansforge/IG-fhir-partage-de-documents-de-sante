@@ -1,0 +1,110 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/pdsm/DocumentReference/PDSmSimplifiedExample> a fhir:DocumentReference ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "PDSmSimplifiedExample"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "1" ] ;
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/StructureDefinition/pdsm-simplified-publish>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : RéférenceDocument PDSmSimplifiedExample</b></p><a name=\"PDSmSimplifiedExample\"> </a><a name=\"hcPDSmSimplifiedExample\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version : 1</p><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-pdsm-simplified-publish.html\">PDSm Simplified Publish Document Reference</a></p></div><p><b>masterIdentifier</b>: <a href=\"http://terminology.hl7.org/6.5.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt #xD;#xA;#xD;#xA;This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: #xD;#xA;#xD;#xA;Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.#xD;#xA;#xD;#xA;This OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:abcd-efgh-ijkl-mnop</p><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes :{http://loinc.org 15507-7}\">Note d’évolution</span></p><p><b>category</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_A03-ClasseDocument/FHIR/TRE-A03-ClasseDocument 10}\">Compte rendu</span></p><p><b>subject</b>: <a href=\"Patient-fr-patient-123.html\">Martin Claire  Male, Date de Naissance :1980-01-15</a></p><p><b>date</b>: 2025-04-30 09:30:00+0100</p><p><b>author</b>: <a href=\"PractitionerRole/practitionerrole-example\">PractitionerRole/practitionerrole-example</a></p><p><b>authenticator</b>: <a href=\"PractitionerRole/practitionerrole-example\">PractitionerRole/practitionerrole-example</a></p><p><b>description</b>: Note d'évolution suite à une consultation de suivi.</p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Language</b></td><td><b>Data</b></td><td><b>Size</b></td><td><b>Hash</b></td><td><b>Title</b></td><td><b>Creation</b></td></tr><tr><td style=\"display: none\">*</td><td>application/pdf</td><td>French (Region=France)</td><td><code>SGVsbG8gV29ybGQ=</code></td><td>250000</td><td><code>2jmj7l5rSw0yVb/vlWAYkK/YBwk=</code></td><td>Note de suivi du 30 avril 2025</td><td>2025-04-29 17:00:00+0100</td></tr></table><p><b>format</b>: <a href=\"https://interop.esante.gouv.fr/terminologies/1.4.0/CodeSystem-TRE-A11-IheFormatCode.html#TRE-A11-IheFormatCode-urn.58ihe.58iti.58xds-sd.58pdf.582008\">TRE_A11_IheFormatCode: urn:ihe:iti:xds-sd:pdf:2008</a> (Document à corps non structuré en Pdf/A-1)</p></blockquote><h3>Contexts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>FacilityType</b></td><td><b>PracticeSetting</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite SA05}\">Centre de santé</span></td><td><span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/FHIR/TRE-A01-CadreExercice ETABLISSEMENT}\">Etablissement de santé</span></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:masterIdentifier [
+     fhir:system [
+       fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+       fhir:l <urn:ietf:rfc:3986>
+     ] ;
+     fhir:value [ fhir:v "urn:uuid:abcd-efgh-ijkl-mnop" ]
+  ] ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:15507-7 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "15507-7" ] ;
+       fhir:display [ fhir:v "Note d’évolution" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_A03-ClasseDocument/FHIR/TRE-A03-ClasseDocument"^^xsd:anyURI ;
+         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_A03-ClasseDocument/FHIR/TRE-A03-ClasseDocument>
+       ] ;
+       fhir:code [ fhir:v "10" ] ;
+       fhir:display [ fhir:v "Compte rendu" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/Patient/fr-patient-123> ;
+     fhir:reference [ fhir:v "Patient/fr-patient-123" ]
+  ] ; # 
+  fhir:date [ fhir:v "2025-04-30T09:30:00+01:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/PractitionerRole/practitionerrole-example> ;
+     fhir:reference [ fhir:v "PractitionerRole/practitionerrole-example" ]
+  ] ) ; # 
+  fhir:authenticator [
+     fhir:l <https://interop.esante.gouv.fr/ig/fhir/pdsm/PractitionerRole/practitionerrole-example> ;
+     fhir:reference [ fhir:v "PractitionerRole/practitionerrole-example" ]
+  ] ; # 
+  fhir:description [ fhir:v "Note d'évolution suite à une consultation de suivi."] ; # 
+  fhir:content ( [
+     fhir:attachment [
+       fhir:contentType [ fhir:v "application/pdf" ] ;
+       fhir:language [ fhir:v "fr-FR" ] ;
+       fhir:data [ fhir:v "SGVsbG8gV29ybGQ="^^xsd:base64Binary ] ;
+       fhir:size [ fhir:v "250000"^^xsd:nonNegativeInteger ] ;
+       fhir:hash [ fhir:v "2jmj7l5rSw0yVb/vlWAYkK/YBwk="^^xsd:base64Binary ] ;
+       fhir:title [ fhir:v "Note de suivi du 30 avril 2025" ] ;
+       fhir:creation [ fhir:v "2025-04-29T17:00:00+01:00"^^xsd:dateTime ]
+     ] ;
+     fhir:format [
+       fhir:system [
+         fhir:v "https://mos.esante.gouv.fr/NOS/TRE_A11-IheFormatCode/FHIR/TRE-A11-IheFormatCode"^^xsd:anyURI ;
+         fhir:l <https://mos.esante.gouv.fr/NOS/TRE_A11-IheFormatCode/FHIR/TRE-A11-IheFormatCode>
+       ] ;
+       fhir:code [ fhir:v "urn:ihe:iti:xds-sd:pdf:2008" ] ;
+       fhir:display [ fhir:v "Document à corps non structuré en Pdf/A-1" ]
+     ]
+  ] ) ; # 
+  fhir:context [
+     fhir:facilityType [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite"^^xsd:anyURI ;
+           fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite>
+         ] ;
+         fhir:code [ fhir:v "SA05" ] ;
+         fhir:display [ fhir:v "Centre de santé" ]
+       ] )
+     ] ;
+     fhir:practiceSetting [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/FHIR/TRE-A01-CadreExercice"^^xsd:anyURI ;
+           fhir:l <https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/FHIR/TRE-A01-CadreExercice>
+         ] ;
+         fhir:code [ fhir:v "ETABLISSEMENT" ] ;
+         fhir:display [ fhir:v "Etablissement de santé" ]
+       ] )
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

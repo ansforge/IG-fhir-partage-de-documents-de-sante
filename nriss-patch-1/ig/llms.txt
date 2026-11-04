@@ -1,0 +1,71 @@
+# ans.fhir.fr.pdsm#3.1.1: Partage de Documents de Santé en mobilité (PDSm)
+
+## Pages
+
+* [Accueil](index.md)
+* [Recherche de documents](sf_recherche.md)
+* [Ajout d'un lot de documents (ITI-65)](st_ajout.md)
+* [Recherche de lot de soumission (ITI-66)](st_recherche_lot.md)
+* [Recherche de fiche (ITI-67)](st_recherche_fiche.md)
+* [Consultation de documents](sf_consultation.md)
+* [Ajout d'un lot de documents](sf_ajout.md)
+* [Artifacts Summary](artifacts.md)
+* [Mise à jour de documents](st_maj.md)
+* [Sécurité](securite.md)
+* [Historique des changements](changes.md)
+* [Consultation de documents (ITI-68)](st_consultation.md)
+* [Autres Ressources](autres_ressources.md)
+* [Ajout simplifié d'un document (ITI-105)](st_ajout_simplifie.md)
+* [Spécifications fonctionnelles - vue d'ensemble](specifications_fonctionnelles.md)
+* [Spécifications techniques - vue d'ensemble](construction_des_flux.md)
+* [Equivalences](equivalences.md)
+* [Mise à jour de documents](sf_maj.md)
+* [Téléchargements et usages](downloads.md)
+
+## Resources
+
+### Resource Profiles
+
+* [PDSm Comprehensive DocumentReference](StructureDefinition-pdsm-comprehensive-document-reference.md)
+* [PDSm Comprehensive Provide Document Bundle](StructureDefinition-pdsm-comprehensive-provide-document-bundle.md)
+* [PDSm Find DocumentReferences Comprehensive Response](StructureDefinition-pdsm-find-documentreferences-comprehensive-response.md)
+* [PDSm Find Lists Response](StructureDefinition-pdsm-find-lists-response.md)
+* [PDSm Folder Comprehensive](StructureDefinition-pdsm-folder-comprehensive.md)
+* [PDSm Simplified Publish Document Reference](StructureDefinition-pdsm-simplified-publish.md)
+* [PDSm SubmissionSet Comprehensive](StructureDefinition-pdsm-submissionset-comprehensive.md)
+
+### Extensions
+
+* [PDSm_intendedRecipient](StructureDefinition-pdsm-ext-intended-recipient.md)
+* [PDSm_isArchived](StructureDefinition-pdsm-ext-is-archived.md)
+
+### CapabilityStatements
+
+* [CI-SIS Partage-De-Documents-De-Sante - ConsommateurDeDocuments](CapabilityStatement-PDSm-ConsommateurDeDocuments.md)
+* [CI-SIS Partage-De-Documents-De-Sante - GestionnaireDePartageDeDocuments](CapabilityStatement-PDSm-GestionnaireDePartageDeDocuments.md)
+* [CI-SIS Partage-De-Documents-De-Sante - ProducteurDeDocuments](CapabilityStatement-PDSm-ProducteurDeDocuments.md)
+
+### ImplementationGuides
+
+* [Partage de Documents de Santé en mobilité (PDSm)](index.md)
+
+### SearchParameters
+
+* [PDSmDocumentReferencePeriodEnd](SearchParameter-PDSm-DocumentReference-period-end.md)
+* [PDSmDocumentReferencePeriodStart](SearchParameter-PDSm-DocumentReference-period-start.md)
+* [PDSmListPatientAsSource](SearchParameter-PDSm-List-PatientAsSource.md)
+* [PDSmListPatientAsSubject](SearchParameter-PDSm-List-PatientAsSubject.md)
+* [PDSmListPractitionerRoleAsSource](SearchParameter-PDSm-List-PractitionerRoleAsSource.md)
+* [PDSmAuthorOrg](SearchParameter-PDSm-List-authorOrg.md)
+* [PDSmIsArchived](SearchParameter-PDSm-isArchived.md)
+
+### Examples
+
+* [6789 (Binary)](Binary-6789.md)
+* [a9c10f8a-882d-4000-a280-7150e0aeb478 (Bundle)](Bundle-a9c10f8a-882d-4000-a280-7150e0aeb478.md)
+* [PDSmSimplifiedExample (DocumentReference)](DocumentReference-PDSmSimplifiedExample.md)
+* [exemple-pdsm-documentreference (DocumentReference)](DocumentReference-exemple-pdsm-documentreference.md)
+* [Classeur de suivi diabète (List)](List-ExampleFolder.md)
+* [Dossier de suivi post-opératoire (List)](List-ExampleSubmissionSet.md)
+* [HOPITAL INTERCOMMUNAL DE LA PRESQU'ILE G (Organization)](Organization-org-example.md)
+* [fr-patient-123 (Patient)](Patient-fr-patient-123.md)

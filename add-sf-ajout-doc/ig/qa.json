@@ -1,0 +1,19 @@
+{
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/pdsm/ImplementationGuide/ans.fhir.fr.pdsm",
+  "name" : "PDSm",
+  "title" : "Partage de Documents de Santé en mobilité (PDSm)",
+  "description" : "",
+  "status" : "active",
+  "package-id" : "ans.fhir.fr.pdsm",
+  "ig-ver" : "3.1.1",
+  "date" : "Wed, 15 Jul, 2026 14:59:59 +0000",
+  "dateISO8601" : "2026-07-15T14:59:59+00:00",
+  "errs" : 27,
+  "warnings" : 92,
+  "hints" : 87,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 0,
+  "version" : "4.0.1",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 3549470208
+}
