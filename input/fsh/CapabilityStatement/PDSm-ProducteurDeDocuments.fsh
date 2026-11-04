@@ -21,6 +21,7 @@ Usage: #definition
 * rest.resource.profile = Canonical(PDSm_ComprehensiveDocumentReference)
 * rest.resource.supportedProfile = Canonical(PDSm_SimplifiedPublish)
 * rest.resource.interaction[0].code = #patch
+* rest.resource.interaction[=].documentation = "Demande de mise à jour des métadonnées de la fiche (flux 03) au format FHIRPath Patch (ressource Parameters)."
 * rest.resource.interaction[+].code = #create
 * rest.resource.interaction[=].documentation = "Flux 09 - Publication simplifiée d’un document (IHE MHD Simplified Publish [ITI-105]) : POST d’une ressource DocumentReference conforme au profil PDSm_SimplifiedPublish."
 * rest.resource.conditionalUpdate = true

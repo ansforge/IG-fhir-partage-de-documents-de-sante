@@ -20,4 +20,6 @@ Quand le document demandé est retourné, le gestionnaire de partage de document
 
 Le gestionnaire de partage de documents doit fournir le document dans le MIME type demandé ou répondre avec un "HTTP Status Code" indiquant la condition d'erreur. Le gestionnaire de partage de documents n'est pas obligé de transformer le document.
 
+Un document dont la fiche a été supprimée logiquement (extension [PDSm_IsDeleted](StructureDefinition-pdsm-ext-is-deleted.html) à `true`) n'est plus accessible : le gestionnaire de partage de documents doit répondre avec un code `HTTP 404 Not Found` (voir [Mise à jour des métadonnées de la fiche](st_maj.html)).
+
 Les situations d'erreur et les réponses HTTP correspondantes sont listées dans le [profil MHD](https://profiles.ihe.net/ITI/MHD/index.html).
